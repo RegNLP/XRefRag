@@ -1,3 +1,4 @@
-XRefRAG dev notes:
-- Repo scaffold + packaging + CLI first.
-- Adapter (UKFin manifest-driven) next.
+# XRefRAG Notes
+
+- Setup OK: venv + editable install + CLI
+- Next: implement Adapter (UKFin subset + FSRA), then Generation, Curation, Evaluation.
