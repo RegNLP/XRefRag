@@ -1,0 +1,2536 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{CC04CCF1-1D27-4503-88D7-716F7E8C32A6} -->
+<title>Large Non-Solvency II Firms – Allocation of Responsibilities | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Large Non-Solvency II Firms – Allocation of Responsibilities">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Large Non-Solvency II Firms – Allocation of Responsibilities">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="l3epqllinx5rw2lwojia-f-354246c35-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":40,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2439ba23","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":45709,"ak.gh":"104.109.251.13","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370192","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==OuKuQsYdV/0CJuYm2zVDW3VZAThq9moWnrJGBokR47ZnxeATOHvEJztakWrtsQSQxfo1hjSP7oBI16xX13sRXhpDfJG6OCuyIk9JyCZm11LENo2wEgKWbZLXgFK/MC30xFJKqxlJZnG3ZtLIjx9eO4M6cisk8IHbVk26iD3m4o60ubKT6q28l4q1BggMHsGwj7j8o69cvrv8nnI+ZNPEKEUcbMioB9l/G3AvpQpQMBTT8jDPwg38L7Vh5C4o2c/vvR50ufWoNKKbtCfWdzv1YnUzB+GyAcxTCcWcEZILtfd5YFCm8B8OnISp4G2BOPofwsOgWqouI7Wd1/zkMDGVy2UzrtQ5msNjFBtPHvprz+dsgm9oWk6iT/+pRe34yuvGQ8ATF5+HpRYNL96iinzqBlPVXnjUDHu3f6fm5gwomnA=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Large Non-Solvency II Firms – Allocation of Responsibilities				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Large Non-Solvency II Firms – Allocation of Responsibilities
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/03/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/03/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/12-09-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						12/09/2017
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/10-12-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						10/12/2018
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-280c0665-ad54-4675-bd68-fe6e5370d538">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-280c0665-ad54-4675-bd68-fe6e5370d538"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Large Non-Solvency II Firms – Allocation of Responsibilities
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Large Non-Solvency II Firms – Allocation of Responsibilities)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=245ba05eea444e26b4786ccde9baa6ca">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Large Non-Solvency II Firms – Allocation of Responsibilities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss35-15---strengthening-individual-accountability-in-insurance/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS35/15 – Strengthening individual accountability in insurance
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/prudential-regime-and-implementation-of-the-senior-insurance-managers-regime-for-non-solvency-2" class="list-links__link" target="_blank">
+										PS26/15 - &quot;The prudential regime, and implementation of the Senior Insurance Managers Regime, for non-Solvency II firms&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/strengthening-accountability-in-banking-and-insurance-implementation-of-sm-cr-and-simr" class="list-links__link" target="_blank">
+										PS5/16 - Strengthening accountability in banking and insurance: Implementation of SM&amp;CR and SIMR; and PRA requirements on regulatory references
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-accountability-in-banking-and-insurance-regulatory-references" class="list-links__link" target="_blank">
+										PS27/16 - Strengthening accountability in banking and insurance: PRA requirements on regulatory references (part II)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/strengthening-accountability-in-banking-and-insurance-amendments-and-optimisations" class="list-links__link" target="_blank">
+										PS12/17 - Strengthening individual accountability in banking and insurance: amendments and optimisations
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-individual-accountability-in-insurance-optimisations-to-the-simr" class="list-links__link" target="_blank">
+										PS1/18 - Strengthening individual accountability in insurance: optimisations to the SIMR
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-individual-accountability-in-insurance-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS15/18 - Strengthening individual accountability in insurance: Extension of the Senior Managers and Certification Regime to insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-accountability-implementing-the-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS26/18 - Strengthening accountability: Implementing the extension of the SM&amp;CR to insurers
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="http://www.bankofengland.co.uk/pra/Pages/supervision/smallinsurers/nondirective.aspx" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Non-Directive Firms
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/10-12-2018_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/10-12-2018?p=1" data-id="245ba05eea444e26b4786ccde9baa6ca" data-effective-date="10-12-2018" data-download-title="Large Non-Solvency II Firms – Allocation of Responsibilities_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Allocation of Responsibilities">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="bec009a3159f4afcbfd9e25c7e2542e6"
+	 data-version="47211e1bf3ae439f9a14f2fcf0a8f14d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="121173e585b34d918f61efd2ae4c612d"
+	 data-version="22777defefc4478c9b8e59230e31d998"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a  class="glossary-link" title="large non-directive insurer" href="#glossary-term-a80e0f791d3f4f619db330e241fc8769" data-mce-linktype="2" data-glossary-id="77326">large non-directive insurer</a></em>; and</li>
+<li>(2) a <em><a  class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=121173e585b34d918f61efd2ae4c612d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a1f706196b574ffab7796add12ae649e"
+	 data-version="2ed2889e39ef44de9ffa432d24bbf587"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a  class="glossary-link" title="governance map" href="#glossary-term-ee104c6b165448408f6bcf4483a8c33e" data-mce-linktype="2" data-glossary-id="77198">management responsibilities map</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="5.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#84381e5c35c245e9b262726761076a02" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a>.</p>
+<p><em><a  class="glossary-link" title="SIMR prescribed responsibility" href="#glossary-term-97c126e4bfc3450ba30c37d5f88ca8d0" data-mce-linktype="2" data-glossary-id="77199">prescribed responsibility</a></em></p>
+<ol class="new-bullet">
+<li>(1) for a <em><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em> (other than a <em><a  class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em>) means the responsibilities in <a  title="3.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#ec1719fd8d3d4a6781270c5e34dcd132" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a> and <a  title="3.2" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#22b18dc946cc4a26ac6fc7572b078886" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.2</a>; </li>
+<li>(2) for a <em style="text-indent: -1.3em;"><a  class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em><span style="text-indent: -1.3em;"> means the responsibilities set out in </span><a  style="text-indent: -1.3em;" title="3.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#ec1719fd8d3d4a6781270c5e34dcd132" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a><span style="text-indent: -1.3em;"> to the extent only that they are relevant to the activities of the </span><em style="text-indent: -1.3em;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em><span style="text-indent: -1.3em;"> carried on from a </span><em style="text-indent: -1.3em;"><a  class="glossary-link" title="branch" href="#glossary-term-c1eea9614dfa49bc9490d65422cff984" data-mce-linktype="2" data-glossary-id="53199">branch</a></em><span style="text-indent: -1.3em;"> in the </span><em style="text-indent: -1.3em;"><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em><span style="text-indent: -1.3em;">. </span></li>
+</ol>
+<p><em><span style="text-indent: -1.3em;"><a  class="glossary-link" title="Swiss general insurer prescribed responsibility" href="#glossary-term-609077b89b7243bea1b28fa972fc4b52" data-mce-linktype="2" data-glossary-id="88198">Swiss general insurer prescribed responsibility</a></span></em></p>
+<p style="padding-left: 30px;"><span style="text-indent: -1.3em;">means the responsibilities in <a  title="3A.2" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#0d0dbac25aa940728b2f30677663aabb" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3A.2</a>.</span></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/12-09-2017#a1f706196b574ffab7796add12ae649e">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a1f706196b574ffab7796add12ae649e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/1-application-and-definitions/10-12-2018?p=1" data-id="bec009a3159f4afcbfd9e25c7e2542e6" data-effective-date="10-12-2018" data-download-title="Application and Definitions_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/1-application-and-definitions/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#bec009a3159f4afcbfd9e25c7e2542e6&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Allocation of Responsibilities – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=bec009a3159f4afcbfd9e25c7e2542e6">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="fef7e7dd057b484f80f982428e161428"
+	 data-version="5f750001ef1a40289f162284ea811502"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Allocation of Responsibilities
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="683e73b86b53434d98eca562bfa4527a"
+	 data-version="2581646ccbad4a4b9375bc0ad7188ed7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (other than a <em><a  class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em>) must allocate each of the <em><a  class="glossary-link" title="SIMR prescribed responsibilities" href="#glossary-term-97c126e4bfc3450ba30c37d5f88ca8d0" data-mce-linktype="2" data-glossary-id="77199">prescribed responsibilities</a></em> set out in <a  title="3.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#ec1719fd8d3d4a6781270c5e34dcd132" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a> (other than <a  title="3.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#ec1719fd8d3d4a6781270c5e34dcd132" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a>(9) and (10)) to one or more <em><a  class="glossary-link" title="persons" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">persons</a></em> who, in relation to that <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, are approved under section 59 of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> by:</p>
+<ol class="new-bullet">
+<li>(1) the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> to perform a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; or</li>
+<li>(2) in relation to <em><a  class="glossary-link" title="relevant senior management functions" href="#glossary-term-776c0b7f70d94bd7842daf2e1ca39a2c" data-mce-linktype="2" data-glossary-id="67050">relevant senior management functions</a></em> only, the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2016#683e73b86b53434d98eca562bfa4527a">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=683e73b86b53434d98eca562bfa4527a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="eb25a29f21624990a2b28ecdfe255fbf"
+	 data-version="47a234390a1d4aedb2acdc95d11b957f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (other than a <em><a  class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em>) must allocate each of the <em><a  class="glossary-link" title="SIMR prescribed responsibilities" href="#glossary-term-97c126e4bfc3450ba30c37d5f88ca8d0" data-mce-linktype="2" data-glossary-id="77199">prescribed responsibilities</a></em> set out in <a  title="3.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#ec1719fd8d3d4a6781270c5e34dcd132" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a>(9) and (10) and the <em><a  class="glossary-link" title="SIMR prescribed responsibility" href="#glossary-term-97c126e4bfc3450ba30c37d5f88ca8d0" data-mce-linktype="2" data-glossary-id="77199">prescribed responsibility</a></em> set out in <a  title="3.2" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#22b18dc946cc4a26ac6fc7572b078886" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.2</a>, if applicable to one or more <em><a  class="glossary-link" title="non-executive directors" href="#glossary-term-1c6867ad63dc4c27b293a8dfdaf54393" data-mce-linktype="2" data-glossary-id="52566">non-executive directors</a></em> who perform:</p>
+<ol class="new-bullet">
+<li>(1) <span style="text-indent: -14.3px;">a </span><em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a> </em>set out in <a  title="Large Non-Solvency II Firms &ndash; Senior Insurance Management Functions 4" href="/pra-rules/large-non-solvency-ii-firms-senior-management-functions#95b681bcdbf34038bbcc9c0a5aa36644" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Large Non-Solvency II Firms &ndash; Senior Insurance Management Functions 4</a>; or</li>
+<li>(2) an <em><a  class="glossary-link" title="FCA governing function" href="#glossary-term-10cdfc7a6d9c432cb9461509b37c27e1" data-mce-linktype="2" data-glossary-id="67042">FCA governing function</a></em> at that <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/12-09-2017#eb25a29f21624990a2b28ecdfe255fbf">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=eb25a29f21624990a2b28ecdfe255fbf">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e1fda0ffc1664ae89ee0d6ebfdfb521e"
+	 data-version="e099b9ae0338486daafdcb0f8ed844bc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em> must allocate each of the <em><a  class="glossary-link" title="prescribed responsibilities" href="#glossary-term-97c126e4bfc3450ba30c37d5f88ca8d0" data-mce-linktype="2" data-glossary-id="77199">prescribed responsibilities</a></em> set out in <a  title="3.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#ec1719fd8d3d4a6781270c5e34dcd132" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a>(A1) to <a  title="3.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#ec1719fd8d3d4a6781270c5e34dcd132" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a>(1) and each of the <em><a  class="glossary-link" title="Swiss general insurer prescribed responsibilities" href="#glossary-term-609077b89b7243bea1b28fa972fc4b52" data-mce-linktype="2" data-glossary-id="88198">Swiss general insurer prescribed responsibilities</a></em> to one or more <em><a  class="glossary-link" title="persons" href="#glossary-term-d22b82973f7e459bbc1a84bd71535669" data-mce-linktype="2" data-glossary-id="77607">persons</a></em> who, in relation to that<em> <a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em>, are approved under section 59 of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> by:</p>
+<ol class="new-bullet">
+<li>(1) the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> to perform a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; or</li>
+<li>(2) in relation to the <em><a  class="glossary-link" title="relevant senior management function" href="#glossary-term-776c0b7f70d94bd7842daf2e1ca39a2c" data-mce-linktype="2" data-glossary-id="67050">relevant senior management function</a></em> only, the <em><a  class="glossary-link" title="FCA" href="#glossary-term-61695d6f5a14495dba5cc43ad14d2303" data-mce-linktype="2" data-glossary-id="77605">FCA</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e1fda0ffc1664ae89ee0d6ebfdfb521e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ba10999ed5c64a8eaedc48d797874966"
+	 data-version="ba27c923200a4202b30db01f6bd74b5d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em> must ensure that any responsibilities allocated to, and that form part of the responsibilities of, a <em><a  class="glossary-link" title="persons" href="#glossary-term-d22b82973f7e459bbc1a84bd71535669" data-mce-linktype="2" data-glossary-id="77607">person</a></em> who performs a <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> in relation to the <em><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em> are consistent with the scope of that <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> and of any <em>prescribed responsibilities</em>,<em> <a  class="glossary-link" title="FCA responsibilities" href="#glossary-term-c4cff2037e1f4411a63f482e5d99d6cd" data-mce-linktype="2" data-glossary-id="77804">FCA responsibilities</a></em> and other responsibilities allocated to that <em><a  class="glossary-link" title="persons" href="#glossary-term-d22b82973f7e459bbc1a84bd71535669" data-mce-linktype="2" data-glossary-id="77607">person</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ba10999ed5c64a8eaedc48d797874966">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/2-allocation-of-responsibilities/10-12-2018?p=1" data-id="fef7e7dd057b484f80f982428e161428" data-effective-date="10-12-2018" data-download-title="Allocation of Responsibilities_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/2-allocation-of-responsibilities/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#fef7e7dd057b484f80f982428e161428&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Allocation of Responsibilities – Allocation of Responsibilities">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=fef7e7dd057b484f80f982428e161428">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Allocation of Responsibilities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="4410e551bdf749fcb8deef5668d02517"
+	 data-version="ee1bfa24db5d44d7adf49014c892327f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Prescribed Responsibilities
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ec1719fd8d3d4a6781270c5e34dcd132"
+	 data-version="3a2d55a7bdbe4bd390e0373a2a71dc42"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Each of the responsibilities set out in this rule is a <em><a  class="glossary-link" title="SIMR prescribed responsibility" href="#glossary-term-97c126e4bfc3450ba30c37d5f88ca8d0" data-mce-linktype="2" data-glossary-id="77199">prescribed responsibility</a></em>:</p>
+<ol class="new-bullet">
+<li>(A1) responsibility for the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> performance of its obligations under the <em><a  class="glossary-link" title="senior management regime" href="#glossary-term-8bc2a054a2b949df81ba024353beab48" data-mce-linktype="2" data-glossary-id="88191">senior management regime</a></em> (PR A);</li>
+<li>(A2) responsibility for the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> performance of its obligations under the <em><a  class="glossary-link" title="certification regime" href="#glossary-term-c398ab9f56f94dd39ecef3aac5c79be8" data-mce-linktype="2" data-glossary-id="78025">certification regime</a></em><span style="text-indent: -14.3px;"> (PR B)</span>;</li>
+<li>(A3) responsibility for compliance with the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> obligations in relation to its <em><a  class="glossary-link" title="management responsibilities map" href="#glossary-term-ee104c6b165448408f6bcf4483a8c33e" data-mce-linktype="2" data-glossary-id="77198">management responsibilities map</a></em><span style="text-indent: -14.3px;"> (PR C)</span>;</li>
+<li>(1) responsibility for ensuring that the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has complied with its obligations in <a  title="Large Non-Solvency II Firms - Fitness and Propriety" href="/pra-rules/large-non-solvency-ii-firms-fitness-and-propriety" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Large Non-Solvency II Firms - Fitness and Propriety</a> to:</li>
+<ol>
+<li>(a) ensure that every <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> who performs a <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="key function" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em> but does not also perform a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> or a <em><a  class="glossary-link" title="certification function" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification function</a></em> is a fit and proper <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em>; and</li>
+<li>(b) provide and obtain regulatory references<span style="text-indent: -14.3px;"> (PR U)</span>;</li>
+</ol>
+<li>(2) responsibility for leading the development of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> culture by the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> as a whole<span style="text-indent: -14.3px;"> (PR I)</span>;</li>
+<li>(3) responsibility for overseeing the adoption of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> culture in the day-to-day management of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="text-indent: -14.3px;"> (PR H)</span>;</li>
+<li>(4) responsibility for the production and integrity of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> financial information and its regulatory reporting<span style="text-indent: -14.3px;"> (PR Q)</span>;</li>
+<li>(5) responsibility for management of the allocation and maintenance of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em>:</li>
+<ol>
+<li>(a) capital; and</li>
+<li>(b) liquidity<span style="text-indent: -14.3px;"> (PR O)</span>;</li>
+</ol>
+<li>(6) responsibility for the development and maintenance of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> business model by the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em><span style="text-indent: -14.3px;"> (PR T)</span>;</li>
+<li>(7) responsibility for leading the development and monitoring effective implementation of policies and procedures for the induction, training and professional development of all members of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em><span style="text-indent: -14.3px;"> (PR F)</span>;</li>
+<li>(8) responsibility for monitoring effective implementation of policies and procedures for the induction, training and professional development of all of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="key function holders" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holders</a></em> (other than members of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em>)<span style="text-indent: -14.3px;"> (PR G)</span>;</li>
+<li>(9) responsibility for oversight of the independence, autonomy and effectiveness of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> policies and procedures on whistleblowing including the procedures for protection of staff who raise concerns from detrimental treatment<span style="text-indent: -14.3px;"> (PR N)</span>;</li>
+<li>(10) responsibility for overseeing the development and implementation of the <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> remuneration policies and practices<span style="text-indent: -14.3px;"> (PR M)</span>; and</li>
+<li>(11) responsibility for the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm&rsquo;s</a></em> performance of its obligations in respect of outsourced operational functions under <a  title="Non-Solvency II Firms &ndash; Governance 5" href="/pra-rules/non-solvency-ii-firms-governance#39968ab41b5243eca1c78add1a2c4d40" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Non-Solvency II Firms &ndash; Governance 5</a> <span style="text-indent: -14.3px;">(PR X)</span>. </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2017#ec1719fd8d3d4a6781270c5e34dcd132">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ec1719fd8d3d4a6781270c5e34dcd132">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="22b18dc946cc4a26ac6fc7572b078886"
+	 data-version="1ecbfed4bba4466db2d8501f5f0e75da"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The responsibility set out in rule 3.2(1) is a <em><a  class="glossary-link" title="SIMR prescribed responsibility" href="#glossary-term-97c126e4bfc3450ba30c37d5f88ca8d0" data-mce-linktype="2" data-glossary-id="77199">prescribed responsibility </a></em>in the circumstances specified: </p>
+<ol class="new-bullet">
+<li>(1) if a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> outsources its internal audit <em><a  class="glossary-link" title="function" href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d" data-mce-linktype="2" data-glossary-id="52829">function</a></em> to an external third party service provider (that is, a service provider outside the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em><a  class="glossary-link" title="group" href="#glossary-term-cad95819b1ff46649b40fa89a3f7f6eb" data-mce-linktype="2" data-glossary-id="52834">group</a></em>), responsibility for providing for an effective internal audit <em><a  class="glossary-link" title="function" href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d" data-mce-linktype="2" data-glossary-id="52829">function</a></em> in accordance with <a  title="Non-Solvency II Firms &ndash; Governance 9.2" href="/pra-rules/non-solvency-ii-firms-governance#49ee326b4a004d2c814cbfadc8bb04e5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Non-Solvency II Firms &ndash; Governance 9.2</a> and for overseeing the performance of the internal audit <em><a  class="glossary-link" title="function" href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d" data-mce-linktype="2" data-glossary-id="52829">function</a></em><span style="text-indent: -14.3px;"> (PR J2)</span>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/12-09-2017#22b18dc946cc4a26ac6fc7572b078886">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=22b18dc946cc4a26ac6fc7572b078886">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/3-prescribed-responsibilities/10-12-2018?p=1" data-id="4410e551bdf749fcb8deef5668d02517" data-effective-date="10-12-2018" data-download-title="Prescribed Responsibilities_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/3-prescribed-responsibilities/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#4410e551bdf749fcb8deef5668d02517&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Allocation of Responsibilities – Prescribed Responsibilities">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=4410e551bdf749fcb8deef5668d02517">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Prescribed Responsibilities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="e93b128d09c24d4f8111c979b368f496"
+	 data-version="f5dec5e3a40b4e42b2bf48d191f2275f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3A
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Prescribed Responsibilities: Swiss General Insurers
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e4e6d576dcc8436fb0fc5801b6092e96"
+	 data-version="d865028c1bf041449c2654a752010e72"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3A.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies only to a <em style="text-indent: -14.3px;"><a  class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em> in respect of the <span style="text-indent: -14.3px;">activities of the </span><em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em><span style="text-indent: -14.3px;"> carried on from a </span><em style="text-indent: -14.3px;"><a  class="glossary-link" title="branch" href="#glossary-term-c1eea9614dfa49bc9490d65422cff984" data-mce-linktype="2" data-glossary-id="53199">branch</a></em><span style="text-indent: -14.3px;"> in the </span><em style="text-indent: -14.3px;"><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em><span style="text-indent: -14.3px;">.</span></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e4e6d576dcc8436fb0fc5801b6092e96">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3A.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0d0dbac25aa940728b2f30677663aabb"
+	 data-version="3532f4749e3e4e159fed89eeac023432"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3A.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Each of the responsibilities set out in this rule is a <em><a  class="glossary-link" title="Swiss general insurer prescribed responsibility" href="#glossary-term-609077b89b7243bea1b28fa972fc4b52" data-mce-linktype="2" data-glossary-id="88198">Swiss general insurer prescribed responsibility</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) responsibility for management of the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm&rsquo;s</a></em> risk management processes in the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em><span style="text-indent: -14.3px;"> (PR AA)</span>;</li>
+<li>(2) responsibility for the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm&rsquo;s</a> </em>compliance with the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> <a  class="glossary-link" title="UK regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098"><em>regulatory system</em></a> applicable to the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em><span style="text-indent: -14.3px;"> (PR FF)</span>;</li>
+<li>(3) responsibility for the escalation of correspondence from the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>, <em><span style="text-indent: -14.3px;"><a  class="glossary-link" title="FCA" href="#glossary-term-61695d6f5a14495dba5cc43ad14d2303" data-mce-linktype="2" data-glossary-id="77605">FCA</a></span></em> and other regulators in respect of the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em> to each of the <em><a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> or the <em><a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> of the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em> and, as appropriate, the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm&rsquo;s</a></em> <em><a  class="glossary-link" title="parent undertaking" href="#glossary-term-cc80733831ac4e40bbb6771064eca0f3" data-mce-linktype="2" data-glossary-id="52868">parent undertaking</a></em> and the ultimate <em style="text-indent: -14.3px;"><a  class="glossary-link" title="parent undertaking" href="#glossary-term-cc80733831ac4e40bbb6771064eca0f3" data-mce-linktype="2" data-glossary-id="52868">parent undertaking</a></em> of the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm&rsquo;s</a></em> <em><a  class="glossary-link" title="group" href="#glossary-term-cad95819b1ff46649b40fa89a3f7f6eb" data-mce-linktype="2" data-glossary-id="52834">group</a></em><span style="text-indent: -14.3px;"> (PR EE)</span>; and</li>
+<li>(4) responsibility for management of the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm&rsquo;s</a></em> systems and controls in the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em><span style="text-indent: -14.3px;"> (PR BB)</span>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0d0dbac25aa940728b2f30677663aabb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3A.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/3a-prescribed-responsibilities-swiss-general-insurers/10-12-2018?p=1" data-id="e93b128d09c24d4f8111c979b368f496" data-effective-date="10-12-2018" data-download-title="Prescribed Responsibilities: Swiss General Insurers_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/3a-prescribed-responsibilities-swiss-general-insurers/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#e93b128d09c24d4f8111c979b368f496&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Allocation of Responsibilities – Prescribed Responsibilities: Swiss General Insurers">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=e93b128d09c24d4f8111c979b368f496">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Prescribed Responsibilities: Swiss General Insurers
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="1e2179e98c104707b456ba4cc52b3083"
+	 data-version="638ed603be684da592ce6f8bddc81216"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Identification of Key Functions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="db9088d2b4ab491998346b033a092eac"
+	 data-version="e412a9a58b06477dbe525c4e461b5694"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must identify:</p>
+<ol class="new-bullet">
+<li>(1) each of the <em><a  class="glossary-link" title="functions" href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d" data-mce-linktype="2" data-glossary-id="52829">functions</a></em> that the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a> </em>considers to be a <em><a  class="glossary-link" title="key function" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em>; and</li>
+<li>(2) any such <em><a  class="glossary-link" title="key function" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em> that amounts to effectively running the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>.</em></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=db9088d2b4ab491998346b033a092eac">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f1ac0a5eb07747419c599ddab5c9ea85"
+	 data-version="06b491e114f947f788ce1a68da2e11e6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must keep its identification of <em><a  class="glossary-link" title="key functions" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key functions</a></em> pursuant to <a  title="4.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#db9088d2b4ab491998346b033a092eac" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a> up-to-date.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f1ac0a5eb07747419c599ddab5c9ea85">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ee25222f52e7417a852369f467ba037d"
+	 data-version="40ab0a6053044b3199cf2e6bc01a12f3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must keep a record of its reasoning for the identification of <em><a  class="glossary-link" title="key functions" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key functions</a></em> pursuant to <a  title="4.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#db9088d2b4ab491998346b033a092eac" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ee25222f52e7417a852369f467ba037d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/4-identification-of-key-functions/10-12-2018?p=1" data-id="1e2179e98c104707b456ba4cc52b3083" data-effective-date="10-12-2018" data-download-title="Identification of Key Functions_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/4-identification-of-key-functions/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#1e2179e98c104707b456ba4cc52b3083&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Allocation of Responsibilities – Identification of Key Functions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1e2179e98c104707b456ba4cc52b3083">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Identification of Key Functions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="312ce248e53e4fb0bd98f5be13766bf6"
+	 data-version="e25fb7ea09a94f79b38a595e6db7d555"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Records
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="84381e5c35c245e9b262726761076a02"
+	 data-version="b69abe4684ea4909a705b71dbeaba628"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must have and maintain a <em><a  class="glossary-link" title="governance map" href="#glossary-term-ee104c6b165448408f6bcf4483a8c33e" data-mce-linktype="2" data-glossary-id="77198">management responsibilities map</a></em>, which is a clear and coherent document or series of documents with the following details:</p>
+<ol class="new-bullet">
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(1) a list of the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="key functions" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key functions</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> identified by the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a> </em><span style="line-height: 1.6em; text-indent: -1.3em;">in accordance with </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="4.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#db9088d2b4ab491998346b033a092eac" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a><span style="line-height: 1.6em; text-indent: -1.3em;"> highlighting those that amount to effectively running the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">;</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(2) the names of the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="persons" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">persons</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> who effectively run the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> or who are responsible for other </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="key functions" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key functions</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> listed pursuant to </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="5.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#84381e5c35c245e9b262726761076a02" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a><span style="line-height: 1.6em; text-indent: -1.3em;">(1);</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(3) for each </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> named pursuant to </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="5.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#84381e5c35c245e9b262726761076a02" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a><span style="line-height: 1.6em; text-indent: -1.3em;">(2), a summary of the significant responsibilities allocated to that </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> (including, if applicable, any </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="SIMR prescribed responsibilities" href="#glossary-term-97c126e4bfc3450ba30c37d5f88ca8d0" data-mce-linktype="2" data-glossary-id="77199">prescribed responsibilities</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> that have been allocated to that </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> in accordance with </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="2" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#fef7e7dd057b484f80f982428e161428" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">2</a><span style="line-height: 1.6em; text-indent: -1.3em;">);</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(4) where any responsibilities covered by </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="5.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#84381e5c35c245e9b262726761076a02" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a><span style="line-height: 1.6em; text-indent: -1.3em;">(3) are allocated to more than one </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">, details of how those responsibilities are shared or divided between the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="persons" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">persons</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> concerned;</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(5) reporting lines and lines of responsibility for each </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> listed pursuant to </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="5.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#84381e5c35c245e9b262726761076a02" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a><span style="line-height: 1.6em; text-indent: -1.3em;">(2);</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(6) where a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> is a member of a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="group" href="#glossary-term-decf8b2825cb4d17a48ca357b7c70d9b" data-mce-linktype="2" data-glossary-id="52719">group</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">:</span></li>
+<ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(a) how the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> management and governance arrangements fit together with those of its </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="group" href="#glossary-term-decf8b2825cb4d17a48ca357b7c70d9b" data-mce-linktype="2" data-glossary-id="52719">group</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> and the extent to which the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> management and governance arrangements are provided by or shared with other members of its </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="group" href="#glossary-term-decf8b2825cb4d17a48ca357b7c70d9b" data-mce-linktype="2" data-glossary-id="52719">group</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">; and</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(b) for the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="persons" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">persons</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> listed pursuant to </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="5.1" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#84381e5c35c245e9b262726761076a02" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a><span style="line-height: 1.6em; text-indent: -1.3em;">(2), details of the reporting lines and the lines of responsibility (if any) to </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="persons" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">persons</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> who are employees or officers of other </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="group" href="#glossary-term-decf8b2825cb4d17a48ca357b7c70d9b" data-mce-linktype="2" data-glossary-id="52719">group</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> members or to committees or other bodies of the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="group" href="#glossary-term-decf8b2825cb4d17a48ca357b7c70d9b" data-mce-linktype="2" data-glossary-id="52719">group</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> or of other </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="group" href="#glossary-term-decf8b2825cb4d17a48ca357b7c70d9b" data-mce-linktype="2" data-glossary-id="52719">group</a> </em><span style="line-height: 1.6em; text-indent: -1.3em;">members;</span></li>
+</ol>
+<li>(7) matters reserved to the <em><a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> (including the terms of reference of its committees) including, in the case of a <em><a  class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em>, the equivalent body (or its committees) responsible for the management of the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer&rsquo;s</a></em> business and activities in the <em><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2016#84381e5c35c245e9b262726761076a02">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=84381e5c35c245e9b262726761076a02">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2ecde02609b1437fb5107d108f58cf99"
+	 data-version="81a91719fa9c44019686157841f03a0e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must update the <em><a  class="glossary-link" title="governance map" href="#glossary-term-ee104c6b165448408f6bcf4483a8c33e" data-mce-linktype="2" data-glossary-id="77198">management responsibilities map</a></em>:</p>
+<ol class="new-bullet">
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(1) at least quarterly; and</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(2) in the event of a significant change to:</span></li>
+<ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(a) the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> governance structure;</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(b) the significant responsibilities allocated to a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">; or</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(c) the reporting lines or lines of responsibility for a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">.</span></li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2016#2ecde02609b1437fb5107d108f58cf99">
+			Past
+			<span class="visually-hidden">
+				version of 5.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2ecde02609b1437fb5107d108f58cf99">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4214b907d02f4834a40d7632fcf6a5c2"
+	 data-version="7fef12d0a7ea41fe8f98eb56dea9f395"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must, as soon as reasonably practicable, provide the following to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>:</p>
+<ol class="new-bullet">
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(1) upon request by the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">, a copy of the </span><span style="line-height: 1.6em; text-indent: -1.3em;"><em style="text-indent: 0px;"><a  class="glossary-link" title="governance map" href="#glossary-term-ee104c6b165448408f6bcf4483a8c33e" data-mce-linktype="2" data-glossary-id="77198">management responsibilities map</a></em>; and</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(2) in the event of an update pursuant to </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="5.2" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#2ecde02609b1437fb5107d108f58cf99" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.2</a><span style="line-height: 1.6em; text-indent: -1.3em;">(2), a copy of the relevant part of the </span><span style="line-height: 1.6em; text-indent: -1.3em;"><em style="text-indent: 0px;"><a  class="glossary-link" title="governance map" href="#glossary-term-ee104c6b165448408f6bcf4483a8c33e" data-mce-linktype="2" data-glossary-id="77198">management responsibilities map</a></em>.</span></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2016#4214b907d02f4834a40d7632fcf6a5c2">
+			Past
+			<span class="visually-hidden">
+				version of 5.3 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4214b907d02f4834a40d7632fcf6a5c2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fe0a70c7c890428aa354508b53c81825"
+	 data-version="d49ddd1d80c94ec9a3b64ada3c3cc5a8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em> must keep an up-to-date record of the <em><a  class="glossary-link" title="statement of responsibilities" href="#glossary-term-e06164c5b9a048f48a9e1b12a5761413" data-mce-linktype="2" data-glossary-id="88192">statement of responsibilities</a></em> of each <em><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2016#fe0a70c7c890428aa354508b53c81825">
+			Past
+			<span class="visually-hidden">
+				version of 5.4 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fe0a70c7c890428aa354508b53c81825">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0619a439c8a949b9bff2c8babc85874f"
+	 data-version="632baf9b367b43088245c1681b3abbf6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="scope of responsibilities form" href="#glossary-term-a443b1ba213043b3ab25c2990563514b" data-mce-linktype="2" data-glossary-id="67168">statement of responsibilities form</a></em>, where it is kept and maintained on behalf of a <em><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em>, will satisfy the requirement in <a  title="5.4" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#fe0a70c7c890428aa354508b53c81825" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.4</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2016#0619a439c8a949b9bff2c8babc85874f">
+			Past
+			<span class="visually-hidden">
+				version of 5.5 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0619a439c8a949b9bff2c8babc85874f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="24c1ff6ae1694aad9256663ec1ff17c8"
+	 data-version="dbef8fed8f7d49d3a3f3c32ad1217950"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The record in <a  title="5.4" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#fe0a70c7c890428aa354508b53c81825" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.4</a>, and each updated version, must be signed by the <em><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em> and an appropriate representative of the <em><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=24c1ff6ae1694aad9256663ec1ff17c8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="48849b11be0c4ee79cbe7a765411ab0b"
+	 data-version="705bf6d909a74425bfd76cfe67344873"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em> amends its <em><a  class="glossary-link" title="governance map" href="#glossary-term-ee104c6b165448408f6bcf4483a8c33e" data-mce-linktype="2" data-glossary-id="77198">management responsibilities map</a></em> to show changes in a <em><a  class="glossary-link" title="person&rsquo;s" href="#glossary-term-d22b82973f7e459bbc1a84bd71535669" data-mce-linktype="2" data-glossary-id="77607">person&rsquo;s</a></em> responsibilities it must also ensure that:</p>
+<ol class="new-bullet">
+<li>(1) the <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="person&rsquo;s" href="#glossary-term-d22b82973f7e459bbc1a84bd71535669" data-mce-linktype="2" data-glossary-id="77607">person</a></em> concerned is informed in writing of the changes; and</li>
+<li>(2) the record in <a  title="5.4" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#fe0a70c7c890428aa354508b53c81825" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.4</a> is amended to show the changes.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2016#48849b11be0c4ee79cbe7a765411ab0b">
+			Past
+			<span class="visually-hidden">
+				version of 5.7 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=48849b11be0c4ee79cbe7a765411ab0b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="850f3c8e0dde440ca3fc2c16c458161c"
+	 data-version="41276ad4febe49c180c909d5783cce47"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Each version of both the <em><a  class="glossary-link" title="governance map" href="#glossary-term-ee104c6b165448408f6bcf4483a8c33e" data-mce-linktype="2" data-glossary-id="77198">management responsibilities map</a></em> and the record in <a  title="5.4" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#fe0a70c7c890428aa354508b53c81825" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.4</a> must be retained for a period of six years from the date on which it was superseded by a more up-to-date record, and must be provided to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> on request.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/07-03-2016#850f3c8e0dde440ca3fc2c16c458161c">
+			Past
+			<span class="visually-hidden">
+				version of 5.8 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=850f3c8e0dde440ca3fc2c16c458161c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="87bf02b3b19c41b89b7e45aa94fdd7dc"
+	 data-version="e9808420f2d54becb9d07fd349f44532"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Not currently used.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=87bf02b3b19c41b89b7e45aa94fdd7dc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4c821ec3a76b4ba291daacad3c0fccb5"
+	 data-version="873578e5dae047279d5cfa6d18ab6031"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-fc359b5d48874153a40fcf3da02e3df9" data-mce-linktype="2" data-glossary-id="77606">firm</a></em> must comply with <a  title="5.8" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#850f3c8e0dde440ca3fc2c16c458161c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.8</a> in relation to any record created in accordance with <a  title="SYSC 2.2.1R" href="/pra-rules/sysc-senior-management-arrangements-systems-and-controls-sourcebook-2#fe3cd3162ef64a679e6f0d4d3fdea317" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">SYSC 2.2.1R</a> of the <em><a  class="glossary-link" title="PRA Handbook" href="#glossary-term-10515d7817d74ae181245d1eec49471b" data-mce-linktype="2" data-glossary-id="52206">PRA Handbook</a></em> as at 31 December 2015.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4c821ec3a76b4ba291daacad3c0fccb5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.10
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/5-records/10-12-2018?p=1" data-id="312ce248e53e4fb0bd98f5be13766bf6" data-effective-date="10-12-2018" data-download-title="Records_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities/5-records/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-allocation-of-responsibilities#312ce248e53e4fb0bd98f5be13766bf6&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Allocation of Responsibilities – Records">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=312ce248e53e4fb0bd98f5be13766bf6">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Records
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

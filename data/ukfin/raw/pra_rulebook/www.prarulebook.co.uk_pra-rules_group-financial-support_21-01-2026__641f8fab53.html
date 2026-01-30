@@ -1,0 +1,2452 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/group-financial-support" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/group-financial-support" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{1B8608FF-9E59-4C17-A479-4C006604AE3E} -->
+<title>Group Financial Support | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Group Financial Support">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Group Financial Support">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoiva-f-6e03c8b60-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":33,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"25622e23","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51227,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370154","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==IybSm2Qoo9U4zZWf2zHBSj/oD9rwnjiZjmzJ5GE1X+0SU+Nm0eBQqPuAVvovNyJAxlmqBX9NFXX1eiTHHMpnKHKx9oOxfQ3oC5lLmglh2ai4IXm+j0qw3Q3rErbySJcvct89ZttCMop6icy192A/MIlHpY2hK61u535hly7QWYX69MGs2R6IUQdiohXRQJu99J8/GCGJyQUc12u2JWYANZRrWmBB1zw7Rn3kZVzictWCF+0OD1giLlXbgNvj1V1wBH7CeEhKMeXAwFG6jpA1sysKThAX5ZJJLdC9kRfgm4ETxmmyOKmNv4dogy431R6y6OXTLL5x6CaTuc3iDKLTvxzlPCirNsyxY8gX/+ZFxcZDktjhXDZmpVfYstxlaw49TMbf6raAk0SGRmWYjQP3AKlQs0vi2Y84DAwFBPSZsJM=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Group Financial Support				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Group Financial Support
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/group-financial-support/19-01-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						19/01/2015
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/group-financial-support/01-07-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/07/2015
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/group-financial-support/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-a6ea2de8-a0d4-4ee5-bb0b-ce069a9cd0e5">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-a6ea2de8-a0d4-4ee5-bb0b-ce069a9cd0e5"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Group Financial Support
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Group Financial Support)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-authorised-persons">
+					Non-authorised persons
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=16866489b5df42a480548c648c67fa91">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Group Financial Support
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/implementing-the-bank-recovery-and-resolution-directive" class="list-links__link" target="_blank">
+										PS1/15 - Implementing the Bank Recovery and Resolution Directive
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/strengthening-the-alignment-of-risk-and-reward-new-remuneration-rules" class="list-links__link" target="_blank">
+										PS12/15 - Strengthening the alignment of risk and reward: new remuneration rules
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/uksi/2014/3348/contents" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										The Bank Recovery and Resolution (No. 2) Order 2014
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/eur/2016/911/introduction" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Commission Implementing Regulation (EU) 2016/911
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/eur/2016/1075/contents" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Commission Delegated Regulation (EU) 2016/1075
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/-/media/boe/files/paper/2019/ps519-section-b-app3-brrd-april-2019.pdf" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										EU EXIT INSTRUMENT: THE TECHNICAL STANDARDS (BANK RECOVERY AND  RESOLUTION DIRECTIVE) (EU EXIT) (No.2) INSTRUMENT 2019
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/-/media/boe/files/paper/2020/december/Guidelines%20specifying%20the%20various%20conditions%20for%20the%20provision%20of%20group%20financial%20support.pdf" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Guidelines specifying the conditions for group financial support under  Article 23 of Directive 2014/59/EU
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/group-financial-support/31-12-2020_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/group-financial-support/31-12-2020?p=1" data-id="16866489b5df42a480548c648c67fa91" data-effective-date="31-12-2020" data-download-title="Group Financial Support_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/group-financial-support/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/group-financial-support&amp;subject=PRA Rulebook - Group Financial Support">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="5dea17fe80514adc850edc190f041399"
+	 data-version="7e9daf590a064f8b969f26ba0d5582dd"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="999327dc16264dd39d90d646c47e9fc5"
+	 data-version="78785549790a4ccbb535675e21de804c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which is a <em><a class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em>, a <em><a class="glossary-link" title="financial holding company" href="#glossary-term-709d151648e349e2a2ae6d4a91d29a2a" data-mce-linktype="2" data-glossary-id="52321">financial holding company</a></em>, a <em><a class="glossary-link" title="mixed financial holding company" href="#glossary-term-282f63c232634076876fc9e4526f3c33" data-mce-linktype="2" data-glossary-id="52322">mixed financial holding company</a></em> or a <em><a  class="glossary-link" title="mixed activity holding company" href="#glossary-term-536fcfe05f5149c98bfb8d6f93929aa1" data-mce-linktype="2" data-glossary-id="52510">mixed activity holding company</a></em>. </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=999327dc16264dd39d90d646c47e9fc5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4e5236399a7a494e8cbdc9b1a28da041"
+	 data-version="dda58ca348e746f6a3c41ed9ca6de59e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Part does not apply in relation to:</p>
+<ol class="new-bullet">
+<li>(1) financial arrangements, other than <em><a class="glossary-link" title="group financial support agreements" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreements</a></em>, including funding arrangements and the operation of centralised funding arrangements, provided that no <em><a class="glossary-link" title="institution" href="#glossary-term-9a90d619be3a4258bd99bea5eebd9a54" data-mce-linktype="2" data-glossary-id="52320">institution</a></em> that is party to such arrangements meets the <em><a class="glossary-link" title="conditions for early intervention" href="#glossary-term-eca57e2d2a6646a9a20fcfbde101d6a4" data-mce-linktype="2" data-glossary-id="52312">conditions for early intervention</a></em>; and</li>
+<li>(2) financial support provided by a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> to a member of its <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> that experiences financial difficulties if the <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> decides to do so on a case-by-case basis and according to <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> policies if it does not represent a risk for the <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em>.</li>
+</ol>
+			<p><strong>[Note: Art. 19(2) and (3) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4e5236399a7a494e8cbdc9b1a28da041">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="18de595e1d7f47b9ab3bbbd4c884a9ef"
+	 data-version="2144dfbeeb4e431cb0f4af6e0e0e1ecd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a class="glossary-link" title="competent authority" href="#glossary-term-b9b7e694379b46ae97404461a35b2411" data-mce-linktype="2" data-glossary-id="52294">competent authority</a></em></p>
+<p style="padding-left: 30px;"><span style="text-indent: -1.3em;">means:</span></p>
+<ol class="new-bullet">
+    <ol>
+        <li>(1) the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>, in respect of <em><a class="glossary-link" title="PRA-authorised persons" href="#glossary-term-0e88dab3646e4b6e9b11402f6c0fe631" data-mce-linktype="2" data-glossary-id="77811">PRA-authorised persons</a></em>;</li>
+        <li>(2) the <em><a class="glossary-link" title="FCA" href="#glossary-term-de643ed6eea64a00a5aa9872bba5710b" data-mce-linktype="2" data-glossary-id="52503">FCA</a></em>, in respect of any other <em><a class="glossary-link" title="person" href="#glossary-term-e18ded148760429091533da40a95c681" data-mce-linktype="2" data-glossary-id="52515">person</a></em>.</li>
+    </ol>
+</ol>
+<p><em><a class="glossary-link" title="conditions for early intervention" href="#glossary-term-eca57e2d2a6646a9a20fcfbde101d6a4" data-mce-linktype="2" data-glossary-id="52312">conditions for early intervention</a></em></p>
+<p style="padding-left: 30px;">means circumstances in which an <em><a class="glossary-link" title="institution" href="#glossary-term-a7919f0ec6904cbea74ae860de6ae906" data-mce-linktype="2" data-glossary-id="52544">institution</a></em> infringes or is likely in the near future to infringe the requirements of the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>, or the requirements of provisions implementing <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>, <em><a class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em> or any of Articles 3 - 7, 14 - 17 and 24, - 26 of <em><a class="glossary-link" title="MiFIR" href="#glossary-term-71964e826c6c4ba8b150bf2239fb66d2" data-mce-linktype="2" data-glossary-id="52270">MiFIR</a></em>.</p>
+<p><em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em></p>
+<p style="padding-left: 30px;">means a <em><a class="glossary-link" title="parent undertaking" href="#glossary-term-2d0996adc9a646ba91b62f1206462f25" data-mce-linktype="2" data-glossary-id="52513">parent undertaking</a></em> and its <em><a class="glossary-link" title="subsidiary" href="#glossary-term-ad780a156dce4f0e942914baa9ab2038" data-mce-linktype="2" data-glossary-id="52516">subsidiaries</a></em>.</p>
+<p><em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em></p>
+<p style="padding-left: 30px;"><span style="text-indent: -1.3em;">means an agreement between:</span></p>
+<ol class="new-bullet">
+    <ol>
+        <li>(1) a <em><a class="glossary-link" title="UK parent institution" href="#glossary-term-2ae8d2c0a1464049a1d8f664c025d84f" data-mce-linktype="2" data-glossary-id="98248">UK parent institution</a></em>, or a <em><a class="glossary-link" title="qualifying parent undertaking" href="#glossary-term-b8f820f395974f769443baf63dcebcfb" data-mce-linktype="2" data-glossary-id="52271">qualifying parent undertaking</a></em>, a <em><a class="glossary-link" title="financial holding company" href="#glossary-term-709d151648e349e2a2ae6d4a91d29a2a" data-mce-linktype="2" data-glossary-id="52321">financial holding company</a></em>, a <em><a class="glossary-link" title="mixed financial holding company" href="#glossary-term-282f63c232634076876fc9e4526f3c33" data-mce-linktype="2" data-glossary-id="52322">mixed financial holding company</a></em> or a <em><a class="glossary-link" title="mixed-activity holding company" href="#glossary-term-536fcfe05f5149c98bfb8d6f93929aa1" data-mce-linktype="2" data-glossary-id="52510">mixed-activity holding company</a></em> established in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>; and</li>
+        <li>(2) a <em><a class="glossary-link" title="subsidiary" href="#glossary-term-16478c271ef3413e88571f205fa22428" data-mce-linktype="2" data-glossary-id="52319">subsidiary</a></em> of an entity referred to in (1) set up in a <em><a class="glossary-link" title="third country" href="#glossary-term-987a7ddcc6fb42f697a0c266b97e616b" data-mce-linktype="2" data-glossary-id="52118">third country</a></em> and that is an <em><a class="glossary-link" title="institution" href="#glossary-term-9a90d619be3a4258bd99bea5eebd9a54" data-mce-linktype="2" data-glossary-id="52320">institution</a></em> or a <em><a class="glossary-link" title="financial institution" href="#glossary-term-6be7a9cbebc94779a12331cb7ef8c408" data-mce-linktype="2" data-glossary-id="52508">financial institution</a></em> covered by the consolidated supervision of the entity referred to in (1),</li>
+    </ol>
+</ol>
+<p style="padding-left: 30px;"><span style="text-indent: -1.3em;">to provide financial support to a party that is an </span><em style="text-indent: -1.3em;"><a class="glossary-link" title="institution" href="#glossary-term-9a90d619be3a4258bd99bea5eebd9a54" data-mce-linktype="2" data-glossary-id="52320">institution</a></em><span style="text-indent: -1.3em;"> at a time when that </span><em style="text-indent: -1.3em;"><a class="glossary-link" title="institution" href="#glossary-term-9a90d619be3a4258bd99bea5eebd9a54" data-mce-linktype="2" data-glossary-id="52320">institution</a></em><span style="text-indent: -1.3em;"> meets the </span><em style="text-indent: -1.3em;"><a class="glossary-link" title="conditions for early intervention" href="#glossary-term-eca57e2d2a6646a9a20fcfbde101d6a4" data-mce-linktype="2" data-glossary-id="52312">conditions for early intervention</a></em><span style="text-indent: -1.3em;">.</span></p>
+<p><em><a class="glossary-link" title="management body" href="#glossary-term-5ea86e08b06d436883861c2b2f42c4a1" data-mce-linktype="2" data-glossary-id="52523">management body</a></em></p>
+<p style="padding-left: 30px;">means a <em><a title="BRRD undertaking’s" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking&rsquo;s</a></em> body or bodies, which are appointed in accordance with <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> law, which are empowered to set the <em><a title="BRRD undertaking’s" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking&rsquo;s</a></em> strategy, objectives and overall direction, and which oversee and monitor management decision-making, and include the <em><a title="persons" href="#glossary-term-e18ded148760429091533da40a95c681" data-mce-linktype="2" data-glossary-id="52515">persons</a></em> who effectively direct the business of the <em><a title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em>.</p>
+<p><em><a class="glossary-link" title="own funds requirement" href="#glossary-term-edefb673267d421bbba07b794abdf5f3" data-mce-linktype="2" data-glossary-id="52524">own funds requirement</a></em></p>
+<p style="padding-left: 30px;">means the requirements laid down in Articles 92 - 98 of the <em><a class="glossary-link" title="CRR" href="../#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>.</p>
+<p><em><a class="glossary-link" title="EEA parent undertaking" href="#glossary-term-d0b0e46851d1450bb769dd45ad4a9090" data-mce-linktype="2" data-glossary-id="52522">UK parent undertaking</a></em></p>
+<p style="padding-left: 30px;">means a <em><a class="glossary-link" title="UK parent institution" href="#glossary-term-2ae8d2c0a1464049a1d8f664c025d84f" data-mce-linktype="2" data-glossary-id="98248">UK parent institution</a></em>, a <em><a class="glossary-link" title="UK parent financial holding company" href="#glossary-term-ea5105190d814b62aeb0dcec3e5c43eb" data-mce-linktype="2" data-glossary-id="98247">UK parent financial holding company</a></em> or a <em><a class="glossary-link" title="UK parent mixed financial holding company" href="#glossary-term-70b67a63fa2d47948b71f78a5fe97dbf" data-mce-linktype="2" data-glossary-id="98249">UK parent mixed financial holding company</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/group-financial-support/19-01-2015#18de595e1d7f47b9ab3bbbd4c884a9ef">
+			Past
+			<span class="visually-hidden">
+				version of 1.3 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=18de595e1d7f47b9ab3bbbd4c884a9ef">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6f643cc7d205483180dfb75900228ada"
+	 data-version="78be213d67034d3e8d7d3e7c3c1ba294"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise defined, any italicised expression used in this Part and in the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> has the same meaning as in the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6f643cc7d205483180dfb75900228ada">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/group-financial-support/1-application-and-definitions/31-12-2020?p=1" data-id="5dea17fe80514adc850edc190f041399" data-effective-date="31-12-2020" data-download-title="Application and Definitions_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/group-financial-support/1-application-and-definitions/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/group-financial-support#5dea17fe80514adc850edc190f041399&amp;subject=PRA Rulebook - Group Financial Support – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=5dea17fe80514adc850edc190f041399">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="7ec9e3ab58744705ae21d68db5a0a4ea"
+	 data-version="3a5d8ff461954de685db4c6a7beb52cb"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Group Financial Support Agreement
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="bd5607ab14e34bf4986afebc2921fae4"
+	 data-version="c2acddc2807d4dc6847d8986a7fb08b2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> must not enter into a <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> unless the following conditions are satisfied:</p>
+<ol class="new-bullet">
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(1) </span><span style="line-height: 1.6em; text-indent: -1.3em;">the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> specifies the principles for the calculation of the consideration for any transaction made under it, which:</span></li>
+<ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(a</span><span style="line-height: 1.6em; text-indent: -1.3em;">)</span><span style="line-height: 1.6em; text-indent: -1.3em;"> need not take into account any anticipated temporary impact on market prices arising from events external to the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">;</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(b</span><span style="line-height: 1.6em; text-indent: -1.3em;">)</span><span style="line-height: 1.6em; text-indent: -1.3em;"> may take into account information unavailable to the market in the possession of the party providing financial support based on it being in the same </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> as the party receiving financial support; and</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(c</span><span style="line-height: 1.6em; text-indent: -1.3em;">)</span><span style="line-height: 1.6em; text-indent: -1.3em;"> must require that the consideration is set at the time of the provision of financial support;</span></li>
+</ol>
+<li>(2) each party acts freely in entering into the <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em>;</li>
+<li>(3) in entering into the <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> and in determining the consideration for the provision of financial support, each party acts in its own best interests which may take account of any direct or any indirect benefit that may accrue to a party as a result of the provision of the financial support;</li>
+<li>(4) each party providing financial support has full disclosure of relevant information from any party receiving financial support prior to determination of the consideration for the provision of financial support and prior to any decision to provide financial support;<br /><strong>[Note: Art. 19(7) of the </strong><strong><em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em></strong><strong>]<br /></strong></li>
+<li>(5) any right, claim or action arising from the <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> may be exercised only by the parties to the agreement; and<br /><strong>[Note: Art. 19(9) of the </strong><strong><em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em></strong><strong>]<br /></strong></li>
+<li>(6) the terms of the <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> are consistent with the conditions for the provision of financial support in <a  title="4.1" href="/pra-rules/group-financial-support#f984a89e2a804b148ce8f1f5702cde71" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>.<br /><strong>[Note: Art. 20(3) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bd5607ab14e34bf4986afebc2921fae4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="71f6b6610758441a8b467dbbd387b7f1"
+	 data-version="95e99a4521ca41f5898dcc672c75120a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> must not enter into a proposed <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> if:</p>
+<ol class="new-bullet">
+    <li><span style="line-height: normal; text-indent: 0px;">(1)</span><span style="line-height: normal; text-indent: 0px;"> </span>the <em><a class="glossary-link" title="consolidating supervisor" href="#glossary-term-9220c7b167de41f5b1d889b37cfbe052" data-mce-linktype="2" data-glossary-id="88239">consolidating supervisor</a></em> has not granted permission to do so; or</li>
+    <li><span style="line-height: normal; text-indent: 0px;">(2)</span><span style="line-height: normal; text-indent: 0px;"> </span>at the time the proposed agreement is made, the <em><a class="glossary-link" title="competent authority" href="#glossary-term-d7b5f6a3ace14bb6a353ee284fc44167" data-mce-linktype="2" data-glossary-id="52517">competent authority</a></em> has decided that a party to the agreement that is an <em><a class="glossary-link" title="institution" href="#glossary-term-a7919f0ec6904cbea74ae860de6ae906" data-mce-linktype="2" data-glossary-id="52544">institution</a></em> meets the <em><a class="glossary-link" title="conditions for early intervention" href="#glossary-term-eca57e2d2a6646a9a20fcfbde101d6a4" data-mce-linktype="2" data-glossary-id="52312">conditions for early intervention</a></em>.</li>
+</ol>
+			<p><strong>[Note: Art. 19(8) and Art. 20(3) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/group-financial-support/19-01-2015#71f6b6610758441a8b467dbbd387b7f1">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=71f6b6610758441a8b467dbbd387b7f1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/group-financial-support/2-group-financial-support-agreement/31-12-2020?p=1" data-id="7ec9e3ab58744705ae21d68db5a0a4ea" data-effective-date="31-12-2020" data-download-title="Group Financial Support Agreement_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/group-financial-support/2-group-financial-support-agreement/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/group-financial-support#7ec9e3ab58744705ae21d68db5a0a4ea&amp;subject=PRA Rulebook - Group Financial Support – Group Financial Support Agreement">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=7ec9e3ab58744705ae21d68db5a0a4ea">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Group Financial Support Agreement
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="7d042e083af649129c0e259fcb3aad5e"
+	 data-version="d68e40d221e74da8b347555db1be3460"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Submission of Group Financial Support Agreement
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e017b68105e8431f8fa1a74df78b1e3d"
+	 data-version="f1a47717bffc44eebd9b9af8ac4876e2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which is a <em><a class="glossary-link" title="UK parent undertaking" href="#glossary-term-0e35db43d4c34a2280e82833465eefee" data-mce-linktype="2" data-glossary-id="98250">UK parent undertaking</a></em>, unless the <em><a class="glossary-link" title="FCA" href="#glossary-term-de643ed6eea64a00a5aa9872bba5710b" data-mce-linktype="2" data-glossary-id="52503">FCA</a></em> is the <em><a class="glossary-link" title="consolidating supervisor" href="#glossary-term-9220c7b167de41f5b1d889b37cfbe052" data-mce-linktype="2" data-glossary-id="88239">consolidating supervisor</a></em> of its <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/group-financial-support/19-01-2015#e017b68105e8431f8fa1a74df78b1e3d">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e017b68105e8431f8fa1a74df78b1e3d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a8d71ed1994745f1910dc3df1cd42802"
+	 data-version="6f65b1c49c4343bfa50b61a31735f370"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The changes to this rule are effective from 23:00 on 31/12/2020.</p>
+<p>If a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> or any member of its <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> intends to enter into a <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em>, or amend a <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> previously authorised by the <em><a  class="glossary-link" title="consolidating supervisor" href="#glossary-term-9220c7b167de41f5b1d889b37cfbe052" data-mce-linktype="2" data-glossary-id="88239">consolidating supervisor</a></em>, the <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> must submit to the <em><a  class="glossary-link" title="consolidating supervisor" href="#glossary-term-9220c7b167de41f5b1d889b37cfbe052" data-mce-linktype="2" data-glossary-id="88239">consolidating supervisor</a></em> an application for authorisation of the proposed agreement or amendment.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/group-financial-support/19-01-2015#a8d71ed1994745f1910dc3df1cd42802">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a8d71ed1994745f1910dc3df1cd42802">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="24c6eb714796459aa90bc30db0833e89"
+	 data-version="c02cad12fd58490f9d0fd1e64033e7b3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The application referred to in <a  title="3.2" href="/pra-rules/group-financial-support#a8d71ed1994745f1910dc3df1cd42802" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.2</a> must contain the text of the proposed <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> and identify any other <em><a class="glossary-link" title="persons" href="#glossary-term-e18ded148760429091533da40a95c681" data-mce-linktype="2" data-glossary-id="52515">persons</a></em> in the same <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> as the <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> that propose to be parties to the proposed agreement.</p>
+			<p><strong>[Note: Art. 20(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=24c6eb714796459aa90bc30db0833e89">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/group-financial-support/3-submission-of-group-financial-support-agreement/31-12-2020?p=1" data-id="7d042e083af649129c0e259fcb3aad5e" data-effective-date="31-12-2020" data-download-title="Submission of Group Financial Support Agreement_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/group-financial-support/3-submission-of-group-financial-support-agreement/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/group-financial-support#7d042e083af649129c0e259fcb3aad5e&amp;subject=PRA Rulebook - Group Financial Support – Submission of Group Financial Support Agreement">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=7d042e083af649129c0e259fcb3aad5e">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Submission of Group Financial Support Agreement
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="34fcad0e15ec4873add0d87b213e86f1"
+	 data-version="10ef212df8644d2699210aea481b8010"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Conditions for Group Financial Support
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="f984a89e2a804b148ce8f1f5702cde71"
+	 data-version="9e049fdb8fcc40cba74e83da14e782c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> must not provide financial support in accordance with a <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> unless the following conditions are met:</p>
+<ol class="new-bullet">
+    <li>(1) there is a reasonable prospect that the financial support provided significantly redresses the financial difficulties of the <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> member receiving the support;</li>
+    <li>(2) the provision of financial support has the objective of preserving or restoring the financial stability of the <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> as a whole or any of the members of the <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> and is in the interests of the <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> providing the support;</li>
+    <li>(3) the financial support is provided on terms, including consideration, in accordance with <a title="2" href="/pra-rules/group-financial-support#7ec9e3ab58744705ae21d68db5a0a4ea" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">2</a>;</li>
+    <li>(4) there is a reasonable prospect, on the basis of the information available to the <em><a class="glossary-link" title="management body" href="#glossary-term-5ea86e08b06d436883861c2b2f42c4a1" data-mce-linktype="2" data-glossary-id="52523">management body</a></em> of the <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> providing financial support at the time when the decision to grant financial support is taken, that the consideration for the financial support will be paid and, in particular:</li>
+    <ol>
+        <li>(a) if the financial support is given in the form of a loan, the loan will be repaid by the <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> entity receiving the support; and</li>
+        <li>(b) if the financial support is given in the form of a guarantee or any form of security, the liability of the <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> entity receiving the support that arises in the event that the guarantee is called upon or the security is enforced, will be paid.</li>
+    </ol>
+    <li>(5) the provision of the financial support would not jeopardise the liquidity or solvency of the <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> providing the financial support;</li>
+    <li>(6) the provision of the financial support would not create a threat to financial stability, in particular in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>;</li>
+    <li>(7) where a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> provides the financial support, it complies at the time the financial support is provided, with the requirements of the provisions implementing <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em> relating to capital or liquidity and any requirements of provisions implementing Article 104(2) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em> and the provision of the financial support does not cause the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to infringe those requirements;</li>
+    <li>(8) where a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> provides the financial support, it complies at the time when the financial support is provided, with the requirements relating to large exposures laid down in the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> and in the <a title="Large Exposures" href="/pra-rules/large-exposures" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Large Exposures</a> Part, and the provision of the financial support must not cause the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to infringe those requirements; and</li>
+    <li>(9) the provision of the financial support would not undermine the resolvability of the <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> providing the financial support.</li>
+</ol>
+			<p><strong>[Note: Art. 23 of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/group-financial-support/19-01-2015#f984a89e2a804b148ce8f1f5702cde71">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f984a89e2a804b148ce8f1f5702cde71">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/group-financial-support/4-conditions-for-group-financial-support/31-12-2020?p=1" data-id="34fcad0e15ec4873add0d87b213e86f1" data-effective-date="31-12-2020" data-download-title="Conditions for Group Financial Support_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/group-financial-support/4-conditions-for-group-financial-support/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/group-financial-support#34fcad0e15ec4873add0d87b213e86f1&amp;subject=PRA Rulebook - Group Financial Support – Conditions for Group Financial Support">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=34fcad0e15ec4873add0d87b213e86f1">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Conditions for Group Financial Support
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="f64a801c3916476bb7d8ad6a4f34752a"
+	 data-version="773cf3198ee848bb9d143286610b4277"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Decision to Provide or Accept Group Financial Support
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="1985014b40824bceba52f7efe562de31"
+	 data-version="62d54ca3317443f8a137e1141b7658b5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> that intends to provide financial support in accordance with a <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> must ensure that the decision to provide financial support is taken by its <em><a class="glossary-link" title="management body" href="#glossary-term-5ea86e08b06d436883861c2b2f42c4a1" data-mce-linktype="2" data-glossary-id="52523">management body</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1985014b40824bceba52f7efe562de31">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c5cb5b7b5cc94ed2915cb2f293bc9b58"
+	 data-version="688ef16ec66041c381324dcce940e1ef"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The decision must be reasoned and indicate the objective of the proposed financial support; in particular, the decision must indicate how the provision of the financial support complies with the conditions in <a  title="4.1" href="/pra-rules/group-financial-support#f984a89e2a804b148ce8f1f5702cde71" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c5cb5b7b5cc94ed2915cb2f293bc9b58">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c3e483ffe50342929c3393505546133f"
+	 data-version="84e24a70e81b45e59e6ec8207e60c1dc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that intends to accept financial support in accordance with a <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> must ensure that the decision to accept financial support is taken by its <em><a class="glossary-link" title="management body" href="#glossary-term-5ea86e08b06d436883861c2b2f42c4a1" data-mce-linktype="2" data-glossary-id="52523">management body</a></em>.</p>
+			<p><strong>[Note: Art. 24 of the <em>BRRD</em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c3e483ffe50342929c3393505546133f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/group-financial-support/5-decision-to-provide-or-accept-group-financial-support/31-12-2020?p=1" data-id="f64a801c3916476bb7d8ad6a4f34752a" data-effective-date="31-12-2020" data-download-title="Decision to Provide or Accept Group Financial Support_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/group-financial-support/5-decision-to-provide-or-accept-group-financial-support/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/group-financial-support#f64a801c3916476bb7d8ad6a4f34752a&amp;subject=PRA Rulebook - Group Financial Support – Decision to Provide or Accept Group Financial Support">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=f64a801c3916476bb7d8ad6a4f34752a">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Decision to Provide or Accept Group Financial Support
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="c8de4ce7fd6c422fa7c1eee3700994f0"
+	 data-version="47f16d0de2b3440f81789338a3463ac2"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Notification of Proposed Group Financial Support
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="50fd15171db84b4a81085697fd43c3fa"
+	 data-version="35fd60ca3b6a429a8ec7954b0d96d1fc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> that intends to provide financial support in accordance with a <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> must ensure that its <em><a class="glossary-link" title="management body" href="#glossary-term-5ea86e08b06d436883861c2b2f42c4a1" data-mce-linktype="2" data-glossary-id="52523">management body</a></em> notifies:</p>
+<ol class="new-bullet">
+    <li>(1) the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>;</li>
+    <li>(2) the <em><a class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> where it is the <em><a class="glossary-link" title="consolidating supervisor" href="#glossary-term-9220c7b167de41f5b1d889b37cfbe052" data-mce-linktype="2" data-glossary-id="88239">consolidating supervisor</a></em>.</li>
+    <li>(3) [deleted.]</li>
+    <li>(4) [deleted.]</li>
+</ol>
+<p>before it provides that financial support.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/group-financial-support/19-01-2015#50fd15171db84b4a81085697fd43c3fa">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=50fd15171db84b4a81085697fd43c3fa">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6d5ffdb6fa9445b4b2e2d6345121e1bd"
+	 data-version="1f980742c54d46999037237bde1e91b9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The notification must include the reasoned decision of the <em><a class="glossary-link" title="management body" href="#glossary-term-5ea86e08b06d436883861c2b2f42c4a1" data-mce-linktype="2" data-glossary-id="52523">management body</a></em> and details of the proposed financial support including a copy of the <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em>.</p>
+			<p><strong>[Note: Art. 25(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6d5ffdb6fa9445b4b2e2d6345121e1bd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/group-financial-support/6-notification-of-proposed-group-financial-support/31-12-2020?p=1" data-id="c8de4ce7fd6c422fa7c1eee3700994f0" data-effective-date="31-12-2020" data-download-title="Notification of Proposed Group Financial Support_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/group-financial-support/6-notification-of-proposed-group-financial-support/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/group-financial-support#c8de4ce7fd6c422fa7c1eee3700994f0&amp;subject=PRA Rulebook - Group Financial Support – Notification of Proposed Group Financial Support">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=c8de4ce7fd6c422fa7c1eee3700994f0">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Notification of Proposed Group Financial Support
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="11c85370b36a48d1bc1fb55e67395a58"
+	 data-version="3860a7d6126c45d8aa7c10fa006c9705"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Provision and Notification of Group Financial Support
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a3a94628f6864086a9ca63c27ba7e56a"
+	 data-version="23ec69908e9d47a48a1b1d18c6e7db68"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<div data-canvas-width="15.748099999999999">A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> may only provide financial support in accordance with a <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em> if:</div>
+<div data-canvas-width="20.4742"><ol class="new-bullet">
+<li>(1) the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> has not, within five<em> <a class="glossary-link" title="business days" href="#glossary-term-0ac6fe17ff7f43e08f14112960b50c73" data-mce-linktype="2" data-glossary-id="52213">business days</a></em> from the date of receipt by the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of the complete notification in <a  title="6.1" href="/pra-rules/group-financial-support#50fd15171db84b4a81085697fd43c3fa" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.1</a>, prohibited the provision of the financial support;</li>
+<li>(2) the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> has agreed to the provision of the proposed financial support; or</li>
+<li>(3) the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> has agreed to the provision of financial support subject to restrictions.</li>
+</ol></div>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a3a94628f6864086a9ca63c27ba7e56a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6eae784801244c14a26dc2212d3f155d"
+	 data-version="326f6265e26a46d895cee31864c2c8d2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<div data-canvas-width="81.59620000000001">Where the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> has agreed to the provision of financial support subject to restrictions, a<em> <a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> may only provide financial support in accordance with those restrictions.</div>
+			<p><strong>[Note: Art. 25(5) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6eae784801244c14a26dc2212d3f155d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="001549b590e0444b9a9b9ea4d655c2fc"
+	 data-version="aed8176ffa3746d8938cf9e2d115b71a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the <em><a class="glossary-link" title="management body" href="#glossary-term-5ea86e08b06d436883861c2b2f42c4a1" data-mce-linktype="2" data-glossary-id="52523">management body</a></em> of a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> decides to provide the financial support, that <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> must notify:</p>
+<ol class="new-bullet">
+    <li>(1) the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>;</li>
+    <li>(2) the <em><a class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> where it is the <em><a class="glossary-link" title="consolidating supervisor" href="#glossary-term-9220c7b167de41f5b1d889b37cfbe052" data-mce-linktype="2" data-glossary-id="88239">consolidating supervisor</a></em>.</li>
+    <li>(3) [deleted.]</li>
+    <li>(4) [deleted.]</li>
+</ol>
+			<p><strong>[Note: Art. 25(6) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/group-financial-support/19-01-2015#001549b590e0444b9a9b9ea4d655c2fc">
+			Past
+			<span class="visually-hidden">
+				version of 7.3 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=001549b590e0444b9a9b9ea4d655c2fc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/group-financial-support/7-provision-and-notification-of-group-financial-support/31-12-2020?p=1" data-id="11c85370b36a48d1bc1fb55e67395a58" data-effective-date="31-12-2020" data-download-title="Provision and Notification of Group Financial Support_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/group-financial-support/7-provision-and-notification-of-group-financial-support/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/group-financial-support#11c85370b36a48d1bc1fb55e67395a58&amp;subject=PRA Rulebook - Group Financial Support – Provision and Notification of Group Financial Support">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=11c85370b36a48d1bc1fb55e67395a58">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Provision and Notification of Group Financial Support
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="b8f7656057b6433fa804ea7a8bbab889"
+	 data-version="177d57b6cd4a4802a855fb739d319c9e"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Disclosure
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="435408045d4d4562bd545be3220f4ec6"
+	 data-version="3e27fdf8ee0f4efba1965227522e538a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<div data-canvas-width="15.748099999999999">A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> must, in accordance with the general principles set out in Articles 431 - 434 of the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>, disclose:</div>
+<div data-canvas-width="20.4742"><ol class="new-bullet">
+<li>(1) whether or not it has entered into a <em><a class="glossary-link" title="group financial support agreement" href="#glossary-term-a93f52e809e445508ff59a29849cd4f6" data-mce-linktype="2" data-glossary-id="52330">group financial support agreement</a></em>;</li>
+<li>(2) a description of the general terms of any such agreement; and </li>
+<li>(3) the names of the <em><a class="glossary-link" title="group" href="#glossary-term-3d81e118553d4c75b9953d309df5fdad" data-mce-linktype="2" data-glossary-id="52329">group</a></em> members that are party to the agreement. </li>
+</ol></div>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=435408045d4d4562bd545be3220f4ec6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="090cf94993bb4c509e581d763975efac"
+	 data-version="b19624189c0c42b5a5684be0ec09f808"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<div data-canvas-width="15.748099999999999">A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> must update the information disclosed at least annually.</div>
+			<div data-canvas-width="76.87010000000001"><strong>[Note: Art. 26(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>] </strong></div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=090cf94993bb4c509e581d763975efac">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/group-financial-support/8-disclosure/31-12-2020?p=1" data-id="b8f7656057b6433fa804ea7a8bbab889" data-effective-date="31-12-2020" data-download-title="Disclosure_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/group-financial-support/8-disclosure/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/group-financial-support#b8f7656057b6433fa804ea7a8bbab889&amp;subject=PRA Rulebook - Group Financial Support – Disclosure">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b8f7656057b6433fa804ea7a8bbab889">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Disclosure
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

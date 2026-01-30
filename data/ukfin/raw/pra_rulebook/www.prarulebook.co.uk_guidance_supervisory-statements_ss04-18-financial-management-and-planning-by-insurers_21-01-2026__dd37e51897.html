@@ -1,0 +1,2200 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{E82F85D6-8AA6-47AD-8913-6BD873A2D0DF} -->
+<title>SS4/18 – Financial management and planning by insurers | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS4/18 – Financial management and planning by insurers">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS4/18 – Financial management and planning by insurers">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoguq-f-1adae30c1-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":38,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2561093f","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51263,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370025","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==vmf5m0wOUetHZ1PiViHcFeE1QD3uUaCqfxMRpvcFrGWnKQFa/ws/6k7VVuxD/5MMBog0+EmMxyTAyBGb0Qhom79yOtZE0wfl3hscgqVIVkTLXwv07A5pEUjl80mPXIXvQP852Ctl9mHzaLK+mcronhTHZXy4FIXYmgnE95hmZvCBL6Be4Ab23Iaw0ZjaZrxWVQM+KLTTQGEYXdkRyteBATeGzGqZi/swDqhfl83a0i9MskeyCjnEJRda7EETihgC007xvKBiUaiPQNFSFVHp1hOpRUiAIfhRMjAtczpNmk+K8gl9ThzOxOd1KLYfJssIEJLrziqhP6LmTIXGuTKmB1cmFNBGfLcsEAjDt5+Di0NxSD7cJFIV1Zy+AzOxC9cfuYMaTjavwZNV3UT8TE8qZ4DKiO9VsTVU3T84lc8TBcQ=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS4/18 – Financial management and planning by insurers				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS4/18 – Financial management and planning by insurers
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/17-05-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						17/05/2018
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-39fbe259-f6b9-4a22-a7bf-22420e9a7d3e">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-39fbe259-f6b9-4a22-a7bf-22420e9a7d3e"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS4/18 – Financial management and planning by insurers
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS4/18 – Financial management and planning by insurers)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/conditions-governing-business/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Conditions Governing Business
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/investments/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Investments
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/financial-management-and-planning-by-insurers" class="list-links__link" target="_blank">
+										PS10/18 - Financial management and planning by insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/31-12-2024?p=1" data-id="2997f905785f4d4e8106910796264d4f" data-effective-date="31-12-2024" data-download-title="SS4/18 – Financial management and planning by insurers_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers&amp;subject=PRA Rulebook - SS4/18 – Financial management and planning by insurers">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="01b8b91b6d944ca78c91d9fe5ca0e941"
+	 data-version="b8aa9ee755084e1a98925c0ab64e20e6"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b8d4ac72eec14993ba4c62c83a73f7bf"
+	 data-version="6fc5570313144a369944ddbd0a842be0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement (SS) is addressed to all UK Solvency II firms, including in the context of provisions relating to Solvency II groups, mutual, third-country branches, and to the Society of Lloyd&rsquo;s and its managing agents (collectively referred to as &lsquo;insurers&rsquo;), and sets out the PRA&rsquo;s expectations concerning:</p>
+<ol class="new-bullet">
+    <li>(a) the development and maintenance of a risk appetite statement by insurers;</li>
+    <li>(b) how insurers apply their risk appetite when developing and monitoring their medium term business and financial plans; and</li>
+    <li>(c) the assessment of the suitability and sustainability of capital distribution plans in the context of this risk appetite.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/17-05-2018#b8d4ac72eec14993ba4c62c83a73f7bf">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4abf2b75f06d4568a7f5778f0d31cf46"
+	 data-version="157294d2419a41ef90066d1f816d5038"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This SS should be read in conjunction with:</p>
+<ul>
+    <li>the <a href="/pra-rules/conditions-governing-business" data-rb-content-link="Part">Conditions Governing Business</a>&nbsp;and <a href="/pra-rules/investments" data-rb-content-link="Part">Investments Parts</a>&nbsp;of the PRA Rulebook<sup><a href="#footnote-1">1</a></sup>;</li>
+    <li>the &lsquo;PRA&rsquo;s approach to insurance supervision&rsquo;<sup><a href="#footnote-2">2</a></sup>;</li>
+    <li>SS41/15 &lsquo;Solvency II: applying EIOPA Set 2, System of Governance and ORSA Guidelines&rsquo;<sup><a href="#footnote-3">3</a></sup>;</li>
+    <li>SS5/16 &lsquo;Corporate Governance: Board responsibilities&rsquo;<sup><a href="#footnote-4">4</a></sup>;</li>
+    <li>SS19/16 &lsquo;Solvency II: ORSA&rsquo;<sup><a href="#footnote-5">5</a></sup>;</li>
+    <li>SS4/17 &lsquo;Cyber insurance underwriting risk&rsquo;<sup><a href="#footnote-6">6</a></sup>; and</li>
+    <li>SS5/17 &lsquo;Dealing with a market turning event in the general insurance sector&rsquo;<sup><a href="#footnote-7">7</a></sup>.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						Conditions Governing Business Part: <a href="http://www.prarulebook.co.uk/rulebook/Content/Part/212969">www.prarulebook.co.uk/rulebook/Content/Part/212969</a> &amp; Investment Part: <a href="http://www.prarulebook.co.uk/rulebook/Content/Part/212926">www.prarulebook.co.uk/rulebook/Content/Part/212926</a>.
+					</span>
+				</li>
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						<a href="http://www.bankofengland.co.uk/prudential-regulation/supervision">www.bankofengland.co.uk/prudential-regulation/supervision</a>.
+					</span>
+				</li>
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency2-applying-eiopa-set2-system-of-governance-and-orsa-guidelines-ss">www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency2-applying-eiopa-set2-system-of-governance-and-orsa-guidelines-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2016/corporate-governance-board-responsibilities-ss">www.bankofengland.co.uk/prudential-regulation/publication/2016/corporate-governance-board-responsibilities-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-orsa">www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-orsa</a>.
+					</span>
+				</li>
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2017/cyber-insurance-underwriting-risk-ss">www.bankofengland.co.uk/prudential-regulation/publication/2017/cyber-insurance-underwriting-risk-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2017/dealing-with-a-market-turning-event-in-the-general-insurance-sector-ss">www.bankofengland.co.uk/prudential-regulation/publication/2017/dealing-with-a-market-turning-event-in-the-general-insurance-sector-ss</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/17-05-2018#4abf2b75f06d4568a7f5778f0d31cf46">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/1-introduction/31-12-2024?p=1" data-id="01b8b91b6d944ca78c91d9fe5ca0e941" data-effective-date="31-12-2024" data-download-title="Introduction_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/1-introduction/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers#01b8b91b6d944ca78c91d9fe5ca0e941&amp;subject=PRA Rulebook - SS4/18 – Financial management and planning by insurers – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="9f4bccc0dcdd4ff79f67cd17b4210edb"
+	 data-version="e8584346aa604b6b93e5ba2fa2360403"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Risk appetite statement
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b317a41b5fab4cb58bf63f533cfd9f21"
+	 data-version="0cd8008e31cd47618c597bfe01d4f972"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of this SS, the &lsquo;risk appetite&rsquo; is intended to mean the amount and type of risk that an insurer is willing to take in order to meet its strategic objectives.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d6a405829f1c4bb5baad18257c09ad4a"
+	 data-version="b61dc0d7293c46f1bc299b1bdade29e0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects an insurer&rsquo;s risk appetite to be approved by the board, and to be documented in terms that are clearly understandable in a risk appetite statement, along with the rationale for the terms in which the risk appetite is expressed, and for how this appetite has been determined. The PRA expects the insurer&rsquo;s risk appetite statement to identify the reasonably foreseeable circumstances under which the statement might be reviewed and changed. Any revision to this statement is expected to be signed off by the board.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ef8043cd03df4327bf90e9922652e2bf"
+	 data-version="a7b6b146703c48639d73fd2273defa71"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The insurer&rsquo;s risk appetite statement is expected to include the risk appetite for the levels of capital that are to be maintained in reasonably foreseeable market conditions (eg as assessed through stress and scenario tests, or through some suitable alternative approach, to provide no more than a 1 in X probability that Solvency Capital Requirement (SCR) coverage might fall below 100%). This appetite is expected to take into account factors such as the following, where relevant:</p>
+<ul>
+    <li>sensitivity of the balance sheet to changes in the key risk drivers, including changes in market and underwriting conditions, and the emergence of large claims;</li>
+    <li>non-linearities and discontinuities that may arise in the balance sheet due to combinations of adverse events and the potential loss of matching adjustment (MA) or volatility adjustment (VA) approval in stress scenarios;</li>
+    <li>quality of capital resources;</li>
+    <li>inherent uncertainty in the technical provisions (including in the application of the MA or transitional measure on technical provisions (TMTP)), risk margin, the value of any illiquid assets, and the SCR, due to limitations and approximations in the insurer&rsquo;s regular solvency monitoring;</li>
+    <li>levels of uncertainty in forecast earnings;</li>
+    <li>the results of stress and scenario testing (including reverse stress testing);</li>
+    <li>capital levels that are considered to be required to maintain credit ratings and market reputation;</li>
+    <li>potential impact of firm failure on policyholders (including substitutability of insurance cover); and</li>
+    <li>recovery options that may be available to the insurer, including consideration of when each option may not be available.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2aa0215dc0db42e29883617226293067"
+	 data-version="9caeb0a453c34af09be5402ffd2c8d71"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA also expects the risk appetite statement to include, in a proportionate manner, the insurer&rsquo;s appetite for the level and volatility of future dividend payments that it would be willing to make, in the context of, among other things: (a) its financial and business plans; (b) the levels of capital held by the insurer; and (c) the volatility of its earnings.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="89f1d749572547aca71b20c97173c4ff"
+	 data-version="c8f71a55e2034ba0a4214113279d37e1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Syndicates at Lloyd&rsquo;s may have mixed capital, and will share in the Lloyd&rsquo;s Central Fund. In addition, they are structured as annual ventures. As a result, alternative considerations may be relevant, but the PRA expects such considerations to reflect the spirit of the above issues as appropriate.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="596fbfeb85f949c680007e6c3fe755cb"
+	 data-version="ef3d07bd853d43e3b542171ab4278a9a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The risk appetite statement should encompass all the material risks that are relevant to the insurer, including those listed in Conditions Governing Business 3.1(2)(c) that are considered to be material. It should include the risk tolerance limits (ie the limits on the amount of risk) that have been set for the various types of risk (including market risk, underwriting risk, operational risk and liquidity management risk) that the insurer is willing to bear. Many of these limits are likely to be expressed in quantitative terms, but the appetite for some types of risk (eg reputational risk) may be expressed qualitatively.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6f552149a9e54f1992a17db8c3c77f03"
+	 data-version="721a720ff854455d957317692613bf70"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects any significant change to an insurer&rsquo;s risk appetite only to be made by the board following an overall discussion on the risks and capital requirements of the business. Most insurers review their strategy and business plans on an annual basis, in the context of the insurer&rsquo;s risk profile, a process which inherently includes reviewing the risk appetite, and a review may also be appropriate following some major external event. The PRA does not however expect the risk appetite to be changed solely to justify, or regularise, particular actions, such as the assumption of a new risk, a change in investment policy, or a dividend payment.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="273f132ec4554305869fdf63f166ded3"
+	 data-version="ef9f6e53e6834bfd96a5243a58ef19dc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The level of detail to be included in the risk appetite statement should be commensurate with the nature, scale and complexity of the risks borne by the insurer.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1a4610f0c3e14ae59ec6b830951095aa"
+	 data-version="aeb443260e564a55b7a1e43e5666740d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects this risk appetite statement to be communicated appropriately within the insurer, so as to set a framework for the management and reporting of relevant risks that can be clearly understood by individuals performing key functions at the insurer, and to be expressed in sufficient detail to be clearly relevant to them.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ee73e453f4754492ba44efef38900f41"
+	 data-version="523b1539c9704762bb567affe94cc9e7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects communications to external stakeholders, such as shareholders/capital providers, customers and their agents, rating agencies, and regulators, to be consistent with the risk appetite statement.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/2-risk-appetite-statement/31-12-2024?p=1" data-id="9f4bccc0dcdd4ff79f67cd17b4210edb" data-effective-date="31-12-2024" data-download-title="Risk appetite statement_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/2-risk-appetite-statement/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers#9f4bccc0dcdd4ff79f67cd17b4210edb&amp;subject=PRA Rulebook - SS4/18 – Financial management and planning by insurers – Risk appetite statement">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="e25a6b0f2e2b45baa1a9ba90c5b23f55"
+	 data-version="2e91f958ceb14d369ef2dce7a26c0c1b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Business and financial plans
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5b31552eb6b14fd4abcb264fcc2e8f14"
+	 data-version="57034467e44448c684e370b8c11781c7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects insurers to have business plans that are consistent with their risk appetite and risk tolerance limits, and which show how they intend to generate revenue and earnings each year. Such plans should reflect achievable capital generation and a capacity for dividend payouts in accordance with their risk appetite. Insurers should identify and understand the drivers of their profitability, and potential balance sheet volatility, together with the significant risks relating to their business plans, and consider reasonably foreseeable adverse scenarios. Insurers should have plans for the maintenance of capital resources in line with their risk appetite, that take account of each of these factors, as well as the insurer&rsquo;s intended levels and mix of business growth.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b7992024c0eb4ffebb8f3e229000d17c"
+	 data-version="78ebcc571da044f191717b57b4ac51c7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects regular management information (MI) to be maintained, and provided to both relevant senior managers and the board, to show how the insurer is performing against its plans. Frequency of MI generation should reflect the volatility of drivers of capital surplus and calculations should, if approximate, reflect the main drivers well enough to provide useful information to management.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="978c97778cb94995a8d639447f33fe32"
+	 data-version="46d36099f0424fc5b2aa0c447ed15fc3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects this MI to include information about whether any deviation from these plans is, and is likely to continue to be, over the planning timescale, within its risk appetite and/or risk tolerance limits. Any material deviations that are not within appetite should result in appropriately timed action to limit the insurer&rsquo;s exposures to the relevant risks, as well as revisions to the business and financial plans to bring these in line with its risk appetite.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b72b87fdded94a76b6c7bbb9f11a0d48"
+	 data-version="adc0ac4eb1d0478eac0a47acce40acf3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects insurers to consider how they will address the risks and vulnerabilities to their business plans consistently with their risk appetite, including through an appropriate allocation of capital and through their risk management framework and controls.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6e08a18f373b4531a11e6e89e4cc43c1"
+	 data-version="22271a6d05e646c4893f71a7d2c44fde"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As explained in more detail in SS5/17<sup><a href="#footnote-8">8</a></sup>, the PRA expects general insurance firms, along with insurance composites and groups undertaking general insurance business to consider in advance, in a proportionate manner, the possible implications of a &lsquo;market turning event&rsquo; on their business, including what steps might reasonably be taken in advance to enable them to respond appropriately and to meet their regulatory obligations.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						See footnote 6, page 5.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/17-05-2018#6e08a18f373b4531a11e6e89e4cc43c1">
+			Past
+			<span class="visually-hidden">
+				version of 3.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="093888f0990841929bddea0ed9ee672b"
+	 data-version="f3691f236f524caeadb8c912deff3e5f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The insurer&rsquo;s own risk and solvency assessment (ORSA) should help to ensure there are effective links between an insurer&rsquo;s business plan, risk appetite, and capital management plans. Chapters 5 and 6 in SS19/16<sup><a href="#footnote-9">9</a></sup> provide further detail on how insurers are expected to address risks to their business strategy and plans through their ORSA, and through the development of appropriate plans and management actions for managing the ongoing levels of capital resources within the business.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						See footnote 4, page 5.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/17-05-2018#093888f0990841929bddea0ed9ee672b">
+			Past
+			<span class="visually-hidden">
+				version of 3.6 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e300ad503d2c4a2caf36187776f789b4"
+	 data-version="15b0e870994e4ed394b0b206677be449"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects insurers and groups to identify and analyse potential management actions, in response to stress scenarios, that are realistic, credible, consistent with regulatory expectations, and achievable. The potential management actions and the analysis of them should be approved by the relevant board. Insurers should also consider whether any of the actions identified should be taken (or facilities established) in advance as precautionary measures, or whether they would be relevant or desirable only in the stress scenario.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c598f59cbe6e460c897e92b5fc692bd1"
+	 data-version="9806b69671ff4e93ac46eda2e8e15d98"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects insurers to understand any dependencies for the implementation of their identified management actions on third parties or external market conditions, and monitor those dependencies so that the effectiveness of those actions is not undermined.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c570e98ebc8f4f32a61a022d83e080f0"
+	 data-version="8df915b257054fbab4912fb9eb10fb6e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Insurers should consider the circumstances under which their identified management actions might be applied. In particular, they should consider and establish suitable trigger points at which they would intend to implement any planned management actions that they take into account in the calculation of their technical provisions or the SCR.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="28a87e50696446e6883e3417790a1fb4"
+	 data-version="9ecb0c9da9b84aa2989164e7444e0fd4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Any planned reliance by an insurance firm on support from its group should be assessed carefully, after consultation with the group board, to consider whether such support would be readily available, taking account of: (a) the potential effect of any stressed conditions on the group as a whole, as well as on other individual members of the group; (b) the group&rsquo;s likely appetite to provide such support; and (c) any other potential barriers to the provision of such support (eg legal or regulatory requirements, or practical difficulties in transferring funds between currencies or countries).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/3-business-and-financial-plans/31-12-2024?p=1" data-id="e25a6b0f2e2b45baa1a9ba90c5b23f55" data-effective-date="31-12-2024" data-download-title="Business and financial plans_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/3-business-and-financial-plans/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers#e25a6b0f2e2b45baa1a9ba90c5b23f55&amp;subject=PRA Rulebook - SS4/18 – Financial management and planning by insurers – Business and financial plans">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="d3bd198fe5304fc798ea32924c6127c8"
+	 data-version="79d62afa9f28437388ad4b605cafeb81"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Dividend suitability and sustainability
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="9bc96a2612b84ce29923056dde00f01a"
+	 data-version="ec6814131d9d41a4bc71d1d0377865d1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When assessing potential dividend payments,<sup><a href="#footnote-10">10</a></sup>&nbsp;the PRA expects insurers to be able to demonstrate that any planned dividend payments are appropriate in relation to actual and projected business performance, as well as the current and future capital position of the insurer, taking account of its documented risk appetite.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						This would include here the assessment made for distributions to any capital providers, including for a return of premiums to the members of a mutual, or for a loan to a parent or holding company.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/17-05-2018#9bc96a2612b84ce29923056dde00f01a">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d70850361b0a42be9f6ccd0c72a8ed95"
+	 data-version="874ab4b864504e018016e4193a614ae8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For this purpose, the PRA expects insurers to consider whether the level of their capital resources held following payment of a planned dividend would be in line with the insurer&rsquo;s risk appetite; and to have a dividend policy that takes account of the sources of the insurer&rsquo;s earnings and their sustainability. In this context, insurers are also expected to consider how the dividend may be adjusted in the event of adverse financial performance by the insurer that could result either from adverse market (or other external) conditions, or from insurer-specific issues.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="decca4304f594c0fbd5888a2b87b4d83"
+	 data-version="ad58d5911df54ac492d257816b6cf219"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Accordingly, it will be important for insurers to consider the level, timing, and source of capital generation, including for example whether it comes from new business, the back book or one-off management actions; and hence to consider the longer term implications of their dividend policies, including whether future dividends could be supported by future capital generation. Insurers are expected to have suitable MI to inform this analysis.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0363df6f03b747ac85683d7f8ec0ddbe"
+	 data-version="9fd2c0600df848df8fd334c510a62160"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA would not normally expect insurers (other than insurers in run-off) to seek the PRA&rsquo;s pre-approval of dividends provided: the insurer is within risk appetite; the dividend payment leaves the insurer&rsquo;s capital position within risk appetite and it is likely to remain so; and the insurer&rsquo;s SCR coverage is above 100%. However, the PRA expects to be informed in advance where a firm is close to risk appetite, or where a proposed dividend would take a firm close to risk appetite. PRA supervisors may wish to review the sustainability of insurers&rsquo; capital management and dividend policies as part of regular supervision, and may take a particular interest for insurers that operate with capital levels that are close to the SCR or which fluctuate unexpectedly.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f5872e1f901246b58d2c014b4f7fdf9a"
+	 data-version="e8cae44adaf240caabcb77a66dc71bbe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If an insurer&rsquo;s capital management policies are calibrated such that frequent or foreseeable breaches of SCR occur or are likely to occur, the PRA may consider whether the insurer is meeting the requirement in Conditions Governing Business 2.1 to have in place an &lsquo;effective system of governance which provides for sound and prudent management of its business&rsquo;. Similarly, if the level of capital of an insurer regularly or persistently falls outside of its risk appetite, or an insurer makes frequent changes to its risk appetite for its planned levels of capital, the PRA may consider whether this indicates failings in the governance process by which the insurer sets its risk appetite.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/05/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/4-dividend-suitability-and-sustainability/31-12-2024?p=1" data-id="d3bd198fe5304fc798ea32924c6127c8" data-effective-date="31-12-2024" data-download-title="Dividend suitability and sustainability_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers/4-dividend-suitability-and-sustainability/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-18-financial-management-and-planning-by-insurers#d3bd198fe5304fc798ea32924c6127c8&amp;subject=PRA Rulebook - SS4/18 – Financial management and planning by insurers – Dividend suitability and sustainability">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,5379 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{89AA6185-A905-4984-8652-1A9B60F151B5} -->
+<title>SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwohra-f-20be03d4e-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":28,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"808e37d","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":45714,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370082","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==C6fJRbYHW5fs7k3brIuFNdzBcDKXfsxdDpWHoiTHGT4RMkhLxv3Y+pLAWs7WJ4Piz/9xuJ9Nj3mw4YZ8sfDFrkBt30pTmqEkbrPfxfiT9GkXjKIXatM6XSEKE3oaEV8mH/gDo9fdOJlrkeLTzqIhO6gi+0slJttxlO2xJLCxQFtqQtbjleKm8aUGFqBgFI+ZyTrOmmDdW+4/nLhK+vcp2wGolUFoJ0UB7OprqDJ+h3nmMF64gpWBnXOKfBYKPg4YvR5a2sco0NNxz39kIpJYKdwfo/qlHUZryVzartFhztuw7jZkFBu85loPms+b9TWbYxiyrokMdfLAjORqh9jR82fJ49ZLgxbAhjmEsxlPn76hw2Medo9MZxVOAlo7TcyBAyjAFHjxiE1bNikFu+zkzXlYKqGH9O+JZhqucSQqP8E=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-internal-models-assessment-model-change-and-the-role-of-non-executive-directors-ss" rel="noopener noreferrer" title="SS17/16" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3">Previous versions of this Supervisory Statement (SS) pre 17/10/2018 can be found here</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						17/10/2018
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-b3e780be-38ba-4a64-a1de-5ccee38bb660">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-b3e780be-38ba-4a64-a1de-5ccee38bb660"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/solvency-capital-requirement---general-provisions/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Solvency Capital Requirement - General Provisions
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/solvency-ii-internal-models-modelling-of-the-volatility-adjustment" class="list-links__link" target="_blank">
+										PS23/18 - Solvency II: Internal models – modelling of the volatility adjustment
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/31-12-2024?p=1" data-id="0d88b0d953384e428e7ac9fb11f73135" data-effective-date="31-12-2024" data-download-title="SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="5ca82dc0168447748aef4b1684a94919"
+	 data-version="aa816eae3fad4b6ba09e6b4e6d12b533"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3b8ef6f4b70d4694b7e8fb6987cfbab1"
+	 data-version="f0e4215ab4b74ba0a01e9bb640910be6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement is addressed to all UK Solvency II firms and to the Society of Lloyd&rsquo;s, its members and managing agents. It sets out the Prudential Regulation Authority&rsquo;s (PRA) expectations of firms regarding internal models.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#3b8ef6f4b70d4694b7e8fb6987cfbab1">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6746959cb5894797be56e4d6916dae5e"
+	 data-version="a4f663ffa30d4a288831adf3c91dd5e9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement should be read in conjunction with the PRA&rsquo;s rules in the Solvency II Firms Sector of the PRA Rulebook, the statement of policy (SoP) setting out the PRA&rsquo;s approach to permissions and ongoing monitoring of internal models,<sup><a href="#footnote-1">1</a></sup> supervisory statement (SS) 1/24&nbsp;&ndash; Expectations for meeting the PRA&rsquo;s internal model requirements for insurers under Solvency II<sup><a href="#footnote-2">2</a></sup> and the PRA&rsquo;s insurance approach document.<sup><a href="#footnote-3">3</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/february/solvency-ii-internal-models-permissions-and-ongoing-monitoring-sop">https://www.bankofengland.co.uk/prudential-regulation/publication/2024/february/solvency-ii-internal-models-permissions-and-ongoing-monitoring-sop</a>.
+					</span>
+				</li>
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/february/expectations-for-meeting-the-pra-internal-model-requirements-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2024/february/expectations-for-meeting-the-pra-internal-model-requirements-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						Available at <a href="http://www.bankofengland.co.uk/prudential-regulation/supervision">www.bankofengland.co.uk/prudential-regulation/supervision</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#6746959cb5894797be56e4d6916dae5e">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a1506f90bd6b4088ba90eb4fb5342f72"
+	 data-version="f4dbf03d0ddb41588bcb3ba581a704cf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement expands on the PRA&rsquo;s general approach as set out in its insurance approach document. By clearly and consistently explaining its expectations of firms in relation to the particular areas addressed, the PRA seeks to advance its statutory objectives of ensuring the safety and soundness of the firms it regulates, and contributing to securing an appropriate degree of protection for policyholders.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ec8524170d7744c99606de242498ec54"
+	 data-version="d8dc6c3d85504e62a96af34a4b99cac6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this SS, the PRA sets out its expectations for firms in the following areas: </p>
+<ul>
+    <li>internal model applications;</li>
+    <li>dealing with variability in premium provisions;</li>
+    <li>the role of non-executive directors; </li>
+    <li> model justification and validation and the role of boards; </li>
+    <li> the PRA&rsquo;s use of quantitative analysis as part of model permission;</li>
+    <li>scope, identification and classification, governance and reporting of internal model changes; and</li>
+    <li>reporting of analysis of change in SCR.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#ec8524170d7744c99606de242498ec54">
+			Past
+			<span class="visually-hidden">
+				version of 1.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="93d9ebd328974baa8a5b67574523ccd0"
+	 data-version="f929d5ad9cd44e8385b0212b7e6cbba6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should also refer to:</p>
+<ul>
+    <li>the Bank of England and PRA <a href="/guidance/statements-of-policy/sop---interpretation-of-eu-guidelines-and-recommendations" data-rb-content-link="Guidance">SoP &ndash; Interpretation of EU Guidelines and Recommendations: Bank of England and PRA approach after the UK&rsquo;s withdrawal from the EU</a>;<sup><a href="#footnote-4">4</a></sup></li>
+    <li><a href="/guidance/supervisory-statements/ss01-19---non-binding-pra-materials" data-rb-content-link="Guidance">SS1/19 &ndash; Non-binding materials: The PRA&rsquo;s approach after the UK&rsquo;s withdrawal from the EU</a>;<sup><a href="#footnote-5">5</a></sup> and</li>
+    <li><a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements" data-rb-content-link="Guidance">SS2/19 &ndash; PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK&rsquo;s withdrawal from the EU</a>.<sup><a href="#footnote-6">6</a></sup></li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						April 2019: <a href="http://www.bankofengland.co.uk/paper/2019/interpretation-of-eu-guidelines-and-recommendations-boe-and-pra-approach-sop">http://www.bankofengland.co.uk/paper/2019/interpretation-of-eu-guidelines-and-recommendations-boe-and-pra-approach-sop</a>.
+					</span>
+				</li>
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						April 2019: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2019/non-binding-pra-materials-the-pras-approach-after-the-uks-withdrawal-from-the-eu-ss">http://www.bankofengland.co.uk/prudential-regulation/publication/2019/non-binding-pra-materials-the-pras-approach-after-the-uks-withdrawal-from-the-eu-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						April 2019: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2019/pra-approach-to-interpreting-reporting-and-disclosure-reqs-and-reg-trans-forms-ss">http://www.bankofengland.co.uk/prudential-regulation/publication/2019/pra-approach-to-interpreting-reporting-and-disclosure-reqs-and-reg-trans-forms-ss</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d529e0853fac4178a37918aee9192afe"
+	 data-version="61cc08257f1641ffb598f969de157b08"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Any reference to any provision of direct EU legislation is a reference to it as it forms part of retained EU law.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/1---introduction/31-12-2024?p=1" data-id="5ca82dc0168447748aef4b1684a94919" data-effective-date="31-12-2024" data-download-title="Introduction_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/1---introduction/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#5ca82dc0168447748aef4b1684a94919&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="81734d382dbd4fdea38475fc9ab4cfea"
+	 data-version="a655b2337db44777b694947373720189"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application for internal model approval
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3923696f074c4848a85ebb495422ff5b"
+	 data-version="f741cae2d51c4fd285d643428e98101f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Firms are reminded that once a formal internal model application has been submitted to the PRA, there is limited opportunity for firms to make substantive changes. Firms should therefore make sure their applications are stable and approved by their internal governance processes prior to formal application. Where firms become aware that they may need to make changes during the application period, these should be discussed with their usual supervisory contact as soon as possible. Where changes are material, a new application is likely to be required. Alternatively, firms might reasonably be able to modify the existing application. If so, the PRA would need to reassess whether the modified application is complete and this may delay the PRA&rsquo;s consideration of the application. Neither of these options should be approached lightly. If firms believe that significant model changes are likely in the formal application phase, they are encouraged to consider delaying their application to the PRA and to discuss options with their usual supervisory contact. In this respect, the preapplication process is a means to help firms verify they are on the right path before they submit an application.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#3923696f074c4848a85ebb495422ff5b">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6c36d8249afd4538ad7c4731f0d80de1"
+	 data-version="9e9a9c1e6ad0408ca9d2b1506524ff19"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			The PRA will grant an internal model permission where the firm demonstrates to the PRA&rsquo;s satisfaction that it satisfies the internal model requirements and calibration standards set out in the PRA Rulebook,<sup><a href="#footnote-7">7</a></sup> or where safeguards mitigate non-compliance with the internal model requirements and ensure compliance with the calibration requirements. When reviewing an internal model application, the PRA may consider imposing two types of safeguards, a residual model limitation capital add-on (RML CAO) or a &lsquo;requirement&rsquo; applicable in respect of firm&rsquo;s business practices or model usage. For more information on the PRA&rsquo;s approach to internal model permission applications, or model limitation adjustments (MLAs), firms should refer to SoP &ndash; Solvency II internal models: Permissions and ongoing monitoring.
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						The calibration standards are set out in Solvency Capital Requirement – General Provisions 3.3 to 3.4, and the internal model requirements are set out in Solvency Capital Requirement - Internal Models 10 to 16 A.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#6c36d8249afd4538ad7c4731f0d80de1">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5d921cd57e9b4f7ea3332c71fbd2e5f7"
+	 data-version="4d5081f2f2bd4e7bb812f2f7ed9f9eea"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Irrespective of the progress of the internal model application, firms should have an alternative approach that they can use if they fail to gain permission to use the model, for the purpose of calculating the SCR, after submitting an application, and ensure that they have a clear understanding of the actions they would take in those circumstances. For example, a merger or restructuring may make the existing standard formula inappropriate and therefore the applicant would need to have a contingency plan in the event that the PRA did not grant permission to use the internal model.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#5d921cd57e9b4f7ea3332c71fbd2e5f7">
+			Past
+			<span class="visually-hidden">
+				version of 2.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/2---application-for-internal-model-approval/31-12-2024?p=1" data-id="81734d382dbd4fdea38475fc9ab4cfea" data-effective-date="31-12-2024" data-download-title="Application for internal model approval_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/2---application-for-internal-model-approval/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#81734d382dbd4fdea38475fc9ab4cfea&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – Application for internal model approval">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="4c55c28ff59f4aa79a1779aa4326e9a5"
+	 data-version="87edc7fa7af84be29750f2e22e15b712"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					[Deleted]
+				</h3>
+		</div>
+	</div>
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/3---deleted/31-12-2024?p=1" data-id="4c55c28ff59f4aa79a1779aa4326e9a5" data-effective-date="31-12-2024" data-download-title="[Deleted]_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/3---deleted/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#4c55c28ff59f4aa79a1779aa4326e9a5&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="af2d2e21fa36471f95bbd8236587eef9"
+	 data-version="3ea2eed703cb4f01ba5f431ed35eed79"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Modelling of the premium provision for general insurance firms
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="9f75dbeaf62c4f46ae0046ec33222e3c"
+	 data-version="b020306fcc9f413b8c64419c178b71f5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>General insurance firms should consider variability in premium provisions on their year-end Solvency II balance sheet. In the same way that events can occur that cause claims provisions to vary, some of those same events will also cause the premium provision to vary. Examples include changes in court awards for liability claims or an unforeseen major natural catastrophe event, like the Tohoku earthquake.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1a8e94b8912d4214bf3224bf54939b0a"
+	 data-version="c5f4830300574786baf880d2dabf6d59"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms that do not consider this risk may fall short of the internal model requirements and calibration standards. The PRA considers this risk exists for all actively underwriting internal model firms who model on a one-year earned basis, although it may be that for some firms this risk will be small in the context of their total SCR.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#1a8e94b8912d4214bf3224bf54939b0a">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/4----modelling-of-the-premium-provision-for-general-insurance-firms/31-12-2024?p=1" data-id="af2d2e21fa36471f95bbd8236587eef9" data-effective-date="31-12-2024" data-download-title="Modelling of the premium provision for general insurance firms_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/4----modelling-of-the-premium-provision-for-general-insurance-firms/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#af2d2e21fa36471f95bbd8236587eef9&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – Modelling of the premium provision for general insurance firms">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="336a8c33cbeb484ca87cf360ffc41e29"
+	 data-version="56dc8a0ed3f24e1a9f52fd0e08064bb7"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					[Deleted]
+				</h3>
+		</div>
+	</div>
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/5---deleted/31-12-2024?p=1" data-id="336a8c33cbeb484ca87cf360ffc41e29" data-effective-date="31-12-2024" data-download-title="[Deleted]_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/5---deleted/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#336a8c33cbeb484ca87cf360ffc41e29&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="230ef8c8691e45388a3dff3c9b069275"
+	 data-version="ee189beab6e24736800bcaa595436329"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Role of non-executive directors
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5075cf00bbe94c75a47f752a3f3db7e1"
+	 data-version="7421e95c051f460097cf8fcda98d7a3a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This chapter sets out the PRA&rsquo;s expectations regarding the role of the non-executive directors (NEDs) when considering a firm&rsquo;s internal model.<sup><a href="#footnote-8">8</a></sup>&nbsp;</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						For more on this issue, see also PRA Supervisory Statement 5/16, ‘Corporate Governance: Board responsibilities’, March 2016; <a href="http://www.bankofengland.co.uk/pra/Pages/publications/ss/2016/ss516.aspx">www.bankofengland.co.uk/pra/Pages/publications/ss/2016/ss516.aspx</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#5075cf00bbe94c75a47f752a3f3db7e1">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="57d9389b1b6641f28e068ac6da6f16f3"
+	 data-version="31e55d3d196b4a09b8d0d4b003b504dc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As part of the use test, firms must ensure that members of the board and others involved in running the firm have a sufficient understanding of the model. One of the methods the PRA may use to assess whether firms are meeting the use test is to speak to NEDs (either individually or collectively) to gauge their understanding. The PRA does<sup><a href="#footnote-9">9</a></sup> not believe that it is necessary for board members to be technical experts in modelling techniques in order to meet the use test requirements. Rather, the PRA expects board members to understand and be able to explain areas such as the:</p>
+<ul>
+    <li>key strengths, limitations, and judgements within the model</li>
+    <li>assumptions and judgements that have the most material impact on the model output; and</li>
+    <li>key sources of information and advice the board has relied upon in order to satisfy itself about the appropriateness of both the model design and the model output.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						Solvency Capital Requirement – Internal Models 10.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#57d9389b1b6641f28e068ac6da6f16f3">
+			Past
+			<span class="visually-hidden">
+				version of 6.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2115bfee44304c05846ae5884385d7a1"
+	 data-version="36085895763249dba0cdfbda984bdab1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Board members should be supported by the executive management to understand and engage with the key features of models. Boards should draw on a wide range of sources to understand, challenge and make a decision on the validity of a model. For example, independent validation can play an important role in helping boards gain an overall understanding of a model and its strengths and limitations, as long as the validation work is focused appropriately on a critical appraisal of the most material aspects of the model, and if its conclusions are summarised and presented appropriately for a board-level audience.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2d4110cc148942f2a4dffecd6427e519"
+	 data-version="328adf7359d64ed8889bf2b751b020e8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Under the leadership of the chair, NEDs should consider and challenge, as appropriate, the executive management on all aspects of the firm&rsquo;s strategy, which includes the viability and sustainability of the business model and the establishment, maintenance and use of the risk appetite and management framework. NEDs are expected to challenge how these elements are reflected in the internal model.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cbf90404ff214041b93c14935c955209"
+	 data-version="549b1aab6c6b441380bfee271eaf12a0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The executive management should be able to explain the firm&rsquo;s internal model in simple and transparent terms to NEDs. This includes explaining the uncertainty around judgements, in what circumstances the results may deteriorate (eg the analysis or strategy could be wrong), and the implications on the internal model of different methods of measurement for issues such as liquidity. In order to explain complexity to the NEDs, the executive management should provide good management information to enable challenge and thus encourage accountability. If NEDs do not feel that they can meet these expectations, they should demand the time and support to enable them to do this.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/6----role-of-non-executive-directors/31-12-2024?p=1" data-id="230ef8c8691e45388a3dff3c9b069275" data-effective-date="31-12-2024" data-download-title="Role of non-executive directors_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/6----role-of-non-executive-directors/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#230ef8c8691e45388a3dff3c9b069275&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – Role of non-executive directors">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="f66e5208af704599bc6cbea805e1220a"
+	 data-version="b8b6c2a1fb27430f91773cf23274aa50"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Validation of models
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3b412de2060b442b9e1085fc9c8f1b25"
+	 data-version="986df86883e84285ae8c70503b92043f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Model justification and validation are two separate processes and represent important components of the <a href="/pra-rules/solvency-capital-requirement---internal-models" data-rb-content-link="Part">Solvency Capital Requirement &ndash; Internal Models Part</a>&nbsp;of the PRA Rulebook. The PRA expects firms to demonstrate clearly this demarcation in their implementation.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#3b412de2060b442b9e1085fc9c8f1b25">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="91c69ed0f206405899ae4c44728c7962"
+	 data-version="3ffb7a8b0ad344819d486d2e6405c6f9"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Model justification</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="fb405df1edce4062889248d98622c206"
+	 data-version="8320e05a4df64298a688398cfba28cda"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The Statistical Quality Standards (SQS) for internal models in <a href="/pra-rules/solvency-capital-requirement---internal-models#cec3f5bc66e74321be2dbaf0835a0d64" data-rb-content-link="Chapter">Solvency Capital Requirement &ndash; Internal Models 11</a>&nbsp;and <a href="/pra-rules/solvency-capital-requirement---internal-models#379508390f2645cf8344241192b00450" data-rb-content-link="Rule">Solvency Capital Requirement &ndash; Internal Models 16.2</a>&nbsp;set out requirements on the principles that the methods and assumptions used in the internal model must adhere to. Compliance with those requirements must be evidenced to the PRA.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#fb405df1edce4062889248d98622c206">
+			Past
+			<span class="visually-hidden">
+				version of 7.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="96512d4842e34ce99ac5ea207572535e"
+	 data-version="3401fd30588a45309e0fdc13e4b104d7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For instance, firms are required to ensure that the chosen actuarial and statistical methods used to calculate the probability distribution forecast are adequate, applicable, and relevant,<sup><a href="#footnote-10">10</a></sup> and are required to ensure that the assumptions used make adequate allowance for uncertainty. Such requirements need to be satisfied as part of the SQS, and it is not the aim of the validation process to create a substitute for these requirements. Depending on the firm, such requirements could either be satisfied by the first line of defence (as part of the production of outputs within the calculation kernel), or by the second line.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						Solvency Capital Requirements – Internal Models.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#96512d4842e34ce99ac5ea207572535e">
+			Past
+			<span class="visually-hidden">
+				version of 7.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a35647d11a4d4cb08c0ed0b79d8efa92"
+	 data-version="348a66cd5f944142953f6e4d4e470773"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Validation</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="a874019b4c8e4f17a9c0b69e7e47e809"
+	 data-version="9412a40580e54fc6812abc0e5f003b08"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In contrast, the validation is a regular and independent (from the development and operation of the model) process which includes reviewing the model in terms of the appropriateness of its specifications, the correspondence of its results against experience and its overall performance over time.<sup><a href="#footnote-11">11</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-11" class="rb-footnote">
+					<span class="fn-col-1">
+						11.
+					</span>
+					<span class="fn-col-2">
+						Solvency Capital Requirements – Internal Models 14.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#a874019b4c8e4f17a9c0b69e7e47e809">
+			Past
+			<span class="visually-hidden">
+				version of 7.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0f3761c4fc4f4be9ad98746b487e5a66"
+	 data-version="e1c76bdf278a4242a7e77b007a33c928"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Model justification, as part of internal model development, is often addressed using a bottom-up approach. The bottom-up approach should cover the validation objectives fully and help boards and senior management to obtain sufficient understanding of the model, including a justification of why the modelling choices are reasonable and defensible.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#0f3761c4fc4f4be9ad98746b487e5a66">
+			Past
+			<span class="visually-hidden">
+				version of 7.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6044829ea72f4afcb41ccb104562f3c6"
+	 data-version="6f89c8d33bb94e59838bca1e0a6e0eb6"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>The role of boards and senior management in model validation</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="44ac857cbc554db3b4e47a8805d05fe1"
+	 data-version="306ef392c36e48d3bda7f4b5e5e31213"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects validation to be a combination of detailed &lsquo;bottom-up&rsquo; testing and &lsquo;top-down&rsquo; ownership by boards.<sup><a href="#footnote-12">12</a></sup> The PRA expects firms to be able to produce clear evidence showing how boards are overseeing and influencing the design of the validation process, how the findings from validation work are summarised and reported to them and how boards are then involved in tracking validation issues through to resolution. The PRA expects firms to demonstrate clearly that boards are using validation as a tool to enable them to gain a sufficient understanding of a model and its strengths and weaknesses. The PRA has high-level expectations on board involvement in validation, as described in the following paragraphs. See also <a href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#230ef8c8691e45388a3dff3c9b069275" data-rb-content-link="Chapter">Chapter 6 &lsquo;Role of non-executive directors&rsquo;</a>.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-12" class="rb-footnote">
+					<span class="fn-col-1">
+						12.
+					</span>
+					<span class="fn-col-2">
+						Solvency Capital Requirement – Internal Models 7.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#44ac857cbc554db3b4e47a8805d05fe1">
+			Past
+			<span class="visually-hidden">
+				version of 7.6 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d0e6d3e2880d443fb0b5ff7672a56d3b"
+	 data-version="a9c1589c7bf2487bb163e79d0cc3bc54"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms&rsquo; use of validation materials that are focussed primarily on a bottom-up justification of their internal model may not enable senior management and boards to challenge effectively the key assumptions and limitations of the model.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#d0e6d3e2880d443fb0b5ff7672a56d3b">
+			Past
+			<span class="visually-hidden">
+				version of 7.7 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1e8de7a85d284a9dbd4c32f1efd7a10c"
+	 data-version="85a54d0fc25b4cd4ac2ed4492d39268d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Although a bottom-up approach is an important aspect of the internal model validation, the PRA emphasises that boards should value the role that good validation can play in helping them to understand the key drivers and limitations of a model. The PRA expects that firms would be able to provide evidence that the board has: </p>
+<ul>
+    <li>challenged the validation process and its results; </li>
+    <li>understood and satisfied itself on the key assumptions and limitations of the model;&nbsp;</li>
+    <li>considered the possible quantification of these limitations; and </li>
+    <li>taken appropriate mitigating actions.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="87ff627a1cc448eb97d30c2584f83840"
+	 data-version="b262e0a75587496998a5144697c0d374"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects boards to be tracking progress actively in addressing key issues identified by validation work.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c806565f3d044feb8bbc21388b4d91ca"
+	 data-version="adaabc1619a94910a8e26a6108f4ef57"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA does not expect boards or senior management to be able to discharge their duty in isolation. Boards should demand support from executive management to ensure that key features of models are explained in a way that directors can engage with properly, and they should draw on a wide range of sources, not limited to model developers, to ensure they are satisfied with the model.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7245e9682bbc4c39b92111fbb6d1f7af"
+	 data-version="345f1805253b40d8b5ca21bbec35a04d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>To verify the robustness of the internal model, the internal model requirements and calibration standards are designed to ensure that a model is well grounded in its technical content, with good sources of underlying data. The internal model requirements also require that the model and its limitations are properly understood by its users and by senior management at firms, including the board.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#7245e9682bbc4c39b92111fbb6d1f7af">
+			Past
+			<span class="visually-hidden">
+				version of 7.11 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b33b23ff3ee54587b094d311fa55764b"
+	 data-version="82c91426c50c49bfb9e0caa1120ff989"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In summary, a comprehensive validation process should put specific attention on those key assumptions and expert judgments that have a material impact on the model, and should also articulate how the sensitivity to the key assumptions and expert judgement are being assessed and taken into account in the decision process.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0db846301bde4fcca9c6382495789b1e"
+	 data-version="cd78e44044cd4346b94777106439c156"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that validation of the internal model clearly evidences the review and challenge that has taken place in assisting the board to meet its objectives.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/7---validation-of-models/31-12-2024?p=1" data-id="f66e5208af704599bc6cbea805e1220a" data-effective-date="31-12-2024" data-download-title="Validation of models_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/7---validation-of-models/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#f66e5208af704599bc6cbea805e1220a&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – Validation of models">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="3c9ad9b8d30240ffa56c3c8c8ab352f5"
+	 data-version="4c7a0adc79b6445fa7293392a8505a5c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					How the PRA uses quantitative analyses as part of model permission
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fdddabc3a593401fbc35e67f7d43779a"
+	 data-version="0ff898ad023b44bbac5524ad3945e552"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA&rsquo;s quantitative framework for model assessment, in the context of the overall model review process, is structured around the internal model requirements and calibration standards. The PRA&rsquo;s assessments are framed around these requirements so that the PRA is able to satisfy itself that the model meets the internal model requirements and calibration standards. In its assessments, the PRA applies a series of qualitative and quantitative tools to help identify areas of review focus. One of those tools is the quantitative framework for model reviews, which includes the use of specific quantitative indicators (&lsquo;QIs&rsquo;) where risks are sufficiently homogeneous.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#fdddabc3a593401fbc35e67f7d43779a">
+			Past
+			<span class="visually-hidden">
+				version of 8.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e28cd7c7c77444bfab39e24c889c8f13"
+	 data-version="f4431bbb829948e3ac5b4ee90abecf6c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA&rsquo;s decision-making process will use a risk-based approach to determine areas of focus on a firm-by-firm basis. In this assessment process the PRA uses a series of indicators to determine the focus of review: these are both qualitative (eg a view on the embedding of the model from previous supervisory engagement) and quantitative.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#e28cd7c7c77444bfab39e24c889c8f13">
+			Past
+			<span class="visually-hidden">
+				version of 8.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bcdb2f7fb373494a8d37c2b4ed14dbe7"
+	 data-version="1d99dd7e043e4a62911cb40ad2a8510b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The requirements which relate to calibration standards are set out in <a href="/pra-rules/solvency-capital-requirement---general-provisions#4bd0116d5d7f40cd811ce4b014c8712a" data-rb-content-link="Rule">Solvency Capital Requirement &ndash; General Provisions 3.3</a>&nbsp;to <a href="/pra-rules/solvency-capital-requirement---general-provisions#e0ba2638c6a44390accdc9747a84f5d0" data-rb-content-link="Rule">3.4</a>. An assessment of these requirements is geared towards ensuring that the SCR produced by the model corresponds to the value at risk (VaR) of the firm&rsquo;s basic own funds at the 99.5% confidence level over one year.<sup><a href="#footnote-13">13</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-13" class="rb-footnote">
+					<span class="fn-col-1">
+						13.
+					</span>
+					<span class="fn-col-2">
+						Solvency Capital Requirement – General Provisions 3.4.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#bcdb2f7fb373494a8d37c2b4ed14dbe7">
+			Past
+			<span class="visually-hidden">
+				version of 8.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2398674e8fde4983ae395e1e75376fa6"
+	 data-version="f6a7f6d08beb40169813682beb28a1bf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA uses its quantitative framework as: </p>
+<ol class="new-bullet">
+    <li>(a) a diagnostic tool to help assess model rigour and capital adequacy and hence highlight areas of potential concern; </li>
+    <li>(b) a prioritisation tool, to help inform where review teams should direct their attention, eg by identifying risks or correlations which may be under-calibrated; and </li>
+    <li>(c) one contributor to decision making at internal model permission application stage as to whether a firm has met the internal model requirements and calibration standards, and therefore whether permission to use the internal model for the purpose of calculating the SCR should be granted, including whether the PRA should impose any safeguards.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#2398674e8fde4983ae395e1e75376fa6">
+			Past
+			<span class="visually-hidden">
+				version of 8.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="aaaf85d492ab41dcbb4b0ffa7d05e49c"
+	 data-version="93aba833c9384c79897ed2f032798b08"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Internal models are required to be calibrated to the standard specified in <a href="/pra-rules/solvency-capital-requirement---general-provisions#e0ba2638c6a44390accdc9747a84f5d0" data-rb-content-link="Rule">Solvency Capital Requirement &ndash; General Provisions 3.4</a>. Where risks are homogeneous, a PRA quantitative assessment of the calibration of individual risks and their dependency structures can give an efficient diagnosis of whether there are areas of potential concern where the model has not been calibrated adequately to meet the internal model requirements and calibration standards. Where the risks are largely (but not totally) homogeneous, the PRA will tailor its quantitative assessments to reflect a firm&rsquo;s specific risk profile.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#aaaf85d492ab41dcbb4b0ffa7d05e49c">
+			Past
+			<span class="visually-hidden">
+				version of 8.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c513469218d14930ade8073c063297d1"
+	 data-version="0864ccdee375437ca5440c8a63d2e99f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Quantitative tools are also important in helping the PRA to prioritise areas for early review where firms may not have calibrated their risks or correlations adequately. However, they are not determinative of the PRA&rsquo;s final view of a model or model component. It is also worth noting that the PRA looks at the calibration of any model as a whole, as well as in its constituent parts, with particular consideration being given to whether the model remains appropriate in a range of conditions and over time when the balance of risks may change.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="81b30e7b9bb44b08ae9f0b8bf2a98521"
+	 data-version="a134f0a17a55431e9081be0cdc4375b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Finally, the outputs of this quantitative analysis constitute one of the many indicators that are taken into account by the PRA in concluding whether the model meets the internal model requirements and calibration standards. Specifically, while the PRA&rsquo;s quantitative analysis assists in verifying that the calibration standards have been met it does not negate the need for other aspects of the model to be reviewed, including SQS in <a href="/pra-rules/solvency-capital-requirement---internal-models#cec3f5bc66e74321be2dbaf0835a0d64" data-rb-content-link="Chapter">Solvency Capital Requirement &ndash; Internal Models 11</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#81b30e7b9bb44b08ae9f0b8bf2a98521">
+			Past
+			<span class="visually-hidden">
+				version of 8.7 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="721fa58eb1dc4c95b1b4e3f3c6a6e60e"
+	 data-version="9318e7e3a6e0407395bcc8af79469431"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As set out above, the operation of the quantitative framework does not yield a mechanistic &lsquo;pass/ fail&rsquo; decision. It is worth highlighting once more that the PRA&rsquo;s decision on whether or not to grant permission to use an internal model does not hinge on meeting any particular quantitative criterion. It hinges on the internal model itself, in conjunction with any safeguards to mitigate residual non-compliance with the internal model requirements and ensure compliance with calibration standards. It must also be emphasised that the use of the tools underlying the PRA&rsquo;s quantitative framework is always tailored having regard to a firm&rsquo;s own risk profile.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#721fa58eb1dc4c95b1b4e3f3c6a6e60e">
+			Past
+			<span class="visually-hidden">
+				version of 8.8 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/8----how-the-pra-uses-quantitative-analyses-as-part-of-model-approval/31-12-2024?p=1" data-id="3c9ad9b8d30240ffa56c3c8c8ab352f5" data-effective-date="31-12-2024" data-download-title="How the PRA uses quantitative analyses as part of model permission_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/8----how-the-pra-uses-quantitative-analyses-as-part-of-model-approval/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#3c9ad9b8d30240ffa56c3c8c8ab352f5&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – How the PRA uses quantitative analyses as part of model permission">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="699b28fc403d48459a7758605b15e58c"
+	 data-version="5ab86c8011ae4e66a237ed634742234d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Internal model change policy
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="cbfa5331de8f436dab1610aafa3b509f"
+	 data-version="a4c19489c19a4de38eab55851672790b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms with permission to use an internal model are required to have an internal model change policy, which is covered by the firm&rsquo;s internal model permission.<sup><a href="#footnote-14">14</a></sup> Following a grant of permission, the internal model change policy is expected to play a central role in the wider governance of a firm&rsquo;s internal model. For example, it should help ensure that the internal model continues to reflect the risks to which a firm is exposed and meet the requirements of the PRA Rulebook.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-14" class="rb-footnote">
+					<span class="fn-col-1">
+						14.
+					</span>
+					<span class="fn-col-2">
+						Solvency Capital Requirement – Internal Models 3.3 and 6.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#cbfa5331de8f436dab1610aafa3b509f">
+			Past
+			<span class="visually-hidden">
+				version of 9.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6c63743dbb674c4e8dfe19dbcef20a7c"
+	 data-version="8e44de88ea2744e79194649dda52f78e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It is important that the internal model change policy is of a good standard. Firms should consider all the relevant PRA Rulebook requirements and the EIOPA Guidelines when developing and maintaining their internal model change policy. Firms are required to report a quarterly summary of minor and major model changes to the PRA using the QMC.01 template and supporting narrative documentation, in accordance with <a href="/pra-rules/reporting#aa75a4213c8149bc8af39443b4fddc8a" data-rb-content-link="Rule">Article 6(3) of Chapter 2A of the Reporting Part</a>&nbsp;in the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#6c63743dbb674c4e8dfe19dbcef20a7c">
+			Past
+			<span class="visually-hidden">
+				version of 9.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="98c2e12ad81a46edaee7e9ebc6e68467"
+	 data-version="7fac7bdbdbb4402fa858f5e0a124cbd0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This chapter outlines some further expectations for firms on setting out their internal model change policy.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="eca30891f57748fe9503266e75b6efd3"
+	 data-version="6f5f2ab9072e48a78d14617d2255f071"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Scope of the model change policy</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="dfef752eb5774eb1a4727ba59887c7ce"
+	 data-version="34bac001e87648d8ad21a4f135498644"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When defining the scope of the policy, firms are reminded to consider Guideline 6 (scope of the policy for model changes) of the EIOPA Guidelines on the use of internal models. It is important for firms to consider whether the scope of the model change policy and model change definitions are sufficiently broad and appropriately flexible to be able to capture any changes that could have a material impact on the SCR or to enable the firm to meet the internal model requirements and calibration standards. For example, the policy recognises that a particular change to a technical provision model may be within scope if that change leads to an impact on the internal model SCR.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#dfef752eb5774eb1a4727ba59887c7ce">
+			Past
+			<span class="visually-hidden">
+				version of 9.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e66b19fa0faf40a0aa74f773fa0a5a1c"
+	 data-version="e8cf42fa899a4bffb75345b1d579923c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>There may also be situations where firms consider it appropriate to exclude something from the scope of the model change policy. In these circumstances, it is good practice for firms to justify these exclusions clearly.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cea7ef53b1554690b561e36fb16671bc"
+	 data-version="4ba757e29e44417fb8dcd3ec69df48c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should also be mindful of monitoring circumstances that might necessitate the need to change the scope of the policy.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="35e5b1867bcb48259114c15696530a13"
+	 data-version="d55c72ce32e74e49a3ac73517603b680"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Identification of model changes</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="7a940a40d6dc45b1971d989528f46f95"
+	 data-version="7252820cec88495dafe2b40053b57159"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It is important for firms to recognise that the need for model changes may arise from a wide range of potential sources. For example, model changes may be instigated through a firm&rsquo;s model development plans, validation activities, the own risk and solvency assessment (ORSA) or evolving use of the model. In addition, changes in a firm&rsquo;s own risk profile and factors external to the firm, such as the economic or commercial environment, may be potential triggers of model changes. A good model change policy would establish a robust process to identify, collate and manage all sources of potential model changes.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d03b717f2525468c97619d082b7ab7ba"
+	 data-version="34ccf2c6847c459da0a20664bf468e96"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Classification of major changes</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="c89bfefaf8ae41bcb8d6751982a4d24b"
+	 data-version="171cac61779d493d81d76cec413235ac"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The EIOPA Guidelines on the use of internal models<sup><a href="#footnote-15">15</a></sup> expects firms to develop and use a number of key quantitative and qualitative indicators for major changes.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-15" class="rb-footnote">
+					<span class="fn-col-1">
+						15.
+					</span>
+					<span class="fn-col-2">
+						EIOPA-BoS-14/180 EN.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#c89bfefaf8ae41bcb8d6751982a4d24b">
+			Past
+			<span class="visually-hidden">
+				version of 9.8 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d7a2f1d2e3744f7e9af80d0980b32897"
+	 data-version="2f9e9209c80b4b1e83cca939982399d6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In terms of quantitative indicators, the majority of firms define major changes based on a percentage change in the total SCR. An improved approach, adopted by some firms, specifies additional indicators at a more granular level, for example, indicators that relate to changes in the strength of the marginal risk distribution at certain percentiles or the amount of pre-diversified capital requirements for that risk.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="733dd3b95ac64964858b76d018f7d667"
+	 data-version="0f839233a4d247bea03381b0e9381ded"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It is important for the model change policy to include qualitative indicators for major changes. An example of a qualitative indicator is where a major change is triggered after a fundamental change in the methodology or a key expert judgement relating to a particular risk regardless of the impact that the change has on the SCR. Another potential qualitative major change indicator is if a proposed model change needs to be signed off at, or above, a certain level of seniority within the firm. Firms may also wish to consider what indicators might be appropriate to use to determine whether a major change might be triggered through ongoing model validation.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d66c97dc02d64695b2aea5e7e97a0c08"
+	 data-version="04fcac82517443ae872dbb758ce67d26"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When developing major change indicators, the PRA encourages firms to consider the appropriateness of having different indicators or threshold levels for different risks or components of the model. For example, it may be desirable to include specific change&nbsp;thresholds for certain elements of the model that are of key interest because they are highly material, highly judgemental or have known limitations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4dae068cc49d44c981568d2f35d02589"
+	 data-version="b0bf64da3a2a42f6953c30e162e4b09c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Finally, it is important that firms justify their choice of major change indicators including why any thresholds chosen are at an appropriate level for the ongoing supervision of the model. In this regard, it can be helpful if firms provide examples of model changes (eg past model changes) that meet their major change indicators in order to demonstrate the appropriateness of thresholds chosen.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="bbb1c3e0e1254d33bd1901b3fe98e385"
+	 data-version="dcf2de81545f4b62ace33f59df2ee9eb"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Combination of minor model changes</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8e1492bd5af84edfa1bda4499b51d4ed"
+	 data-version="1f67d4413e0a4df18d68b5566622bd3e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms may struggle to articulate how they would define the circumstances in which a combination of minor model changes would constitute a major model change. Better model change policies have specified at least the following: </p>
+<ul>
+    <li> how the impact of minor changes will be accumulated together; </li>
+    <li>the time period over which these changes will be accumulated; and </li>
+    <li>the indicators or thresholds used to determine when such an accumulation becomes a major change.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5927655793cb4357ae8f5e69bcf2aa0d"
+	 data-version="a6b81608e4ef4fb1a95bd6cde8dd6f27"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A reasonable starting point for each of these may be to: </p>
+<ul>
+    <li> accumulate the absolute values of the impact of the minor changes together, unless it could be demonstrated why it would be reasonable to allow the impact of two minor changes to offset each other; </li>
+    <li>accumulate changes from the date of the latest minor model change accumulation reset being, either at the end of an annual cycle (that firms may specify) or at the point of receiving a major change application (if permission is granted); and </li>
+    <li>use indicators similar to those defined for single major changes, where considered appropriate.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#5927655793cb4357ae8f5e69bcf2aa0d">
+			Past
+			<span class="visually-hidden">
+				version of 9.14 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4cdad220ca13452cb821ed5ea848a7a0"
+	 data-version="df9d7280d2fa49a8afe1e9c46051157d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A further consideration firms may wish to make is whether it is informative to group minor model changes together by risk or another common feature of the model.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#4cdad220ca13452cb821ed5ea848a7a0">
+			Past
+			<span class="visually-hidden">
+				version of 9.15 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f7b5fb54bf6d42e89e870cecc8dfe6e4"
+	 data-version="55de78d3c91145bf8522da0432ce2dfe"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Governance</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="823696f57cc14f6d963791bcaa6fcec5"
+	 data-version="e0dfef972250482e9647e02e1d5478f1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The better model change policies clearly articulate the governance framework covering the internal process for identifying, approving and implementing the model changes. These included an articulation of how the model change policy fits in within the wider model governance, risk management and validation processes.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b2bb0fbfca584f4c89aac105ab05c007"
+	 data-version="8bc2f15a104245b4831f3010dacbeb19"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA generally expects firms&rsquo; executive management to be responsible for the internal sign-off of major model changes and at least to be made aware of minor changes where appropriate.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="61aa042b2d6545c5b558b8aef9200f32"
+	 data-version="5b08e9a8d7d24239a24290eb6f99dd7f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.18
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It is important that firms also ensure that there is a robust governance process to agree whether changes should be classified as either major or minor, especially in cases where the classification is borderline or subject to judgement.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/10/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f8a6ddab814e44438bbbe8a71841efad"
+	 data-version="568ac6b1a81644e2be2927ca74a43bd1"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Reporting of model changes to the PRA</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="e87de2a49b454cbfacb1d6608621aafd"
+	 data-version="f271221272224a5494e46ce7a0922563"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.19
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In accordance with <a href="/pra-rules/reporting#aa75a4213c8149bc8af39443b4fddc8a" data-rb-content-link="Rule">Article 6(3) of Chapter 2A of the Reporting Part</a>&nbsp;of the PRA Rulebook and the EIOPA Guidelines on the use of internal models, firms with permission to use a partial or full internal model are required to provide a quarterly summary of minor and major model changes to the PRA.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#e87de2a49b454cbfacb1d6608621aafd">
+			Past
+			<span class="visually-hidden">
+				version of 9.19 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9232c002963748d88620b83bfc8ad9a1"
+	 data-version="2451b252361941ea9e45c9cf80ad715a"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Method of submission [Deleted]</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="9dc1a19d5ad74e02950ee5ce0cba4317"
+	 data-version="f4ea6dc427fd4ceb88d188f8e5677349"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.19A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#9dc1a19d5ad74e02950ee5ce0cba4317">
+			Past
+			<span class="visually-hidden">
+				version of 9.19A before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="690545bc23494d269148746e47f7e734"
+	 data-version="5311a4c53135417ebbb8b5050fa571a2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.19B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#690545bc23494d269148746e47f7e734">
+			Past
+			<span class="visually-hidden">
+				version of 9.19B before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="dcffacbde2204c41bec63a1f24fb1924"
+	 data-version="b886d31756b94dee91059a4baad234c2"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Timing [Deleted]</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="50cf0cb3933e4a3fb36ed2606434e9fa"
+	 data-version="67a043fc5b1743f086e6e675a88f9a6d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.19C
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#50cf0cb3933e4a3fb36ed2606434e9fa">
+			Past
+			<span class="visually-hidden">
+				version of 9.19C before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c7bf8cf79371482381261c43a9432b38"
+	 data-version="418577f96cf6424bb88196040e541d8f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.19D
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#c7bf8cf79371482381261c43a9432b38">
+			Past
+			<span class="visually-hidden">
+				version of 9.19D before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b1707c87273b409f8f5e7a6be64cce2f"
+	 data-version="18e856c2f13745d1b8dcdebaa14c7979"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Format [Deleted]</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="bb1de7bd85444139a32486836305fdb1"
+	 data-version="608882e887604bed9de590f5243e97c2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.19E
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#bb1de7bd85444139a32486836305fdb1">
+			Past
+			<span class="visually-hidden">
+				version of 9.19E before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d44ab85eb12a4f9c987dfe20c748169d"
+	 data-version="5033fc3ecd4e4e50923516c6ffb0bbf6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.19F
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#d44ab85eb12a4f9c987dfe20c748169d">
+			Past
+			<span class="visually-hidden">
+				version of 9.19F before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="813387388afa467fa1f655f5f85b29d0"
+	 data-version="324fd8aa51154bb3b1531b0c1ea78ca4"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Method of submission</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="3004790d414146cbbd2632229615f3df"
+	 data-version="252888d1c6cf48989da8c681cf313bd9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.20
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			The PRA expects firms with permission to use an internal model to submit their quarterly&nbsp;minor and major model change information via the Bank of England Electronic Data&nbsp;Submission (BEEDs) portal.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/17-10-2018#3004790d414146cbbd2632229615f3df">
+			Past
+			<span class="visually-hidden">
+				version of 9.20 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c1f1625f243e4b4dbf3913f08721993a"
+	 data-version="39f6942e208e4ae2bcb6413539c5f00d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Timing</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="db379522ace74e90a98edc306242973d"
+	 data-version="be119ded2a944dabbd54565e70b89527"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.21
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms are required to submit the minor and major model change information quarterly, in&nbsp; line with <a href="/pra-rules/reporting#ecfe934ce3f74646aee40b9f52f3d1a3" data-rb-content-link="Rule">Reporting 2.5B</a>&nbsp;in the PRA Rulebook. Where possible the PRA encourages earlier&nbsp;submission to allow early engagement.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2a15b9596df641a9b19fdf5f4c839823"
+	 data-version="612040558e4741719d86c4de0748c0d9"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Format</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="18979e54b5c6485e93476311ce5c2e43"
+	 data-version="4692a836455b4728a7492175289f5642"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.22
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA has provided a template, named QMC.01, for firms to complete and submit,&nbsp; containing key information regarding minor and major model changes, as set out in <a href="/pra-rules/reporting#aa75a4213c8149bc8af39443b4fddc8a" data-rb-content-link="Rule">Article 6(3) of Chapter 2A of the Reporting Part</a>&nbsp;of the PRA Rulebook. Firms are required to submit&nbsp;the relevant information to the PRA via the QMC.01 template.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a356fab8a71e4d10b3849c18cd5c8fb8"
+	 data-version="8b3a00a443c1465d95f42eedd5fd1c45"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.23
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms are also required to submit supporting narrative documentation to the PRA, in&nbsp;accordance with <a href="/pra-rules/reporting#aa75a4213c8149bc8af39443b4fddc8a" data-rb-content-link="Rule">Article 6(3) of Chapter 2A of the Reporting Part</a>&nbsp;of the PRA Rulebook,&nbsp;alongside the quantitative information in the QMC.01 template.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="dc6a8aba59cf47958cc0468b01133048"
+	 data-version="f91cb1fa6e384a179d2c309a942fbc97"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Content of the submission</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="3a4180373fd94286884b90da4f8d82a1"
+	 data-version="4c23e4d114684882908e48f77ff852ea"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.24
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In submitting the model change information to the PRA, it may be helpful to group related changes together, for example by risk area or function of the model.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a8bc26d6302145d4ba05a1d1278fbd98"
+	 data-version="fa8bb7fb386546feaddbb1c847a0a615"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.25
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the supporting narrative documentation, firms are required to provide a description of each model change submitted in the QMC.01 template. Firms are expected to provide sufficient detail in the description to ensure a clear explanation of each model change, which may vary depending on the complexity of the change. The explanation for each change may be both qualitative and quantitative and could include, but is not limited to, the following:</p>
+<ul>
+    <li>the reference number, cross-referenced with the respective model change in the QMC.01 template;</li>
+    <li>the reason for the model change; and</li>
+    <li>the change made to the model.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="77a58bc97564430e9bc93f5c7adc3c49"
+	 data-version="214dad6f22f549eeaddea3d66d6698ee"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.26
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the supporting narrative documentation, firms are also encouraged to provide a brief summary of the model changes made since the last minor model change accumulation reset date. This is expected to include the cumulative figure of minor model changes made since the last accumulation reset date, and how this compares to the threshold that firms have defined in which a combination of minor model changes would constitute a major model change.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="98847de221fe412fb5249b4c887ca29c"
+	 data-version="c7ca36743d394a6e9825c9ac8684b503"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Review of the model change policy</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="140dd975f24a48d2b00d2d7f3dea43d6"
+	 data-version="8d4aa8ec8f134a1885e2fca45bd0f0de"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.27
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA encourages firms to review the effectiveness of the model change policy on a&nbsp;regular basis to ensure that the internal model continues to reflect the firm&rsquo;s risk profile and&nbsp;meets the internal model requirements and calibration standards. Firms are also reminded&nbsp;that changes to the model change policy itself, other than administrative changes, are subject&nbsp;to the PRA&rsquo;s permission. Readers also are referred to <a href="/guidance/supervisory-statements/ss12-16-solvency-ii---changes-to-internal-models-used-by-uk-insurance" data-rb-content-link="Guidance">SS12/16, &lsquo;Changes to internal models&nbsp;used by UK insurance firms&rsquo;</a>.<sup><a href="#footnote-16">16</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-16" class="rb-footnote">
+					<span class="fn-col-1">
+						16.
+					</span>
+					<span class="fn-col-2">
+						September 2016: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-changes-to-internal-models-used-by-uk-insurance-firms-ss">http://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-changes-to-internal-models-used-by-uk-insurance-firms-ss</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/9----internal-model-change-policy/31-12-2024?p=1" data-id="699b28fc403d48459a7758605b15e58c" data-effective-date="31-12-2024" data-download-title="Internal model change policy_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/9----internal-model-change-policy/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#699b28fc403d48459a7758605b15e58c&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – Internal model change policy">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="9668771ee2a94ea0a65e5b4ca2e8c56b"
+	 data-version="0da3acb9c68d440ba7be806491648939"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Reporting of analysis of change in SCR
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c1d5dde6bdc1426ca83a64eb4c593bed"
+	 data-version="5820cf5e26634727a910b40462e8a63c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As part of the Internal Model Ongoing Review (IMOR) framework, firms with permission to use a partial or full internal model are required to carry out an analysis of change (AoC) exercise comparing the change in their SCR as at their most recent financial year end and their SCR as at their previous financial year end. The AoC requirements and expectations described in this SS also apply to groups using partial or full internal models in relation to their group SCR calculation. Firms should use the AoC exercises to identify causes of movements in their SCRs. Firms are required to submit the results to the PRA using the AoC.01 template. This requirement is in accordance with <a href="/pra-rules/solvency-capital-requirement---internal-models#d42aac66c0ab4d0ca3a7d6adfc0343f4" data-rb-content-link="Chapter">Solvency Capital Requirement &ndash; Internal Models 13A</a>, and <a href="/pra-rules/reporting#deaaab6724704ef9af76f39f5396f8ad" data-rb-content-link="SubChapter">Articles 19</a>&nbsp;and <a href="/pra-rules/reporting#45faf65a40634d86a7ad91dc0e9798a8" data-rb-content-link="SubChapter">35 of Chapter 2A of the Reporting Part</a>&nbsp;of the PRA Rulebook. Firms are required to submit supporting narrative documentation that provides reasons, and documentary evidence to support those reasons, explaining any change in SCR in accordance with <a href="/pra-rules/solvency-capital-requirement---internal-models#d42aac66c0ab4d0ca3a7d6adfc0343f4" data-rb-content-link="Chapter">Solvency Capital Requirement &ndash; Internal Models 13A</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9dc73fc704e24ab28944d4693fd8ae85"
+	 data-version="ece45cdebef34b7d8f9c23f1cfb6bec1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA may expect a firm seeking a new internal model permission, or variation to an existing permission, to carry out and submit to the PRA the results of an AoC exercise. For example, where there are material changes expected in a firm&rsquo;s SCR between its most recent financial year-end and the application date to vary a permission, or complex changes are proposed to the internal model, the PRA may expect a firm to carry out, and submit the results of, an AoC exercise.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0ee20b702fa3441589412e0a33933cb8"
+	 data-version="efe174c01a48435dbc14fedc3fcfb788"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Method of submission</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="5a0575fa654e410c953fb444cd3666e7"
+	 data-version="69ff761a581e4d109ce02de6c6c1286d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects firms to submit the results of their AoC exercise and supporting narrative documentation via the Bank of England Electronic Data Submission (BEEDs) portal.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5bbb0c54b47249629ee1bb61538ecc45"
+	 data-version="012e1a51653e4e8080ef5b4cbdb6a8ac"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Timing</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="dac88b67a8b74fa892ae1e0b911dd0f6"
+	 data-version="be0dc51aed5a4c87ae1bbcb07d62925b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Commencing year-end 2025, firms are required to submit the results of their annual AoC exercise and supporting narrative documentation to the PRA annually, in line with <a href="/pra-rules/reporting#ecfe934ce3f74646aee40b9f52f3d1a3" data-rb-content-link="Rule">Reporting 2.5B</a>&nbsp;in the PRA Rulebook for groups and solos, as applicable. Where possible, the PRA encourages earlier submission to allow early engagement. When firms seek new internal model permissions or variations to existing permissions, firms may be expected to submit the results of an AoC exercise and supporting narrative documentation to the PRA and are expected to do so on the permission application date.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="07b33e99ed6a4aefba76decde1196e76"
+	 data-version="019b46af27094f52ac02754d64ff062f"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Format</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="6e0a748cd08346daaae9b88991dc5351"
+	 data-version="46f613d3b02d4343b7451d58fc26caf3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA has provided an analysis of change template, named AoC.01, for firms to complete with key information regarding the movement in SCR and submit in accordance with <a href="/pra-rules/reporting#deaaab6724704ef9af76f39f5396f8ad" data-rb-content-link="SubChapter">Articles 19</a>&nbsp;and <a href="/pra-rules/reporting#45faf65a40634d86a7ad91dc0e9798a8" data-rb-content-link="SubChapter">35 of Chapter 2A of the Reporting Part</a>&nbsp;of the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0b86f185e1e14884a61c5f6829984d88"
+	 data-version="dd9afbc686684f25bed5889c1c48cdb4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms are also required to submit the supporting narrative documentation, in accordance with <a href="/pra-rules/solvency-capital-requirement---internal-models#d42aac66c0ab4d0ca3a7d6adfc0343f4" data-rb-content-link="Chapter">Solvency Capital Requirement &ndash; Internal Models 13A</a>&nbsp;and <a href="/pra-rules/reporting#deaaab6724704ef9af76f39f5396f8ad" data-rb-content-link="SubChapter">Articles 19</a>&nbsp;and <a href="/pra-rules/reporting#45faf65a40634d86a7ad91dc0e9798a8" data-rb-content-link="SubChapter">35 of Chapter 2A of the Reporting Part</a>&nbsp;of the PRA Rulebook, in a format they choose.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="964c875a521d406b99d9cf3baf128c53"
+	 data-version="f567d1d314e74511877adfe1a87e3ae3"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Content of AoC.01 template</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="69ea90398c884b11a0ed30c84bcbfcf0"
+	 data-version="5447b0bc24244338931584ca595b2bdd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms are expected to submit a granular analysis of the material reasons contributing to the SCR movement over the period. Examples of such reasons include, but are not limited to, investment changes and risk profile changes.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f5f563c0e96048bfbf1f9226e5246f4c"
+	 data-version="339dada94b2d444e9a0eed1afacd94da"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In considering whether a reason is material, firms may use a number of criteria with a mixture of both qualitative and quantitative considerations. This definition is expected to align with practice used in firms&rsquo; internal AoC exercises in their SCR, where such exercises are completed. Examples of material reasons include whether the reason impacts the SCR by a specified percentage of the SCR, and whether the reason would lead to the firm considering implementing a management action.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3c11fcf916d8427aa214b51465e83979"
+	 data-version="a377326d2a2940209caed393afefdf06"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the movement in SCR for firms using partial internal models includes material movements in the SCR of standard formula risk modules, firms are expected to provide this breakdown in the AoC exercise.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="60299219c9f84fa18741b9e8be432460"
+	 data-version="644fe4074eb04eb989910d89a293548a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The AoC.01 is largely free-form, therefore firms are able to choose the order and categorisation with which the AoC exercise is completed and results submitted. The PRA expects that the order and categorisation of SCR movements in the AoC exercise should align with firms&rsquo; internal AoC in SCR, where such exercises are completed. In particular, the PRA expects the analysis submitted to be sufficiently granular to enable stakeholders, such as the board, to understand the key reasons, which may include changes in risk profile, of SCR movements over the relevant period.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="be778a6cebb24f40828493725a97b7bf"
+	 data-version="c8f27a4077c541dc9b7a9c497b4f0798"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where firms consider it useful information, firms are encouraged to carry out, and provide the results of, an AoC in SCR movement split by a major ring-fenced fund, as appropriate.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="13908adb39fe4f319359e09135f0ce05"
+	 data-version="06ac386214b04c37bfc71132624886c6"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Content of supporting narrative documentation</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="ca442f9f25824800ba918397def92f11"
+	 data-version="27596a858bdd4418a7cfca1e96e085d1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms are required to provide reasons, and documentary evidence to support those reasons, explaining any change in SCR, in supporting narrative documentation. The supporting narrative documentation should include an explanation of each of the causes of SCR movements provided in the AoC.01 template, including the balancing item. Firms are expected to provide both quantitative and qualitative information in this supporting narrative documentation. In addition, in the supporting narrative documentation, firms are expected to detail:</p>
+<ul>
+    <li>the governance process followed in completion of the AoC exercise. This may include, but is not limited to, any limitations in the results, the process the firm has taken to validate the results and the individual or committee by which the exercise was signed off;</li>
+    <li>any material actions taken internally following completion of the AoC exercise;</li>
+    <li>the reasons for any movement in diversification benefit over the period covered by the AoC exercise;</li>
+    <li>the definition of material used in the AoC exercise, in line with <a href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#69ea90398c884b11a0ed30c84bcbfcf0" data-rb-content-link="Paragraph">10.7</a>&nbsp;and <a href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#f5f563c0e96048bfbf1f9226e5246f4c" data-rb-content-link="Paragraph">10.8</a>; and</li>
+    <li>a list of any MLAs and CAOs. This should be an up-to-date list of MLAs and CAOs which contributed to the calculation of the most recently reported SCR, for example, the most recent financial year-end.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7a723fa7a6904b8d94f09daa06a1dca8"
+	 data-version="3c9dd618ad4c4a2c9816df84d656223e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms are encouraged to provide additional information, to that listed in <a href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#ca442f9f25824800ba918397def92f11" data-rb-content-link="Paragraph">10.12</a>, in the supporting narrative documentation, where helpful.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/10---reporting-of-analysis-of-change-in-scr/31-12-2024?p=1" data-id="9668771ee2a94ea0a65e5b4ca2e8c56b" data-effective-date="31-12-2024" data-download-title="Reporting of analysis of change in SCR_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change/10---reporting-of-analysis-of-change-in-scr/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-16---solvency-ii---internal-models-assessment-model-change#9668771ee2a94ea0a65e5b4ca2e8c56b&amp;subject=PRA Rulebook - SS17/16 – Solvency II: internal models – assessment, model change and the role of non-executive directors – Reporting of analysis of change in SCR">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

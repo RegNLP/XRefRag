@@ -1,0 +1,2879 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{671D87DB-FEB6-4599-B54A-BB351FF30AC5} -->
+<title>Insurance - Fitness and Propriety | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Insurance - Fitness and Propriety">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insurance - Fitness and Propriety">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoizq-f-622efc40f-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":47,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"25624403","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":45728,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370163","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==8QCv5aAzRZlZwmcKfuZvF3305XYi7N4q0ULmbrTrNhXoTlwBwLJkPKQyXzzZPrRKc/nuexkhB7z92/J5sDQQvxakG4i3MeNZZMijMXfr0ApunRwHYyCDBnhm3dt1i8A+sgqroqhSmEmj3HyzlcXmt1g5E3qZgyqbxOD8JJoarMLl44RRiT7GuEZZreI8tGwsT7Ak2myS2+aP6zJe1+ogUz9wHo5j8f4Su3flTwbhazjvltZsZLD8osb+dZf4tzXduqOFxvGQzFzCFR3zTNs0kuzhSn8eaLBzmBAlHCj5KXEZmas6DJG1sC3/hrR35cjNNGcWbg+D8V54NCjL7Fab4L1sxhJtKC51ql9ye8Iuj6uhzdByyahptYGktpkr98e/xvUr+IDK6Smhq7+IdnZeMFjpM0tKshSmWAyuDGbBndY=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Insurance - Fitness and Propriety				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Insurance - Fitness and Propriety
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/insurance---fitness-and-propriety/01-01-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/insurance---fitness-and-propriety/07-03-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/03/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/insurance---fitness-and-propriety/07-03-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/03/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/insurance---fitness-and-propriety/02-05-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						02/05/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/insurance---fitness-and-propriety/24-07-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						24/07/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/insurance---fitness-and-propriety/22-05-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						22/05/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/insurance---fitness-and-propriety/10-12-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						10/12/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/insurance---fitness-and-propriety/10-12-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						10/12/2019
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/insurance---fitness-and-propriety/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-fd9b058d-9ed8-43b9-8313-7034efb29066">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-fd9b058d-9ed8-43b9-8313-7034efb29066"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Insurance - Fitness and Propriety
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Insurance - Fitness and Propriety)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=a7828745ad304c1ea11c278a4c402d75">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Insurance - Fitness and Propriety
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss35-15---strengthening-individual-accountability-in-insurance/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS35/15 – Strengthening individual accountability in insurance
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss05-16---corporate-governance-board-responsibilities/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS5/16 – Corporate governance: Board responsibilities
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-banking-and-insurance" class="list-links__link" target="_blank">
+										PS3/15 - Strengthening individual accountability in banking and insurance - responses to CP14/14 and CP26/14
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-insurance-responses" class="list-links__link" target="_blank">
+										PS22/15 - &quot;Strengthening individual accountability in insurance: responses to CP26/14, CP7/15 and CP13/15&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/strengthening-accountability-in-banking-and-insurance-implementation-of-sm-cr-and-simr" class="list-links__link" target="_blank">
+										PS5/16 - Strengthening accountability in banking and insurance: Implementation of SM&amp;CR and SIMR; and PRA requirements on regulatory references
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-accountability-in-banking-and-insurance-regulatory-references" class="list-links__link" target="_blank">
+										PS27/16 - Strengthening accountability in banking and insurance: PRA requirements on regulatory references (part II)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/pra-rulebook-administration-instrument-no-2-2017" class="list-links__link" target="_blank">
+										 - PRA Rulebook: Administration Instrument (No.2) 2017
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/responses-to-cp-2-17" class="list-links__link" target="_blank">
+										PS19/17 - Responses to CP2/17 &#39;Occasional Consultation Paper&#39;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-individual-accountability-in-insurance-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS15/18 - Strengthening individual accountability in insurance: Extension of the Senior Managers and Certification Regime to insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-accountability-implementing-the-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS26/18 - Strengthening accountability: Implementing the extension of the SM&amp;CR to insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-accountability-implementing-smcr-insurers-part-2" class="list-links__link" target="_blank">
+										PS27/18 - Strengthening accountability: Implementing the extension of the SM&amp;CR to insurers (Part 2)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/insurance---fitness-and-propriety/31-12-2020_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance---fitness-and-propriety/31-12-2020?p=1" data-id="a7828745ad304c1ea11c278a4c402d75" data-effective-date="31-12-2020" data-download-title="Insurance - Fitness and Propriety_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance---fitness-and-propriety/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety&amp;subject=PRA Rulebook - Insurance - Fitness and Propriety">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="ac9c902d513a4dc29f5e800ffa04d9d5"
+	 data-version="67feba2d200148f1a58f85b2e2b197a0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="eea2f017b1e248c1b3a005e367d65b43"
+	 data-version="aa45bd4fc7c04f6ba8c25008780434a7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to:</p>
+<ol class="new-bullet">
+    <li>(1) a <em><a class="glossary-link" title="UK Solvency II firm" href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276" data-mce-linktype="2" data-glossary-id="52930">UK Solvency II firm</a></em>;</li>
+    <li>(2) in accordance with <a title="Insurance General Application 3" href="/pra-rules/insurance-general-application#2e5a9cd32e6d4026895a5d543b990108" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Insurance General Application 3</a>, the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em>, as modified by <a title="5" href="/pra-rules/insurance---fitness-and-propriety#8d1e83fcdade40888a1859eef9d2d756" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">5</a>;</li>
+    <li>(3) in accordance with <a title="Insurance General Application 3" href="/pra-rules/insurance-general-application#2e5a9cd32e6d4026895a5d543b990108" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Insurance General Application 3</a>, <em><a class="glossary-link" title="managing agents" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agents</a></em>, as modified by <a title="5" href="/pra-rules/insurance---fitness-and-propriety#8d1e83fcdade40888a1859eef9d2d756" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">5</a>;</li>
+    <li>(4) a <em><a class="glossary-link" title="third country branch" href="#glossary-term-233a78845cf54319a4301dbbfcea122c" data-mce-linktype="2" data-glossary-id="52915">third country branch</a></em> undertaking (other than a <em><a class="glossary-link" title="Swiss general insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em>);</li>
+    <li>(5) a <em><a class="glossary-link" title="UK ISPV" href="#glossary-term-d657b35a131c4b4982032a800f337269" data-mce-linktype="2" data-glossary-id="52386">UK ISPV</a></em>; and</li>
+    <li>(6) a <em><a class="glossary-link" title="third country insurance services provider" href="#glossary-term-9620bcb18fb249d59d6b80a3d10010c6" data-mce-linktype="2" data-glossary-id="98245">third country insurance services provider</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/07-03-2016#eea2f017b1e248c1b3a005e367d65b43">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=eea2f017b1e248c1b3a005e367d65b43">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="75f1370742f74072b1bed4bb338203e0"
+	 data-version="6a1b4523d24f42cd8457eb0e829906d3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Any reference in this Part to assessing or deciding whether a <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> is a fit and proper <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em>, shall, in relation to a <em><a class="glossary-link" title="SRO firm" href="#glossary-term-03d04f1c85064316998189ee87fa1eb0" data-mce-linktype="2" data-glossary-id="98243">SRO firm</a></em>, be construed as a reference to assessing or deciding whether the <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> is fit and proper to perform the function of overseeing an orderly run-off of the <em><a class="glossary-link" title="firm’s" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm&rsquo;s</a> <a class="glossary-link" title="regulated activities" href="#glossary-term-aa04e0522d234dabb44ae6041cd9954b" data-mce-linktype="2" data-glossary-id="77616">regulated activities</a></em> in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=75f1370742f74072b1bed4bb338203e0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6f1108b03b7a44edaf7777c04ebb0afd"
+	 data-version="161c1f793b6f4bc1aa16e35a41cf208a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a  class="glossary-link" title="continued approval" href="#glossary-term-b8893be2752041cf8cc61073c74ca216" data-mce-linktype="2" data-glossary-id="67029">continued approval</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="Senior Insurance Managers Regime &ndash; Transitional Provisions" href="/pra-rules/insurance---senior-managers-regime---transitional-provisions" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Insurance - Senior Managers Regime &ndash; Transitional Provisions</a>.</p>
+<p><em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em></p>
+<p style="padding-left: 30px;">means the template found in <a  title="7.1" href="/pra-rules/insurance---fitness-and-propriety#c4a2fcbddda24447994abfbc435272f6" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/02-05-2017#6f1108b03b7a44edaf7777c04ebb0afd">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6f1108b03b7a44edaf7777c04ebb0afd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance---fitness-and-propriety/1-application-and-definitions/31-12-2020?p=1" data-id="ac9c902d513a4dc29f5e800ffa04d9d5" data-effective-date="31-12-2020" data-download-title="Application and Definitions_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance---fitness-and-propriety/1-application-and-definitions/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety#ac9c902d513a4dc29f5e800ffa04d9d5&amp;subject=PRA Rulebook - Insurance - Fitness and Propriety – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=ac9c902d513a4dc29f5e800ffa04d9d5">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="04cd1d6c58504619a9bfe6eadaeea5b8"
+	 data-version="349e44f9fe9b443a9f58613d577715cb"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Fitness and Propriety Assessments by Firms
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="068c2e9559ce4ef5891de66409883b73"
+	 data-version="ce77e72bb832405c80ccec2ae88d9d71"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that all <em><a class="glossary-link" title="persons" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">persons</a></em> who perform <em><a  class="glossary-link" title="key functions" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key functions</a></em> or <em><a  class="glossary-link" title="certification functions" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification functions</a></em> are at all times fit and proper <em><a class="glossary-link" title="persons" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">persons</a></em>.</p>
+			<p><strong>[Note: Art. 42(1) of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/07-03-2016#068c2e9559ce4ef5891de66409883b73">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 10/12/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=068c2e9559ce4ef5891de66409883b73">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="24319bc3cffa4b11831e9e859f99aef4"
+	 data-version="89f744c960364c79bb62eadb9e5248b9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In deciding whether a <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> is fit and proper pursuant to <a  title="2.1" href="/pra-rules/insurance---fitness-and-propriety#068c2e9559ce4ef5891de66409883b73" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> and, where applicable, section 60A(1) and section 63F of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em>, a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must be satisfied that the <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) has the personal characteristics (including being of good repute and integrity);</li>
+<li>(2) possesses the level of competence, knowledge and experience;</li>
+<li>(3) has the qualifications; and</li>
+<li>(4) has undergone or is undergoing all training,</li>
+</ol>
+<p>required to enable such <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> to perform his or her <em><a  class="glossary-link" title="key function" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em> or <em><a  class="glossary-link" title="certification function" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification function</a></em> effectively and in accordance with any relevant regulatory requirements, including those under the <em><a class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em>, and to enable sound and prudent management of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+			<p><strong>[Note: Art. 42(1) of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/10-12-2018#24319bc3cffa4b11831e9e859f99aef4">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 10/12/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=24319bc3cffa4b11831e9e859f99aef4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fbaf1cc2de64408db51839ac18e632b1"
+	 data-version="112d7c783e62499f8fc2ea42765dfe2e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Before deciding, and in considering on an on-going basis, whether a <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> is fit and proper pursuant to <a  title="2.1" href="/pra-rules/insurance---fitness-and-propriety#068c2e9559ce4ef5891de66409883b73" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> and <a  title="2.2" href="/pra-rules/insurance---fitness-and-propriety#24319bc3cffa4b11831e9e859f99aef4" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a>, a<em> <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must consider:</p>
+<ol class="new-bullet">
+<li>(1) the <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em>&rsquo;s past business conduct; and</li>
+<li>(2) whether the <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> performs his or her <em><a  class="glossary-link" title="key functions" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key functions</a></em> or <em><a  class="glossary-link" title="certification functions" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification functions</a></em> in accordance with the relevant <em><a  class="glossary-link" title="conduct standards" href="#glossary-term-a237be2d38ef407da1d7b08d58c086f8" data-mce-linktype="2" data-glossary-id="67033">conduct standards</a></em> specified in <a  title="Insurance - Conduct Standards 3" href="/pra-rules/insurance---conduct-standards#1adda374cd0b4befb46d99320fa84c81" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Insurance - Conduct Standards 3</a>.</li>
+</ol>
+			<p><strong>[Note: Art. 42(1) of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/07-03-2016#fbaf1cc2de64408db51839ac18e632b1">
+			Past
+			<span class="visually-hidden">
+				version of 2.3 before 10/12/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fbaf1cc2de64408db51839ac18e632b1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5c192a3f1be34b4c8eb81e0ca4e57a2b"
+	 data-version="516d7ee229fa4721a7ff9aa50b859e75"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In deciding whether a <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> (P) is fit and proper to be appointed as a <em><a  class="glossary-link" title="PRA senior management function holder" href="#glossary-term-2b9aecb9b62a4dd2a8f832c2afa33eb3" data-mce-linktype="2" data-glossary-id="88190">PRA senior management function holder</a></em> or a<em> <a  class="glossary-link" title="notified non-executive director" href="#glossary-term-9522e473f6f547b9ab49496e386da2c2" data-mce-linktype="2" data-glossary-id="66847">notified non-executive director</a></em>, a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must:</p>
+<ol class="new-bullet">
+<li>(1) obtain P&rsquo;s consent for the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to request the fullest information in relation to P that it is lawfully able to request under the Police Act 1997 and related subordinated legislation of the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> or any part of the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>;</li>
+<li>(2) if P has lived or worked outside the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> for a material time in the previous six years, obtain P&rsquo;s consent for the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to request the fullest information in relation to P that it is lawfully able to request under equivalent overseas legislation; and</li>
+<li>(3) request, and have regard to, such information.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/07-03-2016#5c192a3f1be34b4c8eb81e0ca4e57a2b">
+			Past
+			<span class="visually-hidden">
+				version of 2.4 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5c192a3f1be34b4c8eb81e0ca4e57a2b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b8fb555d1dce496784a94b8d79584b6a"
+	 data-version="17fe4ecbfcf94cf09d3952fe716fa205"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) Before deciding whether a <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> (P) is fit and proper to be appointed as a <em><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em> or to perform a <em style="text-indent: -14.3px;"><a  class="glossary-link" title="certification functions" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification function</a></em>, a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take reasonable steps to obtain appropriate references covering the past six years from the following:<ol>
+<li>(a) each <em style="text-indent: -14.3px;"><a  class="glossary-link" title="FCA-authorised person" href="#glossary-term-88e4276a080842a985a587a4642b8506" data-mce-linktype="2" data-glossary-id="88221">FCA-authorised person</a></em><span style="text-indent: -14.3px;"> and</span><span style="text-indent: -14.3px;"> </span><em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA-authorised person" href="#glossary-term-c45fe3c431b44cb3a63f398c6ba10f05" data-mce-linktype="2" data-glossary-id="52641">PRA-authorised person</a></em><span style="text-indent: -14.3px;"> that is, or was:</span></li>
+<ol>
+<li>(i) P&rsquo;s current or former employer; or </li>
+<li>(ii) an organisation (not falling within (i)) at which P is currently serving, or has served, as a <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em>, <em><a  class="glossary-link" title="approved person" href="#glossary-term-76c186553d63434ab742fe4474e848d5" data-mce-linktype="2" data-glossary-id="52211">approved person</a></em>, <em><a  class="glossary-link" title="non-executive director" href="#glossary-term-1c6867ad63dc4c27b293a8dfdaf54393" data-mce-linktype="2" data-glossary-id="52566">non-executive director</a></em>, <em><a  class="glossary-link" title="notified non-executive director" href="#glossary-term-6654c25650eb44b599f20bc0de616826" data-mce-linktype="2" data-glossary-id="67043">notified non-executive director</a></em> or <em><a  class="glossary-link" title="credit union non-executive director" href="#glossary-term-0f775339da7645ab94ceee8078fc3362" data-mce-linktype="2" data-glossary-id="66846">credit union non-executive director</a></em> or performed, or is currently performing, a <em><a  class="glossary-link" title="certification function" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification function</a></em>;   </li>
+</ol>
+<li>(b) P&rsquo;s other current and former employers; and </li>
+<li>(c) other organisations at which P served as, or is currently, a non-executive director.   </li>
+</ol></li>
+<li>(2) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (A) is not required to request references from an employer of P or any organisation referred to in (1)(a) to (c) (such employer or organisation, B) where:</li>
+<li><ol>
+<li>(a) A and B are members of the same <em><a  class="glossary-link" title="group" href="#glossary-term-cad95819b1ff46649b40fa89a3f7f6eb" data-mce-linktype="2" data-glossary-id="52834">group</a></em>; and</li>
+<li>(b) there are adequate arrangements in place under which A has access to all information sources to which B has access to the extent necessary were B giving a reference in accordance with this Part.</li>
+</ol></li>
+<li>      If A has access to only some of the information in 2.5(2)(b), A may ask for a reference that only covers the information to which A does not have access. To the extent that A does not request a reference in the circumstances set out in this (2), A must access and obtain the relevant information. </li>
+<li>(3) When making a <em><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em>, a <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take reasonable steps to obtain references in accordance with (1) and (2):</li>
+<li><ol>
+<li>(a) no later than one month before the end of the application period set out in section 61 of <a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a>; or</li>
+<li>(b) where a request by a <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> for a reference to an employer or organisation would require the <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, the employer, the organisation or any other <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> to make a <em><a  class="glossary-link" title="mandatory disclosure" href="#glossary-term-3ab3c5a147614e44b1537874d3828628" data-mce-linktype="2" data-glossary-id="78020">mandatory disclosure</a></em> prior to P disclosing to its current employer or organisation, as the case may be, that such application has been made, before the end of the application period set out in in section 61 of <em><a  class="glossary-link" style="line-height: 17.6px; text-indent: -14.3px;" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em>.</li>
+</ol></li>
+<li></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/10-12-2018#b8fb555d1dce496784a94b8d79584b6a">
+			Past
+			<span class="visually-hidden">
+				version of 2.5 before 10/12/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b8fb555d1dce496784a94b8d79584b6a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6a2d3e8d84ff47f9a4bf2797be9c7259"
+	 data-version="ab34a434737c48c3a3b327c3eb3003ad"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) Where a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (A) seeks to obtain a reference pursuant to <a  title="2.5" href="/pra-rules/insurance---fitness-and-propriety#b8fb555d1dce496784a94b8d79584b6a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a>, A must request that the organisation giving the reference (B) discloses all matters of which B is aware that B reasonably considers to be relevant to the assessment of that <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em>&rsquo;s fitness and propriety.</li>
+<li>(2) A must also request that, if B is a <em><a  class="glossary-link" title="full scope regulatory reference firm" href="#glossary-term-715b5ab560e344c480ea51c137ee7b34" data-mce-linktype="2" data-glossary-id="78019">full scope regulatory reference firm</a></em>, B discloses the information contained in the <em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2017
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/07-03-2016#6a2d3e8d84ff47f9a4bf2797be9c7259">
+			Past
+			<span class="visually-hidden">
+				version of 2.6 before 07/03/2017
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6a2d3e8d84ff47f9a4bf2797be9c7259">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="885e8fa899dc42fb9a01326d03a7d8ba"
+	 data-version="02865739b1b54fb68887fa58df6a8e78"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> previously obtained the information required by <a  title="2.4" href="/pra-rules/insurance---fitness-and-propriety#5c192a3f1be34b4c8eb81e0ca4e57a2b" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a> to <a  title="2.6" href="/pra-rules/insurance---fitness-and-propriety#6a2d3e8d84ff47f9a4bf2797be9c7259" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a> when it determined that a <em><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em> or a <em><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> performing a <em style="text-indent: -14.3px;"><a  class="glossary-link" title="certification functions" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification function</a> </em>was fit and proper for the purposes of this Part, and the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> engages that <em><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> for a continuous period of time, the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> is not required to comply with  <a  title="2.4" href="/pra-rules/insurance---fitness-and-propriety#5c192a3f1be34b4c8eb81e0ca4e57a2b" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a> to <a  title="2.6" href="/pra-rules/insurance---fitness-and-propriety#6a2d3e8d84ff47f9a4bf2797be9c7259" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a>  again in respect of any subsequent <em><a  class="glossary-link" title="key function" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em> appointments or arrangements to perform <em style="text-indent: -14.3px;"><a  class="glossary-link" title="certification functions" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification functions</a></em> at the same <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> within that continuous period.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/07-03-2017#885e8fa899dc42fb9a01326d03a7d8ba">
+			Past
+			<span class="visually-hidden">
+				version of 2.7 before 10/12/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=885e8fa899dc42fb9a01326d03a7d8ba">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance---fitness-and-propriety/2-fitness-and-propriety-assessments-by-firms/31-12-2020?p=1" data-id="04cd1d6c58504619a9bfe6eadaeea5b8" data-effective-date="31-12-2020" data-download-title="Fitness and Propriety Assessments by Firms_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance---fitness-and-propriety/2-fitness-and-propriety-assessments-by-firms/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety#04cd1d6c58504619a9bfe6eadaeea5b8&amp;subject=PRA Rulebook - Insurance - Fitness and Propriety – Fitness and Propriety Assessments by Firms">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=04cd1d6c58504619a9bfe6eadaeea5b8">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Fitness and Propriety Assessments by Firms
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="52ea1a23b04449a799fdc24e6664118b"
+	 data-version="a2e1654a4146417ea758a8daf73b069b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Regulatory References
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e7f14f54d908455cb7c7f588e2e2e4dc"
+	 data-version="2ec0cb9e59514443b8a1af8e7ab162f6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) If any <em><a  class="glossary-link" title="PRA-authorised person" href="#glossary-term-c45fe3c431b44cb3a63f398c6ba10f05" data-mce-linktype="2" data-glossary-id="52641">PRA-authorised person</a></em> (A):</li>
+<ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(</span><span style="line-height: 1.6em; text-indent: -1.3em;">a</span><span style="line-height: 1.6em; text-indent: -1.3em;">) is considering issuing a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="certificate" href="#glossary-term-7d8c159526f2426b93d818990ce5ea47" data-mce-linktype="2" data-glossary-id="52562">certificate</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> to, making a <em><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> in respect of, or appointing as </span><span style="line-height: 1.6em; text-indent: -1.3em;">a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">, a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="non-executive director" href="#glossary-term-1c6867ad63dc4c27b293a8dfdaf54393" data-mce-linktype="2" data-glossary-id="52566">non-executive director</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">, a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="notified non-executive director" href="#glossary-term-6654c25650eb44b599f20bc0de616826" data-mce-linktype="2" data-glossary-id="67043">notified non-executive director</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> or a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="credit union non-executive director" href="#glossary-term-0f775339da7645ab94ceee8078fc3362" data-mce-linktype="2" data-glossary-id="66846">credit union non-executive director</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">, a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> (P);</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(</span><span style="line-height: 1.6em; text-indent: -1.3em;">b</span><span style="line-height: 1.6em; text-indent: -1.3em;">) makes a request for a reference or other information in respect of P from a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to which this Part applies (B), in B&rsquo;s capacity as:</span></li>
+<ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(i) P&rsquo;s current or former employer; or</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(ii) an organisation (not falling within (i)) at which P is currently serving, or has served, as a <em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em> or other <em><a  class="glossary-link" title="approved person" href="#glossary-term-76c186553d63434ab742fe4474e848d5" data-mce-linktype="2" data-glossary-id="52211">approved person</a></em>;</span><span style="line-height: 1.6em; text-indent: -1.3em;"> and</span></li>
+</ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(</span><span style="line-height: 1.6em; text-indent: -1.3em;">c</span><span style="line-height: 1.6em; text-indent: -1.3em;">) indicates to B the purpose of the request</span></li>
+</ol>
+<li>      B must, as soon as reasonably practicable, provide a reference and disclose to A in the reference all information of which B is aware that B reasonably considers to be relevant to A&rsquo;s assessment of whether P is fit and proper.</li>
+<li>(2) A <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (B) which is required to make a disclosure under 3.1(1) is required to disclose information on or relating to something which occurred or existed:</li>
+<ol>
+<li>(a) in the six years before the request for a reference; </li>
+<li>(b) between the date of the request for a reference and the date B gives the reference; or</li>
+<li>(c) in the case of serious matters, at any time.</li>
+</ol>
+<li>(3)  When giving the reference referred to in 3.1(1), a <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must:</li>
+<ol>
+<li>(a) use the <em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em>; and </li>
+<li>(b) include all the information set out in the <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em>.</li>
+</ol>
+<li>(4) A <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> may make formatting modifications to the <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em> when giving a reference under 3.1(1), provided the <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em> as modified includes all substantive information required by 3.1(3)(b).</li>
+<li></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/07-03-2017#e7f14f54d908455cb7c7f588e2e2e4dc">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e7f14f54d908455cb7c7f588e2e2e4dc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4a8da951bc77429893a00862f956be41"
+	 data-version="b38b35ef0b184304bd7e6e808e8ffa48"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) If: </li>
+<ol>
+<li>(a) a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to whom this Part applies (B) has given a reference pursuant to <a  title="3.1" href="/pra-rules/insurance---fitness-and-propriety#e7f14f54d908455cb7c7f588e2e2e4dc" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a> to any <em><a  class="glossary-link" title="PRA-authorised person" href="#glossary-term-c45fe3c431b44cb3a63f398c6ba10f05" data-mce-linktype="2" data-glossary-id="52641">PRA-authorised person</a></em> (A) about any <em><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> (P); and</li>
+<li>(b) either</li>
+<ol>
+<li>(i) B is or has become aware of matters or circumstances that mean that, if B was giving that reference now, this Part would require B to draft it differently; or</li>
+<li>(ii) B has reached conclusions of the type described in item (E), or taken <em><a  class="glossary-link" title="disciplinary action" href="#glossary-term-b8f9c2ae8630459a8403eb882ebbd6a5" data-mce-linktype="2" data-glossary-id="78026">disciplinary action</a></em> of the type described in item (F) of the <em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em>, and had B taken or reached those conclusions or actions in the six year period referred to in the <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em>, this Part would require B to draft the reference differently; and   </li>
+</ol>
+<li>(c) it would be reasonable to consider the differences in (b) to be significant for an assessment by A of the fitness and propriety of P for the role at A for which the reference was given;</li>
+</ol>
+<li>      B must make reasonable enquiries as to the identity of P&rsquo;s current employer and (subject to (3))provide A with details of those differences in writing as soon as reasonably practicable.</li>
+<li>(2) The obligation to update regulatory references in (1) applies in the following circumstances:</li>
+<ol>
+<li>(a) if P is no longer employed by or in the service of B, the obligation to update references in (1) ends six years after P ceased to be employed by, or in the service of B;</li>
+<li>(b) if P is no longer employed by or in the service of B and the matters or circumstances are not serious matters, B does not have to disclose something if it did not occur or exist in the six year period ending on the date B gave the original reference. This limitation is additional to that in (2)(a).</li>
+<li>(c) if P is still employed by, or in the service of B, (1), applies throughout the period P remains employed by, or in the service of, B. </li>
+</ol>
+<li>(3) B is not required to update a regulatory reference given to A if:</li>
+<ol>
+<li>(a) A is no longer a <em><a  class="glossary-link" title="full scope regulatory reference firm" href="#glossary-term-715b5ab560e344c480ea51c137ee7b34" data-mce-linktype="2" data-glossary-id="78019">full scope regulatory reference firm</a></em>;</li>
+<li>(b) P is no longer employed by, or in the service of, A; or </li>
+<li>(c) P is not yet employed by, or in the service of A, and it is no longer intended that P will be employed by or serve at A; or</li>
+<li>(d) despite making reasonable enquiries under (1), B does not know whether P is still employed by, or in the service of, A.</li>
+</ol>
+<li>(4) (1) does not require B to update references provided prior to 7 March 2017. </li>
+<li>(5) If a <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (B) has given a reference to another <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (A) under <a  title="2.5" href="/pra-rules/insurance---fitness-and-propriety#b8fb555d1dce496784a94b8d79584b6a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a> in respect of a <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> (P) no more than six years ago and B asks A if P is still an employee of, or serving at, A, A must answer that question as soon as reasonably possible, even if B does not tell A the reason for the enquiry.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4a8da951bc77429893a00862f956be41">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2919056fccc24194827266d655e059d4"
+	 data-version="1e906d1281f44fe5ae5f76e2f89e9646"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not enter into any arrangements or agreements with any <em><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> that limit its ability to disclose information under this Part.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2919056fccc24194827266d655e059d4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6ebb7d80bdca40f9802dd15255127f85"
+	 data-version="ece67c4d1d924808b389059e94c2b190"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Part does not require a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to disclose information that has not been properly verified.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6ebb7d80bdca40f9802dd15255127f85">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7afe791d68594603970af9e48ebf0fc1"
+	 data-version="83810f6afd5748fd9439121fafcd2f06"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must arrange for orderly records to be kept that are sufficient to enable it to comply with the requirements of this Part in response to any requests for references referred to in this Part in relation to item (E) and item (F) in the <em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em>.</li>
+<li>(2) A <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> does not breach the requirements of this Part by failing to include information in a reference that it would otherwise have to include if:</li>
+<ol>
+<li>(a) the reason for the omission is that the <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> does not have the necessary records; and</li>
+<li>(b) neither (1) nor any other requirement of or under the <em><a  class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em> requires the <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to have those records.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7afe791d68594603970af9e48ebf0fc1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance---fitness-and-propriety/3-regulatory-references/31-12-2020?p=1" data-id="52ea1a23b04449a799fdc24e6664118b" data-effective-date="31-12-2020" data-download-title="Regulatory References_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance---fitness-and-propriety/3-regulatory-references/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety#52ea1a23b04449a799fdc24e6664118b&amp;subject=PRA Rulebook - Insurance - Fitness and Propriety – Regulatory References">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=52ea1a23b04449a799fdc24e6664118b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Regulatory References
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="8df6677886b247889b5a12a65c3ad1df"
+	 data-version="04c223cc120c4d4691aca85fc3dd5b47"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Disclosure and Replacements
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="63445bf69a1e4ae9a2a8009469e4d2f5"
+	 data-version="b818b16b56844342a762225b01b8dc03"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+    <li>(1) A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (other than a <em><a class="glossary-link" title="UK ISPV" href="#glossary-term-d657b35a131c4b4982032a800f337269" data-mce-linktype="2" data-glossary-id="52386">UK ISPV</a></em> or <em><a class="glossary-link" title="third country insurance provider" href="#glossary-term-9620bcb18fb249d59d6b80a3d10010c6" data-mce-linktype="2" data-glossary-id="98245">third country insurance services provider</a></em>) shall notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of any changes to the identity of <em><a class="glossary-link" title="key function holders" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holders</a></em> and shall provide the <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> with:</li>
+    <ol>
+        <li>(a) all the information needed to assess whether such <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> is fit and proper pursuant to <a title="2.2" href="/pra-rules/insurance---fitness-and-propriety#24319bc3cffa4b11831e9e859f99aef4" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a>; and</li>
+        <li>(b) the information referred to in <a title="Insurance - Allocation of Responsibilities 5.1" href="/pra-rules/insurance---allocation-of-responsibilities#2460a2c78b2c4be9a48bfb3ef8dbc120" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Insurance - Allocation of Responsibilities 5.1</a>(3) in respect of that <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em>.</li>
+    </ol>
+    <li>(2) A <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="UK ISPV" href="#glossary-term-d657b35a131c4b4982032a800f337269" data-mce-linktype="2" data-glossary-id="52386">UK ISPV</a></em> shall notify the <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of any changes to the identity of <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="key function holders" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holders</a></em> who are effectively running the <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and shall provide the <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> with all the information needed to assess whether such <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> is fit and proper pursuant to <a style="line-height: 17.6px; text-indent: -14.3px;" title="2.2" href="/pra-rules/insurance---fitness-and-propriety#24319bc3cffa4b11831e9e859f99aef4" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a>.</li>
+    <li><strong>      [Note: Art. 42(2) of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></li>
+    <li>(3) Where a <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has complied with 4.1(1) in connection with the appointment of a <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> as a <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="key function holders" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em>, and such <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> transfers from that <em><a class="glossary-link" title="key functio" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em> to a different <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="key functio" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em> or is appointed to an additional <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="key functio" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em>, in either case within the same <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, for the purposes of 4.1(1) the <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> need only supply, in connection with such subsequent appointment:</li>
+    <ol>
+        <li>(a) updates to the information previously provided; and</li>
+        <li>(b) if the <em style="line-height: 17.6px; text-indent: -14.3px;"><a class="glossary-link" title="key function holders" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em> is also to perform a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> or an <em><a class="glossary-link" title="FCA controlled function" href="#glossary-term-31addea6b5c34ba2b4855a9bb8177462" data-mce-linktype="2" data-glossary-id="67040">FCA controlled function</a></em>, the information required in connection with an application for approval to do so.</li>
+    </ol>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/10-12-2018#63445bf69a1e4ae9a2a8009469e4d2f5">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=63445bf69a1e4ae9a2a8009469e4d2f5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ad05174fafa24a39b5d04f86470c70a8"
+	 data-version="96fd6589620a485c862b3b7c24a45b98"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where:</p>
+<ol class="new-bullet">
+<li>(1) a person who is to become a <em><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em> is also to be approved by the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> to perform a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> or by the <em><a  class="glossary-link" title="FCA" href="#glossary-term-4f1b91b9613749bd8215103ffad9c7e1" data-mce-linktype="2" data-glossary-id="52638">FCA</a></em> to perform an <em><a  class="glossary-link" title="FCA controlled function" href="#glossary-term-4d084a65f6d6425f8b0dbef37e18160e" data-mce-linktype="2" data-glossary-id="52565">FCA controlled function</a></em>; and</li>
+<li>(2) the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> includes the information referred to in <a  title="4.1" href="/pra-rules/insurance---fitness-and-propriety#63445bf69a1e4ae9a2a8009469e4d2f5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a> in its application to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> for the approval of that <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> to perform the <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>, or in the application to the <em><a  class="glossary-link" title="FCA" href="#glossary-term-4f1b91b9613749bd8215103ffad9c7e1" data-mce-linktype="2" data-glossary-id="52638">FCA</a></em> for the approval of that <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> to perform the <em><a  class="glossary-link" title="FCA controlled function" href="#glossary-term-4d084a65f6d6425f8b0dbef37e18160e" data-mce-linktype="2" data-glossary-id="52565">FCA controlled function</a></em>,</li>
+</ol>
+<p>this shall satisfy the requirement in <a  title="4.1" href="/pra-rules/insurance---fitness-and-propriety#63445bf69a1e4ae9a2a8009469e4d2f5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a> in respect of that <em><a  class="glossary-link" title="key function" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em> appointment.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/07-03-2016#ad05174fafa24a39b5d04f86470c70a8">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ad05174fafa24a39b5d04f86470c70a8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="669b5ee4bca84c1f83a2a1e432d22430"
+	 data-version="76af7e4bd4f54c26a0113c4dc1c55672"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a<em> <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> becomes aware of information which would reasonably be expected to be material to the assessment of a current or former <em><a  class="glossary-link" title="key function holder&rsquo;s" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder&rsquo;s</a></em> fitness and propriety under this Part, it must inform the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> as soon as practicable.</p>
+			<p><strong>[Note: Art. 42(3) of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/01-01-2016#669b5ee4bca84c1f83a2a1e432d22430">
+			Past
+			<span class="visually-hidden">
+				version of 4.3 before 07/03/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=669b5ee4bca84c1f83a2a1e432d22430">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6ab1c9e72fb04963b58cf5168d452de4"
+	 data-version="2b97807406ff419786eb1d1b6097e667"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> replaces a <em><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em> because the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> considers that that <em><a class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> is no longer fit and proper pursuant to <a  title="2.1" href="/pra-rules/insurance---fitness-and-propriety#068c2e9559ce4ef5891de66409883b73" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> and <a  title="2.2" href="/pra-rules/insurance---fitness-and-propriety#24319bc3cffa4b11831e9e859f99aef4" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a>, the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> as soon as reasonably practicable.</p>
+			<p><strong>[Note: Art. 42(3) of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/01-01-2016#6ab1c9e72fb04963b58cf5168d452de4">
+			Past
+			<span class="visually-hidden">
+				version of 4.4 before 07/03/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6ab1c9e72fb04963b58cf5168d452de4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance---fitness-and-propriety/4-disclosure-and-replacements/31-12-2020?p=1" data-id="8df6677886b247889b5a12a65c3ad1df" data-effective-date="31-12-2020" data-download-title="Disclosure and Replacements_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance---fitness-and-propriety/4-disclosure-and-replacements/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety#8df6677886b247889b5a12a65c3ad1df&amp;subject=PRA Rulebook - Insurance - Fitness and Propriety – Disclosure and Replacements">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=8df6677886b247889b5a12a65c3ad1df">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Disclosure and Replacements
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="8d1e83fcdade40888a1859eef9d2d756"
+	 data-version="6d7de48a89534f5a9c3dfc29d9885007"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Lloyd’s
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="f36efc7a774740abb9a29ee315f07eb3"
+	 data-version="dfdc6d99c03742058cada1e274d60af6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Part applies to the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em> and <em><a class="glossary-link" title="managing agents" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agents</a></em> separately.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/01-01-2016#f36efc7a774740abb9a29ee315f07eb3">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 07/03/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f36efc7a774740abb9a29ee315f07eb3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance---fitness-and-propriety/5-lloyds/31-12-2020?p=1" data-id="8d1e83fcdade40888a1859eef9d2d756" data-effective-date="31-12-2020" data-download-title="Lloyd’s_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance---fitness-and-propriety/5-lloyds/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety#8d1e83fcdade40888a1859eef9d2d756&amp;subject=PRA Rulebook - Insurance - Fitness and Propriety – Lloyd’s">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=8d1e83fcdade40888a1859eef9d2d756">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Lloyd’s
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="8d0e850e0331406ab8d4df977411d692"
+	 data-version="f3d6538cfb5b4e88894afff8f38925e8"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Fitness and Propriety Transitional Provisions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="805ed122cab946fa80bb67023ab5c281"
+	 data-version="71b4f4ec79b0434e8e08448d7a8f0302"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The requirements of <a  title="2.4" href="/pra-rules/insurance---fitness-and-propriety#5c192a3f1be34b4c8eb81e0ca4e57a2b" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a> - <a  title="2.6" href="/pra-rules/insurance---fitness-and-propriety#6a2d3e8d84ff47f9a4bf2797be9c7259" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a> do not apply to a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in respect of any <em><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> who has <em><a  class="glossary-link" title="continued approval" href="#glossary-term-b8893be2752041cf8cc61073c74ca216" data-mce-linktype="2" data-glossary-id="67029">continued approval</a></em> in relation to that <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance---fitness-and-propriety/01-01-2016#805ed122cab946fa80bb67023ab5c281">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 07/03/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=805ed122cab946fa80bb67023ab5c281">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6a16f7cf17794c06a191813df9abae90"
+	 data-version="685e93ba7ad54802a2d2c9190b6c1e58"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The requirements of <a  title="2.4" href="/pra-rules/insurance---fitness-and-propriety#5c192a3f1be34b4c8eb81e0ca4e57a2b" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a> &ndash; <a  title="2.6" href="/pra-rules/insurance---fitness-and-propriety#6a2d3e8d84ff47f9a4bf2797be9c7259" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a> do not apply to a <em><a  class="glossary-link" title="firm" href="#glossary-term-bffb287e090a44029895f6276774dc06" data-mce-linktype="2" data-glossary-id="64569">firm</a></em> in respect of a <em><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em> in relation to any <em><a  class="glossary-link" title="key function" href="#glossary-term-d8d165798f9642de9ffb4a788a5a7c6b" data-mce-linktype="2" data-glossary-id="52841">key function</a></em> held by that <em><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> as at 7 March 2016 at that <em><a  class="glossary-link" title="firm" href="#glossary-term-bffb287e090a44029895f6276774dc06" data-mce-linktype="2" data-glossary-id="64569">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6a16f7cf17794c06a191813df9abae90">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a77ad781cf7a495889e6636bd57fd110"
+	 data-version="59e506ea5fc84e1eacb23c315147ef65"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The requirement to request regulatory references from a <em><a  class="glossary-link" title="full scope regulatory reference firm" href="#glossary-term-715b5ab560e344c480ea51c137ee7b34" data-mce-linktype="2" data-glossary-id="78019">full scope regulatory reference firm</a></em> in accordance with the requirements of <a  title="2.6" href="/pra-rules/insurance---fitness-and-propriety#6a2d3e8d84ff47f9a4bf2797be9c7259" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a>(2) does not apply to a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in respect of an application for approval as an <em><a  class="glossary-link" title="approved person" href="#glossary-term-76c186553d63434ab742fe4474e848d5" data-mce-linktype="2" data-glossary-id="52211">approved person</a></em> made before 7 March 2017.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a77ad781cf7a495889e6636bd57fd110">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8f1b96ba68f44934b7c52a3177b56881"
+	 data-version="e2e19f7b61cc456ab98eb985fc78ce08"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Item (F) in the <em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em> does not require disclosure of <em><a  class="glossary-link" title="disciplinary action" href="#glossary-term-b8f9c2ae8630459a8403eb882ebbd6a5" data-mce-linktype="2" data-glossary-id="78026">disciplinary action</a></em> that took place before 7 March 2017 if the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> records do not show whether the conduct that was subject to <em><a  class="glossary-link" title="disciplinary action" href="#glossary-term-b8f9c2ae8630459a8403eb882ebbd6a5" data-mce-linktype="2" data-glossary-id="78026">disciplinary action</a></em> amounted to a breach of the <em><a  class="glossary-link" title="individual conduct requirements" href="#glossary-term-db99125aa64b4c41a7cdfcdb8994bcc5" data-mce-linktype="2" data-glossary-id="78027">individual conduct requirements</a></em> referred to in item (F) in the <em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8f1b96ba68f44934b7c52a3177b56881">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="54657382850541eea97d2f7809e03c74"
+	 data-version="fbb98362246e45a0acafcd301241f375"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The requirement to obtain regulatory references in accordance with <a  title="2.5" href="/pra-rules/insurance---fitness-and-propriety#b8fb555d1dce496784a94b8d79584b6a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a> does not apply to a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in respect of any <em><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> to the extent that: </p>
+<ol class="new-bullet">
+<li>(1) the <em style="text-indent: 0px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> is deciding whether the <em style="text-indent: 0px;"><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> is fit and proper for the purpose of issuing a <em><a  class="glossary-link" title="certificate" href="#glossary-term-7d8c159526f2426b93d818990ce5ea47" data-mce-linktype="2" data-glossary-id="52562">certificate</a></em> to perform a <em><a  class="glossary-link" title="certification function" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification function</a></em>; and</li>
+<li>(2) immediately prior to 10 December 2019 the <em style="text-indent: 0px;"><a  class="glossary-link" title="person" href="#glossary-term-e03cba75d75d433e97eedf63cc198f0c" data-mce-linktype="2" data-glossary-id="52640">person</a></em> performed the same <em style="text-indent: -14.3px;"><a  class="glossary-link" title="certification function" href="#glossary-term-82074f76e19f49a5b684450294320fee" data-mce-linktype="2" data-glossary-id="52563">certification function</a></em> for the <em style="text-indent: 0px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2019
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=54657382850541eea97d2f7809e03c74">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b1e7fa350a6647038ebe60b80fc5913b"
+	 data-version="704ef20dd1ed402db316426e4c40dc67"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Item (F) in the <em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em> does not require disclosure of <em><a  class="glossary-link" title="disciplinary action" href="#glossary-term-b8f9c2ae8630459a8403eb882ebbd6a5" data-mce-linktype="2" data-glossary-id="78026">disciplinary action</a></em> that took place in respect of a <em><a  class="glossary-link" title="certification employee" href="#glossary-term-f42fcd52d02845298b099cb7f4c95ed8" data-mce-linktype="2" data-glossary-id="52564">certification employee</a></em> (other than a <em><a  class="glossary-link" title="key function holder" href="#glossary-term-fd5d0277f5e14a8ea81a9cb3889733d4" data-mce-linktype="2" data-glossary-id="52842">key function holder</a></em>) prior to 10 December 2019 if the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> records do not show whether the conduct that was subject to <em><a  class="glossary-link" title="disciplinary action" href="#glossary-term-b8f9c2ae8630459a8403eb882ebbd6a5" data-mce-linktype="2" data-glossary-id="78026">disciplinary action</a></em> amounted to a breach of the <em><a  class="glossary-link" title="individual conduct requirements" href="#glossary-term-db99125aa64b4c41a7cdfcdb8994bcc5" data-mce-linktype="2" data-glossary-id="78027">individual conduct requirements</a></em> referred to in item (F) in the <em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2019
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b1e7fa350a6647038ebe60b80fc5913b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance---fitness-and-propriety/6-fitness-and-propriety-transitional-provisions/31-12-2020?p=1" data-id="8d0e850e0331406ab8d4df977411d692" data-effective-date="31-12-2020" data-download-title="Fitness and Propriety Transitional Provisions_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance---fitness-and-propriety/6-fitness-and-propriety-transitional-provisions/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety#8d0e850e0331406ab8d4df977411d692&amp;subject=PRA Rulebook - Insurance - Fitness and Propriety – Fitness and Propriety Transitional Provisions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=8d0e850e0331406ab8d4df977411d692">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Fitness and Propriety Transitional Provisions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="fe02b720183c45109cb17ef9102301af"
+	 data-version="474e8630af624e23b17044e98a4d3600"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Template
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c4a2fcbddda24447994abfbc435272f6"
+	 data-version="fb2a4676cbef467daff737c733c04fc7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="regulatory reference template" href="#glossary-term-a6419e1b087449a48ea08fd92b226c82" data-mce-linktype="2" data-glossary-id="78028">regulatory reference template</a></em> is the template found <a  class="external-link" title="Regulatory reference template" href="https://www.handbook.fca.org.uk/handbook/SYSC/22/Annex1.html" target="_blank" data-mce-linktype="4" data-mce-externalform="true" data-mce-description="Form to be completed by all PRA-regulated firms (except small NDFs) when hiring individuals into certain functions. The form is to be exchanged between firms, not submitted to the PRA.">here</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c4a2fcbddda24447994abfbc435272f6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance---fitness-and-propriety/7-template/31-12-2020?p=1" data-id="fe02b720183c45109cb17ef9102301af" data-effective-date="31-12-2020" data-download-title="Template_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance---fitness-and-propriety/7-template/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance---fitness-and-propriety#fe02b720183c45109cb17ef9102301af&amp;subject=PRA Rulebook - Insurance - Fitness and Propriety – Template">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=fe02b720183c45109cb17ef9102301af">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Template
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+</div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

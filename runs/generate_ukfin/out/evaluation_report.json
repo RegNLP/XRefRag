@@ -1,0 +1,78 @@
+{
+  "run_evaluations": [
+    {
+      "run_name": "bm25",
+      "metrics": {
+        "map": 0.5474551312550539,
+        "P_20": 0.08,
+        "recall_20": 0.8,
+        "ndcg": 0.6638312922212141,
+        "ndcg_cut_20": 0.6638312922212141
+      },
+      "num_queries": 100
+    },
+    {
+      "run_name": "ce_rerank_union200",
+      "metrics": {
+        "map": 0.13073426569130903,
+        "P_20": 0.0665,
+        "recall_20": 0.665,
+        "ndcg": 0.2833762653770879,
+        "ndcg_cut_20": 0.2833762653770879
+      },
+      "num_queries": 100
+    },
+    {
+      "run_name": "ft_e5",
+      "metrics": {
+        "map": 0.6258450613713772,
+        "P_20": 0.08950000000000001,
+        "recall_20": 0.895,
+        "ndcg": 0.7449542783109624,
+        "ndcg_cut_20": 0.7449542783109624
+      },
+      "num_queries": 100
+    },
+    {
+      "run_name": "rrf_bm25_e5",
+      "metrics": {
+        "map": 0.6819784575474978,
+        "P_20": 0.08950000000000001,
+        "recall_20": 0.895,
+        "ndcg": 0.7949612706155377,
+        "ndcg_cut_20": 0.7896509915982568
+      },
+      "num_queries": 100
+    }
+  ],
+  "voting_analysis": {
+    "voting_thresholds": {
+      "keep": 4,
+      "judge": 3
+    },
+    "vote_distribution": {
+      "src:4_tgt:4": 30,
+      "src:0_tgt:4": 3,
+      "src:4_tgt:0": 12,
+      "src:3_tgt:3": 6,
+      "src:4_tgt:3": 17,
+      "src:4_tgt:2": 8,
+      "src:3_tgt:4": 16,
+      "src:0_tgt:3": 2,
+      "src:2_tgt:3": 1,
+      "src:3_tgt:2": 1,
+      "src:2_tgt:4": 4
+    },
+    "decision_counts": {
+      "KEEP": 30,
+      "JUDGE": 43,
+      "DROP": 27
+    },
+    "decision_percentages": {
+      "KEEP": "30.0%",
+      "JUDGE": "43.0%",
+      "DROP": "27.0%"
+    },
+    "total_items": 100
+  }
+}

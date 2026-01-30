@@ -1,0 +1,4480 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{418F1924-386E-47D3-BDE4-9676488EADF2} -->
+<title>Friendly Society – Liability Valuation | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Friendly Society – Liability Valuation">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Friendly Society – Liability Valuation">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoirq-f-6df71d59a-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":58,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"809804d","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":29916,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370147","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==SKmjECIsB2oMcg8nIHAV9HaXZdevvjgvRZTrO7t9mbom1t+Fr953RAEe5g7eOYe1Q/0pGgdl0ARSdLlzJZr/xOQ+Z8TUO+8/L0YWmxEsMqrQe6G4JDXEDA0sVw9zDcjJX2YrxBsYviB4vzS8L0LlqRznWD6Z/+8k7PEbnj8frwBoqqmcTLzpdqiqQRNfGMDNZ7SpaNuc5hVzbi2+P6wuZcr1MpsoqjtOAgBaEpIw8pAGeurRSWdRO3pxc5e2vk7qgm3BEFYml9B+76COwasps0Wv8yhu3LquVsIjqm/i/AmT8nDLy9uXS7gceaQToJBfFdyX9ffcwWTZjncfX6s09yR5ElCn7XCy+pBM7+qG2sP6j0219+XHqQ2flZatgnIzI93dvqr3F++S8a2B5OTYy1EPTNHuxJuOP6XozDR2DSQ=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Friendly Society – Liability Valuation				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Friendly Society – Liability Valuation
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/friendly-society-liability-valuation/01-01-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/friendly-society-liability-valuation/01-07-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/07/2016
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/friendly-society-liability-valuation/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-dd29ba6a-ae36-4238-900a-a6aa66219e11">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-dd29ba6a-ae36-4238-900a-a6aa66219e11"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Friendly Society – Liability Valuation
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Friendly Society – Liability Valuation)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=a4ccc29061264bf3826f1552a8968010">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Friendly Society – Liability Valuation
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/prudential-regime-and-implementation-of-the-senior-insurance-managers-regime-for-non-solvency-2" class="list-links__link" target="_blank">
+										PS26/15 - &quot;The prudential regime, and implementation of the Senior Insurance Managers Regime, for non-Solvency II firms&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/reporting-requirements-for-non-solvency-2-insurance-firms" class="list-links__link" target="_blank">
+										PS19/16 - Reporting requirements for non-Solvency II insurance firms
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="http://www.bankofengland.co.uk/pra/Pages/regulatorydata/friendlysocieties.aspx" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Friendly societies
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/ukpga/1974/46/contents" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Friendly Societies Act 1974
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/ukpga/1992/40/contents" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Friendly Societies Act 1992
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/friendly-society-liability-valuation/31-12-2020_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/31-12-2020?p=1" data-id="a4ccc29061264bf3826f1552a8968010" data-effective-date="31-12-2020" data-download-title="Friendly Society – Liability Valuation_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="e6eadc0e50dc42e78c9beadbf849746f"
+	 data-version="19dfb7fd42ac4c6b851b5d986914ceb6"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="224b8e1231024f2bb379a3db4357ea2a"
+	 data-version="4e1211caaf84476e970a41fd2f83f15d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to a <em><a  class="glossary-link" title="non-directive friendly society" href="#glossary-term-e2dba345e3f746b5838bd8b4f03bb781" data-mce-linktype="2" data-glossary-id="53219">non-directive friendly society</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=224b8e1231024f2bb379a3db4357ea2a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="619e8d7146f149f3959130c0f55da1e5"
+	 data-version="e4ec9d45f71c455f9230435a1ffa0b4e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a  class="glossary-link" title="defined percentage" href="#glossary-term-ce88ebccd0594e9e82ccf69ffb00c014" data-mce-linktype="2" data-glossary-id="77570">defined percentage</a></em></p>
+<p style="padding-left: 30px;">means the percentage arrived at by taking (for all contracts of the same type as the contract in question for which an adjustment is made) the average of the percentages of the <em><a  class="glossary-link" title="relevant capital sum" href="#glossary-term-f3a15a8a538f484d81ac54875e424053" data-mce-linktype="2" data-glossary-id="77368">relevant capital sum</a></em> under each such contract that represent the acquisition costs incurred which, after allowing for the effects of taxation, might reasonably be recovered from the <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> payable under the contract.</p>
+<p><em><a  class="glossary-link" title="established surplus" href="#glossary-term-1f7246c7925a4693bc79371e79e187bf" data-mce-linktype="2" data-glossary-id="77571">established surplus</a></em></p>
+<p style="padding-left: 30px;">means an excess of assets representing the whole or a particular part of the fund or funds maintained by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in respect of its <em><a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em> over the liabilities, or a particular part of the liabilities, of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> attributable to that business as shown by an investigation to which <a  title="Friendly Society &ndash; Reporting 2" href="/pra-rules/friendly-society---reporting#02433a7701f24beb89502a316b80d675" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Friendly Society &ndash; Reporting 2</a> applies.</p>
+<p><em><a  class="glossary-link" title="exposure" href="#glossary-term-78a5850c807a4380af9a8bed5a29968d" data-mce-linktype="2" data-glossary-id="77572">exposure</a></em></p>
+<p style="padding-left: 30px;">means:</p>
+<ol class="new-bullet"><ol>
+<li>(1) (in relation to assets), an amount determined in accordance with <a  title="Friendly Society &ndash; Asset Valuation 18" href="/pra-rules/friendly-society---asset-valuation#902c1cbc24144835ba7d96c0b546b7e7" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Friendly Society &ndash; Asset Valuation 18</a> to <a  title="24" href="/pra-rules/friendly-society---asset-valuation#c05a7247106c44799156db4f95e5058d" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">24</a>;</li>
+<li>(2) (in relation to a <em><a  class="glossary-link" title="counterparty" href="#glossary-term-c3628e0683984b5bb9590e728b26f2ab" data-mce-linktype="2" data-glossary-id="77285">counterparty</a></em>), an amount determined in accordance with <a  title="Friendly Society &ndash; Asset Valuation 25" href="/pra-rules/friendly-society---asset-valuation#76cee7048b1b45568e1343f8c92beecc" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Friendly Society &ndash; Asset Valuation 25</a> to <a  title="27" href="/pra-rules/friendly-society---asset-valuation#b253675c18db4dbe928cdb4f7cae296f" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">27</a>.</li>
+</ol></ol>
+<p><em><a  class="glossary-link" title="general insurance business liabilities" href="#glossary-term-132ca35b229c4289b32b14e8ecb54b5e" data-mce-linktype="2" data-glossary-id="77573">general insurance business liabilities</a></em></p>
+<p style="padding-left: 30px;">means liabilities of the <em><a  class="glossary-link" title="friendly society" href="#glossary-term-df7a719ce63b4ae892f5c6c2f054be3b" data-mce-linktype="2" data-glossary-id="77445">friendly society</a></em> which are attributable to its <em><a  class="glossary-link" title="general insurance business" href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea" data-mce-linktype="2" data-glossary-id="52202">general insurance business</a></em>.</p>
+<p><em><a  class="glossary-link" title="linked assets" href="#glossary-term-f13f47f9f6ba409695e235f870626955" data-mce-linktype="2" data-glossary-id="77574">linked assets</a></em></p>
+<p style="padding-left: 30px;">means the <em><a  class="glossary-link" title="long-term insurance business assets" href="#glossary-term-fb8f028f16744e02b10475c67021a4f3" data-mce-linktype="2" data-glossary-id="77332">long-term insurance business assets</a></em> of the<em> <a  class="glossary-link" title="friendly society" href="#glossary-term-df7a719ce63b4ae892f5c6c2f054be3b" data-mce-linktype="2" data-glossary-id="77445">friendly society</a></em> which are, for the time being, identified in the records of the <em><a  class="glossary-link" title="friendly society" href="#glossary-term-df7a719ce63b4ae892f5c6c2f054be3b" data-mce-linktype="2" data-glossary-id="77445">friendly society</a></em> as being assets by reference to the value of which <em><a  class="glossary-link" title="property-linked benefits" href="#glossary-term-e444e6acef074318801bfc10e22998e2" data-mce-linktype="2" data-glossary-id="77359">property-linked benefits</a></em> are to be determined.</p>
+<p><em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em></p>
+<p style="padding-left: 30px;">in relation to an actuarial investigation, means the date to which the investigation relates.</p>
+<p><em><a  class="glossary-link" title="variable interest investments" href="#glossary-term-5d12be0c45ac4421b09987bb7f587091" data-mce-linktype="2" data-glossary-id="77576">variable interest investments</a></em></p>
+<p style="padding-left: 30px;">means investments other than <em><a  class="glossary-link" title="fixed interest securities" href="#glossary-term-22c64b70620747c084379c629c940f15" data-mce-linktype="2" data-glossary-id="77304">fixed interest securities</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/friendly-society-liability-valuation/01-01-2016#619e8d7146f149f3959130c0f55da1e5">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 01/07/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=619e8d7146f149f3959130c0f55da1e5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/1-application-and-definitions/31-12-2020?p=1" data-id="e6eadc0e50dc42e78c9beadbf849746f" data-effective-date="31-12-2020" data-download-title="Application and Definitions_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/1-application-and-definitions/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#e6eadc0e50dc42e78c9beadbf849746f&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=e6eadc0e50dc42e78c9beadbf849746f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="641ef3b992f64d5fbb93205e5b0b86ee"
+	 data-version="551fe0c74f0c49db8fe2efec00f3c746"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Long-Term and General Insurance Business
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4cb0fa4cdcb14a2dac902b4954a2824f"
+	 data-version="56587b3f7c2948bfb353ecc06c63fd40"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Subject to <a  title="2.2" href="/pra-rules/friendly-society-liability-valuation#0f0f770372b94f1d933cb59166046d55" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a>, the amount of liabilities of a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in respect of <em><a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em> and <em><a  class="glossary-link" title="general insurance business" href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea" data-mce-linktype="2" data-glossary-id="52202">general insurance business</a></em> and other lawful activities must be determined in accordance with generally accepted accounting practice or other generally accepted methods appropriate for <em><a  class="glossary-link" title="insurance business" href="#glossary-term-9c9ea400b5194286b440e752add53c8a" data-mce-linktype="2" data-glossary-id="52220">insurance business</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4cb0fa4cdcb14a2dac902b4954a2824f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0f0f770372b94f1d933cb59166046d55"
+	 data-version="91a12b7733d44e94a8613a209b904a44"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In determining under <a  title="2.1" href="/pra-rules/friendly-society-liability-valuation#4cb0fa4cdcb14a2dac902b4954a2824f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> the amount of liabilities of a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, all contingent and prospective liabilities must be taken into account.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0f0f770372b94f1d933cb59166046d55">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/2-long-term-and-general-insurance-business/31-12-2020?p=1" data-id="641ef3b992f64d5fbb93205e5b0b86ee" data-effective-date="31-12-2020" data-download-title="Long-Term and General Insurance Business_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/2-long-term-and-general-insurance-business/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#641ef3b992f64d5fbb93205e5b0b86ee&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Long-Term and General Insurance Business">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=641ef3b992f64d5fbb93205e5b0b86ee">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Long-Term and General Insurance Business
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2dc5c315093d4c238c717a30805fd5fb"
+	 data-version="77b6eb4daa2e493082a8e3017633b2f0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Provision for Adverse Changes
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="085e23592ce845988aee840746dcb3e4"
+	 data-version="8974dbbd5f214749b80a52c0e01ae2b2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter does not apply to a contract to the extent that it relates to, or is for the purposes of the making of an investment in, or is in connection with the making of an investment in, a building which is to be occupied by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and used by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> for the conduct of its business.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=085e23592ce845988aee840746dcb3e4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9462f3ce7f764463995e21067814d3e2"
+	 data-version="7ecf77dd573b4725b82733ff11dfbccb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Subject to <a  title="3.1" href="/pra-rules/friendly-society-liability-valuation#085e23592ce845988aee840746dcb3e4" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a>, this Chapter applies to an obligation:</p>
+<ol class="new-bullet">
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(1) under a contract relating to investments of the kind mentioned in item B under the heading "Assets" in Part I of Schedule 2 to </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="Accounts Regulations" href="#glossary-term-9988965035d240f2b9ae727addd049c6" data-mce-linktype="2" data-glossary-id="77257">Accounts Regulations</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> (whether such contract constitutes an asset or liability of the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">);</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(2) undertaken for the purposes of, or in connection with the making of, investments of the kind mentioned in (1); or</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(3) under a contract providing for the purchase, sale or exchange of currency.</span></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9462f3ce7f764463995e21067814d3e2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="655431ae4470416ca085a3b7e1d685b6"
+	 data-version="f06f76be5b3446ccb3478fe69274e4c0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> which has or may have (following the exercise of any right by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or any other party) an obligation referred to in <a  title="3.2" href="/pra-rules/friendly-society-liability-valuation#9462f3ce7f764463995e21067814d3e2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.2</a>, to deliver assets or make a payment must:</p>
+<ol class="new-bullet">
+<li>(1) at all times identify the assets held by it which it considers to be the most suitable to cover such obligation; and</li>
+<li>(2) make prudent provision for the effect on the amount of its excess assets of all reasonably foreseeable adverse variations between the value of the assets identified and the value of the assets which it is or may be obliged to deliver or the amount of the payment which it is or may be obliged to make.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=655431ae4470416ca085a3b7e1d685b6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="be846e01577a49cba8dd671a63791c0e"
+	 data-version="30d20065733047c8a58489db7771ccdf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="3.3" href="/pra-rules/friendly-society-liability-valuation#655431ae4470416ca085a3b7e1d685b6" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.3</a>, the &lsquo;amount of its excess assets&rsquo; is the difference between the aggregate value of its assets (other than <em><a  class="glossary-link" title="linked assets" href="#glossary-term-f13f47f9f6ba409695e235f870626955" data-mce-linktype="2" data-glossary-id="77574">linked assets</a></em> to the extent that they are held to match <em><a  class="glossary-link" title="property-linked liabilities" href="#glossary-term-2df4d20850054e76afc12acf0e0bc983" data-mce-linktype="2" data-glossary-id="77360">property-linked liabilities</a></em>) determined in accordance with <a  title="Friendly Society &ndash; Asset Valuation" href="/pra-rules/friendly-society---asset-valuation" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Friendly Society &ndash; Asset Valuation</a> and the amount of its liabilities (other than <em><a  class="glossary-link" title="property-linked liabilities" href="#glossary-term-2df4d20850054e76afc12acf0e0bc983" data-mce-linktype="2" data-glossary-id="77360">property-linked liabilities</a></em> or liabilities for which provision is made in accordance with this Chapter).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=be846e01577a49cba8dd671a63791c0e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/3-provision-for-adverse-changes/31-12-2020?p=1" data-id="2dc5c315093d4c238c717a30805fd5fb" data-effective-date="31-12-2020" data-download-title="Provision for Adverse Changes_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/3-provision-for-adverse-changes/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#2dc5c315093d4c238c717a30805fd5fb&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Provision for Adverse Changes">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2dc5c315093d4c238c717a30805fd5fb">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Provision for Adverse Changes
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="f0bfd4f9dd0b44728b1d4f880b0636eb"
+	 data-version="ed014f3598754370a0efc3d4b908cd34"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Provision for Affiliated Companies
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8003c11bb4d64ad787a08eebf985f643"
+	 data-version="308333127a8b4d3997a2095ec18cca0d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Except to the extent that provision for the deficit has been made (whether in the calculation of <em><a  class="glossary-link" title="surplus assets" href="#glossary-term-78ba35d124c54ed786404857c27c183a" data-mce-linktype="2" data-glossary-id="77381">surplus assets</a></em> or otherwise) in another <em><a  class="glossary-link" title="affiliated company" href="#glossary-term-b398198648594f08a2732feed4ca85f0" data-mce-linktype="2" data-glossary-id="52142">affiliated company</a></em> the value of whose <em><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a></em> is taken to be the value of its <em><a  class="glossary-link" title="surplus assets" href="#glossary-term-78ba35d124c54ed786404857c27c183a" data-mce-linktype="2" data-glossary-id="77381">surplus assets</a></em> under <a  title="Friendly Society &ndash; Asset Valuation 5.1" href="/pra-rules/friendly-society---asset-valuation#a7c9a1587e06416887fac4700c040ad6" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Friendly Society &ndash; Asset Valuation 5.1</a> or <a  title="5.2" href="/pra-rules/friendly-society---asset-valuation#e7516724faa24331a9c98edc716eb8ce" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.2</a> (but only to the extent of the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> <em><a  class="glossary-link" title="proportional share" href="#glossary-term-dc99c615f8ec4a1f9aad6537fc3130c0" data-mce-linktype="2" data-glossary-id="77361">proportional share</a> </em>of that<em> <a  class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a></em>), a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must make provision in respect of a <em><a  class="glossary-link" title="regulated affiliated company" href="#glossary-term-0e657f278c38417d9f93849942623150" data-mce-linktype="2" data-glossary-id="77364">regulated affiliated company</a></em>:</p>
+<p>(1) where the <em><a  class="glossary-link" title="affiliated company" href="#glossary-term-b398198648594f08a2732feed4ca85f0" data-mce-linktype="2" data-glossary-id="52142">affiliated company</a></em> is also a <em><a  class="glossary-link" title="subsidiary" href="#glossary-term-47424758f7924c5e88467279fee0da7c" data-mce-linktype="2" data-glossary-id="77479">subsidiary</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, for the whole of any <em><a  class="glossary-link" title="solvency deficit" href="#glossary-term-aecdb6b2ee124200af8efc286e0a031b" data-mce-linktype="2" data-glossary-id="77375">solvency deficit</a></em>; and</p>
+<p>(2) in any other case, for the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="proportional share" href="#glossary-term-dc99c615f8ec4a1f9aad6537fc3130c0" data-mce-linktype="2" data-glossary-id="77361">proportional share</a></em> of any such deficit.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8003c11bb4d64ad787a08eebf985f643">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="742f8b3849354f9ab031627d5fd9fa98"
+	 data-version="7cfbb564d1bb41ee8b7f93a7c5a3d937"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="4.1" href="/pra-rules/friendly-society-liability-valuation#8003c11bb4d64ad787a08eebf985f643" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>, the identification and valuation of assets of a <em><a  class="glossary-link" title="regulated affiliated company" href="#glossary-term-0e657f278c38417d9f93849942623150" data-mce-linktype="2" data-glossary-id="77364">regulated affiliated company</a></em>, available to cover liabilities and any capital requirement imposed by any relevant provisions of the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> Rulebook or <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>, must be determined in accordance with <a  title="Friendly Society &ndash; Asset Valuation 5.4" href="/pra-rules/friendly-society---asset-valuation#6732a76c8e7445e09ae3ec8c97db9ad3" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Friendly Society &ndash; Asset Valuation 5.4</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=742f8b3849354f9ab031627d5fd9fa98">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/4-provision-for-affiliated-companies/31-12-2020?p=1" data-id="f0bfd4f9dd0b44728b1d4f880b0636eb" data-effective-date="31-12-2020" data-download-title="Provision for Affiliated Companies_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/4-provision-for-affiliated-companies/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#f0bfd4f9dd0b44728b1d4f880b0636eb&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Provision for Affiliated Companies">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=f0bfd4f9dd0b44728b1d4f880b0636eb">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Provision for Affiliated Companies
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="7aa7ea1585e7440ea710aea0436b59c3"
+	 data-version="801f293fea4a479098820fd8a92670f8"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					General Insurance Business Liabilities
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d3faf45dd20f42b4823eaeaa9f0f1378"
+	 data-version="9d00e75081094ee1b9784b13446c9ecb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The amount of <em><a  class="glossary-link" title="insurance liabilities" href="#glossary-term-1a6b5a9488fd4601b795c1481772d5c2" data-mce-linktype="2" data-glossary-id="77321">insurance liabilities</a></em> which are <em><a  class="glossary-link" title="general insurance business liabilities" href="#glossary-term-132ca35b229c4289b32b14e8ecb54b5e" data-mce-linktype="2" data-glossary-id="77573">general insurance business liabilities</a></em> must be determined in accordance with the regulations set out in Part VI of Schedule 6 to the <em><a  class="glossary-link" title="Accounts Regulations" href="#glossary-term-9988965035d240f2b9ae727addd049c6" data-mce-linktype="2" data-glossary-id="77257">Accounts Regulations</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d3faf45dd20f42b4823eaeaa9f0f1378">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/5-general-insurance-business-liabilities/31-12-2020?p=1" data-id="7aa7ea1585e7440ea710aea0436b59c3" data-effective-date="31-12-2020" data-download-title="General Insurance Business Liabilities_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/5-general-insurance-business-liabilities/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#7aa7ea1585e7440ea710aea0436b59c3&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – General Insurance Business Liabilities">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=7aa7ea1585e7440ea710aea0436b59c3">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						General Insurance Business Liabilities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="6d601424e2724595a6fa6008d669a990"
+	 data-version="32891ec42eb8431e9002108095c8b89e"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Long-Term Insurance Business Liabilities
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="0291a5fab6c044ef9d13b9e7eded3363"
+	 data-version="f2a38df321e94a8f9511473066372d29"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In accordance with <a  title="6.2" href="/pra-rules/friendly-society-liability-valuation#2590e6da3a184f8f9d03c8102a0132b5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.2</a> to <a  title="6.4" href="/pra-rules/friendly-society-liability-valuation#636e03ff30c9468da1194b155f5ab27f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.4</a>, the determination of the amount of <em><a  class="glossary-link" title="long-term insurance liabilities" href="#glossary-term-cfbbe794a03048099552f930dc953228" data-mce-linktype="2" data-glossary-id="77335">long-term insurance liabilities</a></em> (other than liabilities which have fallen due for payment before the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em>) must be made in accordance with generally accepted actuarial principles and have due regard to the reasonable expectations of <em><a  class="glossary-link" title="policyholders" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholders</a></em> and make proper provision for all liabilities on prudent assumptions that include appropriate margins for adverse deviation.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0291a5fab6c044ef9d13b9e7eded3363">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2590e6da3a184f8f9d03c8102a0132b5"
+	 data-version="f5dcbbf0c0be41d8824e4845f48bfc5d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The determination referred to in <a  title="6.1" href="/pra-rules/friendly-society-liability-valuation#0291a5fab6c044ef9d13b9e7eded3363" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.1</a> must take account of all prospective liabilities as determined by the policy conditions for each existing contract, taking credit for <em class="rule-style-2">premiums</em> payable after the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2590e6da3a184f8f9d03c8102a0132b5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0f229351c74f4543b61efe6b9c37f58d"
+	 data-version="0568ca3e2bae408a96113e9a598a6cd9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Without prejudice to the generality of <a  title="6.1" href="/pra-rules/friendly-society-liability-valuation#0291a5fab6c044ef9d13b9e7eded3363" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.1</a>, the amount of the <em><a  class="glossary-link" title="long-term insurance liabilities" href="#glossary-term-cfbbe794a03048099552f930dc953228" data-mce-linktype="2" data-glossary-id="77335">long-term insurance liabilities</a></em> must be determined in compliance with <a  title="7" href="/pra-rules/friendly-society-liability-valuation#955d44db341b4261bf2e263bd47b631f" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">7</a> to <a  title="16" href="/pra-rules/friendly-society-liability-valuation#0d46be11566b446f9bbd4ac09ce80065" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">16</a> and must take into account at least the following factors:</p>
+<p>(1) all guaranteed benefits, including guaranteed surrender values;</p>
+<p>(2) declared bonuses to which <em><a  class="glossary-link" title="policyholders" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholders</a></em> are already contractually entitled;</p>
+<p>(3) all options available to the <em><a  class="glossary-link" title="policyholders" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholders</a></em> under the terms of the contract;</p>
+<p>(4) discretionary charges and deductions;</p>
+<p>(5) expenses, including commissions; and</p>
+<p>(6) any rights under contracts of reinsurance in respect of <em><a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0f229351c74f4543b61efe6b9c37f58d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="636e03ff30c9468da1194b155f5ab27f"
+	 data-version="828bf5e9cd3d4d7d8d9e1b25b4fb0222"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The determination referred to in <a  title="6.1" href="/pra-rules/friendly-society-liability-valuation#0291a5fab6c044ef9d13b9e7eded3363" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.1</a> must take into account the nature and term of the assets representing those liabilities and the value placed upon them and must include prudent provision against the effects of possible future changes in the value of the assets on:</p>
+<p>(1) the ability of the<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to meet its obligations arising under contracts for<em> <a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em> as they arise; and</p>
+<p>(2) the adequacy of the assets to meet the liabilities as determined in accordance with <a  title="7" href="/pra-rules/friendly-society-liability-valuation#955d44db341b4261bf2e263bd47b631f" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">7</a> to <a  title="16" href="/pra-rules/friendly-society-liability-valuation#0d46be11566b446f9bbd4ac09ce80065" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">16</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=636e03ff30c9468da1194b155f5ab27f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/6-long-term-insurance-business-liabilities/31-12-2020?p=1" data-id="6d601424e2724595a6fa6008d669a990" data-effective-date="31-12-2020" data-download-title="Long-Term Insurance Business Liabilities_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/6-long-term-insurance-business-liabilities/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#6d601424e2724595a6fa6008d669a990&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Long-Term Insurance Business Liabilities">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=6d601424e2724595a6fa6008d669a990">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Long-Term Insurance Business Liabilities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="955d44db341b4261bf2e263bd47b631f"
+	 data-version="49bf3fceaefb4b4bac3d6b5c6aaa55db"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Method of Calculation
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="882b3826992843c1acc1c6cbe4ffda07"
+	 data-version="55785b142c5b4c08824643aaed8d2f4e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Subject to <a  title="7.2" href="/pra-rules/friendly-society-liability-valuation#7520c8749919489492a2bf2da44382bd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.2</a>, <a  title="7.3" href="/pra-rules/friendly-society-liability-valuation#4128b2dd828643be9719d6b40e42bacc" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.3</a> and <a  title="7.4" href="/pra-rules/friendly-society-liability-valuation#75ccfac71b0f4fc6a9b753f0ad67234d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.4</a>, the amount of the <em><a  class="glossary-link" title="long-term insurance liability" href="#glossary-term-cfbbe794a03048099552f930dc953228" data-mce-linktype="2" data-glossary-id="77335">long-term insurance liability</a></em> must be determined for each contract by a prospective calculation.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=882b3826992843c1acc1c6cbe4ffda07">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7520c8749919489492a2bf2da44382bd"
+	 data-version="ab97c841cc16456fa73ad334e626028e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A retrospective calculation may only be applied to determine the liabilities where a prospective method cannot be applied to a particular type of contract or benefit, or where it can be demonstrated that the resulting amount of liabilities would be no lower than would be required by a prudent prospective calculation.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7520c8749919489492a2bf2da44382bd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4128b2dd828643be9719d6b40e42bacc"
+	 data-version="73284018b99648a8bae6cb8d24eb8275"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Appropriate approximations or generalisations may only be made where they are likely to provide the same, or a higher, result than a determination made in accordance with <a  title="7.1" href="/pra-rules/friendly-society-liability-valuation#882b3826992843c1acc1c6cbe4ffda07" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4128b2dd828643be9719d6b40e42bacc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="75ccfac71b0f4fc6a9b753f0ad67234d"
+	 data-version="b738e857bd1a40ffb0eb864d29e0b7b8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where necessary, additional amounts must be set aside on an aggregated basis for general risks which are not specific to individual contracts.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=75ccfac71b0f4fc6a9b753f0ad67234d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="94708ed57c624e6fa7d87cb51401941b"
+	 data-version="d99299e5c9294be9a41c7379ad7e2430"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The method of calculation of the amount of the liabilities and the assumptions used must not be subject to discontinuities from year to year arising from arbitrary changes and must recognise the distribution of profits in an appropriate way over the duration of each policy.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=94708ed57c624e6fa7d87cb51401941b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="edeecf7227d94fe6879b8f988b077024"
+	 data-version="6489eefe369342ff9b52f2af651f027a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The liabilities for contracts under which the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> is eligible to participate in any <em><a  class="glossary-link" title="established surplus" href="#glossary-term-1f7246c7925a4693bc79371e79e187bf" data-mce-linktype="2" data-glossary-id="77571">established surplus</a></em> must have regard to the level of the <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> under the contracts, to the assets held in respect of those liabilities, and to the custom and practice of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in the manner and timing of the distribution of profits or the granting of discretionary additions, as the case may be.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=edeecf7227d94fe6879b8f988b077024">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/7-method-of-calculation/31-12-2020?p=1" data-id="955d44db341b4261bf2e263bd47b631f" data-effective-date="31-12-2020" data-download-title="Method of Calculation_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/7-method-of-calculation/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#955d44db341b4261bf2e263bd47b631f&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Method of Calculation">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=955d44db341b4261bf2e263bd47b631f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Method of Calculation
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="9cabb3e0cdfe4c61a83a77a566c883ea"
+	 data-version="f8189218fd854fb197463cc8862af618"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Avoidance of Future Valuation Strain
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8e690d8601b0486abf6e73731587dbfa"
+	 data-version="b5c172cf58c1423c98d2b1f0482c7bb8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The amount of the liability determined in respect of a group of contracts must not be less than such amount as, if the assumptions adopted for the valuation were to remain unaltered and were fulfilled in practice, would enable liabilities similarly determined at all times in the future to be covered from resources arising solely from the contracts and the assets covering the amount of the liability determined at the current valuation.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8e690d8601b0486abf6e73731587dbfa">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/8-avoidance-of-future-valuation-strain/31-12-2020?p=1" data-id="9cabb3e0cdfe4c61a83a77a566c883ea" data-effective-date="31-12-2020" data-download-title="Avoidance of Future Valuation Strain_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/8-avoidance-of-future-valuation-strain/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#9cabb3e0cdfe4c61a83a77a566c883ea&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Avoidance of Future Valuation Strain">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=9cabb3e0cdfe4c61a83a77a566c883ea">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Avoidance of Future Valuation Strain
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="4fc6118057ca4c42a99716d39ff4bc01"
+	 data-version="36a5c4e72356475e976a0e2cc237e4a3"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Valuation of Future Premiums
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="20b26844fb6840d1a9855330517c017e"
+	 data-version="a2047ffd501f4cbe8fcbab7c90969a46"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where further specified <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> are payable by the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> under a contract (not being a <em><a  class="glossary-link" title="linked long-term" href="#glossary-term-0c4ff5a12aac4388b6f3167ee726d206" data-mce-linktype="2" data-glossary-id="52844">linked long-term</a></em> <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em>) under which the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> is eligible to participate in any <em><a  class="glossary-link" title="established surplus" href="#glossary-term-1f7246c7925a4693bc79371e79e187bf" data-mce-linktype="2" data-glossary-id="77571">established surplus</a></em> and benefits (other than benefits arising from a distribution of surplus) are determined from the outset in relation to the total <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> payable thereunder, then, subject to <a  title="9.4" href="/pra-rules/friendly-society-liability-valuation#e6d34735a2624c7db51abb7ccfd8beb8" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.4</a> and <a  title="10" href="/pra-rules/friendly-society-liability-valuation#7e53bf5f3bf142098aa9cc4958efabdd" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">10</a>:</p>
+<ol class="new-bullet">
+<li>(1) where the <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a> </em>under the contract are at a uniform rate throughout the period for which they are payable, the <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> to be valued must not be greater than such level <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> as, if payable for the same period as the actual <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> under the contract and calculated according to the rates of interest and rates of mortality or disability which are to be employed in calculating the liability under the contract, would have been sufficient at the outset to provide for the benefits under the contract according to the contingencies upon which they are payable, exclusive of any additions for profits, expenses or other charges;</li>
+<li>(2) where the <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> under the contract are not at a uniform rate throughout the period for which they are payable, the <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> to be valued must not be greater than such <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> as would be determined on the principles set out in (1) modified as appropriate to take account of the variations in the <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> payable by the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> in each year,</li>
+</ol>
+<p>save that a <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> to be valued must in no year be greater than the amount of the <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> payable by the <em><a  class="glossary-link" title="policyholders" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholders</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=20b26844fb6840d1a9855330517c017e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0e3a593db7c94aa98375c67f9c1cebb5"
+	 data-version="f4cdaf5a2ffd42e7861ea0c001c47fbe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the terms of the contract have changed since the contract was first made (the terms of the contract being taken to change, for the purposes of this rule, if the change is indicated in an endorsement on the policy but not if a new policy is issued), then, for the purposes of <a  title="9.1" href="/pra-rules/friendly-society-liability-valuation#20b26844fb6840d1a9855330517c017e" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.1</a> one of the following assumptions must be made, namely that;</p>
+<ol class="new-bullet">
+<li>(1) the change from the date it occurred was provided for in the contract when it was made;</li>
+<li>(2) the terms of the contract are those which apply from the date of the change except that a single <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> is payable, at the date of the change, of an amount equal to the liability under the policy immediately before the change, calculated on a basis consistent with this Part and with the <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> actually payable from the date of the change; or</li>
+<li>(3) the contract is in two parts, the first of which is for the benefits purchased by the actual <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> payable from the date of the change under the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> scales of <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> at that date, and the second of which is for all other benefits under the policy for which no <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> are payable after that date.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0e3a593db7c94aa98375c67f9c1cebb5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="92b76d430cdb40af9b4e38d698b6af8f"
+	 data-version="ea8ec258606843fa803e31b6239ddfd2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where under a contract (not being a <em><a  class="glossary-link" title="linked long-term" href="#glossary-term-0c4ff5a12aac4388b6f3167ee726d206" data-mce-linktype="2" data-glossary-id="52844">linked long-term</a> <a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em>) the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> is eligible to participate in any <em><a  class="glossary-link" title="established surplus" href="#glossary-term-1f7246c7925a4693bc79371e79e187bf" data-mce-linktype="2" data-glossary-id="77571">established surplus</a></em>; and</p>
+<p>(1) each <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> paid increases the benefits (other than benefits arising from a distribution of surplus) provided under the contract; or</p>
+<p>(2) the amount of a <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a> </em>payable in future is not determinable until it comes to be paid,</p>
+<p>future <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> and the corresponding liability may be left out of account so long as adequate provision is made against any risk that the increase in the liabilities of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> resulting from the payment of future <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a> </em>might exceed the amount of the <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=92b76d430cdb40af9b4e38d698b6af8f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e6d34735a2624c7db51abb7ccfd8beb8"
+	 data-version="e35da1556438453493a7eb93c3239c84"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An alternative valuation method to that described in <a  title="9.1" href="/pra-rules/friendly-society-liability-valuation#20b26844fb6840d1a9855330517c017e" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.1</a> to <a  title="9.3" href="/pra-rules/friendly-society-liability-valuation#92b76d430cdb40af9b4e38d698b6af8f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.3</a> may be used where it can be demonstrated that the alternative method results in reserves no less, in aggregate, than would result from use of the method described in <a  title="9.1" href="/pra-rules/friendly-society-liability-valuation#20b26844fb6840d1a9855330517c017e" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.1</a> to <a  title="9.3" href="/pra-rules/friendly-society-liability-valuation#92b76d430cdb40af9b4e38d698b6af8f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.3</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e6d34735a2624c7db51abb7ccfd8beb8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/9-valuation-of-future-premiums/31-12-2020?p=1" data-id="4fc6118057ca4c42a99716d39ff4bc01" data-effective-date="31-12-2020" data-download-title="Valuation of Future Premiums_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/9-valuation-of-future-premiums/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#4fc6118057ca4c42a99716d39ff4bc01&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Valuation of Future Premiums">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=4fc6118057ca4c42a99716d39ff4bc01">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Valuation of Future Premiums
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="7e53bf5f3bf142098aa9cc4958efabdd"
+	 data-version="77eec3311aab4561a9a842a6c35e53d2"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Acquisition Expenses
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="843940330457483bab2918a130a5f766"
+	 data-version="620ec3e4693b4db8aba697d6568bc6d3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In order to take account of acquisition expenses, the maximum annual <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> to be valued under <a  title="9" href="/pra-rules/friendly-society-liability-valuation#4fc6118057ca4c42a99716d39ff4bc01" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">9</a> may, subject to <a  title="10.2" href="/pra-rules/friendly-society-liability-valuation#c2b3ab79a8864ebb978a02b91bd2261a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">10.2</a>, be increased by an amount not greater than the equivalent, taken over the whole period of <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> payments and calculated according to the rates of interest and rates of mortality or disability employed in valuing the contract, of 3.5% (or the <em><a  class="glossary-link" title="defined percentage" href="#glossary-term-ce88ebccd0594e9e82ccf69ffb00c014" data-mce-linktype="2" data-glossary-id="77570">defined percentage</a></em>, if it is lower than 3.5%) of the <em><a  class="glossary-link" title="relevant capital sum" href="#glossary-term-f3a15a8a538f484d81ac54875e424053" data-mce-linktype="2" data-glossary-id="77368">relevant capital sum</a></em> under the contract.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=843940330457483bab2918a130a5f766">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c2b3ab79a8864ebb978a02b91bd2261a"
+	 data-version="8b2add87dde84f6792dec10d22c904e6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The increase permitted by <a  title="10.1" href="/pra-rules/friendly-society-liability-valuation#843940330457483bab2918a130a5f766" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">10.1</a> must be subject to the limitation that the amount of a future <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> valued must not in any event be greater than the amount of the <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> actually payable by the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em>. </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c2b3ab79a8864ebb978a02b91bd2261a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/10-acquisition-expenses/31-12-2020?p=1" data-id="7e53bf5f3bf142098aa9cc4958efabdd" data-effective-date="31-12-2020" data-download-title="Acquisition Expenses_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/10-acquisition-expenses/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#7e53bf5f3bf142098aa9cc4958efabdd&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Acquisition Expenses">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=7e53bf5f3bf142098aa9cc4958efabdd">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Acquisition Expenses
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="561adfef407e4b938f603891970ff9e5"
+	 data-version="8f058d7f6fc440a8ad85b3d8b9fcee31"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					11
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Rates of Interest
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a4cee787684440d19e9585b6000e57ef"
+	 data-version="505fa7bd504742d98a303395019dc4a8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The rates of interest to be used in calculating the present value of future payments by or to a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must be no greater than the rates of interest determined from a prudent assessment of the yields on existing assets attributed to the <em><a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em> and, to the extent appropriate, the yields which it is expected will be obtained on sums to be invested in the future.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a4cee787684440d19e9585b6000e57ef">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fb9e5105e34e45d0b84f9105e4190380"
+	 data-version="f5165bc71ad04ee782566e6d5ba74ef0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="11.1" href="/pra-rules/friendly-society-liability-valuation#a4cee787684440d19e9585b6000e57ef" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.1</a>, the assumed yield on an asset attributed to the <em><a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em>, before any adjustment to take account of the effect of taxation, must not exceed the yield on that asset calculated in accordance with <a  title="11.3" href="/pra-rules/friendly-society-liability-valuation#344c64ef77c7460e92fdda37ce4e5f03" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.3</a> to <a  title="11.13" href="/pra-rules/friendly-society-liability-valuation#3ef26c5ae517412cbc4e378f41bb9556" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.13</a>, reduced by 2.5% of that yield.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fb9e5105e34e45d0b84f9105e4190380">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="344c64ef77c7460e92fdda37ce4e5f03"
+	 data-version="63418c324bf646a1af7aa765c66bd234"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of calculating the yield on an asset:</p>
+<ol class="new-bullet">
+<li>(1) the asset must be valued in accordance with the <a  title="Friendly Society &ndash; Asset Valuation" href="/pra-rules/friendly-society---asset-valuation" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Friendly Society &ndash; Asset Valuation</a> Part of the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> Rulebook, excluding any provision under which assets may be taken at lower book values for the purposes of an investigation to <span style="line-height: normal; text-indent: 0px;">which </span><a  style="line-height: normal; text-indent: 0px;" title="Friendly Society &ndash; Reporting 2" href="/pra-rules/friendly-society---reporting#02433a7701f24beb89502a316b80d675" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Friendly Society &ndash; Reporting 2</a><span style="line-height: normal; text-indent: 0px;"> </span><span style="line-height: normal; text-indent: 0px;">applies</span>; and</li>
+<li>(2) the future income from the asset required to be taken into account (whether interest, dividends or repayment of capital) must be reduced by a proportion corresponding to such part of any excess<em> <a  class="glossary-link" title="exposure" href="#glossary-term-78a5850c807a4380af9a8bed5a29968d" data-mce-linktype="2" data-glossary-id="77572">exposure</a></em> to assets of that description, calculated in accordance with <a  title="Friendly Society &ndash; Asset Valuation 22.2" href="/pra-rules/friendly-society---asset-valuation#d5791b8fd7394888bb4f621f844ac1dd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Friendly Society &ndash; Asset Valuation 22.2</a>, as may reasonably be attributed to such assets.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/friendly-society-liability-valuation/01-01-2016#344c64ef77c7460e92fdda37ce4e5f03">
+			Past
+			<span class="visually-hidden">
+				version of 11.3 before 01/07/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=344c64ef77c7460e92fdda37ce4e5f03">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1501c064e6d14ae2825d5b8c85befc10"
+	 data-version="2eabf1d64f744990aac23a786821389d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For <em><a  class="glossary-link" title="fixed interest securities" href="#glossary-term-22c64b70620747c084379c629c940f15" data-mce-linktype="2" data-glossary-id="77304">fixed interest securities</a></em> the yield on an asset, subject to <a  title="11.13" href="/pra-rules/friendly-society-liability-valuation#3ef26c5ae517412cbc4e378f41bb9556" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.13</a>, must be that annual rate of interest which, if used to calculate the present value of future payments of interest before the deduction of tax and the present value of repayments of capital, would result in the sum of those amounts being equal to the value of the asset.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1501c064e6d14ae2825d5b8c85befc10">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b1be881f38084c2687f76c845593703d"
+	 data-version="569fc7874577458985dd8ecc98d3a61d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) For <em><a  class="glossary-link" title="variable interest investments" href="#glossary-term-5d12be0c45ac4421b09987bb7f587091" data-mce-linktype="2" data-glossary-id="77576">variable interest investments</a></em> that are equity <em><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a></em> (other than those within <a  title="11.6" href="/pra-rules/friendly-society-liability-valuation#a185f98496be412db531b20e31e069d1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.6</a>) or land, the yield on an asset must, subject to <a  title="11.13" href="/pra-rules/friendly-society-liability-valuation#3ef26c5ae517412cbc4e378f41bb9556" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.13</a>, be the ratio to the value of the asset of the income before deduction of tax which would be received in the period of twelve <em><a  class="glossary-link" title="months" href="#glossary-term-ae30a6dd300740539132c6224131b0ba" data-mce-linktype="2" data-glossary-id="77478">months</a></em> following the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em> on the assumption that the asset will be held throughout that period and that the factors which affect income will remain unchanged.</li>
+<li>(2) Account must be taken of any changes in the factors referred to in (1) known to have occurred by the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em> and in particular:</li>
+<ol>
+<li>(a) any known changes in the rental income from property or in dividends on equity <em><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a></em>;</li>
+<li>(b) any forecast changes in dividends which have been publicly announced by the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em>;</li>
+<li>(c) the effect of any alterations in capital structure; and</li>
+<li>(d) the value (at the most recent date for which it is known at the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em>) of any determinant of the amount of any future interest payment, such value being deemed to remain unaltered for all subsequent dates.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b1be881f38084c2687f76c845593703d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a185f98496be412db531b20e31e069d1"
+	 data-version="a51e78764ddf45bfa87072fe7a8ea3c7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For <em><a  class="glossary-link" title="variable interest investments" href="#glossary-term-5d12be0c45ac4421b09987bb7f587091" data-mce-linktype="2" data-glossary-id="77576">variable interest investments</a></em> that are equity <em><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a></em> in <em><a  class="glossary-link" title="bodies corporate" href="#glossary-term-e96d03513f4c48dfa4eca46747381a32" data-mce-linktype="2" data-glossary-id="52143">bodies corporate</a></em> drawing up accounts in accordance with legislation implementing the <em><a  class="glossary-link" title="Accounts Directives" href="#glossary-term-c36b897891f140e8946da4769d978b65" data-mce-linktype="2" data-glossary-id="77256">Accounts Directives</a></em> or in accordance with the International Accounting Standards Committee accounting standards or US generally accepted accounting practice, the yield on an asset must, subject to <a  title="11.14" href="/pra-rules/friendly-society-liability-valuation#173393130a8245538231c7f60c034c9a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.14</a>, be the ratio to the value of the asset of:</p>
+<ol class="new-bullet">
+<li>(1) A + B; or</li>
+<li>(2) 2 times A, </li>
+</ol>
+<p>whichever is lower, where A = the income which would be received if it were calculated in accordance with <a  title="11.5" href="/pra-rules/friendly-society-liability-valuation#b1be881f38084c2687f76c845593703d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.5</a>, and B = half the excess (if any) of the relevant amount over A, but B must not be less than zero.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a185f98496be412db531b20e31e069d1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8ea23f35cbc249e780ef7b938ad70eaa"
+	 data-version="bcae310bdd694ea1b71e3b5ccede28a3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="11.6" href="/pra-rules/friendly-society-liability-valuation#a185f98496be412db531b20e31e069d1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.6</a>, the &lsquo;relevant amount&rsquo; in relation to equity <em><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a></em> is the <em><a  class="glossary-link" title="issuer&rsquo;s" href="#glossary-term-112345ae59b2415b8628f4d2393a5747" data-mce-linktype="2" data-glossary-id="77324">issuer&rsquo;s</a></em> profits after taxation from its ordinary activities for the most recent financial year ending on or before the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em> which is reported in accounts in accordance with <a  title="11.8" href="/pra-rules/friendly-society-liability-valuation#797e854d653445619b161ab3a366ce3a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.8</a> which are publicly available, in so far as attributable to those equity <em><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a></em>, taking account of the effect of any alterations in capital structure.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8ea23f35cbc249e780ef7b938ad70eaa">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="797e854d653445619b161ab3a366ce3a"
+	 data-version="91ea09946ee44b378cfedee27a28d26d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a title="11.7" href="/pra-rules/friendly-society-liability-valuation#8ea23f35cbc249e780ef7b938ad70eaa" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.7</a>, the <em><a class="glossary-link" title="issuer’s" href="#glossary-term-112345ae59b2415b8628f4d2393a5747" data-mce-linktype="2" data-glossary-id="77324">issuer&rsquo;s</a></em> profits after taxation from its ordinary activities for the relevant financial year must be derived from accounts drawn up in accordance with legislation implementing the <em><a class="glossary-link" title="Accounts Directives" href="#glossary-term-c36b897891f140e8946da4769d978b65" data-mce-linktype="2" data-glossary-id="77256">Accounts Directives</a></em> or, if accounts are not so drawn up, from accounts drawn up in accordance with International Accounting Standards Committee accounting standards or US generally accepted accounting practice.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/friendly-society-liability-valuation/01-01-2016#797e854d653445619b161ab3a366ce3a">
+			Past
+			<span class="visually-hidden">
+				version of 11.8 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=797e854d653445619b161ab3a366ce3a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8c44edc5bf77478886475675c1da9289"
+	 data-version="f7b91adb71c047598187c46a05fdf085"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where <a  title="11.6" href="/pra-rules/friendly-society-liability-valuation#a185f98496be412db531b20e31e069d1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.6</a> applies, and a <em><a  class="glossary-link" title="undertaking&rsquo;s" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking&rsquo;s</a></em> accounting period is longer or shorter than a year, the amount of profits or losses for that period must be annualised, and the annualised figure must be used to calculate the yield.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8c44edc5bf77478886475675c1da9289">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="dd6c9d9b6c0b425c8ca9cd4673d55c41"
+	 data-version="8815fe71ddc44c2ebbfe61f9ab8728cc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the requirements in <a  title="11.7" href="/pra-rules/friendly-society-liability-valuation#8ea23f35cbc249e780ef7b938ad70eaa" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.7</a> and <a  title="11.8" href="/pra-rules/friendly-society-liability-valuation#797e854d653445619b161ab3a366ce3a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.8</a> are not, or cannot be, met, then the relevant amount is zero.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=dd6c9d9b6c0b425c8ca9cd4673d55c41">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.10
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="39f758540bed4a8d8390759d59e3869c"
+	 data-version="a5b9361f086b474084a59ed07812daa6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Subject to <a  title="11.12" href="/pra-rules/friendly-society-liability-valuation#bbc61aad5606444f8c8b52fc3ce1eadd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.12</a>, for <em><a  class="glossary-link" title="variable interest investments" href="#glossary-term-5d12be0c45ac4421b09987bb7f587091" data-mce-linktype="2" data-glossary-id="77576">variable interest investments</a></em> other than equity <em><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a></em> or land, the yield on an asset must, subject to <a  title="11.13" href="/pra-rules/friendly-society-liability-valuation#3ef26c5ae517412cbc4e378f41bb9556" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.13</a>, be that annual rate of interest which, if used to calculate the present value of future payments of interest (before deduction of tax), and the present value of repayments of capital, where applicable, would result in the sum of these amounts being equal to the value of the asset, on the assumption that:</p>
+<ol class="new-bullet">
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(1) the value of any determinant of the amount of the next interest rate payment and capital repayment made during the following 12 </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="months" href="#glossary-term-ae30a6dd300740539132c6224131b0ba" data-mce-linktype="2" data-glossary-id="77478">months</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> will be the value of that determinant at the most recent date for which it is known at the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">;</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(2) the amount of future interest payments and capital repayments will take account, where appropriate, of:</span></li>
+<ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(a) the right of either party to have the investment repaid, and</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(b) an assumed yield on other comparable investments made in the future not exceeding an amount determined in accordance with </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="11.15" href="/pra-rules/friendly-society-liability-valuation#309236d890ce46ec9838472d118b771c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.15</a><span style="line-height: 1.6em; text-indent: -1.3em;"> to </span><a  style="line-height: 1.6em; text-indent: -1.3em;" title="11.17" href="/pra-rules/friendly-society-liability-valuation#ed5ddccc1f0f49aab81417dc9008aea0" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.17</a><span style="line-height: 1.6em; text-indent: -1.3em;">; and</span></li>
+</ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(3) indices and all other factors which affect future income payments or capital repayment will remain unchanged after the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">.</span></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=39f758540bed4a8d8390759d59e3869c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.11
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bbc61aad5606444f8c8b52fc3ce1eadd"
+	 data-version="0571e6cb85c54cdb844f027d1aa36a04"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For investments in <em><a  class="glossary-link" title="collective investment schemes" href="#glossary-term-a81f0d2fffc442c7b629bd1e37472ab2" data-mce-linktype="2" data-glossary-id="77476">collective investment schemes</a></em> given a value as an asset in accordance with <a  title="Friendly Society &ndash; Asset Valuation 13" href="/pra-rules/friendly-society---asset-valuation#f5622bf2505b488a9187d45d48d11188" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Friendly Society &ndash; Asset Valuation 13</a>, the yield may be determined as the weighted average of the yields (as determined by this Chapter) on each of the investments held by the <em><a  class="glossary-link" title="collective investment scheme" href="#glossary-term-a81f0d2fffc442c7b629bd1e37472ab2" data-mce-linktype="2" data-glossary-id="77476">collective investment scheme</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bbc61aad5606444f8c8b52fc3ce1eadd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.12
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3ef26c5ae517412cbc4e378f41bb9556"
+	 data-version="97b110beb108416986e05eda3aec0940"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In calculating the yield on an asset under this Chapter:</p>
+<ol class="new-bullet">
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(1) for an asset other than equity <em><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a> </em></span><span style="line-height: 1.6em; text-indent: -1.3em;">or land:</span></li>
+<ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(a) a prudent adjustment must be made to exclude that part of the yield estimated to represent compensation for the risk that the income from the asset might not be maintained or that capital repayments might not be received as they fall due; and</span></li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(b) in making that adjustment, regard must be had wherever possible to the yields on risk-free investments of a similar term in the same currency;</span></li>
+</ol>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(2) for equity </span><em><span style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a> </span></em><span style="line-height: 1.6em; text-indent: -1.3em;">or land, adjustments to yields must be made as appropriate to exclude that part, if any, of the yield from each category of assets of a similar nature, type and degree of risk that is needed to compensate for the risk that the aggregate income from such category of assets, taking one year with another, might not be maintained.</span></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3ef26c5ae517412cbc4e378f41bb9556">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.13
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="173393130a8245538231c7f60c034c9a"
+	 data-version="aa54aaf1893d4a918279bd1eb89ff680"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Notwithstanding <a  title="11.13" href="/pra-rules/friendly-society-liability-valuation#3ef26c5ae517412cbc4e378f41bb9556" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.13</a>(2), for equity <em><a  class="glossary-link" title="shares" href="#glossary-term-d18359fe29744ef2890d4315a8fd6874" data-mce-linktype="2" data-glossary-id="52971">shares</a></em> within <a  title="11.6" href="/pra-rules/friendly-society-liability-valuation#a185f98496be412db531b20e31e069d1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.6</a>, adjustments to yields must be made as appropriate to exclude that part, if any, of the yield from each category of assets of a similar nature, type and degree of risk that is needed to compensate for the risk that the aggregate profits earned by a <em><a  class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a></em> might not be maintained.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=173393130a8245538231c7f60c034c9a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.14
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="309236d890ce46ec9838472d118b771c"
+	 data-version="cced6690e6da49fe987851a9f51f9961"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>To the extent that it is necessary to make an assumption about the yields which will be obtained on sums to be invested in future, the yield must be determined in accordance with <a  title="11.16" href="/pra-rules/friendly-society-liability-valuation#f913e3b40e9740b6bfd3e73ad458f203" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.16</a> and <a  title="11.17" href="/pra-rules/friendly-society-liability-valuation#ed5ddccc1f0f49aab81417dc9008aea0" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.17</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=309236d890ce46ec9838472d118b771c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.15
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f913e3b40e9740b6bfd3e73ad458f203"
+	 data-version="22300e7c9da242798490aec23a3b0409"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the liabilities are denominated in <em><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> sterling, the yield assumed, before any adjustments to take account of the effect of taxation;</p>
+<ol class="new-bullet">
+<li>(1) on any investment to be made more than three years after the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em>, must not exceed the lowest of:</li>
+<ol>
+<li>(a) the long-term gilt yield current on the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em>,</li>
+<li>(b) 3% per annum, increased by two-thirds of the excess, if any, of the long-term gilt yield current on the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em> over 3% per annum, or</li>
+<li>(c) 6.5% per annum, where "the long-term gilt yield" means the annualised equivalent of the 15 year yield for United Kingdom Government <em><a  class="glossary-link" title="fixed interest securities" href="#glossary-term-22c64b70620747c084379c629c940f15" data-mce-linktype="2" data-glossary-id="77304">fixed interest securities</a></em> jointly compiled by the Financial Times, the Institute of Actuaries and the Faculty of Actuaries; and</li>
+</ol>
+<li>(2) on any investment to be made at any time not more than three years after the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em> must not exceed the assumed yield determined under <a  title="11.2" href="/pra-rules/friendly-society-liability-valuation#fb9e5105e34e45d0b84f9105e4190380" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.2</a> adjusted linearly over the said three years to the yield determined in accordance with (1).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f913e3b40e9740b6bfd3e73ad458f203">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.16
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ed5ddccc1f0f49aab81417dc9008aea0"
+	 data-version="87df5fedc0ba44a5b5d3b97b46f9a6e9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the liabilities are denominated in currencies other than <em><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> sterling, the yield must be determined on assumptions that are as prudent as those made under <a  title="11.16" href="/pra-rules/friendly-society-liability-valuation#f913e3b40e9740b6bfd3e73ad458f203" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.16</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ed5ddccc1f0f49aab81417dc9008aea0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.17
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f1524d6d2aef44c791a80ff1c8ac2bb6"
+	 data-version="4375b50e33b946bc928b574585240eec"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.18
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) In no case must a rate of interest determined for the purposes of <a  title="11.1" href="/pra-rules/friendly-society-liability-valuation#a4cee787684440d19e9585b6000e57ef" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.1</a> exceed the adjusted overall yield on assets calculated as the weighted average of the reduced yields on the individual assets arrived at under <a  title="11.2" href="/pra-rules/friendly-society-liability-valuation#fb9e5105e34e45d0b84f9105e4190380" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.2</a>.</li>
+<li>(2) In calculating the weighted averaged referred to in (1):</li>
+<ol class="new-bullet">
+<li>(a) the weight given to each investment must be its value as an asset determined in accordance with the <a  title="Friendly Society &ndash; Asset Valuation" href="/pra-rules/friendly-society---asset-valuation" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Friendly Society &ndash; Asset Valuation</a>, except where assets may be taken at lower book values for the purposes of any investigation to which <a  title="Friendly Society &ndash; Reporting 2" href="/pra-rules/friendly-society---reporting#02433a7701f24beb89502a316b80d675" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Friendly Society &ndash; Reporting 2</a> applies; and</li>
+<li>(b) except in relation to the rate of interest used in valuing payments of <em><a  class="glossary-link" title="property linked benefits" href="#glossary-term-e444e6acef074318801bfc10e22998e2" data-mce-linktype="2" data-glossary-id="77359">property linked benefits</a></em>, both the yield and the value of any <em><a  class="glossary-link" title="linked assets" href="#glossary-term-f13f47f9f6ba409695e235f870626955" data-mce-linktype="2" data-glossary-id="77574">linked assets</a></em> must be omitted from the calculation.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/friendly-society-liability-valuation/01-01-2016#f1524d6d2aef44c791a80ff1c8ac2bb6">
+			Past
+			<span class="visually-hidden">
+				version of 11.18 before 01/07/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f1524d6d2aef44c791a80ff1c8ac2bb6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.18
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/11-rates-of-interest/31-12-2020?p=1" data-id="561adfef407e4b938f603891970ff9e5" data-effective-date="31-12-2020" data-download-title="Rates of Interest_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/11-rates-of-interest/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#561adfef407e4b938f603891970ff9e5&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Rates of Interest">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=561adfef407e4b938f603891970ff9e5">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Rates of Interest
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="b00c7f1fe5a7421586eda483db8d0263"
+	 data-version="60e8da78b84743eba2a595fcb8871e5c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					12
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Rates of Mortality and Disability
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="7c179f17114b40e992d07cee89de46d8"
+	 data-version="5bbc1b460e9f45a88d8b72fabfb00ac1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must determine the amount of the liability in respect of any category of contract, where relevant, on the basis of prudent rates of mortality and disability and any other decrement that take into account:</p>
+<ol class="new-bullet">
+<li>(1) where the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> is an individual, the state in which he has his habitual residence; and</li>
+<li>(2) where the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> is not an individual, the state in which the establishment of the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> to which the commitment covered by the contract relates is situated.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7c179f17114b40e992d07cee89de46d8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/12-rates-of-mortality-and-disability/31-12-2020?p=1" data-id="b00c7f1fe5a7421586eda483db8d0263" data-effective-date="31-12-2020" data-download-title="Rates of Mortality and Disability_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/12-rates-of-mortality-and-disability/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#b00c7f1fe5a7421586eda483db8d0263&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Rates of Mortality and Disability">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b00c7f1fe5a7421586eda483db8d0263">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Rates of Mortality and Disability
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="3416014518d44bd0b12c93f81e53b1e8"
+	 data-version="fe9c95aafba64af2b00f93f8ba39db3a"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					13
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Expenses
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c8647ee8fe3a496b85aa0e5241ee9ded"
+	 data-version="f9dee010e52945988e526920ddaa0c13"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In accordance with <a  title="13.2" href="/pra-rules/friendly-society-liability-valuation#90c62b92b719488fb3f089ae57b68c6f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">13.2</a>, a <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> provision for expenses, whether implicit or explicit, must not be less than the amount required, on prudent assumptions, to meet the total net cost (after taking account of the effect of taxation) that would be likely to be incurred in fulfilling contracts if the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> were to cease to transact new business twelve <em><a  class="glossary-link" title="months" href="#glossary-term-ae30a6dd300740539132c6224131b0ba" data-mce-linktype="2" data-glossary-id="77478">months</a></em> after the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c8647ee8fe3a496b85aa0e5241ee9ded">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="90c62b92b719488fb3f089ae57b68c6f"
+	 data-version="0014e71325064c958b45d6dbf1d7ce57"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The provision mentioned in <a  title="13.1" href="/pra-rules/friendly-society-liability-valuation#c8647ee8fe3a496b85aa0e5241ee9ded" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">13.1</a> must have regard to the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> actual expenses in the last twelve <em><a  class="glossary-link" title="months" href="#glossary-term-ae30a6dd300740539132c6224131b0ba" data-mce-linktype="2" data-glossary-id="77478">months</a></em> before the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em> and the effects of inflation on future expenses on prudent assumptions as to the future rates of increase in prices and earnings.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=90c62b92b719488fb3f089ae57b68c6f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/13-expenses/31-12-2020?p=1" data-id="3416014518d44bd0b12c93f81e53b1e8" data-effective-date="31-12-2020" data-download-title="Expenses_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/13-expenses/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#3416014518d44bd0b12c93f81e53b1e8&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Expenses">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=3416014518d44bd0b12c93f81e53b1e8">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Expenses
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="1689541ae26b4371abad2c3d5cebed5d"
+	 data-version="6222b8d211e144538aa3f1bbf0c53add"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					14
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Options
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="04b056d53f124a8fa6c3b78566fabedb"
+	 data-version="8723e841a21f4774a1be908e163815fc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must make provision on prudent assumptions to cover any increase in liabilities caused by <em><a  class="glossary-link" title="policyholders" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholders</a></em> exercising <em><a  class="glossary-link" title="options" href="#glossary-term-d79ad83ef30444a8afb73116a24c8787" data-mce-linktype="2" data-glossary-id="52864">options</a></em> under their contracts.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=04b056d53f124a8fa6c3b78566fabedb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="56b45bc270eb48359dee0ee16da33a63"
+	 data-version="47bcb8374e2c421199040a858f30df1c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a contract includes an <em><a  class="glossary-link" title="option" href="#glossary-term-d79ad83ef30444a8afb73116a24c8787" data-mce-linktype="2" data-glossary-id="52864">option</a></em> whereby the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> may secure a guaranteed cash payment within twelve <em><a  class="glossary-link" title="months" href="#glossary-term-ae30a6dd300740539132c6224131b0ba" data-mce-linktype="2" data-glossary-id="77478">months</a></em> following the <em><a  class="glossary-link" title="valuation date" href="#glossary-term-7432e0edcb39431c8654e3fe733378e0" data-mce-linktype="2" data-glossary-id="77575">valuation date</a></em>, the provision for that <em><a  class="glossary-link" title="option" href="#glossary-term-d79ad83ef30444a8afb73116a24c8787" data-mce-linktype="2" data-glossary-id="52864">option</a></em> must be such as to ensure that the value placed on the contract is not less than the amount required to provide for the payments that would have to be made if the <em><a  class="glossary-link" title="option" href="#glossary-term-d79ad83ef30444a8afb73116a24c8787" data-mce-linktype="2" data-glossary-id="52864">option</a></em> were exercised.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=56b45bc270eb48359dee0ee16da33a63">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4ef0d31100e8484d8db129e7ef8f0722"
+	 data-version="8c3f018a53e049c4a770f524d4dfdf4c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a contract includes an option whereby the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> may secure a cash payment but <a  title="14.2" href="/pra-rules/friendly-society-liability-valuation#56b45bc270eb48359dee0ee16da33a63" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.2</a> does not apply, the provision for that option must be such as to ensure that, if the assumptions adopted for the valuation of the contract are fulfilled in practice:</p>
+<ol class="new-bullet">
+<li>(1) the resulting value is not less than the amount required to provide for the payment which would have to be made if the option were exercised; and</li>
+<li>(2) the payment when it falls due is covered from resources arising solely from the contract and from the assets covering the amount of the liability determined at the current valuation.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4ef0d31100e8484d8db129e7ef8f0722">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="af1cc5fb4ae34ed79b59c6931a0a2b12"
+	 data-version="b02c62c62c5546b4a915ff107150cbe8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="14.3" href="/pra-rules/friendly-society-liability-valuation#4ef0d31100e8484d8db129e7ef8f0722" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.3</a> the amount of a cash payment secured by the exercise of an option is assumed to be:</p>
+<ol class="new-bullet">
+<li>(1) in the case of an <em><a  class="glossary-link" title="accumulating with-profits policy" href="#glossary-term-f234f9a460f9436faec1c66c895dddbd" data-mce-linktype="2" data-glossary-id="77258">accumulating with-profits policy</a></em>, the lower of:</li>
+<ol>
+<li>(a) the amount which would reasonably be expected to be paid if the option were exercised, having regard to the representations of the<a  class="glossary-link" title=" firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114"> firm</a>; and</li>
+<li>(b) the amount in (a), disregarding all discretionary adjustments; and</li>
+</ol>
+<li>(2) in the case of any other policy to which this Chapter applies, the amount which would reasonably be expected to be paid if the option were exercised, having regard to the representations of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, without taking into account any expectations regarding future distributions of profits or the granting of discretionary additions in respect of an <em><a  class="glossary-link" title="established surplus" href="#glossary-term-1f7246c7925a4693bc79371e79e187bf" data-mce-linktype="2" data-glossary-id="77571">established surplus</a></em> or in anticipation of such additions.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=af1cc5fb4ae34ed79b59c6931a0a2b12">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/14-options/31-12-2020?p=1" data-id="1689541ae26b4371abad2c3d5cebed5d" data-effective-date="31-12-2020" data-download-title="Options_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/14-options/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#1689541ae26b4371abad2c3d5cebed5d&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Options">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1689541ae26b4371abad2c3d5cebed5d">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Options
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="8cc1e833e7dd4204b40a0f78ffa5f318"
+	 data-version="2b25cbd9e4d34c35b7bd8fe8922b439b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					15
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Contracts Not to Be Treated as Assets
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6b9628255c9c442a9ccfc42bfec5ab7e"
+	 data-version="77cc560dc5694d34a85e30c5980ff79c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not treat any <em><a  class="glossary-link" title="contract of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contract of long-term insurance</a></em> as an asset.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6b9628255c9c442a9ccfc42bfec5ab7e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						15.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/15-contracts-not-to-be-treated-as-assets/31-12-2020?p=1" data-id="8cc1e833e7dd4204b40a0f78ffa5f318" data-effective-date="31-12-2020" data-download-title="Contracts Not to Be Treated as Assets_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/15-contracts-not-to-be-treated-as-assets/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#8cc1e833e7dd4204b40a0f78ffa5f318&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Contracts Not to Be Treated as Assets">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=8cc1e833e7dd4204b40a0f78ffa5f318">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Contracts Not to Be Treated as Assets
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="0d46be11566b446f9bbd4ac09ce80065"
+	 data-version="911004043a354667aef2002c4a725772"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					16
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Profits from Voluntary Discontinuance
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="1735aed40c7e40fa8a3fdd1db7e6e209"
+	 data-version="193e8667cb204b37a84c3fbb77a8b89c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not make allowance in the valuation for the voluntary discontinuance of any <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em> if the amount of the liability so determined would thereby be reduced.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1735aed40c7e40fa8a3fdd1db7e6e209">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/friendly-society-liability-valuation/16-profits-from-voluntary-discontinuance/31-12-2020?p=1" data-id="0d46be11566b446f9bbd4ac09ce80065" data-effective-date="31-12-2020" data-download-title="Profits from Voluntary Discontinuance_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/friendly-society-liability-valuation/16-profits-from-voluntary-discontinuance/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/friendly-society-liability-valuation#0d46be11566b446f9bbd4ac09ce80065&amp;subject=PRA Rulebook - Friendly Society – Liability Valuation – Profits from Voluntary Discontinuance">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=0d46be11566b446f9bbd4ac09ce80065">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Profits from Voluntary Discontinuance
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,2431 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{F0A2B43D-C9B7-4E35-A6BD-5A1C433FBE33} -->
+<title>SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwof7a-f-a41d7de25-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":40,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"807f633","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51259,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769369982","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==rr//K0Zuyb32N3SJ69OD7y5kUvZV9VDy0Rf4hHAEVkosNESZat8kC/4rGKrEcHRY78SpyLUfXCkduIvMdASJbXPXFU+Z5wGCXXVJ2zolPKzSFKSkch2BOi4RBEAszNZ9XO2rUevwN2k2M6a+b9XkCom/KZZa4ZpomDTQZuzL/Tc7AzB7d3u2hUSwh/qeX5MfVFFXbmucDlXTgEp9bRz47szhLGjbZP5JDz0w7EZAc4R5aNsCvAiojHuxrHiuebuWqEt8tNXmzuSb0Hcb1WdBkvniKxgjRLy97Fx/9xiUGYZXPSvzfJCbo/85p1PaPc8F1a2dxDh6HjX1k0WWxLy52Mb7g8ayZWv4KEGU07Ial3PsOBb/7jN4rqmvKTRflSEGRvCLtAukoJiCC/gvwN7f5eiVuRkcrw9yjEqb2H/dfQo=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/01-01-2026">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2026
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-bef0bce8-29f7-4ebd-97dc-6d7c07b779bd">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-bef0bce8-29f7-4ebd-97dc-6d7c07b779bd"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/restatement-of-crr-and-sii-requirements-in-pra-rulebook-policy-statement" class="list-links__link" target="_blank">
+										PS12/25 - Restatement of CRR and Solvency II requirements in PRA Rulebook – 2026 implementation
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/01-01-2026_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/01-01-2026?p=1" data-id="ec387a7a3d0d469cabbfda2a4e0df26e" data-effective-date="01-01-2026" data-download-title="SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="c1bb3752dfbb4823bd2fad341cd9eb29"
+	 data-version="5213762bf6164b0dbf5c6e5097168d26"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="10812a6e7c11454a92e2c4db53ad7a6d"
+	 data-version="ef3623f66a884de0807121ad24add62a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement of policy (SoP) sets out the Prudential Regulation Authority&rsquo;s (PRA)&nbsp;approach to considering applications from PRA authorised persons not to apply rules, or to&nbsp;apply them with modifications, under section 138BA of the Financial Services and Markets&nbsp;Act 2000 (FSMA). The SoP relates to rules in the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>&nbsp;of the PRA&nbsp;Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6dfe067cbb2e451f985a91b0545988ae"
+	 data-version="cfbc9402d4e443c5b66708c91b26a215"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This SoP is relevant to banks, building societies, PRA-designated investment firms and&nbsp;PRA-approved, or PRA-designated, financial or mixed financial holding companies. It is not&nbsp;relevant to credit unions or third-country branches.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/1-introduction/01-01-2026?p=1" data-id="c1bb3752dfbb4823bd2fad341cd9eb29" data-effective-date="01-01-2026" data-download-title="Introduction_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/1-introduction/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#c1bb3752dfbb4823bd2fad341cd9eb29&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="034ed696e30f44b996eadcf028257e0d"
+	 data-version="71e6ba07e73f439486c65bf6e09c04e3"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					General matters
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5c2981b597e143bcbc98f06cb28f5244"
+	 data-version="32cdbccc62124402a9c425e8362fe2c8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In determining whether or not to grant a regulatory permission, the PRA would be&nbsp;exercising its powers under section 138BA of FSMA. This allows the PRA to disapply, or&nbsp;modify the application of, PRA rules upon the application or with the consent of a firm. The&nbsp;PRA may give such permission subject to conditions. It also has power to revoke or vary a&nbsp;permission which has been issued.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0bd6f6b2ec6544d78f399299ae9ccbbf"
+	 data-version="d09ac5dcb63744c0926fd87f1e504b11"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The exercise of the PRA&rsquo;s permission power is discretionary. In exercising its discretion,&nbsp;the PRA will consider whether the conditions set out in relation to each of the permissions in&nbsp;PRA rules are satisfied, as well as the additional conditions relating to certain permissions&nbsp;which are set out in this SoP.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8f599461c43a4cc98a537b410ab63b1a"
+	 data-version="dbef2ab0f70343199ab5c3a9d905ce21"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As set out in the <a href="/guidance/statements-of-policy/sop---the-prudential-regulation-authoritys-approach-to-rule-permissions-and-waivers" data-rb-content-link="Guidance">SoP &ndash; The Prudential Regulation Authority&rsquo;s approach to rule&nbsp;permissions and waivers</a>, if a firm applies for a rule permission under s138BA where the&nbsp;PRA has not set out specific criteria, the PRA will consider, and place significant weight&nbsp;upon, the statutory criteria that apply to the PRA&rsquo;s power under s138A, ie whether:</p>
+<ul>
+    <li>compliance by a firm with the unmodified rules would be unduly burdensome or&nbsp;would not achieve the purpose for which the rules were made; and</li>
+    <li>the direction would not adversely affect the advancement of any of the PRA&rsquo;s&nbsp;objectives.<sup><a href="#footnore-1">1</a></sup></li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						These criteria should be interpreted in the same way as the criteria in s138A, including reading the reference  to the PRA’s objectives in accordance with s2F of FSMA.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1d047f48b1804fccaf24a2c51a1d17f9"
+	 data-version="87769aec1c834bf083f0f39843d371b3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Although s144G and s192XC of FSMA do not set out any additional general&nbsp;considerations for the exercise of the permission power, the PRA will consider whether&nbsp;granting a permission in any particular case would be consistent with advancing its statutory&nbsp;objectives as set out in Part 1A, chapter 2 of FSMA. The PRA will also consider whether&nbsp;granting the permission in a particular case may undermine any of the purposes for which the&nbsp;rule was made, including the matters set out in s144C of FSMA (&lsquo;Matters to be considered&nbsp;when making CRR rules&rsquo;).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/2-general-matters/01-01-2026?p=1" data-id="034ed696e30f44b996eadcf028257e0d" data-effective-date="01-01-2026" data-download-title="General matters_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/2-general-matters/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#034ed696e30f44b996eadcf028257e0d&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – General matters">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="7fdab9495b4f4ca69ba08fccd5100034"
+	 data-version="753645f6ad664c00ace75daba3cae4ef"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					PRA’s approach to waivers and permissions under Own Funds (CRR) Part
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="29d08351619f4a0a9160ffe7ca0b6639"
+	 data-version="2231010d40084a579ef839ae0c3b15fb"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Right to withdraw</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="12c84b30bb384f1a8d791245d67945a9"
+	 data-version="c827aa43e8f94f2394d0ab0bffe99092"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A firm which has applied for a waiver or permission may withdraw that application by&nbsp;notifying the PRA in writing at any time before it reaches a decision on the application.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="53ec2a6ae375486db5c76463d2ac4bf7"
+	 data-version="0ee9ad52d0904ad0aa05c7fe9e5418cf"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Factors considered in the PRA&rsquo;s decision</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="2a50fadb0cb74499875db105e1b87482"
+	 data-version="4453b48e2f0741a496e6768218b09f2f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This SoP aims to increase transparency by indicating that the PRA would usually&nbsp;envisage using s138BA of FSMA to grant waivers and permissions only in circumstances&nbsp;similar to those in which the PRA could currently grant waivers and permissions under the&nbsp;Capital Requirements Regulation. The PRA expects to grant permissions where the relevant&nbsp;conditions under each of the listed Articles in the Appendices are met.</p>
+<div></div>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="caec55dee16844ccafc4244f34c9fa15"
+	 data-version="ad24a0cb2217441ca55a1b6453e3e5bf"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Ongoing expectation to notify the PRA of any material changes</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="962a6a1be7244ec4b39c7b160a920438"
+	 data-version="adec5f244fec45458385e167a62bcac8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>&nbsp;Unless otherwise stated, the conditions set out in PRA rules and in this SoP should be thought of as continuing conditions which firms need to satisfy on an ongoing basis. After the PRA has granted a permission, it expects that the firm promptly notifies it if it does not, or expects that it soon will not, continue to meet any of those conditions for as long as the permission remains effective.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="595ee2423d3247ad8b5e03b036c3ae22"
+	 data-version="b0ffba06e9ba45e7b0383718bb0c75d8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA further expects that firms promptly notify it of any material change in circumstances, including anticipated changes in circumstances that might affect the PRA&rsquo;s continuing assessment of this permission. This includes changes to the factors reported by firms set out in this SoP that the PRA will consider when assessing permission applications.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b24ae2519a604275967428271376d24e"
+	 data-version="88584476bcaf49569e4541ebe3eec2c2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>These expectations are an elaboration of firms&rsquo; obligations to inform the PRA of relevant information under the <a href="/pra-rules/fundamental-rules" data-rb-content-link="Part">PRA Fundamental Rules</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6194fb63ba1a4565b56c6dfa4cbdf31a"
+	 data-version="9df2a61b28b64f4fa014f1ebe24b263f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA may decide not to revoke or modify a permission that it has granted when it receives the notifications set out in paragraphs <a href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#962a6a1be7244ec4b39c7b160a920438" data-rb-content-link="Paragraph">3.3</a>&nbsp;to <a href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#b24ae2519a604275967428271376d24e" data-rb-content-link="Paragraph">3.5</a>&nbsp;above.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/3-pras-approach-to-waivers-and-permissions------/01-01-2026?p=1" data-id="7fdab9495b4f4ca69ba08fccd5100034" data-effective-date="01-01-2026" data-download-title="PRA’s approach to waivers and permissions under Own Funds (CRR) Part_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/3-pras-approach-to-waivers-and-permissions------/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#7fdab9495b4f4ca69ba08fccd5100034&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – PRA’s approach to waivers and permissions under Own Funds (CRR) Part">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="f4cb713316e24800b58f286c2ba89842"
+	 data-version="0166b0e821334668b83c85bb11aef205"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix 1
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3d170437a6624a0182cecd9288adf92e"
+	 data-version="d45f9ecad50f4f9ba7208bcecd2aa2c8"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Own Funds (CRR) Part: Article 26(3) Common Equity Tier 1 Items</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="daf5fc95a3d34cdbbd5b07d580e8468d"
+	 data-version="b2a2735512df46f9b7a30fe1fcfd5e08"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When considering whether to grant permission in respect of <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#956f10bcbba04ebea700bba93e449dcc" data-rb-content-link="Rule">Article 26(3)</a>&nbsp;to classify issuances of capital instruments as Common Equity Tier 1 instruments, the PRA will take into account whether the relevant capital instrument meets the conditions set out in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#390c8aaaa03d45f1968441f82c83de0b" data-rb-content-link="SubChapter">Article 28</a>&nbsp;or <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#5393dee29ae74f2eb059a5f771664f1e" data-rb-content-link="SubChapter">Article 29</a>&nbsp;as applicable.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-1/01-01-2026?p=1" data-id="f4cb713316e24800b58f286c2ba89842" data-effective-date="01-01-2026" data-download-title="Appendix 1_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-1/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#f4cb713316e24800b58f286c2ba89842&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – Appendix 1">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="1b3eb3fe67bf46748632809c3cbe5c1e"
+	 data-version="80445676abc644dc8eaa28892cf36ef6"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix 2
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a403aba234bf442d8843148a0276debd"
+	 data-version="483fc0f1c89b4158beff99d9a4312e3b"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Own Funds (CRR) Part: Article 41(1)(b) Deduction of Defined Benefit Pension Fund Assets</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8acc52973219446e885375839289ab0d"
+	 data-version="ff7f3e2da4cf454c820a7608bf6474e7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When considering whether to grant permission in respect of <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#6dd258131d5340d5a3e9820f1e3c6d2c" data-rb-content-link="Rule">Article 41(1)(b)</a>&nbsp;to reduce the amount of defined benefit pension fund assets that are deducted, the PRA will take into account whether the conditions set out in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#7027097b844242dd99fea7be71db438c" data-rb-content-link="SubChapter">Article 15</a>&nbsp;of the Rules Supplementing the CRR with regards to Own Funds Requirements (previously Regulation (EU) No 241/2014) in the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part </a>of the PRA Rulebook are met.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-2/01-01-2026?p=1" data-id="1b3eb3fe67bf46748632809c3cbe5c1e" data-effective-date="01-01-2026" data-download-title="Appendix 2_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-2/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#1b3eb3fe67bf46748632809c3cbe5c1e&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – Appendix 2">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="83e5e186ed5148a98ff21485f22faf92"
+	 data-version="d1e8039aab9f4e3eaafbf8cf3a8b4d2e"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix 3
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4b76caf188894b38b0d0fa2f1f8a7622"
+	 data-version="3a8011db9c31451f938e1e34d00ecfcd"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Own Funds (CRR) Part: Article 73(1) Distribution on Instruments</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="5217a97e84974feabfa218a114a5e47c"
+	 data-version="d0b9f44eaf4e4c0ab247eadc9df50bac"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When considering whether to grant permission in respect of <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#365c6f886c164f8c9184515f027d4d73" data-rb-content-link="Rule">Article 73(1)</a>&nbsp;to classify as own funds instruments any capital instruments for which an institution has sole discretion to decide to pay distributions in a form other than cash or own funds instruments, the PRA will take into account whether the following conditions are met: </p>
+<ol class="new-bullet">
+    <li>(a) the ability of the institution to cancel payments under the instrument would not be adversely affected by the discretion referred to in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#365c6f886c164f8c9184515f027d4d73" data-rb-content-link="Rule">paragraph 1 of Article 73</a>, or by the form in which distributions could be made; </li>
+    <li>(b) the ability of the capital instrument or of the liability to absorb losses would not be adversely affected by the discretion referred to in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#365c6f886c164f8c9184515f027d4d73" data-rb-content-link="Rule">paragraph 1 of Article 73</a>, or by the form in which distributions could be made; </li>
+    <li>(c) the quality of the capital instrument or liability would not otherwise be reduced by the discretion referred to in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#365c6f886c164f8c9184515f027d4d73" data-rb-content-link="Rule">paragraph 1 of Article 73</a>, or by the form in which distributions could be made.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-3/01-01-2026?p=1" data-id="83e5e186ed5148a98ff21485f22faf92" data-effective-date="01-01-2026" data-download-title="Appendix 3_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-3/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#83e5e186ed5148a98ff21485f22faf92&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – Appendix 3">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="7a0612bf53c642188837fba80a7a4d45"
+	 data-version="c3aee9a5ed6147e3aabfefc7d5e5d8c8"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix 4
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="971cb97db62e45b4a56c63419ec81fa3"
+	 data-version="853ddb38eef44cd78e81895a66b39576"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Own Funds (CRR) Part: Article 76 (2) Index Holdings of Capital Instruments&nbsp;</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="d291260cdf4f4d21bff3176d349848bc"
+	 data-version="25a5a9b756534f1ab0535b1a8d4a7f18"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When considering whether to grant permission in respect of <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#cea0c72a78a044ca96c1eb6d7e310b42" data-rb-content-link="Rule">Article 76(2)</a>&nbsp;for an institution to use a conservative estimate of the underlying exposure of the institution to instruments included in indices, the PRA will take into account whether the institution has demonstrated to the PRA&rsquo;s satisfaction that it would be operationally burdensome for the institution to monitor its underlying exposure to the items referred to in one or more of the points in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#cea0c72a78a044ca96c1eb6d7e310b42" data-rb-content-link="Rule">Article 76(2)</a>, as applicable.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-4/01-01-2026?p=1" data-id="7a0612bf53c642188837fba80a7a4d45" data-effective-date="01-01-2026" data-download-title="Appendix 4_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-4/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#7a0612bf53c642188837fba80a7a4d45&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – Appendix 4">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="d5fb099d5d034d0b943493bb48cc82c9"
+	 data-version="ae650cafdd1742a98267539d2e2e33a0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix 5
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="7c06661cc37a47a5b4144f454f79325b"
+	 data-version="719169e1ac4941d0808a600c0482a651"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Own Funds (CRR) Part: Article 77 Conditions for Reducing Own Funds and Eligible Liabilities</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="4dde0d1a32fd4d59935b27fbd536d9e5"
+	 data-version="3d61eb03b0044837bed81604c5ff2b81"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When considering whether to grant permission in respect of <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#4e722e38ca594077a5095538021d9b53" data-rb-content-link="SubChapter">Article 77</a>&nbsp;to in any way reduce own funds instruments, or to reduce, distribute or reclassify as another own funds item the share premium accounts related to own funds instruments, the PRA will take into account whether either of the following conditions are met: </p>
+<ol class="new-bullet">
+    <li>(a) before or at the same time as any of the actions referred to in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#4e722e38ca594077a5095538021d9b53" data-rb-content-link="SubChapter">Article 77</a>, the institution replaces the instruments or the related share premium accounts referred to in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#4e722e38ca594077a5095538021d9b53" data-rb-content-link="SubChapter">Article 77</a>&nbsp;with own funds instruments of equal or higher quality at terms that are sustainable for the income capacity of the institution; </li>
+    <li>(b) the institution has demonstrated to the satisfaction of the PRA that the own funds and eligible liabilities of the institution would, following the action referred to in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#4e722e38ca594077a5095538021d9b53" data-rb-content-link="SubChapter">Article 77</a>, exceed the requirements to which it is subject by a margin that the PRA considers necessary. </li>
+</ol>
+<p>For the purposes of paragraph (a), &lsquo;sustainable for the income capacity of the institution&rsquo; means that the profitability of the institution continues to be sound or is not reduced after the replacement of the instruments or the related share premium accounts with own funds instruments of equal or higher quality, at that date and for the foreseeable future. The PRA expects the institution to take into account its profitability in stress situations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4ac5635d86ae4a018fbf666c608ad820"
+	 data-version="c08e1a572a004b81a5ed0e2a22004e46"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where an institution provides sufficient safeguards as to its capacity to operate with own funds in excess of the requirements to which it is subject, the PRA may grant that institution a general prior permission to take any of the actions set out in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#4e722e38ca594077a5095538021d9b53" data-rb-content-link="SubChapter">Article 77</a>, subject to criteria that ensure that any such future action will be in accordance with the conditions set out in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#4e722e38ca594077a5095538021d9b53" data-rb-content-link="SubChapter">Article 77</a>. </p>
+<p>That general prior permission is expected to be granted only for a specified period, which will not exceed one year, after which it may be renewed. The general prior permission is expected to be granted for a certain predetermined amount, which will be set by the PRA. In the case of Common Equity Tier 1 instruments, that predetermined amount will not exceed 3% of the relevant issue, and will not exceed 10% of the amount by which Common Equity Tier 1 capital exceeds the sum of the Common Equity Tier 1 capital requirements by a margin that the PRA considers necessary. In the case of Additional Tier 1 or Tier 2 instruments, that predetermined amount will not exceed 10% of the relevant issue and shall not exceed 3% of the total amount of outstanding Additional Tier 1 or Tier 2 instruments, as applicable. </p>
+<p>The PRA expects to withdraw general prior permission where an institution breaches any of the criteria provided for the purposes of that permission.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="26b21fd67911442db8a53ed507b3937c"
+	 data-version="0c902ee1581b4243a85709719eecaa35"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When assessing the sustainability of the replacement instruments for the income capacity of the institution referred to in point 1(a), the PRA will consider the extent to which those replacement capital instruments would be more costly for the institution than those capital instruments or share premium accounts they would replace.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="53f96c5e236b487797aeb432d163f9d5"
+	 data-version="81f8039b2eea46d494562e6b00b5e1cf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where an institution takes an action referred to in point 1 (a) and the refusal of redemption of Common Equity Tier 1 instruments referred to in<a href="/pra-rules/own-funds-and-eligible-liabilities-crr#362f121a910d4d0bb545dbf687f469c6" data-rb-content-link="Rule"> Article 27(1)</a> of the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part </a>is prohibited by applicable national law of the United Kingdom, or any part of it, or of a third country, the PRA expects to waive the conditions set out in paragraphs 1, but may require the institution to limit the redemption of such instruments on an appropriate basis (as set out in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#f9abe6fd0f9e4178895f068f3ab6b092" data-rb-content-link="SubChapter">Article 10</a>&nbsp;and <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#b1316e8cd3524afe9b7cc40851319882" data-rb-content-link="SubChapter">Article 11</a>&nbsp;of the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#3e24af2d574b408b9f82584add1995cb" data-rb-content-link="Chapter">Rules Supplementing the CRR with regards to Own Funds Requirements</a>&nbsp;(previously Regulation (EU) No 241/2014) in the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3765b8f883db401b8603cb9768a6dc7b"
+	 data-version="939307db4b3542bbb538c53929cf153b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When considering whether to permit institutions to call, redeem, repay or repurchase Additional Tier 1 or Tier 2 instruments or related share premium accounts during the five years following their date of issuance, the PRA will take into account whether the conditions set out in paragraph 1 and one of the following conditions are met: </p>
+<ol class="new-bullet">
+    <li>(a) there is a change in the regulatory classification of those instruments that would be likely to result in their exclusion from own funds or reclassification as own funds of lower quality, and both the following conditions are met: </li>
+    <li style="margin-left: 30px;">(i) the PRA considers such a change to be sufficiently certain; </li>
+    <li style="margin-left: 30px;">(ii) the institution demonstrates to the satisfaction of the PRA that the regulatory reclassification of those instruments was not reasonably foreseeable at the time of their issuance; </li>
+    <li>(b) there is a change in the applicable tax treatment of those instruments which the institution demonstrates to the satisfaction of the PRA is material and was not reasonably foreseeable at the time of their issuance; </li>
+    <li>(c) the instruments and related share premium accounts are grandfathered under Article 494b; </li>
+    <li>(d) before or at the same time as the action referred to in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#6fc4fc607e1b41afac80b0062f19e3a4" data-rb-content-link="Rule">Article 77(1)</a>, the institution replaces the instruments or related share premium accounts referred to in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#6fc4fc607e1b41afac80b0062f19e3a4" data-rb-content-link="Rule">Article 77(1)</a>&nbsp;with own funds instruments of equal or higher quality at terms that are sustainable for the income capacity of the institution and the PRA has permitted that action on the basis of the determination that it would be beneficial from a prudential point of view;&nbsp;</li>
+    <li>(e) the Additional Tier 1 or Tier 2 instruments are repurchased for market making purposes; </li>
+    <li>(f) in exceptional circumstances, where none of the conditions in paragraphs (a) &ndash; (e) are met, but the PRA considers that the repurchase of Additional Tier 1 or Tier 2 instruments would materially enhance the safety and soundness of the firm.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-5/01-01-2026?p=1" data-id="d5fb099d5d034d0b943493bb48cc82c9" data-effective-date="01-01-2026" data-download-title="Appendix 5_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-5/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#d5fb099d5d034d0b943493bb48cc82c9&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – Appendix 5">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="7657b38bfd2e4b56a881bb6e1a6cd5e0"
+	 data-version="557c9c4adb2c435f84f2a22241bf85ad"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix 6
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="f61c80298a85456a9160fc812464a796"
+	 data-version="8655a7632b7f48bd8264be9969de4ea6"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Own Funds (CRR) Part: Article 79(1): Temporary Waiver from Deductions from Own Funds</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="f489748cd75d4186b54baabf2ff5ca8b"
+	 data-version="27fb0168f49c43d68ebc8063855cdc48"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When considering whether to grant permission in respect of <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#c7c655399c8d4b1990c7bec8eb530478" data-rb-content-link="Rule">Article 79(1)</a>&nbsp;to temporarily waive a deduction from own funds, the PRA will take into account whether the conditions set out in <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#d349e0d8b92d4462b29f479c61811c7e" data-rb-content-link="SubChapter">Article 33</a>&nbsp;of the Rules Supplementing the CRR with regards to Own Funds Requirements (previously Regulation (EU) No 241/2014) in the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>&nbsp;of the PRA Rulebook are met.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-6/01-01-2026?p=1" data-id="7657b38bfd2e4b56a881bb6e1a6cd5e0" data-effective-date="01-01-2026" data-download-title="Appendix 6_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-6/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#7657b38bfd2e4b56a881bb6e1a6cd5e0&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – Appendix 6">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="b0fde6c1448847c8bcb05c2cffa7234a"
+	 data-version="ff5a2a1c6c3048a2a9b210ac44393f89"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix 7
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d48531dd791847b2939f14dd6b14640c"
+	 data-version="d5917e9a0b574cb196d383d6d66a45f0"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Own Funds (CRR) Part: Article 84(5) Minority Interests Included in Consolidated Common Equity Tier 1 Capital</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="d139e587f8344c5b8e5d872db262e39b"
+	 data-version="41d40dcee65846cebf162213884baccf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When considering whether to grant permission to a parent financial holding company in respect of <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#8797b240c7ce4b749f6a09d8f6dcc36c" data-rb-content-link="Rule">Article 84(5)</a>&nbsp;to not subtract from its consolidated Common Equity Tier 1 capital the amount of minority interests of a subsidiary, the PRA will consider whether the following conditions are met: </p>
+<ol class="new-bullet">
+    <li>(a) its principal activity is to acquire holdings;</li>
+    <li>(b) it is subject to prudential supervision on a consolidated basis;</li>
+    <li>(c) it consolidates a subsidiary institution in which it has only a minority holding and which is a subsidiary because of section 1162 of the Companies Act 2006;</li>
+    <li>(d) more than 90 % of the consolidated required Common Equity Tier 1 capital arises from the subsidiary institution referred to in point c) calculated on a sub-consolidated basis. </li>
+</ol>
+<p>Where, after 28 June 2013, a parent financial holding company that meets the conditions laid down above becomes a parent mixed financial holding company, the PRA expects to grant the permission referred to above to that parent mixed financial holding company provided that it meets conditions (a) to (d) above.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-7/01-01-2026?p=1" data-id="b0fde6c1448847c8bcb05c2cffa7234a" data-effective-date="01-01-2026" data-download-title="Appendix 7_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr/appendix-7/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr#b0fde6c1448847c8bcb05c2cffa7234a&amp;subject=PRA Rulebook - SoP3/25 – The PRA’s approach to waivers and permissions under Own Funds (CRR) Part – Appendix 7">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

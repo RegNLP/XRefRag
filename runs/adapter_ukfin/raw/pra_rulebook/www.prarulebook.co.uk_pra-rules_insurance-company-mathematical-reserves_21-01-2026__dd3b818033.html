@@ -1,0 +1,4289 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{3D20C1D4-4E6F-4FD7-A292-4F2365E3F0FF} -->
+<title>Insurance Company – Mathematical Reserves | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Insurance Company – Mathematical Reserves">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insurance Company – Mathematical Reserves">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrgatq-f-acd3fbd6f-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":31,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1957387f","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":15372,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025575","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==qTg/3uTi+dAmtsvZCF6hI9nPNyMWsUuv9g2UUU5Ck0i4m9oBxkMnfZhJv+YP9fIw3VEX1R9ZO77ns9p+6EFkcaGHXxX4PXcE1McsUm1ntY8UPm2Z/gDGUXNuDZdZXbHoC7VO08mblYCIXP353G6hThL7OJP7Vv449K0U7xWTMkoLYTK3VNQiF/5VBpdBun5UWtZwI8BhKz9jOW1rrDY01+0+xZQWGcI6CIl1PH1pezhecCvSQLVGLotpSwjPeVbKXjjSHVbi5SC7uS7zMgPccwELKbkr4R9tbRmuM9MyJuAA3IxR7tbI1/orM0QcbD4XKZGpafzAnHat5czIH2lgkVX6c3aN0hzVtQyHZFuKGp286D3YoL+3CmtOmKSoOWv7H1NuI856zIfn8n/VC3VMkzcQkadbdOSSPsogcaH7gS0=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Insurance Company – Mathematical Reserves				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Insurance Company – Mathematical Reserves
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/insurance-company-mathematical-reserves/01-01-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2016
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/insurance-company-mathematical-reserves/08-09-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						08/09/2020
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-c3f75ce1-32d9-4146-a8cb-be2c46f03a68">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-c3f75ce1-32d9-4146-a8cb-be2c46f03a68"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Insurance Company – Mathematical Reserves
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Insurance Company – Mathematical Reserves)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=38986049865944089cd997b070faebc7">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Insurance Company – Mathematical Reserves
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/prudential-regime-and-implementation-of-the-senior-insurance-managers-regime-for-non-solvency-2" class="list-links__link" target="_blank">
+										PS26/15 - &quot;The prudential regime, and implementation of the Senior Insurance Managers Regime, for non-Solvency II firms&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/occasional-consultation-paper-march-2020" class="list-links__link" target="_blank">
+										PS20/20 - Responses to Chapters 2 to 7 of CP3/20 &#39;Occasional Consultation Paper&#39;
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="http://www.bankofengland.co.uk/pra/Pages/supervision/smallinsurers/nondirective.aspx" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Non-Directive Firms
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/insurance-company-mathematical-reserves/08-09-2020_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/08-09-2020?p=1" data-id="38986049865944089cd997b070faebc7" data-effective-date="08-09-2020" data-download-title="Insurance Company – Mathematical Reserves_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="1d4c075da54740ad8121dc082c773766"
+	 data-version="c1f7c911691d4321aa3b3f56f50d3d75"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b773a00de77f4724bf7a354f2a6039b4"
+	 data-version="088d253903c24b1cb150748eac666f6b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to a <em><a  class="glossary-link" title="non-directive insurer" href="#glossary-term-11da8de4e3ea416bb8732a6f2fe0eb07" data-mce-linktype="2" data-glossary-id="77344">non-directive insurer</a></em> which carries on <em><a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em>, other than a <em><a  class="glossary-link" title="non-directive friendly society" href="#glossary-term-e2dba345e3f746b5838bd8b4f03bb781" data-mce-linktype="2" data-glossary-id="53219">non-directive friendly society</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b773a00de77f4724bf7a354f2a6039b4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d612cf05360a4a40b26b98dffd59bed6"
+	 data-version="8979c71b732549b98431de194e4413e0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Except for <a  title="16.3(1)" href="/pra-rules/insurance-company-mathematical-reserves#ec1bff1ed2eb4eb388f03f11bc348d0b" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">16.3(1)</a> this Part does not apply to <em><a  class="glossary-link" title="final bonuses" href="#glossary-term-65c57d6e05894e02894e1ae15aed3dc7" data-mce-linktype="2" data-glossary-id="77302">final bonuses</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d612cf05360a4a40b26b98dffd59bed6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="159fdb67a8144d62ad3c73175778c2d0"
+	 data-version="b86d0aa6e15e4ac3865dd94ce76d78a6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a  class="glossary-link" title="benefits payable" href="#glossary-term-d48983be05cb4b9dbeef819cee99d40d" data-mce-linktype="2" data-glossary-id="77432">benefits payable</a></em></p>
+<p style="padding-left: 30px;">means benefits payable under a <em><a  class="glossary-link" title="long-term insurance contract" href="#glossary-term-7219b398266e424498707179686a1199" data-mce-linktype="2" data-glossary-id="66987">long-term insurance contract</a></em>, including:</p>
+<ol class="new-bullet"><ol>
+<li>(1) all guaranteed benefits including guaranteed <em><a  class="glossary-link" title="surrender values" href="#glossary-term-77c0fe8ea7f7435e9c137bdab53d4e68" data-mce-linktype="2" data-glossary-id="77382">surrender values</a></em> and paid-up values;</li>
+<li>(2) vested, declared and allotted bonuses to which the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> is entitled;</li>
+<li>(3) all options available to the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> under the terms of the contract; and</li>
+<li>(4) discretionary benefits payable in accordance with any relevant provisions of the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>.</li>
+</ol></ol>
+<p><em><a  class="glossary-link" title="dividend yield" href="#glossary-term-6594b914ba474ec3a6c7e52200486036" data-mce-linktype="2" data-glossary-id="77433">dividend yield</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="9.6(1)" href="/pra-rules/insurance-company-mathematical-reserves#132b0b32ff224a3897f75597e2595e20" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.6</a>(1).</p>
+<p><em><a  class="glossary-link" title="earnings yield" href="#glossary-term-e45a069cffac4ce7935806334ad86fba" data-mce-linktype="2" data-glossary-id="77434">earnings yield</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="9.6(2)" href="/pra-rules/insurance-company-mathematical-reserves#132b0b32ff224a3897f75597e2595e20" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.6</a>(2).</p>
+<p><em><a  class="glossary-link" title="future premium" href="#glossary-term-8dbdec51bbcc422f9c9ed5fd5dc587e3" data-mce-linktype="2" data-glossary-id="77435">future premium</a></em></p>
+<p style="padding-left: 30px;">means the value attributed to a <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> due in any future <em><a  class="glossary-link" title="financial year" href="#glossary-term-a3c07cebb1e34b11a18a36c0b80f9e27" data-mce-linktype="2" data-glossary-id="77303">financial year</a></em>.</p>
+<p><em><a  class="glossary-link" title="internal rate of return" href="#glossary-term-2264610b4f2b44dbbc51d8fe5accb69f" data-mce-linktype="2" data-glossary-id="77436">internal rate of return</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="9.7" href="/pra-rules/insurance-company-mathematical-reserves#c8eb3f964e9c4636a5d4416f8ce549f2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.7</a>.</p>
+<p><em><a  class="glossary-link" title="non-attributable expenses" href="#glossary-term-20acf447ae094dc681886b73d3f7f66d" data-mce-linktype="2" data-glossary-id="77437">non-attributable expenses</a></em></p>
+<p style="padding-left: 30px;">means expenses which are not directly attributable to a particular <em><a  class="glossary-link" title="contract of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contract of long-term insurance</a></em>.</p>
+<p><em><a  class="glossary-link" title="recoverable acquisition expenses" href="#glossary-term-cad80f4137174c82942baafa7268dc51" data-mce-linktype="2" data-glossary-id="77438">recoverable acquisition expenses</a></em></p>
+<p style="padding-left: 30px;">means the amount of expenses, after allowing for the effects of taxation, which it is reasonable to expect will be recovered from <em><a  class="glossary-link" title="future premiums" href="#glossary-term-8dbdec51bbcc422f9c9ed5fd5dc587e3" data-mce-linktype="2" data-glossary-id="77435">future premiums</a></em> payable under the contract.</p>
+<p><em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em></p>
+<p style="padding-left: 30px;">means the risk-adjusted yield calculated in accordance with <a  title="9" href="/pra-rules/insurance-company-mathematical-reserves#e646bfa6b98c4af2b01dea1d163e48ff" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">9</a> and <a  title="10" href="/pra-rules/insurance-company-mathematical-reserves#7d287073ef6f45dbaa5689b32a193a7c" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">10</a>.</p>
+<p><em><a  class="glossary-link" title="running yield" href="#glossary-term-f9b66987594f404abbe5715b2ed674f8" data-mce-linktype="2" data-glossary-id="77440">running yield</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="9.5" href="/pra-rules/insurance-company-mathematical-reserves#04b085a7f5df4a4d99e3cc37ac13810a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.5</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=159fdb67a8144d62ad3c73175778c2d0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/1-application-and-definitions/08-09-2020?p=1" data-id="1d4c075da54740ad8121dc082c773766" data-effective-date="08-09-2020" data-download-title="Application and Definitions_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/1-application-and-definitions/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#1d4c075da54740ad8121dc082c773766&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1d4c075da54740ad8121dc082c773766">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="dc3b07c91a8e47098061bbd784a21a54"
+	 data-version="0021a7a4c75043b2a8ce1771190144e6"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Basic Valuation Method
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="16d0560407cf4ca6bff93f24bb432c98"
+	 data-version="a652d7c0bfca417793c618933f48d133"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) Subject to (2), a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must establish its <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> using a prospective actuarial valuation on prudent assumptions of all future cash flows expected to arise under, or in respect of, each of its <em><a  class="glossary-link" title="contracts of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long-term insurance</a></em>.</li>
+<li>(2) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> may use a retrospective actuarial valuation where:</li>
+<ol>
+<li>(a) a prospective method cannot be applied to a particular type of contract; or</li>
+<li>(b) the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> can demonstrate that the resulting amount of the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> would be no lower than would be required by a prudent prospective actuarial valuation.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=16d0560407cf4ca6bff93f24bb432c98">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/2-basic-valuation-method/08-09-2020?p=1" data-id="dc3b07c91a8e47098061bbd784a21a54" data-effective-date="08-09-2020" data-download-title="Basic Valuation Method_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/2-basic-valuation-method/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#dc3b07c91a8e47098061bbd784a21a54&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Basic Valuation Method">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=dc3b07c91a8e47098061bbd784a21a54">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Basic Valuation Method
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2587e61bf90645bbba65bef980519597"
+	 data-version="468c7d3f0b4b4d258b670bd107512007"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Methods and Assumptions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3464ca09e7ac4ba4969d64ede169e1ce"
+	 data-version="1702dc30a3b1471cba13bdc571969756"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the actuarial valuation under <a  title="2.1" href="/pra-rules/insurance-company-mathematical-reserves#16d0560407cf4ca6bff93f24bb432c98" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a>, a<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must use methods and prudent assumptions which:</p>
+<ol class="new-bullet">
+<li>(1) are appropriate to the business of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>;</li>
+<li>(2) are consistent from year to year without arbitrary changes;</li>
+<li>(3) are consistent with the method of valuing assets;</li>
+<li>(4) include appropriate margins for adverse deviation of relevant factors which are sufficiently prudent to ensure that there is no significant foreseeable risk that liabilities to <em><a  class="glossary-link" title="policyholders" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholders</a></em> in respect of <em><a  class="glossary-link" title="contracts of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long-term insurance</a></em> will not be met as they fall due;</li>
+<li>(5) recognise the distribution of profits (that is, emerging surplus) in an appropriate way over the duration of each <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em>;</li>
+<li>(6) take into account its regulatory duty to treat its customers fairly under any relevant provision of the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>; and</li>
+<li>(7) are in accordance with generally accepted actuarial practice.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3464ca09e7ac4ba4969d64ede169e1ce">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/3-methods-and-assumptions/08-09-2020?p=1" data-id="2587e61bf90645bbba65bef980519597" data-effective-date="08-09-2020" data-download-title="Methods and Assumptions_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/3-methods-and-assumptions/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#2587e61bf90645bbba65bef980519597&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Methods and Assumptions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2587e61bf90645bbba65bef980519597">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Methods and Assumptions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="d23230e242b74d06b4078f3cbbba5fab"
+	 data-version="bcc5f691f80e4d808e49b33ae2fa9541"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Valuation of Individual Contracts
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="176c6badb6024198b08b1484c694c802"
+	 data-version="2f7d28450d4a4aed85da94cc80777b33"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) Subject to (2) and (3), a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must determine the amount of the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> separately for each <em><a  class="glossary-link" title="contract of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contract of long-term insurance</a></em>.</li>
+<li>(2) Approximations or generalisations may be made:</li>
+<ol>
+<li>(a) in the case of <em><a  class="glossary-link" title="non-attributable expenses" href="#glossary-term-20acf447ae094dc681886b73d3f7f66d" data-mce-linktype="2" data-glossary-id="77437">non-attributable expenses</a></em>, in relation to a group of contracts with the same or similar expense risk characteristics, provided that the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> in respect of such expenses established by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in relation to that group of contracts have a minimum value of at least zero; and</li>
+<li>(b) in any other case, where they are likely to provide the same, or a higher, result than a determination made in accordance with (1).</li>
+</ol>
+<li>(3) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must set up additional <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> on an aggregated basis for general risks that are not specific to individual contracts.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=176c6badb6024198b08b1484c694c802">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/4-valuation-of-individual-contracts/08-09-2020?p=1" data-id="d23230e242b74d06b4078f3cbbba5fab" data-effective-date="08-09-2020" data-download-title="Valuation of Individual Contracts_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/4-valuation-of-individual-contracts/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#d23230e242b74d06b4078f3cbbba5fab&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Valuation of Individual Contracts">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=d23230e242b74d06b4078f3cbbba5fab">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Valuation of Individual Contracts
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="fb45f7e9912d4df89d3d00db1c38fdb6"
+	 data-version="f2926f01eb7a47958d0cd1afd787bdf5"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Negative Mathematical Reserves
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="04ae925c09df483385b1851800e33030"
+	 data-version="f1d9ae987b8f4da698846ee72e189bc4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> may calculate a negative value for the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> in respect of a <em><a  class="glossary-link" title="contract of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contract of long-term insurance</a></em> provided that:</p>
+<ol class="new-bullet">
+<li>(1) this is based on assumptions which meet the general requirements for prudent assumptions as set out in <a  title="3.1" href="/pra-rules/insurance-company-mathematical-reserves#3464ca09e7ac4ba4969d64ede169e1ce" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a>;</li>
+<li>(2) the contract does not have a <em><a  class="glossary-link" title="surrender value" href="#glossary-term-77c0fe8ea7f7435e9c137bdab53d4e68" data-mce-linktype="2" data-glossary-id="77382">surrender value</a></em> which at the <em><a  class="glossary-link" title="actuarial valuation date" href="#glossary-term-ff554d12a486446094eb8f8fb04051c6" data-mce-linktype="2" data-glossary-id="77261">actuarial valuation date</a></em> is guaranteed; and</li>
+<li>(3) the total <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> established by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> have a minimum value of at least:</li>
+<ol>
+<li>(a) where the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="contracts of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long-term insurance</a></em> include <em><a  class="glossary-link" title="linked long-term" href="#glossary-term-0c4ff5a12aac4388b6f3167ee726d206" data-mce-linktype="2" data-glossary-id="52844">linked long-term</a> </em><em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em>, the sum of the surrender values of all its <em><a  class="glossary-link" title="linked long-term" href="#glossary-term-0c4ff5a12aac4388b6f3167ee726d206" data-mce-linktype="2" data-glossary-id="52844">linked long-term</a> </em><em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a> </em>at the <em><a  class="glossary-link" title="actuarial valuation date" href="#glossary-term-ff554d12a486446094eb8f8fb04051c6" data-mce-linktype="2" data-glossary-id="77261">actuarial valuation date</a></em>; and</li>
+<li>(b) in any other case, zero.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=04ae925c09df483385b1851800e33030">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/5-negative-mathematical-reserves/08-09-2020?p=1" data-id="fb45f7e9912d4df89d3d00db1c38fdb6" data-effective-date="08-09-2020" data-download-title="Negative Mathematical Reserves_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/5-negative-mathematical-reserves/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#fb45f7e9912d4df89d3d00db1c38fdb6&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Negative Mathematical Reserves">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=fb45f7e9912d4df89d3d00db1c38fdb6">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Negative Mathematical Reserves
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="4c0ca110be6c40bfb42da226bfaad2e2"
+	 data-version="00d1179f2c884d938ea1a1baf4857695"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Avoidance of Future Valuation Strain
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="269ded4acadb4cdfae3de6a4884f96a1"
+	 data-version="3fea7c061a4b4ae2a212f9110ee63d94"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must establish <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> for a <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em> which are sufficient to ensure that, at any subsequent date, the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> then required are covered solely by:</li>
+<ol>
+<li>(a) the assets covering the current <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em>; and</li>
+<li>(b) the resources arising from those assets and from the contract itself.</li>
+</ol>
+<li>(2) For the purposes of (1), the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must assume that:</li>
+<ol>
+<li>(a) the assumptions adopted for the current valuation of liabilities remain unaltered and are met; and</li>
+<li>(b) discretionary benefits and charges will be set so as to fulfil its regulatory duty to treat its customers fairly under any relevant provision of the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>.</li>
+</ol>
+<li>(3) Subject to (4), the requirements in (1) may be applied to a group of similar contracts instead of to the individual contracts within that group.</li>
+<li>(4) The requirements in (1) must be applied to a group of contracts in relation to which <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> in respect of <em><a  class="glossary-link" title="non-attributable expenses" href="#glossary-term-20acf447ae094dc681886b73d3f7f66d" data-mce-linktype="2" data-glossary-id="77437">non-attributable expenses</a></em> are established for that group of contracts in accordance with <a  title="4.1(2)(a)" href="/pra-rules/insurance-company-mathematical-reserves#176c6badb6024198b08b1484c694c802" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>(2)(a), instead of to the individual contracts within that group.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=269ded4acadb4cdfae3de6a4884f96a1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/6-avoidance-of-future-valuation-strain/08-09-2020?p=1" data-id="4c0ca110be6c40bfb42da226bfaad2e2" data-effective-date="08-09-2020" data-download-title="Avoidance of Future Valuation Strain_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/6-avoidance-of-future-valuation-strain/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#4c0ca110be6c40bfb42da226bfaad2e2&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Avoidance of Future Valuation Strain">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=4c0ca110be6c40bfb42da226bfaad2e2">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Avoidance of Future Valuation Strain
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="86d8f118c96c478fa4fd678387ea7145"
+	 data-version="d8356ec65a034ecbb31208a53ed92ea6"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Cash Flows to Be Valued
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="48093b85c75948ed936a91cbbd724cfd"
+	 data-version="da0465354bdc42788150379ec6bb6de0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In a prospective valuation, a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must:</p>
+<ol class="new-bullet">
+<li>(1) include in the cash flows to be valued, the following:</li>
+<ol>
+<li>(a) <em><a  class="glossary-link" title="future premiums" href="#glossary-term-8dbdec51bbcc422f9c9ed5fd5dc587e3" data-mce-linktype="2" data-glossary-id="77435">future premiums</a></em>;</li>
+<li>(b) expenses, including commissions;</li>
+<li>(c) <em><a  class="glossary-link" title="benefits payable" href="#glossary-term-d48983be05cb4b9dbeef819cee99d40d" data-mce-linktype="2" data-glossary-id="77432">benefits payable</a></em>; and</li>
+<li>(d) subject to (2), amounts to be received or paid in respect of <em><a  class="glossary-link" title="contracts of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long-term insurance</a></em> under contracts of <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> or <em><a  class="glossary-link" title="analogous non-reinsurance financing agreements" href="#glossary-term-0c9a58a9399043aa99be3f1d429558b7" data-mce-linktype="2" data-glossary-id="77264">analogous non-reinsurance financing agreements</a></em>; but</li>
+</ol>
+<li>(2) exclude from those cash flows amounts recoverable from an <em><a  class="glossary-link" title="ISPV" href="#glossary-term-ee23e1c1b17a4fbf8d5003ff7e6117fa" data-mce-linktype="2" data-glossary-id="52840">ISPV</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=48093b85c75948ed936a91cbbd724cfd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/7-cash-flows-to-be-valued/08-09-2020?p=1" data-id="86d8f118c96c478fa4fd678387ea7145" data-effective-date="08-09-2020" data-download-title="Cash Flows to Be Valued_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/7-cash-flows-to-be-valued/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#86d8f118c96c478fa4fd678387ea7145&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Cash Flows to Be Valued">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=86d8f118c96c478fa4fd678387ea7145">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Cash Flows to Be Valued
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="9f2527ccdcba436d8f96f6b525b1d48e"
+	 data-version="d2cc7086a43e47838a3867149b0d72c0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Valuation Rates of Interest
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c40c173c2242407786a37b321bde789c"
+	 data-version="466986addd49426eae109a838ec5f9da"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In calculating the present value of future net cash flows, a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must determine the rates of interest to be used in accordance with <a  title="8.2" href="/pra-rules/insurance-company-mathematical-reserves#f85b8e1ba37440759c26e6e7b1abf416" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">8.2</a>, <a  title="9" href="/pra-rules/insurance-company-mathematical-reserves#e646bfa6b98c4af2b01dea1d163e48ff" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">9</a> and <a  title="10" href="/pra-rules/insurance-company-mathematical-reserves#7d287073ef6f45dbaa5689b32a193a7c" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">10</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c40c173c2242407786a37b321bde789c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f85b8e1ba37440759c26e6e7b1abf416"
+	 data-version="6f84598147444487b3a1bff1bd534888"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) The rates of interest required by <a  title="8.1" href="/pra-rules/insurance-company-mathematical-reserves#c40c173c2242407786a37b321bde789c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">8.1</a> to be used by a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> for the calculation of the present value of a <em><a  class="glossary-link" title="long-term insurance liability" href="#glossary-term-cfbbe794a03048099552f930dc953228" data-mce-linktype="2" data-glossary-id="77335">long-term insurance liability</a></em> must not exceed 97.5% of the <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> that is expected to be achieved on:</li>
+<ol>
+<li>(a) the assets allocated to cover that liability;</li>
+<li>(b) the reinvestment of sums expected to be received from those assets; and</li>
+<li>(c) the investment of future <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> receipts.</li>
+</ol>
+<li>(2) The requirements in (1) do not apply to a <em><a  class="glossary-link" title="contract of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contract of long-term insurance</a></em> in respect of which the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has calculated a negative value for the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> in accordance with <a  title="5.1" href="/pra-rules/insurance-company-mathematical-reserves#04ae925c09df483385b1851800e33030" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a>.</li>
+<li>(3) For the purposes of (1), the rates of interest assumed must allow appropriately for the rates of tax that apply to the investment return on <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> assets.</li>
+<li>(4) For the purposes of (3), the rates of tax assumed must be such that the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> total implied liability for tax arising from the allocation of assets to liabilities is not less than the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> actual expected liability for tax for the period in respect of which tax is to be assessed.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f85b8e1ba37440759c26e6e7b1abf416">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/8-valuation-rates-of-interest/08-09-2020?p=1" data-id="9f2527ccdcba436d8f96f6b525b1d48e" data-effective-date="08-09-2020" data-download-title="Valuation Rates of Interest_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/8-valuation-rates-of-interest/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#9f2527ccdcba436d8f96f6b525b1d48e&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Valuation Rates of Interest">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=9f2527ccdcba436d8f96f6b525b1d48e">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Valuation Rates of Interest
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="e646bfa6b98c4af2b01dea1d163e48ff"
+	 data-version="278bfa65a2af474c9a3050bb3a5a6dbc"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Risk-Adjusted Yield
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="17d909742b8b4f1ab4a68ba1a50a2686"
+	 data-version="edbec778efdc408f871553a76cc83f61"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> on an asset must be calculated by:</p>
+<ol class="new-bullet">
+<li>(1) taking the asset together with any covering <em><a  class="glossary-link" title="derivatives" href="#glossary-term-bde4e9bdb91446e8b7838c3b8688533d" data-mce-linktype="2" data-glossary-id="52816">derivatives</a></em>, forward transactions and <em><a  class="glossary-link" title="quasi-derivatives" href="#glossary-term-d8456ad5b70840d98d61fefad5bb2584" data-mce-linktype="2" data-glossary-id="52880">quasi-derivatives</a></em>;</li>
+<li>(2) assuming that the factors which affect the yield will remain unchanged after the valuation date;</li>
+<li>(3) valuing the asset (together with any <em><a  class="glossary-link" title="offsetting transaction" href="#glossary-term-8650e38f77a64fcca14391bc4e4e89b7" data-mce-linktype="2" data-glossary-id="77349">offsetting transaction</a></em>) in accordance with <a  title="Insurance Company &ndash; Overall Resources and Valuation 3" href="/pra-rules/insurance-company-overall-resources-and-valuation#b19253e8c1d24ab283bba0f064e8f9e1" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Insurance Company &ndash; Overall Resources and Valuation 3</a> to <a  title="8" href="/pra-rules/insurance-company-overall-resources-and-valuation#669e75841d71461e84b1f2d08d0c1f4f" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">8</a>;</li>
+<li>(4) making reasonable assumptions as to whether, and if so when, any options or other rights embedded in the asset (or in any <em><a  class="glossary-link" title="offsetting transaction" href="#glossary-term-8650e38f77a64fcca14391bc4e4e89b7" data-mce-linktype="2" data-glossary-id="77349">offsetting transaction</a></em>) will be exercised.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=17d909742b8b4f1ab4a68ba1a50a2686">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bceebc7e3a1d49ed9f7e1d067614ed86"
+	 data-version="c9967d7ffda04e4491f2f8302b13a025"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of <a  title="9.1(2)" href="/pra-rules/insurance-company-mathematical-reserves#17d909742b8b4f1ab4a68ba1a50a2686" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.1</a>(2), the factors that affect yield should be ascertained as at the valuation date (that is, the date to which present values of cash flows are being calculated). All changes known to have occurred by that date must be taken into account including:</p>
+<ol class="new-bullet">
+<li>(1) changes in the rental income from <em><a  class="glossary-link" title="real estate" href="#glossary-term-399b87d7e3c2496189ca6ef4ca2c2785" data-mce-linktype="2" data-glossary-id="77363">real estate</a></em>;</li>
+<li>(2) changes in dividends or audited profit on equities;</li>
+<li>(3) known or forecast changes in dividends which have been publicly announced by the <em><a  class="glossary-link" title="issuer" href="#glossary-term-112345ae59b2415b8628f4d2393a5747" data-mce-linktype="2" data-glossary-id="77324">issuer</a></em> by the valuation date;</li>
+<li>(4) known or forecast changes in earnings which have been publicly announced by the <em><a  class="glossary-link" title="issuer" href="#glossary-term-112345ae59b2415b8628f4d2393a5747" data-mce-linktype="2" data-glossary-id="77324">issuer</a></em> by the valuation date;</li>
+<li>(5) alterations in capital structure; and</li>
+<li>(6) the value (at the most recent date at or before the valuation date for which it is known) of any determinant of the amount of any future interest or capital payment.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bceebc7e3a1d49ed9f7e1d067614ed86">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5234d5f0ba6e44d3ac11ff043b855a56"
+	 data-version="d5ad22a4849a496981a07bb8e4f96fa8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> is either:</p>
+<ol class="new-bullet">
+<li>(1) for equities and <em><a  class="glossary-link" title="real estate" href="#glossary-term-399b87d7e3c2496189ca6ef4ca2c2785" data-mce-linktype="2" data-glossary-id="77363">real estate</a></em>, a <em><a  class="glossary-link" title="running yield" href="#glossary-term-f9b66987594f404abbe5715b2ed674f8" data-mce-linktype="2" data-glossary-id="77440">running yield</a></em>; or</li>
+<li>(2) for all other assets, the <em><a  class="glossary-link" title="internal rate of return" href="#glossary-term-2264610b4f2b44dbbc51d8fe5accb69f" data-mce-linktype="2" data-glossary-id="77436">internal rate of return</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5234d5f0ba6e44d3ac11ff043b855a56">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b11be496d2ba459e8e58ba36e44cb71f"
+	 data-version="d6d32a4d10274ae5816a9986b8399e0f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> on a basket of assets is the arithmetic mean of the <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> on each asset weighted by that asset's <em><a  class="glossary-link" title="market value" href="#glossary-term-635f9af199c54afda8f5e835900e86b9" data-mce-linktype="2" data-glossary-id="77338">market value</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b11be496d2ba459e8e58ba36e44cb71f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="04b085a7f5df4a4d99e3cc37ac13810a"
+	 data-version="7d161da0857d44c08d8d2aca15d23bc8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="running yield" href="#glossary-term-f9b66987594f404abbe5715b2ed674f8" data-mce-linktype="2" data-glossary-id="77440">running yield</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) for <em><a  class="glossary-link" title="real estate" href="#glossary-term-399b87d7e3c2496189ca6ef4ca2c2785" data-mce-linktype="2" data-glossary-id="77363">real estate</a></em>, is the ratio of:</li>
+<ol>
+<li>(a) the rental income arising from the <em><a  class="glossary-link" title="real estate" href="#glossary-term-399b87d7e3c2496189ca6ef4ca2c2785" data-mce-linktype="2" data-glossary-id="77363">real estate</a></em> over the previous 12 <em><a  class="glossary-link" title="months" href="#glossary-term-92a8d9fe40fd46da9b454ff4124a6189" data-mce-linktype="2" data-glossary-id="77431">months</a></em>; to</li>
+<li>(b) the <em><a  class="glossary-link" title="market value" href="#glossary-term-635f9af199c54afda8f5e835900e86b9" data-mce-linktype="2" data-glossary-id="77338">market value</a></em> of the <em><a  class="glossary-link" title="real estate" href="#glossary-term-399b87d7e3c2496189ca6ef4ca2c2785" data-mce-linktype="2" data-glossary-id="77363">real estate</a></em>.</li>
+</ol>
+<li>(2) for equities, is:</li>
+<ol>
+<li>(a) the <em><a  class="glossary-link" title="dividend yield" href="#glossary-term-6594b914ba474ec3a6c7e52200486036" data-mce-linktype="2" data-glossary-id="77433">dividend yield</a></em>, if the <em><a  class="glossary-link" title="dividend yield" href="#glossary-term-6594b914ba474ec3a6c7e52200486036" data-mce-linktype="2" data-glossary-id="77433">dividend yield</a></em> is more than the <em><a  class="glossary-link" title="earnings yield" href="#glossary-term-e45a069cffac4ce7935806334ad86fba" data-mce-linktype="2" data-glossary-id="77434">earnings yield</a></em>;</li>
+<li>(b) otherwise, the sum of the <em><a  class="glossary-link" title="dividend yield" href="#glossary-term-6594b914ba474ec3a6c7e52200486036" data-mce-linktype="2" data-glossary-id="77433">dividend yield</a></em> and the <em><a  class="glossary-link" title="earnings yield" href="#glossary-term-e45a069cffac4ce7935806334ad86fba" data-mce-linktype="2" data-glossary-id="77434">earnings yield</a></em>, divided by two.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=04b085a7f5df4a4d99e3cc37ac13810a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="132b0b32ff224a3897f75597e2595e20"
+	 data-version="2929ec3de3804192a51aa5a2ab638a58"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="9.5(2)" href="/pra-rules/insurance-company-mathematical-reserves#04b085a7f5df4a4d99e3cc37ac13810a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">9.5</a>(2):</p>
+<ol class="new-bullet">
+<li>(1) the <em><a  class="glossary-link" title="dividend yield" href="#glossary-term-6594b914ba474ec3a6c7e52200486036" data-mce-linktype="2" data-glossary-id="77433">dividend yield</a></em> is the ratio (expressed as a percentage) of dividend income over the previous 12 <em><a  class="glossary-link" title="months" href="#glossary-term-92a8d9fe40fd46da9b454ff4124a6189" data-mce-linktype="2" data-glossary-id="77431">months</a></em> from the equities for which the <em><a  class="glossary-link" title="running yield" href="#glossary-term-f9b66987594f404abbe5715b2ed674f8" data-mce-linktype="2" data-glossary-id="77440">running yield</a></em> is being calculated ("the relevant equities") to the <em><a  class="glossary-link" title="market value" href="#glossary-term-635f9af199c54afda8f5e835900e86b9" data-mce-linktype="2" data-glossary-id="77338">market value</a></em> of those equities;</li>
+<li>(2) the <em><a  class="glossary-link" title="earnings yield" href="#glossary-term-e45a069cffac4ce7935806334ad86fba" data-mce-linktype="2" data-glossary-id="77434">earnings yield</a></em> is the ratio (expressed as a percentage) of the audited profit (including exceptional items and extraordinary items) for the preceding <em><a  class="glossary-link" title="financial year" href="#glossary-term-a3c07cebb1e34b11a18a36c0b80f9e27" data-mce-linktype="2" data-glossary-id="77303">financial year</a></em> of the <em><a  class="glossary-link" title="issuer" href="#glossary-term-112345ae59b2415b8628f4d2393a5747" data-mce-linktype="2" data-glossary-id="77324">issuer</a></em> of the relevant equities to the <em><a  class="glossary-link" title="market value" href="#glossary-term-635f9af199c54afda8f5e835900e86b9" data-mce-linktype="2" data-glossary-id="77338">market value</a></em> of those equities;</li>
+<li>(3) the <em><a  class="glossary-link" title="earnings yield" href="#glossary-term-e45a069cffac4ce7935806334ad86fba" data-mce-linktype="2" data-glossary-id="77434">earnings yield</a></em> must be calculated in accordance with whichever is most appropriate (to the <em><a  class="glossary-link" title="issuer" href="#glossary-term-112345ae59b2415b8628f4d2393a5747" data-mce-linktype="2" data-glossary-id="77324">issuer</a></em> of the relevant equities) of <em><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a>,</em> US or international generally accepted accounting practice.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=132b0b32ff224a3897f75597e2595e20">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c8eb3f964e9c4636a5d4416f8ce549f2"
+	 data-version="d4c5ed62ea9a4bec8dcf9fb11c60bb4a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="internal rate of return" href="#glossary-term-2264610b4f2b44dbbc51d8fe5accb69f" data-mce-linktype="2" data-glossary-id="77436">internal rate of return</a></em> on an asset is the annual rate of interest which, if used to calculate the present value of future income (before deduction of tax) and of repayments of capital (before deduction of tax) would result in the sum of those amounts being equal to the <em><a  class="glossary-link" title="market value" href="#glossary-term-635f9af199c54afda8f5e835900e86b9" data-mce-linktype="2" data-glossary-id="77338">market value</a></em> of the asset.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c8eb3f964e9c4636a5d4416f8ce549f2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="416862e1e47c40f696b8d3e9130d057d"
+	 data-version="5e3aa721f47b44929c336a020a71f5ec"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In both the <em><a  class="glossary-link" title="running yield" href="#glossary-term-f9b66987594f404abbe5715b2ed674f8" data-mce-linktype="2" data-glossary-id="77440">running yield</a></em> and <em><a  class="glossary-link" title="internal rate of return" href="#glossary-term-2264610b4f2b44dbbc51d8fe5accb69f" data-mce-linktype="2" data-glossary-id="77436">internal rate of return</a></em> the yield must be reduced to exclude that part of the yield that represents compensation for credit risk arising from the asset.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=416862e1e47c40f696b8d3e9130d057d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fb3af4d5e185484db465c0470407c462"
+	 data-version="7607b54a53ae4ecfb283af5cc2740151"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Provision for credit risk for securities that are not credit-rated must be made on principles at least as prudent as those adopted for credit-rated securities.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fb3af4d5e185484db465c0470407c462">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/9-risk-adjusted-yield/08-09-2020?p=1" data-id="e646bfa6b98c4af2b01dea1d163e48ff" data-effective-date="08-09-2020" data-download-title="Risk-Adjusted Yield_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/9-risk-adjusted-yield/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#e646bfa6b98c4af2b01dea1d163e48ff&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Risk-Adjusted Yield">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=e646bfa6b98c4af2b01dea1d163e48ff">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Risk-Adjusted Yield
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="7d287073ef6f45dbaa5689b32a193a7c"
+	 data-version="a375275f38114c489204bf46cdb89863"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Investment and Reinvestment
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="10a3985d30364e06a62443700c35004a"
+	 data-version="2ae1a41726f04eaf9e6deee5fae63347"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> assumed for the investment or reinvestment of sterling sums (other than sums expected to be received within the next three years) must not exceed the lowest of:</p>
+<ol class="new-bullet">
+<li>(1) the higher of:</li>
+<ol>
+<li>(a) the long-term gilt yield; and</li>
+<li>(b) the greater of:</li>
+<ol>
+<li>(i) the forward gilts yield; and</li>
+<li>(ii) the forward rate on sterling interest rate swaps, reduced to exclude that part of the rate that represents compensation for credit risk;</li>
+</ol></ol></ol>
+<p style="padding-left: 60px;"><span style="line-height: 1.6em; text-indent: -1.3em;">where the forward yields and forward rates corresponding to the time when the sums are expected to be received are weighted so as to reflect the investment and reinvestment characteristics of the liabilities covered;</span></p>
+<ol class="new-bullet">
+<li>(2) 3% per annum, increased by two thirds of the excess, if any, of the percentage in (1) over 3% per annum; and</li>
+<li>(3) 6.5% per annum.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=10a3985d30364e06a62443700c35004a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b9c8d263a07144fe80a85602e48fb1e6"
+	 data-version="79f36b0ed5e34899b30685e340b27b85"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> assumed for the investment or reinvestment of those sterling sums expected to be received within the next three years must not exceed the <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> on the assets actually held adjusted linearly over the three-year period to the <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> determined under <a  title="10.1" href="/pra-rules/insurance-company-mathematical-reserves#10a3985d30364e06a62443700c35004a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">10.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b9c8d263a07144fe80a85602e48fb1e6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="cb140d7db96a4118a01c8182826df731"
+	 data-version="b0810a4b8cbd439cbab571cb02d1f99d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="risk-adjusted yield" href="#glossary-term-57527e393a0d4b079a7788b25b4a1316" data-mce-linktype="2" data-glossary-id="77439">risk-adjusted yield</a></em> assumed for the investment or reinvestment of sums denominated in a currency other than sterling must be at least as prudent as in <a  title="10.1" href="/pra-rules/insurance-company-mathematical-reserves#10a3985d30364e06a62443700c35004a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">10.1</a> and <a  title="10.2" href="/pra-rules/insurance-company-mathematical-reserves#b9c8d263a07144fe80a85602e48fb1e6" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">10.2</a> taking into account the yields on government securities denominated in that currency.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=cb140d7db96a4118a01c8182826df731">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="226a6fee53764335a352ff79383633f0"
+	 data-version="9f83c17595ba4c65ad4c2b477f651c8d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of <a  title="10.3" href="/pra-rules/insurance-company-mathematical-reserves#cb140d7db96a4118a01c8182826df731" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">10.3</a> the yields on the government securities must be reduced to exclude that part of the yield that represents compensation for credit risk unless, in relation to the <em><a  class="glossary-link" title="issuer" href="#glossary-term-112345ae59b2415b8628f4d2393a5747" data-mce-linktype="2" data-glossary-id="77324">issuer</a></em> of those securities, a credit rating is available from at least one of the following rating agencies in the corresponding rating categories;</p>
+<ol class="new-bullet">
+<li>(1) for A.M. Best Company, &lsquo;aaa&rsquo; or &lsquo;aa&rsquo;;</li>
+<li>(2) for Fitch Ratings, &lsquo;AAA&rsquo; or &lsquo;AA&rsquo;;</li>
+<li>(3) for Moody's Investors Service &lsquo;Aaa&rsquo; or &lsquo;Aa&rsquo;; or</li>
+<li>(4) for Standard &amp; Poor's Corporation &lsquo;AAA&rsquo; or &lsquo;AA&rsquo;.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=226a6fee53764335a352ff79383633f0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/10-investment-and-reinvestment/08-09-2020?p=1" data-id="7d287073ef6f45dbaa5689b32a193a7c" data-effective-date="08-09-2020" data-download-title="Investment and Reinvestment_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/10-investment-and-reinvestment/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#7d287073ef6f45dbaa5689b32a193a7c&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Investment and Reinvestment">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=7d287073ef6f45dbaa5689b32a193a7c">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Investment and Reinvestment
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="3cfdc51ae5cb423588def576c124f487"
+	 data-version="34a7df9421444683a5d953a3acb762a9"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					11
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Future Premiums
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a44b065d02594320811148a0b9c3de68"
+	 data-version="6effcf201d7a47bfb7684733d85d784c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to <em><a  class="glossary-link" title="with-profits policies" href="#glossary-term-8cd6681b956e4dbc8f39769d77988a5d" data-mce-linktype="2" data-glossary-id="52938">with-profits policies</a></em>, except <em><a  class="glossary-link" title="accumulating with-profits policies" href="#glossary-term-f234f9a460f9436faec1c66c895dddbd" data-mce-linktype="2" data-glossary-id="77258">accumulating with-profits policies</a></em> written on a recurring single premium basis.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a44b065d02594320811148a0b9c3de68">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4105a80edfec44d0aec0f0eb3e59c9ec"
+	 data-version="a54e5403c57c4bc28bad73909c8ea7a9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="future premium" href="#glossary-term-8dbdec51bbcc422f9c9ed5fd5dc587e3" data-mce-linktype="2" data-glossary-id="77435">future premium</a></em> must not exceed the lower of the value of:</p>
+<ol class="new-bullet">
+<li>(1) the actual <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> payable under the contract; and</li>
+<li>(2) the <em><a  class="glossary-link" title="net premium" href="#glossary-term-f3e4d1011bd24ac7b1124a5ce39e5bc2" data-mce-linktype="2" data-glossary-id="77343">net premium</a></em>, which may be increased for <em><a  class="glossary-link" title="deferred acquisition costs" href="#glossary-term-3546dc9eb722448689d4ea3a5a53aa92" data-mce-linktype="2" data-glossary-id="77292">deferred acquisition costs</a></em> in accordance with <a  title="12.1" href="/pra-rules/insurance-company-mathematical-reserves#683f53debd18460dbb93772d79986b7e" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">12.1</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4105a80edfec44d0aec0f0eb3e59c9ec">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="580644c39824443c8f148f6c9f7a7dac"
+	 data-version="9f44fbf8d4064c36b7aa6e862f2d6c98"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the terms of a <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em> have changed since it was first entered into, a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must, in determining the <em><a  class="glossary-link" title="net premium" href="#glossary-term-f3e4d1011bd24ac7b1124a5ce39e5bc2" data-mce-linktype="2" data-glossary-id="77343">net premium</a></em> for the purpose of <a  title="11.2(2)" href="/pra-rules/insurance-company-mathematical-reserves#4105a80edfec44d0aec0f0eb3e59c9ec" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.2</a>(2), treat that change as if either:</p>
+<ol class="new-bullet">
+<li>(1) it had been included in the original contract but came into effect from the time the change became effective; or</li>
+<li>(2) the original contract were cancelled and replaced by a new contract (with an initial <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> paid on the new contract equal to the liability under the original contract immediately prior to the change); or</li>
+<li>(3) subject to <a  title="11.4" href="/pra-rules/insurance-company-mathematical-reserves#7b909b8f94274d7bbb3fdd70a25f62f7" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.4</a>, it gave rise to two separate contracts where:</li>
+<ol>
+<li>(a) all <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> are payable under the first contract and that contract provides only for such benefits as those <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> could have purchased from the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> at the date the change became effective; and</li>
+<li>(b) no <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> are payable under the second contract and that contract provides for all the other benefits.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=580644c39824443c8f148f6c9f7a7dac">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7b909b8f94274d7bbb3fdd70a25f62f7"
+	 data-version="b7b37c425bfe4abfa7840d19cca8fa09"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="11.3(3)" href="/pra-rules/insurance-company-mathematical-reserves#580644c39824443c8f148f6c9f7a7dac" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.3</a>(3), a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not treat the change referred to in <a  title="11.3" href="/pra-rules/insurance-company-mathematical-reserves#580644c39824443c8f148f6c9f7a7dac" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.3</a> as giving rise to two separate contracts unless a meaningful comparison can be made between the terms of the contract (as changed) and the terms upon which the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> was newly <em><a  class="glossary-link" title="effecting contracts of insurance" href="#glossary-term-7773bc3941f24234abcff5dd681f0ae4" data-mce-linktype="2" data-glossary-id="52201">effecting contracts of insurance</a></em> at the time the contract was changed.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7b909b8f94274d7bbb3fdd70a25f62f7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/11-future-premiums/08-09-2020?p=1" data-id="3cfdc51ae5cb423588def576c124f487" data-effective-date="08-09-2020" data-download-title="Future Premiums_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/11-future-premiums/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#3cfdc51ae5cb423588def576c124f487&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Future Premiums">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=3cfdc51ae5cb423588def576c124f487">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Future Premiums
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="6649ec64c0454bf6baaf73dd714397ad"
+	 data-version="5d0f7ef7c59148b3a614c4188e4f5cbf"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					12
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Future Premiums: Adjustment for Deferred Acquisition Costs
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="683f53debd18460dbb93772d79986b7e"
+	 data-version="bd304dd4ee5c4de7b958fb4b3d498c22"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) The amount of any increase to the <em><a  class="glossary-link" title="net premium" href="#glossary-term-f3e4d1011bd24ac7b1124a5ce39e5bc2" data-mce-linktype="2" data-glossary-id="77343">net premium</a></em> for <em><a  class="glossary-link" title="deferred acquisition costs" href="#glossary-term-3546dc9eb722448689d4ea3a5a53aa92" data-mce-linktype="2" data-glossary-id="77292">deferred acquisition costs</a></em> must not exceed the equivalent of the <em><a  class="glossary-link" title="recoverable acquisition expenses" href="#glossary-term-cad80f4137174c82942baafa7268dc51" data-mce-linktype="2" data-glossary-id="77438">recoverable acquisition expenses</a></em> spread over the period of <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> payments and calculated in accordance with the rates of interest, mortality and morbidity assumed in calculating the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em>.</li>
+<li>(2) The <em><a  class="glossary-link" title="recoverable acquisition expenses" href="#glossary-term-cad80f4137174c82942baafa7268dc51" data-mce-linktype="2" data-glossary-id="77438">recoverable acquisition expenses</a></em> in (1) must not exceed the lower of:</li>
+<ol>
+<li>(a) the value of the excess of actual <em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a></em> over <em><a  class="glossary-link" title="net premiums" href="#glossary-term-f3e4d1011bd24ac7b1124a5ce39e5bc2" data-mce-linktype="2" data-glossary-id="77343">net premiums</a></em>; and</li>
+<li>(b) 3.5% of the <em><a  class="glossary-link" title="relevant capital sum" href="#glossary-term-f3a15a8a538f484d81ac54875e424053" data-mce-linktype="2" data-glossary-id="77368">relevant capital sum</a></em>.</li>
+</ol>
+<li>(3) <em><a  class="glossary-link" title="Recoverable acquisition expenses" href="#glossary-term-cad80f4137174c82942baafa7268dc51" data-mce-linktype="2" data-glossary-id="77438">Recoverable acquisition expenses</a></em> may be calculated as the average for a group of similar contracts weighted by the <em><a  class="glossary-link" title="relevant capital sum" href="#glossary-term-f3a15a8a538f484d81ac54875e424053" data-mce-linktype="2" data-glossary-id="77368">relevant capital sum</a></em> for each contract.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=683f53debd18460dbb93772d79986b7e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/12-future-premiums-adjustment-for-deferred-acquisition-costs/08-09-2020?p=1" data-id="6649ec64c0454bf6baaf73dd714397ad" data-effective-date="08-09-2020" data-download-title="Future Premiums: Adjustment for Deferred Acquisition Costs_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/12-future-premiums-adjustment-for-deferred-acquisition-costs/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#6649ec64c0454bf6baaf73dd714397ad&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Future Premiums: Adjustment for Deferred Acquisition Costs">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=6649ec64c0454bf6baaf73dd714397ad">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Future Premiums: Adjustment for Deferred Acquisition Costs
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="71d6b115f52b4538b3c4277e54727d2f"
+	 data-version="b5455b7a66484dafb23a62d45bb7e33d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					13
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Future Premiums: Accumulating With-Profits Policies
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ba00e264a8f246ae83f9035d2dc0bc38"
+	 data-version="2718a528920d48c59f42b02712547c58"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to <em><a  class="glossary-link" title="accumulating with-profits policies" href="#glossary-term-f234f9a460f9436faec1c66c895dddbd" data-mce-linktype="2" data-glossary-id="77258">accumulating with-profits policies</a></em> written on a recurring single <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a></em> basis.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ba00e264a8f246ae83f9035d2dc0bc38">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="aa4be5179c8d4f0783bb208096f4abaa"
+	 data-version="46858c07d88e4bc09579de8c18e5c4a2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not attribute any value to a <em><a  class="glossary-link" title="future premium" href="#glossary-term-8dbdec51bbcc422f9c9ed5fd5dc587e3" data-mce-linktype="2" data-glossary-id="77435">future premium</a></em> under the contract.</li>
+<li>(2) Any liability arising only upon the payment of that <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a> </em>may be ignored except to the extent that the value of that liability upon payment would exceed the amount of that <em><a  class="glossary-link" title="premium" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premium</a>.</em></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=aa4be5179c8d4f0783bb208096f4abaa">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/13-future-premiums-accumulating-with-profits-policies/08-09-2020?p=1" data-id="71d6b115f52b4538b3c4277e54727d2f" data-effective-date="08-09-2020" data-download-title="Future Premiums: Accumulating With-Profits Policies_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/13-future-premiums-accumulating-with-profits-policies/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#71d6b115f52b4538b3c4277e54727d2f&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Future Premiums: Accumulating With-Profits Policies">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=71d6b115f52b4538b3c4277e54727d2f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Future Premiums: Accumulating With-Profits Policies
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="6597e4b426624d36acae449ffe39acd9"
+	 data-version="6749eb6445434430ac95a4750da6ada5"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					14
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Expenses
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6d5d9ca2c6cb490abcaee7de9fa3434a"
+	 data-version="5fa7354a07b3468d81b4fbd4dc111bb9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must make provision for expenses, either implicitly or explicitly, in its <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> of an amount which is not less than the amount expected, on prudent assumptions, to be incurred in fulfilling its <em><a  class="glossary-link" title="contracts of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long-term insurance</a></em>.</li>
+<li>(2) For the purpose of (1), expenses must be valued:</li>
+<ol>
+<li>(a) after taking account of the effect of taxation;</li>
+<li>(b) having regard to the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> actual expenses in the last 12 <em><a  class="glossary-link" title="months" href="#glossary-term-92a8d9fe40fd46da9b454ff4124a6189" data-mce-linktype="2" data-glossary-id="77431">months</a></em> before the <em><a  class="glossary-link" title="actuarial valuation date" href="#glossary-term-ff554d12a486446094eb8f8fb04051c6" data-mce-linktype="2" data-glossary-id="77261">actuarial valuation date</a></em> and any increases in expenses expected to occur in the future;</li>
+<li>(c) after making prudent assumptions as to the effects of inflation on future increases in prices and earnings; and</li>
+<li>(d) at no less than the level that would be incurred if the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> were to cease to transact new business 12 <em><a  class="glossary-link" title="months" href="#glossary-term-92a8d9fe40fd46da9b454ff4124a6189" data-mce-linktype="2" data-glossary-id="77431">months</a></em> after the <em><a  class="glossary-link" title="actuarial valuation date" href="#glossary-term-ff554d12a486446094eb8f8fb04051c6" data-mce-linktype="2" data-glossary-id="77261">actuarial valuation date</a></em>.</li>
+</ol>
+<li>(3) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not rely upon an implicit provision arising from the method of valuing <em><a  class="glossary-link" title="future premiums" href="#glossary-term-8dbdec51bbcc422f9c9ed5fd5dc587e3" data-mce-linktype="2" data-glossary-id="77435">future premiums</a></em> except to the extent that:</li>
+<ol>
+<li>(a) it is reasonable to assume that expenses will be recoverable from <em><a  class="glossary-link" title="future premiums" href="#glossary-term-8dbdec51bbcc422f9c9ed5fd5dc587e3" data-mce-linktype="2" data-glossary-id="77435">future premiums</a></em>; and</li>
+<li>(b) the expenses would only arise if the <em><a  class="glossary-link" title="future premiums" href="#glossary-term-8dbdec51bbcc422f9c9ed5fd5dc587e3" data-mce-linktype="2" data-glossary-id="77435">future premiums</a></em> were received.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6d5d9ca2c6cb490abcaee7de9fa3434a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="336d5b93b7164e7e80d231b7488c19b3"
+	 data-version="5cadea8bee554086ad88823b116838c1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The provisions for expenses (whether implicit or explicit) required by <a  title="14.1" href="/pra-rules/insurance-company-mathematical-reserves#6d5d9ca2c6cb490abcaee7de9fa3434a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.1</a> must be sufficient to cover all the expenses of running off the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> existing <em><a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em> including:</p>
+<ol class="new-bullet">
+<li>(1) all discontinuance costs (for example, redundancy costs and closure costs) that would arise if the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> were to cease transacting new business 12 <em><a  class="glossary-link" title="months" href="#glossary-term-92a8d9fe40fd46da9b454ff4124a6189" data-mce-linktype="2" data-glossary-id="77431">months</a></em> after the <em><a  class="glossary-link" title="actuarial valuation date" href="#glossary-term-ff554d12a486446094eb8f8fb04051c6" data-mce-linktype="2" data-glossary-id="77261">actuarial valuation date</a></em> in circumstances where (and to the extent that) the discontinuance costs exceed the projected surplus available to meet such costs;</li>
+<li>(2) all costs of continuing to service the existing business taking into account the loss of economies of scale from, and any other likely consequences of, ceasing to transact new business at that time; and</li>
+<li>(3) the lower of:</li>
+<ol>
+<li>(a) any projected valuation strain from writing new business for the 12 <em><a  class="glossary-link" title="months" href="#glossary-term-92a8d9fe40fd46da9b454ff4124a6189" data-mce-linktype="2" data-glossary-id="77431">months</a></em> following the <em><a  class="glossary-link" title="actuarial valuation date" href="#glossary-term-ff554d12a486446094eb8f8fb04051c6" data-mce-linktype="2" data-glossary-id="77261">actuarial valuation date</a></em> to the extent the actual amount of that strain exceeds the projected surplus on prudent assumptions from existing business in the 12 <em><a  class="glossary-link" title="months" href="#glossary-term-92a8d9fe40fd46da9b454ff4124a6189" data-mce-linktype="2" data-glossary-id="77431">months</a></em> following the <em><a  class="glossary-link" title="actuarial valuation date" href="#glossary-term-ff554d12a486446094eb8f8fb04051c6" data-mce-linktype="2" data-glossary-id="77261">actuarial valuation date</a></em>; and</li>
+<li>(b) any projected new business expense overrun from writing new business for the 12 <em><a  class="glossary-link" title="months" href="#glossary-term-92a8d9fe40fd46da9b454ff4124a6189" data-mce-linktype="2" data-glossary-id="77431">months</a></em> following the <em><a  class="glossary-link" title="actuarial valuation date" href="#glossary-term-ff554d12a486446094eb8f8fb04051c6" data-mce-linktype="2" data-glossary-id="77261">actuarial valuation date</a></em> to the extent the projected expenses exceed the expenses that the new business can support on a prudent basis.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=336d5b93b7164e7e80d231b7488c19b3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/14-expenses/08-09-2020?p=1" data-id="6597e4b426624d36acae449ffe39acd9" data-effective-date="08-09-2020" data-download-title="Expenses_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/14-expenses/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#6597e4b426624d36acae449ffe39acd9&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Expenses">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=6597e4b426624d36acae449ffe39acd9">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Expenses
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2878611e175541a0a6a323e446a53ee4"
+	 data-version="872b211b67034bf1a4a46072e6da587a"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					15
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Mortality and Morbidity
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d451f977fbc641dba2c58a99233ca171"
+	 data-version="e6d4051d79a44bf597c7ad0634463310"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must set the assumptions for mortality and morbidity using prudent rates of mortality and morbidity that are appropriate to the country or territory of residence of the person whose life or health is insured.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d451f977fbc641dba2c58a99233ca171">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						15.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/15-mortality-and-morbidity/08-09-2020?p=1" data-id="2878611e175541a0a6a323e446a53ee4" data-effective-date="08-09-2020" data-download-title="Mortality and Morbidity_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/15-mortality-and-morbidity/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#2878611e175541a0a6a323e446a53ee4&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Mortality and Morbidity">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2878611e175541a0a6a323e446a53ee4">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Mortality and Morbidity
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="e383b092b7af4377bcbb1b0022f2540f"
+	 data-version="19eee6301b0c41d4b878fec654f1dfe4"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					16
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Options
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="862a5628cb0244e2996b98d81f43240f"
+	 data-version="df30fe69856948e8a643ec630a88e85f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) When a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> establishes its <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> in respect of a <em><a  class="glossary-link" title="contract of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contract of long-term insurance</a></em>, the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must include an amount to cover any increase in liabilities which might be the direct result of its <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> exercising an option under, or by virtue of, that <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em>.</li>
+<li>(2) Where the <em><a  class="glossary-link" title="surrender value" href="#glossary-term-77c0fe8ea7f7435e9c137bdab53d4e68" data-mce-linktype="2" data-glossary-id="77382">surrender value</a></em> of a contract is guaranteed, the amount of the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> for that contract at any time must be at least as great as the value guaranteed at that time.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=862a5628cb0244e2996b98d81f43240f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b100a086dd3e4c5ca6e7183fdb693e33"
+	 data-version="8bdd4e19e1124d4290d74ae5f4a93ede"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) Where a <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> may opt to be paid a cash amount or a series of cash payments (including the amount or amounts likely to be paid on a voluntary discontinuance), the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em> for the <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em> established under <a  title="2.1" href="/pra-rules/insurance-company-mathematical-reserves#16d0560407cf4ca6bff93f24bb432c98" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> must be sufficient to ensure that the payment or payments could be made solely from:</li>
+<ol>
+<li>(a) the assets covering those <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em>; and</li>
+<li>(b) the resources arising from those assets and from the contract itself.</li>
+</ol>
+<li>(2) For the purposes of (1), the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must assume that:</li>
+<ol>
+<li>(a) the assumptions adopted for the current valuation remain unaltered and are met; and</li>
+<li>(b) discretionary benefits and charges will be set so as to fulfil the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> regulatory duty to treat its customers fairly under any relevant provision of the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>.</li>
+</ol>
+<li>(3) (1) may be applied to a group of similar contracts instead of to the individual contracts within that group, except where the cash amount or series of cash payments is the amount or amounts likely to be paid on a voluntary discontinuance.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b100a086dd3e4c5ca6e7183fdb693e33">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ec1bff1ed2eb4eb388f03f11bc348d0b"
+	 data-version="049dab2e46064d62bd8de3fcb94e8589"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="16.2" href="/pra-rules/insurance-company-mathematical-reserves#b100a086dd3e4c5ca6e7183fdb693e33" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">16.2</a>, a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must assume that the amount of a cash payment secured by the exercise of an option is:</p>
+<ol class="new-bullet">
+<li>(1) in the case of an <em><a  class="glossary-link" title="accumulating with-profits policy" href="#glossary-term-f234f9a460f9436faec1c66c895dddbd" data-mce-linktype="2" data-glossary-id="77258">accumulating with-profits policy</a></em>, the lower of:</li>
+<ol>
+<li>(a) the amount which the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> would reasonably expect to be paid if the option were exercised, having regard to the representations made by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and including any expectations of a <em><a  class="glossary-link" title="final bonus" href="#glossary-term-65c57d6e05894e02894e1ae15aed3dc7" data-mce-linktype="2" data-glossary-id="77302">final bonus</a></em>; and</li>
+<li>(b) that amount, disregarding all discretionary adjustments;</li>
+</ol>
+<li>(2) in the case of any other <em><a  class="glossary-link" title="policy" href="#glossary-term-de4da8fb8adb47bfbc4aa83794963080" data-mce-linktype="2" data-glossary-id="53223">policy</a>,</em> the amount which the <em><a  class="glossary-link" title="policyholder" href="#glossary-term-e156c275391d4461b0834559bee81894" data-mce-linktype="2" data-glossary-id="53224">policyholder</a></em> would reasonably expect to be paid if the option were exercised, having regard to the representations made by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>,</em> without taking into account any expectations regarding future distributions of profits or the granting of discretionary additions in respect of an <em><a  class="glossary-link" title="established surplus" href="#glossary-term-ad38d6dff66c491d9394b7d579e099ab" data-mce-linktype="2" data-glossary-id="77301">established surplus</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ec1bff1ed2eb4eb388f03f11bc348d0b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/16-options/08-09-2020?p=1" data-id="e383b092b7af4377bcbb1b0022f2540f" data-effective-date="08-09-2020" data-download-title="Options_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/16-options/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#e383b092b7af4377bcbb1b0022f2540f&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Options">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=e383b092b7af4377bcbb1b0022f2540f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Options
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="b054e0542d4046f09b0bb8c154b2e0ab"
+	 data-version="4a9410e4191740f5990edbb3e83afe64"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					17
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Persistency Assumptions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6ea7d663c32840cabe05b7f85c758c5d"
+	 data-version="d5f98d30be9948b7a60845ecb9389ff9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must, when making assumptions about voluntary discontinuance rates in the calculation of the <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em>, ensure that those assumptions meet the general requirements for prudent assumptions as set out in <a  title="3.1" href="/pra-rules/insurance-company-mathematical-reserves#3464ca09e7ac4ba4969d64ede169e1ce" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6ea7d663c32840cabe05b7f85c758c5d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						17.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/17-persistency-assumptions/08-09-2020?p=1" data-id="b054e0542d4046f09b0bb8c154b2e0ab" data-effective-date="08-09-2020" data-download-title="Persistency Assumptions_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/17-persistency-assumptions/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#b054e0542d4046f09b0bb8c154b2e0ab&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Persistency Assumptions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b054e0542d4046f09b0bb8c154b2e0ab">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Persistency Assumptions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="c280e35b6a994a5cacaab8fa560ba8ed"
+	 data-version="458c8222d1f14582a7bfe3c2b789003c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					18
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Reinsurance
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="2d511f6381f8408ea8a33e7dd751e598"
+	 data-version="800da0fcf2d241a9b41985beb7f4c48e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						18.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Chapter, references to:</p>
+<ol class="new-bullet">
+<li>(1) <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> and contracts of<em> <a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> include <em><a  class="glossary-link" title="analogous non-reinsurance financing agreements" href="#glossary-term-0c9a58a9399043aa99be3f1d429558b7" data-mce-linktype="2" data-glossary-id="77264">analogous non-reinsurance financing agreements</a></em>;</li>
+<li>(2) reinsured risks, in relation to a contract of<em><a  class="glossary-link" title=" reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227"> reinsurance</a> </em>entered into by a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>,</em> means that part of:</li>
+<ol>
+<li>(a) the risks insured by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> under <em><a  class="glossary-link" title="contracts of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long-term insurance</a></em> entered into by it; and</li>
+<li>(b) the other risks arising directly from the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em>;</li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">that have been transferred to the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="reinsurer" href="#glossary-term-2200b037e8b940d380c7ee51289fb86f" data-mce-linktype="2" data-glossary-id="77367">reinsurer</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> under that contract of </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a>;</em><span style="line-height: 1.6em; text-indent: -1.3em;"> and</span></li>
+</ol>
+<li>(3) <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> cash outflows include any reduction in <em><a  class="glossary-link" title="policy" href="#glossary-term-de4da8fb8adb47bfbc4aa83794963080" data-mce-linktype="2" data-glossary-id="53223">policy</a></em> liabilities recognised as covered under a contract of <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> or any reduction of any debt to the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> under or in respect of a contract of <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a>.</em></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2d511f6381f8408ea8a33e7dd751e598">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						18.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9a744c956c3a4ca8a395cbf56e3112a7"
+	 data-version="55ff3f8e66c640bbb0682a34da13c20a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						18.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must value <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> cash flows using methods and assumptions which are at least as prudent as the methods and assumptions used to value the underlying <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em> which have been reinsured.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9a744c956c3a4ca8a395cbf56e3112a7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						18.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e765652011c6443e8650409abd353c23"
+	 data-version="332e6e5bdc034bb88552572e35d3b78c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						18.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For purposes of <a  title="18.2" href="/pra-rules/insurance-company-mathematical-reserves#9a744c956c3a4ca8a395cbf56e3112a7" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.2</a>:</p>
+<ol class="new-bullet">
+<li>(1) <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> recoveries must not be recognised unless the underlying liabilities to which they relate have also been recognised;</li>
+<li>(2) <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> cash outflows need not to be valued provided that:</li>
+<ol>
+<li>(a) in accordance with <a  title="18.5" href="/pra-rules/insurance-company-mathematical-reserves#d4d62c94b3f34c8cabede58aa5038431" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.5</a> and <a  title="18.6" href="/pra-rules/insurance-company-mathematical-reserves#b01dba56a42a47a3bc935edbcffc43a6" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.6</a>, they are unambiguously linked to the emergence as surplus of margins included in the valuation of existing <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em> or to the exercise by a <em><a  class="glossary-link" title="reinsurer" href="#glossary-term-2200b037e8b940d380c7ee51289fb86f" data-mce-linktype="2" data-glossary-id="77367">reinsurer</a></em> of its rights under a termination clause; and</li>
+<li>(b) the conditions in <a  title="18.4" href="/pra-rules/insurance-company-mathematical-reserves#15a3304c7222413e970913a02e7171c7" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.4</a> are satisfied;</li>
+</ol>
+<li>(3) <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> cash inflows that are contingent on factors or conditions other than the reinsured risks must not be valued.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e765652011c6443e8650409abd353c23">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						18.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="15a3304c7222413e970913a02e7171c7"
+	 data-version="5fee26c7c78a49929e19ac0dd1bfc5b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						18.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The conditions referred to in <a  title="18.3(2)(b)" href="/pra-rules/insurance-company-mathematical-reserves#e765652011c6443e8650409abd353c23" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.3</a>(2)(b) are that:</p>
+<ol class="new-bullet">
+<li>(1) the <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> is not connected with any other transaction, which, when taken together with the <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a>,</em> could result in the requirements set out in <a  title="18.3(2)" href="/pra-rules/insurance-company-mathematical-reserves#e765652011c6443e8650409abd353c23" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.3</a>(2) no longer being satisfied or in the risk transferred under the <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> being undermined; and</li>
+<li>(2) the present value of the future <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> cash outflows that may be disregarded under <a  title="18.3(2)" href="/pra-rules/insurance-company-mathematical-reserves#e765652011c6443e8650409abd353c23" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.3</a>(2) must not at any time exceed the value of the aggregate net cash inflows that have already been received by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> under the contract of <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> accumulated at an assumed rate of SONIA + 6% per annum.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					08/09/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/insurance-company-mathematical-reserves/01-01-2016#15a3304c7222413e970913a02e7171c7">
+			Past
+			<span class="visually-hidden">
+				version of 18.4 before 08/09/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=15a3304c7222413e970913a02e7171c7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						18.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d4d62c94b3f34c8cabede58aa5038431"
+	 data-version="bc9d722f20974f76abb3862f7c190ef1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						18.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="18.3(2)" href="/pra-rules/insurance-company-mathematical-reserves#e765652011c6443e8650409abd353c23" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.3</a>(2), the "link" must be such that a contingent liability to pay or repay the amount to the <em><a  class="glossary-link" title="reinsurer" href="#glossary-term-2200b037e8b940d380c7ee51289fb86f" data-mce-linktype="2" data-glossary-id="77367">reinsurer</a></em> could not arise except when, and to the extent that, the margins in the valuation of the existing <em><a  class="glossary-link" title="contract of insurance" href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8" data-mce-linktype="2" data-glossary-id="53201">contract of insurance</a></em> emerge as surplus, or the <em><a  class="glossary-link" title="reinsurer" href="#glossary-term-2200b037e8b940d380c7ee51289fb86f" data-mce-linktype="2" data-glossary-id="77367">reinsurer</a></em> exercises its rights under a termination clause in the contract of <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> as a result of:</p>
+<ol class="new-bullet">
+<li>(1) fraudulent conduct by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> under or in relation to the contract of <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a>;</em> or</li>
+<li>(2) a representation as to the existence, at or before the time the contract of <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> is entered into, of a state of affairs which is within the knowledge or control of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and which is material to the <em><a  class="glossary-link" title="reinsurer's" href="#glossary-term-2200b037e8b940d380c7ee51289fb86f" data-mce-linktype="2" data-glossary-id="77367">reinsurer's</a></em> decision to enter into the contract being discovered to be false; or</li>
+<li>(3) the non-payment of <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a> </em><em><a  class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52966">premiums</a> </em>by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>;</em> or</li>
+<li>(4) a transfer by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> of the whole or a specified part of its business without the agreement of the <em><a  class="glossary-link" title="reinsurer" href="#glossary-term-2200b037e8b940d380c7ee51289fb86f" data-mce-linktype="2" data-glossary-id="77367">reinsurer</a>,</em> except where that agreement has been unreasonably withheld.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d4d62c94b3f34c8cabede58aa5038431">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						18.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b01dba56a42a47a3bc935edbcffc43a6"
+	 data-version="09193b11282b462fb8779090ba331077"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						18.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) Subject to (2), for the purposes of <a  title="18.3(2)" href="/pra-rules/insurance-company-mathematical-reserves#e765652011c6443e8650409abd353c23" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.3</a>(2) and <a  title="18.5" href="/pra-rules/insurance-company-mathematical-reserves#d4d62c94b3f34c8cabede58aa5038431" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">18.5</a>, future surplus may only be offset against future <em><a  class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> cash outflow in respect of surplus on <em><a  class="glossary-link" title="non-profit policies" href="#glossary-term-effb69ea93bb41dcbb1ac539385ea809" data-mce-linktype="2" data-glossary-id="52858">non-profit policies</a></em> and the charges or shareholder transfers arising as surplus from <em><a  class="glossary-link" title="with-profits policies" href="#glossary-term-8cd6681b956e4dbc8f39769d77988a5d" data-mce-linktype="2" data-glossary-id="52938">with-profits policies</a></em>.</li>
+<li>(2) Such charges and transfers may only be allowed for to the extent consistent with the regulatory duty of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to treat its customers fairly under any relevant provision of the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b01dba56a42a47a3bc935edbcffc43a6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						18.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/18-reinsurance/08-09-2020?p=1" data-id="c280e35b6a994a5cacaab8fa560ba8ed" data-effective-date="08-09-2020" data-download-title="Reinsurance_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/18-reinsurance/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#c280e35b6a994a5cacaab8fa560ba8ed&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Reinsurance">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=c280e35b6a994a5cacaab8fa560ba8ed">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Reinsurance
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="56e3ab7f49af4515b6743cd7e0b0ffd3"
+	 data-version="1f01874e04a5443788445c79461c7f21"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					19
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Record Keeping
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="49548fb12821490f85a1081cb4cc464a"
+	 data-version="ed41ea08072f4d039e3ed9e6d017d07b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						19.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must make, and retain for an appropriate period, a record of:</p>
+<ol class="new-bullet">
+<li>(1) the methods and assumptions used in establishing its <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em>, including the margins for adverse deviation, and the reasons for their use; and</li>
+<li>(2) the nature of, reasons for, and effect of, any change in approach, including the amount by which the change in approach increases or decreases its <em><a  class="glossary-link" title="mathematical reserves" href="#glossary-term-10a4de9213704e40965ccc30190edfbf" data-mce-linktype="2" data-glossary-id="52851">mathematical reserves</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=49548fb12821490f85a1081cb4cc464a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						19.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="08-09-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/insurance-company-mathematical-reserves/19-record-keeping/08-09-2020?p=1" data-id="56e3ab7f49af4515b6743cd7e0b0ffd3" data-effective-date="08-09-2020" data-download-title="Record Keeping_08-09-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/insurance-company-mathematical-reserves/19-record-keeping/08-09-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/insurance-company-mathematical-reserves#56e3ab7f49af4515b6743cd7e0b0ffd3&amp;subject=PRA Rulebook - Insurance Company – Mathematical Reserves – Record Keeping">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=56e3ab7f49af4515b6743cd7e0b0ffd3">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Record Keeping
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

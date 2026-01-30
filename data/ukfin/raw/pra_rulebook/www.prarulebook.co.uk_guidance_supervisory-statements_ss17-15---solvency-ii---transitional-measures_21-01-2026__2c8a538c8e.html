@@ -1,0 +1,4360 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{73369625-68B8-41CD-89F3-4B5712CCB7BA} -->
+<title>SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwohqq-f-466720a9c-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":28,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"808e181","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":45747,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370081","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==ydK5S8qEIWvULAmUIUIjN4cswpRRp+JZU30uXI+W+8NU3BRpFDUhrQKHOheuUaye0olFkGy3ajA9N3BA3iBReewq5HtdxkfaZJSQwGI1EfImFFJ28DPXn0tGeP2CKemsmfz5d5WLeoy0f9bHbRZxb67E/kx80yBImbr2WripmIetB1siDbk9a48b02S/51/CMl+mplVswjdjXO/YsMcTtyrT+7icAAmNUh731XRpZhH2zERPq2yI7wD/ShrZhdXz0ZzAurxBcl1ZGIwekG4AqLPhXudItYBNp9LqG9CWoqsly9VDgrWW/Xp5+VVXQ/4SXoEUQi7AoZLBtekAs0044pWXA1jovPBpmVv02A80+V7pN89kmsKzx7Zz3COyuUAS9Olyl0b+wHH4gRiBLnRqILFhrfhdpEFLlAdK5gQgnnI=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						25/11/2016
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-e57e0229-dda4-418f-9936-ac1f7d2dbf6f">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-e57e0229-dda4-418f-9936-ac1f7d2dbf6f"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/transitional-measures/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Transitional Measures
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency-2-consolidation-of-directors-letters" class="list-links__link" target="_blank">
+										PS33/16 - Solvency II: consolidation of Directors&#39; letters
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/february/review-of-solvency-ii-adapting-to-the-uk-insurance-market-policy-statement" class="list-links__link" target="_blank">
+										PS2/24 - Review of Solvency II: Adapting to the UK insurance market
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/31-12-2024?p=1" data-id="05d5c68ea3c243ed81d8a9eb69cd7621" data-effective-date="31-12-2024" data-download-title="SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures&amp;subject=PRA Rulebook - SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="d825e4d622a74d9bacf692aaffb5fda6"
+	 data-version="c7822bd4471c4401872a50127e25e03a"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="14ba2f50c9b84c5f9b3b02fa1b4f9231"
+	 data-version="f65bae33dbbd4abc9e1a1d98f977521a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement is of interest to all UK Solvency II firms and to the Society of Lloyd&rsquo;s, its members and managing agents. In particular, it is relevant to firms that are&nbsp;considering applying for, or that have been granted permission to use, either the transitional measure on the risk-free interest rate or the transitional measure on technical provisions (&lsquo;TMTP&rsquo;).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#14ba2f50c9b84c5f9b3b02fa1b4f9231">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="18188cf56e0f4bea9edd681b973ba911"
+	 data-version="4615ea15bb9e4d64bf100b720da8f24a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It sets out the expectations for the use of these transitional measures, as specified in <a href="/pra-rules/transitional-measures#781c7181f3074ac8af4252ac78a92274" data-rb-content-link="Chapter">Transitional Measures 10</a>&nbsp;and the <a href="/pra-rules/transitional-measure-on-technical-provisions" data-rb-content-link="Part">Transitional Measures on Technical Provisions Part</a>&nbsp;of Prudential Regulation Authority (PRA) Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#18188cf56e0f4bea9edd681b973ba911">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ba832d1768a842a0b46be3b53b175333"
+	 data-version="0cf367e0c2a6491897a05bdfcac554a6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement should be read in conjunction with chapters <a href="/pra-rules/transitional-measures#781c7181f3074ac8af4252ac78a92274" data-rb-content-link="Chapter">10</a>&nbsp;and&nbsp;<a href="/pra-rules/transitional-measures#e7b3e0cae5a74d66b46bcfc5ee4b60f3" data-rb-content-link="Chapter">12 of the Transitional Measures Part</a>, the&nbsp;<a href="/pra-rules/transitional-measure-on-technical-provisions" data-rb-content-link="Part">Transitional Measures on Technical Provisions Part</a>&nbsp;, any other rules relevant to Solvency II firms, the&nbsp;(SoP) &lsquo;Permissions for transitional measures on technical provisions and risk-free interest rates&rsquo;,<sup><a href="#footnote-1">1</a></sup> and the PRA&rsquo;s insurance approach document.<sup><a href="#footnote-2">2</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/consultation-paper/2023/june/cp1223app4.pdf">https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/consultation-paper/2023/june/cp1223app4.pdf</a>.
+					</span>
+				</li>
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						Available at <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/pras-approach-to-supervision-of-the-banking-and-insurance-sectors">https://www.bankofengland.co.uk/prudential-regulation/publication/pras-approach-to-supervision-of-the-banking-and-insurance-sectors</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#ba832d1768a842a0b46be3b53b175333">
+			Past
+			<span class="visually-hidden">
+				version of 1.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="43f13e5aff044e9e9e49aec0eaf16418"
+	 data-version="006f45f2e57040bd9711735b934f634a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement expands on the PRA&rsquo;s general approach as set out in its insurance approach document. By clearly and consistently explaining its expectations of firms in relation to the particular areas addressed, the PRA seeks to advance its statutory objectives of ensuring the safety and soundness of the firms it regulates, and contributing to securing an appropriate degree of protection for policyholders.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="761ceffb5e114772a094ee24c5d17c43"
+	 data-version="f2e02e0f3e5c403dbac644e075c182a0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4204251ed9204de7adbfaedf935ed3ec"
+	 data-version="785b16aa1b1d4e07847f6a8c5861eae7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0a2d175c87ca41a7946fafa5d2a25279"
+	 data-version="318abbf30f2c43ec838aebac99c950d2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9816c587f1244b059cec29290cd3b447"
+	 data-version="0ed65d3ddd1b488589570fb38e8c735b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f3b50d2d7ed640f5aa8e48ba86894071"
+	 data-version="a2352af640b74cceac26d25b033778c2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/1---introduction/31-12-2024?p=1" data-id="d825e4d622a74d9bacf692aaffb5fda6" data-effective-date="31-12-2024" data-download-title="Introduction_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/1---introduction/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#d825e4d622a74d9bacf692aaffb5fda6&amp;subject=PRA Rulebook - SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="346d1fcdfb084d069d6f6fbe5503194d"
+	 data-version="1c5ff509b9b4421ca0895b8af166d6ea"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Transitional measure on the risk-free interest rate
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ff326294553a4c36890f3da3489f56dd"
+	 data-version="5ee6b50cd22c45939f1b83fa558e3324"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Calculation of the single interest rate</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="3bf7d099cf4844b19e776b4dfa89361a"
+	 data-version="d6c1d4626cbd46b7ad0e29644be431e0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In meeting the requirements set out in Transitional Measures 10.2(1) and 10.2(2), the PRA expects firms to determine the single interest rate in 10.2(1) in such a manner that the comparison with the annual effective rate in 10.2(2) is meaningful. For example, firms could compute the annual effective rate that, when applied to the cash flows of the admissible insurance and reinsurance obligations, results in a present value that is equal to the value of the admissible insurance obligations calculated in accordance with Chapter 1 of the Prudential Sourcebook for Insurers (INSPRU 1) as at 31 December 2015. In their applications, firms are expected to explain and justify the method used.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="fd11d056a433468983f109be89d422b1"
+	 data-version="b89bf62390a540dab8a385102e8bde39"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Interaction with the volatility adjustment</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="2ef488f30cd24ebea4a17f296d272d36"
+	 data-version="31e875f3bbed433b97dae23285e8e30b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a firm includes a volatility adjustment within the Solvency II relevant risk-free interest rate, but also intends to use the transitional measure on the risk-free rate, the annual effective rate calculated in <a href="/pra-rules/transitional-measures#b89af7dccebc440bb9e99e4c80458217" data-rb-content-link="Rule">Transitional Measures 10.2(2)</a>&nbsp;should reflect the effect of the volatility adjustment. The admissible insurance and reinsurance obligations should then be discounted at a rate equal to the basic risk-free rate plus the transitional adjustment to the risk-free rate. A volatility adjustment should not be added on top of this, as that would result in double counting the effect of the volatility adjustment (which was already reflected when determining the transitional adjustment).<sup><a href="#footnote-3">3</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						See Transitional Measures 10.5(1) in the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#2ef488f30cd24ebea4a17f296d272d36">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/2---transitional-measure-on-the-risk-free-interest-rate/31-12-2024?p=1" data-id="346d1fcdfb084d069d6f6fbe5503194d" data-effective-date="31-12-2024" data-download-title="Transitional measure on the risk-free interest rate_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/2---transitional-measure-on-the-risk-free-interest-rate/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#346d1fcdfb084d069d6f6fbe5503194d&amp;subject=PRA Rulebook - SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions – Transitional measure on the risk-free interest rate">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="664871ffaf4443d4af406d995def0da6"
+	 data-version="a38e282447d34045ae7746daa6085d8c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Transitional measure on technical provisions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="028b8c1753804c09a985e00577b18d29"
+	 data-version="ac9b9fdb55c44188bf0bedb39a9f0fd9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Under Solvency II, firms may apply to the PRA for permission to apply TMTP. This chapter sets out the PRA&rsquo;s expectations of the calculation of TMTP and for insurance business transfers and 100% reinsurance transactions<sup><a href="#footnote-4">4</a></sup> involving TMTP.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						A 100% reinsurance contract is one which transfers to the reinsurer a 100% share of the ceding firm’s risk under the reinsured contracts of insurance.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#028b8c1753804c09a985e00577b18d29">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f6f0469886014e6e979c8fd6691d3b6f"
+	 data-version="8269e9b5a6424f5abd6c5c2d0402c7b9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#f6f0469886014e6e979c8fd6691d3b6f">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8bc0219ecde34614b08cac7f8a33ab3c"
+	 data-version="b324772a54184abe83601f5076f32243"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Calculation of TMTP</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="4059cebf375e4051a9947d09a3aa8b36"
+	 data-version="1416c5032f77496ebe65832ded7312cb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#4059cebf375e4051a9947d09a3aa8b36">
+			Past
+			<span class="visually-hidden">
+				version of 3.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="627bc5a2acc746218537e682c2f4f3f3"
+	 data-version="9d0ed10710e04a1d8388c3859afb145d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#627bc5a2acc746218537e682c2f4f3f3">
+			Past
+			<span class="visually-hidden">
+				version of 3.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6bec3cbfac2c4110905de0fbb9e6b324"
+	 data-version="fab07d9e404048eeae946a5ae73f7a4a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#6bec3cbfac2c4110905de0fbb9e6b324">
+			Past
+			<span class="visually-hidden">
+				version of 3.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e5208d171ad94f9babbdfb101ae52774"
+	 data-version="68487f73c4c34b5d8e31d11361cd3e3a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#e5208d171ad94f9babbdfb101ae52774">
+			Past
+			<span class="visually-hidden">
+				version of 3.6 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5e6214300fcc4376b49b2bce73a525a4"
+	 data-version="ff8e252da27845f1b8fecc3ec2e9d76d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms that use the methodology set out in <a href="/pra-rules/transitional-measure-on-technical-provisions#1efca16793d24607ba69fc51e313427d" data-rb-content-link="Chapter">Transitional Measures on Technical Provisions 5 (the &lsquo;TMTP method&rsquo;)</a>&nbsp;are required to perform the one-off &lsquo;base TMTP&rsquo; calculation as set out in <a href="/pra-rules/transitional-measure-on-technical-provisions#cdae72c6838a47aaa473066e0cd14177" data-rb-content-link="Rule">Transitional Measures on Technical Provisions 4.2(2)</a>. When performing the &lsquo;base TMTP&rsquo; calculation, the PRA does not expect firms to reflect in the amount of the TMTP both the actual run off of insurance liabilities since the last calculation and the 1/16<sup>th</sup> linear deduction (i.e. a &lsquo;double run-off&rsquo; effect). Firms should utilise their agreed methodology that was used at the last recalculation of TMTP prior to 31 December 2024, for avoiding this effect when performing the &lsquo;base TMTP&rsquo; calculation.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6b8c8175c593458185f0585ca43f56ce"
+	 data-version="cb168445afa640fb8d3945d281e983a2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a href="/pra-rules/transitional-measure-on-technical-provisions#cdae72c6838a47aaa473066e0cd14177" data-rb-content-link="Rule">Transitional Measures on Technical Provisions 4.2(1)</a>&nbsp;TMTP method firms can designate specific obligations that are matching adjustment (&lsquo;MA&rsquo;)-eligible at the point of assessment for the purposes of calculating the dynamic portion, when applying the TMTP method for the first time. To provide additional flexibility, applicable firms can elect to designate only some or none of the aforementioned MA-eligible obligations for the purpose of calculating the dynamic portion.. For avoidance of doubt, all other business that is not designated for the dynamic portion must be used to calculate the non-dynamic portion, and firms are not required to calculate the dynamic portion if no business has been designated to it.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="41c7de25f1444edf9ca26fbe5e55e7e0"
+	 data-version="1ab472164bc14f7182d8c9ed74721f72"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6C
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			TMTP method firms are required to calculate TMTP at an overall firm level, in accordance with <a href="/pra-rules/transitional-measure-on-technical-provisions#1efca16793d24607ba69fc51e313427d" data-rb-content-link="Chapter">Transitional Measures on Technical Provisions 5</a>. However, for internal management purposes, firms may choose to allocate its TMTP across different groups of liabilities (e.g.&nbsp;different ring fenced funds) provided that the overall TMTP calculation for the firm remains in accordance with the rules.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="59046e596e6f4f0c89f1865615fe6408"
+	 data-version="0c6f97503d7b43e1954d82f3d8330200"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6D
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a href="/pra-rules/transitional-measure-on-technical-provisions#f884722673db46198533b06275dd65ea" data-rb-content-link="Rule">Transitional Measures on Technical Provisions 5.1</a>-<a href="/pra-rules/transitional-measure-on-technical-provisions#362bf67d78674fd0b1c75a489d524f61" data-rb-content-link="Rule">5.2</a>, &ldquo;reporting period&rdquo; refers to the reporting periods in which the firm is required to report its TMTP to the PRA in accordance with the <a href="/pra-rules/reporting" data-rb-content-link="Part">Reporting Part</a>&nbsp;of the PRA Rulebook, subject to any waivers. For internal management purposes, firms can calculate TMTP on a more frequent basis if preferred.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="19c20d55f9c14718a779e2b5353b9da0"
+	 data-version="ecf233b7687c4f129be8087bb95983cd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6E
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the TMTP method when calculating the projected risk margin portion and dynamic portion as set out in <a href="/pra-rules/transitional-measure-on-technical-provisions#362bf67d78674fd0b1c75a489d524f61" data-rb-content-link="Rule">Transitional Measures on Technical Provisions 5.2</a>, the Chief Actuary may select appropriate methodologies consistent with the calculation of Technical Provisions and the principles set out in chapter <a href="/pra-rules/technical-provisions-further-requirements#e9b17d53d1304ac18469d503a3a48edf" data-rb-content-link="Chapter">27 of the Technical Provisions &ndash; Further Requirements Part</a>&nbsp;of the PRA Rulebook.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1644c3d5105949dfb779752b6c40967d"
+	 data-version="b64a39b271ca4e28bab31db7a2555c8f"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Insurance Business Transfers and Reinsured Business</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="d34a21beb8db42329acf2b68cac8436f"
+	 data-version="c144c719db8d4c3980bc78cd2a1bcbed"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#d34a21beb8db42329acf2b68cac8436f">
+			Past
+			<span class="visually-hidden">
+				version of 3.7 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="91ae564f7af94377adab391dd7d5d101"
+	 data-version="768c97260c2d42a0bd08559c27b09cfc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms that use the TMTP method are required by <a href="/pra-rules/transitional-measure-on-technical-provisions#2f0aab58ee5849bf9cfc6d1bd014cc22" data-rb-content-link="Chapter">Transitional Measures on Technical Provisions 6</a>&nbsp;to make an update to their TMTP methodology following a &lsquo;transfer event&rsquo; which has resulted in a change in the firm&rsquo;s technical provisions to which the TMTP relates. They are also permitted to make revisions to the business designated to the dynamic portion in order to designate acquired business that is MA-eligible in respect of that firm.. Transfer events are: 1) transfer of business either under Part VII of Financial Services and Markets Act 2000 (FSMA) or the Friendly Societies Act 1992; 2) the transfer of risk under a 100% reinsurance contract; 3) an amendment to an existing 100% reinsurance contract if there has been a change to the volume of risk to which the reinsurer is exposed; and 4) cancellation, commutation, termination or expiration of an 100% reinsurance contract. Such an update would only be permitted if the business that has been transferred or ceded was subject to TMTP prior to the transfer. The PRA expects this update to be based on figures at the effective date of the transfer or transaction.<sup><a href="#footnote-5">5</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						The ‘transferred TMTP’ should be as calculated immediately prior to the effective date of the transfer or transaction.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cd5a699d7efe4907a8bbd2000af75e24"
+	 data-version="49e3e8c50e8b4ea2a18b5ba3df22289d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the update described above should result in &lsquo;Z<sub>A</sub>&rsquo;, continuing to represent the risk margin portion of the total TMTP post- transfer as a percentage of the risk margin on the underlying business post- transfer, as the PRA considers this an assumption underlying TMTP. For the purpose of determining how this ratio has changed due to a transfer event, the PRA expects a firm to use amounts equivalent to the risk margin portion of &lsquo;transferred TMTP&rsquo; as calculated by the transferor or cedant (as relevant) and the risk margin on the technical provisions to which the TMTP permission relates as at the effective date.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9f9abac7946b42c48735c5f54cbe435a"
+	 data-version="f658a14cd1224ed4b15060719655b5c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7C
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the update required by <a href="/pra-rules/transitional-measure-on-technical-provisions#2f0aab58ee5849bf9cfc6d1bd014cc22" data-rb-content-link="Chapter">Transitional Measures on Technical Provisions 6</a>&nbsp;should result in &lsquo;Z<sub>B</sub>&rsquo;, representing the dynamic portion of the total TMTP post transfer as a percentage of the dynamic BEL on the underlying business post transfer subject to any adjustment referred to in <a href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#9286fe2dec1b492faf6cd9be57bc4ed7" data-rb-content-link="Paragraph">3.7E</a>&nbsp;below. For the purpose of determining how this ratio has changed due to a transfer event:</p>
+<ul>
+    <li>if a firm does not revise the transferor or cedant&rsquo;s designation of business used to calculate the dynamic portion then the PRA expects a firm to use amounts equivalent to the dynamic portion of &lsquo;transferred TMTP&rsquo; as calculated by the transferor or cedant&nbsp;(as relevant) and the dynamic portion of the underlying business as at the effective date.</li>
+    <li>if a firm revises the transferor or cedant&rsquo;s designation of business used to calculate the dynamic portion then the PRA expects the transferee or reinsurer to reflect the revised split of business between the dynamic and non-dynamic portions of TMTP. A firm can do this by adjusting the dynamic portion of &lsquo;transferred TMTP&rsquo; proportionally to the revised split of BEL and calculating the revised dynamic portion of the underlying business as at the effective date.</li>
+</ul>
+
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7381805f8c1c41969ef98477afe6f9b4"
+	 data-version="bcccac6012824b34b02264ad3641f9c1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7D
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the update required by <a href="/pra-rules/transitional-measure-on-technical-provisions#2f0aab58ee5849bf9cfc6d1bd014cc22" data-rb-content-link="Chapter">Transitional Measure on Technical Provisions 6</a>&nbsp;should result in &lsquo;C<sub>0</sub>&rsquo; continuing to represent the portion of non-dynamic business attributable to the total TMTP post transfer subject to any adjustment referred to in <a href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#9286fe2dec1b492faf6cd9be57bc4ed7" data-rb-content-link="Paragraph">3.7E</a>. Firms should use their updated &lsquo;C<sub>0</sub>&rsquo; to calculate &lsquo;C<sub>r</sub>&lsquo; in the TMTP method. The PRA expects the transferee or reinsurer to use an amount equivalent to the amount of &lsquo;C<sub>0</sub>&rsquo; attributable to the transferred business as calculated by the transferor or cedant. As with &lsquo;Z<sub>B</sub>&rsquo;, such amount should be adjusted to reflect any revised split of business between the dynamic and non-dynamic portions. A firm can do this by adjusting the non-dynamic portion of &lsquo;transferred TMTP&rsquo; proportionally to the revised split of BEL.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9286fe2dec1b492faf6cd9be57bc4ed7"
+	 data-version="9d2bc2b295a74ab18408fd0f9b173b43"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7E
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms must ensure that <a href="/pra-rules/transitional-measure-on-technical-provisions#a3c39da615bc4fdb8b877213e249ab8f" data-rb-content-link="Rule">Transitional Measures on Technical Provisions 6.2</a>&nbsp;is adhered to, unless they have been granted a waiver or modification as set out in 3.3 of the SoP &lsquo;Permissions for transitional measures on technical provisions and risk-free interest rates&rsquo;. The PRA expects this can be achieved by adjusting the value for &lsquo;Z<sub>B</sub>&rsquo; or &lsquo;C<sub>0</sub>&rsquo;.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="81f6bf38136a4988acd65e57e2295794"
+	 data-version="31badce730904c8fa9f1bd75f5f6da6a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#81f6bf38136a4988acd65e57e2295794">
+			Past
+			<span class="visually-hidden">
+				version of 3.8 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4a89ee3eb64745c0b8f665ff9adbd96b"
+	 data-version="9ccca62debb64ad0bdce6b103b501ad5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a firm that has permission to use their TMTP methodology as at the date of their last recalculation prior to the 31 December 2024 (the &lsquo;legacy approach&rsquo;) is transferring business to a TMTP method firm the requirements in <a href="/pra-rules/transitional-measure-on-technical-provisions#2f0aab58ee5849bf9cfc6d1bd014cc22" data-rb-content-link="Chapter">Chapter 6</a>&nbsp;apply to the TMTP method firm, the PRA expects the transferee to update &lsquo;Z<sub>A</sub>&rsquo;, &lsquo;Z<sub>B</sub>&rsquo; and &lsquo;C<sub>0</sub>&rsquo; based on the transferor&rsquo;s TMTP immediately prior to the effective date of the transfer or transaction. The transferee will need to designate MA-eligible business for the purpose of calculating the dynamic portion. The transferor, should then split the TMTP into the risk margin portion of transferred TMTP, the dynamic portion of transferred TMTP based on the transferee&rsquo;s designation and the amount of the transferred TMTP attributable to the non-dynamic portion The transferee should then update &lsquo;Z<sub>A</sub>&rsquo;, &lsquo;Z<sub>B</sub>&rsquo; and C<sub>0</sub>&rsquo; in accordance with <a href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#cd5a699d7efe4907a8bbd2000af75e24" data-rb-content-link="Paragraph">3.7B</a>-<a href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#9286fe2dec1b492faf6cd9be57bc4ed7" data-rb-content-link="Paragraph">3.7E</a> above.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1b50d7ce76fd4f8f82510fbb474f9675"
+	 data-version="9749339365994564b17706d8f9431504"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#1b50d7ce76fd4f8f82510fbb474f9675">
+			Past
+			<span class="visually-hidden">
+				version of 3.9 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ec0fe5df094945d1b125acb049df2901"
+	 data-version="009c2bb9a0414962a39336b42e300c84"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA notes that the amount of the TMTP in respect of liabilities not subject to the transfer may also change as a result of the transaction. This might arise where the transaction results in a change to the assumptions underlying the technical provisions (eg expenses), or the balance of risks in the solvency capital requirement (SCR) and hence the risk margin.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3a3cd2c65e794313b22f8b307d3fb130"
+	 data-version="4a3a4a4a567d4a9381148b27444a2fa0"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Reinsured business</h4>
+<p>This section has been deleted.</p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="81dca7c028d64a038076946a3f3482bc"
+	 data-version="133b8ae912b741a9893cd2d464c9ec21"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Deleted.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#81dca7c028d64a038076946a3f3482bc">
+			Past
+			<span class="visually-hidden">
+				version of 3.11 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="30b20b5e9eb4481d8933d83678d134ec"
+	 data-version="4bb0afe2a5df4765aee3a46b465f7d63"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Deleted.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#30b20b5e9eb4481d8933d83678d134ec">
+			Past
+			<span class="visually-hidden">
+				version of 3.12 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b4974a39adb948e583d9ef5f0a0dafc9"
+	 data-version="351088e7554c42d58937c7b111481b4d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Deleted.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#b4974a39adb948e583d9ef5f0a0dafc9">
+			Past
+			<span class="visually-hidden">
+				version of 3.13 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5203be548e564ba78b5aa489577226a2"
+	 data-version="5b051c818ba4440f8c47c274d2ad61df"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Scope and granularity of application of the transitional measure&nbsp;</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="5ebd6d214f6c466aba594e955d8490e3"
+	 data-version="2a72938a95f14fbda131455d0d00d3db"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As set out in <a href="/pra-rules/transitional-measure-on-technical-provisions#a84f977555a6474782aa2e5bb7465e81" data-rb-content-link="Rule">Transitional Measures on Technical Provisions 2.4</a>&nbsp;the application of TMTP is limited to business that was subject to a TMTP permission at 31 December 2024. .</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#5ebd6d214f6c466aba594e955d8490e3">
+			Past
+			<span class="visually-hidden">
+				version of 3.14 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4083aee7e4c9488db207cd15d113895b"
+	 data-version="6638ecb5ac8d4f2980fafbe5c9a7cc51"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#4083aee7e4c9488db207cd15d113895b">
+			Past
+			<span class="visually-hidden">
+				version of 3.15 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="48026b2af1374a578f11174b8389c0c5"
+	 data-version="2afa03a6f15c44d78fbc2a5cbd7926de"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For legacy approach firms, the PRA expects that the only limitations on the level of granularity chosen for the scope of the deduction are that:</p>
+<ol class="new-bullet">
+    <li>(i) An Homogeneous Risk Group (HRG) should not be &lsquo;split&rsquo;, with part of the HRG in scope of the transitional calculation and part of the HRG excluded from scope;</li>
+    <li>(ii) it should be possible for the firm to identify corresponding HRGs for the purpose of the Solvency I Pillar 2 insurance liabilities calculation, and to calculate Solvency I Pillar 2 insurance liabilities in respect of these HRGs reliably; and</li>
+    <li>(iii) the firm must demonstrate that the technical provisions calculations made at HRG level can be reconciled with the technical provisions calculation for the entity as a whole.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#48026b2af1374a578f11174b8389c0c5">
+			Past
+			<span class="visually-hidden">
+				version of 3.16 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fbde2d7b12d14d36bfffa7edc2aaa4a3"
+	 data-version="c530170cd6e84189b0679b5771c08859"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Limiting the amount of the transitional measure</h4>
+<p>This section has been deleted.</p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="bfd3c6edde8441d6bc74dfc19ff6f276"
+	 data-version="eb615836d5f044b99b19054a6decd74a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#bfd3c6edde8441d6bc74dfc19ff6f276">
+			Past
+			<span class="visually-hidden">
+				version of 3.17 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="42a3d53b6e18464f9097ea722279b222"
+	 data-version="76d4aca1745f4daea24ee79dd1f8d52c"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Review of Individual Capital Guidance</h4>
+<p>This section has been deleted.</p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8c916727be7b4ce98b0cb1d151a4a8d6"
+	 data-version="2db20401560147deab11000fef4e9e1d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.18
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#8c916727be7b4ce98b0cb1d151a4a8d6">
+			Past
+			<span class="visually-hidden">
+				version of 3.18 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bb26a78d2b754e7eba2d4019b39fbd55"
+	 data-version="3241236e160943d2a7370bba1bfc2a55"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.19
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#bb26a78d2b754e7eba2d4019b39fbd55">
+			Past
+			<span class="visually-hidden">
+				version of 3.19 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/3---transitional-measure-on-technical-provisions/31-12-2024?p=1" data-id="664871ffaf4443d4af406d995def0da6" data-effective-date="31-12-2024" data-download-title="Transitional measure on technical provisions_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/3---transitional-measure-on-technical-provisions/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#664871ffaf4443d4af406d995def0da6&amp;subject=PRA Rulebook - SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions – Transitional measure on technical provisions">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="8117f93436694c07a93decbd955a7f0b"
+	 data-version="2766eae3e7774dc4babbd172ae5510df"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Ongoing supervision of the TMTP
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="503b148da8674b56bdee5ec909c6dc97"
+	 data-version="5e843772c9c841738e01b204941041ef"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Limiting the amount of the transitional measure in future years</h4>
+<p>This section has been deleted.</p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="b3351e3968224f18a9b89941835abe6f"
+	 data-version="200b3cd9a381460dac1c18d02014a0e9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#b3351e3968224f18a9b89941835abe6f">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1d45276ed702422ab5d47cd12e6d3e12"
+	 data-version="f41671cabf854849be009f80ec7dd70e"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Recalculations of the transitional deduction</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="b4c67d1c07ca413089924bd553c30a8d"
+	 data-version="9a13a5ff45aa4d0b937ae0d86ae488e0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f9a11757ae5c40afb31af9dc0225293d"
+	 data-version="6c0c6d6668944c5983ac954ca5eccd28"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Amount of TMTP applied and disclosed by a firm</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="dd887a8cec724400ac3fbe3773b8d4af"
+	 data-version="3f6213f6135748b6a888bdebbad6d151"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For all firms with a TMTP permission there is a requirement that the amount of the&nbsp;transitional deduction to be applied by a firm is to be between zero and a maximum amount.<sup><a href="#footnote-6">6</a>&nbsp;</sup>If a decision is taken by such a firm to apply less than the maximum amount, the PRA expects the firm to include both the maximum amount and actual TMTP amount in the notes to&nbsp;market disclosures, and to share this information with its supervision team. The firm should&nbsp;maintain a transparent approach to determining the amount of TMTP benefit it is applying.&nbsp;The PRA expects this approach to be followed consistently by firms within all Solvency II reporting including for Quarterly Reporting Templates (QRTs). This approach should also be&nbsp;reflected within a firm&rsquo;s ORSA and risk management framework.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						The amount is the maximum number derived from the TMTP method in Transitional Measures on Technical Provisions 5 or the legacy approach outlined in the relevant firm’s permission.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4a214a6193d9444baf2d78cf748b0cc8"
+	 data-version="49dbe4fc6a2a4994b54b5a6fe9af0a92"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that a firm&rsquo;s disclosure of its solvency ratio will include an allowance for TMTP no greater than the maximum amount at the relevant reporting date.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ee77e3e2460e4d0f93f4af90a5d33a81"
+	 data-version="56426d98b80a42ed8788349b5930bfc8"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Criteria for legacy approach firms</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="01993c9d43bf4b42843d9c8a64a7557f"
+	 data-version="33220fa848a848e1a7a4a1c5c9a4e36a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2C
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As set out in paragraph 5.3 of SoP &lsquo;Permissions for transitional measures on technical provisions and risk-free interest rates&rsquo;, legacy approach firms were required to meet certain&nbsp;criteria prior to the PRA varying their permission to apply the approach.&nbsp;The PRA expects that&nbsp;legacy approach firms provide evidence that they continue to meet the criteria set out in paragraph 5.3 of SoP &lsquo;Permissions for transitional measures on technical provisions and risk-free interest rates&rsquo; on an annual basis as part of the ORSA.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="02ab60913b2844249c4ae66e6b51d5a6"
+	 data-version="d0f18dca3fb944a4a1b10ab5c8a82d61"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Consistency of Solvency I and Solvency II bases for legacy approach firms</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="a9d0d5c91b7c42629e000fc1dd2d8af5"
+	 data-version="c0057acd256040bdaea4b3d2c7617845"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2D
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The underlying assumptions of both Solvency I Pillar 2 and Solvency II technical provisions are on a best estimate basis. Both Solvency II and INSPRU 7<sup><a href="#footnote-7">7</a></sup> include provision for the best estimate basis to be based on up-to-date and credible information, and to reflect market conditions. Legacy approach firms are expected to review the best estimate assumptions at regular intervals, and must make updates that reflect changes in market conditions and/or demographic assumptions.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						As defined in Transitional Measures on Technical Provisions 1.2
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="10d5b5ae41bc411bb93550de972369af"
+	 data-version="f399af21eb6d4be983e25313a717408c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2E
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where changes are made to best estimate assumptions which are inputs to both the Solvency I and Solvency II bases, and these changes have a material impact on the level of technical provisions, the PRA expects that the assumption changes should be made consistently within the Solvency I Pillar 2 and Solvency II best estimate bases. The PRA&rsquo;s view is that the impact of such an assumption change should not be included within the TMTP benefit as the change reflects market conditions and/or demographic assumptions, rather than being introduced by Solvency II requirements themselves. The need to maintain consistency is an ongoing expectation, and applies whenever TMTP is calculated.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/4---ongoing-supervision-of-the-tmtp/31-12-2024?p=1" data-id="8117f93436694c07a93decbd955a7f0b" data-effective-date="31-12-2024" data-download-title="Ongoing supervision of the TMTP_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/4---ongoing-supervision-of-the-tmtp/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#8117f93436694c07a93decbd955a7f0b&amp;subject=PRA Rulebook - SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions – Ongoing supervision of the TMTP">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="337a2e18f45b4240bd20bf58485d6378"
+	 data-version="89bff794777348bc9b9501b88e641775"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Management of the run-off of the TMTP in future years
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e637ec68f7444253b78481f8e3574c98"
+	 data-version="dba76094666c46be82f1167e89f19fcf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The TMTP cannot be applied after 1 January 2032.<sup><a href="#footnote-8">8</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						Transitional Measures on Technical Provisions 2.3
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#e637ec68f7444253b78481f8e3574c98">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c7ec841e53ca45218e9a26df545e956f"
+	 data-version="7e4c8c01b6ec47b7b1c4bca4b1e40636"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Capital releases&nbsp;</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8bb02b4ad2d24af08eeebab9ad731b60"
+	 data-version="5f41845192934ae28b4dc4508adce5b9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where firms are reliant on the TMTP in order to cover their SCR, they will be required to submit a phasing-in plan to the PRA.<sup><a href="#footnote-9">9</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						Transitional Measures on Technical Provisions 7.1(3) .
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#8bb02b4ad2d24af08eeebab9ad731b60">
+			Past
+			<span class="visually-hidden">
+				version of 5.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c098ede9a260408bb89a157752d31f4c"
+	 data-version="71ea35217fc9449d95c909d1ee7dae68"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The use of transitional measures, regardless of whether or not they are needed to cover the SCR, will not prevent firms from paying dividends or releasing capital from subsidiaries.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c4ad7f48e20f4e549b45c3cf0db9caa9"
+	 data-version="f12e957e2ff7479ebb51f04238277f98"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>However, firms reliant on the TMTP to cover their SCR are expected to be able to demonstrate that their capital position is sustainable under a range of operating conditions after allowing for any capital distributions and the TMTP run-off. This is likely to take the form of an updated phasing-in plan, and the PRA expects firms to evidence the adequacy of capital resources, stress-testing analysis and a medium-term capital plan before making any capital distribution.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1abd46924024440fac037d8389425b40"
+	 data-version="fc3210ed134a4709a88bb633b0b3a5c8"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Run-off of TMTP compared with technical provisions&nbsp;</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="fb2b8004fc3544c4975f217a898a3fb7"
+	 data-version="756d428f1b5d423bb4dce307d672f09b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms&rsquo; underlying business may run off faster or slower than the transitional period for the TMTP. Where the liabilities run off more quickly this could lead to firms carrying a significant TMTP for business which is no longer in force or has substantially reduced volumes. Alternatively the TMTP could run off more quickly than the associated liabilities. In this instance, there may be a strain on the emergence of surplus and consequent expected deterioration in the solvency position of the firm.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#fb2b8004fc3544c4975f217a898a3fb7">
+			Past
+			<span class="visually-hidden">
+				version of 5.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="34335e2ad9da4f0198f0a9c2149af873"
+	 data-version="caedfac133994a5e9441d718ebdc6b88"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA therefore expects firms as part of their risk management to consider carefully:</p>
+<ul>
+    <li> the projected risk profile; and </li>
+    <li>the adequacy of technical provisions net of any TMTP.&nbsp;</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#34335e2ad9da4f0198f0a9c2149af873">
+			Past
+			<span class="visually-hidden">
+				version of 5.6 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5ebf8298efab485baf537df1ed8b8b09"
+	 data-version="db57abde4b1547d7aaddf1cf5fbe7574"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the amount of the TMTP relative to the technical provisions for business remaining in force will be monitored on a continuing basis in firms&rsquo; own risk and solvency assessments (ORSA). The PRA also expects that firms consider whether there are any risks to meeting their solvency risk appetite<sup><a href="#footnote-10">10</a></sup>&nbsp;over the medium term due to TMTP run-off. The PRA expects firms to share this analysis with their supervisors annually.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						The risk appetite used should be that for levels of capital as set out in their risk appetite statement as expected by paragraph 2.3 of SS4/18.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#5ebf8298efab485baf537df1ed8b8b09">
+			Past
+			<span class="visually-hidden">
+				version of 5.7 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a104a956ee544eb6ac4deff4be0f7d94"
+	 data-version="f90f4b906ad447ba8f5285251686510a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a firm&rsquo;s ORSA highlights the risk that the TMTP may become disproportionately large, because of differences in the rate of run-off of the business and the TMTP, or if the surplus emerging from the business is not sufficient to support the projected TMTP run-off, the PRA would expect the firm to set out how this risk will be managed. Possible mitigants could include restricting the amount of the TMTP or setting up a provision to cover the potential shortfall.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2bbee0ee85d4452d86ea8235154d2c1d"
+	 data-version="891f516f1d1c4c5fbd5f25dc8f838cff"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.8A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that where a TMTP method firm has been granted a waiver or modification as set out in paragraph 3.2 of the SoP, it should document its amortisation approach in its ORSA.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/5----management-of-the-run-off-of-the-tmtp-in-future-years/31-12-2024?p=1" data-id="337a2e18f45b4240bd20bf58485d6378" data-effective-date="31-12-2024" data-download-title="Management of the run-off of the TMTP in future years_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/5----management-of-the-run-off-of-the-tmtp-in-future-years/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#337a2e18f45b4240bd20bf58485d6378&amp;subject=PRA Rulebook - SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions – Management of the run-off of the TMTP in future years">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="a6f9380db0fb42c4ad4139af64307435"
+	 data-version="0bfff109ab3f483ba683ef274e6704da"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					The approval process
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="07f00497da8248a6bc07c74d23b22d53"
+	 data-version="7380d06f9a6c4fdd99f014d37933db05"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#07f00497da8248a6bc07c74d23b22d53">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3e0da10699394cc3a205e37e836687af"
+	 data-version="264743f5fe7d4e3789c1415c2ad7220e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#3e0da10699394cc3a205e37e836687af">
+			Past
+			<span class="visually-hidden">
+				version of 6.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="172eb0000dff405ab9ed6a02bed555b8"
+	 data-version="b1c716347bb1497685ec5ecd358a1c5a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#172eb0000dff405ab9ed6a02bed555b8">
+			Past
+			<span class="visually-hidden">
+				version of 6.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="594fc448c3e047d5830b588f0f2e7998"
+	 data-version="b4a89e567b774943b0c1eeaf01f4ead1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Deleted.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#594fc448c3e047d5830b588f0f2e7998">
+			Past
+			<span class="visually-hidden">
+				version of 6.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="74f4ab0e46d54b0188c37313dde10fd1"
+	 data-version="3764ae23544d479e8b5dc1326a4bf0ef"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#74f4ab0e46d54b0188c37313dde10fd1">
+			Past
+			<span class="visually-hidden">
+				version of 6.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/6---the-approval-process/31-12-2024?p=1" data-id="a6f9380db0fb42c4ad4139af64307435" data-effective-date="31-12-2024" data-download-title="The approval process_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/6---the-approval-process/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#a6f9380db0fb42c4ad4139af64307435&amp;subject=PRA Rulebook - SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions – The approval process">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="cff51b78209f434cac0919c1984ce65f"
+	 data-version="60d5395d53ce4f6c8fb70a2331adda8e"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Verification of calculations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ae370880b897489a89d09e640c364761"
+	 data-version="9d626979fc9e42e98637d1bdc19c3e7b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the calculation of the TMTP and the resulting quantum of the deduction, and similarly, any calculation using the transitional measure for the risk-free interest rates and the resulting quantum of the deduction that the use of these risk-free interest rate implies, will be overseen by the Chief Actuary of the firm, as part of their overall responsibility for the actuarial function. The PRA expects that the responsibilities of the actuarial function in the <a href="/pra-rules/conditions-governing-business#01665ebb4e044fd8a1bd9394e6e201bf" data-rb-content-link="Rule">Conditions Governing Business 6.1(b)</a>&nbsp;and <a href="/pra-rules/conditions-governing-business#01665ebb4e044fd8a1bd9394e6e201bf" data-rb-content-link="Rule">(e)</a>&nbsp;should therefore include assurance around the calculation of TMTP where applicable. As part of annual year-end reporting, the Chief Actuary is only expected to confirm that the TMTP has been calculated in line with the methodology for calculating TMTP that the firm has permission to use and has been appropriately reduced in line with the applicable requirements.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#ae370880b897489a89d09e640c364761">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/7----verification-of-calculations/31-12-2024?p=1" data-id="cff51b78209f434cac0919c1984ce65f" data-effective-date="31-12-2024" data-download-title="Verification of calculations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/7----verification-of-calculations/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#cff51b78209f434cac0919c1984ce65f&amp;subject=PRA Rulebook - SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions – Verification of calculations">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="ffd0aec3557c42d2b95ab3d1ecb84227"
+	 data-version="5803309dcc884fc3bb677601964b95e3"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Interaction with other Solvency II approvals and contingency planning
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4c7a795c0e314d34b0ad05bcaac8a1e3"
+	 data-version="21efaf80c43742e1a43fa19fd754c17d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#4c7a795c0e314d34b0ad05bcaac8a1e3">
+			Past
+			<span class="visually-hidden">
+				version of 8.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fbb0096f74b64d84b21b795a2b522365"
+	 data-version="82ff7f4b5b7b4883909b78d7df299cfa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/25-11-2016#fbb0096f74b64d84b21b795a2b522365">
+			Past
+			<span class="visually-hidden">
+				version of 8.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/8---interaction-with-other-solvency-ii/31-12-2024?p=1" data-id="ffd0aec3557c42d2b95ab3d1ecb84227" data-effective-date="31-12-2024" data-download-title="Interaction with other Solvency II approvals and contingency planning_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures/8---interaction-with-other-solvency-ii/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss17-15---solvency-ii---transitional-measures#ffd0aec3557c42d2b95ab3d1ecb84227&amp;subject=PRA Rulebook - SS17/15 – Solvency II: transitional measures on risk-free interest rates and technical provisions – Interaction with other Solvency II approvals and contingency planning">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

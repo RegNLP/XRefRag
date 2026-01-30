@@ -1,0 +1,2242 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/compliance-and-internal-audit" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/compliance-and-internal-audit" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{5324629E-F28D-4101-98E5-DA8E5B4929A0} -->
+<title>Compliance and Internal Audit | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Compliance and Internal Audit">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compliance and Internal Audit">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoieq-f-935549c83-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":51,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"8093e64","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":29931,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370121","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==PEuNdYDEmWzSXBHMJOg+pgFWqVwfSd+HpWS5QRkaIKydsjLq9yiY/NI3tO4JeFJ+UcfGqRCKU2mmX5AJR9MWVstWlsv95BnP3EYaqz6wg0GCwWqJ5Eicqz/FBv83qsQbHmgpm6HxLYBMf0y+GNUs09+lXhgFxEx2Q5oro7c0UydkgTCoU0TYZpw8bauyzaX6HoT19rlo8DsnQQxKXhQOy+TAO6JHw9FqMwke9FlEsLgzJJBQmUrd+Laun6swaZpw/aNQT1BwuTZoFrI1XP3AURBtUzkWbcTCzaSuScd4hEjQq2AGyxbAGBkc3CeOnE1jF3PDig6a6rqzDzxt+u4kwwlVzsrNKGLaMONvWpnKxAt54YIsu+IwGhxb3Lsry+9BwNsk9i37Fw5+X4vjmf0Y+Sf6oXSfTkKg6t5k8s+R08U=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Compliance and Internal Audit				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Compliance and Internal Audit
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/compliance-and-internal-audit/02-04-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						02/04/2015
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/compliance-and-internal-audit/03-01-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						03/01/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/compliance-and-internal-audit/29-06-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						29/06/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/compliance-and-internal-audit/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/compliance-and-internal-audit/23-10-2025">
+						<span class="visually-hidden">View Rulebook as at</span>
+						23/10/2025
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-0b47df31-023c-46cd-b37d-b7f19b82730c">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-0b47df31-023c-46cd-b37d-b7f19b82730c"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Compliance and Internal Audit
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Compliance and Internal Audit)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=fd13f6570a21431791e2a93637fef4fc">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Compliance and Internal Audit
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss20-15---supervising-building-societies-treasury-and-lending-activities/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS20/15 – Supervising building societies’ treasury and lending activities [Deleted]
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss21-15-internal-governance/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS21/15 – Internal Governance
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss28-15---strengthening-individual-accountability-in-banking/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS28/15 – Strengthening individual accountability in banking
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/the-pra-rulebook-part-2" class="list-links__link" target="_blank">
+										PS7/15 - The PRA Rulebook: Part 2
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/implementation-of-mifid-2-part-2" class="list-links__link" target="_blank">
+										PS9/17 - Implementation of MiFID II: Part 2
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/responses-to-cp-18-17-chapters-7-and-8" class="list-links__link" target="_blank">
+										PS31/17 - Responses to CP18/17 Occasional Consultation Paper – Chapters 7 and 8 (December 2017)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/responses-to-cp-18-17-chapters-7-and-8" class="list-links__link" target="_blank">
+										PS31/17 - Responses to CP18/17 Occasional Consultation Paper – Chapters 7 and 8 (May 2018)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2025/october/markets-in-financial-instruments-directive-organisational-regulation-policy-statement" class="list-links__link" target="_blank">
+										PS16/25 - Markets in Financial Instruments Directive Organisational Regulation (MiFID Org Reg)
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/compliance-and-internal-audit/23-10-2025_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/compliance-and-internal-audit/23-10-2025?p=1" data-id="fd13f6570a21431791e2a93637fef4fc" data-effective-date="23-10-2025" data-download-title="Compliance and Internal Audit_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/compliance-and-internal-audit/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/compliance-and-internal-audit&amp;subject=PRA Rulebook - Compliance and Internal Audit">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="e08353177a91470e8de9158ae80adfac"
+	 data-version="70c826ada4dd433fa8dd7504b519c66b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="70956a61ccd345fe86c1c07a60667dfc"
+	 data-version="d18f9af27fc44778aa095f4a6d70ee62"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to a <em><a class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em></p>
+<ol class="new-bullet">
+    <li>(1) with respect to the carrying on of the following from an establishment in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>:</li>
+    <ol>
+        <li>(a) <em><a class="glossary-link" title="regulated activities" href="#glossary-term-1df9441308274e5eb95202d98479be4e" data-mce-linktype="2" data-glossary-id="53274">regulated activities</a></em>;</li>
+        <li>(b) activities that constitute <em><a class="glossary-link" title="dealing in investments as principal" href="#glossary-term-8dab0aab133549dc894705b82cc122f1" data-mce-linktype="2" data-glossary-id="52084">dealing in investments as principal</a></em>, disregarding the exclusion in article 15 of <em><a class="glossary-link" title="Regulated Activities Order" href="#glossary-term-343c281a2e2346ad82e8aafc7367cc75" data-mce-linktype="2" data-glossary-id="52150">Regulated Activities Order</a></em>;</li>
+        <li>(c) <em><a class="glossary-link" title="ancillary activities" href="#missingcontent_glossary_52380" data-mce-linktype="2" data-glossary-id="52380">ancillary activities</a></em>;</li>
+        <li>(d) in relation to <em><a class="glossary-link" title="MiFID business" href="#glossary-term-39ff74fff42048cb928c0e4d52169726" data-mce-linktype="2" data-glossary-id="53214">MiFID business</a></em>, <em><a class="glossary-link" title="ancillary services" href="#glossary-term-f11e2e2a78204b8bb3ef3c91156003e8" data-mce-linktype="2" data-glossary-id="53196">ancillary services</a></em>; and</li>
+        <li>(e) <em><a class="glossary-link" title="unregulated activities" href="#glossary-term-49ac931e2ae04b6086de60af1bf8da65" data-mce-linktype="2" data-glossary-id="52123">unregulated activities</a></em> in a <em><a class="glossary-link" title="prudential context" href="#glossary-term-bae18c0beaa9482cbf0a6a4bd5aa13a8" data-mce-linktype="2" data-glossary-id="53225">prudential context</a></em>;</li>
+    </ol>
+    <li>(2) [deleted.]</li>
+    <li>(3) in a <em><a class="glossary-link" title="prudential context" href="#glossary-term-bae18c0beaa9482cbf0a6a4bd5aa13a8" data-mce-linktype="2" data-glossary-id="53225">prudential context</a></em> with respect to activities wherever they are carried on; and</li>
+    <li>(4) taking into account any activity of other members of a <em><a class="glossary-link" title="group" href="#glossary-term-ce2d19a68266487692b25af21221afef" data-mce-linktype="2" data-glossary-id="53271">group</a></em> of which the<em> <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> is a member.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/03-01-2018#70956a61ccd345fe86c1c07a60667dfc">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=70956a61ccd345fe86c1c07a60667dfc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ec7cb267b70d46338d874c81559a102b"
+	 data-version="aada23882d81409faa1aa4770475e16c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a title="2.1" href="/pra-rules/compliance-and-internal-audit#a6864136ae4643bcabc6049828059412" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> to <a title="2.2B" href="/pra-rules/compliance-and-internal-audit#c01992196887422290df129122203102" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2B</a> do not apply to a <em><a class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> with respect to the carrying on of <em><a class="glossary-link" title="benchmarking activities" href="#glossary-term-d570ee527301409fabd283fd2cc0e3f9" data-mce-linktype="2" data-glossary-id="88214">benchmarking activities</a></em> except to the extent that before <em><a class="glossary-link" title="IP completion day" href="#glossary-term-7050e4e6e7be49a6923c0547b96de0fd" data-mce-linktype="2" data-glossary-id="108323">IP completion day</a></em>, they were made for the purpose of transposing an EU instrument.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/29-06-2018#ec7cb267b70d46338d874c81559a102b">
+			Past
+			<span class="visually-hidden">
+				version of 1.1A before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ec7cb267b70d46338d874c81559a102b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="031e3c0b796f44b0a4a4699ac5884b83"
+	 data-version="df4fefc18a1340d8a2bcc8cb3c2cb20b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:&nbsp;[Note: There are currently no Part specific definitions]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/31-12-2020#031e3c0b796f44b0a4a4699ac5884b83">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=031e3c0b796f44b0a4a4699ac5884b83">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/compliance-and-internal-audit/1-application-and-definitions/23-10-2025?p=1" data-id="e08353177a91470e8de9158ae80adfac" data-effective-date="23-10-2025" data-download-title="Application and Definitions_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/compliance-and-internal-audit/1-application-and-definitions/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/compliance-and-internal-audit#e08353177a91470e8de9158ae80adfac&amp;subject=PRA Rulebook - Compliance and Internal Audit – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=e08353177a91470e8de9158ae80adfac">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="236411ead98f4f208fee7cc8f10e376b"
+	 data-version="c21f98a4072940faa640f3f46afc6961"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Compliance
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a6864136ae4643bcabc6049828059412"
+	 data-version="cd20e706e5cf4603874d5bfcb2c302a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must establish, implement and maintain adequate policies and procedures sufficient to ensure compliance of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> including its managers, <em><a class="glossary-link" title="employees" href="#glossary-term-e08f83ef44794a06bd2429270dc7b807" data-mce-linktype="2" data-glossary-id="52174">employees</a></em> and <em><a class="glossary-link" title="appointed representatives" href="#glossary-term-174be2f8375e49fdbbb03dc7bacf57e6" data-mce-linktype="2" data-glossary-id="53197">appointed representatives</a></em> (or where applicable, <em><a class="glossary-link" title="tied agents" href="#glossary-term-fc85ca179cb34b44a46abe84da4e3ab3" data-mce-linktype="2" data-glossary-id="53232">tied agents</a></em>) with its obligations under the <em><a class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em> and for countering the risk that the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> might be used to further <em><a  class="glossary-link" title="financial crime" href="#glossary-term-52c59517f54649dfa8eeb86c7d2ffee8" data-mce-linktype="2" data-glossary-id="63311">financial crime</a></em>.</p>
+			<p><strong>[Note: Art. 16(2) of <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/02-04-2015#a6864136ae4643bcabc6049828059412">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a6864136ae4643bcabc6049828059412">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="eb5131a2ba284df49881299dfd3c792c"
+	 data-version="024345800b334a9abb021cbc45e156f0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must, taking into account the nature, scale and complexity of its business, and the nature and range of <a href="#glossary-term-e075475639fc4a03b61e5182a0eb0fa8">relevant services and activities</a>&nbsp;undertaken in the course of that business:&nbsp;<br>
+<ol class="new-bullet">
+    <li>(1) establish, implement and maintain adequate policies and procedures designed to detect any risk of failure by the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;to comply with its obligations under the <a href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac">regulatory system</a>, as well as the associated risks; and</li>
+    <li>(2) put in place adequate measures and procedures designed to minimise the risks detected as a result of compliance with 2.1A(1) and to enable the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;to exercise their powers effectively under the <a href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac">regulatory system</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=eb5131a2ba284df49881299dfd3c792c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="49b1b175f5944c98a8259050e31ed1be"
+	 data-version="a21ebf30794d4d6fa92bdefc7a529cf3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must establish and maintain a permanent and effective compliance function which operates independently, and which is responsible for:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;monitoring on a permanent basis, and assessing on a regular basis, the adequacy and effectiveness of the measures, policies and procedures put in place in accordance with <a href="/pra-rules/compliance-and-internal-audit#eb5131a2ba284df49881299dfd3c792c" data-rb-content-link="Rule">2.1A</a>, and the actions taken to address any deficiencies in the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm's</a>&nbsp;compliance with its obligations;</li>
+    <li>(2)  advising and assisting the <a href="#glossary-term-ddbabf0bf2bf4e3aa813ff7a7bc75b2e">relevant persons</a>&nbsp;responsible for carrying out <a href="#glossary-term-e075475639fc4a03b61e5182a0eb0fa8">relevant services and activities</a>&nbsp;to comply with the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm's</a>&nbsp;obligations under the <a href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac">regulatory system</a>; and</li>
+    <li>(3)  reporting to the <a href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d">management body</a>, on at least an annual basis, on the implementation and effectiveness of the overall control environment for <a href="#glossary-term-e075475639fc4a03b61e5182a0eb0fa8">relevant services and activities</a>, on the risks that have been identified as well as remedies undertaken or to be undertaken.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=49b1b175f5944c98a8259050e31ed1be">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1B
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="20e2bec739074493b0bfc845bff92fa2"
+	 data-version="08117841e56b4759b155e32a9ac10e1a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1C
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must ensure that:&nbsp;</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;the compliance function is responsible for conducting an assessment on the basis of which it establishes a risk-based monitoring programme for the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;that takes into consideration all areas of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm's</a>&nbsp;<a href="#glossary-term-e075475639fc4a03b61e5182a0eb0fa8">relevant services and activities</a>; and</li>
+    <li>(2)  its compliance risk is comprehensively monitored by the compliance function, for which purposes the compliance function establishes a monitoring programme and priorities determined according to the compliance risk assessment referred to at 2.1C(1).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=20e2bec739074493b0bfc845bff92fa2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1C
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="14ec585c6ecc4ac8a35f31951478415b"
+	 data-version="d1c9c2ef95e1464384c176a435bde522"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1D
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In order to enable the compliance function to discharge its responsibilities properly and independently, a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must ensure that:</p>
+<ol class="new-bullet">
+    <li>(1) the compliance function has the necessary authority, resources, expertise and access to all relevant information;</li>
+    <li>(2) a compliance officer is appointed by the <a href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d">management body</a>&nbsp;and that compliance officer is responsible for the compliance function and for any compliance reporting required in relation to its obligations under the <a href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac">regulatory system</a>&nbsp;and <a href="/pra-rules/general-organisational-requirements#a4fdfc1e84794d3b9a2e7657aa974c96" data-rb-content-link="Rule">General Organisational Requirements 4.7</a>;</li>
+    <li>(3)  the compliance function reports directly to the <a href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d">management body</a>&nbsp;on an ad-hoc basis where it detects a significant risk of failure by the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;to comply with its obligations under the <a href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac">regulatory system</a>;</li>
+    <li>(4) the <a href="#glossary-term-ddbabf0bf2bf4e3aa813ff7a7bc75b2e">relevant persons</a> involved in the compliance function are not involved in the performance of the services or activities which they monitor; and</li>
+    <li>(5) the method of determining the <a href="#glossary-term-b3474122f19a47249e8aa14904b35b77">remuneration</a>&nbsp;of the <a href="#glossary-term-ddbabf0bf2bf4e3aa813ff7a7bc75b2e">relevant persons</a>&nbsp;involved in the compliance function does not compromise their objectivity and is not likely to do so.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=14ec585c6ecc4ac8a35f31951478415b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1D
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="857f0786eafc4cd7b38b1697a158c68b"
+	 data-version="accbf2a3fe874131bc17858808fc1969"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1E
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+    <li>(1) A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;need not comply with the requirements in <a href="/pra-rules/compliance-and-internal-audit#14ec585c6ecc4ac8a35f31951478415b" data-rb-content-link="Rule">2.1D(4)</a>&nbsp;or <a href="/pra-rules/compliance-and-internal-audit#14ec585c6ecc4ac8a35f31951478415b" data-rb-content-link="Rule">(5)</a>&nbsp;where:
+    <ol>
+        <li>(a)&nbsp;in view of the nature, scale and complexity of its business, and the nature and range of the <a href="#glossary-term-e075475639fc4a03b61e5182a0eb0fa8">relevant services and activities</a>, compliance with the requirements under <a href="/pra-rules/compliance-and-internal-audit#14ec585c6ecc4ac8a35f31951478415b" data-rb-content-link="Rule">2.1D(4)</a><span>&nbsp;or&nbsp;</span><a href="/pra-rules/compliance-and-internal-audit#14ec585c6ecc4ac8a35f31951478415b" data-rb-content-link="Rule">(5)</a>&nbsp;is not proportionate; and</li>
+        <li>(b)  the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm's</a><span>&nbsp;</span>compliance function is, and continues to be, effective.</li>
+    </ol>
+    </li>
+    <li>(2) Where a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a><span>&nbsp;</span>is relying on 2.1E(1), it must:
+    <ol>
+        <li>(a)  be able to demonstrate to the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;upon request that its compliance function continues to be effective; and</li>
+        <li>(b)  assess on a regular basis whether the effectiveness of the compliance function has been, or is being, compromised by the reliance on 2.1E(1).</li>
+    </ol>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=857f0786eafc4cd7b38b1697a158c68b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1E
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f3ca2bec8fd844a183a0d44a0c08597d"
+	 data-version="0eeb72e80a8d413a89c703b9756bcc8c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/03-01-2018#f3ca2bec8fd844a183a0d44a0c08597d">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f3ca2bec8fd844a183a0d44a0c08597d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c67694e4a8094688bb1ce4668e4f352e"
+	 data-version="4b0c5f54dc4d4b7397127491e3b78838"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/03-01-2018#c67694e4a8094688bb1ce4668e4f352e">
+			Past
+			<span class="visually-hidden">
+				version of 2.2A before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c67694e4a8094688bb1ce4668e4f352e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c01992196887422290df129122203102"
+	 data-version="9aed224c870a434ca38858895535eb6f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/03-01-2018#c01992196887422290df129122203102">
+			Past
+			<span class="visually-hidden">
+				version of 2.2B before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c01992196887422290df129122203102">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2B
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b7a2ccd331224a9ebdba175ee48d6fb1"
+	 data-version="fa036a10eec247bb87beab74353f7221"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/02-04-2015#b7a2ccd331224a9ebdba175ee48d6fb1">
+			Past
+			<span class="visually-hidden">
+				version of 2.3 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b7a2ccd331224a9ebdba175ee48d6fb1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="074cc990b2314ea1a74d9c51ee81e90c"
+	 data-version="4d78a2854a534adea79d54b05b8eb90b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/02-04-2015#074cc990b2314ea1a74d9c51ee81e90c">
+			Past
+			<span class="visually-hidden">
+				version of 2.4 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=074cc990b2314ea1a74d9c51ee81e90c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3b611661380144ed8428a8b7901ceb35"
+	 data-version="87919df40ebe40c0b349b881ddfc199a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/02-04-2015#3b611661380144ed8428a8b7901ceb35">
+			Past
+			<span class="visually-hidden">
+				version of 2.5 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3b611661380144ed8428a8b7901ceb35">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2f475e9281774a7387ec5b2435e85075"
+	 data-version="2e288d3723db4283a9e7aa4171261164"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+    <li>(1) [Deleted.]</li>
+    <li>(2) [Deleted.]</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/03-01-2018#2f475e9281774a7387ec5b2435e85075">
+			Past
+			<span class="visually-hidden">
+				version of 2.6 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2f475e9281774a7387ec5b2435e85075">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/compliance-and-internal-audit/2-compliance/23-10-2025?p=1" data-id="236411ead98f4f208fee7cc8f10e376b" data-effective-date="23-10-2025" data-download-title="Compliance_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/compliance-and-internal-audit/2-compliance/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/compliance-and-internal-audit#236411ead98f4f208fee7cc8f10e376b&amp;subject=PRA Rulebook - Compliance and Internal Audit – Compliance">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=236411ead98f4f208fee7cc8f10e376b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Compliance
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="3df1035aa0c641e6be1d416146a78412"
+	 data-version="cec0c3d3de0b479691d86b4af023c9e4"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Internal Audit
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4deec5466eb146f1af4b94ef9672ab06"
+	 data-version="3e74864e4b8342a795a46811e1373e43"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/03-01-2018#4deec5466eb146f1af4b94ef9672ab06">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4deec5466eb146f1af4b94ef9672ab06">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4ed4fa63e312411bbe5d8266eac8e857"
+	 data-version="64846d71edb9415ab222384ed8fe226d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/03-01-2018#4ed4fa63e312411bbe5d8266eac8e857">
+			Past
+			<span class="visually-hidden">
+				version of 3.1A before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4ed4fa63e312411bbe5d8266eac8e857">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a6a39165c0df4f5d90b9ef9509d0f681"
+	 data-version="13bbfeb4630b410d9c0124cbe0c08ac5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/compliance-and-internal-audit/03-01-2018#a6a39165c0df4f5d90b9ef9509d0f681">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a6a39165c0df4f5d90b9ef9509d0f681">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="10e93d70a5e941e6b80a1d2aad6fb886"
+	 data-version="3a9c6341a3a845d0992e987ad420f66a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must, where appropriate and proportionate in view of the nature, scale and complexity of its business and the nature and range of <a href="#glossary-term-e075475639fc4a03b61e5182a0eb0fa8">relevant services and activities</a>&nbsp;undertaken in the course of its business, establish and maintain an internal audit function which is separate and independent from the other <a href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d">functions</a>&nbsp;and activities of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=10e93d70a5e941e6b80a1d2aad6fb886">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="15b7e318758b4d1490addb691d225f83"
+	 data-version="9f83b349f45c42c9aeadc58d75b6f100"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must ensure that its internal audit function is responsible for:</p>
+<ol class="new-bullet">
+    <li>(1) establishing, implementing and maintaining an audit plan to examine and evaluate the adequacy and effectiveness of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm's</a>&nbsp;systems, internal control mechanisms and arrangements;</li>
+    <li>(2) issuing recommendations based on the result of work carried out in accordance with that audit plan and verify compliance with those recommendations; and</li>
+    <li>(3) reporting in relation to internal audit matters in accordance with <a href="/pra-rules/general-organisational-requirements#a4fdfc1e84794d3b9a2e7657aa974c96" data-rb-content-link="Rule">General Organisational Requirements 4.7</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=15b7e318758b4d1490addb691d225f83">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/compliance-and-internal-audit/3-internal-audit/23-10-2025?p=1" data-id="3df1035aa0c641e6be1d416146a78412" data-effective-date="23-10-2025" data-download-title="Internal Audit_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/compliance-and-internal-audit/3-internal-audit/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/compliance-and-internal-audit#3df1035aa0c641e6be1d416146a78412&amp;subject=PRA Rulebook - Compliance and Internal Audit – Internal Audit">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=3df1035aa0c641e6be1d416146a78412">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Internal Audit
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

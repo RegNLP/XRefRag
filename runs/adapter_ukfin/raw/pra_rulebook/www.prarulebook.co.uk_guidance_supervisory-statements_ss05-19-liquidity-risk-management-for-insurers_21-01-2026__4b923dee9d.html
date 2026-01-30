@@ -1,0 +1,5175 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{3AE11E70-014C-44B1-9D35-86A2F90AA39A} -->
+<title>SS5/19 – Liquidity risk management for insurers | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS5/19 – Liquidity risk management for insurers">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS5/19 – Liquidity risk management for insurers">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrf6qq-f-3a366985e-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":33,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"713d67d","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":1138,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025441","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==aoURH9+sw0g2z+fd5YJvi13jrdL/kpyh7WQgdh40KsxoVU9tFfa6HsalOWhlGi6zBgiKcBC6QO5HpeJV2SriSWJl79q1Jb93J7YHY9AZc1i/+SaCuQVhbf2HeF/7HNdwEMX98rGEHQTSpwX0xlrctFmfru5NZxLo9UyafmoRj6qY3m+LHWDoEoqg5hGTtICVKSMVXEMSgoobmUpiaEwlzm5nurK22lczS9RLcagruTSk/exQc++9n5QVCrp7AC7E3kCSuVzw9hyTy/nAEEHj5FB2/4De2/ri9sUzavjD7IScsIaMk+hQnG6qLzeUlwN0zEAJNJg/CebKKJGkL2EUrzQc9GOZyZHbZ0hSVjHgcR05bvxDiEn7MTNRPrvF5MBD0JECYQ9NaplLckCNB3cEciQylKQNSRvBt+9EmphPJgA=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS5/19 – Liquidity risk management for insurers				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS5/19 – Liquidity risk management for insurers
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						24/09/2019
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-0cc36954-6aae-4af3-9b72-3ae824512518">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-0cc36954-6aae-4af3-9b72-3ae824512518"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS5/19 – Liquidity risk management for insurers
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS5/19 – Liquidity risk management for insurers)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/conditions-governing-business/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Conditions Governing Business
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/group-supervision/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Group Supervision
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/insurance-company-overall-resources-and-valuation/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Insurance Company – Overall Resources and Valuation
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2019/liquidity-risk-management-for-insurers" class="list-links__link" target="_blank">
+										PS18/19 - Liquidity risk management for insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/31-12-2024?p=1" data-id="6088b4bfdea24623bd15d983aeec4704" data-effective-date="31-12-2024" data-download-title="SS5/19 – Liquidity risk management for insurers_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers&amp;subject=PRA Rulebook - SS5/19 – Liquidity risk management for insurers">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="81cc0c76ec09457ebcdb7f1c6bb7cb57"
+	 data-version="97d79432578b41068dde4d3649125d32"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="265b06220bfc4a838243440bd65db6c1"
+	 data-version="1dc34eb96a5b415fa56e99df3547088f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement (SS) sets out the Prudential Regulation Authority&rsquo;s (PRA&rsquo;s) expectations concerning the liquidity risk management framework an insurer must have in place pursuant either to <a href="/pra-rules/conditions-governing-business#a8824868755a478393214ae41545392d" data-rb-content-link="Rule">Conditions Governing Business 3.1(2)(c)(iv)</a>&nbsp;and <a href="/pra-rules/group-supervision#9ec997dc3a204145bec075336918dcdd" data-rb-content-link="Rule">Group Supervision 17.1(1)(b)</a>&nbsp;in the PRA Rulebook for UK Solvency II firms or to <a href="/pra-rules/insurance-company-overall-resources-and-valuation#e38059a2a1a7464ebbe479c96649935e" data-rb-content-link="Rule">Insurance Company &ndash; Overall Resources and Valuation 2.5(3)</a>&nbsp;in the PRA Rulebook for non-Directive firms, as applicable.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#265b06220bfc4a838243440bd65db6c1">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9daa981361104fa3a7d2b606090b6142"
+	 data-version="3e4074ba05fd4b21b713a7b0156e9d2e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It is addressed to all UK Solvency II firms, including in respect of the Solvency II groups provisions, to the Society of Lloyd&rsquo;s (&lsquo;the Society&rsquo;) and its managing agents, and to non-Directive insurers (collectively referred to as &lsquo;insurers&rsquo;).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c32a332760c74a259d6929a247491424"
+	 data-version="0c871f49133c469d9f5b079eba83a640"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The areas addressed in this SS include:</p>
+<ul>
+    <li>the development and maintenance of proper policies, systems, controls and processes (Chapter 2);</li>
+    <li>the identification of material liquidity risk drivers (Chapter 3);</li>
+    <li>the design and undertaking of forward-looking scenario analysis and stress testing programmes (Chapter 4);</li>
+    <li>considerations for the inclusion of highly liquid assets in the liquidity buffer (Chapter 5);</li>
+    <li>the use of quantitative metrics and tools for measuring and monitoring liquidity risk drivers (Chapter 6); and</li>
+    <li>effective contingency planning (Chapter 7).</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3966e9aabbc2455fba36cded0f62e5f5"
+	 data-version="da464793cb5a4b6f8e065473c81d7196"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			This SS draws on the PRA&rsquo;s regulatory experience to identify some key issues for an insurer to consider when managing liquidity risk. It is not intended to be an exhaustive guide to liquidity management. The PRA recognises that the mix of sources of liquidity risk is unique to each individual insurer and group, and that liquidity risk management practices will vary. An insurer, therefore, is expected to understand the drivers of the liquidity risk it faces and to apply the guidance contained in this SS in light of the scale, nature and complexity of its activities.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="824f78a354cd4381a524a47ac32a84d5"
+	 data-version="74dd0c52b8864468bda6d828ecaa724d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This SS should be read in conjunction with:</p>
+<ul>
+    <li>the <a href="/pra-rules/conditions-governing-business" data-rb-content-link="Part">Conditions Governing Business</a>, <a href="/pra-rules/group-supervision" data-rb-content-link="Part">Group Supervision</a>, and <a href="/pra-rules/investments" data-rb-content-link="Part">Investments Parts</a>&nbsp;of the PRA Rulebook for Solvency II firms;<sup><a href="#footnote-1">1</a></sup></li>
+    <li>the <a href="/pra-rules/friendly-society-financial-prudence" data-rb-content-link="Part">Friendly Society &ndash; Financial Prudence</a>, <a href="/pra-rules/insurance-company-overall-resources-and-valuation" data-rb-content-link="Part">Insurance Company &ndash; Overall Resources and Valuation</a>&nbsp;and <a href="/pra-rules/non-solvency-ii-firms-governance" data-rb-content-link="Part">Non-Solvency II Firms &ndash; Governance Parts</a>&nbsp;of the PRA Rulebook for non-Directive firms;<sup><a href="#footnote-2">2</a></sup></li>
+    <li>European Insurance and Occupational Pensions Authority (EIOPA) Guidelines on system of governance;<sup><a href="#footnote-3">3</a></sup></li>
+    <li>&lsquo;The PRA&rsquo;s approach to insurance supervision&rsquo;;<sup><a href="#footnote-4">4</a></sup></li>
+    <li>SS14/15 &lsquo;With-profits&rsquo;;<sup><a href="#footnote-5">5</a></sup></li>
+    <li>SS41/15 &lsquo;Solvency II: applying EIOPA Set 2, System of Governance and ORSA Guidelines&rsquo;;<sup><a href="#footnote-6">6</a></sup></li>
+    <li>SS5/16 &lsquo;Corporate Governance: Board responsibilities&rsquo;;<sup><a href="#footnote-7">7</a></sup></li>
+    <li>SS19/16 &lsquo;Solvency II: ORSA&rsquo;;<sup><a href="#footnote-8">8</a></sup></li>
+    <li>SS5/17 &lsquo;Dealing with a market turning event in the general insurance sector&rsquo;;<sup><a href="#footnote-9">9</a></sup></li>
+    <li>SS4/18 &lsquo;Financial management and planning by insurers&rsquo;;<sup><a href="#footnote-10">10</a></sup></li>
+    <li>SS7/18 &lsquo;Solvency II: Matching adjustment&rsquo;;<sup><a href="#footnote-11">11</a></sup></li>
+    <li>SS1/19 &lsquo;Non-binding PRA materials: The PRA&rsquo;s approach after the UK&rsquo;s withdrawal from the EU&rsquo;<sup><a href="#footnote-12">12</a></sup>; and</li>
+    <li>the joint Bank and PRA Statement of Policy (SoP) &lsquo;Interpretation of EU Guidelines and Recommendations: Bank of England and PRA approach after the UK&rsquo;s withdrawal from the EU&rsquo;.<sup><a href="#footnote-13">13</a></sup></li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						<a href="http://www.prarulebook.co.uk/rulebook/Content/Sector/211132">www.prarulebook.co.uk/rulebook/Content/Sector/211132</a>.
+					</span>
+				</li>
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						<a href="http://www.prarulebook.co.uk/rulebook/Content/Sector/211133">www.prarulebook.co.uk/rulebook/Content/Sector/211133</a>.
+					</span>
+				</li>
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://www.eiopa.europa.eu/publications/preparatory-guidelines-system-governance_en">https://www.eiopa.europa.eu/publications/preparatory-guidelines-system-governance_en</a>
+					</span>
+				</li>
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://www.bankofengland.co.uk/prudential-regulation/supervision">https://www.bankofengland.co.uk/prudential-regulation/supervision</a>.
+					</span>
+				</li>
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/with-profits-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2015/with-profits-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency2-applying-eiopa-set2-system-of-governance-and-orsa-guidelines-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency2-applying-eiopa-set2-system-of-governance-and-orsa-guidelines-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/corporate-governance-board-responsibilities-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2016/corporate-governance-board-responsibilities-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-orsa">https://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-orsa</a>.
+					</span>
+				</li>
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/dealing-with-a-market-turning-event-in-the-general-insurance-sector-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2017/dealing-with-a-market-turning-event-in-the-general-insurance-sector-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/financial-management-and-planning-by-insurers-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2018/financial-management-and-planning-by-insurers-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-11" class="rb-footnote">
+					<span class="fn-col-1">
+						11.
+					</span>
+					<span class="fn-col-2">
+						November 2024: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/solvency-2-matching-adjustment-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2018/solvency-2-matching-adjustment-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-12" class="rb-footnote">
+					<span class="fn-col-1">
+						12.
+					</span>
+					<span class="fn-col-2">
+						December 2020: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2019/non-binding-pra-materials-the-pras-approach-after-the-uks-withdrawal-from-the-eu-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2019/non-binding-pra-materials-the-pras-approach-after-the-uks-withdrawal-from-the-eu-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-13" class="rb-footnote">
+					<span class="fn-col-1">
+						13.
+					</span>
+					<span class="fn-col-2">
+						November 2022: <a href="https://www.bankofengland.co.uk/paper/2019/interpretation-of-eu-guidelines-and-recommendations-boe-and-pra-approach-sop">https://www.bankofengland.co.uk/paper/2019/interpretation-of-eu-guidelines-and-recommendations-boe-and-pra-approach-sop</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#824f78a354cd4381a524a47ac32a84d5">
+			Past
+			<span class="visually-hidden">
+				version of 1.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/1-introduction/31-12-2024?p=1" data-id="81cc0c76ec09457ebcdb7f1c6bb7cb57" data-effective-date="31-12-2024" data-download-title="Introduction_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/1-introduction/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#81cc0c76ec09457ebcdb7f1c6bb7cb57&amp;subject=PRA Rulebook - SS5/19 – Liquidity risk management for insurers – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="0d672a3b29d1467ebf4be7f67a99ed09"
+	 data-version="c1a95cd0e0cc4c4c8f3abd1da75423fb"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Liquidity risk management framework
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6907436e964047fb8919aae89e6adc05"
+	 data-version="be09c0c6d9c644d385963cdcdffe31b6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/conditions-governing-business#41fb2d3479f24f639e11b691f3b6b271" data-rb-content-link="Chapter">Conditions Governing Business Chapters 2</a> and <a href="/pra-rules/conditions-governing-business#73c8c58e1d8843858d048ba7be5be7fb" data-rb-content-link="Chapter">3</a>, supplemented by <a href="/pra-rules/non-solvency-ii-firms-governance#ab43d88b65824b1eae7f6208b1e7ecc4" data-rb-content-link="Chapter">Non-Solvency II Firms &ndash; Governance Chapters 2</a>, <a href="/pra-rules/non-solvency-ii-firms-governance#818de1bf264f41e08d4422f3fa7f4b96" data-rb-content-link="Chapter">3</a>&nbsp;and <a href="/pra-rules/non-solvency-ii-firms-governance#2c0681788cc343eabfcb90e8f80f9a51" data-rb-content-link="Chapter">7</a>&nbsp;require an insurer to establish an effective system of governance and prudential risk management systems. An insurer is required to have a risk appetite or tolerance for risk, a process to identify, measure, and monitor risk and appropriate systems to convey information to management or the board.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#6907436e964047fb8919aae89e6adc05">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0793474395e94edb8e62fab0899b0a22"
+	 data-version="9baf20e9930e436db292931baa67f277"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An insurer&rsquo;s system of governance and risk management system is required, under Conditions Governing Business 2.3 and Non-Solvency II Firms &ndash; Governance 2.2 and 3.3, to be proportionate to the nature, scale and complexity of its operations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b75fa67bc6904e9fac4009f18257dbd2"
+	 data-version="b299b1148185452187f298f54bc89ab9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers the following elements to be fundamental components of an insurer&rsquo;s liquidity risk management framework:</p>
+<ul>
+    <li>a clearly defined liquidity risk appetite that is owned and approved by the board;</li>
+    <li>a liquidity risk management strategy and documented liquidity risk policy(ies) and processes consistent with its stated liquidity risk appetite;</li>
+    <li>clear allocation and appropriate segregation of responsibilities, in line with paragraph 1.31 of EIOPA Guideline 5, for liquidity risk across the business areas and business units of the insurer and, in the case of groups, across the entities of the group;</li>
+    <li>proper IT systems and reporting procedures to report management information that is timely and adequate to measure, assess and monitor all material sources of liquidity risk;</li>
+    <li>in the case of groups, clear reporting lines within the group and effective systems for ensuring that information flows in the group;</li>
+    <li>forward-looking scenario analysis and liquidity stress testing programmes, which are based on severe but plausible assumptions (elaborated on further in Chapter 4); and</li>
+    <li>quantitative metrics and tools for measuring liquidity risk drivers and serving as early warning indicators (elaborated on further in chapters 6 and 7).</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="82359f0a5d76478184475e7e13bbea31"
+	 data-version="91a39bd9f04c4c5384273ce1862c87a9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As laid out in Group Supervision 17.1, liquidity risks must be managed on a group-wide basis, as well as at an individual entity level, where relevant. Under Group Supervision 17.1(2), the liquidity risk management system must be applied consistently across all companies within the relevant group.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a3c319de1f064590badcaad5430e47e3"
+	 data-version="b88aef00f7a143d5bf6ea8a7332de506"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An insurer, although solvent on a balance-sheet basis may nevertheless find itself short of cash or funding options to meet its liabilities as they fall due, and therefore insolvent on a cash-flow basis. Although capital may be available to mitigate liquidity risk over longer time horizons, for example through the sale of assets at a loss, this is not always the case as liquidity risk may materialise very rapidly. In addition, events that have a significant impact on liquidity may not have significant implications for capital, and so, demonstrating resilience to the latter, could encourage a false sense of security. Hence, reliance on an existing capital management framework is not generally sufficient or appropriate for managing liquidity risk.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e82168d5885c4e4ca99f34b1241704fd"
+	 data-version="21a9fc50b08b4bb2be69f6ba34c480a1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It is important that an insurer critically examines its liquidity needs and sources, in both benign circumstances and under stress. As set out in <a href="/pra-rules/conditions-governing-business#6a1bcbf96eb4445a9af97d8e9f11613e" data-rb-content-link="Rule">Conditions Governing Business 3.1A(4)(b)</a>&nbsp;and <a href="/pra-rules/insurance-company-overall-resources-and-valuation#66aa5697f6c44f65bf796b2acc5a4fd3" data-rb-content-link="Rule">Insurance Company &ndash; Overall Resources and Valuation 2.3</a>&nbsp;an insurer must maintain sufficient liquid assets, both as to amount and quality, to enable it to meet its liabilities as they fall due. In designing its liquidity risk management framework, the PRA expects an insurer to consider its liquidity risk exposure in normal market conditions and also in severe but plausible stressed situations resulting from general market-wide turbulence, idiosyncratic difficulties, and combinations of both.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#e82168d5885c4e4ca99f34b1241704fd">
+			Past
+			<span class="visually-hidden">
+				version of 2.6 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a6110c93ccd74d61a73859e3896b851b"
+	 data-version="f0d01ea61ecf4786b7580ccf8cd02410"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For a life insurer, liquidity considerations are relevant both in the portfolio as a whole and in individual funds, including not only the shareholders&rsquo; funds, non-profits funds and with-profits funds, but also unit-linked funds.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f5fa9fb7cd754e77906b0a2cc2a01ddf"
+	 data-version="389e7ece597b4140ab142e0ca4dc64de"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The effectiveness of an insurer&rsquo;s liquidity risk management framework is expected to be regularly reviewed and evaluated by individuals unconnected with day-to-day liquidity risk management to ensure that the insurer is operating in accordance with its liquidity risk appetite and other liquidity risk management policies and procedures. Consistent with Conditions Governing Business 2.4(5) and Non-Solvency II Firms &ndash; Governance 3.4(5), an insurer is expected to adapt its liquidity risk management framework in view of any significant change to ensure that emerging risks are taken into account.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="50f4f8198d7f460389f405609c44f78d"
+	 data-version="0fa625f7ed6e496a8e2bc54839b5879f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Under <a href="/pra-rules/conditions-governing-business#a6eb1337334e4c0896e7424b354b4429" data-rb-content-link="Rule">Conditions Governing Business 2A.1(8)</a>&nbsp;and <a href="/pra-rules/non-solvency-ii-firms-governance#914ba85d055f4ceb866bdcaa035e863a" data-rb-content-link="Rule">Non-Solvency II Firms &ndash; Governance 7.1</a>, an insurer must establish systems for the management of risk. <a href="/pra-rules/conditions-governing-business#a8824868755a478393214ae41545392d" data-rb-content-link="Rule">Conditions Governing Business 3.1(1A)(d)</a>&nbsp;and <a href="/pra-rules/non-solvency-ii-firms-governance#c451d89b46584c23a9d95c8719b2ea2f" data-rb-content-link="Rule">Non-Solvency II Firms &ndash; Governance 2.5</a>&nbsp;and <a href="/pra-rules/non-solvency-ii-firms-governance#db7c6536fdd14e3ebd80713bf6120773" data-rb-content-link="Rule">3.2</a>&nbsp;require the establishment of reporting processes and procedures to ensure that the necessary information is available to decision-makers. With these obligations in mind, the PRA expects an insurer to have an effective system of monitoring and reporting liquidity risk which provides clear, concise, timely and accurate liquidity risk reports to relevant functions within the insurer. Liquidity risks are often fast moving, a characteristic which is expected be reflected in an insurer&rsquo;s reporting system. Design of metrics and reporting is set out in more detail in <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#165ec00a9c9b401e86f21954d5a87bcb" data-rb-content-link="Chapter">Chapter 6</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#50f4f8198d7f460389f405609c44f78d">
+			Past
+			<span class="visually-hidden">
+				version of 2.9 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="23e33a9834cc4d55bf3ca2a6d8e2ffa6"
+	 data-version="ffad14c5af204cf2a662dee6d6237a0a"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Liquidity risk appetite and risk limits</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="6c7192c4c2834bb3893c4c4fd3a8325c"
+	 data-version="6d73928580b649fd8644eaea9e000fc3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/conditions-governing-business#a8824868755a478393214ae41545392d" data-rb-content-link="Rule">Conditions Governing Business 3.1(1A)(c)</a> requires UK Solvency II firms, the Society and managing agents to implement and maintain a risk management system that includes approved risk tolerance limits that implement an insurer&rsquo;s risk strategy and facilitate control mechanisms. Consistent with this obligation, the PRA expects a UK Solvency II firm, the Society and managing agents to establish and maintain a clearly defined liquidity risk appetite statement and for senior management to identify material sources of liquidity risk for which prudent risk limits should be set. For non-Directive firms, <a href="/pra-rules/non-solvency-ii-firms-governance#19a902d12a5a4555bf4a51e4e33580fb" data-rb-content-link="Rule">Non-Solvency II Firms &ndash; Governance 7.3(2)</a>&nbsp;requires an insurer to document its policies in relation to liquidity risk, including its appetite or tolerance for this risk.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#6c7192c4c2834bb3893c4c4fd3a8325c">
+			Past
+			<span class="visually-hidden">
+				version of 2.10 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d662a0447f2b4a50945991b85088257f"
+	 data-version="f7f0b12ffef44c51a998b370779b5be2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects the insurer&rsquo;s liquidity risk appetite statement to identify the duration, types and severity of liquidity stresses it aims to survive. The liquidity risk appetite statement should define the:</p>
+<ul>
+    <li>timescales over which identified risks are expected to crystallise with multiple tenors considered, where appropriate;</li>
+    <li>types and value of assets which the insurer includes in its liquidity buffer i.e. that it deems liquid and available to satisfy overall liquidity needs in the time horizon considered in the specific scenario; and</li>
+    <li>minimum level of the liquidity buffer that the insurer intends to hold relative to liquidity needs in the time horizon considered in the specific scenario.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4dd9f34f17cb4edfa88106b8e4509e9a"
+	 data-version="475aa2ab4ce34dc8a1db02a7f4d891de"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA reminds an insurer of its expectations as set out in Chapter 2 of SS4/18 and expects similar governance of its liquidity risk appetite. An insurer may, where appropriate, integrate its liquidity risk appetite statement into its existing risk appetite framework. The PRA expects, however, that the liquidity risk appetite statement be explicitly identified within the overall framework.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f55074cbe8df4c56b89e1c0f9e236df6"
+	 data-version="a23a873d26fa4affaec4f80d8d7d2907"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The structure of risks to which an insurer is exposed emphasises the need for adequate systems and controls to guard against a spectrum of possible risks, from those arising in day-to-day liquidity risk management to those arising in stressed conditions. Reflecting this, the PRA expects senior management to decide what liquidity risk limits need to be set, in accordance with the nature, scale and complexity of the insurer&rsquo;s activities, to help ensure that the insurer remains within its stated liquidity risk appetite. Examples of possible sources of liquidity risk that may warrant limits are included in Chapter 3 of this SS.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f9cfb1c3b61f47d296473e94b420f806"
+	 data-version="be8f7b0552684284821b0215556be5c7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An insurer is expected to regularly review its limits and make appropriate adjustments when its risk tolerances or broader market conditions change. An insurer, other than a small non-Directive insurer,<sup><a href="#footnote-14">14</a></sup> should review these at least annually as part of the broader review of its risk management policies as required under <a href="/pra-rules/conditions-governing-business#23a9e8c347234432bc1d3dde877fca8b" data-rb-content-link="Rule">Conditions Governing Business 2.4(4)</a>&nbsp;and <a href="/pra-rules/non-solvency-ii-firms-governance#86f9ccffb96846198c11673b341f0219" data-rb-content-link="Rule">Non-Solvency II Firms &ndash; Governance 3.4(4)</a>.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-14" class="rb-footnote">
+					<span class="fn-col-1">
+						14.
+					</span>
+					<span class="fn-col-2">
+						As defined in the Glossary of the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#f9cfb1c3b61f47d296473e94b420f806">
+			Past
+			<span class="visually-hidden">
+				version of 2.14 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1536b12ff9044e7daac05621e815a4d1"
+	 data-version="251f658d99534224ae3a4bc583295009"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Liquidity risk management strategy and policies</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="ea09425a8e3e4d13bdeb02dc31c00e0e"
+	 data-version="70f1bc65287042078ef763536776ad65"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Pursuant to Conditions Governing Business 3.1 and Non-Solvency II Firms &ndash; Governance 7.2, the PRA expects an insurer to have in a place a well-documented liquidity risk management strategy which sets out its overall approach for managing liquidity risk. It is expected to cover the insurer&rsquo;s day-to-day and longer term management of liquidity risk.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3d3ac35ca7c243fcbe2de7bcf23ee1d2"
+	 data-version="1108824a0fd74405b845699d8a44ef1d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects an insurer&rsquo;s liquidity risk management strategy to identify all material sources of liquidity risk to which the insurer is exposed (elaborated on in Chapter 3) so that the insurer adheres to the liquidity risk appetite statement(s) set out by the board and any liquidity risk limits set by senior management.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="34e63844282149b9bed148c85af063a6"
+	 data-version="f27e25bc1c074cf8ae0fab52e8d7b24a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In order to implement its risk management strategy, the insurer is expected to have documented policies and processes that, at a minimum, include:</p>
+<ul>
+    <li>actions to be taken to take into account short term and long term liquidity risk (as required by <a href="/pra-rules/conditions-governing-business#6a1bcbf96eb4445a9af97d8e9f11613e" data-rb-content-link="Rule">Conditions Governing Business 3.1A(4)(a)</a>);</li>
+    <li>a clearly established methodology and key underlying assumptions for making cash flow projections of all material liquidity uses (out-flows) and sources (in-flows), in line with paragraph 1.63(a) of EIOPA Guideline 26;</li>
+    <li>the approach to liquidity stress testing, including clearly documented methodologies and assumptions (set out in more detail in <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#c18b1129e4e54c0c8ebe365900c79328" data-rb-content-link="Chapter">Chapter 4</a>);</li>
+    <li>an assessment of the insurer&rsquo;s overall liquidity needs over various durations and the target levels of liquidity buffers it expects to hold, based on the insurer&rsquo;s assessment of its actual and stressed liquidity positions (elaborated on further in <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#c18b1129e4e54c0c8ebe365900c79328" data-rb-content-link="Chapter">chapters 4</a>&nbsp;and <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#d81f7f1eda8b43d6a25fcfd0b5040b61" data-rb-content-link="Chapter">5</a>);</li>
+    <li>the composition of its liquidity buffer, including the quantities of each asset type which can be included and the monitoring arrangements in place, taking into account any potential costs or financial losses arising from forced sales (discussed further in <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#d81f7f1eda8b43d6a25fcfd0b5040b61" data-rb-content-link="Chapter">Chapter 5</a>); and</li>
+    <li>where applicable, an assessment of any regulatory, legal or other restrictions on liquidity transferability that could limit or delay the use of intra-group transactions to meet liquidity needs.</li>
+</ul>
+<div></div>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#34e63844282149b9bed148c85af063a6">
+			Past
+			<span class="visually-hidden">
+				version of 2.17 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8b1157319a6e46e1bee575f14c8f3ed1"
+	 data-version="652dfe749d514333b61652ceb8df4d99"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.18
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the insurer will document the responsibilities and obligations of employees and the functions dealing with liquidity risk, including risk escalation and reporting.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7435ebbc1c334c7696982092425a243c"
+	 data-version="10ad7c394eee4f2eab06cd694e297ab4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.19
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>To ensure that management and relevant members of the board can effectively oversee the insurer&rsquo;s risk management framework, the PRA expects the liquidity risk management strategy to make reference to all existing, relevant liquidity risk policies, to ensure all related documentation is accessible from one place.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a932924283b343f0942566f02e0cb259"
+	 data-version="7bdcfcfdac3d4978ba3c149b50107c12"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.20
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Pursuant to Group Supervision 17.1, similar standards of liquidity risk management as those that apply at insurance undertakings must be adhered to across the relevant group. To that end, the PRA generally expects the liquidity risk management strategy and policies for the group to be consistent with the group&rsquo;s structure, size and the specificities of the entities in the group. It expects the liquidity risk management strategy to be implemented consistently across the entities within the group. To the extent that a legal entity&rsquo;s liquidity management relies on group support, the PRA expects this to be accounted for in the liquidity risk strategy for the group and the arrangements for transfer of liquidity to be documented, practised and operable within the timeframes needed to be effective in a stress. The PRA expects that an insurer that is part of a group will review the extent and conditions of existing intra-group transactions and assess the reliance of companies within the group on such transactions to meet their liquidity needs.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c0c6435d5db44504821540ff2fae3707"
+	 data-version="b6ece184777140f982683774eb4c992e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.21
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA also expects that an insurer&rsquo;s liquidity risk profile and approach to liquidity risk management will be referenced in appropriate detail in other reports including its Own Risk and Solvency Assessment (ORSA), business plan, Solvency and Financial Condition Report (SFCR) and Regular Supervisory Report (RSR) as required by relevant PRA rules and other applicable standards.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/2-liquidity-risk-management-framework/31-12-2024?p=1" data-id="0d672a3b29d1467ebf4be7f67a99ed09" data-effective-date="31-12-2024" data-download-title="Liquidity risk management framework_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/2-liquidity-risk-management-framework/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#0d672a3b29d1467ebf4be7f67a99ed09&amp;subject=PRA Rulebook - SS5/19 – Liquidity risk management for insurers – Liquidity risk management framework">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="835d14863a4e4b1e869d58593726bfb9"
+	 data-version="00f51b3870f24a2ab62544b60bc4c571"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Sources of liquidity risk
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="412534020aeb4b78ac266a09bb08d38f"
+	 data-version="915072aa073e4acea9a74dbe8be710fa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects an insurer to understand the sources of liquidity risk it faces and to consider the relevance of the sources of liquidity risk listed in paragraph 3.2, including the implications of these risks on its liquidity position under both normal and stressed conditions. However, the mix of liquidity risk drivers is unique to each business, and hence an insurer should not consider this list to be exhaustive, nor are all of the elements necessarily relevant to all insurers.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1f4ad3861c4846e1b83d58b5ffe26795"
+	 data-version="8fca18fe9be241e98e7ceaa00dbacc60"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Material sources of liquidity risk may include:</p>
+<ul>
+    <li><strong>Liability-side risks:</strong> The PRA expects a life insurer to consider sudden, unexpected increases in lapses, withdrawals or surrenders of life insurance or investment policies within a short period or a sudden increase in the volume of claims triggered following, for example, a pandemic. It expects that a general insurer will consider liquidity needs, both relating to direct claims and regulatory funding requirements (eg trust fund requirements), following insurable events, including market turning events such as severe natural catastrophes.<sup><a href="#footnote-15">15</a></sup> A reinsurer is expected to consider the above sources of liquidity risk, where applicable, and also where contractual terms in reinsurance contracts could cause unexpected liquidity needs, for instance, required funding of reinsurance trusts or forced commutation clauses. For providers of longer duration contracts, such as annuities, including those stemming from non-life or health insurance contracts, potential liquidity needs may arise from changes in long-term experience.
+    <ul>
+        <li>Where exposed to significant insured events, the PRA expects an insurer to consider the extent to which reinsurance payments could be used to satisfy liquidity needs. Consistent with paragraph 1.59(d) of EIOPA Guideline 22, this should involve an assessment of the likelihood and extent to which reinsurance claims will be adjusted&nbsp; downward by the reinsurer and of claims settlement delays and whether payments will be available in a timely manner. Some of these risks may be mitigated where reinsurance claims are pre-paid, assets are placed in trust for the benefit of the cedant or the contract is conducted on a funds withheld basis.</li>
+        <li>The PRA expects an insurer to, in line with paragraph 1.63(e) of EIOPA Guideline 26, also consider the extent of reliance on premium receipts from business not yet written or renewal business as a source of liquidity and whether its assumptions regarding the availability of such premiums are consistent with stressed conditions.</li>
+    </ul>
+    </li>
+    <li><strong>Asset-side risks:</strong> The PRA expects an insurer to consider how its assets could be monetised, including as acceptable collateral, in both benign and stressed market conditions by taking into account factors such as market depth and access, the time required to monetise an asset (eg time to settlement, delays in finding a willing buyer), haircuts and the likelihood and extent of forced-sale losses. Some types of assets may only be able to be sold at a significant discount. A stress that puts pressure on multiple insurers could exacerbate these effects, to the extent that other insurers try to sell similar assets. In stressed market conditions, it may not be feasible to properly value or sell other types of assets. Operational constraints may limit an insurer&rsquo;s ability to monetise even the most liquid assets in sufficiently short timeframes.</li>
+    <li><strong>Concentration risks:</strong> Liability-side concentrations may include: the term structure of an insurer&rsquo;s liabilities; their sensitivity to an insurer&rsquo;s own credit rating; the mix of secured and unsecured funding; concentrations among funding providers and policyholders or related groups of funding providers and policyholders; reliance on particular instruments or products; and the geographical location of funding providers and policyholders. Asset concentrations may include significant concentrations in relation to: individual counterparties or groups of related counterparties; credit ratings of the assets in an insurer&rsquo;s portfolio; instrument types; geographical regions; and economic sectors. In the context of liquidity risk, these asset concentrations may be relative to the insurer&rsquo;s own portfolio and relative to the amount of a particular asset in the market. In the case of the former, there is a risk that a significant portion of its assets may become illiquid when they are needed most. In case of the latter, such assets may be thinly traded and thus the insurer may not be able monetise them in stress.</li>
+    <li><strong>Off-balance sheet risks:</strong> Where material, the PRA expects an insurer to consider how its off-balance sheet activities affect its cash flows and liquidity risk profile under both normal and stressed conditions. For example, risks associated with holding derivatives positions are often overlooked (and are discussed further below). An insurer is also expected to consider the impact of a downgrade in its own credit rating. Downgrades may trigger the early redemption of funding instruments or collateral or margin obligations and may impact an insurer&rsquo;s ability to roll over wholesale funding. The PRA expects the insurer to assess and monitor any other material contingent obligations for cash or collateral. An insurer may need to consider the impact of maintaining liquidity facilities to support securitisation or internal asset restructuring programmes.
+    <ul>
+        <li>Consistent with <a href="/pra-rules/conditions-governing-business#6a1bcbf96eb4445a9af97d8e9f11613e" data-rb-content-link="Rule">Conditions Governing Business 3.1A(3)(d)</a>, insurers should pay particular attention to the liquidity risks associated with material use of derivatives. While hedging programs may limit the impact of market shocks on an insurer&rsquo;s capital position, they can also create liquidity needs, thus transforming capital risk into liquidity risk. A liquidity need will arise where the value of the derivative moves against the insurer and requires extra collateral to be posted. This risk was the focus of the Bank of England&rsquo;s Financial Policy Committee (FPC) assessment of the risks from leverage in the non-bank financial system.<sup><a href="#footnote-16">16</a></sup> Stress may be amplified where derivatives are centrally cleared, as these contracts will require an insurer to post cash variation margin, as opposed to securities, against movements in their value. The PRA expects an insurer to be aware of the conditions in any credit support annexes that could restrict acceptable assets for collateralisation or initial margin.</li>
+    </ul>
+    </li>
+    <li><strong>Funding risk:</strong> Flows arising from secured funding sources, including collateral upgrade transactions, could incur a number of risks. For both secured and unsecured funding sources, the PRA expects stress assumptions to test an insurer&rsquo;s ability to roll over funding at maturity or at the earliest possible termination date, where such a date is not within the insurer&rsquo;s control.</li>
+    <li><strong>Cross-currency risk:</strong> The PRA expects an insurer to consider foreign currency liquidity needs, both in each individual currency and in aggregate. It expects an insurer to also consider the risk of non-convertibility of currencies over short time periods (ie market lockout).</li>
+    <li><strong>Intra-day risk:</strong> Where relevant to its activities the PRA expects an insurer to maintain systems capable of monitoring intra-day liquidity positions and cash needs (ie those arising at particular times during a single day), and to take appropriate steps to ensure it holds sufficient funds to cover intra-day risk in both cash accounts and the cash side of securities accounts. Some examples of potential sources of intra-day liquidity risk include collateral or margin calls on derivatives, stock borrowing/lending transactions or (reverse-) repurchase agreements or intra-day securities settlement, specifically where the insurer uses intra-day credit to partially or fully fund the transaction.</li>
+    <li><strong>Franchise risk:</strong> Liquidity resources may be required to make payments on claims to maintain an insurer&rsquo;s core business franchise and reputation, even where an insurer has the right to defer or delay such payments. The PRA expects an insurer to assess the extent to which it can, and realistically will, defer or delay payments, including claims, surrenders or dividends, without significantly damaging its core business franchise and reputation.</li>
+</ul>
+<div></div>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-15" class="rb-footnote">
+					<span class="fn-col-1">
+						15.
+					</span>
+					<span class="fn-col-2">
+						SS5/17, ‘Dealing with a market turning event in the general insurance sector’, July 2017: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/dealing-with-a-market-turning-event-in-the-general-insurance-sector-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2017/dealing-with-a-market-turning-event-in-the-general-insurance-sector-ss</a>
+					</span>
+				</li>
+				<li id="footnote-16" class="rb-footnote">
+					<span class="fn-col-1">
+						16.
+					</span>
+					<span class="fn-col-2">
+						Bank of England (2018). Financial Stability Report. Issue 44. Retrieved from <a href="https://www.bankofengland.co.uk/financial-stability-report/2018/november-2018">https://www.bankofengland.co.uk/financial-stability-report/2018/november-2018</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#1f4ad3861c4846e1b83d58b5ffe26795">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="cdbf267fc0f84127b92aea4ad97c12e7"
+	 data-version="f19ee1dec2074d259a4adaeaa569d4d6"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Collateral upgrade and other transactions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="b2c537d829924e54b311a282c25ef3ff"
+	 data-version="cfb85eb9ecea4bffa6a3ea8174bed7da"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A collateral upgrade transaction is a collateralised borrowing transaction where there is a material difference in the quality of assets exchanged. This difference in quality may be a function of differences in liquidity, credit quality or another risk parameter. In such transactions, a &lsquo;borrower&rsquo; receives higher quality assets (eg cash or gilts) from a &lsquo;lender&rsquo;, and in return, the borrower posts collateral to the lender. Examples include repo and reverse repo transactions, stock lending and borrowing, and any form of collateralised borrowing that is in substance economically similar, including synthetic transactions (eg a sale plus a collateralised and margined total return swap).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="697bb828c0074cb19e18b08187a6cf7b"
+	 data-version="437aa0f6fde5492eb21dd5ab4f345586"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the lender of liquidity, the value of the less liquid and/or lower quality collateral being taken may be difficult to assess, both before and in the event of a borrower default. An insurer, generally the lender in such transactions, is expected to have adequate systems and controls in place to appropriately value and manage collateral, including:</p>
+<ul>
+    <li>ensuring the collateral is individually identifiable and suitably diversified, with adequate information available about the underlying assets held through any securitisation vehicle; and</li>
+    <li>establishing an independent and robust challenge process in agreeing valuations with the borrower.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cb24bc18c43c4518ab949ee0915457ee"
+	 data-version="10e7ffd2df1747c8a6d16d6996cc07df"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the collateral received by the insurer is relatively illiquid, particularly where it has been re-used, there may be difficulties in realising its value within a reasonable timescale, for example if the borrower wishes to substitute collateral or to terminate the transaction, or in matching the insurer&rsquo;s liabilities in the event of counterparty default. There may also be additional risks for the insurer resulting from any leveraging of the collateral received. The PRA expects the insurer to take into account any mismatch between the type, quality and liquidity of the assets held by the insurer following re-use of the collateral, and the collateral that would need to be returned to the borrower.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6146177b0b454b4a83a1bffb04641ec1"
+	 data-version="b90a04c510ea410bbc49d8b583710533"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			The insurer is expected to carefully consider whether the collateral may expose it to wrong-way risk (ie the risk that the collateral declines in value as the health of the counterparty deteriorates). A prudent assumption is that higher price volatility of the collateral is likely to correspond to greater correlation with other assets during stress.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7d9f032d6fcf4fa9b592d9fd03204d0c"
+	 data-version="1ed4920801d845c58d4922df72ead19c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The scale and concentration risk of any collateral upgrade transaction may potentially exacerbate the risks associated with such transactions. An insurer is expected to have appropriate limits in place to manage these risks, including limits on:</p>
+<ul>
+    <li>the scale of transactions;</li>
+    <li>the type of assets lent and collateral received;</li>
+    <li>the credit and liquidity correlation with the credit quality of the counterparty; and</li>
+    <li>other model sensitivities, eg minimum levels of haircuts by asset class.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="79d0b973c82146628c3faffb7c1c1a35"
+	 data-version="70c7ae8e5aab421b8f7f40428da51992"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Liquidity provided to the insurer, through these transactions, may decline in stressed times as counterparties may be less willing or able to extend new funding or roll over existing funding. Moreover, the dynamic nature of margining in these transactions means that a fall in the value of the posted collateral may result in the insurer having to encumber more assets. Triggers within transaction agreements may lead to additional margin calls, further reducing liquidity. This is likely to be exacerbated in periods of stress. The PRA expects an insurer to be particularly mindful of situations where it has pledged assets and falls in their market value are likely to be closely correlated with the insurer entering into a liquidity stress.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="aed2a940f1934271853ac1328c09848d"
+	 data-version="99d9153d138a4fb9ad49a08f897b6e08"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Whether as a borrower or lender of liquidity, depending on the scale of such transactions, an insurer may be encumbering a significant proportion of its assets. The insurer is expected to be mindful of the extent of asset encumbrance and the extent to which those assets may or may not be available to meet liquidity needs during a period of market stress. If a material part of an insurer&rsquo;s liquid assets are borrowed or lent under a collateral upgrade transaction, the insurer is expected to conduct a thorough analysis of the potential liquidity risks under stressed scenarios.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2c405a1683824833bf784d6c12adfecd"
+	 data-version="f93c62ff8c8840578a8d2b5e93df04a4"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Fungibility considerations</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="898e55c511434398934acd551de0200e"
+	 data-version="e445dc4341b84aab99960394451d2bc8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An insurer is expected to be mindful of any applicable restrictions on fungibility that may limit its ability to access or monetise assets under stress. Of particular note are matching adjustment (MA) and with-profits funds.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="03b83e7d72684878acc2ea549bb1569e"
+	 data-version="04416371d2d34ae4a3a4bd8aef11641a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Although many of the sources of liquidity risks mentioned in paragraph 3.2 will still be relevant, the MA involves unique considerations with regard to liquidity risk. Conditions Governing Business 3.1(3) requires an internal liquidity condition to be satisfied for an MA portfolio, and an insurer is required to develop a specific liquidity plan for this purpose. In particular, an insurer is expected to be mindful that there can be no subsidy to the rest of the business from the MA portfolio, that is, MA assets will not be available to meet liquidity needs elsewhere in the business. The insurer is also expected to manage the liquidity implications of any change in the MA portfolio or in the underlying assumptions, such as longevity. For example, any potential liquidity strains on the business as a result of a change in the MA portfolio will need to be managed properly, and the insurer is expected to consider the need to obtain eligible assets to maintain MA approval.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a1aa447e53cd49499262116a7a4449b6"
+	 data-version="a39f70faddab4a1e85dcc1310fab0730"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>With-profits funds can pose similar challenges to an insurer&rsquo;s liquidity management. Like the MA portfolio, an insurer is expected to reflect the fact that assets in the with-profits fund will be unavailable to cover the risks of the rest of the firm. The PRA expects an insurer to also be mindful of the liquidity implications of any applicable support arrangements that could require it to provide support to a with-profits fund.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="85f4ec585bf8471682763fa504c6cefd"
+	 data-version="4f7267ab138c43feb186ed9ddfe5fca6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Further guidance on the liquidity planning required in connection with the application by an insurer of the MA can be found in SS7/18. Further guidance on with-profits funds can be found in SS14/15 and the Conduct of Business Sourcebook chapter 20 (COBS 20) in the FCA Handbook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="070cc14dab544a9ea9a4cf37a545ef15"
+	 data-version="a705b976bb5c4b29a02acb75395d1d57"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Unit-linked business</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="eff0b46efa55450c86c3c831028f7843"
+	 data-version="ff4b2d3ddc074bc48477bae3347ea031"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unit-linked products present different risks to an insurer&rsquo;s liquidity position. In general, the policyholder bears the risk, including liquidity risk, associated with the underlying investments in unit-linked funds. An insurer should refer to Financial Conduct Authority rules and guidance on the management of liquidity within unit-linked funds.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="01a2700399a8402aaf4a7cd85bfc40ea"
+	 data-version="6410da9f10c94d418d8f3aac5ac7c31c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Liquidity risks may generally arise from unit-linked funds through operational costs. Some examples may include the terms, charges and processes associated with unit redemptions, with switching investments or with payments for operational errors. The insurer is expected to maintain sufficient liquidity to carry out these operations without material disruption. Where feasible, the PRA expects that liquidity for such operational purposes and for non-linked funds will be segregated from liquidity held for policyholders in unit-linked funds.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="848eb08faccd4d35a86c3bbfe4bc05cb"
+	 data-version="52d6edef2cfc4c4f8aebc5845f47adf6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In some instances, for example where policy documentation provides for a specified time to payment, an insurer may be expected or required to provide supporting liquidity when liquidity buffers within funds are depleted. An insurer is expected to consider the possible actions it can take to meet such short term liquidity needs and to take such circumstances into account in its liquidity risk management strategy.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2a234e6b2e9c485c84ea87f2e0fd8da2"
+	 data-version="0d62bc5eebd5407e9a389fd9437ef5a9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where liquidity risk management is shared between functional areas such as fund managers, portfolio managers, operations, treasury, pricing and client relationship management the PRA expects that the roles and responsibilities of each are set out clearly.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c923921f51be48168c783d8020bd7003"
+	 data-version="1c5c9011c772479fb65e712404dbb44b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.18
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects an insurer to review its rights to apply fair value pricing adjustments, suspend fund redemptions or liquidate investments, including any contractual provisions that may limit these rights. Where these rights are not consistent between funds and the insurance product in which the fund units are held the insurer is expected to ensure it understands the liquidity implications and takes these into account in its risk management.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="905da59f863b4c969b0a3197d5cd7031"
+	 data-version="26546daaf2144ebf840b56e7e1c3a258"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.19
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Invoking any of the aforementioned rights may have fairness and consumer protection implications. The insurer is expected to be aware of the effects of such actions on policyholders and whether such rights are likely to be available to be exercised where doing so could raise concerns about the equitable treatment of policyholders, both present and future.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="102478f1e6484867bf0b5b6ac2b21209"
+	 data-version="b1ddb7f499ed4e8f88048aab12f26ecf"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Group-specific risks</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="4e3cbf4d98e64312a047980be64e43a6"
+	 data-version="f9594203fe914ad8843294dfbd89240d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.20
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Liquidity is not always freely transferable around a group. The PRA expects an insurer that is part of a group to consider how intra-group transactions affect its liquidity position. As discussed in SS4/18, any planned reliance by an insurer on support from other entities within its group is expected to be assessed carefully. Where liquidity is managed centrally the PRA expects that there would be no legal or regulatory impediments to liquidity being available, in both benign and stressed conditions, to the regulated entities where and when it is needed.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="18aafa6755bd44949b105b6e8a67d964"
+	 data-version="e24f73f92e444c2e9b16fc48a87bf22a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.21
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>At the parent entity level, there may be shareholder expectations and debt obligations that require funding. Servicing these obligations may rely on cash flows from subsidiaries. For example, the parent entity may rely on up-streaming of dividends or intra-group loan repayments to meet such obligations. Hence, the PRA expects the cash flow implications of an insurer&rsquo;s financial projections to be considered at group level. It expects any insurer that is part of a group to assess whether there is the ability to generate sufficient cash flows in stress to cover group liabilities as they fall due.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cf730053e43f4a7084e3d6a9ffc1040b"
+	 data-version="805dbff69ffe4c26be91193f11e714b6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.22
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In line with Group Supervision 17.1(3), mechanisms should be in place to identify, monitor and manage significant risk concentrations and intra-group transactions that could threaten the group&rsquo;s liquidity position.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/3-sources-of-liquidity-risk/31-12-2024?p=1" data-id="835d14863a4e4b1e869d58593726bfb9" data-effective-date="31-12-2024" data-download-title="Sources of liquidity risk_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/3-sources-of-liquidity-risk/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#835d14863a4e4b1e869d58593726bfb9&amp;subject=PRA Rulebook - SS5/19 – Liquidity risk management for insurers – Sources of liquidity risk">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="c18b1129e4e54c0c8ebe365900c79328"
+	 data-version="4d3dc8680bfe4f7ab20fe9b644fedc7d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Stress testing
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="48afef5ddf39476bbe5908679fd8848d"
+	 data-version="9b2159ae45704205b25e83268ac0ba77"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/conditions-governing-business#a8824868755a478393214ae41545392d" data-rb-content-link="Rule">Conditions Governing Business 3.1(2A)</a>, which further specifies Solvency II obligations transposed in <a href="/pra-rules/conditions-governing-business#a8824868755a478393214ae41545392d" data-rb-content-link="Rule">Conditions Governing Business 3.1(2)(c)</a>, establishes an obligation that a UK Solvency II firm, the Society and managing agents conduct stress testing and scenario analysis with regard to all relevant risks in their risk management system. A non-Directive insurer must conduct stress testing and scenario analysis as part of its risk management system under <a href="/pra-rules/non-solvency-ii-firms-governance#19a902d12a5a4555bf4a51e4e33580fb" data-rb-content-link="Rule">Non-SII firms &ndash; Governance 7.3(5)</a>. Based on these requirements, an insurer is expected to conduct liquidity stress tests to identify sources of liquidity strain, and ensure its current liquidity profile continues to conform to its liquidity risk appetite, as approved by the board.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#48afef5ddf39476bbe5908679fd8848d">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="233cd68c5fd84d0692f7d3bfd3833cc1"
+	 data-version="47c93fcd2c214c7a8f450db214088801"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In conducting stress tests, an insurer is expected to capture all relevant, material risk drivers. The stress tests should analyse separate and combined impacts of a range of severe but plausible liquidity stresses on an insurer&rsquo;s cash flows over the chosen stress horizons, both cash in-flows (sources) and cash out-flows (uses), as well as the insurer&rsquo;s overall liquidity position. The details of, and justification for, the methods and assumptions used in stress testing is expected to be included in an insurer&rsquo;s liquidity risk management policies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="51bfa0cc07104aaca412203f65145862"
+	 data-version="5ef7abf541f34b8e93848e61c64f551b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An insurer is expected to have in place adequate management information systems and data processes to enable it to collect, sort and aggregate data and information related to its liquidity stress testing. Where the insurer plans to meet cash outflows with cash inflows during the relevant time horizon, in line with paragraph 6.3, below, the PRA expects information to be collected at an appropriate frequency and granularity to minimise the risk of cash flow mismatches.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="32286cad88e04e33bc3b40ad9a7aa040"
+	 data-version="ee423247b56c41cb96053f5a928af7a6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Consistent with paragraph 2.7 above, the PRA expects stress tests to be conducted on both individual funds, which may be exposed to different sources of liquidity risk, and the portfolio as a whole. It expects insurers to perform separate stress tests on MA portfolios and the non-MA business because of the restriction on selling assets from an MA portfolio to generate liquidity outlined in SS7/18. It expects an insurer to be aware of how an MA portfolio can obtain the necessary liquidity, and how liquidity management for an MA portfolio interacts with liquidity management for the rest of the firm.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="96e2a904ff2640bb9ce6b648e4091aa3"
+	 data-version="29998d0a87784ee3ba802ff4e894822b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>To facilitate its understanding of whether solo entities could rely on the parent for liquidity where such arrangements exist, the insurer is expected to conduct stress tests separately at both the individual entity level and on a group basis.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ec087a952b7845cbad61531c3c3fa229"
+	 data-version="ba4cca0ef7b14df6b66e50acf56fc79a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects insurers to consider varying degrees of stressed conditions in a range of stress scenarios. Each are expected to be severe yet plausible, and consider the potential:</p>
+<ul>
+    <li>impact of idiosyncratic, market-wide and combined scenarios;</li>
+    <li>adverse effects of market disruptions; and</li>
+    <li>actions of counterparties, and other market participants experiencing liquidity stresses that could adversely affect the insurer, for instance by selling similar assets to those that the insurer may rely on for liquidity and affecting market prices, recalling sleeper collateral,<sup><a href="#footnote-17">17</a></sup> not posting collateral required, or opening valuation disputes.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-17" class="rb-footnote">
+					<span class="fn-col-1">
+						17.
+					</span>
+					<span class="fn-col-2">
+						Sleeper collateral refers to the value of collateral that an insurer is contractually obliged to post to a counterparty, but has not yet  posted as it has not yet been called by the counterparty.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#ec087a952b7845cbad61531c3c3fa229">
+			Past
+			<span class="visually-hidden">
+				version of 4.6 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9b6f612e1b4b434dbc9f1b0de619056b"
+	 data-version="73643d42df594c71a369752f71ac1991"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the case of groups, an insurer is expected to define separate stress scenarios on a group basis in order to encompass group-specific risks.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9c403f822a934390a0ae41a0fe4e92f3"
+	 data-version="e3762bc28be144bc95a0688e619e1e18"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Liquidity risk can emerge over a number of timeframes. Hence, liquidity stress tests are expected to span a variety of liquidity events over different time horizons. This includes both fast moving scenarios as well as more sustained scenarios where the insurer&rsquo;s liquidity position deteriorates slowly. An insurer is expected to use appropriate durations for stress testing, which may include, for example, 7, 30, 90 days or one year, as appropriate in light of its business model, liquidity risk appetite and activities. An insurer with significant activity in capital markets or volatile cash flows that could generate short term liquidity needs would be expected to consider daily time or intra-day horizons. In contrast, insurers writing longer-term business, such as annuities, are expected to consider longer horizons. In its analysis of longer-term stresses, taken as one year and longer, the PRA expects an insurer to consider and be able to justify its appetite for capital erosion.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="238f43f801fd4a93aed003b1d81f4ea0"
+	 data-version="6ea9bfc24a1e452da9794b4c46e39ba4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects an insurer to consider the impact of chosen market stresses on the appropriateness of its assumptions relating to the following elements, as relevant to its business model and activities:</p>
+<ul>
+    <li>estimates of future balance sheet growth and premium income from both new and renewal business;</li>
+    <li>additional margin calls and collateral requirements for derivatives and other transactions, especially in respect of assumed continued diversification of markets in stress;</li>
+    <li>the reliability or availability of committed lines of credit;</li>
+    <li>the continued availability of liquidity, including the appropriateness of haircuts applied to assets held in the liquidity buffer, including in currently highly liquid markets;</li>
+    <li>policyholder behaviour, including surrender rates;</li>
+    <li>correlations between funding markets and the effectiveness of diversification across its chosen sources of funding;</li>
+    <li>access to secured and unsecured funding;</li>
+    <li>currency convertibility; and</li>
+    <li>in the case of groups, the insurer&rsquo;s ability to access cash pooling arrangements and intra-group loans.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2101e02330324b338af7036eae83315e"
+	 data-version="ef04ad3bed664a01a97a29c7c9f361ed"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When designing scenarios, an insurer is expected to also consider the appropriateness of their calibration, considering past liquidity events and other relevant data or experience. Regulatory capital requirements are calibrated over a one-year period, while liquidity stresses tend to occur over significantly shorter time horizons. An insurer is expected to be mindful that converting one-year stresses to shorter time periods for liquidity stresses may not be as simple as linearly scaling them down.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d0aeb729c9d241dc95c6b5c3d867c02a"
+	 data-version="1dd344b13221408babc9a3119f2e804c"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Funding arrangements with third-parties</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="a4ddeeed54be48d3b5ee9feae6f764bd"
+	 data-version="95058444a19f4f9db40457c1aa76f48b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An insurer is expected to test its access to committed facilities regularly to ensure their availability for use in stressed conditions. Where practical, the insurer may consider maintaining facilities with a number of diverse providers to ensure that it can still obtain funding, even if a lender fails to honour its commitment. Uncommitted facilities are highly unlikely to be available in stressed situations and therefore are not an appropriate source of liquidity. An insurer is also expected to avoid undue reliance on committed facilities to meet stressed liquidity needs, as other institutions may be under similar stress and such facilities might not be available when required.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c8d1bb36c08a41e4b5fe8f3daac11926"
+	 data-version="31830777fd1941cb9c419cfb2445f716"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA acknowledges that liquidity carries a cost, for example holding liquid assets directly may reduce investment returns and profitability. Use of third-parties for liquidity may mitigate the opportunity cost of holding liquidity directly, but may introduce explicit commitment fees. The PRA expects insurers to consider the trade-offs between the two.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1b983c77bbb4440fa4b6df489b349683"
+	 data-version="f16163d919fe433381303ef458d76ef5"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Stress testing governance</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="241764dbb7554dc8ac3850be6454845b"
+	 data-version="cabccfe792624469b58cfaf9820d27e2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The frequency of stress testing is expected to be proportionate to the nature, scale and complexity of an insurer&rsquo;s activities, as well as the size of its liquidity risk exposures. Consistent with Conditions Governing Business 2.4 and Non-Solvency II Firms &ndash; Governance 3.4, an insurer, other than a small non-directive insurer, must review its risk management policies annually. In light of these obligations, an insurer, other than a small non-directive insurer, would be expected to conduct a holistic review of the appropriateness of its stress testing approach and stress scenarios on a similar frequency. More frequent reviews may be warranted when there are changes in an insurer&rsquo;s business or strategy, the nature or scale of its activities or the operational environment that may affect the validity of its approach. A small non-directive insurer would be also expected to review its approach when such changes indicate that its approach may no longer be valid.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e5c070b0b9cf4c509c73ce4b12db1f9e"
+	 data-version="6f8cddee5c7a4db89bd6299b72ce3b34"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects an insurer&rsquo;s approach to liquidity stress testing, including the stresses and scenarios tested, to be regularly reviewed and approved by the insurer&rsquo;s senior management and any risk committee of the board to ensure their nature and severity remains appropriate. As required by paragraph 1.53(e) of EIOPA Guideline 18 and Non-Solvency II Firms &ndash; Governance 7.3(6), the frequency, approach, methodologies and assumptions should be adequately documented within the insurer&rsquo;s liquidity risk management policies and processes.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/4-stress-testing/31-12-2024?p=1" data-id="c18b1129e4e54c0c8ebe365900c79328" data-effective-date="31-12-2024" data-download-title="Stress testing_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/4-stress-testing/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#c18b1129e4e54c0c8ebe365900c79328&amp;subject=PRA Rulebook - SS5/19 – Liquidity risk management for insurers – Stress testing">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="d81f7f1eda8b43d6a25fcfd0b5040b61"
+	 data-version="e89906eb90af4874abd31597c6249ef4"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Liquidity buffers
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6fe04c6aa3bc47c39dcfad9cbf900c0d"
+	 data-version="32c1453f8d8b4663a265f7673913bf32"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Under <a href="/pra-rules/investments#2628704dcaee4ab5bb50f2741dfeba95" data-rb-content-link="Rule">Investments 2.1</a>, a UK Solvency II firm, the Society and managing agents are required to invest in assets that ensure the liquidity of their investment portfolio and, under <a href="/pra-rules/conditions-governing-business#6a1bcbf96eb4445a9af97d8e9f11613e" data-rb-content-link="Rule">Conditions Governing Business 3.1A(4)(b)</a>, to consider the appropriateness of their assets in order to meet obligations as they fall due. Under paragraphs 1.63(b) and (c) of EIOPA Guideline 26 an insurer should consider its total liquidity needs, including an appropriate liquidity buffer and consider the level and monitoring of liquid assets, as well as potential haircuts that could be imposed on their sale. A non-Directive insurer, under <a href="/pra-rules/insurance-company-overall-resources-and-valuation#66aa5697f6c44f65bf796b2acc5a4fd3" data-rb-content-link="Rule">Insurance Company &ndash; Overall Resources and Valuation 2.3</a>&nbsp;or <a href="/pra-rules/friendly-society-financial-prudence#37ea6f6da2bc47fd9277513b3a6e0889" data-rb-content-link="Rule">Friendly Society &ndash; Financial Prudence 4.1</a>&nbsp;must maintain adequate liquidity to ensure there is no significant risk that its liabilities cannot be met as they fall due. An insurer must therefore maintain an adequate stock of liquid assets, hereafter called a &lsquo;liquidity buffer&rsquo;, sufficient to meet liabilities as they fall due, and is expected to do so under both benign and stressed conditions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#6fe04c6aa3bc47c39dcfad9cbf900c0d">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6686b798df6d4eeb8bd35575ce6036d7"
+	 data-version="8e01b3b19e044e428a44d25c9f6708ae"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The liquidity buffer is intended to fill any shortfall of cash in-flows relative to cash out-flows (in line with paragraph 1.63(a) of EIOPA Guideline 26) arising over the chosen time horizon, in both benign and stressed circumstances. The insurer may, for example, use cash flow estimates from its business as usual projections (as mentioned in paragraph 2.17) and its stress testing (as mentioned in paragraph 4.2), respectively, to determine the appropriate size of the liquidity buffer in line with its liquidity risk appetite.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ed4f05cd32a844d9a5f0021bbad7a897"
+	 data-version="5cbf63e238104ad98972086e7ca4b0d3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Through Group Supervision 17.1(1)(b) and Conditions Governing Business 3.4, an insurer that is part of a group must ensure sufficient liquidity on a group basis to meet group liabilities as they fall due and is expected to do so under both benign and stressed conditions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="aaee8e25c9914827b6bd17cb17ffe19d"
+	 data-version="29a53a334a014113bf0054e6b5f8adc5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An insurer may consider it appropriate to have in place multiple buffers, composed of different assets, depending on the nature and duration of the stresses to which it may be exposed.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="818ef79c2c9c43cf94bc4647df92b381"
+	 data-version="7d8ecadd82234d9eb164d8dca7f65002"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that an insurer should be able to monetise the assets in its liquidity buffer to meet its excess cash flow needs in the chosen time horizon without directly conflicting with any existing business or risk management strategies. Hence, an insurer is expected to avoid counting funds committed for future payments or investments used for regular income generation, such as fees, dividends or interest, as part of its liquidity buffer.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1707f130bd974172b05df8f091570a7e"
+	 data-version="9068f91b0b264c8ca5cfe224feffdc31"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An insurer is expected to tailor its liquidity buffer to the needs of its business and the drivers of liquidity risk that it faces, taking into account a number of factors, including:</p>
+<ul>
+    <li>assets of primary and secondary liquidity (discussed in paragraphs 5.9 and 5.10);</li>
+    <li>the ability of the insurer to monetise the assets in its buffer to meet liquidity needs within the relevant time horizon;</li>
+    <li>the need to have a well-diversified range of assets in the liquidity buffer;</li>
+    <li>whether the assets in the liquidity buffer can be accessed and controlled by the insurer&rsquo;s liquidity management function at all times;</li>
+    <li>the appropriateness of haircuts applied to assets held in the liquidity buffer, informed by an insurer&rsquo;s own stress tests. This is expected to include the potential costs and financial losses arising from their sale (as discussed in paragraph 1.63(c) of EIOPA Guideline 26), noting that these may be exacerbated when the insurer is a forced seller; and</li>
+    <li>the consistency of the currency denomination of its liquid assets and net liquidity out-flows.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="79aec191b65a4332870fed6612af7b93"
+	 data-version="dca0fddf3ff545a99bb3fdce51ffd0a4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where applicable, to avoid double counting, intra-group transactions are expected to be excluded from analysis of the insurer&rsquo;s liquidity position on a group basis.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8a34996daed9495eb40d3b01627a6d3f"
+	 data-version="9a7bd117bb964b4698cf7d141474f7be"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Criteria for assets to be included in the liquidity buffer</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="68a3ea9ff2dd4494aa0350d3e4b5a7d4"
+	 data-version="5b821ab275d44ae5ab974b8f2152844c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that assets included in the liquidity buffer should be unencumbered,<sup><a href="#footnote-18">18</a></sup> of a high credit quality, readily marketable, and have a proven record as a reliable source of liquidity during stressed market conditions. Such assets should be easy to value with a high degree of certainty (ie low likelihood of material disagreement between transacting parties in a sale) and will either be listed on recognised exchanges or tradable on large, deep and active cash or repurchase markets with a large number of participants, low concentration, high trading volume and timely and observable market prices. Even assets of &lsquo;high credit quality&rsquo; may have differences in the speed at which they may be realisable, particularly during stressed market conditions. The PRA considers two classifications for assets in the liquidity buffer to emphasise this distinction: assets of primary liquidity and assets of secondary liquidity.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-18" class="rb-footnote">
+					<span class="fn-col-1">
+						18.
+					</span>
+					<span class="fn-col-2">
+						‘Unencumbered’ means free of material legal, regulatory, contractual or other restrictions on the ability of the insurer to liquidate,  sell, transfer, or assign the asset.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#68a3ea9ff2dd4494aa0350d3e4b5a7d4">
+			Past
+			<span class="visually-hidden">
+				version of 5.8 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c4f6c4599f3749398fcaedd685fecfac"
+	 data-version="3abf7396baf14c2faca4c5df3d261cf3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Assets of primary liquidity are generally those that are realisable over a very short time horizon, even under stressed conditions. Examples of assets of primary liquidity include:</p>
+<ul>
+    <li>cash held at highly rated financial institutions;</li>
+    <li>highly rated securities issued or unconditionally guaranteed by sovereigns or central banks; and</li>
+    <li>certain money market funds which hold high levels of cash or liquid assets and have an objective to provide liquidity on demand.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f33ab0e9fa944f2ba5a9b61c6abe6fae"
+	 data-version="ed1aa99593494141b59efb8ba8c01fda"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Assets of secondary liquidity are generally those that are realisable over a short to medium time horizon as finding a willing buyer in a short amount of time may not be feasible in stressed conditions. Examples of assets of secondary liquidity include:</p>
+<ul>
+    <li>other (ie those not included in paragraph <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#c4f6c4599f3749398fcaedd685fecfac" data-rb-content-link="Paragraph">5.9</a>) investment-grade securities issued or guaranteed by sovereigns;</li>
+    <li>highly rated and publicly issued covered bonds;</li>
+    <li>investment-grade, vanilla corporate debt securities;</li>
+    <li>common equity shares traded within a major stock index;<sup><a href="#footnote-19">19</a></sup> and</li>
+    <li>any other assets that an insurer deems to be sufficiently liquid that demonstrably meet the criteria set out in paragraph <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#68a3ea9ff2dd4494aa0350d3e4b5a7d4" data-rb-content-link="Paragraph">5.8</a>.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-19" class="rb-footnote">
+					<span class="fn-col-1">
+						19.
+					</span>
+					<span class="fn-col-2">
+						For instance, as defined under PRA Supervisory Statement 24/15, ‘The PRA’s approach to supervising liquidity and funding risks’ June  2015: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss">http://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pras-approach-to-supervising-liquidity-and-funding-risks-ss</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#f33ab0e9fa944f2ba5a9b61c6abe6fae">
+			Past
+			<span class="visually-hidden">
+				version of 5.10 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0093bb33b4fc463f9ad74862d894ca53"
+	 data-version="b824ad353f9540208faeb32f3de51b95"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Assets of secondary liquidity are not generally usable for very short duration stress periods, for example 7 days or less, as an insurer may be unable to monetise these assets soon enough. For short to medium term stresses, for example between 7 and 90 days, it is good practice for an insurer to rely only on assets of primary and secondary liquidity. For longer-term stresses, an insurer may wish to include a broader spectrum of assets in its liquidity buffer, although it may incur substantial losses in the process of monetising these. An insurer should consider the potential losses arising from asset sales to meet its liquidity requirements under stressed conditions and may wish to explicitly define its appetite for capital erosion in such situations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0a7b5ad3f12b4694ac4192ee9dc03965"
+	 data-version="f91ded58cfe94958a8ce1ba20c2bff0d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Operational considerations for the liquidity buffer</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="71f055bef88448929c05537c1b43df4c"
+	 data-version="ec7dd6be95fa41159f0a2ecb62ba6eb6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>To ensure that assets in the insurer&rsquo;s liquidity buffer remain suitable, the PRA expects an insurer to review and regularly test its access to the markets for its liquid assets. The appropriate frequency of testing will depend on the mix of assets included in the liquidity buffer. Buffers comprised largely of assets of primary liquidity are likely to need less frequent testing than buffers with more assets of secondary liquidity.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cfc5c71959354431ab6f4fbd1eff67b0"
+	 data-version="9b5a6633b2cc4a9d8667668f315bf759"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects insurers to assess market access under both normal and stressed conditions. In particular, an insurer is expected to consider carefully the extent of its reliance on repo and other secured funding transactions, as the availability of liquidity in these markets may not be guaranteed, particularly in the event of short duration severe stresses.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6c891a3401404692a47d2b33e604df67"
+	 data-version="b51f4f982bdf43069c40acd3c418d3a6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects an insurer to consider whether assets it has borrowed or received as collateral or margin are appropriate to include in its liquidity buffer; any liquid assets that have been lent or posted as collateral to secure a transaction are encumbered and will not be available to meet liquidity needs. An insurer is expected to be mindful of circumstances where it has borrowed or received liquid assets that could be withdrawn or recalled. It is prudent to assume that counterparties will withdraw such assets at the first opportunity in stress.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6a79ba8cdad544d7850776ede0c83f52"
+	 data-version="7a76134a32c94dcb8f0bb0e4979d999b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An insurer is also expected to consider the extent to which access to liquidity in money market funds may be limited in stress. As a collective investment undertaking, the money market fund structure creates a layer between the insurer and the underlying asset, which could create additional risk. When investing in money market funds, an insurer is expected to look through to the fund&rsquo;s underlying assets to establish its liquidity during stress. This includes assessing the extent to which money market fund holdings may increase concentration risk, particularly with the banks in which the insurer maintains deposits. An insurer is also expected to consider whether the fund&rsquo;s own risk management strategies or liquidity management tools, as described in the fund&rsquo;s prospectus, may limit their realisability, particularly during times of stress. Of particular note are a fund&rsquo;s ability to apply liquidity fees on redemptions or to apply &lsquo;swing pricing&rsquo;,<sup><a href="#footnote-20">20</a></sup> which may increase the haircut imposed on their sale, to impose gates or withdrawal limits or other characteristics which may limit their realisability, particularly in stress.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-20" class="rb-footnote">
+					<span class="fn-col-1">
+						20.
+					</span>
+					<span class="fn-col-2">
+						Swing pricing is a liquidity risk management tool that allows a fund to adjust the net asset value in order to pass on transaction costs,  which may increase during a liquidity stress event.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#6a79ba8cdad544d7850776ede0c83f52">
+			Past
+			<span class="visually-hidden">
+				version of 5.15 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="49cd442221b74363ae43b2126b428e3f"
+	 data-version="5277c986d4a7427186f1bc3951e301cc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In evaluating whether other collective investment undertakings or pooled vehicles are considered to meet the criteria in paragraph 5.8, the PRA expects an insurer to consider the same aspects as for money market funds, though noting that the additional complexity of the structure around less liquid assets may reduce their liquidity in stress.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="183bd12684814daba7e6639b7b335a45"
+	 data-version="867ed7e7582c407fad935d975fd697c3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA also expects an insurer to be mindful of the use of securities issued by financial institutions in its liquidity buffer as these assets are more likely to become illiquid during stress events.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/5-liquidity-buffers/31-12-2024?p=1" data-id="d81f7f1eda8b43d6a25fcfd0b5040b61" data-effective-date="31-12-2024" data-download-title="Liquidity buffers_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/5-liquidity-buffers/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#d81f7f1eda8b43d6a25fcfd0b5040b61&amp;subject=PRA Rulebook - SS5/19 – Liquidity risk management for insurers – Liquidity buffers">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="165ec00a9c9b401e86f21954d5a87bcb"
+	 data-version="01f22509b7f4432ba63e98b035cccc0b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Risk monitoring and reporting
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4b09fe8e57f04a1bb99033d0cf524726"
+	 data-version="4496efc6b52a48bc9c98b39985c620c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Conditions Governing Business 3.1(1) and Non-Solvency II Firms &ndash; Governance 7.3(2) require an insurer to have documented procedures to measure, monitor and assess its risk exposures. As part of its risk management framework, the PRA expects an insurer to define its own risk metrics for its day-to-day operations, reflecting its own circumstances and risk profile. An insurer is expected to use a set of metrics such that it can clearly see whether it is within its liquidity risk appetite and any established risk tolerance limits. Monitoring these metrics against a number of time horizons, both short term and long term, is generally viewed as good practice as different sources of liquidity risk may crystallise over different time periods. Moreover, the use of metrics is expected to be applied consistently across relevant areas within an insurer, and where relevant, across the group.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="33d6702df2784ed0b330d9316874e7a8"
+	 data-version="04d11588478a4cbd93e7f96693f612ca"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects an insurer to maintain minimum governance standards when defining risk metrics. It expects all metrics, including ownership, frequency, timeliness and distribution to be approved by the board, along with the insurer&rsquo;s liquidity risk appetite. This will help to ensure that the board is approving the methods and operational means by which the insurer manages its liquidity risk.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="36ac2ebebd914dc296f3de4bb01bdc8c"
+	 data-version="0db5e9130f8a4992bcaa9e954ea77e1a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The insurer is expected to assess its liquidity buffer in light of its chosen stress scenarios. It is prudent for assessments to capture low points within the chosen time horizons, rather than relying on end-point analysis to minimize the risk of a cash flow mismatch. One metric that an insurer may use in its assessment is a liquidity coverage ratio, which may be defined as the ratio of assets held in the liquidity buffer to net stressed cash out-flows. Another example is an excess liquidity metric, which is the difference between assets held in the liquidity buffer and net stressed cash out-flows. Other metrics may include those the insurer has included in the liquidity plan required by Conditions Governing Business 3.1(3) to apply the matching adjustment or volatility adjustment. An insurer may define other metrics for this purpose, but the PRA expects it to be aware of and be able to document the benefits and shortcomings of such metrics. An insurer is expected to set its liquidity risk appetite in terms of at least one of these metrics and set an appropriate target liquidity buffer(s). As noted previously, the insurer is expected to periodically conduct a holistic review and refresh of its stress testing approach and stress scenarios. The insurer is expected to regularly monitor its liquidity position and liquidity buffer against its liquidity risk appetite based on the refreshed stress scenarios.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a6eeab0aab3846ed8852e59a60c48637"
+	 data-version="165467f7d86546a48a9cb21cdfe40a06"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Conditions Governing Business 2.2 and 3.1(1) and Non-Solvency II Firms &ndash; Governance 2.5 and 3.2 require an insurer to have a system in place that ensures the transmission of information such that risks can be identified, measured and managed. The PRA expects regular reports on liquidity to be provided to senior management and any risk committee of the board. It expects these reports to address the insurer&rsquo;s compliance with its risk management strategy and policies, as well as alert management when the insurer approaches its liquidity risk appetite or risk limits. The PRA expects an insurer to produce liquidity risk monitoring metrics, along with stress test results and information on the insurer&rsquo;s liquidity buffer for management at an appropriate frequency to allow for the effective identification, measurement and management of liquidity risk, taking into account the specificities of its business model and the liquidity risk associated with its activities. More frequent reporting may be appropriate when the operational environment or the nature or scale of the insurer&rsquo;s activities changes.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3dddebbf7aed4c82a3d855770c2b6409"
+	 data-version="18cddbfbfcca4dea9c0f39a92fdf0a50"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA views stress testing as a useful tool for an insurer to understand its exposure to risks. As such, the PRA expects stress test results to be:</p>
+<ul>
+    <li>reported to the insurer&rsquo;s senior management and any risk committee of the board, highlighting any vulnerabilities identified and proposing appropriate remedial action;</li>
+    <li>in the case of insurers that are part of a group, reported to any risk committee of the group level board;</li>
+    <li>integrated in the insurer&rsquo;s business planning process and day-to-day risk management;</li>
+    <li>taken into account when setting internal risk limits for the management of liquidity risk exposures;</li>
+    <li>used to update the insurer&rsquo;s liquidity risk management strategy and relevant policies (elaborated on in <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#0d672a3b29d1467ebf4be7f67a99ed09" data-rb-content-link="Chapter">Chapter 2</a>);</li>
+    <li>used to support the establishment of the insurer&rsquo;s risk monitoring metrics and any liquidity buffer(s) held by the insurer (set out in more detail in <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#d81f7f1eda8b43d6a25fcfd0b5040b61" data-rb-content-link="Chapter">Chapter 5</a>);</li>
+    <li>inform the insurer&rsquo;s plan to deal with changes in expected cash inflows and outflows, as required by <a href="/pra-rules/conditions-governing-business#6a1bcbf96eb4445a9af97d8e9f11613e" data-rb-content-link="Rule">Conditions Governing Business 3.1A(4)(c)</a>; and</li>
+    <li>used to inform the development of the insurer&rsquo;s liquidity contingency plan (elaborated on in <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#a9875019940547db97dc5de123da5902" data-rb-content-link="Chapter">Chapter 7</a>).</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/24-09-2019#3dddebbf7aed4c82a3d855770c2b6409">
+			Past
+			<span class="visually-hidden">
+				version of 6.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9309ff46abe34826b9969e43ae746765"
+	 data-version="d3ccdccf9908415d92737208b3fd812f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The insurer&rsquo;s liquidity risk profile and adherence to its liquidity risk appetite and risk tolerance limits are expected to be considered regularly during meetings of any risk committee of the board. More frequent reporting may also be necessary if market conditions require, or there are material changes to the insurer&rsquo;s liquidity profile. It is expected that the board and the PRA would be informed when the insurer approaches or breaches its liquidity risk appetite. Board involvement may be necessary in other circumstances and the PRA expects an insurer to establish and evidence a clear escalation process for issues to be raised to the board.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="16a52cc4ef054e12abcb0a142b7291bf"
+	 data-version="a0447033dd72437695f7397b6d643fc2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In accordance with Group Supervision 16.2, an insurer is required to report, on a group basis, risk concentrations that could threaten the group liquidity risk position. An insurer is also required to report intra-group transactions that materially influence the liquidity position of the group or one of the undertakings involved in these transactions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/6-risk-monitoring-and-reporting/31-12-2024?p=1" data-id="165ec00a9c9b401e86f21954d5a87bcb" data-effective-date="31-12-2024" data-download-title="Risk monitoring and reporting_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/6-risk-monitoring-and-reporting/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#165ec00a9c9b401e86f21954d5a87bcb&amp;subject=PRA Rulebook - SS5/19 – Liquidity risk management for insurers – Risk monitoring and reporting">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="a9875019940547db97dc5de123da5902"
+	 data-version="0bd87b52b38f4a94a709793c8e0b5c73"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Liquidity contingency planning
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e87905562d05464b85d43f0055faa605"
+	 data-version="2ce6974245ab44348e674f31a7e0fea9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As laid out in Conditions Governing Business 2.6 and Non-Solvency II Firms &ndash; Governance 3.6, an insurer, other than a small non-Directive insurer, must take reasonable steps to ensure continuity and regularity in the performance of its activities, including the development of contingency plans. In light of this obligation, an insurer, other than a small non-Directive insurer, is expected to develop a liquidity contingency plan.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5ca0747ebf1245918f851063c7a0e935"
+	 data-version="06366037f89743fea5bb5f2d6e436dd4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As part of its liquidity contingency plan, an insurer, other than a small non-directive insurer, is expected to maintain a clear process and plan for recognising and addressing a liquidity stress. This should be documented and maintained, and should set out the strategies for preserving liquidity and making up cash flow shortfalls in adverse situations. This plan is expected to set a framework with a high degree of flexibility so that an insurer can respond quickly to a variety of liquidity stresses which disrupt its ability to fund some or all of its activities in a timely manner and at a reasonable cost.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="53f6cbb6d8764e03b04e287393d7fda0"
+	 data-version="a4906db0f0f247b88326cb35f51dcb46"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects a liquidity contingency plan to:</p>
+<ul>
+    <li>be consistent with paragraph 1.63(d) of EIOPA Guideline 26 and set out alternative sources of funding, assessing the amount that can be raised from particular sources, the costs involved and the time needed to raise the funds and the applicability to different scenarios;</li>
+    <li>set out the process to invoke the plan, taking into account an insurer&rsquo;s liquidity risk appetite and any established liquidity risk limits. This includes how an insurer would identify a liquidity stress event, using a range of early warning indicators;</li>
+    <li>set out a decision-making process and a range of actions that could be taken in response to a liquidity stress and set out clear escalation and prioritisation procedures, detailing when and how each of the actions can and should be activated;</li>
+    <li>assign roles and responsibilities to specific decision-makers and set out clear reporting lines; and</li>
+    <li>set out clear communication plans for both internal and external stakeholders.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="154125261a5d44948d91b0bb7bf45943"
+	 data-version="42e1553c57d74623ac8a9aeacb6a224d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the development of its liquidity contingency plan, an insurer is expected to take into account:</p>
+<ul>
+    <li>its ongoing analysis of liquidity risk and the outcomes of its own stress tests, including the impact of stressed market conditions on its ability to monetise assets or require market-imposed haircuts;</li>
+    <li>the extent to which typically available market funding options are not available;</li>
+    <li>the risk of non-enforceability by the insurer of contingent funding arrangements, such as &lsquo;Materially Adverse Change&rsquo; or &lsquo;MAC&rsquo; clauses or &lsquo;Conditions Precedent&rsquo; or other covenants, that may limit their use in stressed conditions;</li>
+    <li>the financial, reputational or other consequences for the insurer of executing its liquidity contingency plan; and</li>
+    <li>its ability to transfer liquidity between entities, considering any legal, regulatory or operational constraints, including where relevant, cross-border constraints.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4255658017994301b9de6abf2ee8e49a"
+	 data-version="65c0a447fd56400da30fc4981a0dcfd7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the case of groups, the PRA expects an insurer to develop a liquidity contingency plan that limits intra-group contagion in a stress event. This could involve the plan assuming limited, if any, reliance by individual entities on other group entities for liquidity and treating the parent company as a lender of last resort. A liquidity contingency plan for the group is also expected to be consistent with those of the relevant individual legal entities.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9c8d1adbfdc94f75a1cd263e0fe141a9"
+	 data-version="ee95ae6ff8df4a0e8b74f743641f4170"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>To ensure it remains operationally robust, the PRA expects an insurer will periodically test its liquidity contingency plan through simulation exercises and update it as appropriate. The appropriate frequency of testing and updating will depend on the scale and complexity of the insurer&rsquo;s activities and its contingency plan. Key aspects of this testing are expected to include:</p>
+<ul>
+    <li>ensuring that roles and responsibilities are appropriate and understood;</li>
+    <li>testing key assumptions and identification of dependencies, such as the ability to sell or repo assets, or periodically draw down credit lines. Further contingencies are expected to be identified if those dependencies are unavailable; and</li>
+    <li>evaluating the accessibility of committed facilities and whether contractual or operational constraints could limit the insurer&rsquo;s ability to access them.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					24/09/2019
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/7-liquidity-contingency-planning/31-12-2024?p=1" data-id="a9875019940547db97dc5de123da5902" data-effective-date="31-12-2024" data-download-title="Liquidity contingency planning_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers/7-liquidity-contingency-planning/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers#a9875019940547db97dc5de123da5902&amp;subject=PRA Rulebook - SS5/19 – Liquidity risk management for insurers – Liquidity contingency planning">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

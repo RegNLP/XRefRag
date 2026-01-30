@@ -1,0 +1,4753 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/critical-third-parties" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/critical-third-parties" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{0D3C081B-DA4E-425F-9189-AA0AD762C2DA} -->
+<title>Critical Third Parties | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Critical Third Parties">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Critical Third Parties">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrf77a-f-f3ce9f1a1-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":30,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1956d882","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":15404,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025534","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==SS8S51iM5eKEl+ovrGHBnulKG4V023ZuP4OHq1I5q8ZMjZI5jesX7Z9AGxSjY5g29DEffIveOZcuxcs7/QzW7dSkPMfuApEA2igdX5viRychyADxtPS+R5Ma2lVyzoB9DtWEEV3A9lTo53KdomAEZV5A+KTj1uzpxvDIF/Jay//z7bdau96CLWEeypVc9jCk0/LhusH+3IsDKRVCb27nWye4FtbLuGJ1+10GVweUksWddmZAQ/Bjll7d+ma7mGLBB0r22mSThvubHFyYl4jNljlivnxp7mdX5eMUwA3sVPIx3kc2yVDiEHmaBHfVnIcGXGKClAl0tRjohMoGX/4MPAlfF79BIpiU4XrIZjWoyMlsRkiqiAy0Q8GE6vIwEKG1ace88+HUFd7iGKkEPMzXYGORt3jSEWvQn6PfrgZcVpo=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Critical Third Parties				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Critical Third Parties
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/critical-third-parties/01-01-2025">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2025
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-7c4b8c32-caa5-4a56-abfd-bbee056a8858">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-7c4b8c32-caa5-4a56-abfd-bbee056a8858"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Critical Third Parties
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Critical Third Parties)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/non-authorised-persons">
+					Non-authorised persons
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=128a108f444840f0806f0ba41bbb85e9">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Critical Third Parties
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss06-24---critical-third-parties-to-the-uk-financial-sector/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS6/24 – Critical third parties to the UK financial sector
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss07-24---reports-by-skilled-persons-critical-third-parties/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS7/24 – Reports by skilled persons: Critical third parties
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/statements-of-policy/sop-the-bank-of-englands-approach-to-enforcement/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SoP3/13 – The Bank of England’s approach to enforcement: changes to statements of policy and procedure following the Financial Services and Markets Act 2023
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/operational-resilience-critical-third-parties-to-the-uk-financial-sector-policy-statement" class="list-links__link" target="_blank">
+										PS16/24 - Operational resilience: Critical third parties to the UK financial sector
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/approach-to-the-oversight-of-critical-third-parties" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Approach to the oversight of critical third parties
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/critical-third-parties/01-01-2025_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/01-01-2025?p=1" data-id="128a108f444840f0806f0ba41bbb85e9" data-effective-date="01-01-2025" data-download-title="Critical Third Parties_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties&amp;subject=PRA Rulebook - Critical Third Parties">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="b9d93f05776d4b32945367b2557f0d75"
+	 data-version="d5aa2b5bb267421b82b7910ed96f8810"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a4a268a748b5461fa7ab62dc9b53e3a6"
+	 data-version="0690ae291cb74406a47cc504a708dd58"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;in connection with the provision of <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">services</a>&nbsp;wherever those <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">services</a>&nbsp;are carried out.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a4a268a748b5461fa7ab62dc9b53e3a6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="85154b6346774dd695b129eb32fd613f"
+	 data-version="8d4369900de44daf955419709ce79f2d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firm</a></p>
+<p style="margin-left: 30px;"><span>means, in relation to a <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>:</span></p>
+<ol class="new-bullet" style="margin-left: 30px;">
+    <li>(1) any <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;to which the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;supplies a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;impacted by that <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>; or</li>
+    <li>(2)  any <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;whose <a href="#glossary-term-4fe8216152c240c3b32492fbcb0e7cbe">assets</a>&nbsp;are, or may be, seriously and adversely impacted by that <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>.</li>
+</ol>
+<p style=""><a href="#glossary-term-4fe8216152c240c3b32492fbcb0e7cbe">asset</a></p>
+<p style="margin-left: 30px;">means something, whether tangible or intangible, that is of value, including people, data, information, infrastructure, finances and reputation.&nbsp; &nbsp;&nbsp;</p>
+<p style=""><a href="#glossary-term-ae7c07a0b1ae4fb09c6f2942235c9974">Bank</a></p>
+<p style="margin-left: 30px;">means the <a href="#glossary-term-6dcd5e77c3a944c2a256ac5bd0bb253b">Bank of England</a>,&nbsp;other than when it is acting in its capacity as the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>.</p>
+<p style=""><a href="#glossary-term-68c76218c5e643c18aaa86fabaa440bf">collective incident response framework</a></p>
+<p style="margin-left: 30px;">means any group involving <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>, the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;or a combination thereof, whose purpose is to facilitate a collective response to incidents that may adversely affect the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK&rsquo;s</a>&nbsp;financial sector or parts of it.</p>
+<p style=""><a href="#glossary-term-54e3c880cb41439c8ba1a5e362b89fa3">CTP duties</a></p>
+<p style="margin-left: 30px;">means the duties and obligations placed upon a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;by or under <a href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08">FSMA</a>, including the rules in this Part.&nbsp; <span> </span></p>
+<p style=""><a href="#glossary-term-46b22f95a4a447ab947df3f6d44bf46b">CTP Fundamental Rules</a>&nbsp;</p>
+<p style="margin-left: 30px;">means the rules set out in <a href="/pra-rules/critical-third-parties#b014875de2c54b7a848547b81424f367" data-rb-content-link="Rule">3.1</a>&nbsp;to <a href="/pra-rules/critical-third-parties#82fe4146dd224244975e7ccfe547a641" data-rb-content-link="Rule">3.6</a>.&nbsp;</p>
+<p style=""><a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a></p>
+<p style="margin-left: 30px;">means either a single event or a series of linked events that:</p>
+<ol class="new-bullet" style="margin-left: 30px;">
+    <li>(1) causes serious <a href="#glossary-term-1c530e7f1aa14d668982f59ee4a2e0ca">disruption</a>&nbsp;to the delivery of a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>; or</li>
+    <li>(2) impacts the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party's</a>&nbsp;operations such that the availability, authenticity, integrity or confidentiality of <a href="#glossary-term-4fe8216152c240c3b32492fbcb0e7cbe">assets</a>&nbsp;belonging to <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>&nbsp;which a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;has access to as a result of it providing a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;to those <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>&nbsp;is or may be seriously and adversely impacted.</li>
+</ol>
+<p style="">
+<a href="#glossary-term-1c530e7f1aa14d668982f59ee4a2e0ca">disruption</a>&nbsp;</p>
+<p style="margin-left: 30px;">includes, in relation to a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>:</p>
+<ol class="new-bullet" style="margin-left: 30px;">
+    <li>(1) complete or partial failure of that <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>;</li>
+    <li>(2) complete or partial degradation to the quality of that <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>; </li>
+    <li>(3) complete or partial unavailability of that <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>; or</li>
+    <li>(4) the <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>&nbsp;not performing as intended as a whole or in part.</li>
+</ol>
+<p style=""><a href="#glossary-term-96d34edc278c4daab222c5206a50100a">incident management playbook</a>&nbsp;</p>
+<p style="margin-left: 30px;">means a <a href="#glossary-term-194fa303af574acc8d7d1ee31e2eb2a7">document</a>&nbsp;setting out at least the matters required by <a href="/pra-rules/critical-third-parties#0d3990845f4e4680a4958598dafee3f3" data-rb-content-link="Rule">4.10</a>(3).</p>
+<p style=""><a href="#glossary-term-cee49333a2e643b2a101d3677f4d3a63">incident management playbook exercise</a><br>
+<span> </span></p>
+<p style="margin-left: 30px;"><span>means a simulation of a <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;(based on severe but plausible scenarios) designed to assess the effectiveness of one or more aspects of a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party's</a>&nbsp;</span><a href="#glossary-term-96d34edc278c4daab222c5206a50100a">incident management playbook</a>.&nbsp;</p>
+<p style=""><a href="#glossary-term-8d3f44b554464f35adf5950c1c742e38">key nth-party provider</a></p>
+<p style="margin-left: 30px;">means a <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">person</a>&nbsp;that is part of a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party's</a>&nbsp;<a href="#glossary-term-fae6a03fa561435ca8f1434d4bba912c">supply chain</a>&nbsp;and is essential to the delivery of a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;to one or more <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>.&nbsp;</p>
+<p style=""><a href="#glossary-term-3bce102712c7477b9f81af87a350d126">oversight function</a></p>
+<p style="margin-left: 30px;">means a function conferred by <a href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08">FSMA</a>&nbsp;on a <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulator</a>&nbsp;in relation to <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third parties</a>.</p>
+<p style=""><a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulator</a></p>
+<p style="margin-left: 30px;">means:</p>
+<ol class="new-bullet" style="margin-left: 30px;">
+    <li>(1) the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>;</li>
+    <li>(2) the <a href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22">FCA</a>; or</li>
+    <li>(3) the <a href="#glossary-term-ae7c07a0b1ae4fb09c6f2942235c9974">Bank</a>,</li>
+</ol>
+<p style="margin-left: 30px;">and &lsquo;regulators&rsquo; means the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>, the <a href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22">FCA</a>&nbsp;and the <a href="#glossary-term-ae7c07a0b1ae4fb09c6f2942235c9974">Bank</a>.</p>
+<p style=""><a href="#glossary-term-0fa34ece74f34dafb208fa514ff53d21">relevant document</a><br>
+<span> </span></p>
+<p style="margin-left: 30px;"><span>has the meaning given in regulation 1 of the Financial Services and Markets Act 2000 (Service of Notices) Regulations 2001 (SI 2001/1420).</span></p>
+<p style=""><a href="#glossary-term-fae6a03fa561435ca8f1434d4bba912c">supply chain</a></p>
+<p style="margin-left: 30px;">means the network of <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">persons</a>&nbsp;that provide infrastructure, goods, <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">services</a>&nbsp;or other inputs directly or indirectly used by a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;to deliver, support or maintain a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>.&nbsp;</p>
+<p style=""><a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a></p>
+<p style="margin-left: 30px;">means a <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>&nbsp;(wherever carried out) provided by a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;to one or more <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>&nbsp;a failure in, or <a href="#glossary-term-1c530e7f1aa14d668982f59ee4a2e0ca">disruption</a>&nbsp;to, the provision of which (either individually or, where more than one <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>&nbsp;is provided, taken together) could threaten the stability of, or confidence in, the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>&nbsp;financial system.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=85154b6346774dd695b129eb32fd613f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/1-application-and-definitions/01-01-2025?p=1" data-id="b9d93f05776d4b32945367b2557f0d75" data-effective-date="01-01-2025" data-download-title="Application and Definitions_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/1-application-and-definitions/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#b9d93f05776d4b32945367b2557f0d75&amp;subject=PRA Rulebook - Critical Third Parties – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b9d93f05776d4b32945367b2557f0d75">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="3ec303b425b542b78e0cff3bfbe458f0"
+	 data-version="fb3bd29e30354f559f136cec03e04729"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Interpretative Provisions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="805f21ba163741af9f9a1acc38b7711d"
+	 data-version="b430257c31c94614b6281b8c0d699c8f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless the contrary intention appears, any reference in this Part to a <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulator</a>&nbsp;or the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;is a reference:</p>
+<ol class="new-bullet">
+    <li>(1) when the relevant <a href="#glossary-term-3bce102712c7477b9f81af87a350d126">oversight function</a>&nbsp;is exercised by the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>, to the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>;</li>
+    <li>(2) when the relevant <a href="#glossary-term-3bce102712c7477b9f81af87a350d126">oversight function</a>&nbsp;is exercised by the <a href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22">FCA</a>, to the <a href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22">FCA</a>;</li>
+    <li>(3) when the relevant <a href="#glossary-term-3bce102712c7477b9f81af87a350d126">oversight function</a>&nbsp;is exercised by the <a href="#glossary-term-ae7c07a0b1ae4fb09c6f2942235c9974">Bank</a>, to the <a href="#glossary-term-ae7c07a0b1ae4fb09c6f2942235c9974">Bank</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=805f21ba163741af9f9a1acc38b7711d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/2-interpretative-provisions/01-01-2025?p=1" data-id="3ec303b425b542b78e0cff3bfbe458f0" data-effective-date="01-01-2025" data-download-title="Interpretative Provisions_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/2-interpretative-provisions/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#3ec303b425b542b78e0cff3bfbe458f0&amp;subject=PRA Rulebook - Critical Third Parties – Interpretative Provisions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=3ec303b425b542b78e0cff3bfbe458f0">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Interpretative Provisions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="d20c598638da47c497721d803897d1b3"
+	 data-version="f3dc7d30a4cb414c99d3de5fdcfb8e81"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Critical Third Party Fundamental Rules
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b014875de2c54b7a848547b81424f367"
+	 data-version="e4c19ed93af24e30957a95eb66e98056"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="#glossary-term-46b22f95a4a447ab947df3f6d44bf46b">CTP Fundamental Rule</a> 1: A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must conduct its business with integrity.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b014875de2c54b7a848547b81424f367">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="36e3ce0d39cf4179a8da785518584d50"
+	 data-version="e0d2a9396aa6420d91f5d2e8224f5f05"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="#glossary-term-46b22f95a4a447ab947df3f6d44bf46b">CTP Fundamental Rule</a>&nbsp;2: A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must conduct its business with due skill, care and diligence.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=36e3ce0d39cf4179a8da785518584d50">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b0b73e4f477249819f54bf93abac05b8"
+	 data-version="9d462b260adc4b98a9b68bf262513e47"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="#glossary-term-46b22f95a4a447ab947df3f6d44bf46b">CTP Fundamental Rule</a>&nbsp;3: A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must act in a prudent manner.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b0b73e4f477249819f54bf93abac05b8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ca4175b6bd9f4a3d80acca798fbf4ffb"
+	 data-version="11fc186972494f6aa4a7012005433439"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="#glossary-term-46b22f95a4a447ab947df3f6d44bf46b">CTP Fundamental Rule</a>&nbsp;4: A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must have effective risk strategies and risk management systems.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ca4175b6bd9f4a3d80acca798fbf4ffb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1bfbfcb5a6854e65927d4ee65b5980ab"
+	 data-version="38144cc9ec5549899008d6e2309b5451"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="#glossary-term-46b22f95a4a447ab947df3f6d44bf46b">CTP Fundamental Rule</a>&nbsp;5: A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must <span style="line-height: 115%;">organise and control its affairs responsibly and effectively</span>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1bfbfcb5a6854e65927d4ee65b5980ab">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="82fe4146dd224244975e7ccfe547a641"
+	 data-version="6203f75d596a40849f2bec6e8eac06f4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="#glossary-term-46b22f95a4a447ab947df3f6d44bf46b">CTP Fundamental Rule</a>&nbsp;6: A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must <span style="line-height: 115%;">deal with each <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulator</a>&nbsp;in an open and cooperative way and must disclose to each <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulator</a>&nbsp;appropriately anything relating to the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;of which it would reasonably expect notice</span>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=82fe4146dd224244975e7ccfe547a641">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b9a9d496ae42447a916a2fc8563bc0c9"
+	 data-version="38dfa298c6de425b894decec0363daf4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>&nbsp;</p>
+<ol class="new-bullet">
+    <li>(1) <a href="/pra-rules/critical-third-parties#82fe4146dd224244975e7ccfe547a641" data-rb-content-link="Rule">3.6</a>&nbsp;applies to a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;in respect of a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party&rsquo;s</a>&nbsp;provision of any <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">services</a>&nbsp;to <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>; and</li>
+    <li>(2) <a href="/pra-rules/critical-third-parties#b014875de2c54b7a848547b81424f367" data-rb-content-link="Rule">3.1</a>&nbsp;to <a href="/pra-rules/critical-third-parties#1bfbfcb5a6854e65927d4ee65b5980ab" data-rb-content-link="Rule">3.5</a>&nbsp;only apply to a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;in respect of the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party&rsquo;s</a>&nbsp;provision of <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>&nbsp;to <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b9a9d496ae42447a916a2fc8563bc0c9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/3--critical-third-party-fundamental-rules/01-01-2025?p=1" data-id="d20c598638da47c497721d803897d1b3" data-effective-date="01-01-2025" data-download-title="Critical Third Party Fundamental Rules_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/3--critical-third-party-fundamental-rules/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#d20c598638da47c497721d803897d1b3&amp;subject=PRA Rulebook - Critical Third Parties – Critical Third Party Fundamental Rules">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=d20c598638da47c497721d803897d1b3">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Critical Third Party Fundamental Rules
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="7d8fb7a2f43649f08f8a2b0c24cf3e17"
+	 data-version="64009bfd73e44c84bbe48fc070d14cc7"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Operational Risk and Resilience Requirements
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ab5c6bc9791849ccb7fb0398794e6f9a"
+	 data-version="258783c58b4a46a68cec5bae884591f0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must have in place sound, effective and comprehensive strategies, controls, processes and systems that enable it to comply with this Part.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ab5c6bc9791849ccb7fb0398794e6f9a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f739cae0d0ce4bd088ed977844ee653c"
+	 data-version="54d8aa7444154e89a2d968e38de62725"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The strategies, processes and systems required by <a href="/pra-rules/critical-third-parties#ab5c6bc9791849ccb7fb0398794e6f9a" data-rb-content-link="Rule">4.1</a>&nbsp;must be proportionate to the nature, scale and complexity of the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party&rsquo;s</a>&nbsp;activities.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f739cae0d0ce4bd088ed977844ee653c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c7e696b862c742899e92364f20e9275d"
+	 data-version="e758b72ca775481c9fb47b7746cf53eb"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Requirement 1: Governance</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="ced759568e5440ddb57b949f8e477c03"
+	 data-version="ea327b6ff4e0471ebc126782f67165a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must ensure that its governance arrangements promote the resilience of any <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;it provides, including by:</p>
+<ol class="new-bullet">
+    <li>(1) appointing one or more individuals who:
+    <ol>
+        <li>(a) are <a href="#glossary-term-e08f83ef44794a06bd2429270dc7b807">employees</a>&nbsp;of the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;or members of its <a href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c">governing body</a>; and</li>
+        <li>(b)  possess the appropriate authority, knowledge, skills and experience,</li>
+        <li>to act as the central point of contact with the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;in their capacity as authorities having <a href="#glossary-term-3bce102712c7477b9f81af87a350d126">oversight functions</a>;</li>
+    </ol>
+    </li>
+    <li>(2)  establishing clear roles and responsibilities at all levels of its staff who are essential to the delivery of a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>, with clear and well-understood channels for communicating and escalating issues and risks;</li>
+    <li>(3) establishing, overseeing and implementing an approach that covers the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party&rsquo;s</a>&nbsp;ability to prevent, respond and adapt to, as well as recover from, any <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>;</li>
+    <li>(4) implementing lessons learned from <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incidents</a>&nbsp;and any testing and exercising undertaken, including but not limited to that undertaken in accordance with <a href="/pra-rules/critical-third-parties#56e10aaa15184c948874e1dcc8844e58" data-rb-content-link="Chapter">5</a>;</li>
+    <li>(5) ensuring appropriate review and approval of any information provided to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>;</li>
+    <li>(6) notifying the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;in writing of:
+    <ol>
+        <li>(a) the names of the individuals appointed under (1);</li>
+        <li>(b) the business address of those individuals; and</li>
+        <li>(c) the email address, telephone number and out of hours contact details for each of those individuals; and</li>
+    </ol>
+    </li>
+    <li>(7) notifying the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;of any changes to the information notified under (6) as soon as is practicable.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ced759568e5440ddb57b949f8e477c03">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="080b23eae1d84e87a2621517861fb4f9"
+	 data-version="507a10f06fda4e20a2bede49a60b04d1"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Requirement 2: Risk management</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="c240aa53131b4835b51b236be16353d1"
+	 data-version="0838385a782a4c0fab3cccdc4073faf1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must manage effectively risks to its ability to deliver a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;including by:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;identifying and monitoring relevant external and internal risks;</li>
+    <li>(2) ensuring that it has in place risk management processes that are effective at managing those risks; and</li>
+    <li>(3) regularly updating its risk management processes to reflect issues arising and lessons learned from:
+    <ol>
+        <li>(a) <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incidents</a>;</li>
+        <li>(b) engagement with the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>;</li>
+        <li>(c) new and emerging risks; and</li>
+        <li>(d) any associated testing and exercising, including but not limited to that carried out in accordance with <a href="/pra-rules/critical-third-parties#56e10aaa15184c948874e1dcc8844e58" data-rb-content-link="Chapter">5</a>.</li>
+    </ol>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c240aa53131b4835b51b236be16353d1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f25b6736a7a84754baa26a759944ccdd"
+	 data-version="02b290a7c31f48189aa8cf7fcfd0c938"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Requirement 3: Dependency and supply chain risk management</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="a2090b95d9cf48a0ac0cfa859dc9300a"
+	 data-version="22f85db1b57348b0ae50580a94bffbaf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must (as part of its obligation under <a href="/pra-rules/critical-third-parties#c240aa53131b4835b51b236be16353d1" data-rb-content-link="Rule">4.4</a>) identify and manage any risks to its <a href="#glossary-term-fae6a03fa561435ca8f1434d4bba912c">supply chain</a>&nbsp;that could affect its ability to deliver a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a2090b95d9cf48a0ac0cfa859dc9300a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a8761e85b91547a4a26e55b8a4f654d8"
+	 data-version="8df0d318316c4ff8ab0fb537d63aac93"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must take reasonable steps to ensure that its <a href="#glossary-term-8d3f44b554464f35adf5950c1c742e38">key nth-party providers</a>&nbsp;and <a href="#glossary-term-ceba8342b1ad468e8a70536c559925e2">persons connected with a critical third party</a>&nbsp;that are part of its <a href="#glossary-term-fae6a03fa561435ca8f1434d4bba912c">supply chain</a>:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;are informed of the <a href="#glossary-term-54e3c880cb41439c8ba1a5e362b89fa3">CTP duties</a>&nbsp;that apply to the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>;</li>
+    <li>(2) cooperate with the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;in meeting those <a href="#glossary-term-54e3c880cb41439c8ba1a5e362b89fa3">CTP duties</a>; and</li>
+    <li>(3) provide the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;with access to any information relevant to the exercise of their <a href="#glossary-term-3bce102712c7477b9f81af87a350d126">oversight functions</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a8761e85b91547a4a26e55b8a4f654d8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="765676acbe9a4acf8665dc420cc94d9d"
+	 data-version="c9d61ea3922943529a5a89aeea0c6585"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Requirement 4: Technology and cyber resilience</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="78d16197c843414b8adb525113d3f7e1"
+	 data-version="18442e73f59e4410a028a35990e40499"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must (as part of its obligation under <a href="/pra-rules/critical-third-parties#c240aa53131b4835b51b236be16353d1" data-rb-content-link="Rule">4.4</a>) take reasonable steps to ensure the resilience of any technology that delivers, maintains or supports a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>, including by having:</p>
+<ol class="new-bullet">
+    <li>(1) (as part of its obligation under <a href="/pra-rules/critical-third-parties#ab5c6bc9791849ccb7fb0398794e6f9a" data-rb-content-link="Rule">4.1</a>) sound, effective and comprehensive strategies, processes and systems to adequately manage risks to its technology and cyber resilience; and</li>
+    <li>(2) regular testing and exercising of those strategies, processes and systems (including as part of its obligations under <a href="/pra-rules/critical-third-parties#56e10aaa15184c948874e1dcc8844e58" data-rb-content-link="Chapter">5</a>) and processes and measures that reflect lessons learned from that testing and exercising.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=78d16197c843414b8adb525113d3f7e1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c5aa93d416dd4d03b9519387d42a4352"
+	 data-version="d2f4ff1058af4221b77096861148ce75"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Requirement 5: Change management</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="f693fad50f2e4f218d5becb267cb8e9e"
+	 data-version="5e04b843f2d746f6968087db182d89f4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must ensure that it has a systematic and effective approach to dealing with changes to a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>, including changes to the processes or technologies used to deliver, maintain or support a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>, including by:</p>
+<ol class="new-bullet">
+    <li>(1) implementing appropriate policies, procedures and controls to manage effectively the resilience of any change to a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>;</li>
+    <li>(2) implementing any change to a <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;in a way that minimises appropriately the risk of any <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;occurring; and</li>
+    <li>(3) ensuring that prior to being implemented, any change is appropriately risk-assessed, recorded, tested, verified and approved.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f693fad50f2e4f218d5becb267cb8e9e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5778a286af7f419d9bfb8e4f85d7e486"
+	 data-version="41221c2bbcdb4386a3ec4cc52fdab670"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Requirement 6: Mapping</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="fd95d5ba888b4a46b3a9a447a4a68afd"
+	 data-version="fa251bd005a34cbb820f07fcd3c706fb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must:</p>
+<ol class="new-bullet">
+    <li>(1) within 12 <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>&nbsp;of being designated by the <a href="#glossary-term-eb1ab06c495442698cab73591d2e19e8">Treasury</a>, identify and document:
+    <ol>
+        <li>(a) the resources, including the <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">persons</a>&nbsp;(including<a href="#glossary-term-8d3f44b554464f35adf5950c1c742e38"> key nth-party providers</a>), <a href="#glossary-term-4fe8216152c240c3b32492fbcb0e7cbe">assets</a>, supporting <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">services</a>&nbsp;and technology, used to deliver, support and maintain each <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;it provides; and</li>
+        <li>(b) any internal and external interconnections and interdependencies between the resources identified under (a) in respect of that <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>; and</li>
+    </ol>
+    </li>
+    <li>(2) thereafter regularly update the process conducted under (1).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fd95d5ba888b4a46b3a9a447a4a68afd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3cf0bd01c36745d8a1038a0430da2ecc"
+	 data-version="d402dd6011d6496f96c13f17f5d77249"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Requirement 7: Incident management</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="0d3990845f4e4680a4958598dafee3f3"
+	 data-version="36a223e1ebc745d89619339f2ae0c74e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must manage effectively <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incidents</a>&nbsp;including by:</p>
+<ol class="new-bullet">
+    <li>(1) implementing appropriate measures to respond to and recover from <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incidents</a>&nbsp;in a way that minimises the impact, or potential impact, on the stability of, or confidence in, the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>&nbsp;financial system;</li>
+    <li>(2) setting an appropriate maximum tolerable level of <a href="#glossary-term-1c530e7f1aa14d668982f59ee4a2e0ca">disruption</a>&nbsp;to each <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>;</li>
+    <li>(3) maintaining and operating an <a href="#glossary-term-96d34edc278c4daab222c5206a50100a">incident management playbook</a>, the first version of which must be in place within 12 <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>&nbsp;of the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;being designated by the <a href="#glossary-term-eb1ab06c495442698cab73591d2e19e8">Treasury</a>, which sets out the plans and procedures to be followed by the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;in the event of a <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;in order to:
+    <ol>
+        <li>(a) respond to and recover from the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>; and</li>
+        <li>(b) facilitate effective communication with, and support to, the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;and <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>&nbsp;(individually and collectively); and</li>
+    </ol>
+    </li>
+    <li>(4) cooperating and coordinating with the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;and <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>&nbsp;in response to <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incidents</a>, including through <a href="#glossary-term-68c76218c5e643c18aaa86fabaa440bf">collective incident response frameworks</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0d3990845f4e4680a4958598dafee3f3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.10
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="47d49062e00c4d42b40113184c68d362"
+	 data-version="768dc881a2c7453abfb61a83709f3186"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Requirement 8: Termination of a systemic third party service</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="684fdc8861214609adf0019d5d6942f7"
+	 data-version="19c9ce815f29471e94dd761748962af3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must have in place appropriate measures to respond to a termination of any of its <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>&nbsp;(for any reason), including by putting in place:</p>
+<ol class="new-bullet">
+    <li>(1) arrangements to support the effective, orderly and timely termination of that <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>, and (if applicable) its transfer to another <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">person</a>, including the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;the <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>&nbsp;is provided to; and</li>
+    <li>(2) provision for ensuring access to, recovery and return of any relevant&nbsp;<a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;<a href="#glossary-term-4fe8216152c240c3b32492fbcb0e7cbe">assets</a>&nbsp;to each <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;it provides that <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>&nbsp;to and (where applicable) in an easily accessible format.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=684fdc8861214609adf0019d5d6942f7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.11
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/4-operational-risk-and-resilience-requirements/01-01-2025?p=1" data-id="7d8fb7a2f43649f08f8a2b0c24cf3e17" data-effective-date="01-01-2025" data-download-title="Operational Risk and Resilience Requirements_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/4-operational-risk-and-resilience-requirements/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#7d8fb7a2f43649f08f8a2b0c24cf3e17&amp;subject=PRA Rulebook - Critical Third Parties – Operational Risk and Resilience Requirements">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=7d8fb7a2f43649f08f8a2b0c24cf3e17">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Operational Risk and Resilience Requirements
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="56e10aaa15184c948874e1dcc8844e58"
+	 data-version="ee6951a948e749778716d4ae5567bcd7"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Assurance, Scenario Testing and Incident Management Playbook Exercise
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4e8f030651144a7faa10664ad1f22975"
+	 data-version="0c294245286346d8b83a9b9d23e3a25d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>General evidence requirement</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="2dbe730baee44b3eb4e509587ad7b7f2"
+	 data-version="d3c652e4819f47d98d780302e1071100"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must be able to demonstrate to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;its ability to comply with this Part.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2dbe730baee44b3eb4e509587ad7b7f2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a44966121f7d49b9a523d878f30f4578"
+	 data-version="baba53b2f3304a33bb3bf726784a448e"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Scenario testing</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="04a0aa4162504437a2b3fb810c8d53ef"
+	 data-version="f157ae4ab238462697152f18963a41a8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As part of its obligation under <a href="/pra-rules/critical-third-parties#2dbe730baee44b3eb4e509587ad7b7f2" data-rb-content-link="Rule">5.1</a>, a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must carry out regular scenario testing of its ability to continue providing each <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;within its appropriate maximum tolerable level of <a href="#glossary-term-1c530e7f1aa14d668982f59ee4a2e0ca">disruption</a>&nbsp;(set in accordance with <a href="/pra-rules/critical-third-parties#0d3990845f4e4680a4958598dafee3f3" data-rb-content-link="Rule">4.10</a>(2)) in the event of a severe but plausible disruption to its operations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=04a0aa4162504437a2b3fb810c8d53ef">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="432fa6d8ed1e4d76acd6d7a4bb55d11a"
+	 data-version="d06694a588d2407ba18e77e44cfac320"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When carrying out the scenario testing required by <a href="/pra-rules/critical-third-parties#04a0aa4162504437a2b3fb810c8d53ef" data-rb-content-link="Rule">5.2</a>, a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must identify an appropriate range of adverse circumstances of varying nature, severity and duration relevant to its business, risk profile and <a href="#glossary-term-fae6a03fa561435ca8f1434d4bba912c">supply chain</a>&nbsp;and consider the risks to the delivery of the <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;in those circumstances.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=432fa6d8ed1e4d76acd6d7a4bb55d11a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="39ca60c6647b42d79d0df202a0758696"
+	 data-version="b0051e0fce1d40abb05d8257a09275aa"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Incident management playbook exercise</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="fe11653d72e84f8595bcf5f2e0430dd3"
+	 data-version="492af2767ed34b2c9466b10df7c4feb5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As part of its obligation under <a href="/pra-rules/critical-third-parties#2dbe730baee44b3eb4e509587ad7b7f2" data-rb-content-link="Rule">5.1</a>, a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must assess the effectiveness of its <a href="#glossary-term-96d34edc278c4daab222c5206a50100a">incident management playbook</a>&nbsp;regularly, including undertaking an appropriate <a href="#glossary-term-cee49333a2e643b2a101d3677f4d3a63">incident management playbook exercise</a>&nbsp;with a representative sample of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>&nbsp;to which it provides <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>&nbsp;within 12 <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>&nbsp;of the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;being designated by the <a href="#glossary-term-eb1ab06c495442698cab73591d2e19e8">Treasury</a>&nbsp;and at least biennially thereafter.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fe11653d72e84f8595bcf5f2e0430dd3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9e0974d1ab3e42cf8cce815cf5a5a317"
+	 data-version="5eb945f30cda46e0b39606bf962f243b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must, as soon as is practicable, prepare and submit to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;a report of the <a href="#glossary-term-cee49333a2e643b2a101d3677f4d3a63">incident management playbook exercise</a>&nbsp;undertaken under <a href="/pra-rules/critical-third-parties#fe11653d72e84f8595bcf5f2e0430dd3" data-rb-content-link="Rule">5.4</a>&nbsp;(including any actions taken in the light of the results of that exercise).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9e0974d1ab3e42cf8cce815cf5a5a317">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/5-assurance-scenario-testing-and-incident-management-playbook/01-01-2025?p=1" data-id="56e10aaa15184c948874e1dcc8844e58" data-effective-date="01-01-2025" data-download-title="Assurance, Scenario Testing and Incident Management Playbook Exercise_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/5-assurance-scenario-testing-and-incident-management-playbook/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#56e10aaa15184c948874e1dcc8844e58&amp;subject=PRA Rulebook - Critical Third Parties – Assurance, Scenario Testing and Incident Management Playbook Exercise">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=56e10aaa15184c948874e1dcc8844e58">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Assurance, Scenario Testing and Incident Management Playbook Exercise
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="5420f00bda6049b59e2af5add99ad604"
+	 data-version="30915b4e77af457d9568eba0ec1c448d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Self-Assessment
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5a99733dff744cb2acbeec4f0c3b196e"
+	 data-version="765e3931b358437683ee337acf1535a8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must provide to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;within three <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>&nbsp;of the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;being designated by the <a href="#glossary-term-eb1ab06c495442698cab73591d2e19e8">Treasury</a>, an interim self-assessment; and</li>
+    <li>(2) annually thereafter, an annual self-assessment,</li>
+</ol>
+<p>of the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party's</a>&nbsp;compliance with this Part.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5a99733dff744cb2acbeec4f0c3b196e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2046c8f27e4a4e4ab4e82b18334dd35f"
+	 data-version="971e4267439b4a1cb17248026bfcacfd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must keep a copy of each interim and annual self-assessment referred to in <a href="/pra-rules/critical-third-parties#5a99733dff744cb2acbeec4f0c3b196e" data-rb-content-link="Rule">6.1</a>&nbsp;for a period of at least three years after submitting it to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2046c8f27e4a4e4ab4e82b18334dd35f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/6-self-assessment/01-01-2025?p=1" data-id="5420f00bda6049b59e2af5add99ad604" data-effective-date="01-01-2025" data-download-title="Self-Assessment_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/6-self-assessment/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#5420f00bda6049b59e2af5add99ad604&amp;subject=PRA Rulebook - Critical Third Parties – Self-Assessment">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=5420f00bda6049b59e2af5add99ad604">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Self-Assessment
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="0095c839972549cba8117183b907b674"
+	 data-version="521d0e4b5abc4daebbac5a5376b78ad4"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Information Sharing with Firms
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3188e6ace0294f18ad772ebb278766fb"
+	 data-version="97aefd22c6834247b40767f40273c699"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must have in place effective and secure processes and procedures to ensure sufficient and timely information is given to a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;to which it provides any <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>&nbsp;to enable that <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;to manage adequately risks related to its use of the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party's</a>&nbsp;<a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3188e6ace0294f18ad772ebb278766fb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3d30f400edc847c6acda5c65af0e4e80"
+	 data-version="99d06b27e3cf4d748c8fb794fb6ba6ab"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The information referred to in <a href="/pra-rules/critical-third-parties#3188e6ace0294f18ad772ebb278766fb" data-rb-content-link="Rule">7.1</a>&nbsp;includes, but is not limited to:</p>
+<ol class="new-bullet">
+    <li>(1) results of testing and exercising carried out in accordance with <a href="/pra-rules/critical-third-parties#56e10aaa15184c948874e1dcc8844e58" data-rb-content-link="Chapter">5</a>&nbsp;(including any action taken in the light of the results of the testing and exercising);</li>
+    <li>(2)  the annual self-assessment prepared in compliance with <a href="/pra-rules/critical-third-parties#5a99733dff744cb2acbeec4f0c3b196e" data-rb-content-link="Rule">6.1</a>(2), redacted as appropriate; and</li>
+    <li>(3) the appropriate maximum tolerable level of <a href="#glossary-term-1c530e7f1aa14d668982f59ee4a2e0ca">disruption</a>&nbsp;set by the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;in accordance with <a href="/pra-rules/critical-third-parties#0d3990845f4e4680a4958598dafee3f3" data-rb-content-link="Rule">4.10</a>(2) for each <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;provided to the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3d30f400edc847c6acda5c65af0e4e80">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/7-information-sharing-with-firms/01-01-2025?p=1" data-id="0095c839972549cba8117183b907b674" data-effective-date="01-01-2025" data-download-title="Information Sharing with Firms_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/7-information-sharing-with-firms/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#0095c839972549cba8117183b907b674&amp;subject=PRA Rulebook - Critical Third Parties – Information Sharing with Firms">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=0095c839972549cba8117183b907b674">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Information Sharing with Firms
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="eec526662bb541cb953a21d8022155d0"
+	 data-version="e33da064d95744b49ef9f0fc63d5885b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Incident Reporting
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a1cf4550903f490892f1d1e6043cbfc5"
+	 data-version="9b20c2218c84431f9eb282bdda5bd259"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Initial incident report</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="2e50aac9887a4501b6c8ce687cbb6002"
+	 data-version="1f35c21d435f4c88b10d012fa1c90330"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must, as soon as is practicable after the occurrence of a <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;and in so far as it is aware at the time of submission, submit the following information about the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>:</p>
+<ol class="new-bullet">
+    <li>(1) to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;and to <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>:
+    <ol>
+        <li>(a) a description of the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>, including:
+        <ol>
+            <li>(i) the nature and extent of:
+            <ol>
+                <li>(1) the <a href="#glossary-term-1c530e7f1aa14d668982f59ee4a2e0ca">disruption</a>&nbsp;to <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>; or</li>
+                <li>(2)  impact to the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party's</a>&nbsp;operations;</li>
+            </ol>
+            </li>
+            <li>(ii) the time when the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;was detected (and, if different, the local time in the location where the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;was detected);</li>
+            <li>(iii) the name and number of <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>&nbsp;affected;</li>
+            <li>(iv) the geographical area, including the jurisdictions, affected by the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>; and</li>
+            <li>(v) if known, the cause of the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>;</li>
+        </ol>
+        </li>
+        <li>(b) contact details of any individual who is responsible for communicating with the <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>&nbsp;about the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>;</li>
+        <li>(c) details of any initial action taken or planned in response to the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>;</li>
+        <li>(d) the anticipated amount of time it will take to resolve the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>, including the anticipated recovery time for each <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party service</a>&nbsp;affected; and</li>
+        <li>(e) any other information the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;reasonably considers relevant to the <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>&nbsp;and the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;in making an initial assessment of the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident's</a>&nbsp;potential impact on <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>,</li>
+    </ol>
+    </li>
+    <li>and</li>
+    <li>(2) to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>:
+    <ol>
+        <li>(a)  the names of the <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>;</li>
+        <li>(b) the names of any other regulatory body or authorities (other than the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>) that have been notified of the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>; and</li>
+        <li>(c) any other information that the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;reasonably considers will assist the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;in making an initial assessment of the impact the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;could have on the stability of, or confidence in, the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK&rsquo;s</a>&nbsp;financial system.</li>
+    </ol>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2e50aac9887a4501b6c8ce687cbb6002">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="37c79b76cdd24182bc8d6e2084027a33"
+	 data-version="72adfd2d17cc4162959e832cd9fd1373"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Intermediate incident report</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="84b9ca97834d4fc5b7274e0e6e2766fe"
+	 data-version="cb5156145b5b450bb8f03b17a3094927"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must, as soon as is practicable after any significant change in circumstances from that described in the initial report submitted under <a href="/pra-rules/critical-third-parties#2e50aac9887a4501b6c8ce687cbb6002" data-rb-content-link="Rule">8.1</a>&nbsp;and any intermediate incident report already submitted under this rule (including the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;being resolved) and in so far as it is aware at the relevant time, provide the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;and the <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>&nbsp;with information further to that already disclosed in relation to the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>, including but not limited to:</p>
+<ol class="new-bullet">
+    <li>(1) any information that the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;reasonably considers will assist the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;and <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>&nbsp;in understanding the nature and extent of the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>;</li>
+    <li>(2) any steps taken to resolve the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>;</li>
+    <li>(3) if the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;has been resolved, the time and date it was resolved; and</li>
+    <li>(4)
+    <ol>
+        <li>(a) any other information which the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;reasonably considers to be relevant to&nbsp;<a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>; and</li>
+        <li>(b)&nbsp;to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;only, any other information the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;reasonably considers to be relevant to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>.</li>
+    </ol>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=84b9ca97834d4fc5b7274e0e6e2766fe">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="80ff0d2377bb410283535ac276275fcb"
+	 data-version="ca249b60f9df4dcbaeb91993c3218204"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Final incident report</strong></p>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="984da671d4f44b339599f081c9d93358"
+	 data-version="942ca68b906744a3a0b0536cc0d37588"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must, within a reasonable time of the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;being resolved, provide the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;and the <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>&nbsp;with the following information in relation to the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>:</p>
+<ol class="new-bullet">
+    <li>(1) the time and date that the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>&nbsp;was resolved;</li>
+    <li>(2) a description of the root causes (in so far as it is aware at the time of submission);</li>
+    <li>(3) a description of any remedial actions the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;has or is planning to put in place and an estimated timeline for the completion of those remedial actions;</li>
+    <li>(4) a description of the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party's</a> assessment of:
+    <ol>
+        <li>(a) the likelihood of recurrence of the<a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>; and  </li>
+        <li>(b) the long-term implications of the <a href="#glossary-term-d8ba36db745c4df0b502831081dc628f">CTP operational incident</a>;</li>
+    </ol>
+    </li>
+    <li>(5) a description of identified areas for improvement for the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;and, where relevant, the <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>; and</li>
+    <li>(6)
+    <ol>
+        <li>(a) any other information the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;reasonably considers to be relevant to <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>; and</li>
+        <li>(b) to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;only, any other information the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;reasonably considers to be relevant to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>.</li>
+    </ol>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=984da671d4f44b339599f081c9d93358">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/8-incident-reporting/01-01-2025?p=1" data-id="eec526662bb541cb953a21d8022155d0" data-effective-date="01-01-2025" data-download-title="Incident Reporting_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/8-incident-reporting/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#eec526662bb541cb953a21d8022155d0&amp;subject=PRA Rulebook - Critical Third Parties – Incident Reporting">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=eec526662bb541cb953a21d8022155d0">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Incident Reporting
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="622cff314a774816bd7bbd50146abcf7"
+	 data-version="20d200b3ca4c4363af8b7b6023942854"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Notifications
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="9c4efc9197104926a171d83ec41a7f46"
+	 data-version="0b10e10d0eb34d5f82be217c2b3cff7f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must notify the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;immediately where there is an actual or potential circumstance or event that seriously and adversely impacts, or could seriously and adversely impact, the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party&rsquo;s</a>&nbsp;ability to deliver any of its <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>&nbsp;or meet any of its obligations under this Part, including where:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;civil proceedings are brought by or against the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;or a claim or dispute is referred to alternative dispute resolution in any jurisdiction;</li>
+    <li>(2) disciplinary measures or sanctions have been imposed on the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;by any statutory or regulatory authority in any jurisdiction (other than the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>), or the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;becomes aware that one of those authorities has commenced an investigation into its affairs</li>
+    <li>(3) the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;is in financial difficulty and is considering entering into an insolvency proceeding or a restructuring plan in any jurisdiction, or any such proceedings are likely to be brought against it in any jurisdiction; and</li>
+    <li>(4) the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;is subject to criminal proceedings, or has been prosecuted for, or convicted of, a criminal offence in any jurisdiction involving fraud or dishonesty.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9c4efc9197104926a171d83ec41a7f46">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/9-notifications/01-01-2025?p=1" data-id="622cff314a774816bd7bbd50146abcf7" data-effective-date="01-01-2025" data-download-title="Notifications_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/9-notifications/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#622cff314a774816bd7bbd50146abcf7&amp;subject=PRA Rulebook - Critical Third Parties – Notifications">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=622cff314a774816bd7bbd50146abcf7">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Notifications
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="0646cdc45b1c493799118848978bcd99"
+	 data-version="a554b501005b4988b9be29596ed72710"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Inaccurate, False or Misleading Information
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8cdb22cc63ca479fa6ce67a6495cdf39"
+	 data-version="2563dc08609c42adb548d566bac34687"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must take reasonable steps to ensure that all information it gives to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;and <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>&nbsp;in accordance with the <a href="#glossary-term-54e3c880cb41439c8ba1a5e362b89fa3">CTP duties</a>&nbsp;(including information required by <a href="/pra-rules/critical-third-parties#eec526662bb541cb953a21d8022155d0" data-rb-content-link="Chapter">8</a>&nbsp;and <a href="/pra-rules/critical-third-parties#622cff314a774816bd7bbd50146abcf7" data-rb-content-link="Chapter">9</a>) is:</p>
+<ol class="new-bullet">
+    <li>(1) factually accurate or, in the case of estimates and judgements, fairly and properly based after appropriate enquiries have been made by the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>; and</li>
+    <li>(2) complete, in that it should include anything of which the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;would reasonably expect notice.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8cdb22cc63ca479fa6ce67a6495cdf39">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b9868246e444464cb0af4bf9c05633e5"
+	 data-version="f16f74f9709d412899f2ee1e67398c36"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;is unable to obtain the information required in <a href="/pra-rules/critical-third-parties#8cdb22cc63ca479fa6ce67a6495cdf39" data-rb-content-link="Rule">10.1</a>, then it must inform the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;that the scope of the information provided is, or may be, limited.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b9868246e444464cb0af4bf9c05633e5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0f04b87714e742a897cb7c69cf3ffe97"
+	 data-version="6f9f351cf81d439f98fcf318b958ae2a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			If a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;becomes aware, or has information that reasonably suggests, that it has or may have provided the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;with information which was or may have been false, misleading, incomplete or inaccurate, or has or may have changed in a material way, it must notify the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;immediately.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0f04b87714e742a897cb7c69cf3ffe97">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0c59803aa0994fd08ed83c000b1b8d27"
+	 data-version="45a2f4554300466e9fd4f4bc1ff046b4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Subject to <a href="/pra-rules/critical-third-parties#46892300a36748d6a0c94cfc3965b7b1" data-rb-content-link="Rule">10.5</a>, the notification required by <a href="/pra-rules/critical-third-parties#0f04b87714e742a897cb7c69cf3ffe97" data-rb-content-link="Rule">10.3</a>&nbsp;must include:</p>
+<ol class="new-bullet">
+    <li>(1) details of the information which is or may be false, misleading, incomplete or inaccurate, or has or may have changed;</li>
+    <li>(2) an explanation of why such information was or may have been provided; and</li>
+    <li>(3) the correct information.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0c59803aa0994fd08ed83c000b1b8d27">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="46892300a36748d6a0c94cfc3965b7b1"
+	 data-version="b18529a2622746d8b32372eb92a39dda"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the information in <a href="/pra-rules/critical-third-parties#0c59803aa0994fd08ed83c000b1b8d27" data-rb-content-link="Rule">10.4</a>(3) cannot be submitted with the notification (because it is not immediately available), it must instead be submitted as soon as is practicable afterwards.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=46892300a36748d6a0c94cfc3965b7b1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/10-inaccurate-false-or-misleading-information/01-01-2025?p=1" data-id="0646cdc45b1c493799118848978bcd99" data-effective-date="01-01-2025" data-download-title="Inaccurate, False or Misleading Information_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/10-inaccurate-false-or-misleading-information/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#0646cdc45b1c493799118848978bcd99&amp;subject=PRA Rulebook - Critical Third Parties – Inaccurate, False or Misleading Information">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=0646cdc45b1c493799118848978bcd99">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Inaccurate, False or Misleading Information
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="c77c95b8a31b4eafa21ee2df0e840a99"
+	 data-version="288e405020ec4b53b5c21f545ee32f54"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					11
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Address for Service
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="01d4efbe3bb1419f8ab899c34c283da0"
+	 data-version="ccda5d2570644d57936047692d63e3a0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must provide the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;with an address in the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>&nbsp;for the service of <a href="#glossary-term-194fa303af574acc8d7d1ee31e2eb2a7">documents</a>&nbsp;(including <a href="#glossary-term-0fa34ece74f34dafb208fa514ff53d21">relevant documents</a>).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=01d4efbe3bb1419f8ab899c34c283da0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6e34b95940fd44dd89ea8f5cfeb30157"
+	 data-version="fdd8796dbb32439ba2afacbd0c73cb05"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must notify the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;of any change to the information provided under <a href="/pra-rules/critical-third-parties#01d4efbe3bb1419f8ab899c34c283da0" data-rb-content-link="Rule">11.1</a>&nbsp;as soon as is practicable.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6e34b95940fd44dd89ea8f5cfeb30157">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/11-address-for-service/01-01-2025?p=1" data-id="c77c95b8a31b4eafa21ee2df0e840a99" data-effective-date="01-01-2025" data-download-title="Address for Service_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/11-address-for-service/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#c77c95b8a31b4eafa21ee2df0e840a99&amp;subject=PRA Rulebook - Critical Third Parties – Address for Service">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=c77c95b8a31b4eafa21ee2df0e840a99">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Address for Service
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="edb3a9ce37a046e8b89d12bea5ef8f8a"
+	 data-version="50cd074564d941f098824721986fb0c7"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					12
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Contracts with Skilled Persons and Delivery of Reports
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="2c1783412f1649028db8e3f2f3a144c7"
+	 data-version="d066ce769f1e434fba90c2098c7bf0f8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			If a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;appoints a <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>, that <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must give the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;sufficient and timely information about the cost of the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person&rsquo;s</a>&nbsp;report or collection or updating of information, including both an initial estimate of the cost as well as the cost of the completed report, collection or updating of information.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2c1783412f1649028db8e3f2f3a144c7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="762c84d15c794ef0a66dd9b736dd3755"
+	 data-version="5c551a6f5b5646f3b92c6338d5d5097c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;appoints a <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>, the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must, in a contract with that <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">person</a>:</p>
+<ol class="new-bullet">
+    <li>(1) require and permit the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;during and after the course of their appointment:
+    <ol>
+        <li>(a) to cooperate with the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;in connection with the discharge of their <a href="#glossary-term-3bce102712c7477b9f81af87a350d126">oversight functions</a>; and</li>
+        <li>(b) to communicate to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;information on, or the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person&rsquo;s</a>&nbsp;opinion on, matters of which they have, or had, become aware in their capacity as a <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;reporting on the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;in the following circumstances:
+        <ol>
+            <li>(i) the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;reasonably believes that the information on, or their opinion on, matters for which they were appointed may be of material significance to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;in determining whether the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;concerned complies with and will continue to comply with the <a href="#glossary-term-54e3c880cb41439c8ba1a5e362b89fa3">CTP duties</a>; or</li>
+            <li>(ii) the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;reasonably believes that the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;is not, may not be or may cease to be a going concern;</li>
+        </ol>
+        </li>
+    </ol>
+    </li>
+    <li>(2) require the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;to prepare a report or collect or update information, as notified to the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;by the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulator</a>&nbsp;that has required such report, collection or updating within the time specified by the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulator</a>; and</li>
+    <li>(3)  waive any contractual or other duty of confidentiality owed by the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;to the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;which might limit the provision of information or opinion by that <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;in accordance with (1) or (2).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=762c84d15c794ef0a66dd9b736dd3755">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="648ba1d4ff6b42069f3ea7bbda76bfcd"
+	 data-version="881596f0c4ae4767b403f450b235d306"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must ensure that the contract it makes with the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;under <a href="/pra-rules/critical-third-parties#762c84d15c794ef0a66dd9b736dd3755" data-rb-content-link="Rule">12.2</a>&nbsp;requires and permits the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;to provide the following to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;if requested to do so:</p>
+<ol class="new-bullet">
+    <li>(1) interim reports;</li>
+    <li>(2) source data, <a href="#glossary-term-194fa303af574acc8d7d1ee31e2eb2a7">documents</a>&nbsp;and working papers;</li>
+    <li>(3) copies of any draft reports given to the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>; and</li>
+    <li>(4) specific information about the planning and progress of the work to be undertaken (which may include project plans, progress reports including percentage of work completed, details of time spent, costs to date, and details of any significant findings and conclusions).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=648ba1d4ff6b42069f3ea7bbda76bfcd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="69a49e0499c04d41805594f86b25465f"
+	 data-version="216c18db6f5645fa9f081fa04e401db9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must ensure that the contract required by <a href="/pra-rules/critical-third-parties#762c84d15c794ef0a66dd9b736dd3755" data-rb-content-link="Rule">12.2</a>&nbsp;is:</p>
+<ol class="new-bullet">
+    <li>(1) governed by the laws of a part of the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>;</li>
+    <li>(2) in writing, and:
+    <ol>
+        <li>(a) expressly provides that the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;have a right to enforce the provisions included in the contract under <a href="/pra-rules/critical-third-parties#762c84d15c794ef0a66dd9b736dd3755" data-rb-content-link="Rule">12.2</a>, <a href="/pra-rules/critical-third-parties#648ba1d4ff6b42069f3ea7bbda76bfcd" data-rb-content-link="Rule">12.3</a>&nbsp;and 12.4(2)(b) to (d);</li>
+        <li>(b) expressly provides that, in proceedings brought by the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;for the enforcement of those provisions, the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;is not to have available by way of defence, set-off or counterclaim any matter that is not relevant to those provisions;</li>
+        <li>(c) if the contract includes an arbitration agreement, expressly provides that the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;are not, in exercising the right in (a), to be treated as a party to, or bound by, the arbitration agreement; and</li>
+        <li>(d) expressly provides that the provisions included in the contract under <a href="/pra-rules/critical-third-parties#762c84d15c794ef0a66dd9b736dd3755" data-rb-content-link="Rule">12.2</a>, <a href="/pra-rules/critical-third-parties#648ba1d4ff6b42069f3ea7bbda76bfcd" data-rb-content-link="Rule">12.3</a>&nbsp;and 12.4(2) are irrevocable and may not be varied or rescinded without the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&rsquo; consent; and</li>
+    </ol>
+    </li>
+    <li>(3) not varied or rescinded in such a way as to extinguish or alter the provisions referred to in (2)(d).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=69a49e0499c04d41805594f86b25465f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1f864dc718b94167b7955c2a8d3d6ac9"
+	 data-version="68b4960f750c4ad9a619992099e6bec0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;appoints a <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>, a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must take reasonable steps to ensure that the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;delivers a report or collects or updates information in accordance with the terms of the <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person&rsquo;s</a>&nbsp;appointment.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1f864dc718b94167b7955c2a8d3d6ac9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="af5d3374fd4a46fe88c8f918de7c99ab"
+	 data-version="2cb26d22535e4a77a511440925235d20"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must provide all reasonable assistance to a <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>&nbsp;appointed to provide a report under section 166 of <a href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08">FSMA</a>&nbsp;(Reports by skilled persons) or to collect or update information under section 166A (Appointment of skilled person to collect and update information) of <a href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08">FSMA</a>&nbsp;(as applied by section 312P of <a href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08">FSMA</a>) and take reasonable steps to ensure that its <a href="#glossary-term-e08f83ef44794a06bd2429270dc7b807">employees</a>&nbsp;and agents also provide all reasonable assistance to that <a href="#glossary-term-cf524164a9e54d79be5614c167b5520b">skilled person</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=af5d3374fd4a46fe88c8f918de7c99ab">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/12-contracts-with-skilled-persons-and-delivery-of-reports/01-01-2025?p=1" data-id="edb3a9ce37a046e8b89d12bea5ef8f8a" data-effective-date="01-01-2025" data-download-title="Contracts with Skilled Persons and Delivery of Reports_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/12-contracts-with-skilled-persons-and-delivery-of-reports/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#edb3a9ce37a046e8b89d12bea5ef8f8a&amp;subject=PRA Rulebook - Critical Third Parties – Contracts with Skilled Persons and Delivery of Reports">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=edb3a9ce37a046e8b89d12bea5ef8f8a">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Contracts with Skilled Persons and Delivery of Reports
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="8ff06eb162d1469297e2a0d6cfb43596"
+	 data-version="78526a0b8dd143ed9506a75ee412d872"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					13
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Referring to Oversight by the Regulators or Treasury Designation
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a40659b444824c39b8410e34a79d9179"
+	 data-version="c411cebb13d849eda1bb24303ee38454"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must ensure that it does not, and must take reasonable steps to ensure that any <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">person</a>&nbsp;acting on its behalf does not, in any way indicate or imply that the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;has the approval or endorsement of any of the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;by virtue of:</p>
+<ol class="new-bullet">
+    <li>(1) its designation as a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>; or</li>
+    <li>(2) being overseen by the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;in respect of <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">services</a>&nbsp;it provides to <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a40659b444824c39b8410e34a79d9179">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8a12248faa9a4cb1a64d38cb89bb4870"
+	 data-version="8e119443a31a4e609325207eff147e83"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must not, and must take reasonable steps to ensure that any <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">person</a>&nbsp;acting on its behalf does not, in any communication indicate or imply that the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party&rsquo;s</a>&nbsp;designation by the <a href="#glossary-term-eb1ab06c495442698cab73591d2e19e8">Treasury</a>&nbsp;or oversight by the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;confers any advantage to a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;or anyone else in using its <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">services</a>&nbsp;as compared to a <a href="#glossary-term-8736c60e0ae44438bada6f17a652deac">service</a>&nbsp;provider who is not designated as a <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8a12248faa9a4cb1a64d38cb89bb4870">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="37a9ddaea97142449ad12c4fb6a45e70"
+	 data-version="f415dad9bc1e4ccfa0839328cee743bb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/critical-third-parties#a40659b444824c39b8410e34a79d9179" data-rb-content-link="Rule">13.1</a> and <a href="/pra-rules/critical-third-parties#8a12248faa9a4cb1a64d38cb89bb4870" data-rb-content-link="Rule">13.2</a>&nbsp;do not prevent the making of statements that explain, in a way that is fair, clear and not misleading:</p>
+<ol class="new-bullet">
+    <li>(1) that the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;has been designated by the <a href="#glossary-term-eb1ab06c495442698cab73591d2e19e8">Treasury</a>;</li>
+    <li>(2) that the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;is subject to oversight by the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;in respect of the <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>&nbsp;it provides to <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>; and</li>
+    <li>(3) the <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>&nbsp;the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;provides to <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=37a9ddaea97142449ad12c4fb6a45e70">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/13-referring-to-oversight-by-the-regulators-or-treasury-designation/01-01-2025?p=1" data-id="8ff06eb162d1469297e2a0d6cfb43596" data-effective-date="01-01-2025" data-download-title="Referring to Oversight by the Regulators or Treasury Designation_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/13-referring-to-oversight-by-the-regulators-or-treasury-designation/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#8ff06eb162d1469297e2a0d6cfb43596&amp;subject=PRA Rulebook - Critical Third Parties – Referring to Oversight by the Regulators or Treasury Designation">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=8ff06eb162d1469297e2a0d6cfb43596">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Referring to Oversight by the Regulators or Treasury Designation
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="b61d466368eb4df99852aa8383617811"
+	 data-version="35cd23e36d06433987e89ceb75de68e2"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					14
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Record Keeping
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="0a3213658f764784b213e1123426456d"
+	 data-version="1e5ffae4904647e4aa334782fe1d6337"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must arrange for orderly records to be kept of its business and internal organisation, in so far as they concern the provision of <a href="#glossary-term-c51d0b04b1854547a122795b9924c578">systemic third party services</a>&nbsp;to <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firms</a>, which must be sufficient to enable each <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulator</a>&nbsp;to:</p>
+<ol class="new-bullet">
+    <li>(1) perform its <a href="#glossary-term-3bce102712c7477b9f81af87a350d126">oversight functions</a>; and</li>
+    <li>(2) ascertain whether or not the <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;has complied with its <a href="#glossary-term-54e3c880cb41439c8ba1a5e362b89fa3">CTP duties</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0a3213658f764784b213e1123426456d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/14-record-keeping/01-01-2025?p=1" data-id="b61d466368eb4df99852aa8383617811" data-effective-date="01-01-2025" data-download-title="Record Keeping_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/14-record-keeping/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#b61d466368eb4df99852aa8383617811&amp;subject=PRA Rulebook - Critical Third Parties – Record Keeping">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b61d466368eb4df99852aa8383617811">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Record Keeping
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="555f883f83f34c3d93e5a799050e3003"
+	 data-version="146d913df802459d9b8f6a4d284b9831"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					15
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Electronic Submission of Information
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5bfdb13fca234911bad04d23fcf09a83"
+	 data-version="99df17b07494495c85ade10a2236e420"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-1e925ea0b06740b5a69ddb78cb16f22f">critical third party</a>&nbsp;must submit the information required under this Part to the <a href="#glossary-term-4294d403fa83416e8ab2721c153093fc">regulators</a>&nbsp;and <a href="#glossary-term-c33fce5bf52c49f59739138fbc686245">affected firms</a>&nbsp;(as the context requires) by electronic means.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5bfdb13fca234911bad04d23fcf09a83">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						15.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/critical-third-parties/15-electronic-submissions-of-information/01-01-2025?p=1" data-id="555f883f83f34c3d93e5a799050e3003" data-effective-date="01-01-2025" data-download-title="Electronic Submission of Information_01-01-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/critical-third-parties/15-electronic-submissions-of-information/01-01-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/critical-third-parties#555f883f83f34c3d93e5a799050e3003&amp;subject=PRA Rulebook - Critical Third Parties – Electronic Submission of Information">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=555f883f83f34c3d93e5a799050e3003">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Electronic Submission of Information
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

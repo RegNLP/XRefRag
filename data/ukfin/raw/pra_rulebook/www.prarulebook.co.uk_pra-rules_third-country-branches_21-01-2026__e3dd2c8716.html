@@ -1,0 +1,4722 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/third-country-branches" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/third-country-branches" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{442B11F0-CCCA-4145-934D-621FA10E7C56} -->
+<title>Third Country Branches | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Third Country Branches">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Third Country Branches">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoksa-f-dfc5eef9e-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":32,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"80aa8b6","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51211,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370276","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==jgqsKDf1Wl58kMEJ1h6OJ/7wPOCJi43FMpy7iCBejyl5mDZGRNElWiHvHZCCztsEVNg6GvuaE6MbCkhRePFJSso6/GUI9zShdqihpRM9TZ4cwpPvuOmz8ysjqb9vtSRNiI2RMX6lF6iycx1tX+6VQtJi2O6JjtGpuyvsx4Tcxal9DckAcjpFDIDrH3BOoZQmq9xhxjukfcZDz1lGanVhMfxi/2I/imDcDjWM3hWExTcZECI+zS/XjTuwmhlxcKPc60O4wz1ZCl/9GuaaVmIQBPbKQIR2ra3hrriIWnzi5KJL2bWnv8FVcDWppOrGE/ejizWmvNsjCUDPcvn9QLG0m/VNY6zXeOPRvlgIDWn8jsWy0LTcjm9I0mEQKvSmKqqGO/A9Al1tULmhSSN/fTcqltmT2zmyUSGlEN30ZmWgsoo=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Third Country Branches				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Third Country Branches
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/third-country-branches/01-01-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/third-country-branches/02-05-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						02/05/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/third-country-branches/09-04-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						09/04/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/third-country-branches/10-12-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						10/12/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/third-country-branches/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/third-country-branches/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-79fe8954-8193-4cbf-86b3-9a4430a22cbd">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-79fe8954-8193-4cbf-86b3-9a4430a22cbd"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Third Country Branches
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Third Country Branches)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=4112bd9209ba4d78a13f5ae4f39131af">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Third Country Branches
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss40-15---solvency-ii-reporting-and-disclosure/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS40/15 – Solvency II: reporting and disclosure
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss44-15---solvency-ii-third-country-insurance/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS44/15 – Solvency II: third-country insurance and pure reinsurance branches
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss20-16---solvency-ii-reinsurance---counterparty-credit-risk/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS20/16 – Solvency II: reinsurance – counterparty credit risk
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS1/20 – Solvency II: Prudent Person Principle
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss08-24---solvency-ii-calculation-of-technical-provisions/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS8/24 – Solvency II: Calculation of technical provisions
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/statements-of-policy/sop---solvency-ii-regulatory-reporting-waivers/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SoP6/24 – Solvency II regulatory reporting waivers
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/statements-of-policy/sop---the-pra-approach-to-insurance-branch-authorisation-and-supervision/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SoP7/24 – The Prudential Regulation Authority’s approach to insurance branch authorisation and supervision
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency-2-a-new-regime-for-insurers" class="list-links__link" target="_blank">
+										PS2/15 - Solvency II: A new regime for insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/prudential-regime-and-implementation-of-the-senior-insurance-managers-regime-for-non-solvency-2" class="list-links__link" target="_blank">
+										PS26/15 - &quot;The prudential regime, and implementation of the Senior Insurance Managers Regime, for non-Solvency II firms&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/pra-rulebook-administration-instrument-no-2-2017" class="list-links__link" target="_blank">
+										 - PRA Rulebook: Administration Instrument (No.2) 2017
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-individual-accountability-in-insurance-optimisations-to-the-simr" class="list-links__link" target="_blank">
+										PS1/18 - Strengthening individual accountability in insurance: optimisations to the SIMR
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-accountability-implementing-the-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS26/18 - Strengthening accountability: Implementing the extension of the SM&amp;CR to insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2019/occasional-consultation-paper" class="list-links__link" target="_blank">
+										PS21/19 - Responses to CP13/19 Occasional Consultation Paper
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/prudential-regulation/authorisations/waivers-and-modifications-of-rules" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Modification by consent - pure reinsurance branches
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/prudential-regulation/authorisations/waivers-and-modifications-of-rules" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Modification by consent – Solvency II Reporting 2.2(1)
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/prudential-regulation/authorisations/waivers-and-modifications-of-rules" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Modification by consent - third country branches that write business relating to risks which are not located in the UK to modify certain rules relating to reporting requirements and provisions
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/third-country-branches/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/31-12-2024?p=1" data-id="4112bd9209ba4d78a13f5ae4f39131af" data-effective-date="31-12-2024" data-download-title="Third Country Branches_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches&amp;subject=PRA Rulebook - Third Country Branches">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="5497eb03c77448eaaaa0a4954b657c31"
+	 data-version="6ff8dd28a93943c5ae07c591a63e2e25"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fb1ad80348df410fb81251a78a43b1f7"
+	 data-version="44707ad74d1d447fbc04521c60c00d97"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to <em><a  class="glossary-link" title="third country branch undertakings" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertakings</a></em>, except <em><a  class="glossary-link" title="Swiss general insurers" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurers</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fb1ad80348df410fb81251a78a43b1f7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="487cb55736d643a3938af0793ecf7ce4"
+	 data-version="95e3fe1cfb31465d80974eacfe83e2d9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a class="glossary-link" title="branch scheme of operations" href="#glossary-term-0361b7f2c54d4e41876e4d5b74eec15f" data-mce-linktype="2" data-glossary-id="52747">branch scheme of operations</a></em></p>
+<p style="padding-left: 30px;">means a scheme containing the information required in <a title="5.1" href="/pra-rules/third-country-branches#7c5caf2ce94c4921a1120248d70754a9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a>.</p>
+<p><em><a class="glossary-link" title="composite third country branch" href="#glossary-term-8a11bfdab42a4145b404ee82e203bd2c" data-mce-linktype="2" data-glossary-id="52750">composite third country branch</a></em></p>
+<p style="padding-left: 30px;">means a<em> <a class="glossary-link" title="third country branch" href="#glossary-term-233a78845cf54319a4301dbbfcea122c" data-mce-linktype="2" data-glossary-id="52915">third country branch</a></em> (except a <em><a class="glossary-link" title="third country pure reinsurance branch" href="#glossary-term-2f8de5e455ca47fb80d299433ba1acb9" data-mce-linktype="2" data-glossary-id="52921">third country pure reinsurance branch</a></em>) that carries on both <em><a class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em> and <em><a class="glossary-link" title="general insurance business" href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea" data-mce-linktype="2" data-glossary-id="52202">general insurance business</a></em> in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#487cb55736d643a3938af0793ecf7ce4">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=487cb55736d643a3938af0793ecf7ce4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/1-application-and-definitions/31-12-2024?p=1" data-id="5497eb03c77448eaaaa0a4954b657c31" data-effective-date="31-12-2024" data-download-title="Application and Definitions_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/1-application-and-definitions/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#5497eb03c77448eaaaa0a4954b657c31&amp;subject=PRA Rulebook - Third Country Branches – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=5497eb03c77448eaaaa0a4954b657c31">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="999449fbdf5747b4ac6f5bb4ca09f28e"
+	 data-version="21cf785d0a98495b847ca8c1d93db53f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Accounting Records in the UK
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4b2c04d00d0c47d0b3185612370633dd"
+	 data-version="b193493511924b7fa9815899431b7b84"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must maintain at a place of business in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> all records relating to:</p>
+<ol class="new-bullet">
+    <li>(1) the activities carried on from its <em><a class="glossary-link" title="third country branch" href="#glossary-term-233a78845cf54319a4301dbbfcea122c" data-mce-linktype="2" data-glossary-id="52915">third country branch</a>.</em></li>
+    <li>(2) [deleted.]</li>
+</ol>
+			<p><strong>[Note: Art. 162 (2) of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#4b2c04d00d0c47d0b3185612370633dd">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4b2c04d00d0c47d0b3185612370633dd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/2-accounting-records-in-the-uk/31-12-2024?p=1" data-id="999449fbdf5747b4ac6f5bb4ca09f28e" data-effective-date="31-12-2024" data-download-title="Accounting Records in the UK_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/2-accounting-records-in-the-uk/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#999449fbdf5747b4ac6f5bb4ca09f28e&amp;subject=PRA Rulebook - Third Country Branches – Accounting Records in the UK">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=999449fbdf5747b4ac6f5bb4ca09f28e">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Accounting Records in the UK
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="0363e18e8018471abacb95015eaf3fda"
+	 data-version="1162ababdbda4615829b62867f0011f1"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Localisation and Deposit of Assets
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="45657e631f2849f0bf1969fcc42ebe41"
+	 data-version="349c2627783a4b41947c79afbb530370"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#45657e631f2849f0bf1969fcc42ebe41">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=45657e631f2849f0bf1969fcc42ebe41">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ad5cf39b20b042e1876d7be5d9cfa6ee"
+	 data-version="18e4652f8901410b9cf4291bfa4a14c1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#ad5cf39b20b042e1876d7be5d9cfa6ee">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ad5cf39b20b042e1876d7be5d9cfa6ee">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7793f9e0067f48c5ab23e0a5f18f7ebe"
+	 data-version="5f2ffc2189354a63a17e7372082856fd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> (except a <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> that has a <em><a class="glossary-link" title="third country pure reinsurance branch" href="#glossary-term-2f8de5e455ca47fb80d299433ba1acb9" data-mce-linktype="2" data-glossary-id="52921">third country pure reinsurance branch</a></em>) must hold on deposit as security in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> with a <em><a class="glossary-link" title="CRD credit institution" href="#glossary-term-eaa373e3f53d4c79b89ddaac8fbe87a3" data-mce-linktype="2" data-glossary-id="52216">CRD credit institution</a></em> assets of an amount equal to at least:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;&pound;600,000 for a <a href="#glossary-term-9fc88970f93c421c967b2b0919f5ba2e">third country insurance branch</a>&nbsp;whose <a href="#glossary-term-9c9ea400b5194286b440e752add53c8a">insurance business</a>&nbsp;is limited to <a href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea">general insurance business</a>, except in the case where all or some of the <a href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea">general insurance business</a>&nbsp;<a href="#glossary-term-9102b1a1c10d44c6a8e08ba51c2394c7">classes</a>&nbsp;10 to 15 are covered, in which case the amount must be at least &pound;875,000;</li>
+    <li>(2) <span> </span>&pound;875,000 for a <a href="#glossary-term-9fc88970f93c421c967b2b0919f5ba2e">third country insurance branch</a>&nbsp;whose <a href="#glossary-term-9c9ea400b5194286b440e752add53c8a">insurance business</a>&nbsp;is limited to <a href="#glossary-term-0e74283109224a46aa86e62bfc7829bc">long-term insurance business</a>; or</li>
+    <li>(3) <span> </span>the sum of the amounts set out in (1) and (2) for a <a href="#glossary-term-9fc88970f93c421c967b2b0919f5ba2e">third country insurance branch</a>&nbsp;that is a <a href="#glossary-term-8a11bfdab42a4145b404ee82e203bd2c">composite third country branch</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#7793f9e0067f48c5ab23e0a5f18f7ebe">
+			Past
+			<span class="visually-hidden">
+				version of 3.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7793f9e0067f48c5ab23e0a5f18f7ebe">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/3-localisation-and-deposit-of-assets/31-12-2024?p=1" data-id="0363e18e8018471abacb95015eaf3fda" data-effective-date="31-12-2024" data-download-title="Localisation and Deposit of Assets_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/3-localisation-and-deposit-of-assets/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#0363e18e8018471abacb95015eaf3fda&amp;subject=PRA Rulebook - Third Country Branches – Localisation and Deposit of Assets">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=0363e18e8018471abacb95015eaf3fda">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Localisation and Deposit of Assets
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="745794e02afc43f18b29b13f470e806e"
+	 data-version="cfa1a6f9cc17481c8103dc3ff590a4ef"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Solvency Capital Requirement and Minimum Capital Requirement [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="30004fb268e5415eaea9cf004b2c7ed9"
+	 data-version="63e718119e624771a456d74fdf6940c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#30004fb268e5415eaea9cf004b2c7ed9">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=30004fb268e5415eaea9cf004b2c7ed9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e60190a5565e47eb88a5bba1cff21503"
+	 data-version="c134d3172abf43318cc095b0d9b2fb07"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#e60190a5565e47eb88a5bba1cff21503">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e60190a5565e47eb88a5bba1cff21503">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e2fa8a2ab2cc457c80154e2ac5cea00f"
+	 data-version="e0e8f599aa09474aba01ae8f8b9e013c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#e2fa8a2ab2cc457c80154e2ac5cea00f">
+			Past
+			<span class="visually-hidden">
+				version of 4.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e2fa8a2ab2cc457c80154e2ac5cea00f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="edbdd4735f5143c3b0006c88a6fe310d"
+	 data-version="697d1c4dbb21404dbf5aeaae1f341dc0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#edbdd4735f5143c3b0006c88a6fe310d">
+			Past
+			<span class="visually-hidden">
+				version of 4.4 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=edbdd4735f5143c3b0006c88a6fe310d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="91addf5a65404d809fbba7a074acb8b8"
+	 data-version="09046af59a914c50bc7633ca56917cbb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#91addf5a65404d809fbba7a074acb8b8">
+			Past
+			<span class="visually-hidden">
+				version of 4.5 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=91addf5a65404d809fbba7a074acb8b8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8f088f99e7ea4a71bb52ef292abc2f73"
+	 data-version="15d9c13904fd44b698d758de845dbf0c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#8f088f99e7ea4a71bb52ef292abc2f73">
+			Past
+			<span class="visually-hidden">
+				version of 4.6 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8f088f99e7ea4a71bb52ef292abc2f73">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/4-solvency-capital-requirement-and-minimum-capital-requirement-deleted/31-12-2024?p=1" data-id="745794e02afc43f18b29b13f470e806e" data-effective-date="31-12-2024" data-download-title="Solvency Capital Requirement and Minimum Capital Requirement [Deleted]_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/4-solvency-capital-requirement-and-minimum-capital-requirement-deleted/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#745794e02afc43f18b29b13f470e806e&amp;subject=PRA Rulebook - Third Country Branches – Solvency Capital Requirement and Minimum Capital Requirement [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=745794e02afc43f18b29b13f470e806e">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Solvency Capital Requirement and Minimum Capital Requirement [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="6d4c18a8300c4f27a8ef13428d1fcaab"
+	 data-version="4ab6ce31d3df4763991a975c0e6bbb27"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Contents of the Branch Scheme of Operations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="7c5caf2ce94c4921a1120248d70754a9"
+	 data-version="a16d048b9d284460abfa5a7a3ba56d1c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="branch scheme of operations" href="#glossary-term-0361b7f2c54d4e41876e4d5b74eec15f" data-mce-linktype="2" data-glossary-id="52747">branch scheme of operations</a></em> must set out the following:</p>
+<ol class="new-bullet">
+    <li>(1) the nature of the risks or commitments which the<em> <a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> proposes to cover;</li>
+    <li>(2) the guiding principles as to <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em>;</li>
+    <li>(3) [deleted]</li>
+    <li>(4) [deleted]</li>
+    <li>(5) [deleted]</li>
+    <li>(6) estimates of the cost of setting up the administrative services and the organisation for securing business, the financial resources to meet those costs and, where the risks to be covered are classified under paragraph 18 of Part 1 of Schedule 1 to the <em><a class="glossary-link" title="Regulated Activities Order" href="#glossary-term-343c281a2e2346ad82e8aafc7367cc75" data-mce-linktype="2" data-glossary-id="52150">Regulated Activities Order</a></em>, the resources available for the provision of assistance;</li>
+    <li>(7) information on the structure of the system of governance; and</li>
+    <li>(8) for the first three financial years: </li>
+    <ol>
+        <li>(a) a forecast balance sheet; </li>
+        <li>(b) estimates of the financial resources intended to cover the provisions referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>; </li>
+        <li>(c) for <em><a class="glossary-link" title="general insurance business" href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea" data-mce-linktype="2" data-glossary-id="52202">general insurance business</a></em>:</li>
+        <ol>
+            <li>(i) estimates of management expenses other than installation costs, in particular current general expenses and commissions;</li>
+            <li>(ii) estimates of <em><a class="glossary-link" title="premiums" href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd" data-mce-linktype="2" data-glossary-id="52876">premiums</a></em> or contributions and claims under any <em><a class="glossary-link" title="contract of insurance" href="#glossary-term-b50896395d5d449da066be4e3fa97a32" data-mce-linktype="2" data-glossary-id="52811">contract of insurance</a></em>; and</li>
+        </ol>
+        <li>(d) for <em><a class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em>: </li>
+        <li>      a plan setting out detailed estimates of income and expenditure in respect of direct business, <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> acceptances and <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> cessions.</li>
+    </ol>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#7c5caf2ce94c4921a1120248d70754a9">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7c5caf2ce94c4921a1120248d70754a9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/5-contents-of-the-branch-scheme-of-operations/31-12-2024?p=1" data-id="6d4c18a8300c4f27a8ef13428d1fcaab" data-effective-date="31-12-2024" data-download-title="Contents of the Branch Scheme of Operations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/5-contents-of-the-branch-scheme-of-operations/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#6d4c18a8300c4f27a8ef13428d1fcaab&amp;subject=PRA Rulebook - Third Country Branches – Contents of the Branch Scheme of Operations">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=6d4c18a8300c4f27a8ef13428d1fcaab">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Contents of the Branch Scheme of Operations
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="254a7c33556a407ca8975de8fc9e67b5"
+	 data-version="83ce33e7f4e0495fbbb078881b0c4b96"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Provisions for Insurance and Reinsurance Obligations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a610a120975b4f59a4ec08c77bda7851"
+	 data-version="456539fe4b554a0e875b99f606dc1387"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must establish adequate provisions to cover the insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations assumed by the <a href="#glossary-term-c8241961260a4c6394b7710d6bf24e03">third country branch undertaking</a>&nbsp;in the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>, calculated in accordance with <a href="/pra-rules/third-country-branches#286c4533d29d47dc86f32433110a3eef" data-rb-content-link="Rule">6.1A</a>&nbsp;to <a href="/pra-rules/third-country-branches#32a0e3abcd3841c6b4c5b82113db687c" data-rb-content-link="Rule">6.1E</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#a610a120975b4f59a4ec08c77bda7851">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a610a120975b4f59a4ec08c77bda7851">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="286c4533d29d47dc86f32433110a3eef"
+	 data-version="5a329a797e304dc585b0e09d8f946bd8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8241961260a4c6394b7710d6bf24e03">third country branch undertaking</a>&nbsp;must calculate the provisions referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>:</p>
+<ol class="new-bullet">
+    <li>(1) such that the calculation makes use of and is consistent with information provided by the financial markets and generally available data on <a href="#glossary-term-2d452892766347ccb3601b51ddc23c40">underwriting risks</a>&nbsp;(market consistency);</li>
+    <li>(2) in a prudent, reliable and objective manner;</li>
+    <li>(3) taking into account the principles set out in <a href="/pra-rules/valuation#b1dd1f10c578445ebef4a906b3c2aee9" data-rb-content-link="Chapter">Valuation 2</a>&nbsp;and <a href="/pra-rules/valuation#a31e4a04c1b44a2d9ac87a6f9d9b02a5" data-rb-content-link="Chapter">3</a>; and</li>
+    <li>(4) subject to <a href="/pra-rules/third-country-branches#53335c9946d24db29336c1c2da201c7a" data-rb-content-link="Rule">6.1B</a>, in accordance with:
+    <ol>
+        <li>(a)  <a href="/pra-rules/third-country-branches#a74e89e76e894abf98ddf8beffa3bc78" data-rb-content-link="Rule">6.1C</a>&nbsp;to <a href="/pra-rules/third-country-branches#b98ab5e8a46e458abdec5c39403cc030" data-rb-content-link="Rule">6.1F</a>;</li>
+        <li>(b) <a href="/pra-rules/technical-provisions#6b0307cfe9144b0087991029412953a2" data-rb-content-link="Chapter">Technical Provisions 9</a>&nbsp;to <a href="/pra-rules/technical-provisions#6e751e9042524d27b1807034fa098542" data-rb-content-link="Chapter">12</a>;</li>
+        <li>(c) <a href="/pra-rules/technical-provisions#1cdf39f7dc33478984f483f7f67ce9dc" data-rb-content-link="Chapter">Technical Provisions 14</a>;</li>
+        <li>(d) <a href="/pra-rules/technical-provisions-further-requirements#7082e464368f45058cbcdbac1d30d9a4" data-rb-content-link="Chapter">Technical Provisions &ndash; Further Requirements 2</a>&nbsp;to <a href="/pra-rules/technical-provisions-further-requirements#87a4877de00844cd9ec70ad5f535368f" data-rb-content-link="Chapter">5</a>;</li>
+        <li>(e) <a href="/pra-rules/technical-provisions-further-requirements#572df991539d4d5384475e9cabb5116b" data-rb-content-link="Chapter">Technical Provisions &ndash; Further Requirements 10</a>&nbsp;to <a href="/pra-rules/technical-provisions-further-requirements#ff449640662c4660a26806d4b46dae18" data-rb-content-link="Chapter">12</a>;</li>
+        <li>(f) <a href="/pra-rules/technical-provisions-further-requirements#45d6c103f48747ebadbe7f839950037e" data-rb-content-link="Chapter">Technical Provisions &ndash; Further Requirements 23</a>&nbsp;and <a href="/pra-rules/technical-provisions-further-requirements#702a775145e540d79ba37f2cf11fc029" data-rb-content-link="Chapter">24</a>; and</li>
+        <li>(g) <a href="/pra-rules/technical-provisions-further-requirements#eef7b5636cd5400894b7780e5ef2fcfd" data-rb-content-link="Chapter">Technical Provisions &ndash; Further Requirements 26</a>&nbsp;and <a href="/pra-rules/technical-provisions-further-requirements#e9b17d53d1304ac18469d503a3a48edf" data-rb-content-link="Chapter">27</a></li>
+        <li class="outdent">where a reference to &lsquo;<a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&rsquo; is to be interpreted as the provisions referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>.</li>
+    </ol>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=286c4533d29d47dc86f32433110a3eef">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="53335c9946d24db29336c1c2da201c7a"
+	 data-version="27b7dfe948fc42ddb2e56a827d436e70"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a href="/pra-rules/technical-provisions-further-requirements#26886d3955e747f6a3b5dde8fdafb34c" data-rb-content-link="Rule">Technical Provisions &ndash; Further Requirements 2.1</a>, the reference to &lsquo;and the <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&rsquo; is to be disregarded.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=53335c9946d24db29336c1c2da201c7a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1B
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a74e89e76e894abf98ddf8beffa3bc78"
+	 data-version="ebb3aa96d7844e38b382c68b1b95a794"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1C
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>&nbsp;must be calculated using the <a href="#glossary-term-1b680934816648a7be341431f9354421">branch best estimate</a>&nbsp;unless <a href="/pra-rules/third-country-branches#32a0e3abcd3841c6b4c5b82113db687c" data-rb-content-link="Rule">6.1E</a>&nbsp;applies, in which case they must be calculated in accordance with <a href="/pra-rules/third-country-branches#32a0e3abcd3841c6b4c5b82113db687c" data-rb-content-link="Rule">6.1E</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a74e89e76e894abf98ddf8beffa3bc78">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1C
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="199c0d7a2f0c4288840cd1ff919292d9"
+	 data-version="c6ce9f60ff31454081e9afead7591bc3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1D
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <a href="#glossary-term-1b680934816648a7be341431f9354421">branch best estimate</a>&nbsp;must be calculated in accordance with:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;<a href="/pra-rules/technical-provisions#0c360db07aa44aaabc7ffa9291003735" data-rb-content-link="Chapter">Technical Provisions 3</a>;</li>
+    <li>(2) <a href="/pra-rules/technical-provisions#711fa81a98434481935364dd55ff356a" data-rb-content-link="Chapter">Technical Provisions 5</a>&nbsp;and <a href="/pra-rules/technical-provisions#e32f4739dbb44aab959922b3798429e6" data-rb-content-link="Chapter">8</a>;</li>
+    <li>(3) the <a href="/pra-rules/matching-adjustment" data-rb-content-link="Part">Matching Adjustment Part</a>;</li>
+    <li>(4) <a href="/pra-rules/technical-provisions-further-requirements#4ace6da85e9c4635b9c3392c3d12689d" data-rb-content-link="Chapter">Technical Provisions &ndash; Further Requirements 6</a>&nbsp;to <a href="/pra-rules/technical-provisions-further-requirements#1c3b9f537e0048ba8c4accabf677cfe9" data-rb-content-link="Chapter">9</a>&nbsp;(other than <a href="/pra-rules/technical-provisions-further-requirements#c66e59eaff7940188a1fa32cf914d035" data-rb-content-link="Rule">7.2</a>);</li>
+    <li>(5) <a href="/pra-rules/technical-provisions-further-requirements#12975b2206934687ad2da861d370a0c1" data-rb-content-link="Chapter">Technical Provisions &ndash; Further Requirements 13</a>&nbsp;to <a href="/pra-rules/technical-provisions-further-requirements#a25afd1a34f34839864c8c01b6b8e90c" data-rb-content-link="Chapter">21</a>; and</li>
+    <li>(6) <a href="/pra-rules/technical-provisions-further-requirements#a1faa85e36754a57b6e252d296f898a9" data-rb-content-link="Chapter">Technical Provisions &ndash; Further Requirements 25</a>,</li>
+</ol>
+<p class="outdent">where a reference to &lsquo;<a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a>&rsquo; is to be interpreted as <a href="#glossary-term-1b680934816648a7be341431f9354421">branch best estimate</a>&nbsp;and a reference to &lsquo;<a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&rsquo; is to be interpreted as the provisions referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=199c0d7a2f0c4288840cd1ff919292d9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1D
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="32a0e3abcd3841c6b4c5b82113db687c"
+	 data-version="d603f237161a4497bfd5d5b2c80da3fa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1E
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where:</p>
+<ol class="new-bullet">
+    <li>(1) future cash-flows associated with insurance or <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations can be replicated reliably;</li>
+    <li>(2)  that replication is provided using financial instruments; and</li>
+    <li>(3)  those financial instruments&nbsp;have a reliable market value which is observable,</li>
+</ol>
+<p>then the value of those future cash-flows must be determined on the basis of the market value of those financial instruments, and calculated in accordance with <a href="/pra-rules/technical-provisions-further-requirements#440309df0a004bf3bf34d2c744cfde8e" data-rb-content-link="Chapter">Technical Provisions &ndash; Further Requirements 22</a>, where references to &lsquo;<a href="/pra-rules/technical-provisions#e388d61285c94e1583bdc360c64baa80" data-rb-content-link="Rule">Technical Provisions 2.5(2)(a)</a>&rsquo; is to be interpreted as a reference to &lsquo;6.1E of the Third Country Branches Part&rsquo; and references to &lsquo;<a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&rsquo; are to be interpreted as the provisions referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=32a0e3abcd3841c6b4c5b82113db687c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1E
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b98ab5e8a46e458abdec5c39403cc030"
+	 data-version="ec5060c2c8984b08ab816660aafc3592"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1F
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>&nbsp;</p>
+<ol class="new-bullet">
+    <li>(1) A <a href="#glossary-term-c8241961260a4c6394b7710d6bf24e03">third country branch undertaking</a>&nbsp;must ensure that the <a href="#glossary-term-1b680934816648a7be341431f9354421">branch best estimate</a>, and the assumptions underlying the calculation of the <a href="#glossary-term-1b680934816648a7be341431f9354421">branch best estimate</a>, are regularly compared against experience.</li>
+    <li>(2)  Where the comparison in (1) identifies that a systematic deviation exists between the <a href="#glossary-term-1b680934816648a7be341431f9354421">branch best estimate</a>&nbsp;calculations and experience, the <a href="#glossary-term-c8241961260a4c6394b7710d6bf24e03">third country branch undertaking</a>&nbsp;must make appropriate adjustments to the actuarial methods being used and/or the assumptions being made to ensure that the <a href="#glossary-term-1b680934816648a7be341431f9354421">branch best estimate</a>&nbsp;is calculated in accordance with <a href="/pra-rules/third-country-branches#286c4533d29d47dc86f32433110a3eef" data-rb-content-link="Rule">6.1A</a>&nbsp;to <a href="/pra-rules/third-country-branches#199c0d7a2f0c4288840cd1ff919292d9" data-rb-content-link="Rule">6.1D</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b98ab5e8a46e458abdec5c39403cc030">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1F
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="52c92bde36f042369eed4d5df43cf173"
+	 data-version="a3da263bd0ea4c75b01aaab6c3d1875d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#52c92bde36f042369eed4d5df43cf173">
+			Past
+			<span class="visually-hidden">
+				version of 6.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=52c92bde36f042369eed4d5df43cf173">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9cd83d6aae9847a6804b33fa1d078698"
+	 data-version="403014d5cab1471f9085ae4d7f4c0164"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must value assets and liabilities&nbsp;(other than the insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>) in accordance with the <a title="Valuation" href="/pra-rules/valuation" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Valuation Part</a>&nbsp;where, except for <a href="/pra-rules/valuation#91eab16d66c34bf9a13fdcbb0e350122" data-rb-content-link="Rule">Valuation 9.4(2)(a)</a>, a reference to &lsquo;<a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&rsquo; is to be interpreted as the provisions referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>, a reference to the &lsquo;<a href="/pra-rules/technical-provisions" data-rb-content-link="Part">Technical Provisions Part</a>&rsquo; is to be interpreted as a reference to &lsquo;<a href="/pra-rules/third-country-branches#254a7c33556a407ca8975de8fc9e67b5" data-rb-content-link="Chapter">Third Country Branches 6</a>&rsquo; and a reference to the &lsquo;<a href="/pra-rules/solvency-capital-requirement---general-provisions" data-rb-content-link="Part">Solvency Capital Requirement &ndash; General Provisions Part</a>&rsquo; can be disregarded.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#9cd83d6aae9847a6804b33fa1d078698">
+			Past
+			<span class="visually-hidden">
+				version of 6.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9cd83d6aae9847a6804b33fa1d078698">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="429f88cf852b4502a5bd2beca9c60143"
+	 data-version="e0b051e7107d4daeb09e36f5cb0e79a4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#429f88cf852b4502a5bd2beca9c60143">
+			Past
+			<span class="visually-hidden">
+				version of 6.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=429f88cf852b4502a5bd2beca9c60143">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="21a2c128ce6040b2a00d290ea815389f"
+	 data-version="6855633563c843618c67bb16308b4c46"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+<p> </p>
+			<p><strong>[Note: Art. 165 of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#21a2c128ce6040b2a00d290ea815389f">
+			Past
+			<span class="visually-hidden">
+				version of 6.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=21a2c128ce6040b2a00d290ea815389f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/6-provisions-for-insurance-and-reinsurance-obligations/31-12-2024?p=1" data-id="254a7c33556a407ca8975de8fc9e67b5" data-effective-date="31-12-2024" data-download-title="Provisions for Insurance and Reinsurance Obligations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/6-provisions-for-insurance-and-reinsurance-obligations/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#254a7c33556a407ca8975de8fc9e67b5&amp;subject=PRA Rulebook - Third Country Branches – Provisions for Insurance and Reinsurance Obligations">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=254a7c33556a407ca8975de8fc9e67b5">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Provisions for Insurance and Reinsurance Obligations
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2e2fa5ae360a408fb378776e208d44b8"
+	 data-version="76c68fe86c5d4370b1430fd679aedcb2"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Conditions Governing Business
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4610d37b04984d8ba7067b7aa41b1b8e"
+	 data-version="33853096093c4076af444d49ba0c552b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must fulfil the following requirements in the <a title="Conditions Governing Business" href="/pra-rules/conditions-governing-business" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Conditions Governing Business</a> Part, as modified by <a title="7.2" href="/pra-rules/third-country-branches#7f3579feadb9479bb65ba8a1e25cf864" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.2</a>&nbsp;to <a href="/pra-rules/third-country-branches#01c4512dc9c243a28b162d7b46820bc5" data-rb-content-link="Rule">7.12</a>:</p>
+<ol class="new-bullet">
+    <li>(1) <a title="Conditions Governing Business 1" href="/pra-rules/conditions-governing-business#7e9e2f5e6eeb492bb8e5091b54c09489" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Conditions Governing Business 1</a>;</li>
+    <li>(1A) <a href="/pra-rules/conditions-governing-business#0e9d664d484b4f7da3cface1cc25220b" data-rb-content-link="Chapter">Conditions Governing Business 1A</a>;</li>
+    <li>(2) <a title="Conditions Governing Business 2.2" href="/pra-rules/conditions-governing-business#98ca4d60a837411d9c5cf777750c5820" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Conditions Governing Business 2.2</a> to <a title="2.6" href="/pra-rules/conditions-governing-business#4b7521b38b7f49e081cde5c0459bd8f1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a>&nbsp;(other than <a href="/pra-rules/conditions-governing-business#98ca4d60a837411d9c5cf777750c5820" data-rb-content-link="Rule">2.2</a>(3)(e));</li>
+    <li>(2A)&nbsp;<a href="/pra-rules/conditions-governing-business#07b1d65beca1487db850924168f813e4" data-rb-content-link="Chapter">Conditions Governing Business 2A</a>&nbsp;(other than <a href="/pra-rules/conditions-governing-business#4e083a15512140a2a1367ec227f72b3c" data-rb-content-link="Rule">2A.4</a>);</li>
+    <li>(3) <a title="Conditions Governing Business 3" href="/pra-rules/conditions-governing-business#73c8c58e1d8843858d048ba7be5be7fb" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Conditions Governing Business 3</a>&nbsp;(other than <a href="/pra-rules/conditions-governing-business#a8824868755a478393214ae41545392d" data-rb-content-link="Rule">3.1</a>(2)(b), <a href="/pra-rules/conditions-governing-business#6a1bcbf96eb4445a9af97d8e9f11613e" data-rb-content-link="Rule">3.1A</a>(8), <a href="/pra-rules/conditions-governing-business#24c1002b52e7463eb39b53d5688eaf19" data-rb-content-link="Rule">3.3</a>, <a href="/pra-rules/conditions-governing-business#4716eac006674b139048eb1bcb60d4c5" data-rb-content-link="Rule">3.5</a>(3)(a), <a href="/pra-rules/conditions-governing-business#4716eac006674b139048eb1bcb60d4c5" data-rb-content-link="Rule">3.5</a>(3)(b), <a href="/pra-rules/conditions-governing-business#9b6be57d34de4e4d807e762e5283976b" data-rb-content-link="Rule">3.8</a>(2)(b)(i), <a href="/pra-rules/conditions-governing-business#9b6be57d34de4e4d807e762e5283976b" data-rb-content-link="Rule">3.8</a>(2)(c), <a href="/pra-rules/conditions-governing-business#9b6be57d34de4e4d807e762e5283976b" data-rb-content-link="Rule">3.8</a>(4), <a href="/pra-rules/conditions-governing-business#9b6be57d34de4e4d807e762e5283976b" data-rb-content-link="Rule">3.8</a>(5), <a href="/pra-rules/conditions-governing-business#4dcbcdde91b14445887e124d8198a96c" data-rb-content-link="Rule">3.12</a>(3) and <a href="/pra-rules/conditions-governing-business#4dcbcdde91b14445887e124d8198a96c" data-rb-content-link="Rule">3.12</a>(4));</li>
+    <li>(3A)<span> </span><a href="/pra-rules/conditions-governing-business#a85adf5c010a444f956276215a5c4aad" data-rb-content-link="Chapter">Conditions Governing Business 3A</a>;</li>
+    <li>(4) <span> </span><a href="/pra-rules/conditions-governing-business#91894dbd1cc2481e99c24febb464e5c9" data-rb-content-link="Chapter">Conditions Governing Business 4</a> to <a href="/pra-rules/conditions-governing-business#17d43b83ffcf4fdf887ebc9cc1fdb7db" data-rb-content-link="Chapter">7</a>; and</li>
+    <li>(5)<span> </span><a href="/pra-rules/conditions-governing-business#d951248150de4c36be0e00144764aa2b" data-rb-content-link="Chapter">Conditions Governing Business 11A</a>, <a href="/pra-rules/conditions-governing-business#0f3243670ba04ba78d2efd270d08a885" data-rb-content-link="Chapter">11B</a>, <a href="/pra-rules/conditions-governing-business#7f3496783933485ca14a360aba5bb5b7" data-rb-content-link="Chapter">11C</a>, <a href="/pra-rules/conditions-governing-business#ab549caa347749f7889b2898236408de" data-rb-content-link="Chapter">11D</a>, <a href="/pra-rules/conditions-governing-business#208b11e2ca3048708a0e73a8c8f6aae6" data-rb-content-link="Chapter">11E</a>&nbsp;and <a href="/pra-rules/conditions-governing-business#0f51660f70504021ab6f192a0c5c0f0b" data-rb-content-link="Chapter">11F</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/10-12-2018#4610d37b04984d8ba7067b7aa41b1b8e">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4610d37b04984d8ba7067b7aa41b1b8e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7f3579feadb9479bb65ba8a1e25cf864"
+	 data-version="57b478c3db5a475fa1b7387e170f42f9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>&nbsp;</p>
+<ol class="new-bullet">
+    <li>(1) [Deleted]</li>
+    <li>(2) [Deleted]</li>
+    <li>(3) A reference to &lsquo;<em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a>&rsquo;</em>&nbsp;is to be interpreted as a reference to:
+    <ol>
+        <li>(a) [deleted]</li>
+        <li>(b) [deleted]</li>
+        <li>(c) the&nbsp;provisions referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>&nbsp;of this Part.</li>
+    </ol>
+    </li>
+    <li>(4) A reference to &lsquo;<em><a class="glossary-link" title="function" href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d" data-mce-linktype="2" data-glossary-id="52829">function</a></em><em>&rsquo;</em> is to be interpreted as a reference to the <em><a class="glossary-link" title="functions" href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d" data-mce-linktype="2" data-glossary-id="52829">functions</a></em> performed in relation to the operations effected by the <em><a class="glossary-link" title="third country branch" href="#glossary-term-233a78845cf54319a4301dbbfcea122c" data-mce-linktype="2" data-glossary-id="52915">third country branch</a></em> and includes the <em><a class="glossary-link" title="function" href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d" data-mce-linktype="2" data-glossary-id="52829">function</a></em> of <em><a class="glossary-link" title="authorised UK representative" href="#glossary-term-a50afe5f8c36437189127c1be6826a5e" data-mce-linktype="2" data-glossary-id="52795">authorised UK representative</a></em>.</li>
+    <li>(5) [Deleted]</li>
+    <li>(6)&nbsp;A reference to &lsquo;<a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a>&rsquo; is to be interpreted as &lsquo;<a href="#glossary-term-1b680934816648a7be341431f9354421">branch best estimate</a>&rsquo;.</li>
+    <li>(7)&nbsp;A reference to &lsquo;the <a href="/pra-rules/technical-provisions" data-rb-content-link="Part">Technical Provisions Part</a>&rsquo; should be read as a reference to <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>&nbsp;of this Part.</li>
+    <li>(8)<span> </span>A reference to &lsquo;the Investments Part&rsquo; should be read as a reference to <a href="/pra-rules/third-country-branches#4acae4cb05314cd9aa7ab780569c2f47" data-rb-content-link="Rule">8.3</a>&nbsp;of this Part.</li>
+    <li>(9)<span> </span>A reference to &lsquo;the <a href="/pra-rules/valuation" data-rb-content-link="Part">Valuation Part</a>&rsquo; should be read as a reference to <a href="/pra-rules/third-country-branches#9cd83d6aae9847a6804b33fa1d078698" data-rb-content-link="Rule">6.3</a>&nbsp;of this Part.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#7f3579feadb9479bb65ba8a1e25cf864">
+			Past
+			<span class="visually-hidden">
+				version of 7.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7f3579feadb9479bb65ba8a1e25cf864">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1029e92f18364c129f911415a602d16f"
+	 data-version="cf80023ae58140db839c15df23c72152"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must apply the requirements referred to in <a title="7.1" href="/pra-rules/third-country-branches#4610d37b04984d8ba7067b7aa41b1b8e" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.1</a> taking account only of matters relevant to the operations effected by the <em><a class="glossary-link" title="third country branch" href="#glossary-term-233a78845cf54319a4301dbbfcea122c" data-mce-linktype="2" data-glossary-id="52915">third country branch</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#1029e92f18364c129f911415a602d16f">
+			Past
+			<span class="visually-hidden">
+				version of 7.3 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1029e92f18364c129f911415a602d16f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8b1ccd8c328d47dcb594f3311a8744cb"
+	 data-version="51fdf6a5abe84f1495321c82630fa4c5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#8b1ccd8c328d47dcb594f3311a8744cb">
+			Past
+			<span class="visually-hidden">
+				version of 7.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8b1ccd8c328d47dcb594f3311a8744cb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e6fdc29fbd434ea686d79e9905cff2bc"
+	 data-version="3bda74be77e64d65bd46f9dd2b9142b8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>&nbsp;</p>
+<ol class="new-bullet">
+    <li>(1) In <a href="/pra-rules/conditions-governing-business#3f1d54c449e04cfda8e480218e3a257d" data-rb-content-link="Rule">Conditions Governing Business 1.2</a>, the reference to &lsquo;<a href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276">UK Solvency II firm</a>&rsquo; in the definition of &lsquo;<a href="#glossary-term-0e39c6e9c6dc42b1a66195b38c226af8">concentration risk</a>&rsquo; is to be interpreted as &lsquo;<a href="#glossary-term-c8241961260a4c6394b7710d6bf24e03">third country branch undertaking</a>&rsquo;.</li>
+    <li>(2) In <a href="/pra-rules/conditions-governing-business#3f3b74e351184b3689df2a5243404147" data-rb-content-link="Rule">Conditions Governing Business 1A.1</a>&nbsp;references to the following defined terms are to be disregarded:
+    <ol>
+        <li>(a) &lsquo;<a href="#glossary-term-c66a31f4d0c540069dbba7051668fdcb">own funds</a>&rsquo;;</li>
+        <li>(b) &lsquo;<a href="#glossary-term-543356ff94c3463ba142ee22e92fa355">SCR</a>&rsquo;; and</li>
+        <li>(c) &lsquo;<a href="#glossary-term-b99076afb2584e458a5d9b1719918166">MCR</a>&rsquo;.</li>
+    </ol>
+    </li>
+    <li>(3)  In <a href="/pra-rules/conditions-governing-business#b15b8c49f20248138340e8402d0fd5ff" data-rb-content-link="Rule">Conditions Governing Business 3.2</a>, references to &lsquo;and <a href="#glossary-term-59a2e96da5d94193923a8cc805b0ccab">eligible own funds</a>&rsquo; are to be disregarded.</li>
+    <li>(4) In <a href="/pra-rules/conditions-governing-business#4716eac006674b139048eb1bcb60d4c5" data-rb-content-link="Rule">Conditions Governing Business 3.5(2)(c)</a>&nbsp;reference to &lsquo;the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;as a whole&rsquo; should be read as &lsquo;the <a href="#glossary-term-233a78845cf54319a4301dbbfcea122c">third country branch</a>&rsquo;.</li>
+    <li>(5)  In <a href="/pra-rules/conditions-governing-business#ba8c8d47de144e7198f25185f9f395cb" data-rb-content-link="Rule">Conditions Governing Business 3.6</a>, <a href="/pra-rules/conditions-governing-business#3e0ed0caa3184bf8bd9adc0242c38e07" data-rb-content-link="Rule">3.6A</a>&nbsp;and <a href="/pra-rules/conditions-governing-business#8dff44a2abf549fb976f6c59aed65c41" data-rb-content-link="Rule">3.6B</a>&nbsp;to <a href="/pra-rules/conditions-governing-business#f17bfb175ecb4d2d9d68d00fa89dafce" data-rb-content-link="Rule">3.6F</a>&nbsp;references to the <a href="#glossary-term-543356ff94c3463ba142ee22e92fa355">SCR</a>&nbsp;are to be disregarded.</li>
+    <li>(6)  In <a href="/pra-rules/conditions-governing-business#37da4e0dbda14d61b64591129aebb5b9" data-rb-content-link="Rule">Conditions Governing Business 3.8A(1)(b)</a>&nbsp;a reference to &lsquo;<a href="#glossary-term-c66a31f4d0c540069dbba7051668fdcb">own funds</a> item&rsquo; is to be interpreted as a reference to the provisions referred to in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>&nbsp;of this Part.</li>
+    <li>(7) In <a href="/pra-rules/conditions-governing-business#01665ebb4e044fd8a1bd9394e6e201bf" data-rb-content-link="Rule">Conditions Governing Business 6.1(1)(i)</a>, reference to &lsquo;the risk modelling underlying the calculation of the <a href="#glossary-term-543356ff94c3463ba142ee22e92fa355">SCR</a>&nbsp;and <a href="#glossary-term-b99076afb2584e458a5d9b1719918166">MCR</a>&rsquo; is to be disregarded.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e6fdc29fbd434ea686d79e9905cff2bc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="afecd426f7a949c1a08c26e29281a3f7"
+	 data-version="9dbf6bb390594f09b3d865afe9310879"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a href="/pra-rules/conditions-governing-business#98ca4d60a837411d9c5cf777750c5820" data-rb-content-link="Rule">Conditions Governing Business 2.2(3)(b)</a>, the reference to <a href="/pra-rules/conditions-governing-business#73c8c58e1d8843858d048ba7be5be7fb" data-rb-content-link="Chapter">Conditions Governing Business 3</a>&nbsp;to <a href="/pra-rules/conditions-governing-business#17d43b83ffcf4fdf887ebc9cc1fdb7db" data-rb-content-link="Chapter">7</a>&nbsp;is to be interpreted with reference to <a href="/pra-rules/third-country-branches#4610d37b04984d8ba7067b7aa41b1b8e" data-rb-content-link="Rule">7.1(3)</a>&nbsp;and the modifications set out in <a href="/pra-rules/third-country-branches#7f3579feadb9479bb65ba8a1e25cf864" data-rb-content-link="Rule">7.2</a>&nbsp;and <a href="/pra-rules/third-country-branches#e6fdc29fbd434ea686d79e9905cff2bc" data-rb-content-link="Rule">7.5</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=afecd426f7a949c1a08c26e29281a3f7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="62f56d7d002f45ff8487709b7a20d64e"
+	 data-version="36d7983fa26b4382866769ade63b5c95"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A firm must submit the assessments referred to in <a href="/pra-rules/conditions-governing-business#b15b8c49f20248138340e8402d0fd5ff" data-rb-content-link="Rule">Conditions Governing Business 3.2</a>&nbsp;(as modified by <a href="/pra-rules/third-country-branches#7f3579feadb9479bb65ba8a1e25cf864" data-rb-content-link="Rule">7.2</a>&nbsp;to <a href="/pra-rules/third-country-branches#afecd426f7a949c1a08c26e29281a3f7" data-rb-content-link="Rule">7.6</a>) as part of the information reported annually in accordance with <a href="/pra-rules/reporting#f508375b5a5b400ba33b1b11199b9ca7" data-rb-content-link="Chapter">Reporting 2</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=62f56d7d002f45ff8487709b7a20d64e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4c319175f20742649687d71d38770721"
+	 data-version="b70464525c50498cba3e01b16ffe1480"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a href="/pra-rules/conditions-governing-business#69385057d66144a0bf050b2cbd77ff4f" data-rb-content-link="Rule">Conditions Governing Business 4.2(1)</a>&nbsp;&lsquo;to the extent that these apply to <a href="#glossary-term-233a78845cf54319a4301dbbfcea122c">third country branches</a>&nbsp;in accordance with the <a href="/pra-rules/third-country-branches" data-rb-content-link="Part">Third Country Branches Part</a>&rsquo; should be added after &lsquo;deriving from <a href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08">FSMA</a>&nbsp;that apply to <a href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276">UK Solvency II firms</a>&rsquo;.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4c319175f20742649687d71d38770721">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="dd993f16ad314d71a87b3d6e7d64ac8e"
+	 data-version="c62e4f832f8647bfab4f21c16e7a017b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a href="/pra-rules/conditions-governing-business#b9842d145415448da74f5936e17477d8" data-rb-content-link="Rule">Conditions Governing Business 7.1</a>&nbsp;&lsquo;to the extent that these apply to <a href="#glossary-term-233a78845cf54319a4301dbbfcea122c">third country branches</a>&nbsp;in accordance with the <a href="/pra-rules/third-country-branches" data-rb-content-link="Part">Third Country Branches Part</a>&rsquo; should be added after &lsquo;deriving from <a href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08">FSMA</a>&nbsp;that apply to <a href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276">UK Solvency II firms</a>&rsquo;.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=dd993f16ad314d71a87b3d6e7d64ac8e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3ac141062cb74856aac26eb03c124ea0"
+	 data-version="f0619829bdb0464697e59938fa4b9fc2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a href="/pra-rules/conditions-governing-business#d076f737643043249658e06e58c09110" data-rb-content-link="Rule">Conditions Governing Business 11B.1(1)</a>&nbsp;reference to <a href="/pra-rules/technical-provisions#b7386df7df944e4d855fb87dd6bcdc13" data-rb-content-link="Chapter">Technical Provisions 13</a>&nbsp;should be interpreted as a reference to <a href="/pra-rules/third-country-branches#b98ab5e8a46e458abdec5c39403cc030" data-rb-content-link="Rule">6.1F</a>&nbsp;of this Part.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3ac141062cb74856aac26eb03c124ea0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.10
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="25c5b5e40a084fc4a15613eb7d841005"
+	 data-version="0f67deb9475c4048ba76c31eb0654c12"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a href="/pra-rules/conditions-governing-business#d076f737643043249658e06e58c09110" data-rb-content-link="Rule">Conditions Governing Business 11B.1</a>(2)(g) the references to <a href="/pra-rules/technical-provisions#1cdf39f7dc33478984f483f7f67ce9dc" data-rb-content-link="Chapter">Chapter 14</a>&nbsp;and rules <a href="/pra-rules/technical-provisions#08f5099494124929a2967abc9f70b61a" data-rb-content-link="Rule">2.1</a>&nbsp;to <a href="/pra-rules/technical-provisions#57f380dba7c5408884fa0bfece76bdbf" data-rb-content-link="Rule">2.3 of the Technical Provisions Part</a>&nbsp;should be interpreted as references to <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>&nbsp;of this Part.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=25c5b5e40a084fc4a15613eb7d841005">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.11
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="01c4512dc9c243a28b162d7b46820bc5"
+	 data-version="a1da44ece645449cb32e702a9b608e25"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a href="/pra-rules/conditions-governing-business#d076f737643043249658e06e58c09110" data-rb-content-link="Rule">Conditions Governing Business 11B.1(2)(a)</a>&nbsp;to <a href="/pra-rules/conditions-governing-business#d076f737643043249658e06e58c09110" data-rb-content-link="Rule">(e)</a>, <a href="/pra-rules/conditions-governing-business#ecf7c860701a48a082e2ac16b3701d82" data-rb-content-link="Rule">11C.2(2)</a>&nbsp;and <a href="/pra-rules/conditions-governing-business#7aa776ca69e2462db6d8f84be535ed02" data-rb-content-link="Rule">11C.3(8)</a>&nbsp;the references to <a href="/pra-rules/technical-provisions-further-requirements" data-rb-content-link="Part">Technical Provisions - Further Requirements</a>&nbsp;should be interpreted in accordance with <a href="/pra-rules/third-country-branches#254a7c33556a407ca8975de8fc9e67b5" data-rb-content-link="Chapter">Chapter 6</a>&nbsp;of this Part.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=01c4512dc9c243a28b162d7b46820bc5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.12
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/7-conditions-governing-business/31-12-2024?p=1" data-id="2e2fa5ae360a408fb378776e208d44b8" data-effective-date="31-12-2024" data-download-title="Conditions Governing Business_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/7-conditions-governing-business/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#2e2fa5ae360a408fb378776e208d44b8&amp;subject=PRA Rulebook - Third Country Branches – Conditions Governing Business">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2e2fa5ae360a408fb378776e208d44b8">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Conditions Governing Business
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="c1da171ccc954c6e8a88de2561805703"
+	 data-version="84d74e72920247d5b37f66bea2c1a67a"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Investments
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b84916f7c001458299d85c200e145726"
+	 data-version="ffa22cd4cc7b41659b63ccdc61fbc5a4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must fulfil the requirements laid down in the <a title="Investments" href="/pra-rules/investments" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Investments</a> Part of the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> Rulebook, as modified by <a title="8.2" href="/pra-rules/third-country-branches#6ce76913da6140519c7aabf55e3b3f89" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">8.2</a> and <a title="8.3" href="/pra-rules/third-country-branches#4acae4cb05314cd9aa7ab780569c2f47" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">8.3</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#b84916f7c001458299d85c200e145726">
+			Past
+			<span class="visually-hidden">
+				version of 8.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b84916f7c001458299d85c200e145726">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6ce76913da6140519c7aabf55e3b3f89"
+	 data-version="b276b81151304c9785b54368fa2291af"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A reference to &ldquo;<em><a  class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em>&rdquo; is to be interpreted as laid down in <a  title="7.2" href="/pra-rules/third-country-branches#7f3579feadb9479bb65ba8a1e25cf864" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.2</a>(3).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6ce76913da6140519c7aabf55e3b3f89">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4acae4cb05314cd9aa7ab780569c2f47"
+	 data-version="af9c29014d544baea9343cdff94ac680"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must fulfil the requirements in the <a title="Investments" href="/pra-rules/investments" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Investments</a> Part of the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> Rulebook taking account only of the operations effected by the <em><a class="glossary-link" title="third country branch" href="#glossary-term-233a78845cf54319a4301dbbfcea122c" data-mce-linktype="2" data-glossary-id="52915">third country branch</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#4acae4cb05314cd9aa7ab780569c2f47">
+			Past
+			<span class="visually-hidden">
+				version of 8.3 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4acae4cb05314cd9aa7ab780569c2f47">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f5e06abd58f148b78d7fde93a31b2339"
+	 data-version="4ee76e3700944f98a35d8b54067c6960"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#f5e06abd58f148b78d7fde93a31b2339">
+			Past
+			<span class="visually-hidden">
+				version of 8.4 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f5e06abd58f148b78d7fde93a31b2339">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/8-investments/31-12-2024?p=1" data-id="c1da171ccc954c6e8a88de2561805703" data-effective-date="31-12-2024" data-download-title="Investments_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/8-investments/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#c1da171ccc954c6e8a88de2561805703&amp;subject=PRA Rulebook - Third Country Branches – Investments">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=c1da171ccc954c6e8a88de2561805703">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Investments
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="ec5449fd76934ed0be5713a247da5711"
+	 data-version="c54cf49477324ef59c290ad729b61544"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Reporting
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c554bd4fa5344b5f825b44d93e70fea5"
+	 data-version="1f3cf90716784b49a71738985ebabc9d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must fulfil the applicable requirements laid down in the&nbsp;<a href="/pra-rules/reporting" data-rb-content-link="Part">Reporting Part</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#c554bd4fa5344b5f825b44d93e70fea5">
+			Past
+			<span class="visually-hidden">
+				version of 9.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c554bd4fa5344b5f825b44d93e70fea5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="76b272c5d88d46e2a3d62032b3936700"
+	 data-version="86e4473f400d4a9f92cef0d9bea84f7f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#76b272c5d88d46e2a3d62032b3936700">
+			Past
+			<span class="visually-hidden">
+				version of 9.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=76b272c5d88d46e2a3d62032b3936700">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9ca72133cf2f47f694899d0b3cf0694a"
+	 data-version="70b6b79f42e94a0bae8b78e043e085bd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#9ca72133cf2f47f694899d0b3cf0694a">
+			Past
+			<span class="visually-hidden">
+				version of 9.3 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9ca72133cf2f47f694899d0b3cf0694a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/9-reporting/31-12-2024?p=1" data-id="ec5449fd76934ed0be5713a247da5711" data-effective-date="31-12-2024" data-download-title="Reporting_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/9-reporting/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#ec5449fd76934ed0be5713a247da5711&amp;subject=PRA Rulebook - Third Country Branches – Reporting">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=ec5449fd76934ed0be5713a247da5711">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Reporting
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="424d19977e0840d78a3bc4b3c85a796b"
+	 data-version="e0145fcb5b0544f3a7614f108a701e8e"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Third Country Branch Undertakings in Difficulty
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="75c2df575e9642859b3e5fcc38fade71"
+	 data-version="894bd85e2bf8424aa75b2d9cf0a22ad7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must fulfil the requirements laid down in <a title="Undertakings in Difficulty 2" href="/pra-rules/undertakings-in-difficulty#d444d0bdfe8d49e78456f19039a8307f" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Undertakings in Difficulty 2</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#75c2df575e9642859b3e5fcc38fade71">
+			Past
+			<span class="visually-hidden">
+				version of 10.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=75c2df575e9642859b3e5fcc38fade71">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="efb351bdccfc4eed804c67fef1eac24a"
+	 data-version="27cc6b79552b488f8879ceb771fc5070"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#efb351bdccfc4eed804c67fef1eac24a">
+			Past
+			<span class="visually-hidden">
+				version of 10.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=efb351bdccfc4eed804c67fef1eac24a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/10-third-country-branch-undertakings-in-difficulty/31-12-2024?p=1" data-id="424d19977e0840d78a3bc4b3c85a796b" data-effective-date="31-12-2024" data-download-title="Third Country Branch Undertakings in Difficulty_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/10-third-country-branch-undertakings-in-difficulty/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#424d19977e0840d78a3bc4b3c85a796b&amp;subject=PRA Rulebook - Third Country Branches – Third Country Branch Undertakings in Difficulty">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=424d19977e0840d78a3bc4b3c85a796b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Third Country Branch Undertakings in Difficulty
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="77e6e45e34304e45a4f998026a0d9011"
+	 data-version="e382784508c1417380a91da5b25bc6c8"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					11
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Separation of Long-Term Business and General Business
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b27b40b1b4c44d0e90a62361db6de6cf"
+	 data-version="51cb684c7a924fd6915edeeb5d33196a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+    <li>(1) A <em><a class="glossary-link" title="third country insurance undertaking" href="#glossary-term-abc40c1b2cbf4ea6a2b9c225254cc6b6" data-mce-linktype="2" data-glossary-id="52918">third country insurance undertaking</a></em> that has a <em><a class="glossary-link" title="composite third country branch" href="#glossary-term-8a11bfdab42a4145b404ee82e203bd2c" data-mce-linktype="2" data-glossary-id="52750">composite third country branch</a></em> must fulfil the requirements laid down in <a title="Composites 2" href="/pra-rules/composites#34b9de04c72d490ab49b18c8469b4299" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Composites 2</a>&nbsp;and <a href="/pra-rules/composites#0463e6e537ed40629c79c9dc4484971c" data-rb-content-link="Chapter">3</a>,&nbsp;as modified by <a title="11.2" href="/pra-rules/third-country-branches#fb8481a3508c476b99786677bcdf95ca" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.2</a>.</li>
+    <li>(2) [deleted.]</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#b27b40b1b4c44d0e90a62361db6de6cf">
+			Past
+			<span class="visually-hidden">
+				version of 11.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b27b40b1b4c44d0e90a62361db6de6cf">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fb8481a3508c476b99786677bcdf95ca"
+	 data-version="f88e4f9d9d4b429784661cb4e84873e2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+    <li>(1) The requirements referred to in <a title="11.1" href="/pra-rules/third-country-branches#b27b40b1b4c44d0e90a62361db6de6cf" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.1</a> must be fulfilled taking account only of the operations effected by the <em><a class="glossary-link" title="third country branch" href="#glossary-term-233a78845cf54319a4301dbbfcea122c" data-mce-linktype="2" data-glossary-id="52915">third country branch</a></em>.</li>
+    <li>(2) [Deleted]</li>
+    <li>(3) [Deleted]</li>
+    <li>(4)&nbsp;The reference to &lsquo;<a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&rsquo; in <a href="/pra-rules/composites#11b20d1c830146b69a8329d276966b2a" data-rb-content-link="Rule">Composites 3.3</a>&nbsp;is to be interpreted as a reference to the provisions in <a href="/pra-rules/third-country-branches#a610a120975b4f59a4ec08c77bda7851" data-rb-content-link="Rule">6.1</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#fb8481a3508c476b99786677bcdf95ca">
+			Past
+			<span class="visually-hidden">
+				version of 11.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fb8481a3508c476b99786677bcdf95ca">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/11-separation-of-long-term-business-and-general-business/31-12-2024?p=1" data-id="77e6e45e34304e45a4f998026a0d9011" data-effective-date="31-12-2024" data-download-title="Separation of Long-Term Business and General Business_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/11-separation-of-long-term-business-and-general-business/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#77e6e45e34304e45a4f998026a0d9011&amp;subject=PRA Rulebook - Third Country Branches – Separation of Long-Term Business and General Business">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=77e6e45e34304e45a4f998026a0d9011">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Separation of Long-Term Business and General Business
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="30f2569f1f724c66862cf4e4246fade8"
+	 data-version="0ddf8f05a76e4b7088c906242e38cccc"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					12
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Restriction of Business
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="25b809a9bf6641d5adbfe7d6e27e2d20"
+	 data-version="d4c92d29b06f443689ee813b85fa8dcc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> except a <em><a  class="glossary-link" title="pure reinsurer" href="#glossary-term-c79e612c9a2b4b1e9e5dd3c09dd65e18" data-mce-linktype="2" data-glossary-id="52879">pure reinsurer</a></em> must not carry on any commercial business other than <em><a class="glossary-link" title="insurance business" href="#glossary-term-9c9ea400b5194286b440e752add53c8a" data-mce-linktype="2" data-glossary-id="52220">insurance business</a></em> and activities directly arising from that business.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=25b809a9bf6641d5adbfe7d6e27e2d20">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="51c52f5892d14e28b35d8b9e373d28ec"
+	 data-version="197be2d6acdf4d97b80f8beadfd62ac0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> that is a <em><a  class="glossary-link" title="pure reinsurer" href="#glossary-term-c79e612c9a2b4b1e9e5dd3c09dd65e18" data-mce-linktype="2" data-glossary-id="52879">pure reinsurer</a></em> must not carry on any business other than the business of <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> and related operations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=51c52f5892d14e28b35d8b9e373d28ec">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/12-restriction-of-business/31-12-2024?p=1" data-id="30f2569f1f724c66862cf4e4246fade8" data-effective-date="31-12-2024" data-download-title="Restriction of Business_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/12-restriction-of-business/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#30f2569f1f724c66862cf4e4246fade8&amp;subject=PRA Rulebook - Third Country Branches – Restriction of Business">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=30f2569f1f724c66862cf4e4246fade8">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Restriction of Business
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="9b8ba8ad0ae14b41924e201dc1d65c5b"
+	 data-version="2247be2a754c4000ac3c185118373021"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					13
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Worldwide Financial Resources
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3bbfbbc93148485da3ff899e12a55891"
+	 data-version="f1d3a66ca130407a8769a499f43140a3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="third country branch undertaking" href="#glossary-term-c8241961260a4c6394b7710d6bf24e03" data-mce-linktype="2" data-glossary-id="52916">third country branch undertaking</a></em> must maintain adequate worldwide financial resources, to ensure that there is no significant risk that its liabilities cannot be met as they fall due.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3bbfbbc93148485da3ff899e12a55891">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/13-worldwide-financial-resources/31-12-2024?p=1" data-id="9b8ba8ad0ae14b41924e201dc1d65c5b" data-effective-date="31-12-2024" data-download-title="Worldwide Financial Resources_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/13-worldwide-financial-resources/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#9b8ba8ad0ae14b41924e201dc1d65c5b&amp;subject=PRA Rulebook - Third Country Branches – Worldwide Financial Resources">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=9b8ba8ad0ae14b41924e201dc1d65c5b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Worldwide Financial Resources
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="97a4e308ef8d4717af01d5c5c612af60"
+	 data-version="e77efd38690d4d5d8fafcb449fef3004"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					14
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Transitional Measures [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="92d27be85d5448b19ce345a6ca63781e"
+	 data-version="ee9ac92572b1468a8fa894214db0b4b5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#92d27be85d5448b19ce345a6ca63781e">
+			Past
+			<span class="visually-hidden">
+				version of 14.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=92d27be85d5448b19ce345a6ca63781e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e93ba5943bc14ee090166c33421c3b09"
+	 data-version="63d0126bbb6e4446b94d40d9ee0dfd3e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#e93ba5943bc14ee090166c33421c3b09">
+			Past
+			<span class="visually-hidden">
+				version of 14.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e93ba5943bc14ee090166c33421c3b09">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/14-transitional-measures-deleted/31-12-2024?p=1" data-id="97a4e308ef8d4717af01d5c5c612af60" data-effective-date="31-12-2024" data-download-title="Transitional Measures [Deleted]_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/14-transitional-measures-deleted/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#97a4e308ef8d4717af01d5c5c612af60&amp;subject=PRA Rulebook - Third Country Branches – Transitional Measures [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=97a4e308ef8d4717af01d5c5c612af60">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Transitional Measures [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="70a6c01a272f41b488a16505eb74a1f3"
+	 data-version="49fc63712f634cae9397832151c29461"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					15
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Solvency II Regulations [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="7b80b6136f00462988e9d3463a6a4972"
+	 data-version="86d5edb9923b46fe8e524fc55d803ead"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>&nbsp;[Deleted] </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/01-01-2016#7b80b6136f00462988e9d3463a6a4972">
+			Past
+			<span class="visually-hidden">
+				version of 15.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7b80b6136f00462988e9d3463a6a4972">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						15.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b14ab8dda714437b8ae5ad282dc98656"
+	 data-version="c999b91072d143729d5ca7a2b1c0644b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/third-country-branches/31-12-2020#b14ab8dda714437b8ae5ad282dc98656">
+			Past
+			<span class="visually-hidden">
+				version of 15.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b14ab8dda714437b8ae5ad282dc98656">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						15.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/third-country-branches/15-solvency-ii-regulations---deleted/31-12-2024?p=1" data-id="70a6c01a272f41b488a16505eb74a1f3" data-effective-date="31-12-2024" data-download-title="Solvency II Regulations [Deleted]_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/third-country-branches/15-solvency-ii-regulations---deleted/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/third-country-branches#70a6c01a272f41b488a16505eb74a1f3&amp;subject=PRA Rulebook - Third Country Branches – Solvency II Regulations [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=70a6c01a272f41b488a16505eb74a1f3">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Solvency II Regulations [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

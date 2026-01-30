@@ -1,0 +1,2391 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{8E5CFAA3-AB35-4157-AFF7-1F919978E757} -->
+<title>SS5/15 – Solvency II: the treatment of pension scheme risk | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS5/15 – Solvency II: the treatment of pension scheme risk">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS5/15 – Solvency II: the treatment of pension scheme risk">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwogwq-f-9b581acbf-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":38,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"80866fd","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":29920,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370029","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==dwZxyQrZqEnro58iVszrjw47ogvIkR3kkyeRcm6T/Y95njDKp+yMRdX66btkVVNB2bYA/A3TUMAEAgsyPRUiwmRG0nCjP7eQoeGwOXc5Qh36XMh/9id/KJQuZUqRHgtpgrsS4bFZMnDiTnfFyfod9A7l9FZTUbDMSC9cS1gpGSvIi+vsG31WYZrlA2i3Vn6ya1fj1qt6kCGM6IQKD5i2iQaStoBkHTG58tMj/QRhO+8V5TIGyiQ+gp1/Am9E/2dPV4cU1tLjsPPqdhKG1/nNGZ8aAN2DmHrR7skwKgJI3UPQ3NbsTxZm2RBfL6sEadLHPOkPSS+iSiZVrnT7O1spxfyQrQGKT5g/uLYtZtj5OCzY0HkOJ3kyKTreSYBlfHJ6CQ1oVo58BfH12/D59hFAfIG5sAliEhUYBUCJ6YzxbQ0=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS5/15 – Solvency II: the treatment of pension scheme risk				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS5/15 – Solvency II: the treatment of pension scheme risk
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency2-the-treatment-of-pension-scheme-risk-ss" rel="noopener noreferrer" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3">Previous versions of this Supervisory Statement (SS) pre 25/11/2016 can be found here</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						25/11/2016
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-a9adf3fd-0154-432e-90d5-4ff3bdfacf5a">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-a9adf3fd-0154-432e-90d5-4ff3bdfacf5a"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS5/15 – Solvency II: the treatment of pension scheme risk
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS5/15 – Solvency II: the treatment of pension scheme risk)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/conditions-governing-business/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Conditions Governing Business
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/solvency-capital-requirement---general-provisions/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Solvency Capital Requirement - General Provisions
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/solvency-capital-requirement---internal-models/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Solvency Capital Requirement - Internal Models
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/solvency-capital-requirement---standard-formula/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Solvency Capital Requirement - Standard Formula
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency-2-consolidation-of-directors-letters" class="list-links__link" target="_blank">
+										PS33/16 - Solvency II: consolidation of Directors&#39; letters
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/31-12-2024?p=1" data-id="e03b693d4af44adebda730a4efc50410" data-effective-date="31-12-2024" data-download-title="SS5/15 – Solvency II: the treatment of pension scheme risk_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk&amp;subject=PRA Rulebook - SS5/15 – Solvency II: the treatment of pension scheme risk">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="974a70e9d2d54bfe95b306765411f76d"
+	 data-version="777de425a12747738d7a0302745d61d5"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ca617d95cc03412992bb3fce220e92e7"
+	 data-version="04dbb9ff935142c395c0256a87b8e47c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement (SS)<sup><a href="#footnote-1">1</a></sup>&nbsp;is of interest to all UK Solvency II firms and to the Society of Lloyds, its members and managing agents (collectively referred to as &lsquo;firms&rsquo; in this SS).&nbsp;It sets out the Prudential Regulation Authority&rsquo;s (PRA&rsquo;s) expectations of firms in relation to defined benefit pension schemes and provides further clarity to firms that are the sponsor of a defined benefit pension scheme, or that are part of a group that contains a company which sponsors a defined benefit pension scheme. In particular, this SS: </p>
+<ul>
+    <li>explains what the PRA expects of firms that are not the legal sponsor of a defined benefit pension scheme but are part of a group that contains a company that sponsors a defined benefit pension scheme; and </li>
+    <li>highlights areas to which firms should pay particular attention when considering the risks posed by a defined benefit pension scheme for the purpose of determining the solvency capital requirement (SCR). This includes risks arising both from pension schemes sponsored by the firm itself and those sponsored by another group company. This is relevant to the calculation of both the solo and group SCR.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						On 15 November 2024, this SS was updated – see appendix for full details.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#ca617d95cc03412992bb3fce220e92e7">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e0446addc730434ebe984d0aa648102c"
+	 data-version="3c6e63a5fc1b45a28f7d13edc8f3f453"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e0106585720d4e34bca53f9a023c5759"
+	 data-version="88f7b6d5636c4ce6b40634f95074fec3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement should be read in conjunction with the PRA&rsquo;s rules in the Solvency II Sector of the PRA Rulebook, in particular the Conditions Governing Business&nbsp;and the Solvency Capital Requirement Parts, and the PRA&rsquo;s insurance approach document.<sup><a href="#footnote-2">2</a></sup>&nbsp;</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						Available at <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/pras-approach-to-supervision-of-the-banking-and-insurance-sectors">https://www.bankofengland.co.uk/prudential-regulation/publication/pras-approach-to-supervision-of-the-banking-and-insurance-sectors</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#e0106585720d4e34bca53f9a023c5759">
+			Past
+			<span class="visually-hidden">
+				version of 1.2A before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="30289f1c22ca44cc8e7baa426ba4f2f0"
+	 data-version="6176ecb8d4334846b575d83e5fdce399"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This SS expands on the PRA&rsquo;s general approach as set out in its insurance approach document. By clearly and consistently explaining its expectations of firms in relation to the particular areas addressed, the PRA seeks to advance its statutory objectives of ensuring the safety and soundness of the firms it regulates, and contributing to securing an appropriate degree of protection for policyholders.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="45bcd33ef55e4651a8080c2cdd9e05ac"
+	 data-version="9ae1c076b43044018b18a205558cb8df"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/1---introduction/31-12-2024?p=1" data-id="974a70e9d2d54bfe95b306765411f76d" data-effective-date="31-12-2024" data-download-title="Introduction_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/1---introduction/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk#974a70e9d2d54bfe95b306765411f76d&amp;subject=PRA Rulebook - SS5/15 – Solvency II: the treatment of pension scheme risk – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="f8b98f0b33f34b598caa77ab3727774f"
+	 data-version="ba702a4986a44554bb9ebaecaa5d1822"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					 Pension schemes sponsored by intragroup service companies and the impact on authorised firms
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="463604c783974a34aee7143829c8ed0f"
+	 data-version="8d09a4fc094042adaff36ddbe5170352"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Impact on the determination of own funds at a solo level</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="82fe7bb3dfe64865aa489fca7ddb302d"
+	 data-version="49cf61654c5747db87fe8a507179147c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/valuation#fcf9fc16572a43e2bb99c6337165427b" data-rb-content-link="Rule">Rule 5.2 in the Valuation Part</a>&nbsp;of the PRA Rulebook requires that most financial liabilities, including pension liabilities, should be recognised and valued in accordance with UK-adopted International Financial Reporting Standards.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#82fe7bb3dfe64865aa489fca7ddb302d">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f0c32f0e80f04aeb9996aaeedec9c739"
+	 data-version="352730069ac4434589b29e2619d14985"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>There may be circumstances where UK-adopted International Financial Reporting Standards do not require a firm to recognise a pension scheme on its solo balance sheet.<sup><a href="#footnote-3">3</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						Valuation 5.1 and 5.2 in the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#f0c32f0e80f04aeb9996aaeedec9c739">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8624509413f64b6995bf717ce85fdbdd"
+	 data-version="eff6064a73814ad291aa532cf4a75403"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In making the determination as to whether to recognise a pension scheme on their balance sheets, firms should have particular regard to the requirement in International Accounting Standard (IAS) 19 that a pension scheme should be recognised on the balance sheet of a firm if there is contractual agreement or stated policy in place under which the firm will contribute to the scheme.<sup><a href="#footnote-4">4</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						Paragraph 41 of IAS 19: <a href="https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-19-employee-benefits.pdf?bypass=on">https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-19-employee-benefits.pdf?bypass=on</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#8624509413f64b6995bf717ce85fdbdd">
+			Past
+			<span class="visually-hidden">
+				version of 2.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="053dd6e0ea2d4698ac1b2eed6ea9afc8"
+	 data-version="7976c880e7bc4fe99ea1c3d021341482"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should also pay particular attention to relationships with intragroup service companies, where provision of staff can be regarded as having been outsourced to the service company for the purposes of <a href="/pra-rules/conditions-governing-business#17d43b83ffcf4fdf887ebc9cc1fdb7db" data-rb-content-link="Chapter">Conditions Governing Business 7</a>. The <a href="/pra-rules/conditions-governing-business" data-rb-content-link="Part">Conditions Governing Business Part</a>&nbsp;of the PRA Rulebook requires that, where a firm outsources critical or important operational functions or activities, a written agreement should be entered into between the firm and the service provider which clearly defines the respective rights and obligations of each party.<sup><a href="#footnote-5">5</a></sup> Firms should consider whether a written agreement of this nature leads to a requirement under IAS 19 to recognise the pension scheme on the balance sheet of the authorised firm.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						Conditions Governing Business 7.5 in the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#053dd6e0ea2d4698ac1b2eed6ea9afc8">
+			Past
+			<span class="visually-hidden">
+				version of 2.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="56998b55a96d4152b55a780eb2d9a876"
+	 data-version="57064a7b88bb4f178b6abccea779a4ee"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Obligations in relation to a pension scheme sponsored by an intragroup service company will generally be recognised on the group&rsquo;s consolidated balance sheet, regardless of whether or not they are recognised on the balance sheet of an authorised firm. This will lead to obligations to a pension scheme being reflected in the calculation of group own funds and the group SCR.<sup><a href="#footnote-6">6</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						Group Supervision 11.1A in the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#56998b55a96d4152b55a780eb2d9a876">
+			Past
+			<span class="visually-hidden">
+				version of 2.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a30e446d0ac049168f517b5a18e32699"
+	 data-version="0bb5775fc2c54ea08625d8762b5e8f99"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Impact on the solo SCR</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="aefe2b5da6e846eca8a367aac960800b"
+	 data-version="a87b5046d30e4f33abdd908da3e7b23c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should also consider the extent to which a pension scheme sponsored by an intragroup service company poses a risk to the safety and soundness of an authorised firm whether or not obligations in connection with a pension scheme are recognised on the solo balance sheet. An example of such a risk is that the firm might find it necessary to provide support for the scheme in the future in order to assist an intragroup service company on which the firm&rsquo;s operations depend. Firms should also consider the powers of the Pensions Regulator regarding entities that are considered to be connected to a pension scheme sponsor. These considerations should continue to apply if the sponsorship of the pension scheme were taken on by another group company, for example an intermediate holding company.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5af3cf62ab684cb4bb6820ee81d5eae0"
+	 data-version="d9be7c5b9cfc4519a0e66a72ef73e2ab"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that pension schemes sponsored by intragroup service companies may pose a risk to authorised firms in that group. Therefore, where a firm intends to use an internal model to calculate its solo SCR, the model should take account of the risk posed by the pension scheme. Generally, such a model should take account of the risk of the firm needing to fund any existing pension scheme deficit that is not currently recognised on the firm&rsquo;s balance sheet, as well as the risk of the pension scheme&rsquo;s financial position deteriorating.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="54adcc8f5ef644f183279f5af2afcb37"
+	 data-version="2524953fcaa943f3bb210bc6ebc47610"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a firm decides not to model the risk posed by a pension scheme sponsored by an intragroup service company, on the basis that modelling this risk is not necessary, the firm is expected to provide evidence that this is the case, which might include evidence that:&nbsp;</p>
+<ul>
+    <li>the risk to the authorised firm would be addressed by the capital required to support the pension scheme being held elsewhere in the group and not in the authorised firm;</li>
+    <li>the capital held elsewhere in the group is sufficient to support the pension scheme and that this capital is unencumbered; and&nbsp;</li>
+    <li>&nbsp;this capital may be freely transferred to the authorised firm, including at times of stress, should the firm be required to support the pension scheme in the future.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0d2abe26e75a4138a09d0742494e41ee"
+	 data-version="7701d3803af840329425341649db883b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms are required to assess the significance of the extent to which its risk profile deviates from the assumptions underlying the standard formula.<sup><a href="#footnote-7">7</a></sup> As part of this assessment, the PRA expects firms to consider the risks posed by a pension scheme sponsored by an intragroup service company. Depending on whether the obligations in relation to the pension scheme are recognised on the solo balance sheet and the materiality of the pension scheme risk to the firm, the risk may be dealt with through Pillar 2 measures or the firm may need to consider whether it should use a partial internal model to calculate the SCR, in the event that the standard formula does not reflect the firm&rsquo;s risk profile. The PRA will take a proportionate approach in assessing how the risk should be reflected.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						Conditions Governing Business 3.8(2)(c) in the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#0d2abe26e75a4138a09d0742494e41ee">
+			Past
+			<span class="visually-hidden">
+				version of 2.9 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="63968b94954d4e6a9c8cc5cef65158e8"
+	 data-version="4f97bfd05b8b4f2c8c07d843d50a8f85"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Notwithstanding paragraph 2.9, the calculation of the group SCR should reflect the risks posed by any defined benefit pension schemes within the group, regardless of whether or not the risks have been reflected in the solo SCR of any authorised entity.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/2----pension-schemes-sponsored-by-intragroup/31-12-2024?p=1" data-id="f8b98f0b33f34b598caa77ab3727774f" data-effective-date="31-12-2024" data-download-title="Pension schemes sponsored by intragroup service companies and the impact on authorised firms_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/2----pension-schemes-sponsored-by-intragroup/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk#f8b98f0b33f34b598caa77ab3727774f&amp;subject=PRA Rulebook - SS5/15 – Solvency II: the treatment of pension scheme risk – Pension schemes sponsored by intragroup service companies and the impact on authorised firms">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="48bbe4c39c7d459d9859f29815281c2f"
+	 data-version="408f051db4e94dc69b0c355126d71a0b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					 Consideration of pension scheme obligations in the calibration of internal models with regard to credit spread risk
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3b66af5d7f34444e92fd488d1c525883"
+	 data-version="9e8fcceaf1004da9984c5c2be61df6c0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Internal models need to cover the risk of credit spreads widening, where this is a material risk to the firm.<sup><a href="#footnote-8">8</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						Solvency Capital Requirement - Internal Models 11.6 in the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#3b66af5d7f34444e92fd488d1c525883">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="94a8fb40b6d942819b2843b9c343051a"
+	 data-version="91e6331ac0bc40359ba73d3750e7c938"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>IAS 19 requires the pension scheme discount rate to be based on the yield on high-quality corporate bonds for which there is a deep market.<sup><a href="#footnote-9">9</a></sup> When a firm&rsquo;s internal model projects the value of the pension scheme liabilities following a hypothetical shock to credit spreads, the PRA will expect any change to the liabilities following this shock to be justified. Firms also should consider which bonds will remain high quality with a deep market following this shock, and what their yield would be in these circumstances.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						Paragraph 83 of IAS 19.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#94a8fb40b6d942819b2843b9c343051a">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5367bdf462a04f2bb418b6a117af47f3"
+	 data-version="1818ddeda2714ee1bbe799951f957e77"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The approach taken should capture adequately the risks that the firm is exposed to. In particular, there is a risk that under stressed conditions: </p>
+<ul>
+    <li>the market in some high quality corporate bonds may not be considered &lsquo;deep&rsquo; and therefore using the yield on these bonds may not satisfy the requirements of IAS 19, even if an adjustment is made to ensure that they remain high quality; and </li>
+    <li> there is a significant divergence between the IAS 19 deficit and the scheme funding deficit, increasing the likelihood that the firm is required to pay additional contributions to the pension scheme.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2876a2d3a5f44af598a95473c1436651"
+	 data-version="080858d81248466f86f8e5bdac53913e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects firms to reflect these risks within their internal models and considers that an approximate approach of assuming that only part of the movement in credit spreads is passed on to the IAS 19 discount rate may be acceptable in appropriate circumstances.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/3----consideration-of-pension-scheme-obligations/31-12-2024?p=1" data-id="48bbe4c39c7d459d9859f29815281c2f" data-effective-date="31-12-2024" data-download-title="Consideration of pension scheme obligations in the calibration of internal models with regard to credit spread risk_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/3----consideration-of-pension-scheme-obligations/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk#48bbe4c39c7d459d9859f29815281c2f&amp;subject=PRA Rulebook - SS5/15 – Solvency II: the treatment of pension scheme risk – Consideration of pension scheme obligations in the calibration of internal models with regard to credit spread risk">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="dece21c18b2942d79bc202095fdc7ebd"
+	 data-version="8cba1e79af56440eb5dd28539f95dda1"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Consideration of restrictions on the recognition of a pension scheme surplus as part of the calibration of an internal model<br/>
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="28436438db294831b5606157f2c0e836"
+	 data-version="d6114affd12d463aa0e73eeacae0de52"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should consider requirements in the relevant International Financial Reporting Standards concerning the circumstances under which a pension scheme surplus may be recognised as an asset of the sponsor.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="eba9ca4f897d46f08ecff09657bb502b"
+	 data-version="14ad77353ec148f887e9d5d01eb501ff"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>These considerations are relevant for determining the impact of the pension scheme on a firm&rsquo;s own funds. If the firm uses an internal model to calculate its SCR then restrictions on the ability to utilise a pension scheme surplus will also be relevant for determining the SCR.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2c9d1e7fa5e943fd9a18bc736460fdf2"
+	 data-version="9eca8f58d3c74020b529739b4c44ba6c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The SCR calculated by an internal model should provide policyholders with a level of protection that is equivalent to a calibration corresponding to the value-at-risk of the firm&rsquo;s basic own funds subject to a confidence interval of 99.5% over a one-year period.<sup><a href="#footnote-10">10</a></sup> It is important for the firm to consider how basic own funds may change as a result of risk events. Part of this change may be driven by changes in the value of the assets and liabilities of a pension scheme.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						Solvency Capital Requirement – General Provisions 3.3 and 3.4 in the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#2c9d1e7fa5e943fd9a18bc736460fdf2">
+			Past
+			<span class="visually-hidden">
+				version of 4.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="dc5f0f0e02014653bcec2406e8c33737"
+	 data-version="e34275618b2f40e6b43750aef7f76d17"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When considering how basic own funds may change owing to risk events, firms should consider whether restrictions on the ability to utilise pension scheme surpluses would apply in those circumstances. In doing so, firms should consider any obstacles to covering losses with resources in the form of a surplus in a pension scheme. These obstacles might arise from any barriers to moving resources from the pension scheme to the entity.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/4---consideration-of-restrictions/31-12-2024?p=1" data-id="dece21c18b2942d79bc202095fdc7ebd" data-effective-date="31-12-2024" data-download-title="Consideration of restrictions on the recognition of a pension scheme surplus as part of the calibration of an internal model_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/4---consideration-of-restrictions/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk#dece21c18b2942d79bc202095fdc7ebd&amp;subject=PRA Rulebook - SS5/15 – Solvency II: the treatment of pension scheme risk – Consideration of restrictions on the recognition of a pension scheme surplus as part of the calibration of an internal model">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="ff34034d7c3d49009c069e2b69b6f0c4"
+	 data-version="3b05e243041e47b98505389cb0bedbb2"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Allowance for diversification between pension scheme risks and a firm’s other risks in the calibration of an internal model<br/>
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="571b3f14ebe54161b254322725f53fc5"
+	 data-version="d346fada791840209659bd71df8db0a2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should consider carefully the extent to which correlations exist and can be justified between the risks posed by a pension scheme and other risks that the firm faces. Relevant considerations include the extent to which: </p>
+<ul>
+    <li>correlations exist owing to the firm and the pension scheme holding similar assets or assets whose values are expected to be correlated; or </li>
+    <li>the pension scheme exposes the firm to demographic risks that are similar to the underwriting risks run by the firm. A particular example of strong correlations would be where a firm&rsquo;s insurance business exposes it to longevity risk.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/11/2016
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="05ecda4162c9417caf560519d85ddc77"
+	 data-version="143212f7ebf649f9ac1a12dccc129a90"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where correlations between risks are not perfect, Solvency II permits this diversification benefit to be reflected in the calibration of an internal model.<sup><a href="#footnote-11">11</a></sup>&nbsp;However, the PRA expects the firm to justify robustly any allowance that has been made in an internal model for diversification between the risks associated with a pension scheme and the other risks faced by the firm.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-11" class="rb-footnote">
+					<span class="fn-col-1">
+						11.
+					</span>
+					<span class="fn-col-2">
+						Solvency Capital Requirement – Internal Model 11.8(1) in the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/25-11-2016#05ecda4162c9417caf560519d85ddc77">
+			Past
+			<span class="visually-hidden">
+				version of 5.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/5----allowance-for-diversification-between-pension-scheme/31-12-2024?p=1" data-id="ff34034d7c3d49009c069e2b69b6f0c4" data-effective-date="31-12-2024" data-download-title="Allowance for diversification between pension scheme risks and a firm’s other risks in the calibration of an internal model_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/5----allowance-for-diversification-between-pension-scheme/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk#ff34034d7c3d49009c069e2b69b6f0c4&amp;subject=PRA Rulebook - SS5/15 – Solvency II: the treatment of pension scheme risk – Allowance for diversification between pension scheme risks and a firm’s other risks in the calibration of an internal model">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="de89481c7a17499c8d7ea7acbcd5ccb1"
+	 data-version="4724498e69864fc694a01ffb3378b67b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Deleted<br/>
+				</h3>
+		</div>
+	</div>
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/6---deleted/31-12-2024?p=1" data-id="de89481c7a17499c8d7ea7acbcd5ccb1" data-effective-date="31-12-2024" data-download-title="Deleted_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk/6---deleted/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss05-15-solvency-ii---the-treatment-of-pension-scheme-risk#de89481c7a17499c8d7ea7acbcd5ccb1&amp;subject=PRA Rulebook - SS5/15 – Solvency II: the treatment of pension scheme risk – Deleted">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

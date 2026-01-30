@@ -1,0 +1,5459 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{937CD4EE-F525-4640-8E5C-51C8EF279B63} -->
+<title>SS2/23 – Supervising credit unions | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS2/23 – Supervising credit unions">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS2/23 – Supervising credit unions">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwogna-f-c5364107b-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":44,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2560e52d","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":45698,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370010","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==TOdgnFoIsy0KUQlwG5PPpi4dHbJGzV2Oycm4Qjy/xK28kmLkAROR1qTq/QHMxd20iRRdG1L9hNu4YZ8mJhf3Tzzj4lRaAFmkWbSs7hayrxGva0nnkt6lkyrRpyUkwqrrq+rFuJHH8SXo5Hqrgp9lNe9lzozoHNaPhfI+wHYGydEri5snkaLyo/otasYvL4LavQ/AYUr6E6ebeKIfedogaHTTSNgN+lSzZKJgHbWyCm8H3YpcIv9eT1AI6dXCTamlQcnk4GBtY0/W3jG/xMKtRAp4omF/77EBs1ylz9Zgm09nj9UVWb+VZS3OJ12NUlLhZ3M5diCuanrjwbEl8Qh4dF14FewTcFDE0VSwPq5EKtNjhO5RjYK1o/Jxq0hl7z6HRYPnegjDfT/DfyPPZxdfT7VUq2UNanrM2quzN1rUqqA=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS2/23 – Supervising credit unions				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS2/23 – Supervising credit unions
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/29-08-2023">
+						<span class="visually-hidden">View Rulebook as at</span>
+						29/08/2023
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-11ef7dc7-35ea-4df8-a5f3-1c4b33cc65eb">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-11ef7dc7-35ea-4df8-a5f3-1c4b33cc65eb"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS2/23 – Supervising credit unions
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS2/23 – Supervising credit unions)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/non-crr-firms">
+					Non-CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2023/july/credit-unions-changes-to-the-regulatory-regime" class="list-links__link" target="_blank">
+										PS11/23 - Credit Unions: Changes to the regulatory regime
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss02-23-supervising-credit-unions/29-08-2023_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/29-08-2023?p=1" data-id="ac75bdc7b85a46dea9379759c78be40b" data-effective-date="29-08-2023" data-download-title="SS2/23 – Supervising credit unions_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="b01e9a88fa064592a0c8ce170463a17b"
+	 data-version="de06870301704c5d83bcaca7ff798bcb"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b6f41ae0b9e0493e85b5d9711066f258"
+	 data-version="5b0402db93df45f09d999f7c15aba9c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement (SS) sets out the Prudential Regulation Authority&rsquo;s (PRA)&nbsp;expectations of credit unions. It applies to all UK credit unions as defined in the Credit Unions&nbsp;Part of the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ebd71a08fff24548920b7c39fdd156c7"
+	 data-version="573539ca69f2488db1f51eab84592b8e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This SS seeks to advance the PRA&rsquo;s statutory objective of promoting the safety and soundness of the firms it regulates by setting out the PRA&rsquo;s expectations of how credit unions should comply with core elements of the regulatory framework contained in the Credit Unions Part of the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/1---introduction/29-08-2023?p=1" data-id="b01e9a88fa064592a0c8ce170463a17b" data-effective-date="29-08-2023" data-download-title="Introduction_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/1---introduction/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#b01e9a88fa064592a0c8ce170463a17b&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="01692b2182334932807c000088e8cc64"
+	 data-version="65d5cf5ea14a45fc84360629b168c244"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Capital
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="86c8d9646d4c46dc8a2853d9128e0c92"
+	 data-version="915a98aaf8fc454b95e2a5fad65ae1a4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A credit union will be expected to maintain the relevant minimum capital requirement specified by Rule <a href="/pra-rules/credit-unions#ef8273fff792404695041fe96c30ef89" data-rb-content-link="Rule">8.5</a>&nbsp;of the Credit Unions Part of the PRA Rulebook at all times. The PRA also expects credit unions to consider whether additional capital should be held above the minimum in order to meet the requirement in Rule <a href="/pra-rules/credit-unions#a7164e67d85c4b1096160c02ac7e5fb8" data-rb-content-link="Rule">8.1</a>&nbsp;of the Credit Unions Part of the PRA Rulebook. For example, credit unions that are growing rapidly, providing mortgages, or corporate loans should consider holding additional capital in light of the additional risks to which they are exposed. A credit union providing credit cards would be expected to consider what additional capital is required in order to cover potential claims arising from Section 75 of the Consumer Credit Act 1974.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3e59d06ea2a445b8bbccae8c5e18e583"
+	 data-version="84f3c3c4bad24b26918a57c554b49918"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions should expect that the PRA may impose an additional capital add-on (ie via the PRA&rsquo;s own initiative powers, as provided by section 55M the Financial Services and Markets Act 2000 (&rsquo;FSMA&rsquo;) &lsquo;own initiative requirements&rsquo; or &lsquo;OIREQ&rsquo;), where there are specific risks present in a credit union (examples might include credit unions with high risk business models, high arrears, or governance concerns) and where a credit union has not taken up the PRA&rsquo;s invitation to apply for a &lsquo;voluntary requirement&rsquo; (VREQ) as provided by section 55M of FSMA.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ddf7a9285aa444af871485755cb414cd"
+	 data-version="6339a80c059042889ceff5e3238da49c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A credit union is expected to notify the PRA immediately should it become aware that it is likely to fall below its relevant minimum capital requirement. It must comply with the immediate notification requirement in Rule <a href="/pra-rules/credit-unions#92e4ace13a614818a417f887bf9d9e0e" data-rb-content-link="Rule">8.6</a>&nbsp;of the Credit Unions Part of the PRA Rulebook if its capital falls below the relevant minimum.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a562e7ede56f4263b890f6d6d211fcce"
+	 data-version="ca864f846ea549299d8b98bdfb9d3692"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a credit union&rsquo;s capital ratio is below 5%, the PRA expects it to engage more fully with the PRA. In particular, the PRA will expect a credit union to engage on its ongoing sustainability and the PRA will challenge it to demonstrate its ability and capacity to produce, work to, and monitor a viable business plan. As part of that discussion, the PRA will expect it to engage on whether it has a viable future and if not, what plans it has to close in an orderly fashion, which could be by way of insolvent wind-up, solvent wind-down, or the transfer of its engagements to another credit union.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="301afbd8b4014882a70fa37d591e271c"
+	 data-version="adf810b07b9a4c9d898f6d37fb19cb9f"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Quality of capital</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="448082ad63e745e593fcfbe01a893e04"
+	 data-version="c95eaf39d4944ea883211e087dee63c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Capital acts as a cushion to absorb unexpected losses, for example if members fail to repay their loans, or losses arise from fraud or operational incidents. Broadly speaking, for most credit unions, capital predominantly comprises of retained earnings (reserves). This capital is considered high quality capital (ie highly loss-absorbing) as it does not have any features that make it less able to absorb losses, such as a principal that needs to be repaid or a requirement to pay non-discretionary distributions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4abbeb848c9d473aa04559ff7aed0e34"
+	 data-version="798188d3adb147639567b15e094ab131"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions have limited access to a wider range of capital instruments; their capital may also comprise of deferred shares, subordinated debt, and revaluation reserves (see Rule <a href="/pra-rules/credit-unions#b749b03560eb481a81befe0afde15cc0" data-rb-content-link="Rule">8.2</a>&nbsp;of the Credit Unions Part of the PRA Rulebook).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7881ba4fe6b449108172763ee020c6bc"
+	 data-version="fb161b8518e441f8bad254a77c1f774c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>External capital investment (in the form of subordinated debt or deferred shares) can be important in supporting a credit union&rsquo;s growth, particularly in the early years when a credit union is first established, to help it recover from financial shocks in the short term and to support growth plans or the expansion of services in a sustainable manner.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="269fd09b1054478c8219edf841c43883"
+	 data-version="125657aa043d44ec80d4c1ff82c9064a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Subordinated debt is considered lower quality capital given the principal needs to be repaid (which carries refinancing risk) and coupons (the annual interest payments) are paid to service the debt rather than being returned to members as dividends.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e4f8b8750aec45ffbe97a300265e8507"
+	 data-version="6f44c95697784c159411a723bba9faa4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deferred shares, while they do not carry refinancing risk, usually carry a perpetual coupon although in some cases this can be discretionary and non-cumulative.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9f5bec314d6545a886469d9534d8c177"
+	 data-version="54be879c6b9849f2bccaf19b085394ef"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>However, the PRA holds concerns that the use of material amounts of subordinated debt and interest-bearing deferred shares could have the potential to threaten the sustainability of a credit union if not used appropriately and prudently. Credit unions utilising such instruments must be able to demonstrate they are acting in the best interests of members, particularly if the capital arrangements mean that operating profit is in a large part used to service the capital coupons rather than serving as returns to members. Credit unions should carefully plan their approach to such instruments with a view to operational sustainability and viability.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="df204d7835394bc0ae26718921079064"
+	 data-version="df42a5b27c864210b3e32a5fcc6201f0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects credit unions utilising such instruments to manage the associated risks: for example, the refinancing risk of subordinated debt and the perpetual nature of a coupon attached to deferred shares. For the avoidance of doubt, a credit union should not raise external capital in order to service capital coupons.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="11259de0cdce4ba1b9969cbecfa8c163"
+	 data-version="1ff9964c6cea491db096810cbfdf4664"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>There is also concern regarding potential conflicts of interest arising from externally-influenced business models. Capital sourced from third parties should not have conditions attached that give preferential treatment to the third party. Credit unions should ensure that any potential conflicts of interest arising from the provision of capital are managed adequately.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="454becab25424dbb9ac7fe8423d3b233"
+	 data-version="e05065d5f9ad459d89eee01dc3c730c3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For credit unions with total assets over &pound;50 million, the PRA expects them to not hold more than 50% of their minimum capital requirement as subordinated debt; and that no more than 75% of the minimum capital requirement be comprised of subordinated debt and interest-bearing deferred shares. There may be circumstances where these limits may be exceeded. In such instances, the PRA would expect the credit union to provide sufficient details to satisfy supervisors of the credit union&rsquo;s arrangements for managing the associated risks before proceeding with their plans to raise external capital above these limits.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4eb848d989d141bfab23b626d2d01c82"
+	 data-version="7bae90bf6c9e404cb5d65263ea3d59aa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Factors the PRA will take into account when reviewing such plans are: </p>
+<ol class="new-bullet">
+    <li>(i) whether the capital arrangements provide investors with external influence over the credit union; </li>
+    <li>(ii) evidence that the interest rate and liquidity risks are being managed adequately; </li>
+    <li>(iii) the reasonableness and credibility of the credit union&rsquo;s plans for growth (including how it would service the capital investment through distributable profits as opposed to raising further capital to pay coupons);</li>
+    <li>(iv)whether the credit union is contractually able to defer coupon payments and/or whether such payments are cumulative; </li>
+    <li>(v) whether the investment (for example, the rate of interest offered) represents a reasonable and justified risk-reward proposition; and </li>
+    <li>(vi) whether the credit union has provided a robust and credible plan for reducing reliance on external capital investment.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5a229c8b24da4ae7bbba4864836284e8"
+	 data-version="5b74ee14a5fc43978edc1a39d162f08d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The capital instruments should not have any features that hinder recapitalisation such as provisions that require the issuer to compensate investors if a new instrument is issued at a lower price during a specified timeframe.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/2---capital/29-08-2023?p=1" data-id="01692b2182334932807c000088e8cc64" data-effective-date="29-08-2023" data-download-title="Capital_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/2---capital/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#01692b2182334932807c000088e8cc64&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Capital">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="6f44ad0bed7545a8b81bfd8d8dddf399"
+	 data-version="9209239bb3264e5e80b3cb64a29c55bd"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Liquidity
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="96b9d8b5d847406d9f25d4b290bcb4cd"
+	 data-version="c11920f47c384b60ae7a27b242048c75"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Rule <a href="/pra-rules/credit-unions#5cb51066c7914ba6af0e65d7f858a704" data-rb-content-link="Rule">10.5</a>&nbsp;of the Credit Unions Part of the PRA Rulebook requires that credit unions must establish, implement, and maintain an up-to-date liquidity management policy statement approved by the governing body. Rule <a href="/pra-rules/credit-unions#32a826f50d8646c6860025fb2d159ce7" data-rb-content-link="Rule">9.4</a>&nbsp;of the Credit Unions Part of the PRA Rulebook requires that the amount and composition of liquid assets held by a credit union must be prudent and appropriate to the nature, scale, and complexity of its business, having regard to material risks, including the risk of a sudden adverse cash flow.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="280b13e904494d23a476c5f3f9c303c1"
+	 data-version="593f7bbdbb6a40558ed734268c5a1359"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA therefore expects a credit union&rsquo;s strategy for liquidity management, which should be set out in the liquidity management policy statement, to take account of the nature, scale, and complexity of the credit union. As part of this, it is expected that consideration should be given to the credit union&rsquo;s strategic plan, risk profile, and the current economic environment. The liquidity management policy statement is also expected to cover: </p>
+<ul>
+    <li> the roles and responsibilities of officers involved in liquidity management; </li>
+    <li>the quantity and quality of liquid assets to be maintained by the credit union over time, taking into account the minimum liquidity requirements in Rule <a href="/pra-rules/credit-unions#ddd48dda7231407fa91840b1b0d16d79" data-rb-content-link="Rule">9.2</a>&nbsp;of the Credit Unions Part of the PRA Rulebook; and </li>
+    <li>procedures for complying with regulatory requirements, including monitoring and reporting against internal targets and regulatory ratios to the board.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/3---liquidity/29-08-2023?p=1" data-id="6f44ad0bed7545a8b81bfd8d8dddf399" data-effective-date="29-08-2023" data-download-title="Liquidity_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/3---liquidity/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#6f44ad0bed7545a8b81bfd8d8dddf399&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Liquidity">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="45892767ca884e78b87c33f37123d683"
+	 data-version="9cd85e5c44b842d281ddacf04482732b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Additional activities and membership size
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="965ee66556314340bb1541b710b806ea"
+	 data-version="fab8de2642b140f4b3434cf4cbf29835"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A credit union that is undertaking &lsquo;additional activities&rsquo;<sup><a href="#footnote-1">1</a></sup> (see Table 1) or that has more than 15,000 members, and is therefore subject to the requirement in Rule <a href="/pra-rules/credit-unions#581d1e6c82754d849076684c822ce0a6" data-rb-content-link="Rule">10.3(3)</a>&nbsp;of the Credit Unions Part of the PRA Rulebook, is expected to monitor its relevant business by using the ratios in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bbfdf94b40ac45dc992788f4693c268d" data-rb-content-link="Paragraph">4.3</a>&nbsp;below, calibrated with values that are specifically aligned to its individual business model. Credit unions should have measures that help them define their tolerance for triggers and ratios that underpin their resilience. The ratios in <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bbfdf94b40ac45dc992788f4693c268d" data-rb-content-link="Paragraph">table 1</a>&nbsp;below are indicative; the PRA expects boards to assess what is most important and reflects the risks in their organisation. The PRA expects the values selected by the credit union to provide an accurate and reliable business tool, by which its board may routinely and accurately monitor the credit union&rsquo;s performance against its strategic plan and its regulatory obligations. The PRA also expects the credit union to be able to provide details of its chosen ratios, and evidence of the rationale underlying them, on request.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						‘Additional activity’ means (1) an additional activity carried out or additional service provided by a credit  union as described in Rule 3.3, Rule 3.5, Chapter 4, Rule 6.4, or Chapter 7 of the PRA Part of the PRA  Rulebook, (2) entering into a conditional sale agreement, as the seller, with a member of the credit union  pursuant to section 11E of the Credit Unions Act 1979; (3) entering into a hire purchase agreement, as the  person from whom goods are bailed or (in Scotland) hired, with a member of the credit union pursuant to  section 11E of the Credit Unions Act 1979; (4)providing credit cards; or (5) lending to corporate members.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7e641745d4834b4c907789354003cafb"
+	 data-version="8912d966c9c0431c9bdd4e72d80e0d9a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects such a credit union to review performance against its target ratios at least monthly, and to satisfy itself that performance is consistent with maintaining a business that is viable over a 12-month period and sustainable over a 36-month period.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="bbfdf94b40ac45dc992788f4693c268d"
+	 data-version="bb72d14f0b8a43b49dd1baadf0a78544"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>By way of example only, the PRA considers that prudent practice suggests that the indicative ratio percentages for credit unions that undertake additional activities or have more than 15,000 members for all calculations save loans to assets are those outlined in <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bbfdf94b40ac45dc992788f4693c268d" data-rb-content-link="Paragraph">Table 1</a>.</p>
+<h5>Table 1: Indicative ratios for credit unions that undertake additional activities or have more than 15,000 members</h5>
+<table class="content-table" style="width: 906px; height: 226px;">
+    <tbody>
+        <tr>
+            <td class="dark-row"><strong>&nbsp;Ratio</strong></td>
+            <td class="dark-row"><strong>Additional Investments</strong></td>
+            <td class="dark-row"><strong>Additional lending</strong></td>
+            <td class="dark-row"><strong>Mortgages</strong>&nbsp;</td>
+            <td class="dark-row"><strong>Transactional accounts</strong></td>
+            <td class="dark-row"><strong>Indicative ratio&nbsp;</strong></td>
+        </tr>
+        <tr>
+            <td><span style="line-height: 128%;">Credit union&rsquo;s borrowings as percentage of total asset</span></td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class=""><span style="line-height: 128%;">&le;5%</span></td>
+        </tr>
+        <tr>
+            <td><span style="line-height: 128%;">Total shares as percentage of total assets</span></td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="">&nbsp;&ge;70% and<br>
+            <span style="line-height: 128%;">&le;90%</span></td>
+        </tr>
+        <tr>
+            <td>Total bad debt written off as percentage of total loans</td>
+            <td><br>
+            </td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td>&le;10%</td>
+        </tr>
+        <tr>
+            <td>Net assets as percentage of sum of total shares and juvenile deposits</td>
+            <td><br>
+            </td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td>&ge;105%</td>
+        </tr>
+        <tr>
+            <td>Bad debt (more than three months in arrears) as percentage of total loans</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td>&le;20%</td>
+        </tr>
+        <tr>
+            <td>Non-earning assets as percentage of total assets<br>
+            </td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td>&le;10%</td>
+        </tr>
+        <tr>
+            <td>Net zero cost funds as percentage of non-earning assets<br>
+            </td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td>&ge;200%</td>
+        </tr>
+        <tr>
+            <td>Loan income over 12 months as percentage of total loans<br>
+            </td>
+            <td><br>
+            </td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td>&ge;6%</td>
+        </tr>
+        <tr>
+            <td>Net loans as percentage of total assets<br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td class="light-row">Y</td>
+            <td class="light-row">Y</td>
+            <td>Deliberately left blank</td>
+        </tr>
+    </tbody>
+</table>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="fbda22a9873b482995f51dbecccf3fae"
+	 data-version="b77ee844cc0543baaae850efecf6a667"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#fbda22a9873b482995f51dbecccf3fae" data-rb-content-link="Paragraph">Table 2</a> sets out the PRA&rsquo;s definitions of the terms set out in <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bbfdf94b40ac45dc992788f4693c268d" data-rb-content-link="Paragraph">Table 1</a>&nbsp;for the purposes of the ratio calculations.</p>
+<h5>Table 2: Definitions for ratio calculations</h5>
+<table class="content-table" style="width: 751px; height: 136px;">
+    <tbody>
+        <tr>
+            <td class="dark-row"><strong>Term&nbsp;</strong></td>
+            <td class="dark-row"><strong>Definition</strong></td>
+        </tr>
+        <tr>
+            <td>Total assets</td>
+            <td>The total assets of a credit union that appear on its balance sheet.</td>
+        </tr>
+        <tr>
+            <td>Borrowings</td>
+            <td>The total closing balances of all loans received by a credit union (excluding any subordinated loans), authorised overdrafts, and committed lines of credit.</td>
+        </tr>
+        <tr>
+            <td>Total shares</td>
+            <td>The total closing balances of all loans received by a credit union (excluding any subordinated loans), authorised overdrafts, and committed lines of credit.</td>
+        </tr>
+        <tr>
+            <td>Net loans</td>
+            <td>The total amount outstanding at the relevant date on all loans to members (irrespective of when such loans were made) less provision for bad and doubtful debt.<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Net liquid assets</td>
+            <td>Assets which can be realised for cash at short notice, and within at most eight days, less any liabilities payable within 30 days.</td>
+        </tr>
+        <tr>
+            <td>Bad debt</td>
+            <td>Total amount of loans to members where the loan is more than three months in arrears.</td>
+        </tr>
+        <tr>
+            <td>Total loans</td>
+            <td>The total amount outstanding at the relevant date on all loans to members (irrespective of when such loans were made). This includes any loans written off during the period.</td>
+        </tr>
+        <tr>
+            <td>Net assets</td>
+            <td>Total assets less liabilities (excluding members&rsquo; shares and juvenile deposits).<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Juvenile deposits<br>
+            </td>
+            <td>The total amount due to juvenile depositors.<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Non-earning asset<br>
+            </td>
+            <td>The total amount of cash, current account balances (excluding any balances earning interest), pre-paid expenses, and fixed assets.<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Net zero cost funds<br>
+            </td>
+            <td>The total sum of a credit union&rsquo;s capital and liabilities excluding any liabilities that are subject to interest payable by or charges to the credit union. In practical terms, this is likely to only constitute a credit union&rsquo;s reserves. (In general, shares are excluded as most credit unions pay a dividend on shares if they make a profit and any interest-bearing shares or juvenile deposits should be excluded).</td>
+        </tr>
+        <tr>
+            <td>Loan income<br>
+            </td>
+            <td>The total amount of interest received on loans made to members during the 12-month period preceding the relevant date.<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c665a68ea4aa441a9b4888a9df233979"
+	 data-version="b7faf250c4f042eab6c1cc9c607b97ac"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a credit union is experiencing significant growth of members, the PRA expects the credit union to consider the risks associated with increased membership and, where appropriate, take steps to address those risks. This should include consideration of operational risks such as those in <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#ea8d5c10afd74edf94222e8587142356" data-rb-content-link="Chapter">Chapter 10</a>&nbsp;(for example, whether systems are capable of managing additional capacity, whether the credit union has sufficient staff to cope with the increasing demand), and whether any changes need to be made to update their processes and procedures.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/4---additional-activities-and-membership-size/29-08-2023?p=1" data-id="45892767ca884e78b87c33f37123d683" data-effective-date="29-08-2023" data-download-title="Additional activities and membership size_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/4---additional-activities-and-membership-size/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#45892767ca884e78b87c33f37123d683&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Additional activities and membership size">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="050a05627a394fb98db07dc279035f4a"
+	 data-version="297d238f43a64f3997c4bda41dc8ae7f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Maximum deposit levels
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="75ba6280a1334ae892ccf56b0f01e117"
+	 data-version="7ad6ee5e9bfa4167a05a9fbdde3a8cf2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When a credit union gives notice in accordance with Rule <a href="/pra-rules/credit-unions#64886214eac7496f92a8ae05168ad612" data-rb-content-link="Rule">2.3</a>&nbsp;of the Credit Unions Part of the PRA Rulebook, it will be expected to inform the PRA of its current loans to assets, capital, and liquidity ratios. It will also be expected to provide the PRA with details of the proposed use of the funds to be deposited and to confirm that its single customer view file is complete and up-to-date. The credit union is expected to satisfy the PRA that its acceptance of such a deposit would be prudent.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="516e8e2f67e3435f89ac66e471e82e70"
+	 data-version="556911fb08e34e63b7308a3819a9875e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that any credit union that intends to issue fixed-rate shares or deposits complies with the statutory mandatory requirements that must be satisfied before beginning such activity.<sup><a href="#footnote-2">2</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						These requirements are set out in section 7A (1) of the Credit Unions Act 1979.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="17dcb639dc5d44a1a176b5996e27cda1"
+	 data-version="c94f9a0c31124682a5f894c3496ca4df"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions that wish to offer shares in an Individual Savings Account (ISA) tax-free wrapper are expected to refer to the relevant regulations issued by HM Revenue and Customs (HMRC). Credit unions should be aware that approval from HMRC does not provide any degree of exemption from compliance with the statutory requirements referred to above in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#516e8e2f67e3435f89ac66e471e82e70" data-rb-content-link="Paragraph">5.2</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/5----maximum-deposit-levels/29-08-2023?p=1" data-id="050a05627a394fb98db07dc279035f4a" data-effective-date="29-08-2023" data-download-title="Maximum deposit levels_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/5----maximum-deposit-levels/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#050a05627a394fb98db07dc279035f4a&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Maximum deposit levels">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="80c340c1624a4e698b12b49d7cf8b057"
+	 data-version="b1a9a146da40489bb50540df3042667d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Lending
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="03da4b9b15db4cd089945d6c344cb6fe"
+	 data-version="2d4480e3980b4583b4ad8323beeec798"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects all credit unions to pay close attention to the quality of their underwriting of loans, whether unsecured or otherwise. Credit unions are expected to apply a consistent lending policy in making all credit decisions, and to retain records of such decisions for at least the life of the loan in question.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="802ffd7ed92a4afeaa263bccae5026ba"
+	 data-version="51f9fe308a0c4331bd803deb2e1cc550"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a credit union proposes to undertake fixed-rate lending (including mortgage lending), the PRA expects the credit union to be able to demonstrate, on request, that it has a thorough understanding of any risks that this activity may create, particularly interest rate and basis risk. In some circumstances (for example where a credit union has a material fixed-rate lending book), the PRA may engage with the credit union as to whether any fixed-rate lending for periods of more than two years should be reported using form FSA017.<a href="#footnote-3"><sup>3</sup></a> Where a credit union&rsquo;s fixed-rate lending exposes it to specific material prudential risk it will be expected to make sufficient additional capital provision to mitigate such risk.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						FSA017 ’Interest rate gap report’: <a href="https://www.bankofengland.co.uk/prudential-regulation/regulatory-reporting/regulatory-reporting-banking-sector/banks-building-societies-and-investment-firms">https://www.bankofengland.co.uk/prudential-regulation/regulatory-reporting/regulatory-reporting-banking-sector/banks-building-societies-and-investment-firms</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/6----lending/29-08-2023?p=1" data-id="80c340c1624a4e698b12b49d7cf8b057" data-effective-date="29-08-2023" data-download-title="Lending_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/6----lending/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#80c340c1624a4e698b12b49d7cf8b057&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Lending">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="598c179bfa094f2caee2f48c32712c88"
+	 data-version="286754276a924c81ba2d0b11f424b2cf"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Investments
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="633c6e865c1548bb9b89c65485525849"
+	 data-version="a5eab84d7a3d413ea13efead22e48e13"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the assessment required by Rule <a href="/pra-rules/credit-unions#a514d170dc3f44d1b143b01580cc1d47" data-rb-content-link="Rule">6.5</a>&nbsp;of the Credit Unions Part of the PRA Rulebook will be proportionate to the complexity, or otherwise, of the proposed investment. As part of the assessment, the PRA expects a credit union to consider counterparty risk.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f418764e2c8a48f3bd60008926513f3a"
+	 data-version="ca0d6f38f079463e81b0f8dbf86fd2e8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Additional expectations relating to investments for credit unions with more than &pound;10 million in assets and credit unions that invest in more complex investments (supranational bonds, corporate bonds, bank bonds, and money market funds) are set out in <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bea07d11d0bd4289b2b18f757e464dae" data-rb-content-link="Chapter">Chapters 11</a>&nbsp;and <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#081f02e8996f41309edfb2a08c3fc6e6" data-rb-content-link="Chapter">14</a>, respectively. Credit unions undertaking additional activities<sup><a href="#footnote-4">4</a></sup> are also expected to maintain a board-approved investment policy (see paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#83e8aae5a5f3489284837046495450dd" data-rb-content-link="Paragraph">14.2</a>&nbsp;in <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#081f02e8996f41309edfb2a08c3fc6e6" data-rb-content-link="Chapter">Chapter 14</a>).</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						See footnote 1 for additional activities.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/7----investments/29-08-2023?p=1" data-id="598c179bfa094f2caee2f48c32712c88" data-effective-date="29-08-2023" data-download-title="Investments_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/7----investments/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#598c179bfa094f2caee2f48c32712c88&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Investments">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="7dc99c02dd864645976c61851b212dae"
+	 data-version="58ddc0df66b1454da4080536becbada5"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Governance and organisation
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="61d96cacefe640b5a6b44ef9e6f53fc2"
+	 data-version="b7a451928c194451a0fb95b7c590a2ab"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that good governance is fundamental to the safety and soundness of all financial institutions. Accordingly, all directors are expected to fully understand their individual and corporate responsibilities and, in the context of the size and complexity of each&nbsp;individual business, to have the technical competence necessary for them to set, and to oversee, the strategy of their credit union. All directors will be expected to understand the risks inherent in their credit union&rsquo;s business model and to exercise appropriate oversight of the management of those risks. The PRA recognises that in applying these principles credit unions will take an approach that is proportionate to their size, complexity, and resources.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a5975e3c9c504f0f9f524f7e7a46958e"
+	 data-version="980a86ce98cd4d8cbf95ba86947de7e1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The following are indicators of good practice (the PRA considers that some credit unions will be limited in their ability to implement these practices, due to their size and resources, but the PRA would generally expect credit unions with more than &pound;10 million in total assets to meet all or most of the below): </p>
+<ul>
+    <li>there is a clear separation between the role and responsibilities of the General Manager/ Chief Executive Officer (CEO)/Senior Management Team (largely operational (although the General Manager/ CEO also plays a key role in developing strategy) keeping the board informed, and bringing recommendations to the board) and that of the board (largely strategic, approving key policies, making key decisions, overseeing performance, and appraising the CEO);</li>
+    <li> the board demonstrates a clear understanding and ownership of strategy and associated risks, focusing on this as a key agenda item at board meetings (rather than getting involved in operational detail); </li>
+    <li>the board has an appropriate range of skills and experience relevant to the activities carried on by the credit union; </li>
+    <li>the credit union carries out an analysis of skills gaps, and prioritises identified gaps when recruiting replacements and buys in external expertise as necessary; </li>
+    <li>the board is provided with management information which clearly indicates the credit union&rsquo;s financial position and whether key financial measures are being met with reference to the board&rsquo;s risk appetite; </li>
+    <li>the CEO/General Manager has formal objectives which they are assessed against, via a formal appraisal process, led by the Chair (this is separate to ongoing obligations under the Senior Managers and Certification regime and should not cause the credit union to duplicate any assessments they are already doing); </li>
+    <li>a formal assessment of the board, both individually and collectively, is carried out annually, led by the Chair; </li>
+    <li>a formal assessment of the Chair is carried out annually (for example, by another board member such as the Vice-Chair); and </li>
+    <li>the board maintains a succession plan that addresses the unexpected loss of key individuals.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b5777f5472c64c158c47e0fcb473b01b"
+	 data-version="9883396a92a643b98f578a9fb2bc9f66"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>All directors, without exception, are expected to ensure that their credit union fully complies with the requirements of the Financial Services Compensation Scheme (FSCS), and that their credit union&rsquo;s provisioning policy and practices are prudent and effective. The PRA expects that directors of all credit unions, irrespective of size and complexity, will ensure that the credit union complies with the Fundamental Rules within the PRA Rulebook, by maintaining its single customer view file accurately and in a form agreed by the FSCS at all times.<sup><a href="#footnote-5">5</a></sup> The PRA expects that directors of all credit unions will ensure that the credit union complies with rules relating to the maintenance of an accurate Single Customer View and Exclusions View as set out in the Depositor Protection Part of the PRA Rulebook. This includes ensuring that credit union software is updated as necessary.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						Fundamental Rule 8 is particularly relevant: <a href="https://www.prarulebook.co.uk/rulebook/Content/Part/211136/30-11-2015">https://www.prarulebook.co.uk/rulebook/Content/Part/211136/30-11-2015</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5debd5a51a054f7fbdbd6c6be38b9d6a"
+	 data-version="ed413bf495f4473496d7ed0404f4a794"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that directors understand that all outsourcing arrangements are commercial, business decisions, and that sole responsibility for ensuring operational continuity and data security, among other things, rests with the individual credit union.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7c0a9cd274f64b4d804881a7e27468cd"
+	 data-version="bcb681146d5e4db49f7548ee657f5be7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that all directors regularly satisfy themselves that their credit union accurately complies with the provisioning requirements in Rules <a href="/pra-rules/credit-unions#fe60e6e874bc4d40b348cbfb820410ad" data-rb-content-link="Rule">3.11</a>&nbsp;and <a href="/pra-rules/credit-unions#a259593a45ca4575a6fe6c0070fb3335" data-rb-content-link="Rule">3.12</a>&nbsp;of the Credit Unions Part of the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="92a441e32de748d0ad9aa66832c9bbc4"
+	 data-version="49608b3a6d7c4248905655f723bb0ed5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For a broader overview and more detailed good governance examples, credit unions may wish to review the UK Corporate Governance Code.<sup><a href="#footnote-6">6</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://www.frc.org.uk/library/standards-codes-policy/corporate-governance/uk-corporate-governance-code/#guidance-on-board-effectiveness">https://www.frc.org.uk/library/standards-codes-policy/corporate-governance/uk-corporate-governance-code/#guidance-on-board-effectiveness</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="466ebfc0912b475293056a885ed581b9"
+	 data-version="ffd38fa800914cbcb2cb3eeb55d0e8af"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Business plan and forecasts</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="489f59cfedae4e5abac9a3d5b8c27970"
+	 data-version="d348ab1a196b443fa0222f7f86089da3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions must maintain an up-to-date business plan approved by the board (Rule <a href="/pra-rules/credit-unions#2593c8b0f9df4b3b92d756fb0a466c47" data-rb-content-link="Rule">11.7</a>&nbsp;of the Credit Unions Part of the PRA Rulebook). The plan should be fit-for-purpose, and the detail provided commensurate with the size and complexity of the credit union. The PRA expects that the business plan should include (at a minimum):</p>
+<ul>
+    <li>clear and measurable objectives for the next three years, which include realistic&nbsp;targets for the year in question (eg in respect of loans, savings, and arrears) to&nbsp;<br>
+    measure performance against;
+    <ul>
+        <li>plausible financial forecasts (income and balance sheet) extending to at least&nbsp;two years beyond the current financial year. It is best practice for this to include&nbsp;reasoned and explicitly stated underlying assumptions (eg Bank of England&nbsp;Base Rate) and a coherent strategy for achieving the objectives; and</li>
+        <li>a robust plan for delivering the strategy which contains, among other things, an&nbsp;assessment of the current and emerging risks attached to the credit union&rsquo;s&nbsp;business and operations and the impact of actual and anticipated external&nbsp;developments.</li>
+    </ul>
+    </li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9682987a65c74d098aa590e0a7d74873"
+	 data-version="0d5760880bc04123ba63ef662d45bb81"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The business plan should be regularly updated and reviewed. Progress against business plan targets should be discussed regularly by the board, variances analysed and, where appropriate, pre-emptive or corrective action taken to deliver the business objectives.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d58b9d8408144ec5a6f85fee7a57b19a"
+	 data-version="14d2ac57d91e46258610da8baaecb465"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions are expected to inform their PRA supervisors ahead of undertaking any significant diversification of, or change to, their business model. The PRA expects a credit union to engage with it on the risks and benefits of the proposed diversification, financial projections before and after the diversification, and stress tests of those projections, based on severe, but plausible, scenarios. Examples of what the PRA would consider to be significant changes to a business model include providing new loan products such as corporate loans or issuing interest-bearing shares to raise deposit funding. Examples of what the PRA would not consider to a significant change to a business model include different branding for small unsecured personal loans.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/8----governance-and-organisation/29-08-2023?p=1" data-id="7dc99c02dd864645976c61851b212dae" data-effective-date="29-08-2023" data-download-title="Governance and organisation_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/8----governance-and-organisation/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#7dc99c02dd864645976c61851b212dae&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Governance and organisation">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="b310ab6f898f4e5dbcade7222b3b24fe"
+	 data-version="7648f3a3c3974cdd9c451d438a31e7f1"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Risk management
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6613b8e5869d413f9b676a8386f1bc96"
+	 data-version="c21a6e79ad0147da9c2af3d14c51e67b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions should have proportionate risk management systems, adequate for the needs of their business. Where there is evidence of poor risk management and/or governance at a credit union, the credit union should expect the PRA to engage with it on its mitigation plans. Where the credit union fails to engage or make meaningful progress, it should expect the PRA to engage more fully on whether it has a viable future and, if not, what plans it has to close in an orderly fashion. This could be by way of insolvent wind-up, solvent wind-down, or the transfer of its engagements to another credit union.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="43956d3a5d1d43c6bfc07f275c41d8b9"
+	 data-version="8f9f06a39d264eb98c0eb6319c13f0b8"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Internal audit function</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="bdaa707d0f3b41858412ff5300a4e7a3"
+	 data-version="6b6b11f7ca8d44d0afccc4ef65330d8c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions are required to establish and maintain an internal audit function under Rule <a href="/pra-rules/credit-unions#a110ad70f75a45a6bf23b11d3f02cd1b" data-rb-content-link="Rule">15.1</a>&nbsp;of the Credit Unions Part of the PRA Rulebook. The PRA expects the internal audit function<sup><a href="#footnote-7">7</a></sup> of a credit union to act as a forward-looking tool of risk management and control (taking into account the nature, size, and scope of the credit union&rsquo;s activities). The PRA expects the internal audit function to be independent from management, report to the board, and be capable of providing robust advice to the board, in particular where material business and regulatory risks are being run. The PRA considers indicators of good practice include: </p>
+<ul>
+    <li> internal audit function checks go beyond basic operational checks; for example, the internal audit function carries out checks to assess the soundness of the credit union&rsquo;s governance checks (examples include but are not limited to, observations of board&nbsp;meetings to determine whether there is comprehensive strategy-setting process, whether the board considers all matters of material relevance and documents the reasons for its decisions, checks of the board minutes to ensure actions are carried out);</li>
+    <li>the internal audit function provides sufficient challenge to the board; and</li>
+    <li>the internal audit function is sufficiently independent from the board. The PRA expects that where the credit union outsources its internal audit function, it does not engage its external auditor for that purpose unless in exceptional circumstances and, if it does so, only for the minimum practicable period.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						The PRA acknowledges that many credit unions will in effect utilise their supervisory committee to fulfil this  function. The PRA rules make reference to an internal audit function rather than a supervisory committee  and as such that terminology is repeated here. It is for credit unions and their boards to consider how they  meet applicable rules and guidance and whether their supervisory committee fulfils their needs.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ad736185fbde4eea99c732b971d42749"
+	 data-version="9c23105d537d47ada0c9a09a9636c768"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects credit unions with total assets of more than &pound;10 million should be able to meet all of the above expectations. Boards of smaller credit unions may use other means to satisfy themselves that their internal audit function is operating adequately.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/9---risk-management/29-08-2023?p=1" data-id="b310ab6f898f4e5dbcade7222b3b24fe" data-effective-date="29-08-2023" data-download-title="Risk management_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/9---risk-management/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#b310ab6f898f4e5dbcade7222b3b24fe&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Risk management">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="ea8d5c10afd74edf94222e8587142356"
+	 data-version="98521275adde4829a070cc9b7bc6d373"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Operational risk and resilience
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="dba880cc3d364750a11a29a2a0895ae0"
+	 data-version="12390a413b78481c9e43a5a64ffe9623"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Rule <a href="/pra-rules/credit-unions#f35ac70a980a4cf19350bde3ebe08c77" data-rb-content-link="Rule">17.1</a>&nbsp;of the Credit Unions Part of the PRA Rulebook requires a credit union to put in place contingency arrangements to ensure it could continue to operate and comply with its regulatory obligations in the event of an unforeseen interruption, such as a complete failure of information technology systems or destruction of premises by fire, which would otherwise prevent the normal operation of the credit union. Operational risk is the risk of direct or indirect loss resulting from inadequate or failed internal processes, people, and systems or from an external event. Examples include the risk of losses arising from the following: </p>
+<ul>
+    <li>internal/external fraud &ndash; this may arise from lack of adequate security of information systems as well as credit union officers, assets, and systems (including cyberattacks); </li>
+    <li> damage to physical assets; </li>
+    <li>business disruptions and information system failures &ndash; this includes hardware and software failures, telecommunication problems, and utility outages; </li>
+    <li>execution, delivery, and process management failures &ndash;this includes transaction and execution errors arising from human error, lack of resources, skills, training, policies, procedures, or poor management; </li>
+    <li>failure of an outsourcing or a third party service provider; </li>
+    <li>legal risk &ndash;this includes failure to meet legal, contractual, and other obligations (including exposure to fines, penalties, or damages); and </li>
+    <li>member, product, and business practices &ndash; this includes unintentional or negligent failure to meet obligations to specific members (including fiduciary and suitability requirements), or from the nature or design of a product.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4d3f6eb9c62845c9baff50521567eccf"
+	 data-version="13a47d05101346658569f2f945d9decc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA&rsquo;s expectations for operational risk management should apply proportionately according to the scale and nature of the credit union. The PRA expects all credit unions to consider the operational risks they are exposed to, and to have mitigating policies and procedures in place to manage them appropriately. As part of this, credit unions may consider, as evidence of good practice, the Basel Committee on Banking Supervision document on Principles for the Sound Management of Operational Risk.<sup><a href="#footnote-8">8</a></sup>&nbsp;</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						Principles for the Sound Management of Operational Risk: <a href="https://www.bis.org/publ/bcbs195.pdf">https://www.bis.org/publ/bcbs195.pdf</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0bea31fac80b45aebee48cbaa9d72bd6"
+	 data-version="fbdeef90ed9c4b09aa59ceda93aac8e3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects governance and oversight arrangements for operational resilience to be in place. All credit unions must test the business continuity arrangements regularly (under Rule <a href="/pra-rules/credit-unions#f35ac70a980a4cf19350bde3ebe08c77" data-rb-content-link="Rule">17.1</a>&nbsp;and Rule <a href="/pra-rules/credit-unions#1e104c226fa44300930b4f1c72bf5703" data-rb-content-link="Rule">17.2</a>&nbsp;of the Credit Unions Part of the PRA Rulebook). The PRA expects business continuity arrangements to be reviewed at least annually.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7f7a0d84a0124193849d96145af86d97"
+	 data-version="10e32b3cb26f4645926b98a5502c781c"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Notifications</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="ae87b2f45ce04701930fae9b182093a7"
+	 data-version="e9f95d1ebb9241709b065778472036cb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects to be notified, in advance of material operational changes and/or a credit union entering into any material outsourcing agreements. Credit unions are expected to ensure they have appropriate governance, risk management, and mitigation in place in advance of the material operational change or material outsourcing including, where relevant, communications to affected members. Plans for exiting from the material operational change or material outsourcing agreement and contingency plans should also be included. This could be a simple plan, depending on the complexities involved and materiality of the services impacted, and should not require material additional costs and resources to develop. The PRA considers failed or poorly implemented operational changes have the potential to cause significant disruption to credit unions, including interruption to critical services, often with an immediate impact on members relying on these services.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="093a91b59d3f41d88b148e93e9345f4a"
+	 data-version="8675887b6be0422f86d17af0d8017668"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Examples of material operational changes that the PRA would expect to be notified of include the replacing of core banking systems, material change of or new relationship with third party critical service suppliers (including Cloud suppliers and payment systems providers), digital transformation programmes, and data centre migrations. Where a credit union is unclear on their notification expectations, it should discuss this with the PRA.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/10---operational-risk-and-resilience/29-08-2023?p=1" data-id="ea8d5c10afd74edf94222e8587142356" data-effective-date="29-08-2023" data-download-title="Operational risk and resilience_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/10---operational-risk-and-resilience/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#ea8d5c10afd74edf94222e8587142356&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Operational risk and resilience">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="bea07d11d0bd4289b2b18f757e464dae"
+	 data-version="ebf8464501cb41c789667ac35bf884aa"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					11
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Additional expectations for credit unions with more than &#163;10m in assets
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a5aac592f486429f95196ceb938432ef"
+	 data-version="74c0b142340c4dcc8ef7b48fc1c28972"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Investments</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="4d87e842a00f4a04982de8f0df5379c1"
+	 data-version="e4ea26ab76db4e489f93ca0e2c179890"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects credit unions with more than &pound;10 million in total assets, and any credit&nbsp;unions that hold investments that come under Rules <a href="/pra-rules/credit-unions#0d0b1b4254d64d8fa8a52b0772d0c98e" data-rb-content-link="Rule">6.4(7)</a>&nbsp;and <a href="/pra-rules/credit-unions#0d0b1b4254d64d8fa8a52b0772d0c98e" data-rb-content-link="Rule">6.4(8)</a>&nbsp;of the Credit Unions&nbsp;Part of the PRA Rulebook, to adhere to the following concentration limits (in addition to the&nbsp;limits required by Rule <a href="/pra-rules/credit-unions#5829bbbea132467da802133424170c65" data-rb-content-link="Rule">6.4A</a>&nbsp;of the Credit Unions&nbsp;Part of the PRA Rulebook,<sup><a href="#footnote-9">9</a></sup> and with the exception of the investments listed in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#169e7fbec43148f3819006ff5c494c7f" data-rb-content-link="Paragraph">11.2</a>):</p>
+<ul>
+    <li>no more than 20% of a credit union&rsquo;s total investments<sup><a href="#footnote-10">10</a></sup> to be held with a single counterparty; and </li>
+    <li>an amount equivalent to no more than 75% of credit union&rsquo;s total capital to be held with any single counterparty.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						This means that the 5% cap on corporate bonds overrides the 75% limit set out in paragraph 11.1.
+					</span>
+				</li>
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						Total investments refers to surplus funds a credit union has invested in line with the requirements of Rules  6(3) and 6(4) of the Credit Unions Part of the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="169e7fbec43148f3819006ff5c494c7f"
+	 data-version="c4753f47f3f143959b23d40cef3908b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that the above concentration limits set out in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#4d87e842a00f4a04982de8f0df5379c1" data-rb-content-link="Paragraph">11.1</a>&nbsp;would not apply to the following investments: </p>
+<ul>
+    <li>sterling-denominated securities issued by the UK government, or a fixed-interest sterling-denominated security guaranteed by the UK government with a maturity of up to five years from the date on which the investment is made (under Rules <a href="/pra-rules/credit-unions#ec658e8967de46ee838d15ffa53707b8" data-rb-content-link="Rule">6.3.3</a>, <a href="/pra-rules/credit-unions#ec658e8967de46ee838d15ffa53707b8" data-rb-content-link="Rule">6.3.4</a>, <a href="/pra-rules/credit-unions#0d0b1b4254d64d8fa8a52b0772d0c98e" data-rb-content-link="Rule">6.4.3</a>, and <a href="/pra-rules/credit-unions#0d0b1b4254d64d8fa8a52b0772d0c98e" data-rb-content-link="Rule">6.4.4</a>&nbsp;of the Credit Unions&nbsp;Part of the PRA Rulebook); </li>
+    <li>deposits placed with a credit institution which is authorised in the UK to accept deposits on terms that the deposit shall be repayable within at most 12 months from the date on which the investment is made (under Rule<a href="/pra-rules/credit-unions#ec658e8967de46ee838d15ffa53707b8" data-rb-content-link="Rule"> 6.3</a>&nbsp;(1) of the Credit Unions&nbsp;Part) and rated A-AAA by at least two credit rating agencies registered with the FCA; and </li>
+    <li>UK bank bonds which have a maturity of up to five years from the date on which the investment is made (under Rule <a href="/pra-rules/credit-unions#0d0b1b4254d64d8fa8a52b0772d0c98e" data-rb-content-link="Rule">6.4</a>&nbsp;(6) of the Credit Unions&nbsp;Part) rated A-AAA by at least two credit rating agencies registered with the FCA.<sup><a href="#footnote-11">11</a></sup></li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-11" class="rb-footnote">
+					<span class="fn-col-1">
+						11.
+					</span>
+					<span class="fn-col-2">
+						Although we consider the scenario unlikely, a credit union should not invest surplus funds into a bond issued by a counterparty for the purposes of raising capital / meeting its MREL requirement.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7063b0d5a4fc48c4bf8f88afa2d28273"
+	 data-version="32f28b8a9d20460089aa6515a3b7128f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When the credit rating of an investment (or a relevant credit institution that holds the investment) that falls under the categories in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#169e7fbec43148f3819006ff5c494c7f" data-rb-content-link="Paragraph">11.2</a>&nbsp;changes so that it no longer meets the required credit rating, a credit union would be expected to move funds as appropriate to ensure that they meet the limits set out in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#4d87e842a00f4a04982de8f0df5379c1" data-rb-content-link="Paragraph">11.1</a>. The PRA does not expect a credit union to break a term deposit to meet the limits set out in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#4d87e842a00f4a04982de8f0df5379c1" data-rb-content-link="Paragraph">11.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="da1021e8f53d4e55b8e37a19b163756b"
+	 data-version="f80ab8809dac4c6a917bdea62b40a30e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a credit union&rsquo;s existing investments exceed the concentration limits in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#4d87e842a00f4a04982de8f0df5379c1" data-rb-content-link="Paragraph">11.1</a>, the PRA would not expect a credit union to break existing investment contracts to bring them into line with the expected limits. Rather, when investments mature the PRA expects credit unions to ensure that new investments made are compliant with the limits in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#4d87e842a00f4a04982de8f0df5379c1" data-rb-content-link="Paragraph">11.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ace16d4b706c482aaaa63beceefb6c55"
+	 data-version="e6006fe098784c679948b1f65f3aeaf1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It is best practice to spread funds out where practicable and before making investment decisions, credit unions should remain mindful of the importance of not creating excessive time band or counterparty concentrations in line with credit unions&nbsp;rule <a href="/pra-rules/credit-unions#a514d170dc3f44d1b143b01580cc1d47" data-rb-content-link="Rule">6.5(4)</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="12433918554d46ecb2775bcd1181d8b9"
+	 data-version="cd00db099ca943c19d4a28f30eba1991"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions investing their surplus funds are required to consider and document their decisions and account for counterparty, concentration, liquidity, and interest rate risk under Rules <a href="/pra-rules/credit-unions#a514d170dc3f44d1b143b01580cc1d47" data-rb-content-link="Rule">6.5</a>&nbsp;and <a href="/pra-rules/credit-unions#74ff268826cf4b51b26d5df395be53ae" data-rb-content-link="Rule">6.6</a>&nbsp;of the Credit Unions&nbsp;Part of the PRA Rulebook. When making investment decisions, the PRA expects credit unions to carefully consider the risk return trade-off and to ensure investment decisions reflect the credit union&rsquo;s risk appetite. Credit unions should consider setting exposure limits for different counterparties based on their risk profile, as part of their risk appetite statement.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c0c383729f1f41cfbb4878745b4cda09"
+	 data-version="9f1bc63d52e94f1cb1a19dadf00bf2ca"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions should be mindful of the need to meet liquidity expectations, in particular the additional liquidity expectations where credit unions invest in more complex investments (see <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#081f02e8996f41309edfb2a08c3fc6e6" data-rb-content-link="Chapter">Chapter 14</a>). In order to help credit unions manage their liquidity in the face of unexpected outflows, and in line with Rule <a href="/pra-rules/credit-unions#a514d170dc3f44d1b143b01580cc1d47" data-rb-content-link="Rule">6.5</a>&nbsp;of the Credit Unions Part of the PRA Rulebook, the PRA expects credit unions to ensure that an adequate proportion of its investments are able to be broken before the end of the term is reached (even if a fine is incurred).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a83b8f29173f404fa2af1a5118da4f0c"
+	 data-version="23ab09e1203d4627991fabab7a01e50f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that the limits in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#4d87e842a00f4a04982de8f0df5379c1" data-rb-content-link="Paragraph">11.1</a>&nbsp;would not apply to funds held temporarily in an account before an investment decision is made.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="abeb569a8448495189ddb342c4d7bf7f"
+	 data-version="b658f36846bf4458bad0147d96e4563c"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Liquidity</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8bed05bb93964c99ae9f7ca59176d471"
+	 data-version="1fd3604d9ecb4943ae58dd147c2eb157"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For credit unions with more than &pound;10 million in assets, the PRA also expects the liquidity management policy statement to cover: </p>
+<ul>
+    <li>the credit union&rsquo;s strategy, processes, and systems in place for liquidity risk management; </li>
+    <li>the liquidity risk appetite agreed by the board; </li>
+    <li>any liquidity buffers to be maintained as a safeguard on the basis of stressed conditions that may arise; </li>
+    <li>plans to address any liquidity or funding risks arising from mismatches in maturity (which can give rise to cash flow imbalances and a risk that there could be insufficient cash resources to meet payment outflows when they fall due); and </li>
+    <li>contingency plans with actions that will be taken if liquidity targets are not met.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="df80cae79524444c9336b94415d5a4a9"
+	 data-version="b0f2f30b8bbc4766aca87eeec865683d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Risk management</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="fba228f3de024cb4b0dc493cd5f55204"
+	 data-version="c3961a1a05974f4faf29570983900a72"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Rule <a href="/pra-rules/credit-unions#208f22e58d4443a2b1a523a7b0b8b194" data-rb-content-link="Rule">11.1(2)</a>&nbsp;of the Credit Unions Part of the PRA Rulebook requires credit unions to establish, implement, and maintain effective processes to identify, manage, monitor, and report the risks it is, or might be, exposed to. Rule <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#169e7fbec43148f3819006ff5c494c7f" data-rb-content-link="Paragraph">11.2</a>&nbsp;requires that these processes are comprehensive and proportionate to the nature, scale, and complexity of the risks inherent in its business model and activities. In line with these requirements, the PRA expects all credit unions with more than &pound;10 million in assets to maintain a risk appetite statement (RAS). This should: </p>
+<ul>
+    <li>include clear, objective and, where appropriate, quantitative measures which the whole board has approved; </li>
+    <li>be explicitly connected to the business objectives, and accurately reflect the credit union&rsquo;s specific risk appetite (including articulation of the threshold at which it would consider taking management actions against each risk); and </li>
+    <li>be used proactively by the board to inform the strategy and business plan, and ensure the board&rsquo;s decisions are compliant and consistent with, aligned to and not in excess of, the board&rsquo;s risk appetite.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="02e49f1713244004b11e6e1217efb637"
+	 data-version="a320cce17a154d7681966bc5de8524df"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Operational risk and resilience</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="5a4a06043d3741e3a1c9af1e998cb64e"
+	 data-version="4cfb71ca67d745e59a33fee7c71a2c65"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			In addition to the expectations set out in <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#ea8d5c10afd74edf94222e8587142356" data-rb-content-link="Chapter">Chapter 10</a>, the PRA expects credit unions with more than &pound;10 million in assets to consider and document the core systems and outsourcing arrangements that are critical to the operation of the business.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/11---additional-expectations-for-credit-unions/29-08-2023?p=1" data-id="bea07d11d0bd4289b2b18f757e464dae" data-effective-date="29-08-2023" data-download-title="Additional expectations for credit unions with more than &#163;10m in assets_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/11---additional-expectations-for-credit-unions/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bea07d11d0bd4289b2b18f757e464dae&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Additional expectations for credit unions with more than &#163;10m in assets">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="1d7e79c770024ec08da0ae8a98455bf6"
+	 data-version="9d00d68f0ded41d1b3f10bcce7374b68"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					12
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Additional expectations for credit unions with more than &#163;50m in assets
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="078e2b3e93574ddcb8fe48ffff6941fe"
+	 data-version="2edaa115d3bc4c44a82c442e1b9821a9"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Liquidity</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="dcee8ac59a9145559be2cd092aaf0204"
+	 data-version="6582f25714734227afb95e53a4f0f0a8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In order to ensure a credit union is holding sufficient liquid funds under Credit Unions <a href="/pra-rules/credit-unions#32a826f50d8646c6860025fb2d159ce7" data-rb-content-link="Rule">9.4</a>, the PRA expects credit unions with more than &pound;50 million in total assets to carry out periodic (at least annual) liquidity stress testing whereby the impact of stressed outflows is considered.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="736b90cb201a48d781703e2bd6f17ec1"
+	 data-version="2b947027a4f94280854f0efb3ee39545"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The liquidity stress testing expectation referred to in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#dcee8ac59a9145559be2cd092aaf0204" data-rb-content-link="Paragraph">12.1</a>&nbsp;could be met by the credit union&rsquo;s own analysis, which is based on a clearly articulated RAS (see paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#dba880cc3d364750a11a29a2a0895ae0" data-rb-content-link="Paragraph">10.1</a>) defining the duration and type of stress or stresses that the credit union aims to survive. The PRA expects the stress tests to consider the impact of a range of severe, but plausible scenarios (including combined scenarios). Credit unions should expect the PRA to engage with them on the method used and assumptions made, eg their assessment of the likely run-off of different elements of the retail book.&nbsp;&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="45da2f9d51ad4591b55518c3c1fd1607"
+	 data-version="2433dcecdf504ff1b69dac13e55c5939"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For illustrative purposes, liquidity stress testing referred to in paragraph <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#dcee8ac59a9145559be2cd092aaf0204" data-rb-content-link="Paragraph">12.1</a>&nbsp;could be met by calculating (total cash + assets that can be realised for cash within eight business days)/total net cash outflows over 30 calendar days, where: </p>
+<ul>
+    <li> Total net cash outflows = total expected cash outflows &ndash; total expected cash inflows (or 75% of total expected outflows, whichever is greater) </li>
+    <li>Total expected cash outflow = (FSCS covered deposits [excluding internet deposits] *5% withdrawal rate) + ([uncovered deposits and internet deposits] *10% withdrawal rate). </li>
+    <li>Total expected cash inflow= contractual inflows (ie loan and mortgage payments) expected over 30 day period that are fully performing.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2124e50be45543f29c5f94b8fd3db120"
+	 data-version="9f24b69445d84968b26cf55841aba8ee"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The above calculation would be expected by the PRA to be more than 100%. Credit unions may use contractual outflows/ inflows and behavioural flows in their calculations. Credit unions should be able to clearly explain their rationale to the PRA.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="808c8783f6424d01b38453ec77179f1b"
+	 data-version="6f148a4b1824472abeeacc71a45668d2"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Risk management</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="098c8bd3916943918d9849a3f415c145"
+	 data-version="2087a56f8e7a40289e2ba28d59515d05"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In addition to the expectations set out in <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#b310ab6f898f4e5dbcade7222b3b24fe" data-rb-content-link="Chapter">Chapters 9</a>&nbsp;and <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bea07d11d0bd4289b2b18f757e464dae" data-rb-content-link="Chapter">11</a>, credit unions with more than &pound;50 million in total assets and/or credit unions that carry out more complex lending (such as providing mortgages or lending to corporates), and/or credit unions that invest in more complex investment products (supranational bonds, corporate bonds, bank bonds, and money market funds) should expect to engage more with the PRA. The PRA expects these credit unions to undertake scenario analysis to identify the impact of key strategic initiatives and external risks on their businesses. Examples of scenarios a credit union may use include: poorer than expected loan book performance; greater than expected increase in shares, higher than expected arrears, changes to welfare benefits, changes in bank interest rates etc. The PRA considers it good practice to look at combined scenarios.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a89f01f252b04ac9ad2a26cd11f4a494"
+	 data-version="151113d1c141477d9aa1edb1bc1724d4"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Operational risk and resilience</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="af0ae1c462284a0e96aa1bc364045e4e"
+	 data-version="05b664fb016f4ac4a1348f28c5342332"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In addition to the expectations set out in<a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#ea8d5c10afd74edf94222e8587142356" data-rb-content-link="Chapter"> Chapters 10</a> and <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bea07d11d0bd4289b2b18f757e464dae" data-rb-content-link="Chapter">11</a>, the PRA expects credit unions with more than &pound;50 million in assets to consider and document: </p>
+<ul>
+    <li>the people, processes, and technology required to deliver critical services;<sup><a href="#footnote-12">12</a></sup> and </li>
+    <li>what scenarios could result in them exceeding their risk appetite, and what actions they will take to respond and react to instances of crystallised operational risk to ensure they remain&nbsp;within their risk appetite. This should include consideration of external disruptions, and where the disruption is initiated at a provider whose products or services support the credit union&rsquo;s critical services.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-12" class="rb-footnote">
+					<span class="fn-col-1">
+						12.
+					</span>
+					<span class="fn-col-2">
+						From the PRA Glossary: Critical services ‛means activities, functions or services performed for one or more business units of the firm or for the firm and another member of its group, whether by the firm itself, any  other group member or a person outside the firm’s group, the failure of which would lead to the collapse of  or present a serious impediment to the performance of the firm’s critical functions.’
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/12---additional-expectations-for-credit-unions/29-08-2023?p=1" data-id="1d7e79c770024ec08da0ae8a98455bf6" data-effective-date="29-08-2023" data-download-title="Additional expectations for credit unions with more than &#163;50m in assets_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/12---additional-expectations-for-credit-unions/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#1d7e79c770024ec08da0ae8a98455bf6&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Additional expectations for credit unions with more than &#163;50m in assets">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="e4b333dc2fe34da1972aa9ebfee75c93"
+	 data-version="f5af3693ee94434c950381c0a50d415c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					13
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Additional expectations for credit unions with more than &#163;100m in assets
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c12006ce04ae4200a12dc2207200c89b"
+	 data-version="bad2c2ba1b144024aad41d184b094484"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Exit strategy planning</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="0623f3a9bfba4912adb4280bf029998b"
+	 data-version="2f1eba8eb1c64376b93117a19456bfbe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In line with requirements under Rule <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bea07d11d0bd4289b2b18f757e464dae" data-rb-content-link="Chapter">11.1(2)</a>&nbsp;of the Credit Unions Part of the PRA Rulebook, for a credit union to have effective processes to identify, manage, monitor, and report the risks to which it is exposed, the PRA expects a credit union with more than &pound;100 million in assets to be able to demonstrate that it has management information, monitoring, and governance processes to support timely wind-down decision making. As part of this, it is best practice for a credit union to consider the scenarios that could lead to it no longer being viable.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3b71ae894f87416a95b4801ce042f641"
+	 data-version="8e0ba5ee6cc74994aac9efa2aaed87a9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions with more than &pound;100 million in assets are expected to consider the steps and resources needed to (i) wind down, and (ii) achieve a transfer of engagements, while, to the extent possible, avoiding any negative effects on members. These credit unions are expected to evidence that they have evaluated the risks and impact of a wind-down or transfer and considered how best to mitigate them.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/13----additional-expectations-for-credit-unions/29-08-2023?p=1" data-id="e4b333dc2fe34da1972aa9ebfee75c93" data-effective-date="29-08-2023" data-download-title="Additional expectations for credit unions with more than &#163;100m in assets_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/13----additional-expectations-for-credit-unions/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#e4b333dc2fe34da1972aa9ebfee75c93&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Additional expectations for credit unions with more than &#163;100m in assets">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="081f02e8996f41309edfb2a08c3fc6e6"
+	 data-version="4d06a567f88040e18b9be68131fbf995"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					14
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Additional expectations for credit unions that wish to invest in more complex investments
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6a9a3ddf26934dc1bc5583a10cbdd3f8"
+	 data-version="4dd95426e3564976975a8c945648cfaf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions that invest in more complex investments under Rules <a href="/pra-rules/credit-unions#986f588100fc47c2b912b94340cd8711" data-rb-content-link="Chapter">6.4(7)</a>&nbsp;and <a href="/pra-rules/credit-unions#986f588100fc47c2b912b94340cd8711" data-rb-content-link="Chapter">6.4(8)</a>&nbsp;of the Credit Unions Part of the PRA Rulebook are expected to adhere to the investment expectations set out in <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bea07d11d0bd4289b2b18f757e464dae" data-rb-content-link="Chapter">Chapter 11</a>&nbsp;(paragraphs <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#bea07d11d0bd4289b2b18f757e464dae" data-rb-content-link="Chapter">11.1-11.6</a>).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="83e8aae5a5f3489284837046495450dd"
+	 data-version="ba4200ab101f4abba7ab24472f814027"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects credit unions undertaking additional activities and/or credit unions investing in more complex investments (supranational bonds, corporate bonds, non-UK bank bonds, and money market funds) to maintain a board-approved investment policy. This should: </p>
+<ul>
+    <li>set out organisational arrangements including the roles and responsibilities of officers involved in the credit union&rsquo;s investments; </li>
+    <li>set out their strategy for managing investments, including:
+    <ul>
+        <li> the credit union&rsquo;s risk appetite; </li>
+        <li>the characteristics of the investments the credit union will make including quality, counterparty, and maturity; and </li>
+        <li>how the credit union will manage market risk including specifically listing institutions, issuers, and counterparties that may be used, or criteria for their selection, and limits on the amounts that may be invested with each; </li>
+    </ul>
+    </li>
+    <li>include the credit union&rsquo;s approach to assessing credit worthiness and counterparty risk and maintaining a diversified investment portfolio; </li>
+    <li>consider liquidity and funding risks arising from maturity mismatch and consider if and when additional liquidity may be required; and </li>
+    <li>be reviewed regularly (at least annually).</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="200e1fac8b744adb88f1afd22ac63a9a"
+	 data-version="0019a1efd84747af859d27567acc1742"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Liquidity</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="1e8dcc7dce6a45e9ba0ebc79d8b5bd2e"
+	 data-version="44ba58ac86bd478ba3581ee83ad02713"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions that invest in more complex investments are expected to meet the liquidity stress testing expectations set out in paragraphs <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#1d7e79c770024ec08da0ae8a98455bf6" data-rb-content-link="Chapter"><a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#1d7e79c770024ec08da0ae8a98455bf6" data-rb-content-link="Chapter">12.1&nbsp;to 12.4</a></a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/14---additional-expectations-for-credit-unions/29-08-2023?p=1" data-id="081f02e8996f41309edfb2a08c3fc6e6" data-effective-date="29-08-2023" data-download-title="Additional expectations for credit unions that wish to invest in more complex investments_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/14---additional-expectations-for-credit-unions/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#081f02e8996f41309edfb2a08c3fc6e6&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Additional expectations for credit unions that wish to invest in more complex investments">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="449a4d1c43754b3594bec1d0c5d630c8"
+	 data-version="b77e850a7c384cc8baa449033350d46e"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					15
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Additional expectations for credit unions that lend to corporate members
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="cf63c1cb8b8e4b5699c1a75cd77d310a"
+	 data-version="6e84473f612941b7b31b51210b904597"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects credit unions that provide loans to corporate members<sup><a href="#footnote-13">13</a></sup> should be mindful of the additional risks involved in providing corporate loans, for example business model risks, or difficulty predicting future cash flow.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-13" class="rb-footnote">
+					<span class="fn-col-1">
+						13.
+					</span>
+					<span class="fn-col-2">
+						See section 5A of the Credit Union Act 1979 (Great Britain) or Section 14A of the Credit Unions (Northern Ireland) Order 1985 for the definition of corporate members.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="48a816111ec5490caa745f29bac0890b"
+	 data-version="f0a3dc357e564810b68b5961a61f6926"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions providing loans to corporate members are required to comply with the requirements in Rule <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#0bea31fac80b45aebee48cbaa9d72bd6" data-rb-content-link="Paragraph">10.3</a>&nbsp;of the Credit Unions Part of the PRA Rulebook. The PRA expects credit unions that have notified the PRA that they are undertaking corporate lending to: </p>
+<ul>
+    <li>establish overall and individual limits for these loans (while noting the statutory limitation<sup><a href="#footnote-14">14</a></sup> that aggregate corporate loan balances must not exceed 10% of outstanding balances of all loans made). Separate limits should be considered for secured loans to corporate members;</li>
+    <li>set a risk appetite (and limit) for these loans, agreed by the board. A separate risk appetite and limit for secured corporate loans should be considered; </li>
+    <li>incorporate within monthly management information reports to the board, corporate lending levels (percentage of corporate loans that make up loan book and level of arrears associated with corporate loans at a minimum), with separate reporting for secured corporate loans. This information should be reviewed by the board regularly; and </li>
+    <li>conduct scenario analysis to consider the risks of not recovering funds (for example, looking at the impact of a number of corporate loans defaulting at the same time).</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-14" class="rb-footnote">
+					<span class="fn-col-1">
+						14.
+					</span>
+					<span class="fn-col-2">
+						Limits on loans to corporate members are set out in the Credit Union Act 1979 and The Credit Unions (Northern Ireland) Order 1985.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f52c386ed53844e69d77200918b32cdc"
+	 data-version="fce04b066535417880c09f5143e7d782"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a credit union undertakes secured loans to corporate members, the PRA may seek additional information from the credit union on the nature of its lending to corporate members, including: </p>
+<ul>
+    <li> a quarterly review of existing loans (including performance of the businesses); and </li>
+    <li>whether/ how funds could be recovered &ndash;commercial property generally has a significantly higher default rate than residential mortgage lending, and the credit union should consider scenario analysis to determine the impact this could have on their business.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="42830b68eeb442b7a74ea5a952a731a1"
+	 data-version="f8a42b94689a4b5d981f32f1373affd9"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Liquidity</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="1bbb48fb0bdb465398c8182e6534d9f4"
+	 data-version="3a5eab1d72d24c07980230e9a8f2f44e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions that provide loans to corporate members are expected to meet the liquidity stress testing expectations set out in paragraphs <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#1d7e79c770024ec08da0ae8a98455bf6" data-rb-content-link="Chapter"><a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#1d7e79c770024ec08da0ae8a98455bf6" data-rb-content-link="Chapter">12.1&nbsp;to 12.4</a></a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/15---additional-expectations-for-credit-unions/29-08-2023?p=1" data-id="449a4d1c43754b3594bec1d0c5d630c8" data-effective-date="29-08-2023" data-download-title="Additional expectations for credit unions that lend to corporate members_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/15---additional-expectations-for-credit-unions/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#449a4d1c43754b3594bec1d0c5d630c8&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Additional expectations for credit unions that lend to corporate members">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="3f7afeb3c7ea4dbca127c3f81730ad99"
+	 data-version="d794a6d678e94c12885c48102901b30c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					16
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Additional expectations for credit unions that provide consumer credit
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ea130fdbd90148c989ffd788fc1a9c26"
+	 data-version="fb4283eaccda4645a564c39c826a0b14"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions providing credit cards, hire purchase, and/or conditional sale are required to meet the provisions in Rule <a href="/pra-rules/credit-unions#581d1e6c82754d849076684c822ce0a6" data-rb-content-link="Rule">10.3</a>&nbsp;of the Credit Unions Part of the PRA Rulebook. The PRA also expects credit unions that provide credit card services to ensure: </p>
+<ul>
+    <li> the board has sufficient knowledge and expertise regarding the risks involved; and </li>
+    <li>a credit card policy is maintained which sets out (among other matters) how they would monitor and mitigate risks arising from the activity. This should include:
+    <ul>
+        <li>appropriate risk management arrangements, including monitoring metrics to provide effective oversight; </li>
+        <li>details of how the credit union is meeting its obligations with respect to outsourcing arrangements that apply to credit cards. For example, credit unions should be able to demonstrate that they are able to terminate&nbsp;outsourcing arrangements where necessary without detriment to the continuity of provision of services to members;<sup><a href="#footnote-15">15</a></sup> and</li>
+        <li>an assessment of how much capital is required to cover specific risks related to credit cards (for example claims arising under section 75 of the Consumer Credit Act 1974, or losses from fraud, issues with the payment systems, product design, mis-selling, incorrect interest charges); this should be clearly documented. Where a credit union fails to demonstrate that they have enough capital to cover such risks, PRA supervisors may consider imposing an additional capital add-on (see section 2 above on capital).</li>
+    </ul>
+    </li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-15" class="rb-footnote">
+					<span class="fn-col-1">
+						15.
+					</span>
+					<span class="fn-col-2">
+						See Rule 14.5(7) in the Credit Unions Part of the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="64cc23d345bf4390b48c824b76c65af5"
+	 data-version="f47dce124edc45498489f29d8ec8eb44"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Liquidity</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="bb9f5bf132b2482187bfdab55e5b625a"
+	 data-version="966fee006f4c451bb515757a6f0446c0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions that provide credit cards or enter into hire purchase or conditional sale agreements are expected to meet the liquidity stress testing expectations set out in paragraphs <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#1d7e79c770024ec08da0ae8a98455bf6" data-rb-content-link="Chapter">12.1&nbsp;to 12.4</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/16----additional-expectations-for-credit-unions/29-08-2023?p=1" data-id="3f7afeb3c7ea4dbca127c3f81730ad99" data-effective-date="29-08-2023" data-download-title="Additional expectations for credit unions that provide consumer credit_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/16----additional-expectations-for-credit-unions/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#3f7afeb3c7ea4dbca127c3f81730ad99&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Additional expectations for credit unions that provide consumer credit">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="24dacb8b9dbe4ca685c36b33ed196242"
+	 data-version="878f75364b1f435c9800cf8eab4ba02f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					17
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Additional expectations for credit unions that provide mortgages
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c82dbd1e0ee94360adaa0753057edbc7"
+	 data-version="cce9ee494e5f4cb39c0c0a76656ab2f4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions that provide mortgages are expected to consider the additional risks to which they are exposed, and put in place appropriate systems and controls to monitor and mitigate those risks. As part of this, the PRA considers it good practice for these credit unions to consider the key risks inherent in mortgage lending as highlighted in SS20/15 Supervising building societies&rsquo; treasury and lending activities.<sup><a href="#footnote-16">16</a></sup> The PRA acknowledges; however, that the expectations set out in SS20/15 may not all be applicable to such credit unions and the size, scale, and nature of a credit union&rsquo;s mortgage book should be taken into account to ensure a proportionate approach. For example, the ability to gain Mortgage Indemnity Guarantee (MIG) insurance may not be feasible due to low volumes.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-16" class="rb-footnote">
+					<span class="fn-col-1">
+						16.
+					</span>
+					<span class="fn-col-2">
+						April 2015: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/supervising-building-societies-treasury-and-lending-activities-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2015/supervising-building-societies-treasury-and-lending-activities-ss</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d965ddb5eb5e4e03b0307690243ce3d7"
+	 data-version="1c1cac65d768495dbd669c0e02f87b83"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In particular, it is good practice for credit unions that provide mortgages to have regard to Chapter 3 of SS20/15 (lending) and ensure they consider relevant sections. It is good practice for such credit unions to: </p>
+<ul>
+    <li>be able to evidence that they have given consideration to the relevant risks and put mitigating controls in place where they consider it appropriate. Risks to be considered include:
+    <ul>
+        <li>affordability risk profile including appropriate controls over interest only mortgages, to ensure that repayment of the loan principal at maturity is achievable; </li>
+        <li>accurate and verifiable assessment and valuation of security; </li>
+        <li>pricing of risk. Credit unions are expected to have risk pricing models that at a minimum take into account the factors outlined in Chapter 3 of SS20/15; and </li>
+        <li>the risks inherent in different sub categories of mortgage lending (eg impaired credit, buy-to-let lending, self-build lending, shared ownership, lending in and into retirement, and commercial real estate lending).</li>
+    </ul>
+    </li>
+    <li>review their board-approved lending policy to ensure its aims and contents align with Chapter 3 of SS20/15. </li>
+    <li>put in place risk management controls that are appropriate and proportionate to the types of business undertaken, as set out in SS20/15. </li>
+    <li>have in place lending limits set by reference to available management expertise and risk management capability as set out in SS20/15. The PRA expects the lending limits outlined in the credit union&rsquo;s lending policy to resemble the Traditional Approach set out in Appendix 2 of SS20/15 (credit unions should; however, use &lsquo;total mortgage book&rsquo; instead of &lsquo;total loan book&rsquo; when calculating the indicative limits). In some instances, credit unions may set different limits dependent on their risk appetite; in such instances the credit union should make the PRA aware of the limits, the rationale, and any risk mitigation arrangements.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c90191c0efa34c9f8ea58e0be9ed07d8"
+	 data-version="48f69fac147e4ef48188f46b0c2b0625"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In line with the requirements in Rule <a href="/pra-rules/credit-unions#581d1e6c82754d849076684c822ce0a6" data-rb-content-link="Rule">10.3</a>&nbsp;of the Credit Unions Part of the PRA Rulebook, credit unions providing mortgages should also consider Chapter 4 (Financial risk management) of SS20/15 and be able to evidence that they have given consideration to the key financial risks described, and how they are managing and mitigating these. The key financial risks include: </p>
+<ul>
+    <li>liquidity risks, arising from maturity transformation; </li>
+    <li>funding risk, arising from the relative stability of different funding sources and reliance on new funding to replace outflows;</li>
+    <li>wholesale counterparty credit risk interest rate risks: a credit union that provides mortgages should have an adequate system for managing financial risks arising from fluctuations in interest rates. The PRA expects credit unions that have a fixed-rate mortgage book to be able to demonstrate that they are managing the interest rate risks adequately. Such credit unions should follow, to the extent possible, the risk analysis elements of the financial risk management indicative control framework in Appendix 3 of SS20/15 for the administered approach. The PRA expects such credit unions to discuss their approach for managing interest rate risk with their supervisor and share their plan; and </li>
+    <li>operational risks in treasury and related activities.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cd543b77d468458f8a071269a09c35b4"
+	 data-version="4e89a905b92b434aa4cb6a1fc7fb64af"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions that provide mortgages are expected to have in place internal controls on treasury financial risk management (see Rule <a href="/pra-rules/credit-unions#581d1e6c82754d849076684c822ce0a6" data-rb-content-link="Rule">10.3</a>&nbsp;of the Credit Unions Part of the PRA Rulebook). As such, these credit unions should review relevant sections of paragraphs 4.6- 4.31 of SS20/15 and consider, as evidence of good practice: </p>
+<ul>
+    <li>establishing a board-approved treasury management policy that governs all areas of treasury activities (see paragraph 4.6 of SS20/15); </li>
+    <li>the imposition of policy limits (see paragraphs 4.9-4.13 of SS20/15); </li>
+    <li>putting in place risk management systems and controls that are proportionate, and appropriate for the business they intend to undertake. This includes stress testing to evaluate the impact in income of abnormal market conditions, and board information reporting; (see paragraphs 4.15-4.27 of SS20/15); and </li>
+    <li>conducting an independent review of treasury activities, including adequacy of controls over maturity mismatch (see paragraphs 4.28-4.31 of SS20/15).</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e920e39412674ac39d691fa60c06f01d"
+	 data-version="94674c6fe5824ce7b01496e64d3ebd42"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Liquidity</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="088ff7e7052a4b9a91d64a4db2063b16"
+	 data-version="68fbe9de64c145dda2ab8ee936dd575c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions that provide mortgages are expected to meet the liquidity stress testing expectations set out in paragraphs <a href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions#1d7e79c770024ec08da0ae8a98455bf6" data-rb-content-link="Chapter">12.1 to 12.4</a>.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="253887140bc14517bd6a93e7dfb22856"
+	 data-version="7b70b9b445ed44299fbb020876442b12"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Commercial real estate (CRE) lending</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="837c999cff7e45fc9ab8cfe384149f7c"
+	 data-version="0128e21c7f974fb4949d7a1b4bd1f2b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Credit unions engaged in, or wishing to engage in, commercial real estate lending should be mindful of the different nature of the risks associated with this activity. For example, commercial property will generally require different valuation skills to residential housing and has a significantly higher default rate. As such, the PRA expects credit unions undertaking or considering undertaking this activity to carefully consider paragraphs 3.48- 3.53 of SS20/15 and be able to evidence that they have adequate risk controls in place.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/08/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-08-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/17---additional-expectations-for-credit-unions/29-08-2023?p=1" data-id="24dacb8b9dbe4ca685c36b33ed196242" data-effective-date="29-08-2023" data-download-title="Additional expectations for credit unions that provide mortgages_29-08-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-23-supervising-credit-unions/17---additional-expectations-for-credit-unions/29-08-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-23-supervising-credit-unions#24dacb8b9dbe4ca685c36b33ed196242&amp;subject=PRA Rulebook - SS2/23 – Supervising credit unions – Additional expectations for credit unions that provide mortgages">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

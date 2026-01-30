@@ -1,0 +1,4533 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/technical-provisions" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/technical-provisions" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{0264BE5C-4EB9-40E3-9DAE-07AE569A6427} -->
+<title>Technical Provisions | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Technical Provisions">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Technical Provisions">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwokra-f-ef79bfda6-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":45,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"80aa5bc","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51239,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370274","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==rwB/Pi5qEbvnzmYqM1wal2ExDAxVbSo/Ymf812TOgHa0bW6K63qHlcEh6/M5tivqt6TFlIEfdB4NdCyc6VR68z8tSa43Mj16f276AXHO70QEGkxjLclDWGusuRzWWkq2bKzN0ljxNLpIayUn/P/gs8N5i0o3bp5dDVlLf9oU425rMMWKlBY7vodiqnfqyNuvRd4H/PSZJgfjXkfzHH8XwUk88PEY1t/8FPM6haSWvKzYO3IkcVNc6MSS1+/4tMpUWwIi7avPEnARRV70zgkxdowQmjOQ1RW+ZuYzTnBqV9do7FEX0VB1X6sRPpnRLUgIaE+rK0todB+L4ADeRZo9mPNRPHNYzCBmcK2SQtfvpEGBciWguBOky/bTTfyLmyVAOoGaKPyESC3wi+1elDcisErWK/4BPl7fvVP6iKwfke4=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Technical Provisions				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Technical Provisions
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/technical-provisions/01-01-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/technical-provisions/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/technical-provisions/30-06-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						30/06/2024
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/technical-provisions/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-195148ea-0b73-451a-a246-dcbe16ef7a72">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-195148ea-0b73-451a-a246-dcbe16ef7a72"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Technical Provisions
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Technical Provisions)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=33dbb9901ace41b08cc8d590a2d8f2fc">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Technical Provisions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss02-14---solvency-ii---recognition-of-deferred-tax/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS2/14 – Solvency II: recognition of deferred tax
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss05-14---solvency-ii-calculation-of-technical-provisions/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS5/14 – Solvency II: calculation of technical provisions and the use of internal models for general insurers
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss23-15-solvency-ii---supervisory-approval-for-the-volatility-adjustment/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS23/15 – Solvency II: Supervisory approval for the volatility adjustment [Deleted]
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss03-17---solvency-ii-illiquid-unrated-assets/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS3/17 – Solvency II: Illiquid unrated assets
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss04-17-cyber-insurance-underwriting-risk/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS4/17 – Cyber insurance underwriting risk
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss07-18---solvency-ii-matching-adjustment/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS7/18 – Solvency II: Matching adjustment
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss08-18---solvency-ii-internal-models-modelling-of-the-matching-adjustment/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS8/18 – Solvency II: Internal models – modelling of the matching adjustment
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency-2-a-new-regime-for-insurers" class="list-links__link" target="_blank">
+										PS2/15 - Solvency II: A new regime for insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/prudential-regime-and-implementation-of-the-senior-insurance-managers-regime-for-non-solvency-2" class="list-links__link" target="_blank">
+										PS26/15 - &quot;The prudential regime, and implementation of the Senior Insurance Managers Regime, for non-Solvency II firms&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/june/review-of-solvency-ii-reform-of-the-matching-adjustment-policy-statement" class="list-links__link" target="_blank">
+										PS10/24 - Review of Solvency II: Reform of the Matching Adjustment
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="http://www.legislation.gov.uk/" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Legislation.gov.uk
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="http://eur-lex.europa.eu/en/index.htm" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Eur-Lex
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/technical-provisions/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/31-12-2024?p=1" data-id="33dbb9901ace41b08cc8d590a2d8f2fc" data-effective-date="31-12-2024" data-download-title="Technical Provisions_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions&amp;subject=PRA Rulebook - Technical Provisions">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="e14bd88f08b54f838a78f732c4cc7b16"
+	 data-version="4db6f8e01f314f71ad0389335b4260a3"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="bbc05e7556c14fc588c7b0125c02fc82"
+	 data-version="9a420ed92e65402dbea6d387823e4b12"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a class="glossary-link" title="UK Solvency II firm" href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276" data-mce-linktype="2" data-glossary-id="52930">UK Solvency II firm</a></em>;</li>
+<li>(2) in accordance with <a  title="Insurance General Application 3" href="/pra-rules/insurance-general-application#2e5a9cd32e6d4026895a5d543b990108" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Insurance General Application 3</a>, the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em>, as modified by <a  title="16" href="/pra-rules/technical-provisions#9ff15fec90ac4c698d371530c4c5a050" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">16</a>; and</li>
+<li>(3) in accordance with <a  title="Insurance General Application 3" href="/pra-rules/insurance-general-application#2e5a9cd32e6d4026895a5d543b990108" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Insurance General Application 3</a>, <em><a class="glossary-link" title="managing agents" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agents</a></em>, as modified by <a  title="16" href="/pra-rules/technical-provisions#9ff15fec90ac4c698d371530c4c5a050" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">16</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bbc05e7556c14fc588c7b0125c02fc82">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a7824aca642947439545eeec071c64a1"
+	 data-version="479113e85d1842de83675d99fb68b062"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><a class="glossary-link" title="cost-of-capital rate" href="#glossary-term-7376b50225f04f0ca5c7278ddfe0797f" data-mce-linktype="2" data-glossary-id="52657">cost-of-capital rate</a></p>
+<p style="padding-left: 30px;">means the rate (above the relevant risk-free interest rate) that must be used in the determination of the cost that a <a class="glossary-link" title="UK Solvency II firm" href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276" data-mce-linktype="2" data-glossary-id="52930">UK Solvency II firm</a> would incur in order to hold an amount of <a class="glossary-link" title="eligible own funds " href="#glossary-term-59a2e96da5d94193923a8cc805b0ccab" data-mce-linktype="2" data-glossary-id="52821">eligible own funds</a> equal to the <a class="glossary-link" title="SCR " href="#glossary-term-543356ff94c3463ba142ee22e92fa355" data-mce-linktype="2" data-glossary-id="52892">SCR</a> necessary to support the insurance and <a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a> obligations over their lifetime, which, as specified in regulation 7B(b) of the <a href="#glossary-term-c1b5061ff2794e7e8c40a4218772b765">IRPR Regulations</a>, equals 4%.&nbsp;</p>
+<p><strong>[Note: regulation 7B of the <a href="#glossary-term-c1b5061ff2794e7e8c40a4218772b765">IRPR Regulations</a>&nbsp;provides that where the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA&rsquo;s</a>&nbsp;rules require the <a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a>&nbsp;and the <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;to be calculated separately, the <strong><a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a></strong>&nbsp;must be calculated in accordance with that regulation. This definition therefore requires a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;that values the <strong><a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a></strong>&nbsp;and the <strong><a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a></strong>&nbsp;separately to calculate the <strong><a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a></strong>&nbsp;using the cost-of-capital rate specified in regulation 7B(b) of the <strong><a href="#glossary-term-c1b5061ff2794e7e8c40a4218772b765">IRPR Regulations</a></strong>]</strong></p>
+<p><a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a></p>
+<p style="margin-left: 30px;"><span> </span>means the hypothetical <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;which is assumed, for the purpose of calculating the <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>, to take over the whole portfolio of insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;(or in the case of a <a href="#glossary-term-8b6e83f73346493da09a9eccf763d620">composite firm</a>&nbsp;either the <a href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea">general insurance business</a>&nbsp;or <a href="#glossary-term-0e74283109224a46aa86e62bfc7829bc">long-term insurance business</a>&nbsp;of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>) on the basis of the assumptions in <a href="/pra-rules/technical-provisions#b30710f0cd9e4100adad7a7f2c921d21" data-rb-content-link="Chapter">4B</a>.</p>
+<div></div>
+<p><a href="#glossary-term-b3af6fb3af50430aa67831a4de8e2a84">reference undertaking notional SCR</a></p>
+<p style="margin-left: 30px;"><span> </span>means the hypothetical <a href="#glossary-term-543356ff94c3463ba142ee22e92fa355">SCR</a>&nbsp;of the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>, calculated in accordance with <a href="/pra-rules/technical-provisions#15e34f89f94645e79f3182cf05e985ad" data-rb-content-link="Rule">4B.1</a>.</p>
+<div></div>
+<p><a href="#glossary-term-7355c78ac03945908dfdd0b50263f7be">volatility adjustment&nbsp;permission</a></p>
+<p style="padding-left: 30px;">means the permission granted to a&nbsp;<a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;by the&nbsp;<a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;pursuant to section 138BA of&nbsp;<a href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08">FSMA</a>&nbsp;to&nbsp; permit it to apply a&nbsp;<a href="#glossary-term-b1b5613d2a1e42259bd94bab739ef43c">volatility adjustment</a>&nbsp;for the purposes of calculating the&nbsp;<a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a>.</p>
+<p>&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/30-06-2024#a7824aca642947439545eeec071c64a1">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a7824aca642947439545eeec071c64a1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/1-application-and-definitions/31-12-2024?p=1" data-id="e14bd88f08b54f838a78f732c4cc7b16" data-effective-date="31-12-2024" data-download-title="Application and Definitions_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/1-application-and-definitions/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#e14bd88f08b54f838a78f732c4cc7b16&amp;subject=PRA Rulebook - Technical Provisions – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=e14bd88f08b54f838a78f732c4cc7b16">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="a45a4cc38d904695b95ce2025de1ee45"
+	 data-version="3e5728cd1efd43bc9f7d4f5adb4fbcee"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Calculation of Technical Provisions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="08f5099494124929a2967abc9f70b61a"
+	 data-version="b7a809344a024972a2f0daf74ff3b802"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><em><a class="glossary-link" title="Firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">Firms</a></em> must establish adequate <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em> with respect to all of their insurance and <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations towards <em><a class="glossary-link" title="policyholders" href="#glossary-term-25bc88f76b4747309bc7d4537386307c" data-mce-linktype="2" data-glossary-id="52874">policyholders</a></em>.</p>
+			<p><strong>[Note: Art. 76(1) of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=08f5099494124929a2967abc9f70b61a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4ed3e93f3e48474c80b4e96ed151c904"
+	 data-version="d479ef8e4c524b578c0b8b649f59ba60"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The value of <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em> must correspond to the current amount that the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> would have to pay if it were to transfer its insurance and <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations immediately to another <em><a class="glossary-link" title="UK Solvency II firm" href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276" data-mce-linktype="2" data-glossary-id="52930">UK Solvency II firm</a></em>.</p>
+			<p><strong>[Note: Art. 76(2) of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#4ed3e93f3e48474c80b4e96ed151c904">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4ed3e93f3e48474c80b4e96ed151c904">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="57f380dba7c5408884fa0bfece76bdbf"
+	 data-version="c0af96633985450b874d16a8558bcfaf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><em><a class="glossary-link" title="Firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">Firms</a></em> must calculate their <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) such that the calculation makes use of and is consistent with information provided by the financial markets and generally available data on <em><a class="glossary-link" title="underwriting risks" href="#glossary-term-2d452892766347ccb3601b51ddc23c40" data-mce-linktype="2" data-glossary-id="52933">underwriting risks</a></em> (market consistency);</li>
+<li>(2) in a prudent, reliable and objective manner;</li>
+<li>(3) taking into account the principles set out in <a  title="Valuation 2" href="/pra-rules/valuation#b1dd1f10c578445ebef4a906b3c2aee9" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Valuation 2</a>; and</li>
+<li>(4) in accordance with <a  title="2.4" href="/pra-rules/technical-provisions#e3057408aab14de9adf905b09e053ebb" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a> to <a  title="12.2" href="/pra-rules/technical-provisions#a48ed864f77b4baeaa8532b927bf7d1c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">12.2</a>.</li>
+</ol>
+			<p><strong>[Note: Art. 76(3)&ndash;(5) of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=57f380dba7c5408884fa0bfece76bdbf">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e3057408aab14de9adf905b09e053ebb"
+	 data-version="840d098dadea4d59b62b1a7f38871c4e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The value of <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em> must be equal to the sum of a<em> <a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em> and a <em><a class="glossary-link" title="risk margin" href="#glossary-term-20f81d78a5af475996352dde96195c42" data-mce-linktype="2" data-glossary-id="52889">risk margin</a></em> which must be calculated in accordance with <a  title="2.5" href="/pra-rules/technical-provisions#e388d61285c94e1583bdc360c64baa80" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a>, <a  title="3" href="/pra-rules/technical-provisions#0c360db07aa44aaabc7ffa9291003735" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">3</a> and <a  title="4" href="/pra-rules/technical-provisions#8765f96faa184bb2bbf5bbe3c4710fa7" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">4</a>.</p>
+			<p><strong>[Note: Art. 77(1) of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e3057408aab14de9adf905b09e053ebb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e388d61285c94e1583bdc360c64baa80"
+	 data-version="71607e5c263f40dcb906d8bace81e2d3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) <a class="glossary-link" title="Firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">Firms</a> must value the <em><a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em> and the <em><a class="glossary-link" title="risk margin" href="#glossary-term-20f81d78a5af475996352dde96195c42" data-mce-linktype="2" data-glossary-id="52889">risk margin</a></em> separately, except where (2) applies.</li>
+<li>(2) Where:</li>
+<ol>
+<li>(a) future cash-flows associated with insurance or <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations can be replicated reliably; and</li>
+<li>(b) that replication is provided using financial instruments; and</li>
+<li>(c) those financial instruments have a reliable market value which is observable;</li>
+</ol></ol>
+<p style="padding-left: 30px;">then the value of <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em> associated with those future cash-flows must be determined on the basis of the market value of those financial instruments.</p>
+			<p><strong>[Note: Art. 77(4) of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e388d61285c94e1583bdc360c64baa80">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/2-calculation-of-technical-provisions/31-12-2024?p=1" data-id="a45a4cc38d904695b95ce2025de1ee45" data-effective-date="31-12-2024" data-download-title="Calculation of Technical Provisions_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/2-calculation-of-technical-provisions/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#a45a4cc38d904695b95ce2025de1ee45&amp;subject=PRA Rulebook - Technical Provisions – Calculation of Technical Provisions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=a45a4cc38d904695b95ce2025de1ee45">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Calculation of Technical Provisions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="0c360db07aa44aaabc7ffa9291003735"
+	 data-version="31f6d9ebf14b4281ab1978a9aebdfb84"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Best Estimate
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="38398f697e1d48efaf56f5e91e6d1b77"
+	 data-version="cb6a9053fcf44b4f8131bf08c6101300"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em> must:</p>
+<ol class="new-bullet">
+    <li>(1) correspond to the probability-weighted average of future cash-flows, taking into account the time value of money (expected present value of future cash-flows) using the <em><a class="glossary-link" title="relevant risk-free interest rate term structure" href="#glossary-term-29c435a717fa489e8320a4e01888178d" data-mce-linktype="2" data-glossary-id="52887">relevant risk-free interest rate term structure</a></em>; and</li>
+    <li>(2) be calculated:</li>
+    <ol>
+        <li>(a) based upon up-to-date and credible information and realistic assumptions;</li>
+        <li>(b) using adequate, applicable and relevant actuarial and statistical methods; and</li>
+        <li>(c) gross, without deduction of the amounts recoverable from <em><a class="glossary-link" title="reinsurance contracts" href="#glossary-term-c555b26e325b4e949449235711594e37" data-mce-linktype="2" data-glossary-id="52882">reinsurance contracts</a></em> and <em><a class="glossary-link" title="UK ISPV" href="#glossary-term-d657b35a131c4b4982032a800f337269" data-mce-linktype="2" data-glossary-id="52386">UK ISPV</a></em>s, which <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> must calculate separately in accordance with <a title="11" href="/pra-rules/technical-provisions#1e6d889336634e56988fee78049ee50f" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">11</a>.</li>
+    </ol>
+</ol>
+			<p><strong>[Note: Art. 77(2) of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#38398f697e1d48efaf56f5e91e6d1b77">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=38398f697e1d48efaf56f5e91e6d1b77">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="38681fb41e184a42a1d14fd99d5bb8eb"
+	 data-version="eb747de9355e49e881e6a833805e82f1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The cash-flow projection used in the calculation of the <em><a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em> (whether valued separately or determined on the basis of financial instruments in accordance with <a  title="2.5" href="/pra-rules/technical-provisions#e388d61285c94e1583bdc360c64baa80" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a>) must take into account all the cash in- and out-flows required to settle the insurance and <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations over their lifetime.</p>
+			<p><strong>[Note: Art. 77(2) of the<em> <a class="glossary-link" title="Solvency II Directive" href="#glossary-term-b3cfaaa73c4144169fb6cdbbfa87b73f" data-mce-linktype="2" data-glossary-id="52651">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=38681fb41e184a42a1d14fd99d5bb8eb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/3-best-estimate/31-12-2024?p=1" data-id="0c360db07aa44aaabc7ffa9291003735" data-effective-date="31-12-2024" data-download-title="Best Estimate_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/3-best-estimate/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#0c360db07aa44aaabc7ffa9291003735&amp;subject=PRA Rulebook - Technical Provisions – Best Estimate">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=0c360db07aa44aaabc7ffa9291003735">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Best Estimate
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="8765f96faa184bb2bbf5bbe3c4710fa7"
+	 data-version="e73dfae91ea04c73813f62042ab08c60"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Risk Margin
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="424b19c998b04e9bb4f30b4e5e64fe0d"
+	 data-version="d7a0c33159c247b4b9368013af8b0bdc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> value the <em><a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em> and <em><a class="glossary-link" title="risk margin" href="#glossary-term-20f81d78a5af475996352dde96195c42" data-mce-linktype="2" data-glossary-id="52889">risk margin</a></em> separately, the <em><a class="glossary-link" title="risk margin" href="#glossary-term-20f81d78a5af475996352dde96195c42" data-mce-linktype="2" data-glossary-id="52889">risk margin</a></em> must be an amount equal to the cost that a <em><a class="glossary-link" title="UK Solvency II firm" href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276" data-mce-linktype="2" data-glossary-id="52930">UK Solvency II firm</a></em> would incur in order to hold <em><a class="glossary-link" title="eligible own funds" href="#glossary-term-59a2e96da5d94193923a8cc805b0ccab" data-mce-linktype="2" data-glossary-id="52821">eligible own funds</a></em> to cover the <em><a class="glossary-link" title="SCR " href="#glossary-term-543356ff94c3463ba142ee22e92fa355" data-mce-linktype="2" data-glossary-id="52892">SCR </a></em>necessary to support the insurance and <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations over their lifetime, determined using the <em><a class="glossary-link" title="cost-of-capital rate" href="#glossary-term-7376b50225f04f0ca5c7278ddfe0797f" data-mce-linktype="2" data-glossary-id="52657">cost-of-capital rate</a></em>.</p>
+			<p><strong>[Note: Art. 77(5) of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#424b19c998b04e9bb4f30b4e5e64fe0d">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=424b19c998b04e9bb4f30b4e5e64fe0d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7de7cd67ecab4a60b99925ac937fc80e"
+	 data-version="88d46fd377bd475ebf3485672ed54a21"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="risk margin" href="#glossary-term-20f81d78a5af475996352dde96195c42" data-mce-linktype="2" data-glossary-id="52889">risk margin</a></em> must be such as to ensure that the value of the <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em> is equivalent to the amount that a <em><a class="glossary-link" title="UK Solvency II firm" href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276" data-mce-linktype="2" data-glossary-id="52930">UK Solvency II firm</a></em> would be expected to require in order to take over and meet the insurance and <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations over their lifetime.</p>
+			<p><strong>[Note: Art. 77(3) of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#7de7cd67ecab4a60b99925ac937fc80e">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7de7cd67ecab4a60b99925ac937fc80e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/4-risk-margin/31-12-2024?p=1" data-id="8765f96faa184bb2bbf5bbe3c4710fa7" data-effective-date="31-12-2024" data-download-title="Risk Margin_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/4-risk-margin/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#8765f96faa184bb2bbf5bbe3c4710fa7&amp;subject=PRA Rulebook - Technical Provisions – Risk Margin">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=8765f96faa184bb2bbf5bbe3c4710fa7">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Risk Margin
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="027bda7a5b4b4f58a5d11af6c3f92859"
+	 data-version="3dc432c551894d4dbbd104f2ecaa72a5"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4A
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Calculation of the Risk Margin
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3bfb76cc94cd4016a2a3a8e725d3fe1d"
+	 data-version="0f38d7b5ca4149dcb8bc029fa193a3d8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4A.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In accordance with regulation 7B of the <a href="#glossary-term-c1b5061ff2794e7e8c40a4218772b765">IRPR Regulations</a>, where a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;values the <a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a>&nbsp;and the <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;separately, the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must calculate the <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;for the whole portfolio of insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations in accordance with the following formula:</p>
+<p>\[\textrm{RM}=\textrm{CoC}\cdot\sum\nolimits_{t\geq0}\frac{\textrm{SCR}\left(\textrm{t}\right)\cdot\max(\lambda^t,\lambda_{floor})}{\left(1+r\left(t+1\right)\right)^{t+1}}\]</p>
+<p>where:</p>
+<ol class="new-bullet">
+    <li>(1) <span> </span>RM denotes <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>;</li>
+    <li>(2)<span> </span>CoC denotes the <a href="#glossary-term-7376b50225f04f0ca5c7278ddfe0797f">cost-of-capital rate</a>;</li>
+    <li>(3) <span> </span>the sum covers all integers including zero;</li>
+    <li>(4) <span> </span>SCR(t) denotes the <a href="#glossary-term-b3af6fb3af50430aa67831a4de8e2a84">reference undertaking notional SCR</a>&nbsp;after t years;</li>
+    <li>(5) <span> </span>&lambda; denotes the risk tapering factor, and equals:&nbsp;<br>
+    (a) <span> </span>0.9 for <a href="#glossary-term-da15ed4db5894066a2f1b5e4653b4353">long-term insurance and reinsurance obligations</a>; and&nbsp;<br>
+    (b) <span> </span>1.0 for <a href="#glossary-term-79a20084ff8e4d8bbf8c6ed5df1d06ca">general insurance and reinsurance obligations</a>;</li>
+    <li>(6)&nbsp; <span> </span>&lambda;<sup>t</sup> denotes the relevant risk tapering factor to the power of t years;&nbsp;</li>
+    <li>(7) <span> </span>&lambda;<sub>floor</sub> denotes the floor of the risk tapering factor, and equals 0.25;&nbsp;</li>
+    <li>(8)&nbsp; <span> </span>r(t+1) denotes the basic relevant risk-free interest rate for the maturity of t+1 years, derived from the <a href="#glossary-term-e2006c7c596141139666c2f3f5dbaef9">basic relevant risk-free interest rate term structure</a>&nbsp;and selected in accordance with the currency used for the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;financial statements.</li>
+</ol>
+			<p><strong>[Note: regulation 7B of the <a href="#glossary-term-c1b5061ff2794e7e8c40a4218772b765">IRPR Regulations</a>&nbsp;provides that where the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA&rsquo;s</a>&nbsp;rules require the <a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a>&nbsp;and the <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;to be calculated separately, the <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;must be calculated in accordance with that regulation. Rules <a href="/pra-rules/technical-provisions#4ed3e93f3e48474c80b4e96ed151c904" data-rb-content-link="Rule">2.2</a>&nbsp;and <a href="/pra-rules/technical-provisions#e3057408aab14de9adf905b09e053ebb" data-rb-content-link="Rule">2.4</a>&nbsp;require the value of <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;to correspond to a current transfer value and to consist of a <a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a>&nbsp;and a <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>. Rule <a href="/pra-rules/technical-provisions#e388d61285c94e1583bdc360c64baa80" data-rb-content-link="Rule">2.5 (1)</a>&nbsp;requires the <strong><strong><a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a></strong></strong>&nbsp;and the <strong><strong><a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a></strong></strong>&nbsp;to be valued separately, unless <a href="/pra-rules/technical-provisions#e388d61285c94e1583bdc360c64baa80" data-rb-content-link="Rule">2.5(2)</a>&nbsp;applies. Rule <a href="/pra-rules/technical-provisions#3bfb76cc94cd4016a2a3a8e725d3fe1d" data-rb-content-link="Rule">4A.1</a>&nbsp;therefore requires a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;that values the <strong><a href="#glossary-term-960c16506e8c4233a8875b1b76119dd7">best estimate</a></strong>&nbsp;and the <strong><a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a></strong>&nbsp;separately to calculate the <strong><a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a></strong>&nbsp;as required by regulation 7B of the <strong><a href="#glossary-term-c1b5061ff2794e7e8c40a4218772b765">IRPR Regulations</a></strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3bfb76cc94cd4016a2a3a8e725d3fe1d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4A.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b1b5402490894fe6b50a8758f4f6b4a2"
+	 data-version="c8b34b3c44954f8cb947cc4fab3225bc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4A.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;calculates its <span style="line-height: 107%;"><a href="#glossary-term-543356ff94c3463ba142ee22e92fa355"><span style="line-height: 107%;">SCR</span></a></span>&nbsp;using an <a href="#glossary-term-3b2819f77c314609931cb76f3c35255c">internal model</a>&nbsp;for which it has received <a href="#glossary-term-369dc053152f4e5ea0b8618cda8bb8c3">internal model permission</a>, it must, unless it is inappropriate to do so, use that <a href="#glossary-term-3b2819f77c314609931cb76f3c35255c">internal model</a>&nbsp;to calculate the <a href="#glossary-term-b3af6fb3af50430aa67831a4de8e2a84">reference undertaking notional SCR</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b1b5402490894fe6b50a8758f4f6b4a2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4A.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6de48b02607b4e959b166aa980b5abb3"
+	 data-version="b261e6c2e4ce4ca298bb6fb55d870ad8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4A.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must allocate the <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;for the whole portfolio of insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations to each relevant <a href="#glossary-term-8f53b7a55fbb4c70a42cde9746689605">line of business</a>&nbsp;and such allocation must adequately reflect the contributions of the <a href="#glossary-term-8f53b7a55fbb4c70a42cde9746689605">lines of business</a>&nbsp;to the <a href="#glossary-term-b3af6fb3af50430aa67831a4de8e2a84">reference undertaking notional SCR</a>&nbsp;over the lifetime of the whole portfolio of insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6de48b02607b4e959b166aa980b5abb3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4A.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/4a-calculation-of-the-risk-margin/31-12-2024?p=1" data-id="027bda7a5b4b4f58a5d11af6c3f92859" data-effective-date="31-12-2024" data-download-title="Calculation of the Risk Margin_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/4a-calculation-of-the-risk-margin/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#027bda7a5b4b4f58a5d11af6c3f92859&amp;subject=PRA Rulebook - Technical Provisions – Calculation of the Risk Margin">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=027bda7a5b4b4f58a5d11af6c3f92859">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Calculation of the Risk Margin
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="b30710f0cd9e4100adad7a7f2c921d21"
+	 data-version="dcb3cd01bc894f6fb30998f894a777a7"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4B
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Reference Undertaking
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="15e34f89f94645e79f3182cf05e985ad"
+	 data-version="52cdcfdaac7c4ca988880375920b2179"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4B.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;must be based on all the following assumptions:</p>
+<ol class="new-bullet">
+    <li>
+    (1)<span> </span>the whole portfolio of insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations of the <span style="line-height: 107%;"><a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f"><span style="line-height: 107%;">firm</span></a></span>&nbsp;is taken over by a <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>;</li>
+    <li>(2)<span> </span>notwithstanding (1), a <a href="#glossary-term-8b6e83f73346493da09a9eccf763d620">composite firm</a>&nbsp;must assume that its <a href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea">general insurance business</a>&nbsp;and <a href="#glossary-term-0e74283109224a46aa86e62bfc7829bc">long-term insurance business</a>&nbsp;are each taken over separately by two different <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertakings</a>;</li>
+    <li>(3)<span> </span>the transfer of insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations includes any <a href="#glossary-term-c555b26e325b4e949449235711594e37">reinsurance contracts</a>&nbsp;and arrangements with <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>&nbsp;relating to those obligations;</li>
+    <li>(4)<span> </span>the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>&nbsp;does not have any insurance or <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations or <a href="#glossary-term-c66a31f4d0c540069dbba7051668fdcb">own funds</a>&nbsp;before the transfer takes place;</li>
+    <li>(5)<span> </span>after the transfer, the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>&nbsp;does not assume any new insurance or <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations;</li>
+    <li>(6)<span> </span>after the transfer, the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>&nbsp;raises <a href="#glossary-term-59a2e96da5d94193923a8cc805b0ccab">eligible own funds</a>&nbsp;equal to the <a href="#glossary-term-b3af6fb3af50430aa67831a4de8e2a84">reference undertaking notional SCR</a>&nbsp;necessary to support the insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations over the lifetime of those obligations;</li>
+    <li>(7)<span> </span>after the transfer, the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>&nbsp;holds assets which amount to the sum of the <a href="#glossary-term-b3af6fb3af50430aa67831a4de8e2a84">reference undertaking notional SCR</a>&nbsp;and of the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking&rsquo;s</a>&nbsp;<a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical<em> </em>provisions</a>&nbsp;net of the amounts recoverable from <a href="#glossary-term-c555b26e325b4e949449235711594e37">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>;</li>
+    <li>(8)<span> </span>the assets referred to in (7) are selected in such a way that they minimise the <a href="#glossary-term-b3af6fb3af50430aa67831a4de8e2a84">reference undertaking notional SCR</a>&nbsp;for <a href="#glossary-term-5bb02256f0e24687b800fc8ceac69fa2">market risk</a>&nbsp;that the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>&nbsp;is exposed to;</li>
+    <li>(9)<span> </span>the <a href="#glossary-term-b3af6fb3af50430aa67831a4de8e2a84">reference undertaking notional SCR</a>&nbsp;captures all the following risks:
+    <ol>
+        <li>(a)<span> </span><a href="#glossary-term-2d452892766347ccb3601b51ddc23c40">underwriting risk</a> with respect to the transferred business;</li>
+        <li>(b)<span> </span>where it is material, the <a href="#glossary-term-5bb02256f0e24687b800fc8ceac69fa2">market risk</a>&nbsp;referred to in (8), other than interest rate risk;</li>
+        <li>(c)<span> </span><a href="#glossary-term-6abc6860b45645dc9f9ff6818736f475">credit risk</a> with respect to <a href="#glossary-term-c555b26e325b4e949449235711594e37">reinsurance contracts</a>, arrangements with <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>, intermediaries, <a href="#glossary-term-e156c275391d4461b0834559bee81894">policyholders</a>&nbsp;and any other material exposures which are closely related to the insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations; and</li>
+        <li>(d)<span> </span><a href="#glossary-term-27da50235c4f4f0298ba1da0b31935ac">operational risk</a>;</li>
+    </ol>
+    </li>
+    <li>(10) the loss-absorbing capacity of <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;for the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>&nbsp;corresponds, in respect of each risk, to the loss-absorbing capacity of <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;for the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>;</li>
+    <li>(11)<span> </span>there is no loss-absorbing capacity of deferred taxes for the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>;</li>
+    <li>(12)<span> </span>the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>&nbsp;will, subject to (5) and (6), adopt future management actions that are consistent with assumed future management actions, as referred to in <a href="/pra-rules/technical-provisions-further-requirements#fe7a8c7362e44362a3e23fe151654921" data-rb-content-link="Chapter">Technical Provisions &ndash; Further Requirements&nbsp;8</a>, of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>; and</li>
+    <li>(13)<span> </span>the <a href="#glossary-term-8b1b616b4d774e378dda8ae8dc4688b7">reference undertaking</a>&nbsp;does not apply to its <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;any of the following:
+    <ol>
+        <li>(a)<span> </span><a href="#glossary-term-ca20443af40746f8a491285909110b8a">matching adjustment</a>;&nbsp;</li>
+        <li>(b)<span> </span><a href="#glossary-term-b1b5613d2a1e42259bd94bab739ef43c">volatility adjustment</a>;&nbsp;</li>
+        <li>(c)<span> </span><a href="#glossary-term-e924f2da234c4fb0bc5c03a9c770b064">risk-free interest rate transitional measure</a>; or&nbsp;</li>
+        <li>(d)<span> </span><a href="#glossary-term-345f61c972fe4ebcb8d7049a90defc69">TMTP</a>.<br>
+        <div></div>
+        </li>
+    </ol>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=15e34f89f94645e79f3182cf05e985ad">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4B.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="450589bf3fd44816861aefbe315c4bb4"
+	 data-version="c0699a01449a48e2b9ba1450eaf9b624"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4B.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Over the lifetime of the insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations, the <a href="#glossary-term-543356ff94c3463ba142ee22e92fa355">SCR</a>&nbsp;necessary to support the insurance and <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations referred to in <a href="/pra-rules/technical-provisions#424b19c998b04e9bb4f30b4e5e64fe0d" data-rb-content-link="Rule">4.1</a>&nbsp;must be assumed to be equal to the <a href="#glossary-term-b3af6fb3af50430aa67831a4de8e2a84">reference undertaking&nbsp;notional SCR</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=450589bf3fd44816861aefbe315c4bb4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4B.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f5d089ab1517487d888a3f2973e1aeeb"
+	 data-version="6d094ddbac904b87bb01d5d928abee01"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4B.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a href="/pra-rules/technical-provisions#15e34f89f94645e79f3182cf05e985ad" data-rb-content-link="Rule">4B.1(9)</a>, a risk must be considered material where its impact on the calculation of the <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;could influence the decision-making or the judgment of the users of that information, including the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;and <a href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22">FCA</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f5d089ab1517487d888a3f2973e1aeeb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4B.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/4b---reference-undertaking/31-12-2024?p=1" data-id="b30710f0cd9e4100adad7a7f2c921d21" data-effective-date="31-12-2024" data-download-title="Reference Undertaking_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/4b---reference-undertaking/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#b30710f0cd9e4100adad7a7f2c921d21&amp;subject=PRA Rulebook - Technical Provisions – Reference Undertaking">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b30710f0cd9e4100adad7a7f2c921d21">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Reference Undertaking
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="711fa81a98434481935364dd55ff356a"
+	 data-version="759a6a4eb07d4f318a840cf5ac44cc08"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Risk Free Interest Rate Term Structure
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fca2cdc6c8ff4c33a8a42e0333411bd2"
+	 data-version="54a66c145c4344849fb01baba78736eb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><em><a class="glossary-link" title="Firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">Firms</a></em> must ensure that the <em><a class="glossary-link" title="relevant risk-free interest rate term structure" href="#glossary-term-29c435a717fa489e8320a4e01888178d" data-mce-linktype="2" data-glossary-id="52887">relevant risk-free interest rate term structure</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) is determined using, and consistent with, information derived from relevant financial instruments;</li>
+<li>(2) takes account of relevant financial instruments of those maturities where the markets for those financial instruments as well as for bonds, are deep, liquid and transparent; and</li>
+<li>(3) is only extrapolated for maturities where the markets for the relevant financial instruments or for bonds are not deep, liquid and transparent.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fca2cdc6c8ff4c33a8a42e0333411bd2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a07cc483fecb4111a757f421417e3e71"
+	 data-version="3bb9b73a5de34cccbda62c0c17940ae1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of <a  title="5.1" href="/pra-rules/technical-provisions#fca2cdc6c8ff4c33a8a42e0333411bd2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a>, the extrapolated part of the <em><a class="glossary-link" title="relevant risk-free interest rate term structure" href="#glossary-term-29c435a717fa489e8320a4e01888178d" data-mce-linktype="2" data-glossary-id="52887">relevant risk-free interest rate term structure</a></em> shall be based on forward rates converging smoothly from one set of forward rates in relation to the longest maturities for which the relevant financial instrument and the bonds can be observed in a deep, liquid and transparent market to an ultimate forward rate.</p>
+			<p><strong>[Note: Art. 77a of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a07cc483fecb4111a757f421417e3e71">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/5-risk-free-interest-rate-term-structure/31-12-2024?p=1" data-id="711fa81a98434481935364dd55ff356a" data-effective-date="31-12-2024" data-download-title="Risk Free Interest Rate Term Structure_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/5-risk-free-interest-rate-term-structure/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#711fa81a98434481935364dd55ff356a&amp;subject=PRA Rulebook - Technical Provisions – Risk Free Interest Rate Term Structure">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=711fa81a98434481935364dd55ff356a">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Risk Free Interest Rate Term Structure
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2195c5c34c584b02bbaa956cfb9033a9"
+	 data-version="c89fc2da69b74adbab1ad73223cf679b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Matching Adjustment to the Relevant Risk Free Interest Rate Term Structure [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5abad5c91cff4378a7fccb12517462f8"
+	 data-version="a62c56087bfd48fea2a1e48ad9ba5f61"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#5abad5c91cff4378a7fccb12517462f8">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 30/06/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5abad5c91cff4378a7fccb12517462f8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d9d61f134e484a0cbba7d68cdd9e8a7a"
+	 data-version="ab0ccbed7eda4aee842a3af4b2aa722e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#d9d61f134e484a0cbba7d68cdd9e8a7a">
+			Past
+			<span class="visually-hidden">
+				version of 6.2 before 30/06/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d9d61f134e484a0cbba7d68cdd9e8a7a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d4ad0646e79d4918bc7edae28dd5ff0b"
+	 data-version="a3a7017b93ea401eba01fcbc5eda8be9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#d4ad0646e79d4918bc7edae28dd5ff0b">
+			Past
+			<span class="visually-hidden">
+				version of 6.3 before 30/06/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d4ad0646e79d4918bc7edae28dd5ff0b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="607fb0ae44e14627ac988bf2e11f214f"
+	 data-version="814bdcdb5d2d4324847d0f147c9bf08b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#607fb0ae44e14627ac988bf2e11f214f">
+			Past
+			<span class="visually-hidden">
+				version of 6.4 before 30/06/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=607fb0ae44e14627ac988bf2e11f214f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/6-matching-adjustment-to-the-relevant-risk-free-interest-rate---deleted-term-structure---deleted/31-12-2024?p=1" data-id="2195c5c34c584b02bbaa956cfb9033a9" data-effective-date="31-12-2024" data-download-title="Matching Adjustment to the Relevant Risk Free Interest Rate Term Structure [Deleted]_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/6-matching-adjustment-to-the-relevant-risk-free-interest-rate---deleted-term-structure---deleted/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#2195c5c34c584b02bbaa956cfb9033a9&amp;subject=PRA Rulebook - Technical Provisions – Matching Adjustment to the Relevant Risk Free Interest Rate Term Structure [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2195c5c34c584b02bbaa956cfb9033a9">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Matching Adjustment to the Relevant Risk Free Interest Rate Term Structure [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="08c3dd3c46fa4811b2cdc55e37b04d26"
+	 data-version="4786b9b3df19476a99630c16dde48555"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Calculation of the Matching Adjustment [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="7b0260e44d834ca68c1d55f3010fcad5"
+	 data-version="776cf213b3cb4a208c5ea9604751966d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#7b0260e44d834ca68c1d55f3010fcad5">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 30/06/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7b0260e44d834ca68c1d55f3010fcad5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fa076538bfda40e3bfc6664dd099e04b"
+	 data-version="7b45215872704c91b964c30fbeef8e2c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/31-12-2020#fa076538bfda40e3bfc6664dd099e04b">
+			Past
+			<span class="visually-hidden">
+				version of 7.2 before 30/06/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fa076538bfda40e3bfc6664dd099e04b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="42fa1c7134e54b8ab1446ec81843e5b8"
+	 data-version="558a6bce29ef46948151c91116960617"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/31-12-2020#42fa1c7134e54b8ab1446ec81843e5b8">
+			Past
+			<span class="visually-hidden">
+				version of 7.3 before 30/06/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=42fa1c7134e54b8ab1446ec81843e5b8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bee9989a5ea041e1a7667350146f4c3f"
+	 data-version="296daf9dea684b1cb0583321a5624b46"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#bee9989a5ea041e1a7667350146f4c3f">
+			Past
+			<span class="visually-hidden">
+				version of 7.4 before 30/06/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bee9989a5ea041e1a7667350146f4c3f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2604ac481f8d4479a4f98de293da8555"
+	 data-version="b453a0c1c41a4588875211ff19ee08c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#2604ac481f8d4479a4f98de293da8555">
+			Past
+			<span class="visually-hidden">
+				version of 7.5 before 30/06/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2604ac481f8d4479a4f98de293da8555">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/7-calculation-of-the-matching-adjustment---deleted/31-12-2024?p=1" data-id="08c3dd3c46fa4811b2cdc55e37b04d26" data-effective-date="31-12-2024" data-download-title="Calculation of the Matching Adjustment [Deleted]_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/7-calculation-of-the-matching-adjustment---deleted/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#08c3dd3c46fa4811b2cdc55e37b04d26&amp;subject=PRA Rulebook - Technical Provisions – Calculation of the Matching Adjustment [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=08c3dd3c46fa4811b2cdc55e37b04d26">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Calculation of the Matching Adjustment [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="e32f4739dbb44aab959922b3798429e6"
+	 data-version="d1a8dac51bf341d7b52896b18c52d32a"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Volatility Adjustment
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="34f4447b6c764a10aab61b70429bd72e"
+	 data-version="4fb8a3ae6ac04488aa1747a8736be037"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>&nbsp;may only apply a <a class="glossary-link" title="volatility adjustment" href="#glossary-term-b1b5613d2a1e42259bd94bab739ef43c" data-mce-linktype="2" data-glossary-id="52934">volatility adjustment</a> to the <a class="glossary-link" title="relevant risk-free interest rate term structure" href="#glossary-term-29c435a717fa489e8320a4e01888178d" data-mce-linktype="2" data-glossary-id="52887">relevant risk-free interest rate term structure</a> to calculate the <a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a> of its insurance or <a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a> obligations:</p>
+<ol class="new-bullet">
+    <li>(1) if it has been granted a <a href="#glossary-term-7355c78ac03945908dfdd0b50263f7be">volatility adjustment permission</a>;&nbsp;</li>
+    <li>(2) the <a class="glossary-link" title="volatility adjustment" href="#glossary-term-b1b5613d2a1e42259bd94bab739ef43c" data-mce-linktype="2" data-glossary-id="52934">volatility adjustment</a> has been published by the <a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a> under&nbsp;regulation 3 of the <a href="#glossary-term-c1b5061ff2794e7e8c40a4218772b765">IRPR regulations</a>;&nbsp;and</li>
+    <li>(3)&nbsp;to the extent of its <a href="#glossary-term-7355c78ac03945908dfdd0b50263f7be">volatility adjustment permission</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/30-06-2024#34f4447b6c764a10aab61b70429bd72e">
+			Past
+			<span class="visually-hidden">
+				version of 8.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=34f4447b6c764a10aab61b70429bd72e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="de27347d6a2b4c918ee9863ab58e9e34"
+	 data-version="44432885054040609672136ebb70109d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="volatility adjustment" href="#glossary-term-b1b5613d2a1e42259bd94bab739ef43c" data-mce-linktype="2" data-glossary-id="52934">volatility adjustment</a></em> must not be applied to the risk-free interest rates of the <em><a class="glossary-link" title="relevant risk-free interest rate term structure" href="#glossary-term-29c435a717fa489e8320a4e01888178d" data-mce-linktype="2" data-glossary-id="52887">relevant risk-free interest rate term structure</a></em> that are derived by means of extrapolation in accordance with <a  title="5" href="/pra-rules/technical-provisions#711fa81a98434481935364dd55ff356a" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">5</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=de27347d6a2b4c918ee9863ab58e9e34">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="455ca73b4ebc4c1889945ce333849169"
+	 data-version="ad23ac2130f441c8971ec63dc68eb2df"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> applies a <em><a class="glossary-link" title="volatility adjustment" href="#glossary-term-b1b5613d2a1e42259bd94bab739ef43c" data-mce-linktype="2" data-glossary-id="52934">volatility adjustment</a></em> in accordance with <a  title="8" href="/pra-rules/technical-provisions#e32f4739dbb44aab959922b3798429e6" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">8</a>, the extrapolation of the <em><a class="glossary-link" title="relevant risk-free interest rate term structure" href="#glossary-term-29c435a717fa489e8320a4e01888178d" data-mce-linktype="2" data-glossary-id="52887">relevant risk-free interest rate term structure</a></em> referred to in <a  title="5" href="/pra-rules/technical-provisions#711fa81a98434481935364dd55ff356a" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">5</a> shall be based on the risk-free interest rates adjusted with the <em><a class="glossary-link" title="volatility adjustment" href="#glossary-term-b1b5613d2a1e42259bd94bab739ef43c" data-mce-linktype="2" data-glossary-id="52934">volatility adjustment</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=455ca73b4ebc4c1889945ce333849169">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="11798032166540f9a5ec7bc359cc3aa4"
+	 data-version="1661c5461fe042afb5f4e5971a52e477"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/30-06-2024#11798032166540f9a5ec7bc359cc3aa4">
+			Past
+			<span class="visually-hidden">
+				version of 8.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=11798032166540f9a5ec7bc359cc3aa4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7a418382cfc249e095e6f2adaa11807c"
+	 data-version="085092f5f7bb4b38a407f87a8690cf54"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;with a&nbsp;<a href="#glossary-term-7355c78ac03945908dfdd0b50263f7be">volatility adjustment&nbsp;permission</a>&nbsp;must not apply the <a href="#glossary-term-b1b5613d2a1e42259bd94bab739ef43c">volatility adjustment</a>&nbsp;with respect to insurance or <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations where the <em><a class="glossary-link" title="relevant risk-free interest rate term structure" href="#glossary-term-29c435a717fa489e8320a4e01888178d" data-mce-linktype="2" data-glossary-id="52887">relevant risk-free interest rate term structure</a></em>&nbsp;used to calculate the <em><a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em> for those obligations includes a <em><a class="glossary-link" title="matching adjustment" href="#glossary-term-ca20443af40746f8a491285909110b8a" data-mce-linktype="2" data-glossary-id="52849">matching adjustment</a></em>.</p>
+			<p><strong>[Note: Art. 77d of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#7a418382cfc249e095e6f2adaa11807c">
+			Past
+			<span class="visually-hidden">
+				version of 8.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7a418382cfc249e095e6f2adaa11807c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/8-volatility-adjustment/31-12-2024?p=1" data-id="e32f4739dbb44aab959922b3798429e6" data-effective-date="31-12-2024" data-download-title="Volatility Adjustment_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/8-volatility-adjustment/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#e32f4739dbb44aab959922b3798429e6&amp;subject=PRA Rulebook - Technical Provisions – Volatility Adjustment">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=e32f4739dbb44aab959922b3798429e6">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Volatility Adjustment
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="6b0307cfe9144b0087991029412953a2"
+	 data-version="0c766c2a037a4615828daf64b0f3301c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Other Elements to Be Taken Into Account
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fbf0aca581e0472596f7dc88f368769c"
+	 data-version="b6ede2a7deb54fe3bc5c2666a76a0a7e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When calculating<em> <a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em>, <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> must take into account:</p>
+<ol class="new-bullet">
+<li>(1) all expenses that will be incurred in servicing insurance and <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations;</li>
+<li>(2) inflation, including expenses and claims inflation; and</li>
+<li>(3) all payments to <em><a class="glossary-link" title="policyholders" href="#glossary-term-25bc88f76b4747309bc7d4537386307c" data-mce-linktype="2" data-glossary-id="52874">policyholders</a></em>, including future discretionary bonuses, which <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> expect to make, whether or not those payments are contractually guaranteed, unless those payments fall within <a  title="Surplus Funds 2.1" href="/pra-rules/surplus-funds#87926c96662148b98c378f06d0414fec" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Surplus Funds 2.1</a>.</li>
+</ol>
+			<p><strong>[Note: Art. 78 of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fbf0aca581e0472596f7dc88f368769c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c2f9f5ca8f854893b44146a278c0fd73"
+	 data-version="39591a21137c4a848a745dd9befad508"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) When calculating <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em>, <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> must take account of the value of financial guarantees and any contractual options included in <em><a class="glossary-link" title="contracts of insurance" href="#glossary-term-b50896395d5d449da066be4e3fa97a32" data-mce-linktype="2" data-glossary-id="52811">contracts of insurance</a></em> and <em><a class="glossary-link" title="reinsurance contracts" href="#glossary-term-c555b26e325b4e949449235711594e37" data-mce-linktype="2" data-glossary-id="52882">reinsurance contracts</a></em>.</li>
+<li>(2) Any assumptions used by a <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to determine the likelihood that <em><a class="glossary-link" title="policyholders" href="#glossary-term-25bc88f76b4747309bc7d4537386307c" data-mce-linktype="2" data-glossary-id="52874">policyholders</a></em> will exercise contractual options, including lapses and surrenders, must:</li>
+<ol>
+<li>(a) be realistic and based on current and credible information; and</li>
+<li>(b) take into account, either explicitly or implicitly, the impact that future changes in financial and non-financial conditions may have on the exercise of those options.</li>
+</ol></ol>
+			<p><strong>[Note: Art. 79 of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c2f9f5ca8f854893b44146a278c0fd73">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/9-other-elements-to-be-taken-into-account/31-12-2024?p=1" data-id="6b0307cfe9144b0087991029412953a2" data-effective-date="31-12-2024" data-download-title="Other Elements to Be Taken Into Account_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/9-other-elements-to-be-taken-into-account/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#6b0307cfe9144b0087991029412953a2&amp;subject=PRA Rulebook - Technical Provisions – Other Elements to Be Taken Into Account">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=6b0307cfe9144b0087991029412953a2">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Other Elements to Be Taken Into Account
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="85e7320380a84d86a89400790dbfc0f5"
+	 data-version="1863c2a4cab14b70b5fd45f14632165d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Segmentation
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="eb533b48bef34360ab3cacdde302870e"
+	 data-version="c19e29c0ac664affbf98593303bf2a4c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When calculating <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em>,<em> <a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> must segment their insurance and <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations into homogenous risk groups and, as a minimum, by <a href="#glossary-term-8f53b7a55fbb4c70a42cde9746689605">lines of business</a>.</p>
+			<p><strong>[Note: Art. 80 of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#eb533b48bef34360ab3cacdde302870e">
+			Past
+			<span class="visually-hidden">
+				version of 10.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=eb533b48bef34360ab3cacdde302870e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/10-segmentation/31-12-2024?p=1" data-id="85e7320380a84d86a89400790dbfc0f5" data-effective-date="31-12-2024" data-download-title="Segmentation_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/10-segmentation/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#85e7320380a84d86a89400790dbfc0f5&amp;subject=PRA Rulebook - Technical Provisions – Segmentation">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=85e7320380a84d86a89400790dbfc0f5">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Segmentation
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="1e6d889336634e56988fee78049ee50f"
+	 data-version="2e62284ef0c24ce0abe2aed91875d15f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					11
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Recoverables from Reinsurance Contracts and ISPVs
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="865de775dd83496f80016b11e3b37783"
+	 data-version="fe38c4f61cd94b419e13c8ec7fb0abd3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+    <li>(1)<em> <a class="glossary-link" title="Firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">Firms</a></em> must calculate amounts recoverable from <em><a class="glossary-link" title="reinsurance contracts" href="#glossary-term-c555b26e325b4e949449235711594e37" data-mce-linktype="2" data-glossary-id="52882">reinsurance contracts</a></em> and <em><a class="glossary-link" title="UK ISPV" href="#glossary-term-d657b35a131c4b4982032a800f337269" data-mce-linktype="2" data-glossary-id="52386">UK ISPVs</a></em> in accordance with <a title="2" href="/pra-rules/technical-provisions#a45a4cc38d904695b95ce2025de1ee45" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">2</a> to <a title="10" href="/pra-rules/technical-provisions#85e7320380a84d86a89400790dbfc0f5" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">10</a>.</li>
+    <li>(2) For the purposes of (1), <em><a class="glossary-link" title="Firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> must take into account the time difference between amounts becoming recoverable and the actual receipt of those amounts.</li>
+    <li>(3)<em> <a class="glossary-link" title="Firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">Firms</a></em> must adjust the calculation referred to in (1) to take into account expected losses due to the default of the counterparty. That adjustment must be based on an assessment of the probability of default of the counterparty and the average loss that would result from that default (loss-given- default).</li>
+</ol>
+			<p><strong>[Note: Art. 81 of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#865de775dd83496f80016b11e3b37783">
+			Past
+			<span class="visually-hidden">
+				version of 11.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=865de775dd83496f80016b11e3b37783">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/11-recoverables-from-reinsurance-contracts-and-ispvs/31-12-2024?p=1" data-id="1e6d889336634e56988fee78049ee50f" data-effective-date="31-12-2024" data-download-title="Recoverables from Reinsurance Contracts and ISPVs_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/11-recoverables-from-reinsurance-contracts-and-ispvs/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#1e6d889336634e56988fee78049ee50f&amp;subject=PRA Rulebook - Technical Provisions – Recoverables from Reinsurance Contracts and ISPVs">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1e6d889336634e56988fee78049ee50f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Recoverables from Reinsurance Contracts and ISPVs
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="6e751e9042524d27b1807034fa098542"
+	 data-version="56338b94ccdd466e91dac0e4c988dc01"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					12
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Data Quality and Application of Approximations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c161a4d3c2e547b6828c65979ff4ab0a"
+	 data-version="39382cc26a524b3480ef8ce601f61930"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><em><a class="glossary-link" title="Firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">Firms</a></em> must ensure that the data used in the calculation of their<em> <a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em> is appropriate, complete and accurate.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c161a4d3c2e547b6828c65979ff4ab0a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a48ed864f77b4baeaa8532b927bf7d1c"
+	 data-version="6bde21423ac54bf2bc8386ceca9e971f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> have insufficient data of appropriate quality to apply a reliable actuarial method to a set or subset of their insurance and <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> obligations, or amounts recoverable from their <em><a class="glossary-link" title="reinsurance contracts" href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e" data-mce-linktype="2" data-glossary-id="67004">reinsurance contracts</a></em> and <em><a class="glossary-link" title="UK IPSV" href="#glossary-term-d657b35a131c4b4982032a800f337269" data-mce-linktype="2" data-glossary-id="52386">UK ISPVs</a></em>, <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> may use appropriate approximations, including case-by-case approaches, in the calculation of the <em><a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em>.</p>
+			<p><strong>[Note: Art. 82 of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#a48ed864f77b4baeaa8532b927bf7d1c">
+			Past
+			<span class="visually-hidden">
+				version of 12.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a48ed864f77b4baeaa8532b927bf7d1c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/12-data-quality-and-application-of-approximations/31-12-2024?p=1" data-id="6e751e9042524d27b1807034fa098542" data-effective-date="31-12-2024" data-download-title="Data Quality and Application of Approximations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/12-data-quality-and-application-of-approximations/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#6e751e9042524d27b1807034fa098542&amp;subject=PRA Rulebook - Technical Provisions – Data Quality and Application of Approximations">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=6e751e9042524d27b1807034fa098542">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Data Quality and Application of Approximations
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="b7386df7df944e4d855fb87dd6bcdc13"
+	 data-version="7087ef9306e14fd7836912bc16635ef1"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					13
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Comparison Against Experience
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="478a6b37caf54e7bbb59ea0ff6b46d98"
+	 data-version="6764cc3389274a95b39d0e478048413c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) <a class="glossary-link" title="Firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114"><em>Firm</em>s</a> must ensure that the <em><a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em>, and the assumptions underlying the calculation of the <em><a class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em>, are regularly compared against experience.</li>
+<li>(2) Where the comparison in (1) identifies that a systematic deviation exists between the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em><a  class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em> calculations and experience, the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must make appropriate adjustments to the actuarial methods being used and/or the assumptions being made to ensure that the <em><a  class="glossary-link" title="best estimate" href="#glossary-term-960c16506e8c4233a8875b1b76119dd7" data-mce-linktype="2" data-glossary-id="52799">best estimate</a></em> is calculated in accordance with <a  style="text-indent: -14.3px;" title="2" href="/pra-rules/technical-provisions#a45a4cc38d904695b95ce2025de1ee45" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">2</a><span style="text-indent: -14.3px;"> to </span><a  style="text-indent: -14.3px;" title="12" href="/pra-rules/technical-provisions#6e751e9042524d27b1807034fa098542" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">12</a><span style="text-indent: -14.3px;">.</span></li>
+</ol>
+			<p><strong>[Note: Art. 83 of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=478a6b37caf54e7bbb59ea0ff6b46d98">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/13-comparison-against-experience/31-12-2024?p=1" data-id="b7386df7df944e4d855fb87dd6bcdc13" data-effective-date="31-12-2024" data-download-title="Comparison Against Experience_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/13-comparison-against-experience/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#b7386df7df944e4d855fb87dd6bcdc13&amp;subject=PRA Rulebook - Technical Provisions – Comparison Against Experience">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b7386df7df944e4d855fb87dd6bcdc13">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Comparison Against Experience
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="1cdf39f7dc33478984f483f7f67ce9dc"
+	 data-version="0c71a2a736294bf9919c1132e4f55d62"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					14
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appropriateness of the Level of Technical Provisions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="bf794762de93456c995d6b01f643d294"
+	 data-version="15fdcb0fbbe04e0ba26e067c82ec0b0c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Upon request by the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>, the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must demonstrate to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) the appropriateness of the level of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> <a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em>;</li>
+<li>(2) the applicability and relevance of the methods applied; and</li>
+<li>(3) the adequacy of the underlying statistical data used.</li>
+</ol>
+			<p><strong>[Note: Art. 84 of the <em><a class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bf794762de93456c995d6b01f643d294">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/14-appropriateness-of-the-level-of-technical-provisions/31-12-2024?p=1" data-id="1cdf39f7dc33478984f483f7f67ce9dc" data-effective-date="31-12-2024" data-download-title="Appropriateness of the Level of Technical Provisions_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/14-appropriateness-of-the-level-of-technical-provisions/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#1cdf39f7dc33478984f483f7f67ce9dc&amp;subject=PRA Rulebook - Technical Provisions – Appropriateness of the Level of Technical Provisions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1cdf39f7dc33478984f483f7f67ce9dc">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Appropriateness of the Level of Technical Provisions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="144c1b8aac61491083a38c8d3bc6b96f"
+	 data-version="e099cd04c3d54d7cb1c89d52bccd46ab"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					15
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Community Co-Insurance Operations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="06981b59dc6249ff98a42b4e33de833e"
+	 data-version="3042c47d094a4e70bdc0047012745be5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#06981b59dc6249ff98a42b4e33de833e">
+			Past
+			<span class="visually-hidden">
+				version of 15.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=06981b59dc6249ff98a42b4e33de833e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						15.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="284240be3bf54e26b3ed0bcb35d90ae4"
+	 data-version="1c155489aee846438b4da67453be16c8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/technical-provisions/01-01-2016#284240be3bf54e26b3ed0bcb35d90ae4">
+			Past
+			<span class="visually-hidden">
+				version of 15.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=284240be3bf54e26b3ed0bcb35d90ae4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						15.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/15-community-co-insurance-operations/31-12-2024?p=1" data-id="144c1b8aac61491083a38c8d3bc6b96f" data-effective-date="31-12-2024" data-download-title="Community Co-Insurance Operations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/15-community-co-insurance-operations/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#144c1b8aac61491083a38c8d3bc6b96f&amp;subject=PRA Rulebook - Technical Provisions – Community Co-Insurance Operations">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=144c1b8aac61491083a38c8d3bc6b96f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Community Co-Insurance Operations
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="9ff15fec90ac4c698d371530c4c5a050"
+	 data-version="84bc90aa3bf346c781cc8c4f49b0cfea"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					16
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Lloyd’s
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="473353301d994cad864c9a6e10bedde8"
+	 data-version="2c600f32ca3e4473b058bd694b9f754c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em> and <em><a class="glossary-link" title="managing agents" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agents</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=473353301d994cad864c9a6e10bedde8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d8144d72b232422e9d0efa083f4bbf4a"
+	 data-version="96ac08cb44fa4c549c47d641a82b30f4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of complying with <a  title="4.1" href="/pra-rules/technical-provisions#424b19c998b04e9bb4f30b4e5e64fe0d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>, <em><a  class="glossary-link" title="managing agents" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agents</a></em> must construe the reference to &ldquo;SCR&rdquo; in <a  title="4.1" href="/pra-rules/technical-provisions#424b19c998b04e9bb4f30b4e5e64fe0d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a> as a reference to the notional <em><a  class="glossary-link" title="syndicate" href="#glossary-term-0f105460a5264eb68754d9d944949b8a" data-mce-linktype="2" data-glossary-id="52207">syndicate</a></em> <em><a  class="glossary-link" title="SCR" href="#glossary-term-543356ff94c3463ba142ee22e92fa355" data-mce-linktype="2" data-glossary-id="52892">SCR</a></em> required to be calculated pursuant to <a  title="Solvency Capital Requirement &ndash; General Provisions 8.2" href="/pra-rules/solvency-capital-requirement---general-provisions#18bf397c40f44bdda339bbf24cc4961c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Solvency Capital Requirement &ndash; General Provisions 8.2</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d8144d72b232422e9d0efa083f4bbf4a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4776887506ae4222aa6592c7e11151d4"
+	 data-version="0f0d3e869169490e845c5158292c0053"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of complying with <a  title="1.1(2)" href="/pra-rules/technical-provisions#bbc05e7556c14fc588c7b0125c02fc82" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">1.1(2)</a> the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em> must calculate <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em> in respect of the <em><a class="glossary-link" title="insurance business" href="#glossary-term-9c9ea400b5194286b440e752add53c8a" data-mce-linktype="2" data-glossary-id="52220">insurance business</a></em> of each <em><a class="glossary-link" title="member" href="#glossary-term-8a9f72118cdf4c0c9bcadfbd4de72bf7" data-mce-linktype="2" data-glossary-id="52205">member</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4776887506ae4222aa6592c7e11151d4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7b5b0df126554f269a61732c81440e87"
+	 data-version="78b212dd893c4c92ae8ddfe01a714b87"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of complying with <a  title="1.1(3)" href="/pra-rules/technical-provisions#bbc05e7556c14fc588c7b0125c02fc82" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">1.1(3)</a>, a <em><a class="glossary-link" title="managing agent" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agent</a></em> must calculate <em><a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em> in respect of each <em><a class="glossary-link" title="syndicate" href="#glossary-term-0f105460a5264eb68754d9d944949b8a" data-mce-linktype="2" data-glossary-id="52207">syndicate</a></em> it manages</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7b5b0df126554f269a61732c81440e87">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6aff903aa5aa40798713428dabcc2be5"
+	 data-version="cd1a6bc7057048b282a1ddc7c8f3afb7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In respect of business that has been subject to an <em><a class="glossary-link" title="approved reinsurance to close" href="#glossary-term-0a323b3dd0414d0da1e673ec3dfa3959" data-mce-linktype="2" data-glossary-id="52793">approved reinsurance to close</a></em>, <em><a class="glossary-link" title="managing agents" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agents</a></em> must calculate<em> <a class="glossary-link" title="technical provisions" href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83" data-mce-linktype="2" data-glossary-id="52914">technical provisions</a></em> (before and after deduction of <em><a class="glossary-link" title="reinsurance" href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" data-mce-linktype="2" data-glossary-id="52227">reinsurance</a></em> cessions) for the reinsuring and not for the reinsured <a class="glossary-link" title="member" href="#glossary-term-8a9f72118cdf4c0c9bcadfbd4de72bf7" data-mce-linktype="2" data-glossary-id="52205">member</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6aff903aa5aa40798713428dabcc2be5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="208cdb2d09274d2b99502d1eb50f4df1"
+	 data-version="89f29d79e7464f5dac4f235975582e09"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="10.1" href="/pra-rules/technical-provisions#eb533b48bef34360ab3cacdde302870e" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">10.1</a> in relation to <em><a class="glossary-link" title="managing agents" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agents</a></em>, a <em><a class="glossary-link" title="managing agents" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agent</a></em> must carry out the segmentation referred to in that rule in respect of each <em><a class="glossary-link" title="syndicate" href="#glossary-term-0f105460a5264eb68754d9d944949b8a" data-mce-linktype="2" data-glossary-id="52207">syndicate</a></em> managed by the <em><a class="glossary-link" title="managing agents" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agent</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=208cdb2d09274d2b99502d1eb50f4df1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/technical-provisions/16-lloyds/31-12-2024?p=1" data-id="9ff15fec90ac4c698d371530c4c5a050" data-effective-date="31-12-2024" data-download-title="Lloyd’s_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/technical-provisions/16-lloyds/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/technical-provisions#9ff15fec90ac4c698d371530c4c5a050&amp;subject=PRA Rulebook - Technical Provisions – Lloyd’s">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=9ff15fec90ac4c698d371530c4c5a050">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Lloyd’s
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "corpus": "ukfin",
+  "sources": [
+    "pra_rulebook"
+  ],
+  "raw_dir": "data/ukfin/raw",
+  "processed_dir": "data/ukfin/processed",
+  "registry_dir": "data/ukfin/registry",
+  "subset_docs": null,
+  "subset_strategy": "sorted_first_n",
+  "seed": 42,
+  "timestamp_utc": "2026-01-28T16:05:09Z",
+  "stages": [
+    "download",
+    "corpus",
+    "crossref",
+    "clean",
+    "stats"
+  ],
+  "artifacts": {
+    "passage_corpus_jsonl": "data/ukfin/processed/passage_corpus.jsonl",
+    "crossref_csv": "data/ukfin/processed/crossref_resolved.csv",
+    "cleaned_csv": "data/ukfin/processed/crossref_resolved.cleaned.csv",
+    "cleaning_report_json": "data/ukfin/processed/cleaning_report.json",
+    "stats_json": "data/ukfin/processed/xrefrag_stats.raw.json"
+  },
+  "discovery": {},
+  "download": {},
+  "corpus_stage": {
+    "note": "passage_corpus.jsonl already exists",
+    "path": "data/ukfin/processed/passage_corpus.jsonl"
+  },
+  "crossref_stage": {
+    "note": "crossref_resolved.csv already exists",
+    "path": "data/ukfin/processed/crossref_resolved.csv"
+  },
+  "clean_stage": {
+    "total_rows_read": 6732,
+    "rows_kept_after_hard_filters": 4592,
+    "rows_written_final": 4554,
+    "rows_dropped": 2140,
+    "rejection_reasons": {
+      "Target::too_short": 501,
+      "Source::too_short": 1639
+    },
+    "settings": {
+      "min_len": 40,
+      "max_len": 12000,
+      "min_alpha_ratio": 0.35,
+      "max_dot_ratio": 0.22,
+      "top_k": 0,
+      "min_score": null,
+      "obligation_mode": "either",
+      "dedup_pair": true,
+      "keep_score_column": false,
+      "debug_reasons": 0,
+      "penalize_title_nav": true,
+      "penalize_glossary_tooltips": true
+    },
+    "paths": {
+      "input_csv": "data/ukfin/processed/crossref_resolved.csv",
+      "output_csv": "data/ukfin/processed/crossref_resolved.cleaned.csv",
+      "report_json": "data/ukfin/processed/cleaning_report.json"
+    },
+    "dedup_pair_removed": 38,
+    "score_summary_all_kept_after_filters": {
+      "count": 4554,
+      "min": -9,
+      "median": 12.0,
+      "max": 36
+    }
+  },
+  "stats_stage": {},
+  "status": "ok"
+}

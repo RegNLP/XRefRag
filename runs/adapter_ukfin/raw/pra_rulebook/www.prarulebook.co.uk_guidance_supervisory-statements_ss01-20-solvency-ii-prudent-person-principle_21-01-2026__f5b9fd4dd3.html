@@ -1,0 +1,4471 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{0E896215-C1DC-413F-AA2C-A1791E837C91} -->
+<title>SS1/20 – Solvency II: Prudent Person Principle | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS1/20 – Solvency II: Prudent Person Principle">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS1/20 – Solvency II: Prudent Person Principle">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrf6ca-f-72256f5ac-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":26,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"7139b08","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":58748,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025412","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==THWgjRnuJJmwdqRnXU7QzNFKgiYJYO9+Ax/h4n5Fa+ZqRjUiTgO5hsTS9FVF6Yp5EHL10cpvjrbKgaT8qTag/j/CUAmeYSVMD5vnbnfeH3TF5wzfEBjNntwF78bdJ5ydjxvFgbUpvkaKX6E7Bd9gCWXFN/0Epd2CzgMrmwgNAsRHNd7NkOQsOrrDABEMWrDvSJDKTOzGjHWr5S6uNr/iZZHZT+HCfKfjHCXe0/MCGPSxbHVCWfIMYSCBXG0JZ44MBBPfaLJKAviP0OmnhSNLXLwvqwPrfr7HnYpGaHV9DML7qtdhb8sW/13ygX1oRrBT0S3kwxEeWidRc2tJQv8AREv8HU37AicA1a5Fr9kj9gHAx05cnVgxONfd5dPDSZf2EBRfkJbnlRbYvPiw6Plpr9DMHDIbYNJQycoZBGpHtLg=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS1/20 – Solvency II: Prudent Person Principle				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS1/20 – Solvency II: Prudent Person Principle
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						27/05/2020
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						30/06/2024
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-3d531e25-8bb1-4945-aca3-eba1b0cb8488">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-3d531e25-8bb1-4945-aca3-eba1b0cb8488"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS1/20 – Solvency II: Prudent Person Principle
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS1/20 – Solvency II: Prudent Person Principle)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/conditions-governing-business/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Conditions Governing Business
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/investments/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Investments
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/valuation/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Valuation
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/matching-adjustment/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Matching Adjustment
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2019/solvency-ii-prudent-person-principle" class="list-links__link" target="_blank">
+										PS14/20 - Solvency II: Prudent Person Principle
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/june/review-of-solvency-ii-reform-of-the-matching-adjustment-policy-statement" class="list-links__link" target="_blank">
+										PS10/24 - Review of Solvency II: Reform of the Matching Adjustment
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/31-12-2024?p=1" data-id="003d52503ffe445e8bf9d4c4de7219f4" data-effective-date="31-12-2024" data-download-title="SS1/20 – Solvency II: Prudent Person Principle_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle&amp;subject=PRA Rulebook - SS1/20 – Solvency II: Prudent Person Principle">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="c958725b17d2472c8fb469adac2547fb"
+	 data-version="f3511f9746c5452db3458592ea26b675"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5749120fe57e4451927ebdb54bdbfa83"
+	 data-version="77d0febc70a94d75b41baed8a17354b4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Supervisory Statement (SS) sets out the PRA&rsquo;s expectations of firms in accordance with the requirements under the Prudent Person Principle (PPP) under the <a href="/pra-rules/investments" data-rb-content-link="Part">Investments Part</a>&nbsp;of the PRA Rulebook regarding:</p>
+<ul>
+    <li>their development and maintenance of an investment strategy;</li>
+    <li>their management of risks arising from investments and their internal governance within the investment function; and</li>
+    <li>their investment in assets not admitted to trading on a regulated market (hereafter &lsquo;non-traded assets&rsquo;)<sup><a href="#footnote-1">1</a></sup> and intragroup loans and participations.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						Non-traded assets comprise any investments that are not admitted to trading on a regulated market. Some examples of non-traded asset types in which UK insurers have made significant investments in order to back annuity obligations include equity release mortgage loans, commercial real estate loans and infrastructure loans.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#5749120fe57e4451927ebdb54bdbfa83">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b854a39fb0c54263a93673197ca47971"
+	 data-version="28e7d9e25dd940e7a9ed8d4b0e12ef29"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This SS is addressed to all UK Solvency II firms, including in the context of provisions relating to Solvency II groups, mutuals, third-country branches, the Society of Lloyd&rsquo;s and its managing agents (collectively called &lsquo;firms&rsquo; in this SS).&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0a84c1f5fe5840eba6371c699c36082c"
+	 data-version="54b4b37f6f0f42468658b2e5e31a1e0d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA notes that the PPP sets objective standards for prudent investment.<sup><a href="#footnote-2">2</a></sup> These include standards in relation to portfolio diversification,<sup><a href="#footnote-3">3</a></sup> the use of financial derivatives,<sup><a href="#footnote-3">4</a></sup> exposure to non-regulated markets<sup><a href="#footnote-5">5</a></sup> and risk concentration,<sup><a href="#footnote-6">6</a></sup> asset-liability matching,<sup><a href="#footnote-7">7</a></sup> and the security, quality and profitability of the whole investment portfolio.<sup><a href="#footnote-8">8</a></sup> Compliance with these standards must be assessed on an objective basis, from the standpoint of the hypothetical prudent person in similar circumstances (taking into account all relevant factors case-by-case), rather than a firm&rsquo;s subjective view about the prudence of its investment standards. This does not mean that a firm&rsquo;s own views about the prudence of its investments are irrelevant or would be disregarded. Indeed, firms are required to make their own judgments about the prudence of the way they manage their business for the purposes of the risk management requirements in Solvency II. Nor does this imply that the same investment policy or the same investment limits ought to apply to different firms with different business strategies and risk profiles.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						Judges have been prepared to rule on what constitutes a prudent investment strategy in other regulatory regimes. For example, see: <a href="http://www.bailii.org/ew/cases/EWHC/Ch/2016/1538.html">http://www.bailii.org/ew/cases/EWHC/Ch/2016/1538.html</a>.
+					</span>
+				</li>
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						Rule 5.2(3) of the Investments Part of the PRA Rulebook
+					</span>
+				</li>
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						Investments 5.2(1).
+					</span>
+				</li>
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						Investments 5.2(2).
+					</span>
+				</li>
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						Investments 5.2(4).
+					</span>
+				</li>
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						Investments 3.1.
+					</span>
+				</li>
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						Investments 2.1(2).
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="acd8d1663542488484ad60e2e0b6f8d4"
+	 data-version="b5cdb412b01e4c22a35bc87ff4e54a9e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Compliance with the PPP must be considered on a case-by-case basis, as what is prudent for one firm, based on its particular business strategy and risk profile, may not be prudent for a different firm. When applied to a particular firm&rsquo;s circumstances, the PPP&rsquo;s standards are likely to allow for a range of reasonable investment strategies. In line with the PRA&rsquo;s supervisory approach to insurance regulation, the PRA will exercise its independent judgement, and where it concludes that a firm is not meeting the PPP&rsquo;s standards it will expect the firm&rsquo;s senior managers responsible for investment to take action.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c28f015cfaa141599cc03ad093f9d8af"
+	 data-version="cf9755283f3f43b1a94325abeb4d12b9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The SS should be read in conjunction with the following:</p>
+<ul>
+    <li>The <a href="/pra-rules/investments" data-rb-content-link="Part">Investments</a>, <a href="/pra-rules/conditions-governing-business" data-rb-content-link="Part">Conditions Governing Business</a>, <a href="/pra-rules/valuation" data-rb-content-link="Part">Valuation</a>, <a href="/pra-rules/solvency-capital-requirement---standard-formula" data-rb-content-link="Part">Solvency Capital&nbsp;Requirements &ndash; Standard Formula</a>, <a href="/pra-rules/solvency-capital-requirement---internal-models" data-rb-content-link="Part">Solvency Capital Requirements &ndash; Internal Models</a>, <a href="/pra-rules/reporting" data-rb-content-link="Part">Reporting</a>&nbsp;and <a href="/pra-rules/matching-adjustment" data-rb-content-link="Part">Matching Adjustment Parts</a>&nbsp;of the PRA Rulebook and <a href="/pra-rules/group-supervision#7ed421d6fb3046c0ae05e3d03fa675a3" data-rb-content-link="Rule">Group&nbsp;Supervision 16.1A</a>;</li>
+    <li>&lsquo;The PRA&rsquo;s approach to insurance supervision&rsquo;;<sup><a href="#footnote-9">9</a></sup> </li>
+    <li>SS5/19 &lsquo;Liquidity risk management for insurers&rsquo;;<sup><a href="#footnote-10">10</a></sup> </li>
+    <li>SS41/15 &lsquo;Solvency II: applying EIOPA Set 2, System of Governance and ORSA Guidelines&rsquo;;<sup><a href="#footnote-11">11</a></sup> </li>
+    <li> SS4/18 &lsquo;Financial management and planning by insurers&rsquo;;<sup><a href="#footnote-12">12</a></sup> </li>
+    <li>SS19/16 &lsquo;Solvency II: ORSA&rsquo;;<sup><a href="#footnote-13">13</a></sup> </li>
+    <li>SS3/17 &lsquo;Solvency II: illiquid unrated assets&rsquo;;<sup><a href="#footnote-14">14</a></sup> </li>
+    <li>SS7/18 &lsquo;Solvency II: Matching adjustment&rsquo;;<sup><a href="#footnote-15">15</a></sup> </li>
+    <li>SS5/16 &lsquo;Corporate governance: Board responsibilities&rsquo;;<sup><a href="#footnote-16">16</a></sup> </li>
+    <li>SS3/19 &lsquo;Enhancing banks&rsquo; and insurers&rsquo; approaches to managing the financial risks from climate change&rsquo;;<sup><a href="#footnote-17">17</a></sup> </li>
+    <li>SS10/18 &lsquo;Securitisation: General requirements and capital framework&rsquo;;<sup><a href="#footnote-18">18</a></sup> </li>
+    <li>SS35/15 &lsquo;Strengthening individual accountability in insurance&rsquo;;<sup><a href="#footnote-19">19</a></sup> </li>
+    <li>Policy Statement 15/18 &lsquo;Strengthening individual accountability in insurance: Extension of the SM&amp;CR to insurers&rsquo;;<sup><a href="#footnote-20">20</a></sup> </li>
+    <li>SS1/19 &lsquo;Non-binding PRA materials: The PRA&rsquo;s approach after the UK&rsquo;s withdrawal from the EU&rsquo;;<sup><a href="#footnote-21">21</a></sup> </li>
+    <li>SS20/16: &lsquo;Solvency II: reinsurance &ndash; counterparty credit risk&rsquo;;<sup><a href="#footnote-22">22</a></sup></li>
+    <li>SS8/18 &lsquo;Solvency II: Internal models &ndash; modelling of the matching adjustment&rsquo;;<sup><a href="#footnote-23">23</a></sup></li>
+    <li>statement of policy on MA permissions;<sup><a href="#footnote-24">24</a></sup> and</li>
+    <li>EIOPA Guidelines on the systems of governance.<sup><a href="#footnote-25">25</a></sup></li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						July 2023: <a href="http://www.bankofengland.co.uk/prudential-regulation/supervision">www.bankofengland.co.uk/prudential-regulation/supervision</a>.
+					</span>
+				</li>
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						September 2019: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2019/liquidity-risk-management-for-insurers-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2019/liquidity-risk-management-for-insurers-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-11" class="rb-footnote">
+					<span class="fn-col-1">
+						11.
+					</span>
+					<span class="fn-col-2">
+						December 2021: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency2-applying-eiopa-set2-system-of-governance-and-orsa-guidelines-ss">www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency2-applying-eiopa-set2-system-of-governance-and-orsa-guidelines-ss</a>
+					</span>
+				</li>
+				<li id="footnote-12" class="rb-footnote">
+					<span class="fn-col-1">
+						12.
+					</span>
+					<span class="fn-col-2">
+						May 2018: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2018/financial-management-and-planning-by-insurers-ss">http://www.bankofengland.co.uk/prudential-regulation/publication/2018/financial-management-and-planning-by-insurers-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-13" class="rb-footnote">
+					<span class="fn-col-1">
+						13.
+					</span>
+					<span class="fn-col-2">
+						November 2016: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-orsa">www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-orsa</a>.
+					</span>
+				</li>
+				<li id="footnote-14" class="rb-footnote">
+					<span class="fn-col-1">
+						14.
+					</span>
+					<span class="fn-col-2">
+						June 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2017/solvency-2-matching-adjustment-illiquid-unrated-assets-and-equity-release-mortgages-ss">www.bankofengland.co.uk/prudential-regulation/publication/2017/solvency-2-matching-adjustment-illiquid-unrated-assets-and-equity-release-mortgages-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-15" class="rb-footnote">
+					<span class="fn-col-1">
+						15.
+					</span>
+					<span class="fn-col-2">
+						June 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2018/solvency-2-matching-adjustment-ss">www.bankofengland.co.uk/prudential-regulation/publication/2018/solvency-2-matching-adjustment-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-16" class="rb-footnote">
+					<span class="fn-col-1">
+						16.
+					</span>
+					<span class="fn-col-2">
+						July 2018: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2016/corporate-governance-board-responsibilities-ss">www.bankofengland.co.uk/prudential-regulation/publication/2016/corporate-governance-board-responsibilities-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-17" class="rb-footnote">
+					<span class="fn-col-1">
+						17.
+					</span>
+					<span class="fn-col-2">
+						April 2019: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2019/enhancing-banks-and-insurers-approaches-to-managing-the-financial-risks-from-climate-change-ss">http://www.bankofengland.co.uk/prudential-regulation/publication/2019/enhancing-banks-and-insurers-approaches-to-managing-the-financial-risks-from-climate-change-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-18" class="rb-footnote">
+					<span class="fn-col-1">
+						18.
+					</span>
+					<span class="fn-col-2">
+						October 2021: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2018/securitisation-general-requirements-and-capital-framework-ss">www.bankofengland.co.uk/prudential-regulation/publication/2018/securitisation-general-requirements-and-capital-framework-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-19" class="rb-footnote">
+					<span class="fn-col-1">
+						19.
+					</span>
+					<span class="fn-col-2">
+						June 2021: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-insurance-ss">www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-insurance-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-20" class="rb-footnote">
+					<span class="fn-col-1">
+						20.
+					</span>
+					<span class="fn-col-2">
+						July 2018: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-individual-accountability-in-insurance-extension-of-the-smcr-to-insurers">http://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-individual-accountability-in-insurance-extension-of-the-smcr-to-insurers</a>.
+					</span>
+				</li>
+				<li id="footnote-21" class="rb-footnote">
+					<span class="fn-col-1">
+						21.
+					</span>
+					<span class="fn-col-2">
+						December 2020: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2019/non-binding-pra-materials-the-pras-approach-after-the-uks-withdrawal-from-the-eu-ss">www.bankofengland.co.uk/prudential-regulation/publication/2019/non-binding-pra-materials-the-pras-approach-after-the-uks-withdrawal-from-the-eu-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-22" class="rb-footnote">
+					<span class="fn-col-1">
+						22.
+					</span>
+					<span class="fn-col-2">
+						May 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-reinsurance-counterparty-credit-risk-ss">www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-reinsurance-counterparty-credit-risk-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-23" class="rb-footnote">
+					<span class="fn-col-1">
+						23.
+					</span>
+					<span class="fn-col-2">
+						June 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2018/solvency-2-internal-models-modelling-of-the-matching-adjustment-ss">www.bankofengland.co.uk/prudential-regulation/publication/2018/solvency-2-internal-models-modelling-of-the-matching-adjustment-ss</a>.
+					</span>
+				</li>
+				<li id="footnote-24" class="rb-footnote">
+					<span class="fn-col-1">
+						24.
+					</span>
+					<span class="fn-col-2">
+						June 2024: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2024/june/solvency-ii-matching-adjustment-permissions-statement-of-policy">www.bankofengland.co.uk/prudential-regulation/publication/2024/june/solvency-ii-matching-adjustment-permissions-statement-of-policy</a>
+					</span>
+				</li>
+				<li id="footnote-25" class="rb-footnote">
+					<span class="fn-col-1">
+						25.
+					</span>
+					<span class="fn-col-2">
+						A link to these guidelines can be found in Appendix 1 of statement of policy – Interpretation of EU Guidelines and Recommendations: Bank of England and PRA approach after the UK’s withdrawal from the EU (August 2022, updating January 2021) <a href="http://www.bankofengland.co.uk/paper/2019/interpretation-of-eu-guidelines-and-recommendations-boe-and-pra-approach-sop">www.bankofengland.co.uk/paper/2019/interpretation-of-eu-guidelines-and-recommendations-boe-and-pra-approach-sop</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#c28f015cfaa141599cc03ad093f9d8af">
+			Past
+			<span class="visually-hidden">
+				version of 1.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="52e5a057f7454dd891f156d6b3c2478a"
+	 data-version="f64f435246fc4c6d88e7338575f5ccfe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA rules require that &lsquo;as regards investment risk, a firm must demonstrate that it complies with the <a href="/pra-rules/investments" data-rb-content-link="Part">Investments Part</a> of the PRA Rulebook&rsquo;.<sup><a href="#footnote-26">26</a></sup> Accordingly, this SS addresses firms&rsquo; investment risk management practices and sets out some specific areas where the PRA would expect firms to pay particular attention in order to comply with the PPP.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-26" class="rb-footnote">
+					<span class="fn-col-1">
+						26.
+					</span>
+					<span class="fn-col-2">
+						Conditions Governing Business 3.4.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#52e5a057f7454dd891f156d6b3c2478a">
+			Past
+			<span class="visually-hidden">
+				version of 1.6 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a46ba772c988476ca986c0253d9b9a77"
+	 data-version="d6a491c09e9d4686a47f75410e73ba46"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA also reminds firms: </p>
+<ul>
+    <li>of the responsibilities resting with Senior Management Functions under the Senior Managers and Certification Regime. Specifically, the Chief Risk Officer is responsible for managing and reporting to the board on the risk management strategies and processes in place, including those relating to investments;</li>
+    <li>that if firms appear to the PRA to be in breach of the <a href="/pra-rules/investments" data-rb-content-link="Part">Investments Part</a> of the PRA Rulebook, the PRA would consider exercising its relevant supervisory powers under section 55M of the Financial Services and Markets Act 2000; and </li>
+    <li>that a breach of the PPP may be associated with a failure to meet the requirements set out in the <a href="/pra-rules/conditions-governing-business" data-rb-content-link="Part">Conditions Governing Business</a> or <a href="/pra-rules/matching-adjustment" data-rb-content-link="Part">Matching Adjustment</a> Parts of the PRA Rulebook. In particular, the MA eligibility conditions (which firms should comply with at all times) require compliance with the PPP at the level of both the asset and portfolio.<sup><a href="#footnote-27">27</a></sup> The PRA may consider imposing capital add-ons when certain of these requirements of the <a href="/pra-rules/conditions-governing-business" data-rb-content-link="Part">Conditions Governing Business Part</a> are breached. In the case of a breach of MA eligibility conditions that is not rectified for more than two months, the PRA may consider necessary changes to the MA permission (which may be in addition to the reduction to the MA required by <a href="/pra-rules/matching-adjustment#a592fa54a5b34cd196ffc3d94e77231c" data-rb-content-link="Rule">Matching Adjustment 13.5</a>).</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-27" class="rb-footnote">
+					<span class="fn-col-1">
+						27.
+					</span>
+					<span class="fn-col-2">
+						Matching Adjustment 2.2(6) and 13.2.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#a46ba772c988476ca986c0253d9b9a77">
+			Past
+			<span class="visually-hidden">
+				version of 1.7 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="563dba30c76c4bee95596480bd86d932"
+	 data-version="c4c700e22c6f40849f84d9b44ab342f5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The expectations set out in this SS do not amend the scope of the requirements that apply under the rules in the PRA Rulebook. In some cases, the rules or regulations apply at a portfolio level while in others the requirements are more granular.<sup><a href="#footnote-28">28</a></sup> Accordingly, the level of granularity at which the expectations in this SS should be applied will depend in each case on (among other things) the scope of all relevant requirements to which the expectation refers or relates and the specific circumstances of each firm case-by-case, taking into account the principle of proportionality.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-28" class="rb-footnote">
+					<span class="fn-col-1">
+						28.
+					</span>
+					<span class="fn-col-2">
+						For example, Investments 5.2(1) requires consideration of each of a firm’s derivatives and quasi-derivatives and it would not be sufficient for the purposes of satisfying this rule to consider derivatives only at a portfolio level, while Investments 2.1(2) expressly requires consideration of the security, quality, liquidity and profitability of a firm’s assets at a whole portfolio level.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#563dba30c76c4bee95596480bd86d932">
+			Past
+			<span class="visually-hidden">
+				version of 1.8 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2b33b746e9374f0990166a66cbbd1852"
+	 data-version="f18b4bfeddfb4a518fdbce34509adb88"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><span style="background-color: rgb(255, 255, 255);">[Deleted]</span></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#2b33b746e9374f0990166a66cbbd1852">
+			Past
+			<span class="visually-hidden">
+				version of 1.9 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/1---introduction/31-12-2024?p=1" data-id="c958725b17d2472c8fb469adac2547fb" data-effective-date="31-12-2024" data-download-title="Introduction_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/1---introduction/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#c958725b17d2472c8fb469adac2547fb&amp;subject=PRA Rulebook - SS1/20 – Solvency II: Prudent Person Principle – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="3695c74b63b74c57bf8c0849c7adcd72"
+	 data-version="664900bafe014ed7a01a13b9c61723a1"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Investment strategy
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3af5d4726df848078a273ceb4aa9419a"
+	 data-version="aa06e7447258437dbfad424ad9150de8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects firms to develop and document an investment strategy which describes at least:</p>
+<ul>
+    <li>investment objectives and strategic asset allocation; </li>
+    <li> consideration of investment constraints when setting investment objectives and strategic asset allocation; </li>
+    <li> alignment of the investment strategy with the business model and, where appropriate, how the strategy takes into account the nature and duration of a firm&rsquo;s liabilities and obligations, and the best interests of policyholders; </li>
+    <li>alignment of investment strategy with board risk appetite, risk tolerance limits and investment risk and return objectives; and </li>
+    <li> a complete list of assets and how those assets have been invested in accordance with the PPP.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#3af5d4726df848078a273ceb4aa9419a">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bb675d4dca044bb8a790dbddd2c30289"
+	 data-version="1f231fad48854b0ba2f9a03f457d94af"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A firm should review its investment strategy on an annual basis and additionally, where appropriate, following a major external event or material change in the firm&rsquo;s risk profile.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#bb675d4dca044bb8a790dbddd2c30289">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1b8af5f63f494e66bebb2f73ff2acc5a"
+	 data-version="e7bc136fab77493194408d4148adfed2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The continuing appropriateness of, or significant changes to, the investment strategy should be challenged, approved and controlled by the board or relevant sub-committee of the board. These changes might include, but are not limited to, situations where the firm is planning to invest in a new asset class, make a material, non-routine investment or materially alter the composition of its investment portfolio. A firm wishing to invest in asset classes not already approved by its board should conduct a comprehensive risk assessment to ensure all the necessary expertise, systems and processes are in place to value the asset, and to identify, measure, manage, monitor, control and report associated risks.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#1b8af5f63f494e66bebb2f73ff2acc5a">
+			Past
+			<span class="visually-hidden">
+				version of 2.3 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="df65739342d2440f8bfb1fd9f3021905"
+	 data-version="e9b4dc41123145cd90e15e84d6e345e6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A firm must demonstrate that it complies with the <a href="/pra-rules/investments" data-rb-content-link="Part">Investments Part</a>&nbsp;of the PRA Rulebook.<sup><a href="#footnote-29">29</a></sup> While the PRA is not seeking to impose additional reporting requirements, it considers that a firm&rsquo;s board cannot make effective decisions if it receives information piecemeal. Accordingly, the PRA expects that firms document compliance in a way that enables the board to effectively engage with, understand and challenge the material. Firms should be able to provide evidence of this compliance to the PRA on request.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-29" class="rb-footnote">
+					<span class="fn-col-1">
+						29.
+					</span>
+					<span class="fn-col-2">
+						Conditions Governing Business 3.4.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#df65739342d2440f8bfb1fd9f3021905">
+			Past
+			<span class="visually-hidden">
+				version of 2.4 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/2---investment-strategy/31-12-2024?p=1" data-id="3695c74b63b74c57bf8c0849c7adcd72" data-effective-date="31-12-2024" data-download-title="Investment strategy_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/2---investment-strategy/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#3695c74b63b74c57bf8c0849c7adcd72&amp;subject=PRA Rulebook - SS1/20 – Solvency II: Prudent Person Principle – Investment strategy">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="1d060c8d788a4e5387517230a7ac24c2"
+	 data-version="b372492ae8654fa78e8346b08f22283a"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Investment risk management
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d16807dae1e341278dc2b38d907446c9"
+	 data-version="df07303f03a741109749dbf18c424959"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects investments to be aligned with a firm's risk appetite, risk management policies, risk tolerance limits and investment strategy alongside the firm&rsquo;s overall business model (including the profile of its products and policyholders).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#d16807dae1e341278dc2b38d907446c9">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="470430fd08a54f1ca15df3a919991282"
+	 data-version="976903cb2d7140adbb040c63a2122825"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms may only invest in assets the risks of which they are able to identify, measure, monitor, manage, control, report and take into account in their assessment of own solvency needs in the own risk and solvency assessment (ORSA).<sup><a href="#footnote-30">30</a></sup> Firms&rsquo; risk management frameworks should deliver this. Chapter <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#236758ad6640449390946e2db31a1038" data-rb-content-link="Chapter">4</a>&nbsp;of this SS sets out the PRA&rsquo;s expectations for investment risk management where firms have outsourced their investment activities.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-30" class="rb-footnote">
+					<span class="fn-col-1">
+						30.
+					</span>
+					<span class="fn-col-2">
+						Investments 2.1(1).
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#470430fd08a54f1ca15df3a919991282">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6a4f2e5b438e46e0bca01fddd9fc6283"
+	 data-version="02a01e1da2b24730bd067c78fca5a178"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Paragraphs <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#bd059a8033934ef09403b9ca2cb91bc0" data-rb-content-link="Paragraph">3.4</a>&nbsp;to <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#52846de57d334269b84035332c8f64b9" data-rb-content-link="Paragraph">3.24</a>&nbsp;of this chapter do not apply to firms investing in assets covering technical provisions (TPs) for linked long-term contracts of insurance, except where the assets are held to cover the&nbsp;additional TPs in respect of policyholder liabilities, including those for any guarantee of investment performance or other guaranteed benefit provided under those contracts.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#6a4f2e5b438e46e0bca01fddd9fc6283">
+			Past
+			<span class="visually-hidden">
+				version of 3.3 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bd059a8033934ef09403b9ca2cb91bc0"
+	 data-version="5e497cd8c5f844019b72c144a39759fd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that when firms invest in asset structures or other investments where the risk exposure is dependent on the performance of underlying assets (including securitisations, open-ended investment companies and derivatives), they should also include the risks of these underlying assets within the scope of their investment risk management framework.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7239a59c34d842798da06bd83a6342ac"
+	 data-version="5462d5ab50f549ab9b23d5c0d70c3c5f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As part of measuring their risks, the PRA expects firms to quantify, under a range of scenarios, the potential impact of investment risks crystallising on their solvency position and their ability to pay policyholders, before and after management actions. Firms are expected to identify scenarios that would cause these risks to crystallise, and to identify and analyse potential risk management actions, in response to stress scenarios.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7f7f740f38064ab9871610362986393d"
+	 data-version="74780085219248fd8f6fc759ef62d27e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A firms&rsquo; investment risk monitoring should cover, but not be limited to: </p>
+<ul>
+    <li> changes in the value and volatility of their investment portfolios and individual assets and the firm&rsquo;s ongoing ability to monitor these; </li>
+    <li>changes in the characteristics of the assets held (eg changes in the credit quality); </li>
+    <li> changes in the value or characteristics of underlying exposures on which the performance of the asset(s) invested in depend; </li>
+    <li>changes in the external environment which may affect the security of assets; </li>
+    <li>breaches of internal quantitative limits for assets and exposures (see paragraph <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#3958148efe874f3ebe83812b21eae2a7" data-rb-content-link="Paragraph">3.11</a>&nbsp;of this SS); </li>
+    <li>concentrations of single risks in the investment portfolio (eg counterparty, asset class, geographical industry or sector); and </li>
+    <li>changes to the firm&rsquo;s risk profile which may lead to asset-liability mismatch.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#7f7f740f38064ab9871610362986393d">
+			Past
+			<span class="visually-hidden">
+				version of 3.6 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7a465c12511b45fdb074b61ab9d3316b"
+	 data-version="690cfb5ee8b94749b2924abbc1cb8c9e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that, in their monitoring of investment risks, firms should also consider the impact of concentrations on the solvency position, including concentrations on the amount of MA benefit claimed. Monitoring of concentrations should include the impact of the crystallisation of single risks (as set out in paragraph <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#7f7f740f38064ab9871610362986393d" data-rb-content-link="Paragraph">3.6</a>&nbsp;of this SS) on the MA benefit.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="139b9c9891ed4c998cb4ea508c99e723"
+	 data-version="aeb709df707a49eabcb093030adef575"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The board and any relevant sub-committees of the board should receive appropriate, accurate and timely management information on their firm&rsquo;s investment risks. This management information should be provided, at a minimum, whenever the board or relevant committee meets to review the investment strategy, internal investment limits or investment risks. Firms are reminded of the requirement to at least ensure that their investment risk management feeds in to their ORSA process and report,<sup><a href="#footnote-31">31</a></sup> and the PRA expects a firm to pay particular attention to this where investment risk is assessed to be a key risk currently facing the firm or likely to face the firm in the future.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-31" class="rb-footnote">
+					<span class="fn-col-1">
+						31.
+					</span>
+					<span class="fn-col-2">
+						Investments 2.1(1).
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#139b9c9891ed4c998cb4ea508c99e723">
+			Past
+			<span class="visually-hidden">
+				version of 3.7 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fa5c9fc2900247dca619f205c46af12b"
+	 data-version="2aab7e764440429b963e899ee77e523d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA reminds firms of the requirements of Investments <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#dff9772f7b7e44c1be8dfff020abfbdf" data-rb-content-link="Paragraph">5.2(1)</a>. Where firms have hedged risks with derivatives and similar commitments, the PRA expects firms to be able to monitor the effectiveness of any hedge in mitigating the relevant risk exposure, and take remedial action in the event that it becomes less effective. The PRA notes that the requirements of Investments <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#dff9772f7b7e44c1be8dfff020abfbdf" data-rb-content-link="Paragraph">5.2(1)</a>&nbsp;apply to derivatives and quasi-derivatives, and as such, firms may only invest in such instruments where it contributes to a reduction of risks or facilitates efficient portfolio management.<sup><a href="#footnote-32">32</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-32" class="rb-footnote">
+					<span class="fn-col-1">
+						32.
+					</span>
+					<span class="fn-col-2">
+						An example of a quasi-derivative is a long dated interest rate swap repackaged as a bond.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#fa5c9fc2900247dca619f205c46af12b">
+			Past
+			<span class="visually-hidden">
+				version of 3.8 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9005089342744563bbdca800305b0575"
+	 data-version="68e5692f572c435a8ac768358c5ab8d5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects firms to pay particular attention to the measurement and control of&nbsp;credit spread and default risk (including credit transition downgrade/upgrade risk). In particular, the PRA expects firms that outsource credit risk assessments to have sufficient&nbsp;in-house expertise to appropriately monitor the risks associated with this practice, and reminds firms of their obligations under <a href="/pra-rules/conditions-governing-business#3e0ed0caa3184bf8bd9adc0242c38e07" data-rb-content-link="Rule">Conditions Governing Business 3.6A</a>. Where firms internally assign credit ratings for unrated assets, they are reminded of the PRA&rsquo;s expectations as set out in <a href="/guidance/supervisory-statements/ss03-17---solvency-ii-illiquid-unrated-assets" data-rb-content-link="Guidance">SS3/17</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#9005089342744563bbdca800305b0575">
+			Past
+			<span class="visually-hidden">
+				version of 3.9 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="73d866a0c1f14211b99585078011255a"
+	 data-version="0f096cd2175947829ade88af888d2af5"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Investment Risk Management Policy</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="86fe4cfb8a924afc98bae8aa18035c4c"
+	 data-version="17eb58ce65fa4198af61a68eb76c3adc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The risk management system in accordance with Solvency II must cover areas, including those listed below, and firms must produce policies including for these areas:<sup><a href="#footnote-33">33</a></sup> </p>
+<ul>
+    <li> underwriting and reserving; </li>
+    <li>asset-liability management; </li>
+    <li> investment risk management; </li>
+    <li>liquidity risk management; </li>
+    <li>concentration risk management; </li>
+    <li>operational risk management; and </li>
+    <li>reinsurance and other insurance risk mitigation techniques.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-33" class="rb-footnote">
+					<span class="fn-col-1">
+						33.
+					</span>
+					<span class="fn-col-2">
+						Conditions Governing Business 3.1A.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#86fe4cfb8a924afc98bae8aa18035c4c">
+			Past
+			<span class="visually-hidden">
+				version of 3.10 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3958148efe874f3ebe83812b21eae2a7"
+	 data-version="ca338749917546558aa5ce80a45680ff"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms must develop an investment risk management policy that, where appropriate, in order to ensure effective risk management, includes internal quantitative investment limits for assets and exposures.<sup><a href="#footnote-34">34</a> </sup>The PRA cannot envisage circumstances where it would not be appropriate to set such internal limits and, as such, expects firms to define and operate within these limits. The PRA expects that such limits would encompass at least asset class, geographic, single-name, sector and off-balance sheet exposures that the firm would expect to hold in reasonably foreseeable market conditions.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-34" class="rb-footnote">
+					<span class="fn-col-1">
+						34.
+					</span>
+					<span class="fn-col-2">
+						Conditions Governing Business 2.5(1) and Conditions Governing Business 3.1A(3)(e).
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#3958148efe874f3ebe83812b21eae2a7">
+			Past
+			<span class="visually-hidden">
+				version of 3.11 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1de0f1bc822d426f9bb82e8ef7e71ebb"
+	 data-version="4559e7c2130c44e89f4366f5456367d1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects quantitative investment limits to be consistent with the board&rsquo;s risk appetite. As such, the PRA expects a firm to document how its limits are determined and how they are consistent with its overall risk appetite and risk management. The PRA may review the appropriateness of the limits when assessing compliance with the requirements on the system of governance and investments as part of the supervisory review process.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#1de0f1bc822d426f9bb82e8ef7e71ebb">
+			Past
+			<span class="visually-hidden">
+				version of 3.12 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="679dd7d8a7a24dd7b82f1c946c8839e0"
+	 data-version="8ac7d9aaec5f4d5ba75b755547e745c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that a firm will review its internal quantitative investment limits in line with reviews of the firm&rsquo;s investment strategy and investment risk management policy.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#679dd7d8a7a24dd7b82f1c946c8839e0">
+			Past
+			<span class="visually-hidden">
+				version of 3.13 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f608565251004f9aa3b626df8e805f0d"
+	 data-version="73c0d98f3d8948c8813c713474049e5a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When setting internal quantitative investment limits for asset classes and exposures, the PRA expects a firm should take into account at least the:</p>
+<ul>
+    <li>nature and duration of the firm&rsquo;s liabilities; </li>
+    <li>nature and quantification of the risks associated with each category of asset and with individual assets; </li>
+    <li>access to investment risk management capabilities proportionate to the complexity of the asset class involved (especially for any planned new categories of investment); </li>
+    <li>need for proper diversification of assets, as set out in <a href="/pra-rules/investments#f1f05969b3c84712a55a37d60f9f118d" data-rb-content-link="Rule">Investments 5.2(3)</a>; </li>
+    <li>impact of any uncertainty on the valuation of assets, or on the ability of the firm to realise an asset&rsquo;s value in the event of sale, including under stress; </li>
+    <li>uncertainty around the timing and the channels through which investment risks may materialise and the actions available to mitigate them; and </li>
+    <li>material reinsurance cessions and whether these create correlations of counterparty credit risk, particularly if collateral arrangements are used, whether, for example, as a result of the counterparty itself, or as a result of collateral arrangements, where utilised.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#f608565251004f9aa3b626df8e805f0d">
+			Past
+			<span class="visually-hidden">
+				version of 3.14 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0885f2e1d93642dcb969d1a41185c6e9"
+	 data-version="cbb1c604d5bd40439d8ecdbe5cd6872d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Counterparty Risk</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="9676d65155324873833ef6e343f9e58b"
+	 data-version="6ff5148c1a7344388d6646e95e527749"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Internal quantitative investment limits should be set in order to ensure a properly diversified and resilient portfolio of assets (with an acceptable level of volatility) that avoids a material reliance on counterparties (or other common risk factors between the assets).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="781438ed45af47baa03218114d829709"
+	 data-version="282704592af8437289e96282be4a2a39"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When setting quantitative investment limits, firms should consider an assessment of the impact of the failure of the firm&rsquo;s largest counterparties.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f4e2a099a3f944ddab29f4ce12a0d6a0"
+	 data-version="ea94febd082b44bea0231dad4688efa0"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Risk concentration, risk accumulation and lack of diversification</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="6c1fca52830c4eaba8e3ea75e84c735e"
+	 data-version="91593874dbbd4e538bdb632b89395f47"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/investments#f1f05969b3c84712a55a37d60f9f118d" data-rb-content-link="Rule">Investments 5.2(4)</a> requires firms to ensure that assets issued by the same issuer, or by issuers belonging to the same group, shall not expose the insurance firm to excessive risk concentration. This is an objective standard and must be assessed from the perspective of the hypothetical prudent person in the same situation.<sup><a href="#footnote-35">35</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-35" class="rb-footnote">
+					<span class="fn-col-1">
+						35.
+					</span>
+					<span class="fn-col-2">
+						In the past the courts have determined whether objective standards have been met, for example Cowan v Scargill [1984].
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#6c1fca52830c4eaba8e3ea75e84c735e">
+			Past
+			<span class="visually-hidden">
+				version of 3.17 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a031a5cb45d3435fbc45f8f9ddaf517d"
+	 data-version="ee2f6885ce2e4e81bab97a04f66084dc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.18
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms are also reminded of their obligations relating to risk concentration reporting under <a href="/pra-rules/reporting#ded46d59efb545a897e6f5ac5f704ead" data-rb-content-link="Rule">Reporting 3.3C</a>. The PRA expects that firms will stress test their portfolios to demonstrate that they are not exposed to excessive risk concentration. The PRA expects, at the least, that the solvency of a firm would not be threatened by any plausible crystallisation of a risk related to assets issued by the same issuer or by issuers belonging to the same group.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#a031a5cb45d3435fbc45f8f9ddaf517d">
+			Past
+			<span class="visually-hidden">
+				version of 3.18 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="abd57c1a89704864a48013e3f74f4e9d"
+	 data-version="9379fdfa2adf409abaa14fcbedf101cf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.19
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/investments#f1f05969b3c84712a55a37d60f9f118d" data-rb-content-link="Rule">Investments 5.2(3)</a> requires assets to be properly diversified in such a way as to avoid excessive reliance on any particular asset, issuer or group of undertakings, or geographical area, and excessive accumulation of risk in the portfolio as a whole. This is an objective standard that must be assessed on an objective basis. One way the PRA expects that firms could demonstrate proper diversification is by stress testing their portfolios. More specifically, the PRA expects that with regard to risks arising from a particular asset, issuer or group of undertakings, or geographical area (eg default or downgrade resulting from a change in government policies or deterioration in market or macroeconomic conditions), or other single source of risk:</p>
+<ul>
+    <li>the solvency risk appetite of the firm is not threatened in a moderate stress scenario; and</li>
+    <li>the solvency of the firm is not threatened in a severe stress scenario and the firm is able to recover from a severe shock and restore compliance with all its regulatory requirements.<sup><a href="#footnote-36">36</a></sup> </li>
+</ul>
+<p>In this context, the PRA considers that what constitutes &lsquo;moderate&rsquo; and &lsquo;severe&rsquo; stress scenarios depends on the individual circumstances of a firm.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-36" class="rb-footnote">
+					<span class="fn-col-1">
+						36.
+					</span>
+					<span class="fn-col-2">
+						This is in line with paragraph 2.3 of SS4/18 – Financial management and planning by insurers (May 2018), in which the PRA expects that firms set their risk appetites by considering, amongst other factors, ‘recovery options that may be available to the insurer, including consideration of when each option may not be available’: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2018/financial-management-and-planning-by-insurers-ss">www.bankofengland.co.uk/prudential-regulation/publication/2018/financial-management-and-planning-by-insurers-ss</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#abd57c1a89704864a48013e3f74f4e9d">
+			Past
+			<span class="visually-hidden">
+				version of 3.19 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6f610e19290049e0bff66fad43e42c61"
+	 data-version="8ad0412d26bc4f758ed4fd13737074a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.20
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects firms to demonstrate how their quantitative investment limits and forward-looking investment strategy would prevent solvency from being threatened under a range of stress scenarios. The PRA expects that firms that appear to it to have excessive levels of concentration risk within their investment portfolio will be subject to greater supervisory scrutiny. This could include supervisory expectations for relatively more severe stress scenarios. The PRA would expect a firm to use a combination of simultaneous stresses and be able to identify the set of circumstances that would threaten its solvency risk appetite.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="67afade1826a4c61b66e288d24753354"
+	 data-version="28ea18e9070f4118809948f54b4cd8c0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.21
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA also expects that the investment risk management policy will articulate how a firm has identified, and is managing: any potential correlation or contagion risks between assets that would lead to excessive concentration of risk; and any risks that are common to a material proportion of the firm&rsquo;s investment portfolio.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9e484a6db26e4c81b3e05220b0879a27"
+	 data-version="6831b2ca9c084e64b4eb56f9e04702ab"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.22
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In determining its quantitative investment limits, a firm should have due regard to concentration risk and set out the level of concentration exposure that it will not exceed.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c24da5433c2241f88fbd3da67ef52de0"
+	 data-version="71d7d364b9ca432c9872a0580d2b570b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.23
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms must ensure that their investments do not expose them to risks that cannot be managed effectively in accordance with the requirements of the rules in the Conditions Governing Business and Investments Parts of the PRA Rulebook. The more complex the risk and the less understood it is (eg climate risk), the more difficult it is for firms to manage their exposure to such risks effectively. Therefore, the PRA expects a firm to pay particular attention to such risks in its investment risk management policy and to avoid overexposure to such risks. For example, a firm should consider whether there is an excessive accumulation of financial risks from climate change in its investment portfolio, consider appropriate mitigants to those risks and note the expectations set out in SS3/19. As another example, a firm should consider its exposure to political risk, particularly when investing in assets that are ultimately backed by government.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="52846de57d334269b84035332c8f64b9"
+	 data-version="1088332a28d041fab185c544efbcc3ae"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.24
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In considering the nature and quantification of the risks associated with each category of asset and with individual assets (see paragraph <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#f608565251004f9aa3b626df8e805f0d" data-rb-content-link="Paragraph">3.14</a>&nbsp;of this SS), the PRA expects a firm to limit its investment appropriately where there is insufficient data to quantify the risks.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/3---investment-risk-management/31-12-2024?p=1" data-id="1d060c8d788a4e5387517230a7ac24c2" data-effective-date="31-12-2024" data-download-title="Investment risk management_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/3---investment-risk-management/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#1d060c8d788a4e5387517230a7ac24c2&amp;subject=PRA Rulebook - SS1/20 – Solvency II: Prudent Person Principle – Investment risk management">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="236758ad6640449390946e2db31a1038"
+	 data-version="6763bbdb80bb44a5bb27cdf705d32057"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Outsourcing of investment activities
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="55f43e1c75c34a54a7c90b40a4aed8c5"
+	 data-version="f49b380d54c04a15899023d19f0f33f9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When outsourcing investment-related activities, firms are subject to&nbsp;<a href="/pra-rules/conditions-governing-business#17d43b83ffcf4fdf887ebc9cc1fdb7db" data-rb-content-link="Chapter">Chapter 7 of Conditions Governing Business</a>, which sets out requirements for outsourcing in general.&nbsp;<a href="/pra-rules/conditions-governing-business#b9842d145415448da74f5936e17477d8" data-rb-content-link="Rule">Rule 7.1</a>&nbsp;states that &lsquo;if a firm outsources a function or any insurance or reinsurance activity, it remains fully responsible for discharging all of its obligations under the PRA rules and FSMA and any other laws, rules, regulations and administrative provisions deriving from FSMA that apply to UK Solvency II firms.&rsquo;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#55f43e1c75c34a54a7c90b40a4aed8c5">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a22ae532b47a465db8ca377f700fced8"
+	 data-version="d4e968ec8fa54f0282a71bc399144dc6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As such, firms that wholly or partially outsource their investment function themselves remain subject to the requirements of the PPP. A firm must ensure that any external investment manager only invests its assets in accordance with the PPP. Boards must be aware of any outsourced investment activities and must monitor, regularly review and be satisfied that these align with the firm&rsquo;s strategy, strategic asset allocation and risk appetite.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#a22ae532b47a465db8ca377f700fced8">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2880f509b77e4a8197bb4a859adc5f79"
+	 data-version="506287eb7c1f4522a85f4cd4f6f6f7ec"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that firms will undertake appropriate due diligence in relation to outsourced investment activities. A firm&rsquo;s risk function should have the ability to understand and manage the specific risks associated with outsourcing its investment function or parts of its investment function. Additionally firms should be confident that any external party has sufficient risk management expertise to comply with this SS.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d878fd5c99a441c294cb800b1f548edb"
+	 data-version="af042bfd842840a4b7e733795934637c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/conditions-governing-business#4bb7d55199da48d189fabc00ae03f691" data-rb-content-link="Rule">Conditions Governing Business 7.1A</a>, <a href="/pra-rules/conditions-governing-business#e869302313bb42c59a63681ac950d10c" data-rb-content-link="Rule">7.2A</a>&nbsp;and <a href="/pra-rules/conditions-governing-business#cd4f0ef7591b44a7833c22eefde03f3a" data-rb-content-link="Rule">7.5</a>&nbsp;to <a href="/pra-rules/conditions-governing-business#fbdcfc55086a47c9a53bcdc920160b3b" data-rb-content-link="Rule">7.8</a>&nbsp;apply for outsourced investment functions/activities. For the purposes of these rules, the PRA would normally expect &lsquo;investment&rsquo; to be regarded as a &lsquo;critical or important operational&rsquo; function or activity. Firms should identify a process to determine which functions and activities are critical or important.<sup><a href="#footnote-37">37</a></sup> The PRA would expect to challenge firms to explain their reasoning if as a result of this process they determine that investment functions are not &lsquo;critical or important&rsquo;.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-37" class="rb-footnote">
+					<span class="fn-col-1">
+						37.
+					</span>
+					<span class="fn-col-2">
+						EIOPA Guidelines on the systems of governance.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#d878fd5c99a441c294cb800b1f548edb">
+			Past
+			<span class="visually-hidden">
+				version of 4.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/4---outsourcing-of-investment-activities/31-12-2024?p=1" data-id="236758ad6640449390946e2db31a1038" data-effective-date="31-12-2024" data-download-title="Outsourcing of investment activities_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/4---outsourcing-of-investment-activities/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#236758ad6640449390946e2db31a1038&amp;subject=PRA Rulebook - SS1/20 – Solvency II: Prudent Person Principle – Outsourcing of investment activities">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="f777f76ce21442feaff09e239afc9fa5"
+	 data-version="bab1471a1ce24ee9af2b7e9c272537d7"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Exposures to non-traded assets
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b35b6dfa05c6438e87b4761567c8a7ba"
+	 data-version="2fa85fb32a344ff3ab73de44a168b945"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This chapter does not apply to firms&rsquo; investments in assets covering TPs for linked long-term contracts of insurance, except where the assets are held to cover the additional TPs in respect of policyholder liabilities, including those for any guarantee of investment performance or other guaranteed benefit provided under those contracts.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#b35b6dfa05c6438e87b4761567c8a7ba">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="dff9772f7b7e44c1be8dfff020abfbdf"
+	 data-version="c3ddf8d2bdd840d1be51d618088c6634"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Investments in non-traded assets can be an appropriate match for insurance liabilities, particularly annuities or Periodic Payment Order liabilities (PPOs), but they can also give rise to additional risks. For example, they can be difficult to value in the absence of regular market pricing and to sell in a timely manner, particularly under stressed market conditions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9092aed076e444ffbbbb96c184b2a6a7"
+	 data-version="9cef0a197cef4d1785e49f24e51b0d75"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>&nbsp;In addition to the factors set out in paragraph <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#f608565251004f9aa3b626df8e805f0d" data-rb-content-link="Paragraph">3.14</a>&nbsp;of this SS, the PRA also expects that, prior to investing in a non-traded asset, when determining any internal investment limit, and as part of ongoing practice, firms will also consider and assess matters including the following: </p>
+<ul>
+    <li>the appropriateness and robustness of the valuation methodology under a suitable range of operating conditions; </li>
+    <li>in the case of internally-rated assets, the robustness, capability and maturity of the internal rating framework; </li>
+    <li>if using an internal model, the ability to justify and reconcile any material differences between how investment risk is assessed for capital purposes and when applying the standards of the PPP; and </li>
+    <li>the materiality of any embedded optionality, how this may change over time and under stress, and how any change will affect the risk profile of the asset.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="66125c054bdd4f0b9fa987c475a29fae"
+	 data-version="87d860d1db374a2a9d2c0044e20ff583"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Non-traded assets will often be more complex than those traded on a regulated exchange and as a result often expose firms to additional risk. The PRA expects that for the purpose of identifying the risks arising from these investments (in line with<a href="/pra-rules/investments#2628704dcaee4ab5bb50f2741dfeba95" data-rb-content-link="Rule">&nbsp;Investments 2.1(1)</a>), firms will take particular&nbsp;care to consider both the systemic and idiosyncratic risks arising from the features of each investment.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="06ecf57ca47941dba68ac84065931eb3"
+	 data-version="b5312cf423964fafadf536518456f3ed"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Non-traded assets are often bought and sold both less frequently and in less deep, liquid and transparent markets than traded assets. Therefore, there is often relatively little credible historical pricing data that can be used to measure the risks they introduce as required under <a href="/pra-rules/investments#2628704dcaee4ab5bb50f2741dfeba95" data-rb-content-link="Rule">Investments 2.1(1)</a>. Firms with historical records for their own non-traded assets are unlikely to have access to historical data relating to the market as a whole. It is therefore important for firms to undertake a fundamental analysis of the underlying risks on their non-traded assets.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#06ecf57ca47941dba68ac84065931eb3">
+			Past
+			<span class="visually-hidden">
+				version of 5.5 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fd3bc731526c48d2afb2177f16ebe98f"
+	 data-version="589668ed963e48d380be4c945f384085"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the level of expertise of key persons (including investment managers) and the robustness of risk management systems and controls would increase commensurate with any increases in the scale, complexity or concentration of investments in non-traded assets.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="10a200ad19b0453fbbb8a99877192969"
+	 data-version="37ba29ecb07444f6881ef999318f93bc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA reminds firms of its expectations relating to liquidity risk arising from investment in non-traded assets, as set out in <a href="/guidance/supervisory-statements/ss05-19-liquidity-risk-management-for-insurers" data-rb-content-link="Guidance">SS5/19</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#10a200ad19b0453fbbb8a99877192969">
+			Past
+			<span class="visually-hidden">
+				version of 5.7 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5214487fc50f44a5a0c4789faa3da5ce"
+	 data-version="c896290357b8455daee36260a0792c3f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/conditions-governing-business#0be4be8015c84daf81d7840a1a44de3f" data-rb-content-link="Rule">Conditions Governing Business 3.4</a>&nbsp;requires firms to demonstrate compliance with the&nbsp;<a href="/pra-rules/investments" data-rb-content-link="Part">Investments Part</a>&nbsp;of the PRA Rulebook. For this purpose, firms investing in non-traded assets should at a minimum be able to demonstrate that:</p>
+<ul>
+    <li>key persons have sufficient experience and expertise to be able to understand and manage the risks involved in the assets held and challenge decisions;</li>
+    <li>the suitability of an investment to match the firm&rsquo;s liabilities has been assessed in the light of suitably severe stress scenarios projected over suitably long horizons. The PRA would not expect an investment to be suitable if under such stress scenarios it resulted in a material deterioration in the firm&rsquo;s solvency or liquidity position;</li>
+    <li>investments in &lsquo;assets not admitted to trading on a regulated financial market&rsquo; are kept at &lsquo;prudent levels&rsquo; in accordance with&nbsp;<a href="/pra-rules/investments#f1f05969b3c84712a55a37d60f9f118d" data-rb-content-link="Rule">Investments 5.2(2)</a>, on an objective basis from the standpoint of the hypothetical prudent person in similar circumstances; and</li>
+    <li>the firm&rsquo;s internal investment limits (in accordance with the guidance set out in Chapter&nbsp;<a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#1d060c8d788a4e5387517230a7ac24c2" data-rb-content-link="Chapter">3</a>&nbsp;of this SS) are adequate to ensure that such investments are kept to such prudent levels.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/5---exposures-to-non-traded-assets/31-12-2024?p=1" data-id="f777f76ce21442feaff09e239afc9fa5" data-effective-date="31-12-2024" data-download-title="Exposures to non-traded assets_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/5---exposures-to-non-traded-assets/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#f777f76ce21442feaff09e239afc9fa5&amp;subject=PRA Rulebook - SS1/20 – Solvency II: Prudent Person Principle – Exposures to non-traded assets">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="dc16300304f74304b08244b940211130"
+	 data-version="62b75417599d4c4aa69776ebf125e8da"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Valuation uncertainty
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a808b3ca95d44c998c86401e168eeb30"
+	 data-version="76928a71738944c3ae73fb9e4cc6d753"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA recognises that there is inherent uncertainty in the valuation of any asset. This will be most material for any asset where there are no quoted market prices in active markets in the same assets, as it is not possible to know for certain what a buyer would pay to a seller for such an asset at a point in time. The less deep, liquid and transparent the market for a particular asset, the greater reliance a firm will have to place on modelled values, and hence the greater the valuation uncertainty.<sup><a href="#footnote-38">38</a></sup> The MA benefit resulting from including a particular asset in the MA portfolio will depend on the modelled values, hence its uncertainty will also be affected by the nature of the market for a particular asset.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-38" class="rb-footnote">
+					<span class="fn-col-1">
+						38.
+					</span>
+					<span class="fn-col-2">
+						This could conflict with Investments 2.1(1).
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#a808b3ca95d44c998c86401e168eeb30">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2b82045a0acd4acb8e2a06d6130f267c"
+	 data-version="503cdca5c2bb46c6ab6fd9d5259e24ff"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Valuation uncertainty is therefore a key risk for non-traded assets, and is also likely to be a risk for listed assets that are thinly traded, including cases where an investor holds a material proportion of an issuance. The PRA expects that firms take into account valuation uncertainty risk for the&nbsp;purposes of complying with the PPP and be able to demonstrate that they comply with the risk management requirements set out in <a href="/pra-rules/conditions-governing-business#0be4be8015c84daf81d7840a1a44de3f" data-rb-content-link="Rule">Conditions Governing Business 3.4</a>&nbsp;in relation to valuation uncertainty risk.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b419905bc7b24e3eb507befcbf3d8b1a"
+	 data-version="05c3b0c60a784a1086c35c1f986e01ed"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When assessing whether firms are appropriately managing valuation uncertainty risk, the PRA will consider (among other things) the extent to which a firm complies with its requirements under the <a href="/pra-rules/valuation" data-rb-content-link="Part">Valuation Part</a>&nbsp;of the PRA Rulebook in relation to the valuation of assets. In particular, in relation to the alternative valuation methods referred to in <a href="/pra-rules/valuation#cd26474c8d7b4763a9239641160ace3a" data-rb-content-link="Rule">Valuation&nbsp;6.3</a>, which are used to value the non-traded assets, the PRA will consider whether the firm has credibly justified the alternative valuation approach used. The PRA will also consider whether the firm has adequately assessed the valuation uncertainty of those assets in accordance with <a href="/pra-rules/conditions-governing-business#3e9fdfa693a74119b1f40f3134725c05" data-rb-content-link="Rule">Conditions Governing Business 11.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#b419905bc7b24e3eb507befcbf3d8b1a">
+			Past
+			<span class="visually-hidden">
+				version of 6.3 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ed31a495a2b743e7b7a2617d3a1cb6a2"
+	 data-version="a74049a3f55741d09ae6395fa5d77364"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When assessing a firm&rsquo;s management of valuation uncertainty risk for the purposes of complying with the PPP, the PRA will also consider the extent to which the firm satisfies the requirements under <a href="/pra-rules/conditions-governing-business#ab549caa347749f7889b2898236408de" data-rb-content-link="Chapter">Conditions Governing Business 11D</a>&nbsp;relating to the internal control of valuation of assets. The PRA expects that the more material the firm&rsquo;s exposure, the greater the skills and expertise that will be required of the persons involved in the valuation of these assets.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#ed31a495a2b743e7b7a2617d3a1cb6a2">
+			Past
+			<span class="visually-hidden">
+				version of 6.4 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="59d2173d6ab040f985d43dde1180371e"
+	 data-version="c7f5cb5393a746d7b91432ccda2df500"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			In accordance with <a href="/pra-rules/conditions-governing-business#b9842d145415448da74f5936e17477d8" data-rb-content-link="Rule">Conditions Governing Business 7.1</a>, a firm &lsquo;remains fully responsible for discharging all of its obligations under PRA rules and FSMA and any other laws, rules, regulations and administrative provisions deriving from FSMA that apply to UK Solvency II firms&rsquo; when it outsources functions or any insurance or reinsurance activities. Accordingly, firms must take the steps necessary to adequately assess and manage valuation uncertainty risk, regardless of whether the valuation function is outsourced. In assessing a firm's compliance with the requirements of the PPP in the context of its investment in non-traded assets, where the firm does outsource the valuation function, the PRA will consider (among other things) the extent to which the firm complies with the requirements for outsourcing set out in <a href="/pra-rules/conditions-governing-business#4bb7d55199da48d189fabc00ae03f691" data-rb-content-link="Rule">Conditions Governing Business 7.1A</a>, <a href="/pra-rules/conditions-governing-business#e869302313bb42c59a63681ac950d10c" data-rb-content-link="Rule">7.2A</a>, <a href="/pra-rules/conditions-governing-business#cd4f0ef7591b44a7833c22eefde03f3a" data-rb-content-link="Rule">7.5</a>&nbsp;to <a href="/pra-rules/conditions-governing-business#fbdcfc55086a47c9a53bcdc920160b3b" data-rb-content-link="Rule">7.8</a>.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/30-06-2024#59d2173d6ab040f985d43dde1180371e">
+			Past
+			<span class="visually-hidden">
+				version of 6.5 before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b51eb8b7496c422ca7dd6f9a0f2bc746"
+	 data-version="656431a74b72477a96538ca54efec6ff"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that firms will have effective systems and controls in place to limit and manage their exposure to valuation uncertainty. This should include a framework for quantifying or grading their exposure to this risk, to enable them to define appropriate internal investment limits (in line with paragraph <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#3958148efe874f3ebe83812b21eae2a7" data-rb-content-link="Paragraph">3.11</a>&nbsp;of this SS) in respect of their investment in assets that expose them to valuation uncertainty. The appropriateness of that framework will depend on all the circumstances in each case, taking into account the principle of proportionality. The PRA expects that the level of valuation uncertainty and associated risks should be consistent with the defined risk appetite and investment strategy of the firm, including in stress scenarios.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#b51eb8b7496c422ca7dd6f9a0f2bc746">
+			Past
+			<span class="visually-hidden">
+				version of 6.6 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="759938f0371048998d10e8b68b2bc21c"
+	 data-version="c3a3036631d947bebf9c18919133beb6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When undertaking a risk assessment to determine the appropriateness of investment in assets not yet approved by the board (in line with paragraph <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#1b8af5f63f494e66bebb2f73ff2acc5a" data-rb-content-link="Paragraph">2.3</a>&nbsp;of this SS), the PRA also expects that firms will quantify valuation uncertainty.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#759938f0371048998d10e8b68b2bc21c">
+			Past
+			<span class="visually-hidden">
+				version of 6.7 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3735d38b056d4b38a1b4f0be0bcd8136"
+	 data-version="f9b2cd300385438fb91eef19418fc30a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA notes that valuation uncertainty is distinct from uncertainty about the potential realisable value of an asset in the future. However, where the value of an asset is uncertain, this will obviously increase uncertainty about the potential realisable value of that asset. Firms should therefore take valuation uncertainty into account when stress testing their portfolios in line with the expectation set in paragraph <a href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#a031a5cb45d3435fbc45f8f9ddaf517d" data-rb-content-link="Paragraph">3.18</a>&nbsp;of this SS.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/6---valuation-uncertainty/31-12-2024?p=1" data-id="dc16300304f74304b08244b940211130" data-effective-date="31-12-2024" data-download-title="Valuation uncertainty_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/6---valuation-uncertainty/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#dc16300304f74304b08244b940211130&amp;subject=PRA Rulebook - SS1/20 – Solvency II: Prudent Person Principle – Valuation uncertainty">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="d4b30890df17475c942d05d1f47c874f"
+	 data-version="871bffb27ec44cbebe9fee1b06814efc"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Intragroup loans and participations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8aa8f5dcc80247a1ab7027adb8defe67"
+	 data-version="72724304b1574d62a07bf0baf793be54"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In respect of assets backing TPs, the PPP requires that these must be invested &lsquo;in a manner appropriate to the nature and duration of the firm&rsquo;s insurance and reinsurance liabilities and in the best interests of all policyholders, taking into account any disclosed policy objectives&rsquo;.<sup><a href="#footnote-39">39</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-39" class="rb-footnote">
+					<span class="fn-col-1">
+						39.
+					</span>
+					<span class="fn-col-2">
+						See Investments 3.1.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d967cf84e122479cab089bf4c49a3f50"
+	 data-version="abeb3ac8a1944d7e8871cf0d1bd19c08"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The requirement for assets backing TPs to be invested in policyholders&rsquo; best interests has particular implications for certain intragroup transactions such as intragroup loans and participations or arrangements to that effect. Investments in, or loans to, other group companies may be in the interests of shareholders but they may not necessarily be in the best interests of policyholders. For example, the issuers of loans may be less willing or able to enforce repayment, particularly where loans are upstream. The PRA expects that it would be a high hurdle for firms to demonstrate that intragroup loans and participations are in the best interests of policyholders and, as such, a high hurdle to demonstrate that they are appropriate for covering TPs.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#d967cf84e122479cab089bf4c49a3f50">
+			Past
+			<span class="visually-hidden">
+				version of 7.2 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0c6ae1d6e6c24268b1a25f3039fa3dc1"
+	 data-version="095bdc0ed4fc4e708db46a011a652c5d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PPP requires that in the case of a conflict of interest, &lsquo;the investment of assets is made in the best interest of all policyholders&rsquo;.<sup><a href="#footnote-40">40</a></sup> This provision applies to all asset classes but is highlighted here as the PRA considers that investment in intragroup assets is very likely to lead to a conflict of interest (for example, between shareholders and policyholders, between subsidiaries and parent companies, and between policyholders in different subsidiaries). The PRA therefore expects that a firm&rsquo;s board should be satisfied that any conflicts of interest have been resolved in the best interest of policyholders before investing in an intragroup asset. Further to this, the PRA expects that any conflicts of interest that arise following investment in an intragroup transaction should also be resolved in the best interest of policyholders, which may mean ceasing to invest in that asset.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-40" class="rb-footnote">
+					<span class="fn-col-1">
+						40.
+					</span>
+					<span class="fn-col-2">
+						See Investments 2.1(3).
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="795cc5e277ba440b9a87b68de2f4129e"
+	 data-version="7fe06704b7b44a00be669ae74c6b466f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Intragroup reinsurance is used to back TPs, but the PRA generally expects that intragroup reinsurance arrangements with no element of investment are less likely to present conflicts of interest in the way it observes, for example, that intragroup loans can. Intragroup reinsurance transfers can be, and usually are, different in substance economically from intragroup investments. They usually transfer risk away from the ceding firm in a way designed to ensure that the insurance obligations are closely matched by the reinsurance. As such, in many situations, the PRA would expect the interests of policyholders and the interests of the ceding firm to be better aligned.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f77fb2044bb845b7884b3fca52df796a"
+	 data-version="3bc742f2d91e4c60b8a2ca6563b92384"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Nevertheless, the PRA remains very interested in intragroup reinsurance arrangements recognising that they carry risks of their own that firms need to be able to measure, monitor, manage, control and mitigate. The PRA will look to the economic substance of arrangements, and where an intragroup reinsurance arrangement is structured to effectively function as a loan the PRA would treat it as such for the purposes of this chapter.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/27-05-2020#f77fb2044bb845b7884b3fca52df796a">
+			Past
+			<span class="visually-hidden">
+				version of 7.5 before 30/06/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="69f81409d79a464cb18a03b4ea45dc32"
+	 data-version="b73fdbe8b9d4459498f977b6fad648ec"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As with any investment, intragroup assets are subject to all the other requirements placed on firms under the PPP. As an example of this, the PRA expects that intragroup assets are subject to at least the same level of &lsquo;arm&rsquo;s length&rsquo; scrutiny and risk management as other assets, as well as proper governance and documentation with regard to:</p>
+<ul>
+    <li> conflicts of interest; </li>
+    <li>concentration risk; </li>
+    <li>credit risk; </li>
+    <li>liquidity risk; </li>
+    <li>legal and operational risk; </li>
+    <li>wrong-way risk where counterparty default risk is positively correlated with other risks borne by the firm (when the crystallisation of a risk could affect the financial condition both of the firm and of other group entities); and </li>
+    <li> increased complexity of the group structure leading to dependencies that increase the fragility of the group or entity in stress scenarios.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/7---intragroup-loans-and-participations/31-12-2024?p=1" data-id="d4b30890df17475c942d05d1f47c874f" data-effective-date="31-12-2024" data-download-title="Intragroup loans and participations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/7---intragroup-loans-and-participations/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#d4b30890df17475c942d05d1f47c874f&amp;subject=PRA Rulebook - SS1/20 – Solvency II: Prudent Person Principle – Intragroup loans and participations">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="00e53841c9d14f489448d40c56b39041"
+	 data-version="b99161bfa5c84e68a8d3026348d59f94"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Outwards reinsurance
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="92e1aa05da024d15bfd7ccbd8dc173d4"
+	 data-version="8a008897d9c74c32a2f4257f36b73a22"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PPP applies to all assets, including reinsurance arrangements. As for any asset, the PRA will take a case-by-case approach to considering whether reinsurance arrangements meet the PPP&rsquo;s standards (as set out in Chapter 1), and will take into account a particular firm&rsquo;s circumstances, including the impact of various risk mitigation factors such as the use of collateral. The PRA has set out its expectations in relation to firms&rsquo; management of risk &ndash; particularly counterparty credit risk &ndash; in relation to their reinsurance arrangements in <a href="/guidance/supervisory-statements/ss20-16---solvency-ii-reinsurance---counterparty-credit-risk" data-rb-content-link="Guidance">SS20/16</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					27/05/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/8---outwards-reinsurance/31-12-2024?p=1" data-id="00e53841c9d14f489448d40c56b39041" data-effective-date="31-12-2024" data-download-title="Outwards reinsurance_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle/8---outwards-reinsurance/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss01-20-solvency-ii-prudent-person-principle#00e53841c9d14f489448d40c56b39041&amp;subject=PRA Rulebook - SS1/20 – Solvency II: Prudent Person Principle – Outwards reinsurance">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

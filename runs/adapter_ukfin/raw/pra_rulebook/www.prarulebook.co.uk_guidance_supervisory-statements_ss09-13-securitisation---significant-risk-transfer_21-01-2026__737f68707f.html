@@ -1,0 +1,4268 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{F880B7AD-1882-4F80-884F-30DB26343C59} -->
+<title>SS9/13 – Securitisation: Significant Risk Transfer | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS9/13 – Securitisation: Significant Risk Transfer">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS9/13 – Securitisation: Significant Risk Transfer">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrf6zq-f-227984a19-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":28,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"713fd35","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":1151,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025459","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==XrJUalwr6Q8TZlpdGkUGedUSTxtpmpghe6xVkztQ1g/vDAHJWN5HE8v6sGrU2fvsLJAlb3ALTWakqC17KCUCnIVrJPN4LQr4Zt9mK0khsQTTYbpIPTODNsvVqZfG/PSPG7gRYyr0INIjCgkfPglKYgEti2ivxflmvZ7p68fDC09h/YDVLYdpZSecZwBb4ZrXt5eYXj+xBDrd29Td3FjA8WIDME+5Je6jZDDccmvgClNrMn2sgbaTssczsaD/f9Sa9DeOrBtgCW/W/17WoZGdXes2MfKj0JYvO3fas2Go4/DBo1bU35hbYcr3NW2yz+sVefd+TPGanRvJOAPjD02DoPqsNu8dRgMg6+n9JGeSF6M8WM/vEVxAHZfrOSWLb0ZJHw/Ssd4t6MaV3mVyZZAPWkJQjli5XTe7XySyisO2e4I=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS9/13 – Securitisation: Significant Risk Transfer				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS9/13 – Securitisation: Significant Risk Transfer
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2013/securitisation-ss" rel="noopener noreferrer" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3">The Supervisory Statement (SS) shown on this page is effective from 22/07/2020. Past versions of this SS can be found here.</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						22/07/2020
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/01-01-2026">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2026
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-86fb1481-5af8-46c8-aa58-36fb102603df">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-86fb1481-5af8-46c8-aa58-36fb102603df"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS9/13 – Securitisation: Significant Risk Transfer
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS9/13 – Securitisation: Significant Risk Transfer)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/benchmarking-of-internal-approaches/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Benchmarking of Internal Approaches
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/credit-risk/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Credit Risk
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/non-performing-exposures-securitisation-crr/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Non-Performing Exposures Securitisation (CRR)
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/occasional-consultation-paper-march-2020" class="list-links__link" target="_blank">
+										PS17/20 - Responses to CP3/20 ‘Occasional Consultation Paper’
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/restatement-of-crr-and-sii-requirements-in-pra-rulebook-policy-statement" class="list-links__link" target="_blank">
+										PS12/25 - Restatement of CRR and Solvency II requirements in PRA Rulebook – 2026 implementation
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/01-01-2026_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/01-01-2026?p=1" data-id="b712186b943b4b35b56b4c7c0bae0e40" data-effective-date="01-01-2026" data-download-title="SS9/13 – Securitisation: Significant Risk Transfer_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="7302cba845994287b5b508f7c62b3096"
+	 data-version="b83d3673c9d34f7da02c757c5f650915"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c7e6e28ea9704e1696c98475d88e174e"
+	 data-version="7f9d46ed27734bc2b381df2a8f78c610"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement is relevant to PRA-authorised firms to which CRD IV applies.<sup><a href="#footnote-1">1</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						On 20 July 2017, 15 November 2018, and 22 July 2020, this SS was updated – see the annex for full details.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="bd04bf6214be4f78a4caf1875984f56d"
+	 data-version="62cc4fb2b20f4eb2aa9c07060ef147a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement sets out the Prudential Regulation Authority&rsquo;s (PRA&rsquo;s) expectations of firms in respect of securitisation in the following chapters:</p>
+<ol class="new-bullet">
+    <li style="margin-left: 30px;"> (2) &lsquo;<a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#2c304e01e65147219e3398b746466b9b" data-rb-content-link="Chapter">High-level Significant Risk Transfer considerations</a>&rsquo; &ndash; general expectations of firms seeking to obtain significant risk transfer (SRT) through securitisation;</li>
+    <li style="margin-left: 30px;">(3) &lsquo;<a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#d4e8e50dce3d48c689d00e476777fb14" data-rb-content-link="Chapter">Significant Risk Transfer notifications and permissions</a>&rsquo; &ndash; process for notifying the PRA of SRT transactions and for obtaining permission to undertake own assessments of SRT;</li>
+    <li style="margin-left: 30px;">(4) &lsquo;<a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#15c0005d567641bda9e2b9f1f9d2de07" data-rb-content-link="Chapter">Regulatory capital calculation methodology and SRT</a>&rsquo; &ndash; methodologies firms use to calculate post-securitisation risk weights in SRT transactions;</li>
+    <li style="margin-left: 30px;">(4A) Use of unfunded credit protection for synthetic SRT securitisations;</li>
+    <li style="margin-left: 30px;">(5) &lsquo;<a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#45c86256959b42009dedba045ed92451" data-rb-content-link="Chapter">Implicit Support and SRT</a>&rsquo; &ndash; the PRA&rsquo;s approach to implicit support;</li>
+    <li style="margin-left: 30px;">(6) &lsquo;<a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#6635a933509947cb9fcd170158c28c88" data-rb-content-link="Chapter">High-cost credit protection and other SRT considerations</a>&rsquo; &ndash; factors likely to affect the assessment of SRT transactions;</li>
+    <li style="margin-left: 30px;">(7) &lsquo;<a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#37f5b477a7e442f992ccee6914cf16b7" data-rb-content-link="Chapter">Excess spread in SRT securitisations</a>&rsquo; &ndash; the PRA&rsquo;s approach to excess spread in SRT securitisations; and</li>
+    <li style="margin-left: 30px;">(8) &lsquo;<a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#7ac3fa87a4b0446aa3a0d5a4a5ee4fc3" data-rb-content-link="Chapter">Assessment of commensurate risk transfer (CRT) for portfolios of Standardised Approach (SA) exposures</a>&rsquo; &ndash; the PRA&rsquo;s approach to assessing CRT for SA portfolios.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#bd04bf6214be4f78a4caf1875984f56d">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="45ddc0e1f6fe4cb79c7c1d9496d9f998"
+	 data-version="1eb40a843c974b3f99f8f016ac28bb7c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The statement supplements the rules in the <a href="/pra-rules/benchmarking-of-internal-approaches" data-rb-content-link="Part">Benchmarking of Internal Approaches</a> and <a href="/pra-rules/credit-risk" data-rb-content-link="Part">Credit Risk Part</a>&nbsp;of the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/1-introduction/01-01-2026?p=1" data-id="7302cba845994287b5b508f7c62b3096" data-effective-date="01-01-2026" data-download-title="Introduction_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/1-introduction/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#7302cba845994287b5b508f7c62b3096&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="2c304e01e65147219e3398b746466b9b"
+	 data-version="ffc98451f09146818830d02a6d3917eb"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					High-level Significant Risk Transfer considerations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="bc6024222c004432a19da453e6b7935e"
+	 data-version="be3466e5f00f4ae09a8476dc0b1c32f2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The CRR requires any reduction in capital requirements achieved through securitisation to be justified by a commensurate transfer of risk to third parties. Where the reduction in risk-weighted assets (RWA), which would be achieved through a particular securitisation transaction, is not justified by a commensurate transfer of risk then SRT shall not be considered to have been achieved by that transaction.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#bc6024222c004432a19da453e6b7935e">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="156c9b440cc9426198a4cb30b5fb0d87"
+	 data-version="d28b38099f9e438685f725bd4464644b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>SRT is an ongoing requirement. Accordingly, the PRA expects firms to ensure that any reduction in capital requirements achieved through securitisation continues to be matched by a commensurate transfer of risk throughout the life of the transaction. The PRA expects firms to take a substance over form approach to assessing SRT. Firms should be able to demonstrate that the capital relief post-transaction adequately captures the economic substance of the entire transaction, and is commensurate to the retained risks.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1fc6c61962f444deac9c5d67de24e5ea"
+	 data-version="ba80ab0ddd3a4f20b3d9cc1b7d299b01"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>One indication of whether or not risk transfer is commensurate is whether the RWEA post-securitisation is commensurate with the RWEA that would apply if the firm acquired the securitised exposures from a third party. The PRA expects firms purchasing risk transfer&nbsp;products to give adequate consideration to all relevant factors when assessing SRT, including the size of premiums paid and tranche thickness.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="60d9b2362e6042afab88750593f5f611"
+	 data-version="28e6b893753a4cac805620e5972d4105"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects firms to consider if tranches that are sold, or tranches on which protection is purchased, are sufficiently thick such that the reduction in RWEAs can be justified by a commensurate transfer of risk to third parties. When considering thickness of tranches sold or on tranches which protection is purchased, firms should take into account all relevant factors related to the portfolio of securitised exposures.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#60d9b2362e6042afab88750593f5f611">
+			Past
+			<span class="visually-hidden">
+				version of 2.3A before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="24a9f14f9be64fe393b7081a9c9f433c"
+	 data-version="8af573cc637341b0aabdef6c4fcd5cdd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When risk transfer transactions are structured as a group of linked transactions rather than a single transaction, the PRA expects the aggregate effect of linked transactions to comply with the CRR. The PRA expects firms to ensure that analysis of risk transfer incorporates all linked transactions, particularly if certain transactions within a group of linked transactions are undertaken at off-market rates.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0864807b280247ef8808bf2d32ae1907"
+	 data-version="d13420d580054d11b36f91a2a7ce918f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects the instruments used to transfer credit risk not to contain provisions which materially limit the amount of risk transferred. For example, should losses or defaults on the securitised exposures occur &ndash; ie deterioration in the credit quality of the underlying pool &ndash; the PRA expects the originator&rsquo;s net cost of protection or the yield payable to investors should not increase as a result.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6dc50216b5df4be88b764071891e289c"
+	 data-version="a055707a81534fd482de18deaf61fadb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In order to ensure their continuing appropriateness, the PRA expects firms to update the opinions of qualified legal counsel, required by the CRR, as necessary to ensure their continuing validity. For example, an opinion may need to be updated if relevant legal or regulatory provisions are amended, or where a new decision or judgment of a court has a bearing on the continuing validity of counsel&rsquo;s opinion.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#6dc50216b5df4be88b764071891e289c">
+			Past
+			<span class="visually-hidden">
+				version of 2.6 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d6203ec12a174bf7a890c4251c97b9b9"
+	 data-version="3944f31479074f598f3ad240dd016bbc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects relevant senior management of a firm to be appropriately engaged in the execution of securitisation transactions that lead to a reduction in RWA.</p>
+<ol class="new-bullet">
+    <li>(i) For the purposes of such transactions, &lsquo;relevant senior management&rsquo; means any individuals performing Senior Management Functions (SMFs) with oversight of such transactions, and any employees subject to the Certification Regime involved in the transactions (e.g. relevant <a href="/pra-rules/remuneration#8bccfcccfeb04308bbb4d9b711ada9db" data-rb-content-link="Chapter">Material Risk Takers (MRTs)</a>&nbsp;under the <a href="/pra-rules/remuneration" data-rb-content-link="Part">Remuneration</a>&nbsp;rules).<sup><a rel="noopener noreferrer" href="#footnote-2">2</a></sup>
+    </li>
+    <li>(ii) The PRA expects oversight of these transactions to be linked to Prescribed&nbsp;Responsibility (PR) O (on &lsquo;managing the allocation and maintenance of the firm&rsquo;s&nbsp;capital, funding and liquidity&rsquo;) and, for small firms, to PR AA (on &lsquo;implementing and&nbsp;managing the firm&rsquo;s risk management policies and procedures&rsquo;) and to PR CC (on&nbsp;&lsquo;managing the firm&rsquo;s financial resources&rsquo;). The oversight and approval of the&nbsp;features that affect commensurate risk transfer and, hence, the amount of&nbsp;reduction in RWA that may be achieved should be performed by the Chief Finance&nbsp;function (SMF 2) and any Senior Manager holding PR O, or AA and CC, if a&nbsp;different person. The PRA expects that the responsibility in relation to SRTs is&nbsp;reflected in the Statement of Responsibilities of the SMF 2 and any Senior&nbsp;Manager holding PR O, or AA and CC, if a different person. Please also refer to paragraph 3.8(aa) below on the PRA&rsquo;s expectations regarding attestation by the&nbsp;relevant SMF(s) as part of an SRT notification.</li>
+    <li>(iii) An SMF, while retaining accountability for oversight of these transactions, may rely&nbsp;on expert input and/or delegate the act of signing and submitting notifications,&nbsp;where this is consistent with the PRA&rsquo;s expectations on reasonable steps and&nbsp;delegation.<sup><a href="#footnote-3">3</a></sup></li>
+    <li><sup>&nbsp;</sup></li>
+</ol>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						Supervisory Statement (SS) 28/15 ‘Strengthening Individual Accountability in Banking’, available at, <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-banking-ss">http://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-banking-ss</a>
+					</span>
+				</li>
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						See footnote 2
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#d6203ec12a174bf7a890c4251c97b9b9">
+			Past
+			<span class="visually-hidden">
+				version of 2.7 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="239ac163c3fb4c18b4c795e801db6be5"
+	 data-version="d000b681c30040468df57e55a73d4ccd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA does not operate a pre-approval process for securitisation transactions. The PRA nevertheless expects a firm to discuss with its supervisor at an early stage securitisation transactions that are material or have complex features, including any non-sequential amortisation. Where a firm claims a regulatory capital reduction from securitisation transactions in its disclosures to the market, the PRA expects such disclosures to include caveats making clear the risk of full or partial re-characterisation where this risk is material in the light of the PRA&rsquo;s stated policy.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c1d0d23a0c834461874d66ffe6501a09"
+	 data-version="8aa7f765ad16414e863a27558832946a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Although this supervisory statement sets out the PRA&rsquo;s expectations regarding securitisation, these expectations are also relevant for other similar credit protection arrangements.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="65b936131b29476ca53cbe711753e98b"
+	 data-version="91cbcf8f8c46476483d8e1f795bf5718"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will seek to ensure that the securitisation framework is not used to undermine or arbitrage other parts of the prudential framework. In relation to other similar credit protection arrangements, including those subject to credit risk mitigation or trading book rules, the impact of certain features (eg significant premiums, call options or excess spread) may cast doubt on the extent of risk transferred and the resulting capital assessment.<sup><a href="#footnote-4">4</a></sup>&nbsp;Features which result in inadequate capital requirements compared to the risks a firm is running may result in the credit protection not being recognised or the firm being subject to extra capital charges in their Total Capital Requirement (TCR) in the form of Pillar 2 add-ons. Credit protection arrangements in general are subject to the same overarching principles as those in the securitisation framework.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						Article 194(2) of the CRR requires firms to, ‘take all appropriate steps to ensure the effectiveness of the credit protection arrangement and to address the risks related to that arrangement’.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#65b936131b29476ca53cbe711753e98b">
+			Past
+			<span class="visually-hidden">
+				version of 2.10 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c1a22eb040594f2eb05b9325d103e345"
+	 data-version="a2cd801de6dc49beb2f3f08ea98d30bb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a firm achieves SRT for a particular transaction, the PRA expects it to continue to monitor risks related to the transaction to which it may still be exposed. The PRA expects firms to consider the capital planning implications of securitised assets returning onto their balance sheets. The <a href="/pra-rules/internal-capital-adequacy-assessment" data-rb-content-link="Part">Internal Capital Adequacy Assessment Part</a>&nbsp;of the PRA Rulebook requires firms to conduct regular stress testing of their securitisation activities and off balance sheet exposures.<sup><a href="#footnote-5">5</a></sup> The PRA expects those stress tests to consider the firm-wide impact of stressed market conditions on those activities and exposures and the implications for other sources of risk, for example, credit risk, concentration risk, counterparty risk, market risk, liquidity risk and reputational risk. The PRA expects a firm&rsquo;s stress testing of securitisation activities to take into account existing securitisations and pipeline transactions. The PRA expects a firm to have in place procedures to assess and respond to the results of that stress testing and would expect them to be taken into account under Pillar 2.</p>
+<p>(CRR Articles 244, 245 and 337)</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						See also SS31/15 ‘The Internal Capital Adequacy Assessment Process (ICAAP) and the Supervisory Review and Evaluation Process (SREP)’, <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2013/the-internal-capital-adequacy-assessment-process-and-supervisory-review-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2013/the-internal-capital-adequacy-assessment-process-and-supervisory-review-ss</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#c1a22eb040594f2eb05b9325d103e345">
+			Past
+			<span class="visually-hidden">
+				version of 2.11 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/2-high-level-significant-risk-transfer-considerations/01-01-2026?p=1" data-id="2c304e01e65147219e3398b746466b9b" data-effective-date="01-01-2026" data-download-title="High-level Significant Risk Transfer considerations_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/2-high-level-significant-risk-transfer-considerations/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#2c304e01e65147219e3398b746466b9b&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer – High-level Significant Risk Transfer considerations">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="d4e8e50dce3d48c689d00e476777fb14"
+	 data-version="e9162858eed44af2b0159ff15df38b79"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Significant Risk Transfer notifications and permissions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="770a5e3d15814f208a2c91d2d346dfdd"
+	 data-version="c821b72f9bd143c983707cd7f4d944e6"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Requirements for originators to use securitisation risk weights</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="56e5d14210d24d56869171380c7b9b68"
+	 data-version="b5898d9816f54ca39cce66c08f5ee6d4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The CRR provides three options for firms to demonstrate how they transfer significant credit risk for any given securitisation transaction:</p>
+<ol class="new-bullet">
+    <li>(1) the risk-weighted assets of the mezzanine securitisation positions held by the originator institution in the securitisation do not exceed 50% of the risk-weighted assets of all mezzanine securitisation positions existing in this securitisation.
+    <ol>
+        <li> </li>
+    </ol>
+    </li>
+    <li>(2) the originator institution does not hold more than 20% of the exposure value of the first loss tranche in the securitisation, provided that both the following conditions are met:</li>
+</ol>
+<ol class="new-bullet">
+    <li style="margin-left: 30px;">(i) the originator can demonstrate that the exposure value of such securitisation positions exceeds a reasoned estimate of the expected loss on the securitised exposures by a substantial margin;</li>
+    <li style="margin-left: 30px;">(ii) there are no mezzanine securitisation positions.</li>
+</ol>
+<ol class="new-bullet">
+    <li>(3)&nbsp;the competent authority may grant permission to an originator to make its own&nbsp;assessment if it is satisfied that the originator can meet certain requirements.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#56e5d14210d24d56869171380c7b9b68">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b456fb2e09f9469fa30d488bddcf4641"
+	 data-version="ae2e3666268a450e8ffd83728319ba97"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>SRT under options (1) and (2)</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8757ab66e315400eaec9b037e705dd54"
+	 data-version="d42edde7c0604d65a21ac28697116ec6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/credit-risk#33de37f99fe84d768ea393bac0c1a4be" data-rb-content-link="Rule">Credit Risk 3.1</a> in the PRA Rulebook requires a firm to notify the PRA of each transaction on which it seeks capital relief under options 1 and 2.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b43bd7d9683f47ebaf1e501ed209af96"
+	 data-version="1af56db46033407a8f75d00244cd5d94"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the PRA considers that the possible reduction in RWEA achieved via the securitisation is not justified by a commensurate transfer of risk to third parties, then the PRA will find SRT has not been achieved. Consequently, firms will not be able to recognise any reduction in RWEA from the transaction.</p>
+<p>(CRR Articles 244, 245 and 337)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#b43bd7d9683f47ebaf1e501ed209af96">
+			Past
+			<span class="visually-hidden">
+				version of 3.3 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e88199e4034343de88827a51279ab3d0"
+	 data-version="8bd736dcea0f4d6c8ba2879eb7437b4d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>SRT under option (3)</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="99e579cf8d97406bb50a2066689331c2"
+	 data-version="d6f83e25a16849799d8318da26260ead"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA intends to grant permission for an originator to make its own assessment of SRT only where it is satisfied that:</p>
+<ul>
+    <li>in every relevant case, the reduction in capital requirements achieved would be justified by a commensurate transfer of risk to third parties;</li>
+    <li>the firm has in place appropriately risk-sensitive policies and methodologies to assess the transfer of risk; and</li>
+    <li>such transfer of risk to third parties is also recognised for the purposes of the firm&rsquo;s internal risk management and internal capital allocation.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6a2a0750bf77442bac3d8b645350c23b"
+	 data-version="774c0a5aed1043a89a25abd685b07f34"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the PRA grants permission for multiple transactions, that permission will cover a defined scope of potential transactions. The permission will enable a firm (within certain limits) to carry out these transactions without notifying the PRA in each individual instance.</p>
+<p>(CRR Articles 244, 245 and 337)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#6a2a0750bf77442bac3d8b645350c23b">
+			Past
+			<span class="visually-hidden">
+				version of 3.5 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="22a0fc8a7b6e4d65898229a0818ffabe"
+	 data-version="30c60397af7f462d8fc26db51280aa11"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Exemption from notification of significant risk transfer</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8523a9a4ccc649f99a16f55b5bc1fb9f"
+	 data-version="2b428231a6134ffe98a9e6b5912ba85e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>&nbsp;A firm would not need to make a notification under <a href="/pra-rules/credit-risk#33de37f99fe84d768ea393bac0c1a4be" data-rb-content-link="Rule">Credit Risk 3.1</a>&nbsp;when it is either (1)&nbsp;seeking to achieve capital relief by deducting or (2) applying a 1,250% risk weight to all&nbsp;retained positions where permitted under CRR Article 244 or 245. In such cases, a firm&nbsp;should consider whether the characteristics of the transaction are such that the PRA&nbsp;would reasonably expect prior notice of it.</p>
+<p>(CRR Articles 244 and 245)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#8523a9a4ccc649f99a16f55b5bc1fb9f">
+			Past
+			<span class="visually-hidden">
+				version of 3.6 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9f91c36f9961409398b4053d6e1c17db"
+	 data-version="8993a793fc534fcea6e07e2b2d9415c7"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>SRT Notifications</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="252a220bc7ce49829ce6a39ad679729e"
+	 data-version="bf246095b1cb4b11a69e6381813dd644"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Process for submitting notifications</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="7d9778aa3e28403aa866355e0c4093bd"
+	 data-version="a56d8665800b4874b612e1b94b5025ea"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When informing the PRA of a transaction in accordance with <a href="/pra-rules/credit-risk#33de37f99fe84d768ea393bac0c1a4be" data-rb-content-link="Rule">Credit Risk 3.1</a>, the information should be sent simultaneously via email to the SRT notifications inbox <a href="mailto:SRT@bankofengland.co.uk">SRT@bankofengland.co.uk</a> and to the firm&rsquo;s usual supervisory contact.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="de9ee46c23b6493d9991fb306dd448a8"
+	 data-version="06219a62dcf64a238e719e72f1d29c90"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Information to be provided</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="1af9aa3642664997bcf44f996a3b4b9b"
+	 data-version="1ec4df7a772a4e6caa16e295d88217b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A firm&rsquo;s notification should include sufficient information to enable the PRA to assess whether the possible reduction in RWEA which would be achieved by the securitisation is justified by a commensurate transfer of credit risk to third parties. Consistent with <a href="/pra-rules/fundamental-rules#61e6550f923c456aab69712f2bac563b" data-rb-content-link="Rule">Fundamental Rule 7</a>, the PRA expects firms to be open and cooperative and disclose any&nbsp;relevant information of which the PRA would reasonably expect notice. The PRA expects such information to include at least the following:</p>
+<ol class="new-bullet">
+    <li>(aa) a summary of the transaction that contains sufficient information for the PRA&nbsp;to understand its structure, economics and regulatory implications, including&nbsp;an attestation by the relevant SMF(s) referred to in the penultimate sentence&nbsp;of paragraph 2.7(ii) that the information provided in the summary is accurate&nbsp;and complete and that SRT has been achieved;</li>
+    <li>(a)&nbsp;details of the securitisation positions, including rating, exposure value and RWEA broken down by securitisation positions sold and retained;</li>
+    <li>(b) a copy of the SRT policy applied to the transaction, including details of the methodology and any models used to assess risk transfer;</li>
+    <li>(c) a statement of how all relevant risks are incorporated into the SRT assessment and how the full economic substance of the transaction is taken into consideration;</li>
+    <li>(d) the SRT calculation, setting out why the firm believes the capital relief proposed is commensurate with the credit risk transferred to third parties;</li>
+    <li>(e) details of reliance on external credit assessment institutions (ECAIs) in the SRT assessment;</li>
+    <li>(f) a description of the risks being retained;</li>
+    <li>(g) key transaction documentation and any relevant supporting documents;</li>
+    <li>(h) copies of investor and internal presentations on the transaction;</li>
+    <li>(i) details of the underlying assets (including asset class, geography, tenor, rating, spread, collateral, exposure size);</li>
+    <li>(j) details of the transaction structure;</li>
+    <li>(k) details of any termination options (eg call options);</li>
+    <li>(l) details of the cash flow between parties involved in the transaction;</li>
+    <li>(m) details of the ratings and pricing of bonds issued in the transaction;</li>
+    <li>(n) details of any connected parties involved in the transaction;</li>
+    <li>(o) details of the rationale for the transaction;</li>
+    <li>(p) details of the rules in the CRR that the firm is relying on;</li>
+    <li>(pp)&nbsp;a comparison with relevant previous transactions, highlighting changes that&nbsp;may be relevant to the PRA&rsquo;s assessment and commenting on their rationale,&nbsp;or a statement that no such transactions have been identified; and&nbsp;</li>
+    <li>(q) details of the governance process for the transaction, including details of any committees involved in approving the transaction.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#1af9aa3642664997bcf44f996a3b4b9b">
+			Past
+			<span class="visually-hidden">
+				version of 3.8 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="74fa219a01ec4c9a92f63d7453c7ec5f"
+	 data-version="5f7325766b044cd58b5ef621f62546d9"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Communicating PRA decisions on notified transactions</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="40543084b3364e079f930c38f3281e91"
+	 data-version="37f5b8a806da43c2aa5d6587b5902840"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Following review of sufficient information provided by the firm, the PRA will inform the firm of its view on commensurate risk transfer. The PRA&rsquo;s review will focus on the proportion of credit risk transferred &ndash; including any transaction features which undermine effective risk transfer &ndash; compared to the proportion by which RWEA is reduced as a result of the transaction. Where the PRA judges the reduction in RWEA not to be justified by a commensurate transfer of credit risk to third parties, it will inform the firm that SRT has not been achieved by this transaction. Otherwise the PRA will inform the firm that it does not object to the transaction.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c353c9a900b044f1a3edfd7bee0ad3e8"
+	 data-version="069a4b94fe0048af8494b70ed392eac7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA does not intend to pre-approve transactions. Instead, the PRA will provide a view on whether it considers commensurate risk transfer to have been achieved at a point in time, which may be after a transaction has closed. The PRA may reassess its judgement of the achievement of commensurate risk transfer if the level of credit risk transfer in a transaction changes materially.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#c353c9a900b044f1a3edfd7bee0ad3e8">
+			Past
+			<span class="visually-hidden">
+				version of 3.10 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5e15f42aaf5d4205a0ad53d2e14199e1"
+	 data-version="f2243ed3b23b44af90f292c1d7b2ef43"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Permissions for own assessment of SRT</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="621870cf3e4a4f34afcd7654903379b6"
+	 data-version="e529ac2f4f08466a99112d2d737e89fd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms may apply for permission to consider SRT to have been achieved without needing to rely on option (1) or (2). The scope of such permission may be defined to cover a number of transactions or an individual transaction.</p>
+<p>(CRR Articles 244 and, 245 and 337)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#621870cf3e4a4f34afcd7654903379b6">
+			Past
+			<span class="visually-hidden">
+				version of 3.11 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="60d47bd2e3414446a89f0835ce219d4f"
+	 data-version="37ce7edf001e4a1a84ce3dbb8b5a5b0a"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Multiple transaction permissions</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="fd6350f0b74b4dba84a258bd662cd36f"
+	 data-version="ae4d91a320d34796a387470396331a03"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a firm applies for such permission, the PRA expects the scope to be defined according to a range of characteristics, including the type of asset class and the structural features of the transaction. The characteristics that the PRA expects a firm to consider when defining the scope of a permission application include:</p>
+<ol class="new-bullet">
+    <li>(a) asset class (eg residential or commercial mortgages, credit card receivables, leasing, loans to corporates or small and medium-sized enterprises, consumer loans, trade receivables, securitisations, Private Finance Initiative, insurance, covered bonds, other assets);</li>
+    <li>(b) further asset class distinction (eg geography and asset quality); and</li>
+    <li>(c) structural features (eg distinguishing between securitisation and re-securitisation, traditional and synthetic securitisation and non-revolving structures and revolving structures).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="90d6bb18dac94037b9fd6c5bdceeea14"
+	 data-version="0bb725f5eaf544ae914c7bbd4e776d62"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It is likely to be more straightforward for the PRA to assess applications for relatively narrowly scoped permissions than those covering a wide range of assets and/or with complex structural features.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="afddee042d7149649640941c96fb0a96"
+	 data-version="50531194455f4a689a480fb7f4a646a2"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>PRA areas of review and information to be submitted by firms</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="234069cde74846528495120b6e93e838"
+	 data-version="b9322ee9ad5043179575bb7ce3780670"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In order to assess a firm&rsquo;s ability to use its own policies and methodologies for assessing SRT, the PRA&rsquo;s permission application reviews will focus on the following factors:</p>
+<ul>
+    <li>the firm&rsquo;s understanding of the risk of potential transactions within the scope of the permission, including potential underlying assets, securitisation structures and other relevant factors that affect the economic substance of risk transfer;</li>
+    <li>the firm&rsquo;s governance around SRT assessment (including sign-off procedures) and systems and controls relating to risk-transfer assessment and determination of SRT;</li>
+    <li>SRT calculation policies and methodologies, including models used;</li>
+    <li>the firm&rsquo;s historical experience with relevant securitisation origination; and</li>
+    <li>the use of third-party risk assessments (eg external ECAI ratings) and the relationship with internal assessments.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a907ca8e2165471099d3b29f270a66b9"
+	 data-version="2fe26fd2f1ca434eaff22a1f0d5b9c2e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The information the PRA expects a firm to provide in a permission application includes the following:</p>
+<ol class="new-bullet">
+    <li>(a) details of the firm&rsquo;s governance processes for SRT, including details of any relevant committees and the seniority and expertise of key persons involved in sign-off;</li>
+    <li>(b) a copy of the firm&rsquo;s SRT policy, including details of the SRT calculation policies, methodologies and any models used to assess risk transfer (this should set out how the firm ensures it only takes capital relief in proportion to the amount of risk transferred on any given transaction);</li>
+    <li>(c) a statement of how all relevant risks are incorporated in the SRT calculations and how the full economic substance of transactions is taken into consideration;</li>
+    <li>(d) details of the firm&rsquo;s systems and controls regarding risk transfer in securitisations;</li>
+    <li>(e) a copy of the firm&rsquo;s capital allocation strategy;</li>
+    <li>(f) details of any securitised assets that have come back on the firm&rsquo;s balance sheet and the reason why; and</li>
+    <li>(g) details of reliance on ECAIs in determining SRT.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d9a9dbfe9ed24ec0a6aa62149ef6fe3e"
+	 data-version="03fdfd6ff55a4a4a92113a2a68b1448b"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Limits attached to multiple transaction permissions</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="9cb5c0a0bd6046caa73c00d427fb5aa0"
+	 data-version="52da9d50a0824da5b95397566d071a2b"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5><em>Materiality</em></h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="831d0fd9861f47009875a4bee2c9c92a"
+	 data-version="0581236268294652a3f186af1087d0c5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will apply two materiality limits to the proportion of RWEA reduction that can be taken under any permission covering multiple transactions:</p>
+<ol class="new-bullet">
+    <li>(a) transaction level limit &ndash; any transaction that would in principle be within the scope of the permission, but that resulted in an RWA reduction exceeding 1% of the firm&rsquo;s credit risk related RWAs, as at the date of the firm&rsquo;s most recent regulatory return, will fall outside the scope of a multiple transaction permission and will require a separate permission or require notification (if the transaction would satisfy option 1 or 2); and</li>
+    <li>(b) aggregate limit &ndash; once the aggregate RWA reduction on all SRT transactions executed within the scope of a permission exceeds 5% of the firm&rsquo;s credit risk-related RWAs as at the date of the firm&rsquo;s most recent regulatory return, no additional transactions may be executed within scope of the permission. In such circumstances, a firm should take one of the following actions:<br>
+    <ol>
+        <li>(i) apply to renew the multiple transaction permission;</li>
+        <li>(ii) apply for a new permission covering the specific transactions exceeding the RWA limit; or</li>
+        <li>(iii) notify the PRA of the transaction, following the SRT notification procedure (if the transactions would satisfy option 1 or 2).</li>
+    </ol>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#831d0fd9861f47009875a4bee2c9c92a">
+			Past
+			<span class="visually-hidden">
+				version of 3.16 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5d18e99942364afeba072bf82c6126fc"
+	 data-version="0406b44436664f6d9921e57de0c53f72"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5><em>Length of permission</em></h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="be87d9a8abbe4f04a12101cd6b7ec660"
+	 data-version="036a56e162a842e6b68c2b3c7dd44c07"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Multiple transaction permissions will be granted for a period of one year. The PRA&rsquo;s review of permission renewal will focus on changes to the firm&rsquo;s SRT policies and methodologies since the previous review.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="17ca8ff59ff747a896b673a4e0d74d29"
+	 data-version="1ea86e64e27e495f96163b10e3c24095"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Individual transaction permissions</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="5bdabd3e3a9c4e28a8d1362fdb801046"
+	 data-version="1fd9a8436fd24237979c1539b0e0a143"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.18
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Permissions relating to individual transactions need not be granted prior to the execution of a transaction. The PRA does not intend to specify the timeframe in which a firm should submit an individual transaction permission application, but firms should note that capital relief from a specific transaction will not be available until a firm has obtained permission covering the SRT assessment and capital treatment (unless the transaction is being notified under option 1 or 2, or falls within scope of a multiple transaction permission).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c1d444e885e2465d90678e65883079cb"
+	 data-version="9d3f81631864471b8dcece6bf8890707"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.19
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The information the PRA expects to receive in an individual transaction permission includes the items set out in paragraph <a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#1af9aa3642664997bcf44f996a3b4b9b" data-rb-content-link="Paragraph">3.8</a>&nbsp;points (d) to (p), and paragraph <a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#a907ca8e2165471099d3b29f270a66b9" data-rb-content-link="Paragraph">3.15</a>&nbsp;points (a) to (c).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2849e0fcee23422b93712419d7a026fb"
+	 data-version="1802a01f35fa45f4bb3d4bbee7799412"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5><em>Limits attached to individual transaction permissions</em></h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="6efa42ee289f43b9b64de7b2c818578a"
+	 data-version="eb3bf9152040470a9d903a6a63c0cef7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.20
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA may grant an individual permission for the full duration of a transaction, or may impose a shorter time limit on the permission. Where a firm seeks to take capital relief on a transaction beyond the expiry date of the relevant permission, the permission will require renewal prior to expiry.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c2f8caaab04c4d90a0bcde057961d3b0"
+	 data-version="506d9618873048cb96bd6ce19a17c19c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.21
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As SRT should be met on a continuing basis, permissions will typically include a requirement to notify the PRA of changes in circumstances from those under which the permission was granted. Any reduction in credit risk transfer subsequent to the permission being granted will require the firm to make a commensurate reduction in the extent of RWEA reduction that is recognised. If a firm does not effect a commensurate reduction in the RWEA relief in such circumstances, the PRA may revoke the relevant permission.</p>
+<p>(CRR Articles 244, 245 and 337)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#c2f8caaab04c4d90a0bcde057961d3b0">
+			Past
+			<span class="visually-hidden">
+				version of 3.21 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/3-significant-risk-transfer-notifications-and-permissions/01-01-2026?p=1" data-id="d4e8e50dce3d48c689d00e476777fb14" data-effective-date="01-01-2026" data-download-title="Significant Risk Transfer notifications and permissions_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/3-significant-risk-transfer-notifications-and-permissions/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#d4e8e50dce3d48c689d00e476777fb14&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer – Significant Risk Transfer notifications and permissions">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="15c0005d567641bda9e2b9f1f9d2de07"
+	 data-version="551cba2f571e4bf59407278d4c38f22d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Regulatory capital calculation methodology and SRT
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="bf95177027d749949924dcd3eb4485c8"
+	 data-version="22e723fab2244a8f995e2c3054cf671c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Originators must transfer a significant amount of credit risk associated with securitised exposures to third parties to be able to apply the securitisation risk weights set out in Chapter 5 of the CRR, and any associated reduction in capital requirements must be matched by a commensurate transfer of risk to third parties.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7560b266705e43da82004bf93c6c0ffd"
+	 data-version="98ccb79ca3f74ca5bf40c8fd518aed59"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As part of the notification and permissions process, the PRA expects a firm to inform it of the methodology the firm intends to use to calculate securitisation capital requirements. The PRA will generally be more sceptical of the achievement of commensurate risk transfer for transactions where the regulatory capital calculation used produces very low capital requirements. Where the method used to calculate regulatory capital requirements post-securitisation results in a particularly significant reduction in capital requirements, the PRA will apply a high degree of scrutiny in its assessment of whether commensurate risk transfer is achieved.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="38f436c06c7145a38b7f52172267d2ab"
+	 data-version="fc5daec5abcf45dc8e5df0f475de55c7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When evaluating SRT transactions which apply the Securitisation External Ratings Based Approach (SEC-ERBA), the PRA will also have regard to whether the chosen credit rating agency has appropriate expertise in the asset class being rated.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#38f436c06c7145a38b7f52172267d2ab">
+			Past
+			<span class="visually-hidden">
+				version of 4.3 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f88985f7b4c84206b8b5e347d3af7524"
+	 data-version="9b1beb1b5a6f4467b44b0c2e33680529"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Pending further international regulatory guidance, the PRA considers it appropriate to clarify its interpretation of the Loss Given Default (LGD) value firms should use for the purpose of calculating regulatory capital requirements using SEC-IRBA, for SRT securitisations of&nbsp;income-producing real estate (IPRE) assets where firms have adopted the slotting approach. For this purpose, the PRA expects firms to use the LGD value specified in CRR Article 259(6).</p>
+<p>(CRR Articles 244, 245 and 337)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#f88985f7b4c84206b8b5e347d3af7524">
+			Past
+			<span class="visually-hidden">
+				version of 4.4 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/4-regulatory-capital-calculation-methodology-and-srt/01-01-2026?p=1" data-id="15c0005d567641bda9e2b9f1f9d2de07" data-effective-date="01-01-2026" data-download-title="Regulatory capital calculation methodology and SRT_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/4-regulatory-capital-calculation-methodology-and-srt/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#15c0005d567641bda9e2b9f1f9d2de07&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer – Regulatory capital calculation methodology and SRT">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="f4a26bb6e3a1438b9e80b3e286384d00"
+	 data-version="e86940166b044d88b54c41c8f1af4e8c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4A
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Use of unfunded credit protection for synthetic SRT securitisations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d3d3027278c64e848f1fbb2c9ea97b9d"
+	 data-version="b72d986f27f14e9593c92cf243723ac1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4A.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Originators may use either funded credit protection or unfunded credit protection to&nbsp;achieve SRT where relevant requirements and supervisory expectations are met.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="dfa8eab403694798a82f97524a96dc0d"
+	 data-version="b48ed9117b0343a899f7069c095d5d2d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4A.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The use of unfunded credit protection for synthetic SRT securitisations can pose&nbsp;additional prudential risks relative to funded credit protection. These include:</p>
+<ol class="new-bullet" style="margin-left: 30px;">
+    <li>(i) a potentially higher risk of late payment or non-payment of the credit protection&nbsp;amount when a borrower or counterparty defaults; and&nbsp;</li>
+    <li>(ii) a risk that the unfunded credit protection provider may be downgraded and then cease&nbsp;to be eligible to provide unfunded credit protection, necessitating alternative&nbsp;arrangements to continue to achieve SRT. The PRA therefore considers the use of&nbsp;unfunded credit protection for SRT to be a complex feature for purposes of paragraph&nbsp;2.8 above.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="71ff1e5e857f41d0a46792bb54f3ba2f"
+	 data-version="5fa09976632040c9adf8a8cad573040c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4A.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA also reminds originators using unfunded credit protection for SRT to comply&nbsp;with:&nbsp;</p>
+<ul>
+    <li>the requirements in the CRR relating to the use of unfunded credit protection and&nbsp;the related supervisory expectations in SS17/13 &ndash; &lsquo;Credit risk mitigation&rsquo; <sup><a href="#footnote-6">6</a></sup>;</li>
+    <li>the requirements relating to unfunded credit protection for SRT in CRR Article 249,&nbsp;including the requirements regarding the ECAI rating of the protection provider;&nbsp;and</li>
+    <li>the stress-testing rules in the <a href="/pra-rules/internal-capital-adequacy-assessment" data-rb-content-link="Part">Internal Capital Adequacy Assessment Part</a>&nbsp;of the&nbsp;PRA Rulebook and related supervisory expectations in paragraph 2.11 of this SS.&nbsp;</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						Available at:,www.bankofengland.co.uk/prudential-regulation/publication/2013/credit-riskmitigation-ss
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b0c5ab68adcb49c2997554f88a1b4fde"
+	 data-version="d464d883680c4391b2c1a4ff47ede49c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4A.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects originators, as part of the monitoring and stress-testing mentioned in&nbsp;paragraph <a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#c1a22eb040594f2eb05b9325d103e345" data-rb-content-link="Paragraph">2.11</a>&nbsp;of this SS, to assess the risk of a downgrade of the protection provider&nbsp;and the implications for the effectiveness of the unfunded credit protection and the&nbsp;eligibility of the provider to continue to provide the unfunded credit protection, and to&nbsp;reflect this in their capital planning.&nbsp;</p>
+<p>(CRR Articles 244, 245, 249 and 337)</p>
+<div></div>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/4a-use-of-unfunded-credit-protection-for--synthetic-srt-securitisations/01-01-2026?p=1" data-id="f4a26bb6e3a1438b9e80b3e286384d00" data-effective-date="01-01-2026" data-download-title="Use of unfunded credit protection for synthetic SRT securitisations_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/4a-use-of-unfunded-credit-protection-for--synthetic-srt-securitisations/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#f4a26bb6e3a1438b9e80b3e286384d00&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer – Use of unfunded credit protection for synthetic SRT securitisations">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="45c86256959b42009dedba045ed92451"
+	 data-version="cfcdb3f93f36456dacb4687205f78f6f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Implicit support and SRT
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d8b5b99915284cde9dc715be010e0fef"
+	 data-version="549af1064c9b44bd8b148062cc63875e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will monitor the support provided by a firm to its securitisation transactions, and will consider this carefully in the assessment of commensurate risk transfer. As part of firms&rsquo; ongoing consideration of risk transfer, the PRA expects them to consider the support they have provided to securitisation transactions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ed1db34d47d247dd852d7486dfe369c9"
+	 data-version="14927235bda1436db33be2a115713c5a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a firm is found to have provided support to a securitisation, the expectation that the firm will provide future support to its securitisations is increased. The PRA will take account of this increased expectation in future assessments of commensurate risk transfer for that firm.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5e5ecb26f5c34300b276a368c1e3ce83"
+	 data-version="204834830a2548a4b9df11076b986e5f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects securitisation documentation to make clear, where applicable, that repurchase of securitisation positions by the originator beyond its contractual obligations is not mandatory and may only be made at arm&rsquo;s length.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a7ef010d55124e42a13502e57236c82b"
+	 data-version="78babb8efbc54277bf2f5c3adaf542c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="93edffff8d384563b714c19934633aef"
+	 data-version="7e32534c96d24345b7bcbae2c0f5f9d6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a firm fails to comply with CRR Article 250(1), the PRA may require it to disclose publicly that it has provided non-contractual support to its transaction.</p>
+<p>(CRR Articles 244, 245, 250 and 337)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#93edffff8d384563b714c19934633aef">
+			Past
+			<span class="visually-hidden">
+				version of 5.5 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/5-implicit-support-and-srt/01-01-2026?p=1" data-id="45c86256959b42009dedba045ed92451" data-effective-date="01-01-2026" data-download-title="Implicit support and SRT_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/5-implicit-support-and-srt/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#45c86256959b42009dedba045ed92451&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer – Implicit support and SRT">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="6635a933509947cb9fcd170158c28c88"
+	 data-version="453fd8148ee3438e9c2b2d3c8c8ebb98"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					High-cost credit protection and other SRT considerations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3d5705d105c14606a243f003ad28da45"
+	 data-version="056bb79131914f32ad0e497bcf2be3cd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Some transactions transfer little or no economic risk from the protection buyer to the protection seller, but may nevertheless result in a reduction in regulatory capital requirements. An example of such a transaction-type is one in which protection is purchased on a junior tranche and a high premium is paid for that protection.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="155ce7389de34fca92e2706536277a42"
+	 data-version="6edaca8c592747249796e295ce6481fe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Generally, the amount of premium paid will not materially affect the assessment of whether SRT is achieved. This is because either:</p>
+<ul>
+    <li>the protection payment payable upon default from protection seller to protection buyer is significantly larger than the overall premium payable to the protection seller; or</li>
+    <li>the payment of premium leads to an immediate incurred cost.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8d23e94fb8dc43bcac4de04101870ac3"
+	 data-version="c74b263b13a74a67af81aefb66a6c605"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>However, there comes a point at which the premium payable for protection can reduce significantly the economic risk that is transferred from the protection buyer to protection seller. A premium payable of 100% of the protection amount could leave the protection buyer in a position over the life of the transaction that was no better than if protection had not been purchased.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e539328577574dfeaf9eb8d809b15a20"
+	 data-version="ae3580a437634fbf9b42ddca53777248"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects originators seeking to apply the securitisation risk weights to synthetic securitisations to take into account all relevant factors to assess the extent of risk transferred.&nbsp;As well as the size and timing of amounts payable to the protection seller, the circumstances in which those amounts are payable can undermine the effectiveness of risk transfer. The PRA expects firms seeking capital relief through synthetic securitisations to incorporate premiums in their assessment of SRT. In particular, the following transaction features may have a significant impact on the extent of risk transfer:</p>
+<ul>
+    <li>premium which is guaranteed in all or almost all circumstances, eg premium which is payable upfront or deferred;</li>
+    <li>those that could result in the amount of premium payable for protection being significantly greater than the spread income on the assets in the portfolio or similar to the size of the hedged position; and</li>
+    <li>those under which the protection buyer retains the expected loss through higher transaction costs to the counterparty, in the form of premium or otherwise.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="846b0ec51e12466fb1a08a96fa9ac456"
+	 data-version="17c5c79352fd48de8c94c90c326524ec"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Originators should have regard to the statement on high cost credit protection issued by the Basel Committee on Banking Supervision (<a rel="noopener noreferrer" href="http://www.bis.org/publ/bcbs_nl16.htm" target="_blank">www.bis.org/publ/bcbs_nl16.htm</a>).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="fd0a0b726aac41f5a69d6302c18618bd"
+	 data-version="bf98069d0c6646dfb89e4dff6325d5dc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The CRR requires maturity to be assessed in considering SRT. When assessing the effective maturity of synthetic securitisations, the PRA expects firms to consider whether the transaction contains an option to terminate the protection at the discretion of the protection buyer. The PRA will consider the following to be examples of features which generally indicate a positive incentive for the protection buyer to call a transaction, or at least to constitute grounds for discussion with the PRA prior to the conclusion of the transaction:</p>
+<ul>
+    <li>the transaction contains terms, such as payments at maturity or payments upon early termination or significant premiums, which may reduce risk transfer;</li>
+    <li>the transaction includes a requirement for the protection buyer to incur additional costs or obligations if they do not exercise their option to terminate the protection; and</li>
+    <li>there are pre-agreed mechanisms, for example &lsquo;at-market unwinds&rsquo;, where the protection seller and protection buyer agree that the transaction can be terminated in the future at a &lsquo;market&rsquo; value and specifies aspects of how the value is calculated.</li>
+</ul>
+<p>(CRR Articles 244, 245 and 337)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#fd0a0b726aac41f5a69d6302c18618bd">
+			Past
+			<span class="visually-hidden">
+				version of 6.6 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/6-high-cost-credit-protection-and-other-srt-considerations/01-01-2026?p=1" data-id="6635a933509947cb9fcd170158c28c88" data-effective-date="01-01-2026" data-download-title="High-cost credit protection and other SRT considerations_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/6-high-cost-credit-protection-and-other-srt-considerations/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#6635a933509947cb9fcd170158c28c88&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer – High-cost credit protection and other SRT considerations">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="37f5b477a7e442f992ccee6914cf16b7"
+	 data-version="f5f03b9f96d6462f94d24ae30a0d5a9a"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Excess spread in SRT securitisations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="08696174ae0548e1987f361d236c2ad8"
+	 data-version="9abde2f0f6da4725adb18cbff842fcc2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>No standardised definition of excess spread exists in market practice, however it can be considered as &lsquo;finance charge collections and other fee income received in respect of the securitised exposures net of costs and expenses&rsquo;. The PRA recognises that excess spread can be formulated in a range of different ways, and expects firms to take a &lsquo;substance over form&rsquo; approach to the treatment of excess spread features in SRT securitisations. The PRA considers that the presence of excess spread in synthetic securitisations (SES), when junior in the capital structure to sold or protected tranches, impacts the transfer of credit risk to third parties by providing credit enhancement, such that the protection buyer has retained risk.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ecb711da38de40d88f11cd56a87b6c2d"
+	 data-version="d3ec7124258a492684b52184c78d6c4c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If SRT transactions are structured such that SES provides credit enhancement, firms should assess the risks retained by SES, adequately quantify such risk, and reflect this retained risk in their post-transaction capital requirements. For the purposes of calculating capital&nbsp;requirements, the PRA considers it appropriate to treat SES as an off-balance sheet securitisation position.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2134732343e043aeb54e919d5af5d71f"
+	 data-version="1d0c77062fde4c7b981f8d8a39c1f22c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should measure the nominal value of the off-balance sheet securitisation position as a reasoned and prudent estimate of the credit enhancement provided by SES, for example as compared to a retained first loss tranche. Firms should apply a 1,250% risk weight to this nominal value, or alternatively deduct from capital.<sup><a href="#footnote-7">7</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						Deduct securitisation positions from Common Equity Tier 1 items in accordance with Article 36(1)(k) of the Own Funds (CRR) Part of the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#2134732343e043aeb54e919d5af5d71f">
+			Past
+			<span class="visually-hidden">
+				version of 7.3 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d1f0289e3368465faba2110868b7c241"
+	 data-version="70aad82407a4406a828a1b8c116819e2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The presence of excess spread in traditional securitisations (TES) may, in certain transactions where accounting derecognition has not been achieved, impact the transfer of credit risk to third parties, where it is used to absorb losses thus providing credit enhancement to more senior tranches. The PRA is primarily concerned where the excess spread results from the securitised exposures being sold below their market value, for instance, where the securitised exposures are sold at par value despite their fair value being higher than par. In these circumstances, the PRA expects firms to treat the credit enhancement provided by TES in a similar manner to the approach described for SES, by measuring the credit enhancement provided and applying a 1,250% risk weight or deducting from capital accordingly. The PRA is open to considering alternative methods for firms to measure the credit enhancement provided. As the PRA considers excess spread a complex feature, firms may approach the PRA to discuss potential transactions with such a feature ahead of execution, as set out in paragraph <a href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#239ac163c3fb4c18b4c795e801db6be5" data-rb-content-link="Paragraph">2.8</a>.</p>
+<p>(CRR Articles 244, 245 and 253)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#d1f0289e3368465faba2110868b7c241">
+			Past
+			<span class="visually-hidden">
+				version of 7.4 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/7-excess-spread-in-srt-securitisations/01-01-2026?p=1" data-id="37f5b477a7e442f992ccee6914cf16b7" data-effective-date="01-01-2026" data-download-title="Excess spread in SRT securitisations_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/7-excess-spread-in-srt-securitisations/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#37f5b477a7e442f992ccee6914cf16b7&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer – Excess spread in SRT securitisations">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="7ac3fa87a4b0446aa3a0d5a4a5ee4fc3"
+	 data-version="6fac3a931be447128beeb8ed48b39249"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Assessment of Commensurate Risk Transfer (CRT) for portfolios of Standardised Approach (SA) exposures
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="96b0879d942542d4a0df80bc99e83696"
+	 data-version="957afedbe6bf4b69b70ac761d06c6b67"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects firms to consider the thickness of tranches sold to third parties or tranches on which protection is purchased, for portfolios of SA exposures, in a prudent manner. When justifying that commensurate risk has been transferred, the PRA expects firms to compare the detachment point (D) of tranches sold, or on which protection is purchased, against the K<sub>SA</sub> (RWEA in respect of the underlying exposures as if they had not been securitised multiplied by 8% and divided by the value of the underlying exposures) of the portfolio.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/07/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ed8fbc87462b40519550717a9a81d755"
+	 data-version="4bc4163b0cb04a65ab4ecc9220100068"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers it prudent for firms to apply a scalar of 1.5 to K<sub>SA</sub> to determine the minimum value of D for the purpose of justifying commensurate transfer of risk. The PRA considers the 1.5 scalar to K<sub>SA</sub> to be a prudent fall-back and will consider a lower scalar to K<sub>SA</sub>, if firms can evidence this is more appropriate for a particular transaction. The PRA will remain flexible in assessing firms&rsquo; evidence for a reduced scalar to K<sub>SA</sub> and will consider the use of external data sources where it is comparable and representative.</p>
+<p>(CRR Articles 244 and 245)</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/22-07-2020#ed8fbc87462b40519550717a9a81d755">
+			Past
+			<span class="visually-hidden">
+				version of 8.2 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/8-assessment-of-commensurate-risk-transfer-crt-for-portfolios-of--standardised-approach-sa-exposures/01-01-2026?p=1" data-id="7ac3fa87a4b0446aa3a0d5a4a5ee4fc3" data-effective-date="01-01-2026" data-download-title="Assessment of Commensurate Risk Transfer (CRT) for portfolios of Standardised Approach (SA) exposures_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer/8-assessment-of-commensurate-risk-transfer-crt-for-portfolios-of--standardised-approach-sa-exposures/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss09-13-securitisation---significant-risk-transfer#7ac3fa87a4b0446aa3a0d5a4a5ee4fc3&amp;subject=PRA Rulebook - SS9/13 – Securitisation: Significant Risk Transfer – Assessment of Commensurate Risk Transfer (CRT) for portfolios of Standardised Approach (SA) exposures">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

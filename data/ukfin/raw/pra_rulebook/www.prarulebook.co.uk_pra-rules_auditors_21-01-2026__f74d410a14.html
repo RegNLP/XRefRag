@@ -1,0 +1,2843 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/auditors" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/auditors" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{E100ED3C-C0DF-410F-BDFE-C0A8AA7D32D0} -->
+<title>Auditors | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Auditors">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Auditors">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoibq-f-20298a361-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":28,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"80931a2","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":45758,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370115","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==qnzgX0XDT65+6LsmMCGXAnOMQtBFwSvkuP+/fTrwJWgiANeME4Emqb8r/I5HLUs2PxJhD0FWnmXf5JS4szgYkb9qjRwtTfJ1Bo4Eh3p0K9KbDRoqkrghH3NWD41yaDlEBVlk4n4u/1UlprF9CahkVLz9gEF0BPqopFWAGQRv/ubjNRMOQpt32JOeYkI520yAC3c/38We2alE0711YQF8FxeciIBsGDTRQJ4tRrBQQ19t4KJTNPXV/k/Znx00g8cRGp54RctTfZpZCR5dMUnqNmbHR0HIyOT2n5OOsZ6ror8S0jkM0ZvLTV04tL+QuTt8Eqg6NE+3hwHN3xgGPHVUivQ55v24mFvIp6vyjVoxy/mbHa1AZjJuorXmEiVe1gDLPaG5+MJuiLWIXtrOkpp7ZFvmGe5Zsa19JmflRiy1L+Y=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Auditors				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Auditors
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/auditors/19-06-2014">
+						<span class="visually-hidden">View Rulebook as at</span>
+						19/06/2014
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/auditors/25-01-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						25/01/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/auditors/03-02-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						03/02/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/auditors/07-03-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/03/2019
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/auditors/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/auditors/22-12-2023">
+						<span class="visually-hidden">View Rulebook as at</span>
+						22/12/2023
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-65e7239b-1049-4e47-83a9-4733c4119c4d">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-65e7239b-1049-4e47-83a9-4733c4119c4d"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Auditors
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Auditors)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-authorised-persons">
+					Non-authorised persons
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-crr-firms">
+					Non-CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=1ebf20d3dfc24d5991cb5df58678cd00">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Auditors
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/lss07-13----the-relationship-between-the-external-auditor-and-the-supervisor-a-code-of-practice/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									LSS7/13 – The relationship between the external auditor and the supervisor: a code of practice
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss01-16---written-reports-by-external-auditors-to-the-pra/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS1/16 – Written reports by external auditors to the PRA
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/statements-of-policy/sop-the-bank-of-englands-approach-to-enforcement/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SoP3/13 – The Bank of England’s approach to enforcement: changes to statements of policy and procedure following the Financial Services and Markets Act 2023
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/the-pra-rulebook" class="list-links__link" target="_blank">
+										PS5/14 - The PRA Rulebook
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/engagement-between-external-auditors-and-supervisors-and-commencing-the-pras-disciplinary-powers" class="list-links__link" target="_blank">
+										PS1/16 - Engagement between external auditors and supervisors and commencing the PRA&#39;s disciplinary
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/occasional-consultation-paper" class="list-links__link" target="_blank">
+										PS6/19 - Responses to Chapters 3-7 of CP24/18 ‘Occasional Consultation Paper’
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2023/december/responses-to-proposed-minor-amendments-2023" class="list-links__link" target="_blank">
+										PS19/23 - Responses to proposed minor amendments in CP8/23, Chapter 11 of CP12/23 and CP22/23
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/ukpga/2000/8/contents" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Financial Services and Markets Act 2000
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/auditors/22-12-2023_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="22-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/auditors/22-12-2023?p=1" data-id="1ebf20d3dfc24d5991cb5df58678cd00" data-effective-date="22-12-2023" data-download-title="Auditors_22-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/auditors/22-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/auditors&amp;subject=PRA Rulebook - Auditors">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="03a6a8b7234643ff96fd831d51486eb2"
+	 data-version="e25d5cc74f974f72aeb4e58b7324c37f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6df75613a36348959f5c2b9aaa505ba2"
+	 data-version="c3f031231fa741d19c1018d7ccdfb83b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Part applies to:</p>
+<ol class="new-bullet">
+    <li>(1) every <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>; and</li>
+    <li>(2) the external auditor of such a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (if appointed under <a title="2" href="/pra-rules/auditors#85c8d948104f4b3e982b1623a858ad5e" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">2</a> or appointed under or as a result of a statutory provision other than in <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em>).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/auditors/19-06-2014#6df75613a36348959f5c2b9aaa505ba2">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6df75613a36348959f5c2b9aaa505ba2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b6fe03b6613241e494286e6ac481396d"
+	 data-version="72f597ee338045648c0cfd22d77a902d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In <a  title="1.1" href="/pra-rules/auditors#6df75613a36348959f5c2b9aaa505ba2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">1.1</a>, where <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> refers to a <em><a class="glossary-link" title="managing agent" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agent</a></em>, it applies in respect of the <em><a class="glossary-link" title="managing agent" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agent&rsquo;s</a></em> own business and in respect of the <em><a class="glossary-link" title="insurance business" href="#glossary-term-9c9ea400b5194286b440e752add53c8a" data-mce-linktype="2" data-glossary-id="52220">insurance business</a></em> of each <em><a class="glossary-link" title="syndicate" href="#glossary-term-0f105460a5264eb68754d9d944949b8a" data-mce-linktype="2" data-glossary-id="52207">syndicate</a></em> that the <em><a class="glossary-link" title="managing agent" href="#glossary-term-631b76adce9c4143ad8d33e593852c66" data-mce-linktype="2" data-glossary-id="52204">managing agent</a></em> manages.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b6fe03b6613241e494286e6ac481396d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f7a3a0b3afeb4052baf8db8d732ab0fb"
+	 data-version="ec4ed94166794f598e6196b7d7ba8ae3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part the following definitions shall apply:</p>
+<p><em><a  class="glossary-link" title="annual reports and accounts" href="#glossary-term-f66d2e5d8cdb4e8d8c2176f747660e98" data-mce-linktype="2" data-glossary-id="77745">annual reports and accounts</a></em></p>
+<p style="padding-left: 30px;"><span style="text-indent: -1.3em;">means</span></p>
+<ol class="new-bullet"><ol>
+<li>(1) (in relation to a company incorporated in the <em><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>) its annual accounts and reports as defined in section 471 of the Companies Act 2006; or</li>
+<li>(2) (in relation to any other body) any similar or analogous documents which it is required to prepare whether by its constitution or by the law under which it is established.</li>
+</ol></ol>
+<p><em><a  class="glossary-link" title="accounting reference date" href="#glossary-term-b86949897dc34dcbab56c87581878c09" data-mce-linktype="2" data-glossary-id="77746">accounting reference date</a></em></p>
+<p style="padding-left: 30px;">means</p>
+<ol class="new-bullet"><ol>
+<li>(1) (in relation to a company incorporated in the <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK </a></em><span style="text-indent: -1.3em;"> under the Companies Acts) the accounting reference date of that company determined in accordance with section 391 of the Companies Act 2006; or</span></li>
+<li>(2) (in relation to any other body) the last day of its financial year.</li>
+</ol></ol>
+<p><em><a  class="glossary-link" title="balance sheet total" href="#glossary-term-61a794ba0ce4444eb86303953d590cf4" data-mce-linktype="2" data-glossary-id="77747">balance sheet total</a></em></p>
+<p style="padding-left: 30px;">means the aggregate of the amounts shown as assets in the balance sheet.</p>
+<p><em><a  class="glossary-link" title="ultimate parent undertaking" href="#glossary-term-eb7362e3b26d44a0bb49ed7647e79e70" data-mce-linktype="2" data-glossary-id="98281">ultimate parent undertaking</a></em></p>
+<p style="padding-left: 30px;"><span style="text-indent: -1.3em;">means, in relation to a </span><em style="text-indent: -1.3em;"><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em><span style="text-indent: -1.3em;">, an </span><em style="text-indent: -1.3em;"><a  class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a></em><span style="text-indent: -1.3em;"> that:</span></p>
+<ol class="new-bullet"><ol>
+<li>(1) is a <em><a  class="glossary-link" title="parent undertaking" href="#glossary-term-ac2f16e560d5470c9869893d8de3aa6a" data-mce-linktype="2" data-glossary-id="63297">parent undertaking</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>; and</li>
+<li>(2) is not a <em><a  class="glossary-link" title="subsidiary undertaking" href="#glossary-term-d230b871bd4d4e2c9431a41bbf165f7f" data-mce-linktype="2" data-glossary-id="98284">subsidiary undertaking</a></em> of another <em><a  class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a></em>.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/auditors/25-01-2016#f7a3a0b3afeb4052baf8db8d732ab0fb">
+			Past
+			<span class="visually-hidden">
+				version of 1.3 before 07/03/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f7a3a0b3afeb4052baf8db8d732ab0fb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="22-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/auditors/1-application-and-definitions/22-12-2023?p=1" data-id="03a6a8b7234643ff96fd831d51486eb2" data-effective-date="22-12-2023" data-download-title="Application and Definitions_22-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/auditors/1-application-and-definitions/22-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/auditors#03a6a8b7234643ff96fd831d51486eb2&amp;subject=PRA Rulebook - Auditors – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=03a6a8b7234643ff96fd831d51486eb2">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="85c8d948104f4b3e982b1623a858ad5e"
+	 data-version="ec78bc05a9ae4f96b264b6577ae90ece"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appointment of Auditors
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="95e8c36fb49241cf89a247390d4e9a95"
+	 data-version="45db964bb3e141ab9ecbb5c39eeef875"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must:</p>
+<ol class="new-bullet">
+    <li>(1) appoint an auditor;</li>
+    <li>(2) when it becomes aware that a vacancy in the office of auditor will arise or has arisen:</li>
+    <ol>
+        <li>(a) notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>; and</li>
+        <li>(b) give reasons for the vacancy,</li>
+    </ol>
+    <li><span style="text-indent: -1.3em;">      without delay, using the form referred to in </span><a style="text-indent: -1.3em;" title="Notifications 10.3" href="/pra-rules/notifications#0c99cf7108854403848ac89a1eb5218f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Notifications 10.3</a><span style="text-indent: -1.3em;">;</span></li>
+    <li>(3) appoint an auditor to fill any vacancy in the office of auditor;</li>
+    <li>(4) ensure that the replacement auditor can take up office at the time the vacancy arises or as soon as reasonably practicable after that; and</li>
+    <li>(5) when a new auditor is appointed:</li>
+    <ol>
+        <li>(a) notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of that appointment; and</li>
+        <li>(b) advise the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of the name and business address of the auditor appointed and the date from which the appointment has effect,</li>
+    </ol>
+    <li><span style="text-indent: -1.3em;">      using the form referred to in </span><a href="/pra-rules/notifications#acd2de2ec60149b08c260292cb64a7c7" data-rb-content-link="Rule">Notifications 10.2</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					22/12/2023
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/auditors/19-06-2014#95e8c36fb49241cf89a247390d4e9a95">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 22/12/2023
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=95e8c36fb49241cf89a247390d4e9a95">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="cb42f659807544658733e7306c8fac07"
+	 data-version="361fe37552e34dba93203e235578c8d7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that is not under an obligation to appoint an auditor imposed by an <em><a class="glossary-link" title="enactment" href="#glossary-term-466a4562686b41578e5d1ce215b24a07" data-mce-linktype="2" data-glossary-id="52436">enactment</a></em> other than <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> fails to appoint an auditor within 28 days of a vacancy arising, the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> may appoint an auditor for that <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> on the following terms:</p>
+<ol class="new-bullet">
+<li>(1) the auditor to be remunerated by the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> on the basis agreed between the auditor and <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or, in the absence of agreement, on a reasonable basis; and</li>
+<li>(2) the auditor to hold office until he resigns or the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> appoints another auditor.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=cb42f659807544658733e7306c8fac07">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="10309948c54a4fe6827571d8fffd597e"
+	 data-version="32d4a8902ca743529cc7a63b2f174d71"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must comply with and is bound by the terms on which an auditor has been appointed by the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=10309948c54a4fe6827571d8fffd597e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="22-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/auditors/2-appointment-of-auditors/22-12-2023?p=1" data-id="85c8d948104f4b3e982b1623a858ad5e" data-effective-date="22-12-2023" data-download-title="Appointment of Auditors_22-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/auditors/2-appointment-of-auditors/22-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/auditors#85c8d948104f4b3e982b1623a858ad5e&amp;subject=PRA Rulebook - Auditors – Appointment of Auditors">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=85c8d948104f4b3e982b1623a858ad5e">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Appointment of Auditors
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="78934303529c41f084f26e7947e1463d"
+	 data-version="b39fe936ebb24330916a0ac56452ddaa"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Auditors’ Qualifications
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="9e67ff36ce934161a90323be37c3e289"
+	 data-version="b4648e12ffbd4437b13412c7799dc697"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Before a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> appoints an auditor, it must take reasonable steps to ensure that the auditor:</p>
+<ol class="new-bullet">
+<li>(1) has the required skill, resources and experience to perform its functions under the <em><a class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em> commensurate with the nature, scale and complexity of the <em><a class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> business and the requirements and standards under the <em><a class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em> to which it is subject; and</li>
+<li>(2) is eligible for appointment as an auditor under any applicable laws.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9e67ff36ce934161a90323be37c3e289">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="325dd64db2454d398fdf434a9087aa6b"
+	 data-version="e5a68862920f42168c773d274d7ba3ac"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not appoint as auditor a <em><a class="glossary-link" title="person" href="#glossary-term-08c2a4c6b87b4e51a4292e13ba411052" data-mce-linktype="2" data-glossary-id="52181">person</a></em> who is disqualified under Part XXII of <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Auditors and Actuaries) from acting as an auditor either for that <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or for a relevant class of <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=325dd64db2454d398fdf434a9087aa6b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fae05685dd37438fb34840e2ed9df0ce"
+	 data-version="e0802c2d275046e88af098ff760af0ce"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take reasonable steps to ensure that an auditor, which it is planning to appoint or has appointed, provides information to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> about the auditor's qualifications, skills, experience and independence in accordance with the reasonable requests of the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fae05685dd37438fb34840e2ed9df0ce">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="22-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/auditors/3-auditors-qualifications/22-12-2023?p=1" data-id="78934303529c41f084f26e7947e1463d" data-effective-date="22-12-2023" data-download-title="Auditors’ Qualifications_22-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/auditors/3-auditors-qualifications/22-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/auditors#78934303529c41f084f26e7947e1463d&amp;subject=PRA Rulebook - Auditors – Auditors’ Qualifications">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=78934303529c41f084f26e7947e1463d">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Auditors’ Qualifications
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2f5323ca0d594623b9d0673b38472a99"
+	 data-version="ee284ee804764e50b2d8b02fc0ceb77f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Auditors&#39; Independence
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="9424245f869a458b97777fd24dbd3039"
+	 data-version="55c1005b1c814bfa8e51fcdb2a1f23ce"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take reasonable steps to ensure that the auditor which it appoints is independent of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9424245f869a458b97777fd24dbd3039">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0fb100f1b16341738cef199289eeede3"
+	 data-version="0ddf7318f1fe457fad648c385d213722"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> becomes aware at any time that its auditor is not independent of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, it must take reasonable steps to ensure that it has an auditor independent of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>. The <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> if independence is not achieved within a reasonable time.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0fb100f1b16341738cef199289eeede3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="22-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/auditors/4-auditors-independence/22-12-2023?p=1" data-id="2f5323ca0d594623b9d0673b38472a99" data-effective-date="22-12-2023" data-download-title="Auditors&#39; Independence_22-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/auditors/4-auditors-independence/22-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/auditors#2f5323ca0d594623b9d0673b38472a99&amp;subject=PRA Rulebook - Auditors – Auditors&#39; Independence">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2f5323ca0d594623b9d0673b38472a99">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Auditors&#39; Independence
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="9f2cbb113b564a48b6df9c798bb1b66b"
+	 data-version="0f267db0edba46d1baba8ba83b7c10f0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Firms&#39; Cooperation with their Auditors
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e27569d1fda04f5f8abcbd6d59cf9de0"
+	 data-version="a1ab1f1d5e6442e8acd5c12b14ae8d65"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must cooperate with its auditor in the discharge of the auditor&rsquo;s duties under this Part. In complying with this rule, and in each case subject to section 413 of <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Protected items):</p>
+<ol class="new-bullet">
+<li>(1) a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must give its auditor a right of access at all times to the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> </em>accounting and other records, in whatever form they are held, and <em><a class="glossary-link" title="documents" href="#glossary-term-40764123328445d48547031e0d466166" data-mce-linktype="2" data-glossary-id="52434">documents</a></em> relating to its business; and</li>
+<li>(2) a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must allow its auditor to copy <em><a class="glossary-link" title="documents" href="#glossary-term-40764123328445d48547031e0d466166" data-mce-linktype="2" data-glossary-id="52434">documents</a></em> or other material on the premises of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and to remove copies or hold them elsewhere, or give the auditor such copies on request.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e27569d1fda04f5f8abcbd6d59cf9de0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="273ef85a3104459f8b2aed46c18cd01a"
+	 data-version="9ff778e86e25428d8e0a065f20db9b7b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title=" firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take reasonable steps to ensure that:</p>
+<ol class="new-bullet">
+<li>(1) each of its:</li>
+<ol>
+<li>(a) <em><a class="glossary-link" title="appointed representatives" href="#glossary-term-cf60950dc57c44c098218161b24047e3" data-mce-linktype="2" data-glossary-id="52178">appointed representatives</a></em>;</li>
+<li>(b) suppliers under a <em><a class="glossary-link" title="material outsourcing" href="#glossary-term-f8fd6084632547449e6472efbf6f4ffb" data-mce-linktype="2" data-glossary-id="52175">material outsourcing</a></em> arrangement; and</li>
+<li>(c) <em><a  class="glossary-link" title="tied agents" href="#glossary-term-fc85ca179cb34b44a46abe84da4e3ab3" data-mce-linktype="2" data-glossary-id="53232">tied agents</a></em>,</li>
+</ol></ol>
+<p style="padding-left: 30px;">where applicable, gives the <em><a class="glossary-link" title=" firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> auditor the same rights of access to their own books, accounts and vouchers, and entitlement to information and explanations from their officers as are given in respect of the <em><a class="glossary-link" title=" firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> by section 341 of <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Access to books etc); and</p>
+<ol class="new-bullet">
+<li>(2) all its employees cooperate with its auditor in the discharge of the duties of the auditor under this Part,</li>
+</ol>
+<p>in each case subject to section 413 of <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Protected items).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=273ef85a3104459f8b2aed46c18cd01a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="22-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/auditors/5-firms-cooperation-with-their-auditors/22-12-2023?p=1" data-id="9f2cbb113b564a48b6df9c798bb1b66b" data-effective-date="22-12-2023" data-download-title="Firms&#39; Cooperation with their Auditors_22-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/auditors/5-firms-cooperation-with-their-auditors/22-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/auditors#9f2cbb113b564a48b6df9c798bb1b66b&amp;subject=PRA Rulebook - Auditors – Firms&#39; Cooperation with their Auditors">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=9f2cbb113b564a48b6df9c798bb1b66b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Firms&#39; Cooperation with their Auditors
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="27e731ab633a43bfb7d730bc529c02f3"
+	 data-version="99019a347cba40afa20fdf79638c62ec"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Notification of Matters Raised by Auditors
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e7aa5c796ee14c4da6b42a173c74eb34"
+	 data-version="934b3b4c7f874185843b29edbee32353"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> if the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> expects, or knows, that the auditor will qualify the report on the audited annual financial statements or include any emphasis of matter.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e7aa5c796ee14c4da6b42a173c74eb34">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="22-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/auditors/6-notification-of-matters-raised-by-auditors/22-12-2023?p=1" data-id="27e731ab633a43bfb7d730bc529c02f3" data-effective-date="22-12-2023" data-download-title="Notification of Matters Raised by Auditors_22-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/auditors/6-notification-of-matters-raised-by-auditors/22-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/auditors#27e731ab633a43bfb7d730bc529c02f3&amp;subject=PRA Rulebook - Auditors – Notification of Matters Raised by Auditors">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=27e731ab633a43bfb7d730bc529c02f3">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Notification of Matters Raised by Auditors
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="e3d0b0296747455b81be1d9c500d49a9"
+	 data-version="2ab155413ef2456c8728aa08332143f1"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Duties of Auditors
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c78e77c0abe14214a0af04bba1a2c1bd"
+	 data-version="5662d499ff0f4a2ca716117a0a836d85"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An auditor of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must cooperate with the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> in the discharge of its functions under any <em><a class="glossary-link" title="relevant legislation" href="#glossary-term-14493a5f658f421c8a27216e21bfd544" data-mce-linktype="2" data-glossary-id="52176">relevant legislation</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/01/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/auditors/19-06-2014#c78e77c0abe14214a0af04bba1a2c1bd">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 25/01/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c78e77c0abe14214a0af04bba1a2c1bd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c5da2d905aa643eabf76eb388d72ee13"
+	 data-version="007e9cce736f4abc96727231cdf18871"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An auditor of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must give a <em><a class="glossary-link" title="skilled person" href="#glossary-term-cf524164a9e54d79be5614c167b5520b" data-mce-linktype="2" data-glossary-id="52209">skilled person</a></em> appointed by the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or appointed by the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> in respect of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> all assistance that <em><a class="glossary-link" title="person" href="#glossary-term-08c2a4c6b87b4e51a4292e13ba411052" data-mce-linktype="2" data-glossary-id="52181">person</a></em> reasonably requires.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c5da2d905aa643eabf76eb388d72ee13">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="082cb70e7a084ecf9d48ae22b3126ffe"
+	 data-version="13236fdefbb541ff86eaf49907dcee8f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An auditor of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must be independent of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> when performing duties in respect of that <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=082cb70e7a084ecf9d48ae22b3126ffe">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a2ad14077256425f883f17b863932d94"
+	 data-version="23f54cbc38ed422cbd68d7f34a7e691b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An auditor of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take reasonable steps to be satisfied that no conflict of interest exists in respect of that <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> from which bias may reasonably be inferred. The auditor must take appropriate action where this is not the case.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a2ad14077256425f883f17b863932d94">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6456217f07704f61b528df19657e1f79"
+	 data-version="235417054e8e4f33b3da199f9acc1b4d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An auditor must notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> without delay if the auditor:</p>
+<ol class="new-bullet">
+<li>(1) is removed from office by a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>;</li>
+<li>(2) is formally notified of such removal from office;</li>
+<li>(3) resigns before the term of office expires;</li>
+<li>(4) is not re-appointed by a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>; or</li>
+<li>(5) is disqualified from being the auditor of:</li>
+<ol>
+<li>(a) any <em><a class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a></em> or particular class of <em><a class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a></em>; or</li>
+<li>(b) any <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or particular class of <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6456217f07704f61b528df19657e1f79">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="aa29392f3a10437fbeb04e46dda1878f"
+	 data-version="323107cde4d44edb82fefc143f2268c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the circumstances set out in <a  title="7.5" href="/pra-rules/auditors#6456217f07704f61b528df19657e1f79" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.5</a>, the auditor must notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> without delay:</p>
+<ol class="new-bullet">
+<li>(1) of any matter connected with the removal or ceasing of the office of auditor that the auditor thinks ought to be drawn to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA&rsquo;s</a></em> attention; or</li>
+<li>(2) that there is no such matter.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/06/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=aa29392f3a10437fbeb04e46dda1878f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="22-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/auditors/7-duties-of-auditors/22-12-2023?p=1" data-id="e3d0b0296747455b81be1d9c500d49a9" data-effective-date="22-12-2023" data-download-title="Duties of Auditors_22-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/auditors/7-duties-of-auditors/22-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/auditors#e3d0b0296747455b81be1d9c500d49a9&amp;subject=PRA Rulebook - Auditors – Duties of Auditors">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=e3d0b0296747455b81be1d9c500d49a9">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Duties of Auditors
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="f74a711047e441d5a2f05ce9f7931935"
+	 data-version="e40e9a7f0fd141209b86cea3c831c83c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Written Reports by Auditors to the PRA
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c077686929e24c2089616dfad13235b9"
+	 data-version="3df2b1d8c9f0485abb82c863ccb4224a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies in relation to <em><a  class="glossary-link" title="annual reports and accounts" href="#glossary-term-f66d2e5d8cdb4e8d8c2176f747660e98" data-mce-linktype="2" data-glossary-id="77745">annual reports and accounts</a></em> with an <em><a  class="glossary-link" title="accounting reference date" href="#glossary-term-b86949897dc34dcbab56c87581878c09" data-mce-linktype="2" data-glossary-id="77746">accounting reference date</a></em> on or after 1 November 2016 but <a  title="8.3(2)" href="/pra-rules/auditors#3b40ef7f9941402383aa2f696ae93577" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">8.3</a>(2) and (3) and <a  title="8.3A" href="/pra-rules/auditors#1827180d803944d982ce4d121142e81f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">8.3A</a> apply only in relation to <em><a  class="glossary-link" title="annual reports and accounts" href="#glossary-term-f66d2e5d8cdb4e8d8c2176f747660e98" data-mce-linktype="2" data-glossary-id="77745">annual reports and accounts</a></em> with an accounting reference date on or after 31 December 2018.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/auditors/25-01-2016#c077686929e24c2089616dfad13235b9">
+			Past
+			<span class="visually-hidden">
+				version of 8.1 before 07/03/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c077686929e24c2089616dfad13235b9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7a6acf04b0614f2b8a14c6a9a01f1e45"
+	 data-version="a37e92a1deb644e7b4f550e251dcb05f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Chapter applies to an auditor of a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that:</p>
+<ol class="new-bullet">
+<li>(1) is a <em><a  class="glossary-link" title="UK bank" href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4" data-mce-linktype="2" data-glossary-id="52119">UK bank</a></em> or <em><a  class="glossary-link" title="building society" href="#glossary-term-acd841e55a0b4ca085d76098925f7448" data-mce-linktype="2" data-glossary-id="52108">building society</a></em>;</li>
+<li>(2) is not itself the <span style="text-indent: -14.3px;"><em><a  class="glossary-link" title="subsidiary undertaking" href="#glossary-term-d230b871bd4d4e2c9431a41bbf165f7f" data-mce-linktype="2" data-glossary-id="98284">subsidiary undertaking</a></em> of</span> an <em><a  class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a></em> that is not an <em><a  class="glossary-link" title="UK undertaking" href="#glossary-term-a1797426e4c849949f45ae80b20e7920" data-mce-linktype="2" data-glossary-id="52121">UK undertaking</a></em>; and</li>
+<li>(3) meets at least one of the following criteria:</li>
+<ol>
+<li>(a) it has an individual <em><a  class="glossary-link" title="balance sheet total" href="#glossary-term-61a794ba0ce4444eb86303953d590cf4" data-mce-linktype="2" data-glossary-id="77747">balance sheet total</a></em> greater than &pound;50,000,000,000; or</li>
+<li>(b) it is a member of a group that has a consolidated <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="balance sheet total" href="#glossary-term-61a794ba0ce4444eb86303953d590cf4" data-mce-linktype="2" data-glossary-id="77747">balance sheet total</a></em> greater than &pound;50,000,000,000,</li>
+</ol></ol>
+<p>as at the last <em><a  class="glossary-link" title="accounting reference date" href="#glossary-term-b86949897dc34dcbab56c87581878c09" data-mce-linktype="2" data-glossary-id="77746">accounting reference date</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/auditors/25-01-2016#7a6acf04b0614f2b8a14c6a9a01f1e45">
+			Past
+			<span class="visually-hidden">
+				version of 8.2 before 07/03/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7a6acf04b0614f2b8a14c6a9a01f1e45">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3b40ef7f9941402383aa2f696ae93577"
+	 data-version="059505a020e84169aca41bc239c931d7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An auditor must provide annually a written report to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> in relation to:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm&rsquo;s</a></em> audited <em><a  class="glossary-link" title="annual report and accounts" href="#glossary-term-f66d2e5d8cdb4e8d8c2176f747660e98" data-mce-linktype="2" data-glossary-id="77745">annual report and accounts</a></em>;</li>
+<li>(2) where a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> has an <em><a  class="glossary-link" title="ultimate parent undertaking" href="#glossary-term-eb7362e3b26d44a0bb49ed7647e79e70" data-mce-linktype="2" data-glossary-id="98281">ultimate parent undertaking</a></em>, the audited <em><a  class="glossary-link" title="annual report and accounts" href="#glossary-term-0443566d47aa461d83e0bf911669a20b" data-mce-linktype="2" data-glossary-id="66953">annual report and accounts</a></em> of the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="ultimate parent undertaking" href="#glossary-term-eb7362e3b26d44a0bb49ed7647e79e70" data-mce-linktype="2" data-glossary-id="98281">ultimate parent undertaking</a></em>; and</li>
+<li>(3) where a <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> is a <em><a  class="glossary-link" title="ring-fenced body" href="#glossary-term-12a49655a92f4fefbf32af4c9a69c60b" data-mce-linktype="2" data-glossary-id="78069">ring-fenced body</a></em> and there is a <em><a  class="glossary-link" title="ring-fenced holding company" href="#glossary-term-bac7ee1b607e4fe3bf179b81bf9bacea" data-mce-linktype="2" data-glossary-id="98280">ring-fenced holding company</a></em> in relation to the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>, the audited <em><a  class="glossary-link" title="annual report and accounts" href="#glossary-term-0443566d47aa461d83e0bf911669a20b" data-mce-linktype="2" data-glossary-id="66953">annual report and accounts</a></em> of the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="ring-fenced holding company" href="#glossary-term-bac7ee1b607e4fe3bf179b81bf9bacea" data-mce-linktype="2" data-glossary-id="98280">ring-fenced holding company</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/auditors/25-01-2016#3b40ef7f9941402383aa2f696ae93577">
+			Past
+			<span class="visually-hidden">
+				version of 8.3 before 07/03/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3b40ef7f9941402383aa2f696ae93577">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1827180d803944d982ce4d121142e81f"
+	 data-version="031aff90a74940efad726b5f2cd39f9d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>But an auditor is not required to report in relation to the audited <em><a  class="glossary-link" title="annual report and accounts" href="#glossary-term-0443566d47aa461d83e0bf911669a20b" data-mce-linktype="2" data-glossary-id="66953">annual report and accounts</a></em> of the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm&rsquo;s</a></em> <em><a  class="glossary-link" title="ultimate parent undertaking" href="#glossary-term-eb7362e3b26d44a0bb49ed7647e79e70" data-mce-linktype="2" data-glossary-id="98281">ultimate parent undertaking</a></em> if the auditor is not also the auditor of the <em><a  class="glossary-link" title="ultimate parent undertaking" href="#glossary-term-eb7362e3b26d44a0bb49ed7647e79e70" data-mce-linktype="2" data-glossary-id="98281">ultimate parent undertaking</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2019
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1827180d803944d982ce4d121142e81f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.3A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="87152a4a641a48559d4620165e829f8d"
+	 data-version="122206d911d84025903c2fe349df1909"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The report in <a  title="8.3" href="/pra-rules/auditors#3b40ef7f9941402383aa2f696ae93577" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">8.3</a> must:</p>
+<ol class="new-bullet">
+<li>(1) be provided within 120 days beginning with the relevant <em><a  class="glossary-link" title="accounting reference date" href="#glossary-term-b86949897dc34dcbab56c87581878c09" data-mce-linktype="2" data-glossary-id="77746">accounting reference date</a></em>;</li>
+<li>(2) provide information about key judgment areas, including:</li>
+<ol>
+<li>(a) matters of valuation;</li>
+<li>(b) quality of earnings;</li>
+<li>(c) key accounting judgments; and</li>
+<li>(d) the quality of the systems and controls relevant to the preparation of the <em><a  class="glossary-link" title=" annual report and accounts" href="#glossary-term-f66d2e5d8cdb4e8d8c2176f747660e98" data-mce-linktype="2" data-glossary-id="77745">annual report and accounts</a></em>; and</li>
+</ol>
+<li>(3) be prepared with due skill, care and diligence.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/auditors/25-01-2016#87152a4a641a48559d4620165e829f8d">
+			Past
+			<span class="visually-hidden">
+				version of 8.4 before 07/03/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=87152a4a641a48559d4620165e829f8d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="623a9f70fc5c4655946e6607d74da73a"
+	 data-version="4b13e8df78fe411db552b3746446eb0e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An auditor must consult with the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> in advance of preparing the report.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=623a9f70fc5c4655946e6607d74da73a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5c05839ea4cb4ccf81c1566081a5c450"
+	 data-version="2f54fe2afe524b27bbd141dd2c704aa9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must cooperate with its auditors in preparing the report.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					25/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5c05839ea4cb4ccf81c1566081a5c450">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="22-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/auditors/8-written-reports-by-auditors-to-the-pra/22-12-2023?p=1" data-id="f74a711047e441d5a2f05ce9f7931935" data-effective-date="22-12-2023" data-download-title="Written Reports by Auditors to the PRA_22-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/auditors/8-written-reports-by-auditors-to-the-pra/22-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/auditors#f74a711047e441d5a2f05ce9f7931935&amp;subject=PRA Rulebook - Auditors – Written Reports by Auditors to the PRA">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=f74a711047e441d5a2f05ce9f7931935">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Written Reports by Auditors to the PRA
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,5352 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/definition-of-capital" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/definition-of-capital" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{26F796C9-C5D1-4482-9FE5-FC2A2C36B88D} -->
+<title>Definition of Capital | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Definition of Capital">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Definition of Capital">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrf77q-f-257786684-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":31,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"714b098","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":15369,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025535","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==gnJxhmvUIF1+yE+YTM/lhzCMbhFTKpBDM89wtyclUihGkqLlQosBdDJXgEh5kd7SYO6mM6MPhxoKxRg5Lcx4AE+2OwZycNlMcl/xAIgoRlSCYvQg2DmXCWM7441xY0OuLUrgt7HTZeOxbJwYnKDXLkHDq3le0DaI9BRIpYkbSh4mlg13BVxhqKONDrrA9V9it/KIHJHXHPEg+JEH8msvvkUmfYJSBcD6IZ6vjbAWathphp/gjP4RLaY+Ma1kuWlODyzdUm3ubIj7ij/ZLwMLcsU5yE5FBjUvpPUeH5HEa8GdW2IlUWAyjnE8um00z4BBUSzCtIAqUyRffikd0y/FB9+yihklSVcjFtaEyLACHfXNpJ/5KGtIogGHBMAkcbApQ5wiuHqUKUhZJLrG/wqu2q1bAtlc59tcJQSpsgaRYG0=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Definition of Capital				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Definition of Capital
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/definition-of-capital/01-01-2014">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2014
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/definition-of-capital/19-02-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						19/02/2015
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/definition-of-capital/31-03-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/03/2015
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/definition-of-capital/01-03-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/03/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/definition-of-capital/01-04-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/04/2020
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/definition-of-capital/17-09-2021">
+						<span class="visually-hidden">View Rulebook as at</span>
+						17/09/2021
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/definition-of-capital/01-01-2022">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2022
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/definition-of-capital/01-01-2026">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2026
+					</a>
+				</div>
+				<div class="listing__item is-future ">
+					<a href="/pra-rules/definition-of-capital/01-01-2027">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2027
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-4e84b8c3-f30a-440d-b66c-a85a059ffd03">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-4e84b8c3-f30a-440d-b66c-a85a059ffd03"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Definition of Capital
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Definition of Capital)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=0bb2f289da884905b1a571fbf5ed71f4">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Definition of Capital
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS7/13 – Definition of Capital (CRR Firms)
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2013/strengthening-capital-standards-implementing-crd-4" class="list-links__link" target="_blank">
+										PS7/13 - Strengthening capital standards: implementing CRD IV, feedback and final rules
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/implementing-the-bank-recovery-and-resolution-directive" class="list-links__link" target="_blank">
+										PS1/15 - Implementing the Bank Recovery and Resolution Directive
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/pra-administration-instruments" class="list-links__link" target="_blank">
+										 - PRA Rulebook: Administration Instrument (No 1) 2015
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/amendments-to-the-pre-issuance-notification-regime" class="list-links__link" target="_blank">
+										PS2/16 - Amendments to the Pre-Issuance Notification regime
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2019/regulatory-capital-instruments-update-to-pin-requirements" class="list-links__link" target="_blank">
+										PS5/20 - Regulatory capital instruments: update to Pre-Issuance Notification (PIN) requirements
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2021/june/financial-holding-companies-further-implementation" class="list-links__link" target="_blank">
+										PS20/21 - Financial holding companies: Further implementation
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2021/june/occasional-consultation-paper-june-2021" class="list-links__link" target="_blank">
+										PS25/21 - Responses to CP13/21 ‘Occasional Consultation Paper’
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2021/july/designating-investment-firms" class="list-links__link" target="_blank">
+										PS27/21 - Designating investment firms
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/restatement-of-crr-and-sii-requirements-in-pra-rulebook-policy-statement" class="list-links__link" target="_blank">
+										PS12/25 - Restatement of CRR and Solvency II requirements in PRA Rulebook – 2026 implementation
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="http://www.bankofengland.co.uk/pra/Pages/regulatorydata/crdfirms.aspx" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										CRD firms – reporting forms and guidance
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="http://www.bankofengland.co.uk/prudential-regulation/supervision/capital-instruments-pre-issuance-notification" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Capital instruments - pre/post-issuance notification (PIN) Information
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/eur/2014/523/introduction" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Commission Delegated Regulation (EU) No 523/2014
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/eur/2013/575/part/TWO" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Own Funds and Eligible Liabilities Capital - Capital Requirements Regulation (EU) No 575/2013 (Part Two)
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/eur/2013/575/part/TEN/title/I/chapter/1" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Transitional provisions - Capital Requirements Regulation (EU) No 575/2013 (Part Ten, Title One, Chapter One)
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/eur/2013/575/part/TEN/title/I/chapter/2" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Transitional provisions - Capital Requirements Regulation (EU) No 575/2013 (Part Ten, Title One, Chapter Two)
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/-/media/boe/files/paper/2019/ps519-section-b-app3-crr3-april-2019.pdf" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										EU EXIT INSTRUMENT: THE TECHNICAL STANDARDS (CAPITAL REQUIREMENTS) (EU EXIT)  (No. 3) INSTRUMENT 2019
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/definition-of-capital/01-01-2026_31-12-2026.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/01-01-2026?p=1" data-id="0bb2f289da884905b1a571fbf5ed71f4" data-effective-date="01-01-2026" data-download-title="Definition of Capital_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital&amp;subject=PRA Rulebook - Definition of Capital">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="748c4d5996ef4074bd8df703970be5d6"
+	 data-version="ade1dff484a6478faf263b7aebef3d9b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b0ec2ec4878d4fe8ba298be287a1d985"
+	 data-version="da17b65550924874ac962772de4e9621"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to:</p>
+<ol class="new-bullet">
+<li>(1) every <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-glossary-id="52114" data-mce-linktype="2">firm</a></em> that is a <em><a class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-glossary-id="52112" data-mce-linktype="2">CRR firm</a></em>; and</li>
+<li>(2) a <em><a  class="glossary-link" title="CRR consolidation entity" href="#glossary-term-9abc7072e33941cca650790aec3d4ad6" data-mce-linktype="2" data-glossary-id="128409">CRR consolidation entity</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/09/2021
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#b0ec2ec4878d4fe8ba298be287a1d985">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 17/09/2021
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b0ec2ec4878d4fe8ba298be287a1d985">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e0e6717a7a33407b97448eeacccb851e"
+	 data-version="0c86bcf316a040e8a276926703edb94b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em> must comply with this Part on an individual basis and as applicable on a <em><a  class="glossary-link" title="sub-consolidated basis" href="#glossary-term-22a25bc3031a42198bc27040895b1096" data-mce-linktype="2" data-glossary-id="52355">sub-consolidated basis</a></em>.</li>
+<li>(2) A <em><a  class="glossary-link" title="CRR consolidation entity" href="#glossary-term-9abc7072e33941cca650790aec3d4ad6" data-mce-linktype="2" data-glossary-id="128409">CRR consolidation entity</a></em> must comply with this Part (other than <a  title="Chapter 2" href="/pra-rules/definition-of-capital#743abdd3b4c44817883c8fb29cee3c74" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Chapter 2</a>) on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-c46b10dde1524940802d4d8ee86ca541" data-mce-linktype="2" data-glossary-id="52345">consolidated basis</a></em> and for this purpose, references to a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in this Part (other than in <a  title="1.1" href="/pra-rules/definition-of-capital#b0ec2ec4878d4fe8ba298be287a1d985" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">1.1</a> and 1.1A) mean a <em><a  class="glossary-link" title="CRR consolidation entity" href="#glossary-term-9abc7072e33941cca650790aec3d4ad6" data-mce-linktype="2" data-glossary-id="128409">CRR consolidation entity</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/09/2021
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/definition-of-capital/01-01-2027#e0e6717a7a33407b97448eeacccb851e">
+			Future
+			<span class="visually-hidden">
+				version of 1.1A after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e0e6717a7a33407b97448eeacccb851e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="28d394db07eb491694849e5b55d2b6a2"
+	 data-version="3cb97b5d2f274bc3aa418402d40fc437"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part the following definitions shall apply:</p>
+<p><em><a  class="glossary-link" title="Side agreement" href="#glossary-term-3d20899924fc43518d222e04d89af7a8" data-mce-linktype="2" data-glossary-id="108318">Side agreement</a></em></p>
+<p style="padding-left: 30px;">means any document containing an agreement or other arrangement, including a proposed agreement or other arrangement, related to the capital instrument (whether or not explicitly referred to in the instrument) which could affect the assessment of compliance of the instrument with Part Two of <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>.</p>
+<p><em><a class="glossary-link" title="Small specialist bank" href="#glossary-term-22740531b5324a4a81312d54ddb289d4" data-mce-linktype="2" data-glossary-id="52166">Small specialist bank</a></em></p>
+<p style="padding-left: 30px;">a <em class="rule-style-2">bank</em> that has capital resources equal to or in excess of the base capital resources requirement for a <em><a class="glossary-link" title="small specialist bank" href="#glossary-term-22740531b5324a4a81312d54ddb289d4" data-mce-linktype="2" data-glossary-id="52166">small specialist bank</a></em> in <a  title="12.1" href="/pra-rules/definition-of-capital#14387c84bb1f478ab5d8e896e0d0a003" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">12.1</a> but less than the base capital resources requirement of a <em class="rule-style-2">bank</em> and that carries out one or more of the following activities:</p>
+<ol class="new-bullet" style="padding-left: 30px;"><ol>
+<li>(1) provides current and savings accounts;</li>
+<li>(2) lending to <em class="rule-style-2">small and medium-sized enterprises</em>;</li>
+<li>(3) lending secured by mortgages on residential property.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#28d394db07eb491694849e5b55d2b6a2">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 01/04/2020
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/definition-of-capital/01-01-2027#28d394db07eb491694849e5b55d2b6a2">
+			Future
+			<span class="visually-hidden">
+				version of 1.2 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=28d394db07eb491694849e5b55d2b6a2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="173687cd5f4e46bb8e0903f59f193a18"
+	 data-version="bdfe3397482c473c841ad872ecff49ca"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise defined, any italicised expression used in this Part and in the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> has the same meaning as in the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=173687cd5f4e46bb8e0903f59f193a18">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/1-application-and-definitions/01-01-2026?p=1" data-id="748c4d5996ef4074bd8df703970be5d6" data-effective-date="01-01-2026" data-download-title="Application and Definitions_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/1-application-and-definitions/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#748c4d5996ef4074bd8df703970be5d6&amp;subject=PRA Rulebook - Definition of Capital – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=748c4d5996ef4074bd8df703970be5d6">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="743abdd3b4c44817883c8fb29cee3c74"
+	 data-version="4e42ed3c28da4a94b066c08816033a5f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Holdings of Own Funds Instruments Issued by Financial Sector Entities Included in the Scope of Consolidated Supervision
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="63da81b30a81496bbb3dcf827dfad5c2"
+	 data-version="6a83c4a09e6d4540b491f08b3a5b67ea"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of calculating <em><a class="glossary-link" title="own funds" href="#glossary-term-d6bd222b279444a092a58449eef8bb77" data-mce-linktype="2" data-glossary-id="52352">own funds</a></em> on an individual basis and a <em><a class="glossary-link" title="sub-consolidated basis" href="#glossary-term-22a25bc3031a42198bc27040895b1096" data-mce-linktype="2" data-glossary-id="52355">sub-consolidated basis</a></em>, <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> subject to supervision on a <em><a class="glossary-link" title="consolidated basis" href="#glossary-term-c46b10dde1524940802d4d8ee86ca541" data-mce-linktype="2" data-glossary-id="52345">consolidated basis</a></em> must deduct holdings of <em><a class="glossary-link" title="own funds instruments" href="#glossary-term-a72997bd7b0b41fc8b4384bc4dd89ffe" data-mce-linktype="2" data-glossary-id="52353">own funds instruments</a></em> issued by <em><a class="glossary-link" title="financial sector entities" href="#glossary-term-1106693bf0c24652a4aba3adb98d1fc6" data-mce-linktype="2" data-glossary-id="52349">financial sector entities</a></em> included in the scope of consolidated supervision in accordance with Part Two of the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>, except where the exception in <a  title="2.3" href="/pra-rules/definition-of-capital#81b981a7e4bf46c28da1c5baafb90930" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.3</a> or <a  title="2.7" href="/pra-rules/definition-of-capital#11f569b679894e5ba09de0ddad80b026" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.7</a> applies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/31-03-2015#63da81b30a81496bbb3dcf827dfad5c2">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 01/04/2020
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/definition-of-capital/01-01-2027#63da81b30a81496bbb3dcf827dfad5c2">
+			Future
+			<span class="visually-hidden">
+				version of 2.1 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=63da81b30a81496bbb3dcf827dfad5c2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="240394b73f1b42bf81d7aceabb8b3d7a"
+	 data-version="84956d904b9b48748cdfe94aeb939a71"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#240394b73f1b42bf81d7aceabb8b3d7a">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=240394b73f1b42bf81d7aceabb8b3d7a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="81b981a7e4bf46c28da1c5baafb90930"
+	 data-version="d21868a0b12c43418a0baebe49858393"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not apply the deduction in <a  title="2.1" href="/pra-rules/definition-of-capital#63da81b30a81496bbb3dcf827dfad5c2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> to its holdings of <em><a class="glossary-link" title="own funds instruments" href="#glossary-term-a72997bd7b0b41fc8b4384bc4dd89ffe" data-mce-linktype="2" data-glossary-id="52353">own funds instruments</a></em> issued by a venture capital investor that is included in the scope of consolidated supervision of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=81b981a7e4bf46c28da1c5baafb90930">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="dcd832ae8c604e829db21fc8df457adc"
+	 data-version="393bf28079994134b8fdacf6daae4b89"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of this Chapter, a venture capital investor is a <em><a class="glossary-link" title="financial institution" href="#glossary-term-559a13d4e1c94436bd71bf33fdf177dc" data-mce-linktype="2" data-glossary-id="52348">financial institution</a></em>, in relation to which:</p>
+<ol class="new-bullet">
+<li>(1) the sole purpose is to make venture capital investments and carry out unregulated activities in relation to the administration of venture capital investments; and</li>
+<li>(2) none of its venture capital investments is in a <em><a class="glossary-link" title="credit institution" href="#glossary-term-e2b606bf33474ecc99511b2096a6c145" data-mce-linktype="2" data-glossary-id="52156">credit institution</a></em> or a <em><a class="glossary-link" title="financial institution" href="#glossary-term-559a13d4e1c94436bd71bf33fdf177dc" data-mce-linktype="2" data-glossary-id="52348">financial institution</a></em>, the principal activity of which is to perform any activity other than the acquisition of holdings in other undertakings (within the meaning of section 1161(1) of the Companies Act 2006).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=dcd832ae8c604e829db21fc8df457adc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8381d00b8cf74770beb5ff3eec67ee34"
+	 data-version="33f424c1e22d44b2bb81734d43526c72"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of this Chapter, a venture capital investment is a designated investment which, at the time the investment is made, is:</p>
+<ol class="new-bullet">
+<li>(1) in a new or developing company or venture; or</li>
+<li>(2) in a management buy-out or buy-in; or</li>
+<li>(3) made as a means of financing the investee company or venture and accompanied by a right of consultation, or rights to information, or board representation, or management rights; or</li>
+<li>(4) acquired with a view to, or in order to, facilitate a transaction falling within (1) to (3).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8381d00b8cf74770beb5ff3eec67ee34">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f39c9d940c994e1cb8f851e4f7087edd"
+	 data-version="ade7fe1fd1f14b53add2ae2ec6e82539"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of this Chapter, a designated investment is a security or contractually-based investment specified in Articles 76 to 85 and 89 of the Financial Services and Markets Act 2000 (Regulated Activities) Order 2001.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f39c9d940c994e1cb8f851e4f7087edd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="11f569b679894e5ba09de0ddad80b026"
+	 data-version="19e0b9de454f435eab70a0fdbf5627b2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not apply the deduction in <a  title="2.1" href="/pra-rules/definition-of-capital#63da81b30a81496bbb3dcf827dfad5c2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> to that percentage of its holdings of <em><a class="glossary-link" title="own funds instruments" href="#glossary-term-a72997bd7b0b41fc8b4384bc4dd89ffe" data-mce-linktype="2" data-glossary-id="52353">own funds instruments</a></em> issued by a venture capital holding company included in the scope of consolidated supervision of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that represents the value of the venture capital holding company&rsquo;s investment in venture capital investors.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=11f569b679894e5ba09de0ddad80b026">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e8a2c61ddf5a49df9bcdd36e1e55e7cb"
+	 data-version="0d345384377742ae99b2403b65d1a2be"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of this Chapter, a venture capital holding company is a <em><a class="glossary-link" title="financial institution" href="#glossary-term-559a13d4e1c94436bd71bf33fdf177dc" data-mce-linktype="2" data-glossary-id="52348">financial institution</a></em>, in respect of which:</p>
+<ol class="new-bullet">
+<li>(1) it is a <em><a class="glossary-link" title="financial institution" href="#glossary-term-559a13d4e1c94436bd71bf33fdf177dc" data-mce-linktype="2" data-glossary-id="52348">financial institution</a></em> solely by reason of its principal activity being the acquiring of holdings;</li>
+<li>(2) it holds shares (in the meaning of section 76 of the Financial Services and Markets Act 2000 (Regulated Activities) Order 2001) in a venture capital investor; and</li>
+<li>(3) the proportion of the value of the venture capital holding company attributable to investment in Venture Capital Investors and the proportion of the value of the venture capital holding company attributable to other investments can be identified and valued on a regular basis.</li>
+</ol>
+			<div><strong> [Note: Art 49(2) of the <em><a title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>]</strong></div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e8a2c61ddf5a49df9bcdd36e1e55e7cb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/2-holdings-of-own-funds-instruments-issued-by-financial-sector-entities-included-in-the-scope-of-con/01-01-2026?p=1" data-id="743abdd3b4c44817883c8fb29cee3c74" data-effective-date="01-01-2026" data-download-title="Holdings of Own Funds Instruments Issued by Financial Sector Entities Included in the Scope of Consolidated Supervision_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/2-holdings-of-own-funds-instruments-issued-by-financial-sector-entities-included-in-the-scope-of-con/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#743abdd3b4c44817883c8fb29cee3c74&amp;subject=PRA Rulebook - Definition of Capital – Holdings of Own Funds Instruments Issued by Financial Sector Entities Included in the Scope of Consolidated Supervision">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=743abdd3b4c44817883c8fb29cee3c74">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Holdings of Own Funds Instruments Issued by Financial Sector Entities Included in the Scope of Consolidated Supervision
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="a395f43b59f74017a4fc042a3b4cecd7"
+	 data-version="4fff9df3ec354580950f2b872a1edf11"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Qualifying Holdings Outside the Financial Sector [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5919e7a9fc5d4c6dbe03b0c883e03351"
+	 data-version="d695f258709d45be9a5f4933cebc544f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#5919e7a9fc5d4c6dbe03b0c883e03351">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 01/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5919e7a9fc5d4c6dbe03b0c883e03351">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/3-qualifying-holdings-outside-the-financial-sector/01-01-2026?p=1" data-id="a395f43b59f74017a4fc042a3b4cecd7" data-effective-date="01-01-2026" data-download-title="Qualifying Holdings Outside the Financial Sector [Deleted]_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/3-qualifying-holdings-outside-the-financial-sector/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#a395f43b59f74017a4fc042a3b4cecd7&amp;subject=PRA Rulebook - Definition of Capital – Qualifying Holdings Outside the Financial Sector [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=a395f43b59f74017a4fc042a3b4cecd7">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Qualifying Holdings Outside the Financial Sector [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="ab8455427d2a4a309ea66994efef51a1"
+	 data-version="1d0bb4d1cc3344c7980ce8dde50a134b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Connected Funding of a Capital Nature
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="876584475b68444a8900eba993136c74"
+	 data-version="6377895b1f854342a1c266b3b4ddd0da"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#876584475b68444a8900eba993136c74">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 01/01/2022
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=876584475b68444a8900eba993136c74">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a3784299062e4f34925cbb3fa1a75846"
+	 data-version="6cc3b06bd4e74a53bb3a230b5b0b290d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-glossary-id="52114" data-mce-linktype="2">firm</a></em> must not avoid the requirements of the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-glossary-id="52111" data-mce-linktype="2">CRR</a></em> by structuring its investments as connected funding of a capital nature.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a3784299062e4f34925cbb3fa1a75846">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="02160fcc6aea4914ad259430d8507a73"
+	 data-version="a1d2684833ae46f990ab4526f9384fd4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must treat all connected funding of a capital nature as a holding of capital of the connected party and apply to it the treatment under the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> and the PRA Rulebook applicable to such a holding, including any reporting or disclosure requirements in respect of such holding.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=02160fcc6aea4914ad259430d8507a73">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="99dade7a9a34490f9316e3409dc593c6"
+	 data-version="689998bb9cc64fa8b69d2e484aea5ff4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the connected party is a <em><a class="glossary-link" title="financial sector entity" href="#glossary-term-1106693bf0c24652a4aba3adb98d1fc6" data-mce-linktype="2" data-glossary-id="52349">financial sector entity</a></em>, the <em><a class="glossary-link" title="firm " href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must treat the connected funding of a capital nature as a holding of <em><a class="glossary-link" title="Common Equity Tier 1 instruments" href="#glossary-term-0533595ba1614b13903c11f7f711f649" data-mce-linktype="2" data-glossary-id="52343">Common Equity Tier 1 instruments</a></em>,<em> <a class="glossary-link" title="Additional Tier 1 instruments" href="#glossary-term-a71d552ac0764e818b449ef63af21bf7" data-mce-linktype="2" data-glossary-id="52340">Additional Tier 1 instruments</a></em> or <em><a class="glossary-link" title="Tier 2 instruments" href="#glossary-term-08963bf27e4d48b68113b3def6d7c0ee" data-mce-linktype="2" data-glossary-id="52357">Tier 2 instruments</a></em> of the connected party, as appropriate in light of the funding&rsquo;s characteristics when compared to the characteristics of each type of <em><a class="glossary-link" title="own funds instruments" href="#glossary-term-a72997bd7b0b41fc8b4384bc4dd89ffe" data-mce-linktype="2" data-glossary-id="52353">own funds instruments</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=99dade7a9a34490f9316e3409dc593c6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f6b0737fd1884176b849f868843b4d36"
+	 data-version="55f5d0f71bfe47009ff20dadf6ca0438"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must report to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> all connected funding of a capital nature at least one <em><a  class="glossary-link" title="month" href="#glossary-term-662f153264be46f89f47dbb1b8b7911f" data-mce-linktype="2" data-glossary-id="77446">month</a></em> in advance of entry into the relevant funding transaction and identify each relevant transaction with sufficient detail to allow the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> to evaluate it.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#f6b0737fd1884176b849f868843b4d36">
+			Past
+			<span class="visually-hidden">
+				version of 4.5 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f6b0737fd1884176b849f868843b4d36">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="744011a99d904800a332e55791a0207c"
+	 data-version="69ea988ed2a24b7ebdfea787cf867ba4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A loan or other funding transaction is connected funding of a capital nature if it is made by the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to a connected party and:</p>
+<ol class="new-bullet">
+<li>(1) based on its terms and other factors of which the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> is aware, the connected party would be able to consider it from the point of view of its characteristics as capital as being similar to an <em><a class="glossary-link" title="own funds instrument" href="#glossary-term-a72997bd7b0b41fc8b4384bc4dd89ffe" data-mce-linktype="2" data-glossary-id="52353">own funds instrument</a></em>; or</li>
+<li>(2) the position of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> from the point of view of maturity and repayment is inferior to that of the senior unsecured and unsubordinated creditors of the connected party.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=744011a99d904800a332e55791a0207c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="94a97bc6a3714ab78df05b36a02b9d16"
+	 data-version="b1a8db8eb7e449a39683c6800f5f2688"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A loan or other funding transaction is connected funding of a capital nature if it:</p>
+<ol class="new-bullet">
+<li>(1) funds directly or indirectly a loan to a connected party that has the characteristics described in <a  title="4.6" href="/pra-rules/definition-of-capital#744011a99d904800a332e55791a0207c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.6</a> or of a capital investment in a connected party; or</li>
+<li>(2) has itself the characteristics described in <a  style="line-height: 17.6000003814697px; text-indent: -14.3000001907349px;" title="4.6" href="/pra-rules/definition-of-capital#744011a99d904800a332e55791a0207c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.6</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=94a97bc6a3714ab78df05b36a02b9d16">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="256004a6338f4caf994e0cd0cd44756c"
+	 data-version="1b7bc65e92064cf5a02627537059657d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A guarantee is connected funding of a capital nature if it is a guarantee by the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-glossary-id="52114" data-mce-linktype="2">firm</a></em> of a loan or other funding transaction from a third party to a connected party of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-glossary-id="52114" data-mce-linktype="2">firm</a></em> and:</p>
+<ol class="new-bullet">
+<li>(1) the loan or other funding transaction has the characteristics described in <a  style="line-height: 17.6000003814697px; text-indent: -14.3000001907349px;" title="4.6" href="/pra-rules/definition-of-capital#744011a99d904800a332e55791a0207c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.6</a> or the characteristics described in <a  title="4.7" href="/pra-rules/definition-of-capital#94a97bc6a3714ab78df05b36a02b9d16" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.7</a>; or</li>
+<li>(2) the rights that the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-glossary-id="52114" data-mce-linktype="2">firm</a></em> would have against the connected party have the characteristics described in <a  style="line-height: 17.6000003814697px; text-indent: -14.3000001907349px;" title="4.6" href="/pra-rules/definition-of-capital#744011a99d904800a332e55791a0207c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.6</a>(2).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=256004a6338f4caf994e0cd0cd44756c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0bee8081b04b47ff9766932305b72189"
+	 data-version="344508544b884a0f93f927b50219991b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of this Chapter and in relation to a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, a connected party means another person (&ldquo;P&rdquo;) in respect of whom the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has not been permitted to apply the individual consolidation method under Article 9 of the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> and one of the following applies:</p>
+<ol class="new-bullet">
+<li>(1) P is closely related to the<em> <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>;</li>
+<li>(2) P is an associate of the<em> <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>; or</li>
+<li>(3) the same persons significantly influence the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> of P and the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/03/2015
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#0bee8081b04b47ff9766932305b72189">
+			Past
+			<span class="visually-hidden">
+				version of 4.9 before 31/03/2015
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0bee8081b04b47ff9766932305b72189">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="da480c8b357e45b7a30476cf2af70657"
+	 data-version="5dd10a44843c40398c20855627c4c4a6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="4.9" href="/pra-rules/definition-of-capital#0bee8081b04b47ff9766932305b72189" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.9</a>(1), a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and another person are closely related when:</p>
+<div data-canvas-width="20.36732"><ol class="new-bullet">
+<li>(1) the insolvency of one of them is likely to be associated with the insolvency or default of the others;</li>
+<li>(2) it would be prudent when assessing the financial condition or creditworthiness of one to consider that of the other; or</li>
+<li>(3) there is, or there is likely to be, a close relationship between the financial performance of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and that person.</li>
+</ol></div>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=da480c8b357e45b7a30476cf2af70657">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.10
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="027f6dcd46a74f94aef0e5d7d9d3437b"
+	 data-version="ed4291b45bd048368740293bfeb0423d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="4.9" href="/pra-rules/definition-of-capital#0bee8081b04b47ff9766932305b72189" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.9</a>(2), a person is an associate of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> if it is:</p>
+<ol class="new-bullet">
+<li>(1) in the same group as the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>;</li>
+<li>(2) an appointed representative (in the sense of section 39 of <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em>) or tied agent (as described in Article 4(1)(29) of <em class="rule-style-2">MiFID</em>) of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or a member of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> group; or</li>
+<li>(3) any other person whose relationship with the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or a member of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> group might reasonably be expected to give rise to a community of interest between them which may involve a conflict of interest in dealings with third parties.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#027f6dcd46a74f94aef0e5d7d9d3437b">
+			Past
+			<span class="visually-hidden">
+				version of 4.11 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=027f6dcd46a74f94aef0e5d7d9d3437b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.11
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/4-connected-funding-of-a-capital-nature/01-01-2026?p=1" data-id="ab8455427d2a4a309ea66994efef51a1" data-effective-date="01-01-2026" data-download-title="Connected Funding of a Capital Nature_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/4-connected-funding-of-a-capital-nature/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#ab8455427d2a4a309ea66994efef51a1&amp;subject=PRA Rulebook - Definition of Capital – Connected Funding of a Capital Nature">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=ab8455427d2a4a309ea66994efef51a1">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Connected Funding of a Capital Nature
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="1a6ff641a6924a64a8286c60ff3d4106"
+	 data-version="983fd8b8a6844055a594c0d46f257415"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Connected Transactions [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="9f406c0ccf044ae7bae2a20b982e15b1"
+	 data-version="24960de127a34a89a34010664ad41a1a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#9f406c0ccf044ae7bae2a20b982e15b1">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9f406c0ccf044ae7bae2a20b982e15b1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="92efb54fb2014a1c9372a71101b39b38"
+	 data-version="e314a6d0ecf841c3924a5f2bfe0217a2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#92efb54fb2014a1c9372a71101b39b38">
+			Past
+			<span class="visually-hidden">
+				version of 5.2 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=92efb54fb2014a1c9372a71101b39b38">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/5-connected-transactions/01-01-2026?p=1" data-id="1a6ff641a6924a64a8286c60ff3d4106" data-effective-date="01-01-2026" data-download-title="Connected Transactions [Deleted]_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/5-connected-transactions/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#1a6ff641a6924a64a8286c60ff3d4106&amp;subject=PRA Rulebook - Definition of Capital – Connected Transactions [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1a6ff641a6924a64a8286c60ff3d4106">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Connected Transactions [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="9f085cb768074d78a1f51baea3bec884"
+	 data-version="402514cfba5b4b6aa78ea19d4cf18bfd"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5A
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Side Agreements
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8af037570e82470185746bb29032801c"
+	 data-version="29fc5b331ba94d24934675ae35f99935"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5A.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a> </em>must send to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> any <em><a  class="glossary-link" title="side agreement" href="#glossary-term-3d20899924fc43518d222e04d89af7a8" data-mce-linktype="2" data-glossary-id="108318">side agreement</a></em> not previously sent to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> and must do so at least one <em><a  class="glossary-link" title="month" href="#glossary-term-662f153264be46f89f47dbb1b8b7911f" data-mce-linktype="2" data-glossary-id="77446">month</a></em> in advance of entry into the <em><a  class="glossary-link" title="side agreement" href="#glossary-term-3d20899924fc43518d222e04d89af7a8" data-mce-linktype="2" data-glossary-id="108318">side agreement</a></em> together with sufficiently detailed information to allow the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> to evaluate it.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8af037570e82470185746bb29032801c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5A.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/5a-side-agreements/01-01-2026?p=1" data-id="9f085cb768074d78a1f51baea3bec884" data-effective-date="01-01-2026" data-download-title="Side Agreements_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/5a-side-agreements/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#9f085cb768074d78a1f51baea3bec884&amp;subject=PRA Rulebook - Definition of Capital – Side Agreements">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=9f085cb768074d78a1f51baea3bec884">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Side Agreements
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="decbdcfea2064b118678eaef147f7423"
+	 data-version="6d428df19f104755ba2267c17bae2d0d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Own Funds Instruments Issued Under Non-EEA Law (deleted)
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="faa6c23316424925ae5eec9621037c15"
+	 data-version="32b438964dc84180b78837941339dafd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted.]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/02/2015
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#faa6c23316424925ae5eec9621037c15">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 19/02/2015
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=faa6c23316424925ae5eec9621037c15">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="56d1446aa8b04435b6cddec2c904882e"
+	 data-version="56fbc88567214324aba9832a8b006d29"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted.]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/02/2015
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#56d1446aa8b04435b6cddec2c904882e">
+			Past
+			<span class="visually-hidden">
+				version of 6.2 before 19/02/2015
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=56d1446aa8b04435b6cddec2c904882e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/6-own-funds-instruments-issued-under-non-eea-law/01-01-2026?p=1" data-id="decbdcfea2064b118678eaef147f7423" data-effective-date="01-01-2026" data-download-title="Own Funds Instruments Issued Under Non-EEA Law (deleted)_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/6-own-funds-instruments-issued-under-non-eea-law/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#decbdcfea2064b118678eaef147f7423&amp;subject=PRA Rulebook - Definition of Capital – Own Funds Instruments Issued Under Non-EEA Law (deleted)">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=decbdcfea2064b118678eaef147f7423">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Own Funds Instruments Issued Under Non-EEA Law (deleted)
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="9aa39ffdf44b417fb3a436fe93079e54"
+	 data-version="4dd77f6e7a85477c9605774df91061b6"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Notification Regime – Issuance [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/7-notification-regime-issuance/01-01-2026?p=1" data-id="9aa39ffdf44b417fb3a436fe93079e54" data-effective-date="01-01-2026" data-download-title="Notification Regime – Issuance [Deleted]_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/7-notification-regime-issuance/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#9aa39ffdf44b417fb3a436fe93079e54&amp;subject=PRA Rulebook - Definition of Capital – Notification Regime – Issuance [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=9aa39ffdf44b417fb3a436fe93079e54">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Notification Regime – Issuance [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="13e2da203bc44c73bdaf37c3df4cf7d5"
+	 data-version="98a173e530ba42158c5635d5d1ee1a29"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7A
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Pre-Issuance Notification (PIN) Regime for Common Equity Tier 1 Instrument
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="7bebeeca0a51497bae8746c5387559f6"
+	 data-version="6c3da7b1b62b412391f54cab7a0038a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7A.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>, or another member of its <em class="rule-style-2">group</em> that is not a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> but is included in the supervision on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-c46b10dde1524940802d4d8ee86ca541" data-mce-linktype="2" data-glossary-id="52345">consolidated basis</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>, intends to:</p>
+<ol class="new-bullet">
+<li>(1) issue a capital instrument that it considers will qualify under Part Two of <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> as a <em><a  class="glossary-link" title="Common Equity Tier 1 instrument" href="#glossary-term-0533595ba1614b13903c11f7f711f649" data-mce-linktype="2" data-glossary-id="52343">Common Equity Tier 1 instrument</a></em>; or</li>
+<li>(2) amend or otherwise vary the terms of such an instrument included in its <em><a  class="glossary-link" title="own funds" href="#glossary-term-d6bd222b279444a092a58449eef8bb77" data-mce-linktype="2" data-glossary-id="52352">own funds</a></em> or the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="own funds" href="#glossary-term-d6bd222b279444a092a58449eef8bb77" data-mce-linktype="2" data-glossary-id="52352">own funds</a></em> of its <em><a  class="glossary-link" title="consolidation group" href="#glossary-term-3ab198df3a9a4fecbf13392b34234609" data-mce-linktype="2" data-glossary-id="66961">consolidation group</a></em>;</li>
+</ol>
+<p>the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> shall, at least one <em><a  class="glossary-link" title="month" href="#glossary-term-662f153264be46f89f47dbb1b8b7911f" data-mce-linktype="2" data-glossary-id="77446">month</a></em> before the intended date of issuance or intended date of amendment or variation, as applicable, notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of that intention, except that where there are exceptional circumstances which make it impracticable to give such a period of notice, the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> must give as much notice as is reasonably practicable in those circumstances.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/definition-of-capital/01-01-2027#7bebeeca0a51497bae8746c5387559f6">
+			Future
+			<span class="visually-hidden">
+				version of 7A.1 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7bebeeca0a51497bae8746c5387559f6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7A.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ddb044bf9985425d8e8713d880790134"
+	 data-version="ab5cd6d6b6a240f0816c748b890c0db8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7A.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When notifying <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> under <a  title="7A.1" href="/pra-rules/definition-of-capital#7bebeeca0a51497bae8746c5387559f6" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7A.1</a> the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> must:</p>
+<ol class="new-bullet">
+<li>(1) complete and submit the form referred to in <a  title="7D.3" href="/pra-rules/definition-of-capital#c67ec5dc3a0545f9bc1c6b5b821a2eb9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7D.3</a>(1) (Pre/Post-Issuance Notification (PIN) Form);</li>
+<li>(2) provide a copy of the draft terms and conditions of the capital instrument together with any <em><a  class="glossary-link" title="side agreement" href="#glossary-term-3d20899924fc43518d222e04d89af7a8" data-mce-linktype="2" data-glossary-id="108318">side agreement</a></em>;</li>
+<li>(3) provide a properly reasoned draft independent legal opinion from an appropriately qualified individual confirming that the capital instrument qualifies as a <em><a  class="glossary-link" title="Common Equity Tier 1 instrument" href="#glossary-term-0533595ba1614b13903c11f7f711f649" data-mce-linktype="2" data-glossary-id="52343">Common Equity Tier 1 instrument</a></em> under Part Two of <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>; and</li>
+<li>(4) complete and submit the form referred to in <a  style="text-indent: -14.3px;" title="7D.3" href="/pra-rules/definition-of-capital#c67ec5dc3a0545f9bc1c6b5b821a2eb9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7D.3</a>(2) (CET1 Compliance Template).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/definition-of-capital/01-01-2027#ddb044bf9985425d8e8713d880790134">
+			Future
+			<span class="visually-hidden">
+				version of 7A.2 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ddb044bf9985425d8e8713d880790134">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7A.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9afcad15877f4089916b62a0172dcc10"
+	 data-version="4f050cadf5744899b6b30b0e4d8d6e29"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7A.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/definition-of-capital#7bebeeca0a51497bae8746c5387559f6" data-rb-content-link="Rule">7A.1</a> and <a href="/pra-rules/definition-of-capital#ddb044bf9985425d8e8713d880790134" data-rb-content-link="Rule">7A.2</a>&nbsp;shall not apply to subsequent issuances of a form of <a href="#glossary-term-0533595ba1614b13903c11f7f711f649">Common Equity Tier 1 instruments</a>&nbsp;for which the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;has already received a <a href="#glossary-term-d7fdd387f5864ee48113661dab8ecad5">138BA permission</a>&nbsp;from the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;and that the provisions governing those subsequent issuances are substantially the same as the provisions governing those issuances for which the institutions have already received a <a href="#glossary-term-d7fdd387f5864ee48113661dab8ecad5">138BA permission</a>. Instead the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must:</p>
+<ol class="new-bullet">
+    <li>(1) notify the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;as soon as is reasonably practicable after the capital instrument&rsquo;s classification as a <a href="#glossary-term-0533595ba1614b13903c11f7f711f649">Common Equity Tier 1 instrument</a>, or in the case of an amendment or variation, as soon as is reasonably practicable after that amendment or variation has taken effect, such notice confirming that the instrument:
+    <ol>
+        <li>(a) has been issued on substantially the same terms as the previously notified issuance, or in the case of an amendment or variation, the instrument as so amended or varied takes effect on substantially the same terms as the previously notified issuance; and</li>
+        <li>(b) qualifies as a <em><a class="glossary-link" title="Common Equity Tier 1 instrument" href="#glossary-term-0533595ba1614b13903c11f7f711f649" data-mce-linktype="2" data-glossary-id="52343">Common Equity Tier 1 instrument</a></em> under <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#0dc5abbea4514bf0ac2ba57739665e5c" data-rb-content-link="Chapter">Chapter 3 of the Own Funds (CRR) Part</a>;</li>
+    </ol>
+    </li>
+    <li>(2) complete and submit the form referred to in <a href="/pra-rules/definition-of-capital#c67ec5dc3a0545f9bc1c6b5b821a2eb9" data-rb-content-link="Rule">7D.3(1) (Pre/Post-Issuance Notification (PIN) Form)</a>; and</li>
+    <li>(3) send to the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;a copy of the terms and conditions of the instrument or, in the case of an amendment or variation, the instrument as it is proposed to be amended or varied, together with any <a href="#glossary-term-3d20899924fc43518d222e04d89af7a8">side agreement</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-04-2020#9afcad15877f4089916b62a0172dcc10">
+			Past
+			<span class="visually-hidden">
+				version of 7A.3 before 01/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9afcad15877f4089916b62a0172dcc10">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7A.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a44230562bb44f559903aa06ca96fdbd"
+	 data-version="f519733d55b844e9af77c65937dff00c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7A.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/definition-of-capital#7bebeeca0a51497bae8746c5387559f6" data-rb-content-link="Rule">7A.1</a>, <a href="/pra-rules/definition-of-capital#ddb044bf9985425d8e8713d880790134" data-rb-content-link="Rule">7A.2</a>&nbsp;and <a href="/pra-rules/definition-of-capital#9afcad15877f4089916b62a0172dcc10" data-rb-content-link="Rule">7A.3</a>&nbsp;shall not apply to subsequent issuances of a form of <a href="#glossary-term-0533595ba1614b13903c11f7f711f649">Common Equity Tier 1 instruments</a>&nbsp;for which the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;has already received a <a href="#glossary-term-d7fdd387f5864ee48113661dab8ecad5">138BA permission</a>&nbsp;from the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;and that the provisions governing those subsequent issuances are identical to the provisions governing those issuances for which the institutions have already received a <a href="#glossary-term-d7fdd387f5864ee48113661dab8ecad5">138BA permission</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a44230562bb44f559903aa06ca96fdbd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7A.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/7a-pre-issuance-notification-pin-regime-for-common-equity-tier-1-instrument/01-01-2026?p=1" data-id="13e2da203bc44c73bdaf37c3df4cf7d5" data-effective-date="01-01-2026" data-download-title="Pre-Issuance Notification (PIN) Regime for Common Equity Tier 1 Instrument_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/7a-pre-issuance-notification-pin-regime-for-common-equity-tier-1-instrument/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#13e2da203bc44c73bdaf37c3df4cf7d5&amp;subject=PRA Rulebook - Definition of Capital – Pre-Issuance Notification (PIN) Regime for Common Equity Tier 1 Instrument">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=13e2da203bc44c73bdaf37c3df4cf7d5">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Pre-Issuance Notification (PIN) Regime for Common Equity Tier 1 Instrument
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="796fe6dea812464793396c77b7462636"
+	 data-version="9debf42ea0f641409d7431cf15814da3"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7B
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Pre-Issuance Notification (PIN) Regime for Additional Tier 1 Instrument
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="331760127fa143138ad657510dc052fd"
+	 data-version="7cc55f385dcf499cb6e1ff2d6d8b954a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7B.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>, or another member of its <em class="rule-style-2">group</em> that is not a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> but is included in the supervision on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-c46b10dde1524940802d4d8ee86ca541" data-mce-linktype="2" data-glossary-id="52345">consolidated basis</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>, intends to:</p>
+<ol class="new-bullet">
+<li>(1) issue a capital instrument that it considers will qualify under Part Two of <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> as an <em><a  class="glossary-link" title="Additional Tier 1 instrument" href="#glossary-term-a71d552ac0764e818b449ef63af21bf7" data-mce-linktype="2" data-glossary-id="52340">Additional Tier 1 instrument</a></em>; or</li>
+<li>(2) amend or otherwise vary the terms of such an instrument included in its <em><a  class="glossary-link" title="own funds" href="#glossary-term-d6bd222b279444a092a58449eef8bb77" data-mce-linktype="2" data-glossary-id="52352">own funds</a></em> or the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="own funds" href="#glossary-term-d6bd222b279444a092a58449eef8bb77" data-mce-linktype="2" data-glossary-id="52352">own funds</a></em> of its <em><a  class="glossary-link" title="consolidation group" href="#glossary-term-3ab198df3a9a4fecbf13392b34234609" data-mce-linktype="2" data-glossary-id="66961">consolidation group</a></em>;</li>
+</ol>
+<p>the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> shall, at least one <em><a  class="glossary-link" title="month" href="#glossary-term-662f153264be46f89f47dbb1b8b7911f" data-mce-linktype="2" data-glossary-id="77446">month</a></em> before the intended date of issuance or intended date of amendment or variation, as applicable, notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of that intention, except that where there are exceptional circumstances which make it impracticable to give such a period of notice, the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> must give as much notice as is reasonably practicable in those circumstances.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/definition-of-capital/01-01-2027#331760127fa143138ad657510dc052fd">
+			Future
+			<span class="visually-hidden">
+				version of 7B.1 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=331760127fa143138ad657510dc052fd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7B.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4c06130fbecd4d77b5e840683200e7f5"
+	 data-version="69d3e6e29d724cef9c9ae96abdaffe6b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7B.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When notifying the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> under <a  title="7B.1" href="/pra-rules/definition-of-capital#331760127fa143138ad657510dc052fd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7B.1</a> the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> must:</p>
+<ol class="new-bullet">
+<li>(1) complete and submit the form referred to in <a  style="text-indent: -14.3px;" title="7D.3" href="/pra-rules/definition-of-capital#c67ec5dc3a0545f9bc1c6b5b821a2eb9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7D.3</a>(1) (Pre/Post-Issuance Notification (PIN) Form);</li>
+<li>(2) provide a copy of the draft terms and conditions of the capital instrument together with any <em><a  class="glossary-link" title="side agreement" href="#glossary-term-3d20899924fc43518d222e04d89af7a8" data-mce-linktype="2" data-glossary-id="108318">side agreement</a></em>;</li>
+<li>(3) provide a properly reasoned draft independent legal opinion from an appropriately qualified individual confirming that the capital instrument qualifies as an <em><a  class="glossary-link" title="Additional Tier 1 instrument" href="#glossary-term-a71d552ac0764e818b449ef63af21bf7" data-mce-linktype="2" data-glossary-id="52340">Additional Tier 1 instrument</a></em> under Part Two of <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>; and</li>
+<li>(4) provide a properly reasoned draft opinion by its auditors as to the capital instrument&rsquo;s treatment under the <em><a  class="glossary-link" title="applicable accounting framework" href="#glossary-term-b28d326726ae44a397eb8a43c5f88e27" data-mce-linktype="2" data-glossary-id="77751">applicable accounting framework</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/definition-of-capital/01-01-2027#4c06130fbecd4d77b5e840683200e7f5">
+			Future
+			<span class="visually-hidden">
+				version of 7B.2 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4c06130fbecd4d77b5e840683200e7f5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7B.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0be42b5f65504106aa804eb8ba50b0b2"
+	 data-version="cef61cd82e5044ad9b1c92ff4233a689"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7B.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> has previously complied with these rules in respect of the issuance of an <em><a  class="glossary-link" title="Additional Tier 1 instrument" href="#glossary-term-a71d552ac0764e818b449ef63af21bf7" data-mce-linktype="2" data-glossary-id="52340">Additional Tier 1 instrument</a></em> and that <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> or another member of its <em class="rule-style-2">group</em> that is not a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> but is included in the supervision on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-c46b10dde1524940802d4d8ee86ca541" data-mce-linktype="2" data-glossary-id="52345">consolidated basis</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>, intends to:</p>
+<ol class="new-bullet">
+<li>(1) issue a capital instrument on substantially the same terms as the previously notified issuance; or</li>
+<li>(2) amend or otherwise vary the previously notified issuance in a way which will result in the instrument taking effect on substantially the same terms as that issuance;</li>
+</ol>
+<p><a  title="7B.1" href="/pra-rules/definition-of-capital#331760127fa143138ad657510dc052fd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7B.1</a> and <a  title="7B.2" href="/pra-rules/definition-of-capital#4c06130fbecd4d77b5e840683200e7f5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7B.2</a> shall not apply.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0be42b5f65504106aa804eb8ba50b0b2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7B.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7dfa5de9302a4f7b86d5d20f9d3153c1"
+	 data-version="2f35d1308772450b8c30753a248836f7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7B.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where <a title="7B.1" href="/pra-rules/definition-of-capital#331760127fa143138ad657510dc052fd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7B.1</a> and <a title="7B.2" href="/pra-rules/definition-of-capital#4c06130fbecd4d77b5e840683200e7f5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7B.2</a> does not apply by virtue of <a title="7B.3" href="/pra-rules/definition-of-capital#0be42b5f65504106aa804eb8ba50b0b2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7B.3</a> the <em><a class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>&nbsp;must:</p>
+<ol class="new-bullet">
+    <li>(1) [deleted]</li>
+    <li>(2) notify the PRA as soon as is reasonably practicable after the capital instrument&rsquo;s classification as an <a href="#glossary-term-a71d552ac0764e818b449ef63af21bf7">Additional Tier 1 instrument</a>, or in the case of an amendment or variation, as soon as is reasonably practicable after that amendment or variation has taken effect, such notice confirming that the instrument:
+    <ol>
+        <li>(a) has been issued on substantially the same terms as the previously notified issuance, or in the case of an amendment or variation, the instrument as so amended or varied takes effect on substantially the same terms as the previously notified issuance; and</li>
+        <li>(b) qualifies as an <em style="text-indent: -14.3px;"><a class="glossary-link" title="Additional Tier 1 instrument" href="#glossary-term-a71d552ac0764e818b449ef63af21bf7" data-mce-linktype="2" data-glossary-id="52340">Additional Tier 1 instrument</a></em> under <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#0dc5abbea4514bf0ac2ba57739665e5c" data-rb-content-link="Chapter">Chapter 3 of the Own Funds (CRR) Part</a>;</li>
+    </ol>
+    </li>
+    <li>(3) complete and submit the form referred to in <a title="7D.3 (1) (Pre/Post-Issuance Notification (PIN) Form)" href="/pra-rules/definition-of-capital#c67ec5dc3a0545f9bc1c6b5b821a2eb9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7" style="text-indent: -14.3px;">7D.3 (1) (Pre/Post-Issuance Notification (PIN) Form)</a>; and</li>
+    <li>(4) send to the <em style="text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> a copy of the terms and conditions of the instrument or, in the case of an amendment or variation, the instrument as it is proposed to be amended or varied, together with any <em><a class="glossary-link" title="side agreement" href="#glossary-term-3d20899924fc43518d222e04d89af7a8" data-mce-linktype="2" data-glossary-id="108318">side agreement</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-04-2020#7dfa5de9302a4f7b86d5d20f9d3153c1">
+			Past
+			<span class="visually-hidden">
+				version of 7B.4 before 01/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7dfa5de9302a4f7b86d5d20f9d3153c1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7B.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/7b-pre-issuance-notification-pin-regime-for-additional-tier-1-instrument/01-01-2026?p=1" data-id="796fe6dea812464793396c77b7462636" data-effective-date="01-01-2026" data-download-title="Pre-Issuance Notification (PIN) Regime for Additional Tier 1 Instrument_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/7b-pre-issuance-notification-pin-regime-for-additional-tier-1-instrument/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#796fe6dea812464793396c77b7462636&amp;subject=PRA Rulebook - Definition of Capital – Pre-Issuance Notification (PIN) Regime for Additional Tier 1 Instrument">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=796fe6dea812464793396c77b7462636">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Pre-Issuance Notification (PIN) Regime for Additional Tier 1 Instrument
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="a5459a0e5992423fa794f8f908b56abe"
+	 data-version="1ba0c5290fc84ac5916c66aa1cd937a6"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7C
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Post Issuance Notification (PIN) Regime for Tier 2 Instrument
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="bedd58e6170e4f79a1df171adf89d12d"
+	 data-version="c7bbcf6de385468f95a9eb43c0ff21f6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7C.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>, or another member of its <em class="rule-style-2">group</em> that is not a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> but is included in the supervision on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-c46b10dde1524940802d4d8ee86ca541" data-mce-linktype="2" data-glossary-id="52345">consolidated basis</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) has issued a capital instrument that it considers will qualify under <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> as a Tier 2 instrument; or</li>
+<li>(2) has amended or otherwise varied the terms of a Tier 2 instrument included in its <em><a  class="glossary-link" title="own funds" href="#glossary-term-d6bd222b279444a092a58449eef8bb77" data-mce-linktype="2" data-glossary-id="52352">own funds</a></em> or the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="own funds" href="#glossary-term-d6bd222b279444a092a58449eef8bb77" data-mce-linktype="2" data-glossary-id="52352">own funds</a></em> of its <em><a  class="glossary-link" title="consolidation group" href="#glossary-term-3ab198df3a9a4fecbf13392b34234609" data-mce-linktype="2" data-glossary-id="66961">consolidation group</a></em>;</li>
+</ol>
+<p>the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> shall on or immediately after the date of issuance or the date of amendment or other variation, as applicable, notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of that issuance, amendment or variation.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bedd58e6170e4f79a1df171adf89d12d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7C.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3cb80376555e4e9ca6ffc1e7b67cd50d"
+	 data-version="1c3d75d5dbcd498cbab647468dc50206"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7C.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When giving notice under <a  title="7C.1" href="/pra-rules/definition-of-capital#bedd58e6170e4f79a1df171adf89d12d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7C.1</a> the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> must:</p>
+<ol class="new-bullet">
+<li>(1) complete and submit the form referred to in <a  style="text-indent: -14.3px;" title="7D.3" href="/pra-rules/definition-of-capital#c67ec5dc3a0545f9bc1c6b5b821a2eb9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7D.3</a>(1) (Pre/Post Issuance Notification (PIN) Form);</li>
+<li>(2) provide a copy of the terms and conditions of the capital instrument together with any <em><a  class="glossary-link" title="side agreement" href="#glossary-term-3d20899924fc43518d222e04d89af7a8" data-mce-linktype="2" data-glossary-id="108318">side agreement</a></em>; and</li>
+<li>(3) provide a properly reasoned independent legal opinion from an appropriately qualified individual confirming that the capital instrument qualifies as a Tier 2 instrument under Part Two of <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/definition-of-capital/01-01-2027#3cb80376555e4e9ca6ffc1e7b67cd50d">
+			Future
+			<span class="visually-hidden">
+				version of 7C.2 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3cb80376555e4e9ca6ffc1e7b67cd50d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7C.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e896f17076d1480a85aac4d6184f367d"
+	 data-version="a1b7cf578da14df5a11376713a7f30d7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7C.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The requirement in <a  title="7C.2" href="/pra-rules/definition-of-capital#3cb80376555e4e9ca6ffc1e7b67cd50d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7C.2</a>(3) for the provision of a legal opinion shall not apply where the issuance of the instrument is on substantially the same terms as a previously issued instrument notified under these rules.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e896f17076d1480a85aac4d6184f367d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7C.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/7c-post-issuance-notification-pin-regime-for-tier-2-instrument/01-01-2026?p=1" data-id="a5459a0e5992423fa794f8f908b56abe" data-effective-date="01-01-2026" data-download-title="Post Issuance Notification (PIN) Regime for Tier 2 Instrument_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/7c-post-issuance-notification-pin-regime-for-tier-2-instrument/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#a5459a0e5992423fa794f8f908b56abe&amp;subject=PRA Rulebook - Definition of Capital – Post Issuance Notification (PIN) Regime for Tier 2 Instrument">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=a5459a0e5992423fa794f8f908b56abe">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Post Issuance Notification (PIN) Regime for Tier 2 Instrument
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="85d6ebbe18d046efa77ca38010f87305"
+	 data-version="0bcc48919b8e4ed0ba176a3cad1dee81"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7D
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Further Notifications Etc.
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="660d98b5b1644328980cfa95c52aeb3e"
+	 data-version="e38064bf7a024d2e8a6d019c2b5cce0f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7D.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> shall immediately notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> in writing of any change to the intended date of issue, type of investors, type of <em><a  class="glossary-link" title="own funds" href="#glossary-term-a72997bd7b0b41fc8b4384bc4dd89ffe" data-mce-linktype="2" data-glossary-id="52353">own funds</a></em> instrument or any other feature of the capital instrument to that previously notified to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> under <a  title="7A" href="/pra-rules/definition-of-capital#13e2da203bc44c73bdaf37c3df4cf7d5" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">7A</a> to <a  title="7B" href="/pra-rules/definition-of-capital#796fe6dea812464793396c77b7462636" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">7B</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=660d98b5b1644328980cfa95c52aeb3e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7D.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f3a716fe101647caa9d98c18fc355163"
+	 data-version="c969d0593dec4767bf4b6986b9c8a74a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7D.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> shall on, or immediately after, the date of issuance or the date of amendment or other variation, as applicable provide the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> with a copy of the final terms and conditions, a copy of the final legal opinion referred to in <a  title="7A.2" href="/pra-rules/definition-of-capital#ddb044bf9985425d8e8713d880790134" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7A.2</a>(3) and <a  title="7B.2" href="/pra-rules/definition-of-capital#4c06130fbecd4d77b5e840683200e7f5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7B.2</a>(3) and if applicable the final accounting opinion referred to in <a  title="7B.2" href="/pra-rules/definition-of-capital#4c06130fbecd4d77b5e840683200e7f5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7B.2</a>(4).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f3a716fe101647caa9d98c18fc355163">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7D.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c67ec5dc3a0545f9bc1c6b5b821a2eb9"
+	 data-version="51402769252246e8b2aed5852bb24668"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7D.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) The Pre/Post Issuance Notification (PIN) Form can be found <a  class="external-link" title="Pre/Post Issuance Notification ((PIN) Form" href="https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervision/capital-instruments-pre-issuance-notification/pre-issuance-notification-form-for-crr-firms-march2020" target="_blank" data-mce-linktype="4" data-mce-externalform="true" data-mce-description="Pre/Post Issuance Notification ((PIN) Form">here</a>.</li>
+<li>(2) The CET1 Compliance Template can be found <a  class="external-link" title="CET1 Compliance Template" href="https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervision/capital-instruments-pre-issuance-notification/common-equity-tier-1-compliance-template-march-2020" target="_blank" data-mce-linktype="4" data-mce-externalform="true" data-mce-description="CET1 Compliance Template">here</a>.</li>
+<li>(3) Where in compliance with this chapter a <em><a  class="glossary-link" title="CRR consolidation entity" href="#glossary-term-9abc7072e33941cca650790aec3d4ad6" data-mce-linktype="2" data-glossary-id="128409">CRR consolidation entity</a></em> provides the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> with a notification or other information a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> shall not be required to provide the same notification or information on an individual basis.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					17/09/2021
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-04-2020#c67ec5dc3a0545f9bc1c6b5b821a2eb9">
+			Past
+			<span class="visually-hidden">
+				version of 7D.3 before 17/09/2021
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/definition-of-capital/01-01-2027#c67ec5dc3a0545f9bc1c6b5b821a2eb9">
+			Future
+			<span class="visually-hidden">
+				version of 7D.3 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c67ec5dc3a0545f9bc1c6b5b821a2eb9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7D.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/7d-further-notifications-etc/01-01-2026?p=1" data-id="85d6ebbe18d046efa77ca38010f87305" data-effective-date="01-01-2026" data-download-title="Further Notifications Etc._01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/7d-further-notifications-etc/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#85d6ebbe18d046efa77ca38010f87305&amp;subject=PRA Rulebook - Definition of Capital – Further Notifications Etc.">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=85d6ebbe18d046efa77ca38010f87305">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Further Notifications Etc.
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="f08f9bdba6c74613bdca818eb1668387"
+	 data-version="0614ca25c4914fe9a3d4e443dd2df668"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Notification Regime – Amendment [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="2871b82e557f4f4296ab0c877ca8951b"
+	 data-version="57444fd0c16f4309b3e5a8a145def928"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#2871b82e557f4f4296ab0c877ca8951b">
+			Past
+			<span class="visually-hidden">
+				version of 8.1 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2871b82e557f4f4296ab0c877ca8951b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/8-notification-regime-amendment/01-01-2026?p=1" data-id="f08f9bdba6c74613bdca818eb1668387" data-effective-date="01-01-2026" data-download-title="Notification Regime – Amendment [Deleted]_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/8-notification-regime-amendment/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#f08f9bdba6c74613bdca818eb1668387&amp;subject=PRA Rulebook - Definition of Capital – Notification Regime – Amendment [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=f08f9bdba6c74613bdca818eb1668387">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Notification Regime – Amendment [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="c40555563c5b4148a325745ec28cde2f"
+	 data-version="17661161cda74b19804bf7e01c301487"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Notification Regime – Reduction of Own Funds [Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4d662c4a7acb45ff88f17ba4d06070a0"
+	 data-version="8090e7c132d14406b3444cf1f2d38e3f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#4d662c4a7acb45ff88f17ba4d06070a0">
+			Past
+			<span class="visually-hidden">
+				version of 9.1 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4d662c4a7acb45ff88f17ba4d06070a0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/9-notification-regime-reduction-of-own-funds/01-01-2026?p=1" data-id="c40555563c5b4148a325745ec28cde2f" data-effective-date="01-01-2026" data-download-title="Notification Regime – Reduction of Own Funds [Deleted]_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/9-notification-regime-reduction-of-own-funds/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#c40555563c5b4148a325745ec28cde2f&amp;subject=PRA Rulebook - Definition of Capital – Notification Regime – Reduction of Own Funds [Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=c40555563c5b4148a325745ec28cde2f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Notification Regime – Reduction of Own Funds [Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="f865ead9f69243dd85b531661759c2dc"
+	 data-version="7e78595b1e344f1590c8f4269b2a2c41"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Building Societies – Creditor Hierarchy
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="57430ebdcea34cb28c345bae01046d9a"
+	 data-version="300ddd7fffc74ed2890381cfb6bf9421"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to every <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-glossary-id="52114" data-mce-linktype="2">firm</a></em> that is a <em><a class="glossary-link" title="building society" href="#glossary-term-acd841e55a0b4ca085d76098925f7448" data-glossary-id="52108" data-mce-linktype="2">building society</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=57430ebdcea34cb28c345bae01046d9a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="82fe7b46e6a14f49b6cbd21cdab50ca3"
+	 data-version="80c1eb4962a44789a537a8401efa5367"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that any <em><a class="glossary-link" title="Additional Tier 1 instrument" href="#glossary-term-a71d552ac0764e818b449ef63af21bf7" data-mce-linktype="2" data-glossary-id="52340">Additional Tier 1 instrument</a></em> or <em><a class="glossary-link" title="Tier 2 instrument" href="#glossary-term-08963bf27e4d48b68113b3def6d7c0ee" data-mce-linktype="2" data-glossary-id="52357">Tier 2 instrument</a></em> issued by it is contractually subordinated to its non-deferred shares.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2014
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=82fe7b46e6a14f49b6cbd21cdab50ca3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/10-building-societies-creditor-hierarchy/01-01-2026?p=1" data-id="f865ead9f69243dd85b531661759c2dc" data-effective-date="01-01-2026" data-download-title="Building Societies – Creditor Hierarchy_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/10-building-societies-creditor-hierarchy/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#f865ead9f69243dd85b531661759c2dc&amp;subject=PRA Rulebook - Definition of Capital – Building Societies – Creditor Hierarchy">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=f865ead9f69243dd85b531661759c2dc">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Building Societies – Creditor Hierarchy
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="cbb5ebc293e94fc2902cb2a5eed9ad7b"
+	 data-version="0cf2ba40e981499080bf3c21faea443d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					11
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Transitional Provisions for Own Funds
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="1f509f151a544297b70cd8254b88988b"
+	 data-version="3849476ad14644d2b08073fa3ad44e10"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#1f509f151a544297b70cd8254b88988b">
+			Past
+			<span class="visually-hidden">
+				version of 11.1 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1f509f151a544297b70cd8254b88988b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b950a0c5e86b460dbf7d3ef886ae7a99"
+	 data-version="aad1bfc56e634c1c86562503b236cbdc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#b950a0c5e86b460dbf7d3ef886ae7a99">
+			Past
+			<span class="visually-hidden">
+				version of 11.2 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b950a0c5e86b460dbf7d3ef886ae7a99">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="15f5dd95dcdc4dca8bfc4e5a9b3d36fe"
+	 data-version="5c7ab6788d0149d3bc7f13df77ddf1a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#15f5dd95dcdc4dca8bfc4e5a9b3d36fe">
+			Past
+			<span class="visually-hidden">
+				version of 11.3 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=15f5dd95dcdc4dca8bfc4e5a9b3d36fe">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bbda51267f66482b8d4b41f32a8b8f11"
+	 data-version="3c64b66482ef43bab0bd72d6557cc268"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#bbda51267f66482b8d4b41f32a8b8f11">
+			Past
+			<span class="visually-hidden">
+				version of 11.4 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bbda51267f66482b8d4b41f32a8b8f11">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b7a4f2933dd947e48e3571794973cfac"
+	 data-version="72bdb3d522564e1a850bb1ad1933be7c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#b7a4f2933dd947e48e3571794973cfac">
+			Past
+			<span class="visually-hidden">
+				version of 11.5 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b7a4f2933dd947e48e3571794973cfac">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bdffe312a12a406cb44bed62d2107885"
+	 data-version="b30804127ab04df4a0e8359435874a91"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#bdffe312a12a406cb44bed62d2107885">
+			Past
+			<span class="visually-hidden">
+				version of 11.6 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bdffe312a12a406cb44bed62d2107885">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="88ce9f9a90c04a26890b434a34667973"
+	 data-version="d0e3168b5d3c4e5081abc981229bc7f7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#88ce9f9a90c04a26890b434a34667973">
+			Past
+			<span class="visually-hidden">
+				version of 11.7 before 01/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=88ce9f9a90c04a26890b434a34667973">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="142cb2645bf24215a070adb070e2efb5"
+	 data-version="03f77fc4c36b45ee96a33183b34dcc5a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#142cb2645bf24215a070adb070e2efb5">
+			Past
+			<span class="visually-hidden">
+				version of 11.8 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=142cb2645bf24215a070adb070e2efb5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d5b5e4512e3f4a01ba5b88659debc7de"
+	 data-version="8e40539ce95e4f63853fdd8c25ac04c5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#d5b5e4512e3f4a01ba5b88659debc7de">
+			Past
+			<span class="visually-hidden">
+				version of 11.9 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d5b5e4512e3f4a01ba5b88659debc7de">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b3d2d8f3174b4971b2f18363b97be7ed"
+	 data-version="68015cdbd68e4113a279a9c3c41eb38b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#b3d2d8f3174b4971b2f18363b97be7ed">
+			Past
+			<span class="visually-hidden">
+				version of 11.10 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b3d2d8f3174b4971b2f18363b97be7ed">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.10
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d195cc6e70cb4983a1f14ca1e913c8bc"
+	 data-version="5f11758254864488b8c8db833566ec59"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#d195cc6e70cb4983a1f14ca1e913c8bc">
+			Past
+			<span class="visually-hidden">
+				version of 11.11 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d195cc6e70cb4983a1f14ca1e913c8bc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.11
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b49cc47c5b5e41afb0068a38f6ecfce2"
+	 data-version="e5b784463f5249fca34bf87fb1800eda"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#b49cc47c5b5e41afb0068a38f6ecfce2">
+			Past
+			<span class="visually-hidden">
+				version of 11.12 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b49cc47c5b5e41afb0068a38f6ecfce2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.12
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="23e68ba8d0a946a783cfbebfeaddc34b"
+	 data-version="cb69946644cc4f8c8132d59b4278772e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#23e68ba8d0a946a783cfbebfeaddc34b">
+			Past
+			<span class="visually-hidden">
+				version of 11.13 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=23e68ba8d0a946a783cfbebfeaddc34b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.13
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7e88fed65ddb49059d4f72ae10c30c71"
+	 data-version="90d178e4f8454555a26a491d16c873f3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/04/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#7e88fed65ddb49059d4f72ae10c30c71">
+			Past
+			<span class="visually-hidden">
+				version of 11.14 before 01/04/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7e88fed65ddb49059d4f72ae10c30c71">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.14
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2255bf0c89d44365a937cc0818463870"
+	 data-version="3002de0c867f49409b10a6cdb277cd86"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#2255bf0c89d44365a937cc0818463870">
+			Past
+			<span class="visually-hidden">
+				version of 11.15 before 01/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2255bf0c89d44365a937cc0818463870">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.15
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/11-transitional-provisions-for-own-funds/01-01-2026?p=1" data-id="cbb5ebc293e94fc2902cb2a5eed9ad7b" data-effective-date="01-01-2026" data-download-title="Transitional Provisions for Own Funds_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/11-transitional-provisions-for-own-funds/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#cbb5ebc293e94fc2902cb2a5eed9ad7b&amp;subject=PRA Rulebook - Definition of Capital – Transitional Provisions for Own Funds">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=cbb5ebc293e94fc2902cb2a5eed9ad7b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Transitional Provisions for Own Funds
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2c20460f8c0948558ea104dec31934ca"
+	 data-version="7b1980930ee347159d0aeb9a8ea4a1cd"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					12
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Base Capital Resources Requirement
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="14387c84bb1f478ab5d8e896e0d0a003"
+	 data-version="a769e422b9334f97a058adfda073bd58"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em> must maintain at all times capital resources equal to or in excess of the base capital resources requirement set out in the table below:</p>
+<table class="content-table">
+<tbody>
+<tr><th style="text-align: left; vertical-align: top;"><span class="rule-style-1">Firm category</span></th><th style="text-align: left; vertical-align: top;"><span class="rule-style-1">Amount: Currency equivalent</span></th></tr>
+<tr>
+<td><em class="rule-style-2">bank</em></td>
+<td>&euro;5 million</td>
+</tr>
+<tr>
+<td><em><a  class="glossary-link" title="small specialist bank" href="#glossary-term-22740531b5324a4a81312d54ddb289d4" data-mce-linktype="2" data-glossary-id="52166">small specialist bank</a></em></td>
+<td>The higher of &euro;1 million and &pound;1 million</td>
+</tr>
+<tr>
+<td><em> <a  class="glossary-link" title="building society" href="#glossary-term-acd841e55a0b4ca085d76098925f7448" data-mce-linktype="2" data-glossary-id="52108">building society</a></em></td>
+<td>The higher of &euro;1 million and &pound;1 million</td>
+</tr>
+<tr>
+<td><em> <em class="rule-style-2">designated investment firm</em></em></td>
+<td>&pound;750,000</td>
+</tr>
+</tbody>
+</table>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/definition-of-capital/01-01-2014#14387c84bb1f478ab5d8e896e0d0a003">
+			Past
+			<span class="visually-hidden">
+				version of 12.1 before 01/01/2022
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=14387c84bb1f478ab5d8e896e0d0a003">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/definition-of-capital/12-base-capital-resources-requirement/01-01-2026?p=1" data-id="2c20460f8c0948558ea104dec31934ca" data-effective-date="01-01-2026" data-download-title="Base Capital Resources Requirement_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/definition-of-capital/12-base-capital-resources-requirement/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/definition-of-capital#2c20460f8c0948558ea104dec31934ca&amp;subject=PRA Rulebook - Definition of Capital – Base Capital Resources Requirement">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2c20460f8c0948558ea104dec31934ca">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Base Capital Resources Requirement
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

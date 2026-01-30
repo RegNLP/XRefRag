@@ -1,0 +1,2472 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{CA9F341F-311B-4C37-855E-D22F92D48179} -->
+<title>SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrf5ma-f-ca9c23623-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":29,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"19555bb8","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":58751,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025368","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==K3/hnjqmd62ct653bEzSsv+xZr7zQ/dC5j95ucZPljzgGnMiA4NQvsQTk90M1zPOaKRw9eVxtY0Bjil/Dfi1sRgMeUUc0MDuL3NwBWGVMeIWdAvDGxP1y7XxE0nkKroOuMRVU/OEFOA78s3lk7ve8j5JEhQg2wS2wailwb0PZNMOxX5jQ64to1jsSS03PSDK+JHFetRkqkmq9iEQc1meSc4nZCONknopVgv/JCcior5UZloUIJ27RB4FKrTrZC6fXY7bfLeBf/Fw1D0uY5wqNOxoXJKs2vuYWEN3Gm7voli4QX8SYBXmtMDHH+p3z8IXi9zAZJKzw+uYgdUh6IN6+0sRz7fJiA6KC7A/blVL1u/zkRdY7jeI41xs1/FquJ7QXNYBuJkQK2iz/ScHQsKTYesxV0ZGdpW0Z3C/sU0mlg8=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/calculating-risk-based-levies-for-the-financial-services-compensation-scheme-deposits-class" rel="noopener noreferrer" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3">The Statement of Policy (SoP) shown on this page is effective from  01/07/2023. Past versions of this SoP can be found here.</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/01-07-2023">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/07/2023
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-ddf7469a-1544-495a-9d72-ac244c9e5685">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-ddf7469a-1544-495a-9d72-ac244c9e5685"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-crr-firms">
+					Non-CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-authorised-persons">
+					Non-authorised persons
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2023/june/depositor-protection" class="list-links__link" target="_blank">
+										PS7/23 - Depositor Protection
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/01-07-2023_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/01-07-2023?p=1" data-id="b915b9c909764b608905d4c7c9790685" data-effective-date="01-07-2023" data-download-title="SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class&amp;subject=PRA Rulebook - SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="7d96836051c74819a7e952cb29d29e89"
+	 data-version="1fb020e3a38e4117bed5a39148c51cb0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a76dc18a15a94a479aef0ab0c09f35a2"
+	 data-version="89c186c29d58483d812381f4456496af"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement of policy (SoP) sets out the calculation methodology that the Prudential Regulation Authority (PRA) uses, as the United Kingdom&rsquo;s designated authority in respect of the Deposit Guarantee Scheme (DGS)<sup><a href="#footnote-1">1</a></sup>, to calculate the risk-adjustment for DGS member contributions to the Financial Services Compensation Scheme (FSCS).</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						4(1) of the Deposit Guarantee Schemes Regulations 2015; <a href="http://www.legislation.gov.uk/uksi/2015/486/pdfs/uksi_20150486_en.pdf">www.legislation.gov.uk/uksi/2015/486/pdfs/uksi_20150486_en.pdf</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a3f5b1ec62a948399505ad32061dff49"
+	 data-version="da2940cfbf804cbfa59588c27cf606a1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This methodology will apply only to the calculation of compensation cost levies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="97c49f1e29de45e9a873f993339779a9"
+	 data-version="3effca75b08e4ca9a2c2fa605cc05284"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This SoP is intended to be read together with the rules governing the funding of the FSCS in the Depositor Protection Part of the PRA Rulebook, and the sections relating to the role of the FSCS in funding the DGS in PRA SoP, &lsquo;Deposit Guarantee Scheme'<sup><a href="#footnote-2">2</a></sup>, which applies to the FSCS.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						Updated July 2015, <a href="http://www.bankofengland.co.uk/pra/Pages/publications/sop/2015/fscsdgsupdate.aspx">www.bankofengland.co.uk/pra/Pages/publications/sop/2015/fscsdgsupdate.aspx</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/1-introduction/01-07-2023?p=1" data-id="7d96836051c74819a7e952cb29d29e89" data-effective-date="01-07-2023" data-download-title="Introduction_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/1-introduction/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class#7d96836051c74819a7e952cb29d29e89&amp;subject=PRA Rulebook - SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="0c8cb86312aa4b89bffc3d5b39eafb50"
+	 data-version="abbd0c58af984ebc91959d53b83e5b19"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					The risk-based levy calculation formula
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ca9399549dd3426c991b832b8f16e60d"
+	 data-version="d7cfaaaea5a348439ae0da13b30deddd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As described in Depositor Protection 42.3, the FSCS is required to calculate firm levies using the following formula (equation 1):</p>
+<p style="text-align: center;"><img src="-/media/23a4db920c214c99a2d2f09d3800d950.ashx" alt="SoP Calculating risk-based levies Rule 2.1 formula"></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="18dcb53b3bb44a47affb8e1e329d6a93"
+	 data-version="56b4671be40743328a1add6ce20ec1b4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The risk-adjustment factor is composed of the member&rsquo;s aggregate risk weight (ARW), multiplied by an adjustment factor (&micro;). The ARW for each member will be determined by the PRA (see Chapter 3) and provided to the FSCS. The FSCS will compute &micro;, which is the same for all DGS members in a given year (see Chapter 4), and calculate each member&rsquo;s levy.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0a4673b5b6844b998d2c7b05c1633f14"
+	 data-version="55cc51e40da14352a24bc6da4e9b1340"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will calculate the ARW for each DGS member using the following formula (equation 2):</p>
+<p style="text-align: center;"><img src="-/media/1067de51bab244b8ba9ca3abeeaa9768.ashx" alt="SoP Calculating risk-based levies Rule 2.3 formula"></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="53ae0669154041869bad78a00c945d4e"
+	 data-version="8262c48f00e040a0a5c5628de84b0361"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The ARW for each firm will range from 75% - 150%, which is the minimum range specified in the EBA guidelines. The PRA considers that this provides a sufficient degree of risk differentiation between firms. The ARW for each DGS member depends uniquely on the member&rsquo;s aggregate risk score (ARS). The next chapter sets out the calculation methodology for the ARS.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/2-the-risk-based-levy-calculation-formula/01-07-2023?p=1" data-id="0c8cb86312aa4b89bffc3d5b39eafb50" data-effective-date="01-07-2023" data-download-title="The risk-based levy calculation formula_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/2-the-risk-based-levy-calculation-formula/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class#0c8cb86312aa4b89bffc3d5b39eafb50&amp;subject=PRA Rulebook - SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class – The risk-based levy calculation formula">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="89332c083e3e42d192347fcb184d5185"
+	 data-version="0fadedd618814461b8644dc7590e6d29"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Calculating the aggregate risk score
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="9ef9803efcc248b3be6e6759c0de47f8"
+	 data-version="a2c7f9f38c5f4bae8c4aae9326131004"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For a DGS member that is a CRR firm,1 the calculation of the ARS will be based on the following risk indicators:</p>
+<table class="content-table" style="width: 425px; height: 224.25px;">
+    <tbody>
+        <tr>
+            <th>Risk indicator&nbsp;</th>
+            <th>Weight&nbsp;</th>
+        </tr>
+        <tr>
+            <td>Leverage ratio</td>
+            <td>12%</td>
+        </tr>
+        <tr>
+            <td>Common Equity Tier 1 (CET1) Ratio&nbsp;</td>
+            <td>12%</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Liquidity coverage ratio (LCR)&nbsp;</td>
+            <td>&nbsp;24%</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Non-performing loans (NPL) ratio&nbsp;</td>
+            <td>&nbsp;18%</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Risk-weighted assets/Total assets&nbsp;</td>
+            <td>&nbsp;8.5%</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Return on assets (RoA)&nbsp;</td>
+            <td>&nbsp;8.5%</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Unencumbered assets/covered deposits&nbsp;</td>
+            <td>&nbsp;17%</td>
+        </tr>
+        <tr>
+            <td class="light-row">&nbsp;<strong>Total</strong></td>
+            <td class="light-row">&nbsp;<strong>100%</strong></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c3af98323a9946dca3a3af635e3dc07d"
+	 data-version="d0c8449a8c8149728f334d7b387df9d4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Each DGS member will be attributed an individual risk score (IRS) for each risk indicator (calibrated as in paragraph 3.4). The IRS for each risk indicator will then be weighted, as in the table above, to arrive at the ARS for each DGS member that is a CRR firm.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8065b6db13b94e7c9d3ef89c166e9e56"
+	 data-version="f878007586944b40a85e3703b257b54a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise specified, all calculations are performed on each DGS member on a solo consolidated/unconsolidated basis, and terms used are as defined in the CRR.2 To calculate the values of the risk indicators, the PRA will use:</p>
+<ul>
+    <li>for income statement measures, the value as at (or closest to) 31 December of the preceding year (so the July 2017 levy will use data that firms report as at 31 December 2016); and</li>
+    <li>for balance sheet measures, the average value at (or closest to) 31 December of the two preceding years (so the July 2017 levy will use data that firms report as at 31 December 2016 and 31 December 2015).</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2cfca3f059c04280baf0466610d5e6cd"
+	 data-version="48ac140e72ff4e239d2affc166c4882a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will use the following calibration scales to attribute IRSs for each risk indicator for each DGS member that is a CRR firm in each levy cycle:</p>
+<p>(i) Leverage ratio</p>
+<table class="content-table" style="width: 241.5px; height: 54.25px;">
+    <tbody>
+        <tr>
+            <td><strong>Bucket</strong></td>
+            <td>&le;3.25%<br>
+            </td>
+            <td>&gt;3.25%</td>
+        </tr>
+        <tr>
+            <td><strong>IRS</strong></td>
+            <td>100</td>
+            <td>&nbsp;0</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+The leverage ratio will be calculated as defined in the PRA Rulebook.
+</p>
+<p>(ii) Common Equity Tier 1 ratio (CET1 ratio)</p>
+<table class="content-table" style="width: 239.5px; height: 52.25px;">
+    <tbody>
+        <tr>
+            <td><strong>Bucket</strong></td>
+            <td>&le;7%<br>
+            </td>
+            <td>&gt;7%</td>
+        </tr>
+        <tr>
+            <td><strong>IRS</strong></td>
+            <td>100</td>
+            <td>&nbsp;0</td>
+        </tr>
+    </tbody>
+</table>
+<p>CET1 ratio will be calculated as the ratio of CET1 capital to risk-weighted assets<sup><a href="#footnote-3">3</a></sup></p>
+<p>(iii) Liquidity coverage ratio (LCR)</p>
+<p>For the purposes of a levy to be raised in 2017:</p>
+<table class="content-table" style="width: 235.5px; height: 52.25px;">
+    <tbody>
+        <tr>
+            <td><strong>Bucket</strong></td>
+            <td><span style="line-height: 104%; color: rgb(38, 38, 38);">&le;90%</span></td>
+            <td>&gt;90%&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>IRS</strong></td>
+            <td>100</td>
+            <td>&nbsp;0</td>
+        </tr>
+    </tbody>
+</table>
+<p>For all subsequent levies:</p>
+<table class="content-table" style="height: 52.25px; width: 235.5px;">
+    <tbody>
+        <tr>
+            <td style="text-align: left;">&nbsp;<strong>Bucket</strong></td>
+            <td style="text-align: left;">&le;100%&nbsp;&nbsp;</td>
+            <td style="text-align: left;">&nbsp;&gt;100%</td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">&nbsp;<strong>IRS</strong></td>
+            <td style="text-align: left;">&nbsp;100</td>
+            <td style="text-align: left;">&nbsp;0</td>
+        </tr>
+    </tbody>
+</table>
+<p>Where DGS members have received a waiver from the PRA from meeting liquidity requirements on a solo basis pursuant to Article 8 of the CRR, the LCR risk indicator will be calculated (and calibrated) at the level of the relevant liquidity sub-group.</p>
+<p>(iv)&nbsp;Non-performing loans (NPL) ratio</p>
+<table class="content-table" style="width: 587.5px; height: 72.25px;">
+    <tbody>
+        <tr>
+            <td><strong>Bucket (by<br>
+            percentile rank)<br>
+            </strong></td>
+            <td><span style="line-height: 104%; color: rgb(38, 38, 38);">0&ndash;20<sup>th</sup></span></td>
+            <td><span style="line-height: 104%; color: rgb(38, 38, 38);">20<sup>th</sup>&ndash;40<sup>th</sup></span></td>
+            <td><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">40</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">&ndash;60</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup></td>
+            <td><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">60</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">&ndash;80</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup></td>
+            <td><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">80</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">&ndash;100</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup></td>
+        </tr>
+        <tr>
+            <td><strong>IRS</strong></td>
+            <td>0</td>
+            <td>&nbsp;25</td>
+            <td>50</td>
+            <td>75</td>
+            <td>100</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+</p>
+<p>NPL ratio will be calculated as the ratio of non-performing loans<sup><a href="#footnote-4">4</a></sup> to total loans.<sup><a href="#footnote-5">5</a></sup></p>
+<p><sup><a href="#footnote-4"></a></sup>DGS members will be ranked and rated separately based on whether they report FSA015, FINREP F18.00 or only FINREP F1.00 and F7.00 returns.</p>
+<p>(v)&nbsp;Risk-weighted assets (RWA)<sup><a href="#footnote-6">6</a></sup>/total assets<sup><a href="#footnote-7">7</a>&nbsp;</sup></p>
+<p>
+</p>
+<table class="content-table" style="width: 592.25px; height: 53px;">
+    <tbody>
+        <tr>
+            <td><strong style="background-color: rgb(255, 255, 255);">Bucket (by<br>
+            percentile rank)</strong></td>
+            <td><span style="background-color: rgb(255, 255, 255);">0&ndash;20</span><sup style="background-color: rgb(255, 255, 255);">th</sup></td>
+            <td><span style="background-color: rgb(255, 255, 255);">20</span><sup style="background-color: rgb(255, 255, 255);">th</sup><span style="background-color: rgb(255, 255, 255);">&ndash; 40</span><sup style="background-color: rgb(255, 255, 255);">th</sup></td>
+            <td>40<sup>th</sup>&ndash; 60<sup>th</sup></td>
+            <td><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">60</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">&ndash;80</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup></td>
+            <td><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">80</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">&ndash;100</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup></td>
+        </tr>
+        <tr>
+            <td><strong>IRS</strong><br>
+            </td>
+            <td>0</td>
+            <td>25</td>
+            <td>50</td>
+            <td>75</td>
+            <td>100</td>
+        </tr>
+    </tbody>
+</table>
+<p>DGS members that use the internal ratings based (IRB) approach for calculating minimum own funds requirements will be ranked separately to those DGS members that use the standardised approach. In the calculation of the IRS for this risk indicator, DGS members using the standardised approach will not be rated relative to those using the IRB approach (and vice versa).</p>
+<p>(vi) Return on assets (RoA)</p>
+<p>
+</p>
+<table class="content-table" style="width: 592.25px; height: 53px;">
+    <tbody>
+        <tr>
+            <td><strong style="background-color: rgb(255, 255, 255);">Bucket (by<br>
+            percentile rank)</strong></td>
+            <td><span style="background-color: rgb(255, 255, 255);">0&ndash;20</span><sup style="background-color: rgb(255, 255, 255);">th</sup></td>
+            <td><span style="background-color: rgb(255, 255, 255);">20</span><sup style="background-color: rgb(255, 255, 255);">th</sup><span style="background-color: rgb(255, 255, 255);">&ndash; 40</span><sup style="background-color: rgb(255, 255, 255);">th</sup></td>
+            <td>40<sup>th</sup>&ndash; 60<sup>th</sup></td>
+            <td><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">60</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">&ndash; 80</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup></td>
+            <td><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">80</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup><span style="background-color: rgb(255, 255, 255); color: rgb(38, 38, 38);">&ndash; 100</span><sup style="color: rgb(38, 38, 38); background-color: rgb(255, 255, 255);">th</sup></td>
+        </tr>
+        <tr>
+            <td><strong>IRS</strong><br>
+            </td>
+            <td>100</td>
+            <td>75</td>
+            <td>50</td>
+            <td>25</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+<p>RoA will be calculated as the ratio of net income<a href="#footnote-8"><sup>8</sup></a> to total assets<sup><a href="#footnote-9">9</a></sup>, and averaged over two years.</p>
+<p>DGS members that are building societies will be ranked and rated separately to other DGS members. In the calculation of the IRS for this risk indicator, building societies will not be rated relative to banks (and vice versa).</p>
+<p>(vii)&nbsp;Unencumbered assets/covered deposits</p>
+<p>
+</p>
+<table class="content-table" style="width: 349px; height: 55.25px;">
+    <tbody>
+        <tr>
+            <td><strong style="background-color: rgb(255, 255, 255);">Bucket </strong></td>
+            <td>&le;1</td>
+            <td><span style="background-color: rgb(255, 255, 255); line-height: 104%; color: rgb(38, 38, 38);">1 &ndash; 2</span></td>
+            <td><span style="line-height: 104%; color: rgb(38, 38, 38);">&gt;2</span></td>
+        </tr>
+        <tr>
+            <td><strong>IRS</strong><br>
+            </td>
+            <td>100</td>
+            <td>50</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+<p>This indicator is defined as the ratio of total assets less encumbered assets<sup><a href="#footnote-10">10</a></sup> to covered deposits.<span style="font-size: 13px;"><sup><a href="#footnote-11">11</a></sup></span></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						Defined as the ‘total risk exposure amount’, as defined in the CRR.
+					</span>
+				</li>
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						Defined as the sum of the following fields as firms are required to report in form FSA015: 11G, 11Q, 20B, 20D, 23B, 23D, 26B, 26D, 31B, 31C; or row 330, column 060 of F18.00 (FINREP); or row 0190 column 060, row 0190 column 070, row 0190 column 080 and row 0190 column 090 of F7.00 (FINREP).
+					</span>
+				</li>
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						Defined as field 32H as firms are required to report in form FSA015; or row 330, column 01, of F18.00 (FINREP); or the sum of rows 090, 099, 0130, 0144, 0183 as firms are required to report in form F01.01 (FINREP).
+					</span>
+				</li>
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						Defined as in (1) above.
+					</span>
+				</li>
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						Defined as row 380, column 01 of F01.01 (FINREP).
+					</span>
+				</li>
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						Defined as row 355, column 01 of F02.00 (FINREP).
+					</span>
+				</li>
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						Defined as row 380, column 01 of F01.01 (FINREP).
+					</span>
+				</li>
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						As defined in the EBA guidelines on disclosure of encumbered and unencumbered assets; <a href="http://www.eba.europa.eu/documents/10180/741903/EBA-GL-2014-">www.eba.europa.eu/documents/10180/741903/EBA-GL-2014-</a> 03 Guidelines on the disclosure of asset encumbrance.pdf/c65a7f66-9fa5-435b-b843-3476a8b58d66.
+					</span>
+				</li>
+				<li id="footnote-11" class="rb-footnote">
+					<span class="fn-col-1">
+						11.
+					</span>
+					<span class="fn-col-2">
+						Defined as the class A tariff base, as defined in the Depositor Protection Part of the PRA Rulebook.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1adb4685454b42819a0bcfa71e2ff7d9"
+	 data-version="6313663304db4db48813c00f468a74c5"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Credit unions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="4ba950af259f40a88029cef432a8d9a3"
+	 data-version="f601f22301a54d9da908dac33b429d4c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For a DGS member that is a credit union, the calculation of the ARS will be based on the following risk indicators:</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <th>Risk indicator</th>
+            <th>Weight</th>
+        </tr>
+        <tr>
+            <td>&nbsp;Leverage ratio</td>
+            <td>&nbsp;25%</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Liquidity ratio</td>
+            <td>&nbsp;25%</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Non-performing loans (NPL) ratio&nbsp;</td>
+            <td>&nbsp;25%</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Return on assets (RoA)</td>
+            <td>&nbsp;25%</td>
+        </tr>
+        <tr>
+            <td class="light-row">&nbsp;<strong>Total</strong></td>
+            <td class="light-row"><strong>&nbsp;100%</strong></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="89e86166cd6e4e39aa110274accb340c"
+	 data-version="c8e9885853c9445798775066271540b0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Similar to the approach taken for CRR firms in paragraph 3.2, the PRA will calculate an IRS for each indicator for each DGS member that is a credit union, as calibrated in paragraph 3.8. These IRSs will be weighted as per the table above to derive the ARS.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="81df262ce80b423fbd71b4e2e6ce57c8"
+	 data-version="7ddf78c3e2894a17aa13a0b64eb9552f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>To calculate the values of the risk indicators, the PRA will use:</p>
+<ul>
+    <li>for income statement measures, the value as of the annual return (Form CY)<sup><a href="#footnote-12">12</a></sup> the credit union was required to submit in the preceding year (so the July 2017 levy will use data that firms report in 2016); and</li>
+    <li>for balance sheet measures, the average value using the Form CY returns submitted over the two preceding years (so the July 2017 levy will use data that firms report in 2016 and 2015).</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-12" class="rb-footnote">
+					<span class="fn-col-1">
+						12.
+					</span>
+					<span class="fn-col-2">
+						Available at <a href="http://www.bankofengland.co.uk/pra/Pages/regulatorydata/formscreditunions.aspx">www.bankofengland.co.uk/pra/Pages/regulatorydata/formscreditunions.aspx</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7cd851fd17764dce870c895931303756"
+	 data-version="d8d5464c361545d3b132adb8a8f792ed"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will use the following calibration scales to attribute IRSs for each risk indicator for each DGS member that is a credit union in each levy cycle:</p>
+<p>(i) Leverage ratio</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <td><strong>Bucket</strong></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Total assets of less than &pound;5 million or fewer than 5,000 members</td>
+            <td><span style="line-height: 104%; color: rgb(38, 38, 38);">&nbsp;&le;3%&nbsp;</span></td>
+            <td>&nbsp;&gt;3%&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Total assets of more than &pound;5 million or more than 5,000 members</td>
+            <td>&nbsp;<span style="line-height: 104%; color: rgb(38, 38, 38);">&le;5%&nbsp;</span></td>
+            <td>&nbsp;<span style="line-height: 104%; color: rgb(38, 38, 38);">&gt;5%&nbsp;</span>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Total assets of more than &pound;10 million, more than 15,000 members or undertakes an additional activity other than providing transactional accounts</td>
+            <td>&nbsp;<span style="line-height: 104%; color: rgb(38, 38, 38);">&le;8%&nbsp;</span></td>
+            <td>&nbsp;<span style="line-height: 104%; color: rgb(38, 38, 38);">&gt;8%</span></td>
+        </tr>
+        <tr>
+            <td>&nbsp;<strong>IRS</strong></td>
+            <td>&nbsp;100</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+<p>Leverage ratio will be calculated as the ratio of total reserves<sup><a href="#footnote-13">13</a></sup> to total assets<sup><a href="#footnote-14">14</a></sup>.</p>
+<p>(ii) Liquidity ratio</p>
+<table class="content-table" style="width: 238.833px; height: 52.8333px;">
+    <tbody>
+        <tr>
+            <td>&nbsp;<strong>Bucket&nbsp;</strong></td>
+            <td><span style="line-height: 104%; color: rgb(38, 38, 38);">&nbsp;&le;10%</span></td>
+            <td>&nbsp;&gt;10%&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>&nbsp;IRS</strong><br>
+            </td>
+            <td>&nbsp;100</td>
+            <td> 0</td>
+        </tr>
+    </tbody>
+</table>
+<p>Liquidity ratio will be calculated as the ratio of liquid assets<sup><a href="#footnote-15">15</a></sup> to total relevant liabilities<sup><a href="#footnote-16">16</a></sup>.</p>
+<p>(iii) Non-performing loans (NPL) Ratio</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <td style="text-align: left;"><strong>Bucket (by<br>
+            percentile rank)</strong></td>
+            <td style="text-align: left;">0&ndash;20<sup>th</sup></td>
+            <td style="text-align: left;">20<sup>th</sup>&ndash;40<sup>th</sup></td>
+            <td style="text-align: left;">40<sup>th</sup>&ndash;60<sup>th</sup></td>
+            <td style="text-align: left;">&nbsp;60<sup>th</sup>&ndash;80<sup>th</sup></td>
+            <td style="text-align: left;">80<sup>th</sup>&ndash;100<sup>th</sup></td>
+        </tr>
+        <tr>
+            <td style="text-align: left;"><strong>IRS</strong></td>
+            <td style="text-align: left;">0</td>
+            <td style="text-align: left;">25</td>
+            <td style="text-align: left;">50</td>
+            <td style="text-align: left;">75</td>
+            <td style="text-align: left;">100</td>
+        </tr>
+    </tbody>
+</table>
+NPL ratio will be calculated as the ratio of total net liabilities in arrears<sup><a href="#footnote-17">17</a></sup> to total net liabilities<sup><a href="#footnote-18">18</a></sup>.
+<p>&nbsp;</p>
+<p>(iv) Return on assets (RoA)</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <td style="text-align: left;"><strong>Bucket (by<br>
+            percentile rank)</strong></td>
+            <td style="text-align: left;">0&ndash;20<sup>th</sup></td>
+            <td style="text-align: left;">20<sup>th</sup>&ndash;40<sup>th</sup></td>
+            <td style="text-align: left;">40<sup>th</sup>&ndash;60<sup>th</sup></td>
+            <td style="text-align: left;">&nbsp;60<sup>th</sup>&ndash;80<sup>th</sup></td>
+            <td style="text-align: left;">80<sup>th</sup>&ndash;100<sup>th</sup></td>
+        </tr>
+        <tr>
+            <td style="text-align: left;"><strong>IRS</strong></td>
+            <td style="text-align: left;">100</td>
+            <td style="text-align: left;">75</td>
+            <td style="text-align: left;">50</td>
+            <td style="text-align: left;">25</td>
+            <td style="text-align: left;">0</td>
+        </tr>
+    </tbody>
+</table>
+<p>RoA will be calculated as the ratio of profit/loss after tax excluding grant income<sup><a href="#footnote-19">19</a></sup> to total assets<sup><a href="#footnote-20">20</a></sup>.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-13" class="rb-footnote">
+					<span class="fn-col-1">
+						13.
+					</span>
+					<span class="fn-col-2">
+						Defined as the sum of fields F1, F2, F7 and F8 in Form CY.
+					</span>
+				</li>
+				<li id="footnote-14" class="rb-footnote">
+					<span class="fn-col-1">
+						14.
+					</span>
+					<span class="fn-col-2">
+						Defined as field C16 in Form CY.
+					</span>
+				</li>
+				<li id="footnote-15" class="rb-footnote">
+					<span class="fn-col-1">
+						15.
+					</span>
+					<span class="fn-col-2">
+						Defined as field P1 in Form CY.
+					</span>
+				</li>
+				<li id="footnote-16" class="rb-footnote">
+					<span class="fn-col-1">
+						16.
+					</span>
+					<span class="fn-col-2">
+						Defined as field P5 in Form CY.
+					</span>
+				</li>
+				<li id="footnote-17" class="rb-footnote">
+					<span class="fn-col-1">
+						17.
+					</span>
+					<span class="fn-col-2">
+						Defined as the sum of fields H4, H6, H8 and H10 in Form CY.
+					</span>
+				</li>
+				<li id="footnote-18" class="rb-footnote">
+					<span class="fn-col-1">
+						18.
+					</span>
+					<span class="fn-col-2">
+						Defined as field H2 in Form CY.
+					</span>
+				</li>
+				<li id="footnote-19" class="rb-footnote">
+					<span class="fn-col-1">
+						19.
+					</span>
+					<span class="fn-col-2">
+						Defined as field L3 less field J6 in Form CY.
+					</span>
+				</li>
+				<li id="footnote-20" class="rb-footnote">
+					<span class="fn-col-1">
+						20.
+					</span>
+					<span class="fn-col-2">
+						Defined as in (2) above.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="73d77e08dd334aac87cb1c46ed053788"
+	 data-version="bbc4d91d3c2943f3be0a455b5787f0cb"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Overseas firms</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="40012cec01e645248c66e4a18cfb8271"
+	 data-version="bfd226cc04e142a0b133a2142aaa4b81"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For a DGS member which is an overseas firm, the PRA will attribute an ARS of 50.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5213e9d6cbd94cb49cb76cec92995eec"
+	 data-version="5c130655558f4fbbba9372c251fabe84"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Other provisions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="e777738599614cbe939298cb0a410c9e"
+	 data-version="15f6d80150d24e58b5f737c99efa0b15"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If, at any point, the PRA is unable to calculate the ARS for any DGS member in line with the methodology stated in this chapter (for example, if a DGS member has failed to make a regulatory data submission), the PRA will attribute that DGS member with the highest ARS of 100. This is separate to the provisions of Depositor Protection 44.4, which applies if a firm does not submit a complete statement of business (measured in accordance with the class A tariff base) to the FSCS in accordance with Depositor Protection 44.2.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/3-calculating-the-aggregate-risk-score/01-07-2023?p=1" data-id="89332c083e3e42d192347fcb184d5185" data-effective-date="01-07-2023" data-download-title="Calculating the aggregate risk score_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/3-calculating-the-aggregate-risk-score/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class#89332c083e3e42d192347fcb184d5185&amp;subject=PRA Rulebook - SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class – Calculating the aggregate risk score">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="5efd256336b14fb791a8192834b92ecc"
+	 data-version="7237d0bf4af8496f80f54c61b649ec02"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Calculating the risk-based levy
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="dd450a878f0f49918a7d3a2129064efe"
+	 data-version="a2b89ad09a084d7fb5f5a4894f85c900"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will attribute all DGS members with an ARS, as per the methodology in Chapter 3. The ARS for each firm will be translated into an ARW ranging between 75% &ndash; 150%, as specified by the formula in paragraph 2.3. The PRA will provide this data to the FSCS.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c3289d95d5c04865a042d3a1c2dfdd07"
+	 data-version="cb7ca1a51d544554b138e74168583e40"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The adjustment factor &micro; will be calibrated in each levy cycle to ensure the exact levy target is reached. For example, for a levy target of &pound;80 million:</p>
+<table class="content-table" style="width: 545.667px; height: 157.833px;">
+    <tbody>
+        <tr>
+            <th>DGS member</th>
+            <th>Class A<br>
+            tariff base<br>
+            share</th>
+            <td class="light-row"><strong>ARW</strong></td>
+            <td class="light-row"><strong>Unadjusted risk-based lever<br>
+            (share*ARW*&pound;80 million)</strong></td>
+            <td class="light-row"><strong>Risk-based levy<br>
+            post-adjustment<br>
+            factor&nbsp;<span style="line-height: 104%; color: rgb(38, 38, 38);">(&micro;=0.8)</span></strong><strong><span style="line-height: 104%; color: rgb(38, 38, 38);"><strong></strong></span></strong></td>
+        </tr>
+        <tr>
+            <td>Firm A</td>
+            <td>10%</td>
+            <td>100%</td>
+            <td style="text-align: left;">&pound;8 million</td>
+            <td>&pound;6.4 million</td>
+        </tr>
+        <tr>
+            <td>Firm B</td>
+            <td>50%</td>
+            <td>110%</td>
+            <td>&pound;44 million</td>
+            <td>&pound;35.2 million</td>
+        </tr>
+        <tr>
+            <td>Firm C</td>
+            <td>40%</td>
+            <td>150%</td>
+            <td>&pound;48 million</td>
+            <td>&pound;38.4 million</td>
+        </tr>
+        <tr>
+            <td class="light-row"><strong>Total</strong></td>
+            <td class="light-row">&nbsp;</td>
+            <td class="light-row">&nbsp;</td>
+            <td class="light-row">&pound;100 million</td>
+            <td class="light-row">&pound;80 million</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="eb457e8b1bac48b993c76fb843b50027"
+	 data-version="b167684e991b4c8ba9308cd392347534"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Were there to be no further adjustment, the total industry levy would exceed the levy target. The adjustment factor &micro; would then be set here as 80/100(=0.8), and each DGS member&rsquo;s levy reduced proportionately by this factor to ensure the levy target (and only this amount) is levied.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="48ac3b8ca35c41949bd399fa6a9a42a1"
+	 data-version="0a7165d0c03f4fda856649411b4277c3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In each levy cycle, the PRA will provide the FSCS with the ARW for each DGS member. The FSCS will use this information and the class A tariff base data to determine the adjustment factor &micro;, and then calculate the risk adjustment factor (paragraph 2.2). The FSCS will then apply this factor to calculate each member&rsquo;s risk-based levy, in accordance with Depositor Protection 42.3 (for compensation cost levies).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/4-calculating-the-risk-based-levy/01-07-2023?p=1" data-id="5efd256336b14fb791a8192834b92ecc" data-effective-date="01-07-2023" data-download-title="Calculating the risk-based levy_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class/4-calculating-the-risk-based-levy/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---calculating-risk-based-levies-for-the-fscs-deposits-class#5efd256336b14fb791a8192834b92ecc&amp;subject=PRA Rulebook - SoP3/16 – Calculating risk-based levies for the Financial Services Compensation Scheme deposits class – Calculating the risk-based levy">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

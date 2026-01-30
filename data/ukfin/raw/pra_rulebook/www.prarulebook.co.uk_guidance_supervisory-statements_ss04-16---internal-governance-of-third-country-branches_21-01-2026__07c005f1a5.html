@@ -1,0 +1,4217 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{0D9268D5-8928-4574-ACCE-E1B6822FE3FA} -->
+<title>SS4/16 – Internal governance of third country branches | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS4/16 – Internal governance of third country branches">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS4/16 – Internal governance of third country branches">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwogua-f-98b867f19-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":24,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2561059a","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":29888,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370024","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==q5Ngue3MHjHHl9tk4/6UiiYhp35M3KRyxYTZeY3hYuf5JlPz1XL5cERyv5uD7s4iCSuFFOfrEG+Czufi3maRsVw7F8FClka0KyiR817hFqsYbbOejIpKgA4mmLaEQU3bh4mSWwpiXw8BDEXbkIXlLhr7sllsKpOyLWYvoU3cyZY95OycEYjEoC09E4z9Ai5qPx5wi/r9fi8wq5zUn49nfY0jKnIPRHsZaC9SDWHGPtTQgHAMX+K0rv92hWKRi8nCGlI9TSNtDNOWp99npF72OLIfFXxy9gst5lHPFA/Fd8tDZ80GEHW9nTfK23BCOgO6f0i4iz8T/ZL7v85HmrEAt/r6q/a/Z3qOt83ciw80xYSaZ0balVSzKjLrsEMZohSWALIa8E5AKnZMoO//dadxt8hNAAAk5QWtUvodYDVT98I=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS4/16 – Internal governance of third country branches				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS4/16 – Internal governance of third country branches
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/internal-governance-of-third-country-branches-ss" rel="noopener noreferrer" title="SS4/16 Internal governance of third country branches" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3"> Previous versions of this Supervisory Statement (SS) pre 29/12/2020 can be found here</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/29-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						29/12/2020
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-e2277164-b581-42ce-855c-c139e297c45b">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-e2277164-b581-42ce-855c-c139e297c45b"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS4/16 – Internal governance of third country branches
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS4/16 – Internal governance of third country branches)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-crr-firms">
+					Non-CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/internal-governance-of-third-country-branches/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Internal Governance of Third Country Branches
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/capital-requirements-directive-v-further-implementation" class="list-links__link" target="_blank">
+										PS29/20 - Capital Requirements Directive V (CRD V)
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/29-12-2020_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/29-12-2020?p=1" data-id="16d391eb29854edaa5065234e8e16194" data-effective-date="29-12-2020" data-download-title="SS4/16 – Internal governance of third country branches_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="91a650a6c9aa42b0878643109a603f54"
+	 data-version="dc9c6a1301674843ae33c097ec4cf1b6"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d31d6b445973414aa197645a91ca4d65"
+	 data-version="c6e8277f6cd24e74a181379f63f8bdf6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement (SS) is relevant to non-EEA banks and PRA-designated investment firms in respect of their operations in the United Kingdom through branches known as &lsquo;third country branches &lsquo;(where singular &lsquo;third country branch&rsquo;). It sets out the PRA&rsquo;s expectations for the internal governance of third country branches and how these firms should comply with the Internal Governance of Third Country Branches parts of the PRA Rulebook. The rules and supervisory statement cover the following areas:</p>
+<ul>
+    <li>general organisational requirements;</li>
+    <li>persons who effectively direct the business;</li>
+    <li>responsibility of senior personnel;</li>
+    <li>skills, knowledge and expertise;</li>
+    <li>compliance and internal audit;</li>
+    <li>risk control;</li>
+    <li>outsourcing; and</li>
+    <li>record keeping.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0432c74fc4e142978b259546c5744447"
+	 data-version="9b52be88a90c48ffbc0a030a98c1455f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement replaces the guidance material previously included in chapters 4 &ndash; 9 and 21 of the Senior Management Arrangements, Systems and Controls (SYSC) section of the Handbook. It does not seek to introduce additional or new obligations nor change the PRA expectations of how non-EEA banks and PRA-designated investment firms organise their UK branches. Where relevant, the statement takes into account the requirements of the Senior Managers and Certification Regime (SM&amp;CR) which apply to third country branches.<sup><a href="#footnote-1">1</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						The statement was also informed by the SYSC attestation exercise in paragraphs 1.26-1.28 of SS10/14 which branches undertook in 2015. PRA Supervisory Statement 10/14 ‘Supervising international banks: the PRA’s approach to branch supervision, September 2014: <a href="http://www.bankofengland.co.uk/pra/Pages/publications/ss/2014/ss1014.aspx">www.bankofengland.co.uk/pra/Pages/publications/ss/2014/ss1014.aspx</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2358e7f5903542dc8e91f640eb04184d"
+	 data-version="f51df567f5e0410fbdfb6a2e326291fe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The statement should be read in conjunction with the PRA Fundamental Rules and with:</p>
+<ul>
+    <li>Internal Governance of Third Country Branches parts of the PRA rulebook.</li>
+    <li>The PRA&rsquo;s approach to banking supervision (approach document)<sup><a href="#footnote-2">2</a></sup></li>
+    <li>Supervisory Statement SS10/14: Supervising international banks: the Prudential Regulation Authority&rsquo;s approach to branch supervision,<sup><a href="#footnote-3">3</a></sup></li>
+    <li>Policy Statement 20/15: Strengthening individual accountability in banking: UK branches of non‐EEA banks;<sup><a href="#footnote-4">4</a></sup> and</li>
+    <li>Supervisory Statement <a href="/guidance/supervisory-statements/ss28-15---strengthening-individual-accountability-in-banking" data-rb-content-link="Guidance">SS28/15</a>: Strengthening individual accountability in banking.<sup><a href="#footnote-5">5</a></sup></li>
+    <li>Supervisory Statement <a href="/guidance/supervisory-statements/ss34-15---guidelines-for-completing-regulatory-reports" data-rb-content-link="Guidance">34/15</a>: Guidelines for completing regulatory reports.<sup><a href="#footnote-6">6</a></sup></li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						‘The Prudential Regulation Authority’s approach to banking supervision’, June 2014:  <a href="http://www.bankofengland.co.uk/pra/Pages/supervision/approach/default.aspx">www.bankofengland.co.uk/pra/Pages/supervision/approach/default.aspx</a>.
+					</span>
+				</li>
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						PRA Supervisory Statement 10/14 ‘Supervising international banks: the PRA’s approach to branch supervision, September 2014: <a href="http://www.bankofengland.co.uk/pra/Pages/publications/ss/2014/ss1014.aspx">www.bankofengland.co.uk/pra/Pages/publications/ss/2014/ss1014.aspx</a>.
+					</span>
+				</li>
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						PRA Policy Statement 20/15 ‘Strengthening individual accountability in banking: UK branches of non-EEA banks’ August 2015:  <a href="http://www.bankofengland.co.uk/pra/Pages/publications/ps/2015/ps2015.aspx">www.bankofengland.co.uk/pra/Pages/publications/ps/2015/ps2015.aspx</a>.
+					</span>
+				</li>
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						PRA Supervisory Statement 28/15, ‘Strengthening individual accountability in banking’, December 2015 (Updated January 2016): <a href="http://www.bankofengland.co.uk/pra/Pages/publications/ss/2016/ss2815update.aspx">www.bankofengland.co.uk/pra/Pages/publications/ss/2016/ss2815update.aspx</a>.
+					</span>
+				</li>
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						PRA Supervisory Statement 34/15, ‘Guidelines for completing regulatory reports’: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2015/guidelines-for-completing-regulatory-reports-ss">www.bankofengland.co.uk/prudential-regulation/publication/2015/guidelines-for-completing-regulatory-reports-ss</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f5c1e39e59ca4cdcbf012da3a87357b4"
+	 data-version="268ae6a10f9f4928a59d2801aa40e89f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>All PRA-authorised firms are required to meet the statutory PRA Threshold Conditions on a continuing basis. For branches in the United Kingdom, the PRA&rsquo;s authorisation applies to the whole firm therefore Threshold Conditions apply to the whole firm; not just the branch in the United Kingdom.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/1-introduction/29-12-2020?p=1" data-id="91a650a6c9aa42b0878643109a603f54" data-effective-date="29-12-2020" data-download-title="Introduction_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/1-introduction/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#91a650a6c9aa42b0878643109a603f54&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="4d5dcf9795d34459af84a589890fe4c6"
+	 data-version="999791403b804d5eb6ca282421536760"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					General organisational requirements
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ce32a0a5fa264be8a4e6e2541d027455"
+	 data-version="5976b451e56e466d9dda43827e7ea652"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>General requirements</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="00394d232a504d6cb807a461a8c72213"
+	 data-version="4ffdbb323ebe4d4383e5bb3c802121f1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the arrangements, processes and mechanisms implemented by a third country branch should be comprehensive and proportionate to the nature, scale and complexity of the risks inherent in its business and its activities and take into account the specific technical criteria described in the <a href="/pra-rules/remuneration" data-rb-content-link="Part">Remuneration Part</a>&nbsp;of the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="82997e2b01514a19835d1ede8085d048"
+	 data-version="facded96bf2649ae9e3ba671bdff93dc"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Expectations in relation to the Senior Managers and Certification regimes</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="3dc2769078734e09a4b341671435e615"
+	 data-version="64d267c47d854deca5b8ca4c9245b28d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects third country branches to have robust governance arrangements, which include a clear organisational structure with well defined, transparent and consistent lines of responsibility. All firms subject to the SM&amp;CR, which includes third country branches, are required, by section 60(2A) of the Financial Services and Markets Act (FSMA), to produce a Statement of Responsibilities (SoR) for each of their individuals in scope of the regime.<sup><a href="#footnote-7">7</a></sup> More specifically, SoRs must:</p>
+<ul>
+    <li>clearly set out the areas of the branch&rsquo;s UK regulated activities for which the senior manager is responsible;</li>
+    <li>be included in every application for pre-approval as a senior manager; and</li>
+    <li>be updated and resubmitted if there is a significant change to the senior manager&rsquo;s responsibilities.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						‘Senior Managers’ as per section 60(2A) and section 62A of FSMA). The rules on SoRs are set out in ‘Allocation of Responsibilities’ 2. The PRAs expectations are set out in PRA Supervisory Statement 28/15, ‘Strengthening individual accountability in banking’, December 2015 (Updated January 2016): <a href="http://www.bankofengland.co.uk/pra/Pages/publications/ss/2016/ss2815update.aspx">www.bankofengland.co.uk/pra/Pages/publications/ss/2016/ss2815update.aspx</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a2d6d157c4c74220823a7d9eb2139784"
+	 data-version="d476a6df4d084d4eb248f4b6327a8bb0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch is also expected to produce and maintain a Management Responsibilities Map, which is a single, up-to-date document setting out the branch&rsquo;s management and governance arrangements.<sup><a href="#footnote-8">8</a></sup> Responsibilities Maps should be proportionate and include information about the business relationship with the head office and group.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						See FCA CP14/13 / PRA CP14/14 page 51 – 7.25 Statements of Responsibilities and Responsibilities Maps:  <a href="http://www.bankofengland.co.uk/pra/Pages/publications/cp/2014/cp1414.aspx">www.bankofengland.co.uk/pra/Pages/publications/cp/2014/cp1414.aspx</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9944efe573ed4a01a3fa6234c1eaa308"
+	 data-version="bf506c12513d4c1abbd4e411b4e5116b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should be aware of the expectations set out in <a href="/guidance/supervisory-statements/ss34-15---guidelines-for-completing-regulatory-reports" data-rb-content-link="Guidance">SS34/15</a>&nbsp;&lsquo;Guidelines for completing regulatory reports&rsquo; in relation to the following reporting requirement for branches of third-country banks:</p>
+<ul>
+    <li>risk management arrangements of the branch; and</li>
+    <li>governance arrangements, including key function holders for the activities of the branch.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1e09ec09dd17486994d951eb6afb41be"
+	 data-version="5229198d77dd468581ac422c69617417"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Mechanisms and procedures</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="cd32ffafa8ce4e43b2964d621a705d10"
+	 data-version="399b5b84d0f942e4838cc8c4ce05297b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that, taking into account the nature, scale and complexity of the business of the third country branch, and the nature and range of the financial services activities undertaken in the course of that business, the branch should establish, implement and maintain:</p>
+<ul>
+    <li>decision-making procedures and an organisational structure which clearly and in a documented manner specifies reporting lines and allocates functions and responsibilities; and</li>
+    <li>effective internal reporting and communication of information at all relevant levels of the branch.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="da339618b3f740d8ae29ae3542c9fab0"
+	 data-version="45e24f6f7a8540ac9f0875a19221f35d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Business continuity</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="713b43219db544569daaee1e547afe4a"
+	 data-version="a074871feb3b41dd9fa4ed7891db9290"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects a third country branch to take reasonable steps to ensure continuity and regularity in the performance of its regulated activities.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="07fd337049614b0cad83beaf1e2f5c31"
+	 data-version="2060e693bb454a8ca98cfd040b16b0ca"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should establish, implement and maintain an adequate business continuity policy aimed at ensuring, in the case of an interruption to its systems and procedures, that any losses are limited. The business continuity should also ensure the preservation of essential data and functions, and the maintenance of its regulated activities, or, where that is not possible, the recovery of such data and functions and the timely resumption of those activities.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d8d0c2d2ef2c4c2eaac4a6baf3fcaa1a"
+	 data-version="357dd458e75744d9ba60f9d2eaa8a1cf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The matters dealt with in a firm&rsquo;s business continuity policy should include:</p>
+<ul>
+    <li>resource requirements such as people, processes, systems and other assets, and arrangements for obtaining these resources;</li>
+    <li>the recovery priorities for the firm&rsquo;s and branch&rsquo;s operations;</li>
+    <li>communication arrangements for internal and external parties concerned (including regulators, clients and the press);</li>
+    <li>escalation and invocation plans that outline the processes for implementing the business continuity plans, together with relevant contact information;</li>
+    <li>processes to validate the integrity of information affected by the disruption; and</li>
+    <li>regular testing of the business continuity policy in an appropriate manner in accordance with <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#76b2f17f4bc94b7eb888adf3a2c77999" data-rb-content-link="Paragraph">2.8</a>.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0a311ef2809949bea1e6778ed3d652b1"
+	 data-version="9d8cd58af37344bbbd5d98185141c020"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Regular monitoring</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="76b2f17f4bc94b7eb888adf3a2c77999"
+	 data-version="639095e2cd784ada9717bf0c806508d6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should monitor and, on a regular basis,&nbsp; evaluate the adequacy and effectiveness of its systems, internal control mechanisms and arrangements established in accordance with Chapter <a href="/pra-rules/internal-governance-of-third-country-branches#ada8b29f17fe438ebf2a3740b58a1e71" data-rb-content-link="Chapter">2</a>&nbsp;of the Internal Governance of Third Country Branches Part of the PRA Rulebook, and take appropriate measures to address any deficiencies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/2-general-organisational-requirements/29-12-2020?p=1" data-id="4d5dcf9795d34459af84a589890fe4c6" data-effective-date="29-12-2020" data-download-title="General organisational requirements_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/2-general-organisational-requirements/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#4d5dcf9795d34459af84a589890fe4c6&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches – General organisational requirements">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="d7be27eb88b74e9a9add31721be7cecd"
+	 data-version="652ed3bf97864709968c11f5121341bf"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Persons who effectively direct the business
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="531c40546ad840c4b08d855736166a51"
+	 data-version="b58342dcdcb146849f7097d92170048d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The persons referred to in Chapter <a href="/pra-rules/internal-governance-of-third-country-branches#41599219b90b4959b43446014dcf6a74" data-rb-content-link="Chapter">3</a>&nbsp;of the Internal Governance of Third Country Branches Part of the PRA Rulebook should either be executive directors or persons granted executive powers by, and who report to, the governing body of the third country head office.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4d426d81e9c14536a33d2c400b26f14e"
+	 data-version="e69ad9199ebc495bb6b1317845a76e55"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA requires all third country branches to have at least one individual approved as a bespoke Senior Management Function (SMF) known as the Head of Overseas Branch (SMF19) with the option of having more than one individual if they elect to do so as set out in PS20/15 and PS29/15.<sup><a href="#footnote-9">9</a></sup> The individual(s) performing the SMF19 should have the highest degree of individual decision-making authority within the third country branch over activities and areas subject to UK regulation.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						PRA Policy Statement 20/15, ‘Strengthening individual accountability in banking: UK branches of Non-EEA banks’, August 2015:  <a href="http://www.bankofengland.co.uk/pra/Pages/publications/ps/2015/ps2015.aspx">www.bankofengland.co.uk/pra/Pages/publications/ps/2015/ps2015.aspx</a>, and PRA Policy Statement PS29/15, ‘Strengthening individual accountability in banking: UK branches of non-EEA banks’, December 2015:  <a href="http://www.bankofengland.co.uk/pra/Pages/publications/ps/2015/ps2915.aspx">www.bankofengland.co.uk/pra/Pages/publications/ps/2015/ps2915.aspx</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f6f770767e1c4817bbe542f140ccb572"
+	 data-version="62f739f767f643c2b37a3ea8c5ac07e3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects a firm as a whole to ensure that its management is undertaken by at least two persons who satisfy the criteria in Article 91 of CRD IV.<sup><a href="#footnote-10">10</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/3-persons-who-effectively-direct-the-business/29-12-2020?p=1" data-id="d7be27eb88b74e9a9add31721be7cecd" data-effective-date="29-12-2020" data-download-title="Persons who effectively direct the business_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/3-persons-who-effectively-direct-the-business/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#d7be27eb88b74e9a9add31721be7cecd&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches – Persons who effectively direct the business">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="b90fff05d83a46bf92f858dac9cdb65e"
+	 data-version="d5ecb4d209f3448385b7bb4b8081a956"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Responsibilities of senior personnel
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="1d5564bd957a45cc806b9bcd29502ab7"
+	 data-version="a57a0a77f1494188a8a42788404a5ea2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects a third country branch to ensure that:</p>
+<ul>
+    <li>the branch senior personnel receive on a frequent basis, and at least annually, written reports on matters covered in sections <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#f30242152ccb48d08bab2b7d99e6e7e1" data-rb-content-link="Paragraph">6.5</a>&nbsp;and <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#5eb8205dd1b54e3bb6fcab68b53aafc8" data-rb-content-link="Paragraph">7.7</a>, including in particular whether the appropriate remedial measures have been taken in the event of any deficiencies; and</li>
+    <li>the supervisory function, if any, receives on a regular basis written reports on the same matters.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d6f956aec9e24002b91d9e3686785ca5"
+	 data-version="3040363b8c524b1db8abe0ce7058c842"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the PRA&rsquo;s view, the supervisory function does not include a general meeting of the shareholders of the firm, or equivalent bodies, but could involve, for example, a separate supervisory body within a two-tiered board structure or the establishment of a non-executive committee of a single-tier board structure.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/4-responsibilities-of-senior-personnel/29-12-2020?p=1" data-id="b90fff05d83a46bf92f858dac9cdb65e" data-effective-date="29-12-2020" data-download-title="Responsibilities of senior personnel_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/4-responsibilities-of-senior-personnel/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#b90fff05d83a46bf92f858dac9cdb65e&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches – Responsibilities of senior personnel">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="a6964cffed724508be3c3aeb87a0442e"
+	 data-version="88b4ee3f3ddf47e3869d82236a5b4ed4"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Employees, agents and other relevant persons
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="677dc0a961cb4be28c7c4788fd6c0979"
+	 data-version="1271893d54324e438dab956b39dd4d66"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Skills, knowledge and expertise</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="4697dfd76d7742159125a4a4918e58b2"
+	 data-version="27c57ff2e4c64a59b19cefe25d01a785"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the PRA&rsquo;s view, a third country branch&rsquo;s systems and controls should enable it to satisfy itself of the suitability of anyone who acts for it. This includes assessing an individual&rsquo;s honesty and competence.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7bc0b6b430874597bd10ed3051743082"
+	 data-version="3bd2233bda9340ddaf9219f5f1cc6ba5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Any assessment of an individual&rsquo;s suitability should take into account the level of responsibility that the individual will assume within the third country branch. The nature of the assessment will generally differ depending upon whether it takes place at the start of the individual&rsquo;s recruitment, at the end of the probationary period (if there is one) or subsequently.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8a68210b17ba4fecbe7a3a1bb9969c43"
+	 data-version="27717b2509c74aea8c1724fb6f074dc9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The Certification Regime provides a framework for third country branches to assess and certify the fitness and propriety of certain employees on appointment and at least annually thereafter.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="db46e1041d6548ab9a6cbdc9b1e2c52b"
+	 data-version="ecdb763ad38a478c9ebd2db63b1b43fc"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Segregation of functions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="dce6884f5cba48e98ed565e5896fdd00"
+	 data-version="f017e159cd75416588cc89386726e2b5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the PRA&rsquo;s view a third country branch should ensure that the performance of multiple functions by its relevant persons does not and is not likely to prevent those persons from discharging any particular functions soundly, honestly and professionally. The senior personnel within the third country branch should define arrangements concerning the segregation of duties within the branch and the prevention of conflicts.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d2e4283b58a6433b9d81f1933fb80c84"
+	 data-version="b1e42e19f9b54572bada45e3453fc8be"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The effective segregation of duties is an important element in the internal controls of a third country branch in the prudential context. In particular, it helps to ensure that no one individual is completely free to commit assets or incur liabilities. Segregation can also help to ensure that the firm&rsquo;s governing body receives objective and accurate information on financial performance, the risks faced by the third country branch and the adequacy of its systems.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ea7a64aeb10142a2b053278f47380879"
+	 data-version="642c856d37a54790b02d8d22e32b8fe7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should normally ensure that no single individual has unrestricted authority to do all of the following:</p>
+<ul>
+    <li>initiate a transaction;</li>
+    <li>bind the third country branch or the whole firm;</li>
+    <li>make payments; and</li>
+    <li>account for it.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="29dea72da5e64dbdbf6fde1049fce520"
+	 data-version="e6b9104722ff49ea825316a8865d19e5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a third country branch is unable to ensure the complete segregation of duties (for example, because the branch has a limited number of staff), it should ensure that there is adequate compensating controls in place (for example, frequent review of an area by relevant branch senior managers).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="569b154af3254f7ea9fb1b98c841f038"
+	 data-version="8054b06558b54bf6850928e6cd0a1adb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a third country branch outsources its internal audit function, it should take reasonable steps to ensure that every individual involved in the performance of this service is independent from the individuals who perform its external audit. This should not prevent services from being undertaken by a firm&rsquo;s external auditors provided that:</p>
+<ul>
+    <li>the work is carried out under supervision and management of the third country branch&rsquo;s own internal staff; and</li>
+    <li>potential conflicts of interest between the provision of external audit services and the provision of internal audit are properly managed.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cf78b8e27a0b47aea0215550529b4aa5"
+	 data-version="b157fe9cfe8541b18d046aa1194f9d47"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Awareness of procedures</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="e03fcaa919774f1bb1e08bc6224003f0"
+	 data-version="253e799029cf43d9b5ca92a74a85857b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should ensure that its relevant persons are aware of the procedures which they are expected to follow for the proper discharge of their responsibilities, including compliance with PRA and FCA Rules.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="951d5c9da3d34440af2213b3f70394f9"
+	 data-version="79b95a3bf84f468bae5de2fe53dede79"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should monitor and, on a regular basis, evaluate the adequacy and effectiveness of its systems, internal control mechanisms and arrangements established in accordance with the Internal Governance of Third Country Branches <a href="/pra-rules/internal-governance-of-third-country-branches#fe0a2214db4f4b149d58afb4b7ec3c0d" data-rb-content-link="Rule">5.1</a>&nbsp;and section <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#a6964cffed724508be3c3aeb87a0442e" data-rb-content-link="Chapter">5</a>&nbsp;of this supervisory statement and take appropriate measures to address any deficiencies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/5-employees-agents-and-other-relevant-persons/29-12-2020?p=1" data-id="a6964cffed724508be3c3aeb87a0442e" data-effective-date="29-12-2020" data-download-title="Employees, agents and other relevant persons_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/5-employees-agents-and-other-relevant-persons/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#a6964cffed724508be3c3aeb87a0442e&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches – Employees, agents and other relevant persons">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="3dba001703fb45088ccfa7842ec60d20"
+	 data-version="b82d67a04ba044929c91468f49013ce8"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Compliance and internal audit
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="02ba675e6bd8458f9b38fe7699220cff"
+	 data-version="3734a240c13b4a9399a80b9d87ac66c1"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Compliance function</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="093ad4fd15c84bc2811efbb10a025cea"
+	 data-version="23ca05dfd7344a1eace3face079cde04"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Depending on the nature, scale and complexity of its business, it may be appropriate for a third country branch to have a separate compliance function. Where a third country branch has a separate compliance function, it should be permanent, effective, operate independently and should have the following responsibilities:</p>
+<ul>
+    <li>to monitor and, on a regular basis, to assess the adequacy and effectiveness of the measures and procedures put in place in accordance with Internal Governance of Third Country Branches <a href="/pra-rules/internal-governance-of-third-country-branches#88680452f4084b9a881482a808161953" data-rb-content-link="Rule">6.2</a>, and the actions taken to address any deficiencies in the third country branch&rsquo;s compliance with its obligations; and</li>
+    <li>to advise and assist the relevant persons responsible for carrying out regulated activities to comply with the third country branch&rsquo;s obligations under the regulatory system.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a920ee66bee2419788428fd7e2c95e2b"
+	 data-version="d415c28cca61487ca7385d3e8933d830"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In order to enable the third country branch compliance function to discharge its responsibilities properly and independently the PRA expects that the third country branch should ensure the compliance function has the necessary authority, resources, expertise and access to all relevant information.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8d3c3d01e78149ba978a05081b874909"
+	 data-version="ea1f9dff23ed4b9780a37d5404440a37"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In addition, where appropriate and proportionate in view of the nature, scale and complexity of its business, and the nature and range of its financial services and activities, undertaken in the course of that business the PRA expects the third country branch to ensure the following conditions are met:</p>
+<ul>
+    <li>the relevant persons involved in the third country branch&rsquo;s compliance team should not be involved in the performance of services or activities they monitor; and</li>
+    <li>the method of determining the remuneration of the relevant persons involved in the third country branch&rsquo;s compliance function do not compromise their objectivity.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5d442a33bea442dd95ae8c94477117a2"
+	 data-version="3a4856f7cf034402aad57608c28190d1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In setting the method of determining the remuneration of persons involved in the third country branch&rsquo;s compliance team, the PRA expects a third country branch to comply with the <a href="/pra-rules/remuneration" data-rb-content-link="Part">Remuneration Part</a> of the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1ecc89364f614c8abd5eff8ddf137a13"
+	 data-version="1c68e09d984b4fabb7f4d03c82e01b23"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Internal audit function</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="f30242152ccb48d08bab2b7d99e6e7e1"
+	 data-version="9189033be6394690808dda749cc1d20a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that a third country branch should, where appropriate and proportionate in view of the nature, scale and complexity of its business and the nature and range of its financial services activities, undertaken in the course of that business, establish an independent internal audit function. The internal audit function should have the following responsibilities:</p>
+<ul>
+    <li>to establish, implement and maintain an audit plan to examine and evaluate the adequacy and effectiveness of the third country branch&rsquo;s governance, systems, internal control mechanisms and arrangements (or alternatively, to assess the extent to which the firm&rsquo;s or group&rsquo;s audit plan meet local regulatory requirements and make any modifications that may be necessary);</li>
+    <li>to issue recommendations based on the result of work carried out in accordance with the audit plan;</li>
+    <li>to verify compliance with those recommendations; and</li>
+    <li>to report in relation to internal audit matters in accordance with <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#1d5564bd957a45cc806b9bcd29502ab7" data-rb-content-link="Paragraph">4.1</a>.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c1e2f460e8814c488ab44823bb146aee"
+	 data-version="abec55d57793496dba01de9692a20bac"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The term &lsquo;internal audit function&rsquo; above refers to the generally understood concept of internal audit within a third country branch, that is, the function of assessing adherence to and the effectiveness of internal systems and controls, procedures and policies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2c641191d9bc4644bd68f80b848693b8"
+	 data-version="7e027314103f4b95be6b0371f4142c83"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a third country branch has an individual performing the role of head of internal audit, he or she will need to be pre-approved as the Head of Internal Audit function (SMF5). This can include individuals performing this role across a range of UK legal entities, such as a regional head of internal audit responsible for this area in the firm&rsquo;s UK subsidiaries as well as the branch.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/6-compliance-and-internal-audit/29-12-2020?p=1" data-id="3dba001703fb45088ccfa7842ec60d20" data-effective-date="29-12-2020" data-download-title="Compliance and internal audit_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/6-compliance-and-internal-audit/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#3dba001703fb45088ccfa7842ec60d20&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches – Compliance and internal audit">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="38ed1058786f445e88dbcb3c0e083512"
+	 data-version="f34254f54df64f0f8fe033f89c916667"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Risk control
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a15e491724ca485b90a65e1618c948c8"
+	 data-version="9bb466cadcc949f7b2b767eebd157000"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Internal Governance of Third Country Branches <a href="/pra-rules/internal-governance-of-third-country-branches#bb844a71069c44daa0a782368a31500a" data-rb-content-link="Rule">2.1</a>&nbsp;requires a third country branch to have effective processes to identify, classify, manage, monitor and report the risks it is or might be exposed to.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c8d54b0bf5ef4503a752dfff148144aa"
+	 data-version="5b9d15ca1cc04a2392f10ab1f7779bc3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should establish, implement and maintain adequate risk management policies and procedures, including effective procedures for risk assessment, which identify the risks relating to the third country branch&rsquo;s activities, processes and systems, and where appropriate, set its risk appetite or the level of risk tolerated by the third country branch.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cfe37751628f486cb59fdb346be8d746"
+	 data-version="3a96442dd0bb4d78b5d521854cc6da2f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should adopt effective arrangements, processes and mechanisms to identify and manage the risk relating to its activities, processes and systems, in the light of that level of risk tolerance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="78ecb72354ab4bcc922cca9223cf524c"
+	 data-version="ed52aa96abde445da56bbafc3ccfa762"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The management body should approve and periodically review the strategies and policies for taking up, managing, monitoring and mitigating the risks the third country branch is or might be exposed to, including those posed by the macroeconomic environment in which it operates in relation to the status of the business cycle.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4d2f49e10e9d48a2b9ddb3bed13470fd"
+	 data-version="9ebcc6847742480f900e9406b385235f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For a firm included within the scope of the Internal Capital Adequacy Assessment 15 (Reverse stress testing), the strategies, policies and procedures for identifying, taking up, managing, monitoring and mitigating the risks to which the firm is or might be exposed include conducting reverse stress tests on its business plan as well. This would further senior personnel&rsquo;s understanding of the firm&rsquo;s vulnerabilities and would help them design measures to prevent or mitigate the risk of business failure.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b75b1f6ae1644994b7f838e4567758d2"
+	 data-version="16f8c0190e4b4a6f8c24d8c9715f3343"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should monitor the following:</p>
+<ul>
+    <li>the adequacy and effectiveness of its risk management function, policies and procedures;</li>
+    <li>the level of compliance by the third country branch and its relevant persons with the arrangements, processes and mechanisms adopted in accordance with <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#cfe37751628f486cb59fdb346be8d746" data-rb-content-link="Paragraph">7.3</a>; and</li>
+    <li>the adequacy and effectiveness of measures taken to address any deficiencies in those policies, procedures, arrangements, processes and mechanisms, including failures by the relevant persons to comply with such arrangements, processes and mechanisms or follow such policies and procedures.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5eb8205dd1b54e3bb6fcab68b53aafc8"
+	 data-version="98e6097cd12643d2b2fb7248fb402e24"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should, where appropriate and proportionate in view of the nature, scale and complexity of its business and the nature and range of the financial services and activities undertaken in the course of that business, establish and maintain a risk management function that operates independently and carries out the following tasks:</p>
+<ul>
+    <li>implementation of the policies and procedures referred to in <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#c8d54b0bf5ef4503a752dfff148144aa" data-rb-content-link="Paragraph">7.2</a>&nbsp;to <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#b75b1f6ae1644994b7f838e4567758d2" data-rb-content-link="Paragraph">7.6</a>; and</li>
+    <li>provision of reports and advice to senior personnel in accordance with <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#1d5564bd957a45cc806b9bcd29502ab7" data-rb-content-link="Paragraph">4.1</a>.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="62fe9b1e4215479b8278589d3cd58b86"
+	 data-version="16cc673035fe4bfe8e4885866e43cf4f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a third country branch does not maintain a risk management function that functions independently, it should nevertheless be able to demonstrate that the policies and procedures which it has adopted in accordance with <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#c8d54b0bf5ef4503a752dfff148144aa" data-rb-content-link="Paragraph">7.2</a>&nbsp;to <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#b75b1f6ae1644994b7f838e4567758d2" data-rb-content-link="Paragraph">7.6</a>&nbsp;satisfy those provisions and are consistently effective.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="eab7853908b64826a82af3639a55e7fa"
+	 data-version="9040b844d1134654a616e1fe1231b2fa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In setting the method of determining the remuneration of employees involved in the risk management function, third country branches will need to comply with the Remuneration parts of the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5977e63b65c34185a08885bc0ee145a1"
+	 data-version="d641349562524170af20796cb72c43e1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The term &lsquo;risk management function&rsquo; in <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#b75b1f6ae1644994b7f838e4567758d2" data-rb-content-link="Paragraph">7.6</a>&nbsp;and <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#62fe9b1e4215479b8278589d3cd58b86" data-rb-content-link="Paragraph">7.8</a>&nbsp;refers to the generally understood concept of risk assessment within a firm or third country branch, that is, the function of setting and controlling risk exposure. The risk management function is not a controlled function itself, but is part of the systems and controls function (SMF4).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="908d2ad02b1b4b4c867dbdca19005d07"
+	 data-version="420f7a43c4994b52a4116842411e45f6"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Governance arrangements</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8c5721312ca84b4db7c3a6fce2a7d304"
+	 data-version="e159a0e32b6c4d059c34d0c8f5ccd737"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that a third country branch should consider whether in order to fulfil Internal Governance for Third Country Branches <a href="/pra-rules/internal-governance-of-third-country-branches#bb844a71069c44daa0a782368a31500a" data-rb-content-link="Rule">2.1</a>&nbsp;and the general organisational requirements in this supervisory statement, their risk control arrangements should include:</p>
+<ul>
+    <li>the appointment of a branch head of risk; and the</li>
+    <li>establishment of a branch risk management oversight team whose role&nbsp; includes giving risk oversight under an effective risk management structure and framework.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1a59d0dae5d44125a3b4b71db23cb937"
+	 data-version="63f30c6fb65946a98dfd6e5addf74385"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Branch head of risk</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="e1f1d3c6e52740a3bfe7da3e92dbbb03"
+	 data-version="c9f7be299a7b409ba53fa05c0e9b265c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a third country branch has an individual performing the role of head of risk, he or she will need to be pre-approved as the Head of Risk function (SMF4) as explained in <a href="/guidance/supervisory-statements/ss28-15---strengthening-individual-accountability-in-banking" data-rb-content-link="Guidance">SS28/15</a>&nbsp;Strengthening individual accountability in banking.<sup><a href="#footnote-11">11</a></sup> This can include individuals performing this role across a range of UK legal entities, such as an regional CRO responsible for this area in the firm&rsquo;s UK subsidiaries as well as the branch. The PRA expects that an SMF4 should:</p>
+<ul>
+    <li>be accountable to the management body of&nbsp; the firm for oversight of branch-wide risk management;</li>
+    <li>be fully independent of a branch&rsquo;s individual business units;</li>
+    <li>have sufficient authority, stature and resources for the effective execution of his/her responsibilities;</li>
+    <li>have unfettered access to any parts of the branch&rsquo;s business capable of having an impact on the branch&rsquo;s risk profile;</li>
+    <li>ensure that the data used by the branch to assess its risks are fit for purpose in terms of quality, quantity and breadth;</li>
+    <li>provide oversight and challenge of the branch&rsquo;s systems and controls in respect of risk management;</li>
+    <li>provide oversight and validation of the branch&rsquo;s reporting of risk;</li>
+    <li>ensure the adequacy of risk information, risk analysis and risk training provided to members of the branch&rsquo;s management team;</li>
+    <li>report to the branch&rsquo;s management team (and, if appropriate, to the management body of a firm) on the branch&rsquo;s risk exposures relative to its risk appetite and tolerance, and the extent to which the risks inherent in any proposed business strategy and plans are consistent with the branch&rsquo;s risk appetite and tolerance. The branch head of risk should also alert the branch&rsquo;s management team and provide challenge on, any business strategy or plans that exceed the branch&rsquo;s risk appetite and tolerance; and</li>
+    <li>provide risk-focused advice and information into the setting and individual application of the branch&rsquo;s remuneration policy consistent with the <a href="/pra-rules/remuneration" data-rb-content-link="Part">Remuneration Part</a>&nbsp;of the PRA Rulebook.</li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-11" class="rb-footnote">
+					<span class="fn-col-1">
+						11.
+					</span>
+					<span class="fn-col-2">
+						PRA Supervisory Statement 28/15 ‘Strengthening individual accountability in banking’, July 2015, <a href="http://www.bankofengland.co.uk/pra/Pages/publications/ss/2016/ss2815update.aspx">www.bankofengland.co.uk/pra/Pages/publications/ss/2016/ss2815update.aspx</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="210fbe105f424d41876151f7d07054f6"
+	 data-version="f84214e2522d4dd0bd9f4f4792db2c1f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that a third country branch will structure its arrangements so that a senior management personnel at an appropriate level within the group will exercise functions in <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#e1f1d3c6e52740a3bfe7da3e92dbbb03" data-rb-content-link="Paragraph">7.12</a>&nbsp;taking into account group-wide risks.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7b138a1353c2452d8314bcd4067d328a"
+	 data-version="405c520434f64ea8a344228834025613"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Reporting lines of branch head of risk</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="49751c25af4b44b9a90aaeb137b8fc19"
+	 data-version="efb73cc76157460b90ff66dd1fad4995"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a third country branch has an individual performing the role of head of risk they should be accountable to a branch&rsquo;s management team and, in most cases, to the head of the firm or group risk management function. The PRA recognises that in addition, a reporting line should be established for operational purposes. Accordingly, to the extent necessary for effective operational management, the branch head of risk should report into the most senior branch management personnel. In practice, the PRA expects this to be the Head of Overseas Branch (SMF19) or another manager with a reporting line to the SMF19.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ae60e197fa9b4ee790bc91ba1c95a8dc"
+	 data-version="a0e8645b2a9a422a8111a8b1c61ab8d7"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Appointment and removal of branch head of risk</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="c100cbdedad34f0fb52fbebdd1633006"
+	 data-version="9604e60d70bb4b9db39effc4a2ecdc0b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should ensure that its branch head of risk&rsquo;s remuneration is subject to approval by the firm&rsquo;s management body, or an appropriate sub-committee. A third country branch should also ensure that the branch head of risk may not be removed from that role without the approval of the firm&rsquo;s management body or its head office.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ea2064cab26e431ebe8d69d63881f576"
+	 data-version="37f5a5c363bd4682bf102ba372352e1c"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Branch risk oversight team</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="a5049c5865094e58b5f42b75b958a650"
+	 data-version="3519433da62c4156ad7098e24596e08c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that, while a branch&rsquo;s management team is ultimately responsible for risk governance throughout the business, a third country branch should consider establishing a mechanism for providing risk oversight to the branch&rsquo;s business activities to provide focused support and advice on risk governance.&nbsp; Where a third country branch has established a risk oversight team its responsibilities should typically include:</p>
+<ul>
+    <li>providing advice to the branch&rsquo;s management team on risk strategy, including the oversight of current risk exposures of the branch, with particular, but not exclusive, emphasis on prudential risks;</li>
+    <li>development of proposals for consideration by the branch management team in respect of overall risk appetite and tolerance, as well as the metrics to be used to monitor the branch&rsquo;s risk management performance;</li>
+    <li>oversight and challenge of the design and execution of stress and scenario testing;</li>
+    <li>oversight and challenge of the day-to-day risk management and oversight arrangements of the branch management team;</li>
+    <li>oversight and challenge of due diligence on risk issues relating to material transactions and strategic proposals that are subject to approval by the branch management team; and</li>
+    <li>providing advice, oversight and challenge necessary to embed and maintain a supportive risk culture throughout the branch.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7c5938aca6924181a54aab6e1a3ccc5d"
+	 data-version="2324ce5fad2c4d25a061d5abebf224c5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In carrying out their risk governance responsibilities, a third country branch&rsquo;s management team and branch risk oversight function covering the branch should have regard to any relevant advice from the firm&rsquo;s audit committee concerning the effectiveness of its current control framework. In addition, they should remain alert to the possible need for expert advice and support on any risk issue, taking action to ensure that they receive such advice and support as may be necessary to meet their responsibilities effectively.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/7-risk-control/29-12-2020?p=1" data-id="38ed1058786f445e88dbcb3c0e083512" data-effective-date="29-12-2020" data-download-title="Risk control_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/7-risk-control/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#38ed1058786f445e88dbcb3c0e083512&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches – Risk control">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="7af34746229747f999d271a2e1c9653e"
+	 data-version="67fc6df12e0440ea890e6561854acfe0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Outsourcing
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="09b93d6e229043af8fd0abe0eff9566a"
+	 data-version="0e76fdda3bd741edbc205d01f5ad988e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should ensure that when relying on a third party for the performance of operational functions which are critical for the performance of its regulated activities, listed activities or ancillary services on a continuous and satisfactory basis, it takes reasonable steps to avoid undue additional operational risk.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f6b6ffadb58a4d8a832014a95b2bf658"
+	 data-version="4b1d013ffd4a477c8daa464c1e213a34"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should not undertake the outsourcing of important operational functions in such a way as to impair materially:</p>
+<ul>
+    <li>the quality of its internal control; and</li>
+    <li>the ability of the appropriate regulator to monitor the branch&rsquo;s compliance with all obligations under the regulatory system.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="40000f14f37a4da3ad29fbc829a82b36"
+	 data-version="3c51409d84ed49158f426735b299b175"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Internal Governance for Third Country Branches <a href="/pra-rules/internal-governance-of-third-country-branches#bb844a71069c44daa0a782368a31500a" data-rb-content-link="Rule">2.1</a>&nbsp;requires a third country branch to have effective processes to identify, manage, monitor and report risks and internal control mechanisms. Except in relation to those functions described in <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#2aa73028d973419b95ec3f20dbb8b7fc" data-rb-content-link="Paragraph">8.5</a>, where a firm relies on a third party for the performance of operational functions which are not critical or important for the performance of relevant services and activities (see <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#09b93d6e229043af8fd0abe0eff9566a" data-rb-content-link="Paragraph">8.1</a>). On a continuous and satisfactory basis, it should take into account in a manner that is proportionate given the nature, scale and complexity of the outsourcing, the provisions in this section in complying with the rule.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1be4ff632d304b09a7512b17b2d665d7"
+	 data-version="e3214d38c3e2433791715fdb10c6b00c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An operational function is regarded as critical or important if a defect or failure in its performance would materially impair the continuing compliance of a third country branch with the conditions and obligations of its authorisation or its other obligations under the regulatory system, its financial performance, or the soundness or the continuity of its relevant services and activities.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2aa73028d973419b95ec3f20dbb8b7fc"
+	 data-version="1dc87ca9cf294b49b32b05b1f0ce442f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Without prejudice to the status of any other function, the following functions should not be considered as critical or important for the purposes of this section:</p>
+<ul>
+    <li>the provision to the branch of advisory services, and other services which do not form part of the relevant services and activities of the branch, including the provision of legal advice to the branch, the training of personnel of the branch, billing services and the security of the branch&rsquo;s premises and personnel; and</li>
+    <li>the purchase of standardised services, including market information services and the provision of price feeds.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c2f68737c13a46dd803cfb025e1da0d8"
+	 data-version="0757a5d4b4bb4cc28cebf6095aad8e7b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects a third country branch to exercise due skill, care and diligence when entering into, managing or terminating any arrangement for the outsourcing to a service provider of critical or important operational functions or of any relevant services and activities.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1f0bcc826f3a4709bd116b029a042fef"
+	 data-version="580591ceb1a9494793b3ad4468d01492"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should take the necessary steps to ensure that the following conditions are satisfied:</p>
+<ul>
+    <li>the service provider should have the ability, capacity, and any authorisation required by law to perform the outsourced functions, services or activities reliably and professionally;</li>
+    <li>the service provider should carry out the outsourced services effectively, and to this end the branch establishes methods for assessing the standard of performance of the service provider;</li>
+    <li>the service provider should properly supervise the carrying out of the outsourced functions, and adequately manage the risks associated with the outsourcing;</li>
+    <li>appropriate action should be taken if it appears that the service provider may not be carrying out the functions effectively and in compliance with applicable laws and regulatory requirements;</li>
+    <li>the branch should retain the necessary expertise to supervise the outsourced functions effectively and to manage the risks associated with the outsourcing, and supervise those functions and manage associated risks;</li>
+    <li>the service provider should disclose to the branch any development that may have a material impact on its ability to carry out the outsourced functions effectively and in compliance with applicable laws and regulatory requirements;</li>
+    <li>the branch should be able to terminate the arrangement for the outsourcing where necessary without detriment to the continuity and quality of its provision of services to clients;</li>
+    <li>the service provider should co-operate with the PRA and any other relevant competent authority in connection with the outsourced activities;</li>
+    <li>the branch, its auditors, the PRA and any other relevant competent authority should&nbsp; have effective access to data related to the outsourced activities, as well as to the business premises of the service provider; and the appropriate regulator and any other relevant competent authority must be able to exercise those rights of access;</li>
+    <li>the service provider should protect any confidential information relating to the branch and its clients; and</li>
+    <li>the branch and the service provider should establish, implement and maintain a contingency plan for disaster recovery and periodic testing of backup facilities where that is necessary having regard to the function, service or activity that has been outsourced.</li>
+</ul>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="916e9057e2bd450da86d0d84a6edf105"
+	 data-version="ec75b50418744dec8b45b8c5643311b2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should ensure that the respective rights and obligations of the branch and the service provider are clearly allocated and set out in a written agreement.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a1b54b5d7a494f67b765d08d46149b82"
+	 data-version="0aaf435f073948698814c3571c123046"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a third country branch and the service provider are members of the same group, the branch may, for the purposes of <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#c2f68737c13a46dd803cfb025e1da0d8" data-rb-content-link="Paragraph">8.6</a>&nbsp;to <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#916e9057e2bd450da86d0d84a6edf105" data-rb-content-link="Paragraph">8.8</a>&nbsp;and <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#f0881a9eb933471ba696878e033a05cf" data-rb-content-link="Paragraph">8.10</a>&nbsp;and <a href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#26a2c7cb16054b0b8809792748fd4a22" data-rb-content-link="Paragraph">8.11</a>, take into account the extent to which the branch controls the service provider or has the ability to influence its actions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f0881a9eb933471ba696878e033a05cf"
+	 data-version="375d713d5ae048b684a9f8e0b5aa1742"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should make available on request to the PRA and any other relevant competent authority, all information necessary to enable the PRA and any other relevant competent authority to supervise the compliance of the performance of the outsourced activities with the requirements of the regulatory system.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="26a2c7cb16054b0b8809792748fd4a22"
+	 data-version="ab485f2a90a241adb57edb1d5b92bce7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should notify the PRA when it intends to rely on a third party for the performance of operational functions which are critical or important for the performance of relevant services and activities on a continuous and satisfactory basis.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/8--outsourcing/29-12-2020?p=1" data-id="7af34746229747f999d271a2e1c9653e" data-effective-date="29-12-2020" data-download-title="Outsourcing_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/8--outsourcing/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#7af34746229747f999d271a2e1c9653e&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches – Outsourcing">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="396472c838044b2a9887055c387f4a91"
+	 data-version="72756a13e7aa47ebab52837e776591bf"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Record keeping
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="32cbcbb0e8514a96845e4fa0733868a9"
+	 data-version="8c33a48260354faeb745c3655d6b141f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Subject to any other record-keeping rule, the PRA expects records to be capable of being reproduced in the English language on paper. Where a third country branch is expected or required to retain a record of a communication that was not made in the English language, it may retain it in that language. However, it should be able to provide a translation on request. If a third country branch&rsquo;s records relate to business carried on from an establishment in a country or territory outside the United Kingdom, an official language of that country or territory may be used instead of English.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="bd6eb4b872a943c9bcd084993dd681e9"
+	 data-version="2d6b1d8f7b8a4fb287d31f9108b00162"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A third country branch should have appropriate systems and controls in place with respect to the adequacy of, access to, and the security of its records so that the branch may fulfil its regulatory and statutory obligations. With respect to retention periods, the PRA expects that records should be retained for as long as is relevant for the purposes for which they are made.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="29-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/9-record-keeping/29-12-2020?p=1" data-id="396472c838044b2a9887055c387f4a91" data-effective-date="29-12-2020" data-download-title="Record keeping_29-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches/9-record-keeping/29-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss04-16---internal-governance-of-third-country-branches#396472c838044b2a9887055c387f4a91&amp;subject=PRA Rulebook - SS4/16 – Internal governance of third country branches – Record keeping">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

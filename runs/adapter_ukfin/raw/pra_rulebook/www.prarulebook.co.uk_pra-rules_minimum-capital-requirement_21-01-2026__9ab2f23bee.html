@@ -1,0 +1,2761 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{51AC5532-93DC-4338-9823-28B5C930493B} -->
+<title>Minimum Capital Requirement | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Minimum Capital Requirement">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Minimum Capital Requirement">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrgbfa-f-a084ac527-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":38,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1957985d","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":1139,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025610","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==dvinZKfxW+eotgEwOiaSP7BFbgJLCUHHDJTk4Qb+u8csY/XIdvibzfqwiV6xCiRGmHzOWtdrXO1zPvnG53T+0unlKa7vTV8vG2d+Vnr6feDjjG+Egpu7W8tpLGKQ7ajoRJHM2T3BFXHnML9/zrILMKkWpC/dmUnXDbU5rXCA6LfjKqnxtQWq3VuRvvrwF2qiNP70M/awWDjadu2ZjF8d2uUvLOdPXMEtr3sd4EAlkJ4dCIW9lq/sn6VPuew621EXYknaEyzEZu+JGpz37wde2Fv2Q+7sD8G6exNO5QNaxblEfM6dDfTABbO4+Pq8AAAzaDveQQP8pju6VF9IVxLPfHahQp1BszxIQpIqmP0ikvX5F4Am45Vs3lL9e6JIIKaSMTaVCARyJMCVSLCduHUe+wIdOeJbZQlIPoJUnqWLAoo=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Minimum Capital Requirement				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Minimum Capital Requirement
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/minimum-capital-requirement/01-01-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/minimum-capital-requirement/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/minimum-capital-requirement/31-12-2021">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2021
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/minimum-capital-requirement/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-e73169de-563e-481d-a4e0-a32848855616">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-e73169de-563e-481d-a4e0-a32848855616"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Minimum Capital Requirement
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Minimum Capital Requirement)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=fd2a152ecd2c48b79b89c128afae13c0">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Minimum Capital Requirement
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss04-15---solvency-ii---the-solvency-and-minimum/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS4/15 – Solvency II: the solvency and minimum capital requirements
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency-2-a-new-regime-for-insurers" class="list-links__link" target="_blank">
+										PS2/15 - Solvency II: A new regime for insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2021/july/review-of-solvency-ii-reporting-phase-1" class="list-links__link" target="_blank">
+										PS29/21 - Review of Solvency II: Reporting (Phase 1)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="http://www.legislation.gov.uk/" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Legislation.gov.uk
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="http://eur-lex.europa.eu/en/index.htm" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Eur-Lex
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/minimum-capital-requirement/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/31-12-2024?p=1" data-id="fd2a152ecd2c48b79b89c128afae13c0" data-effective-date="31-12-2024" data-download-title="Minimum Capital Requirement_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement&amp;subject=PRA Rulebook - Minimum Capital Requirement">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="b4dccf06c5434b42865588e118a46c1f"
+	 data-version="2195e4dfcb8646e0a07d802122cc3e88"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="12bd161dbd4e4a14a28cd7f342ec0b50"
+	 data-version="0a26f99cfd08468eaa7b1f7c030de0f7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a  class="glossary-link" title="UK Solvency II firm" href="#glossary-term-0d29d447fd4b4fca868c1d2e5b5e2276" data-mce-linktype="2" data-glossary-id="52930">UK Solvency II firm</a></em>; and</li>
+<li>(2) in accordance with <a  title="Insurance General Application 3" href="/pra-rules/insurance-general-application#2e5a9cd32e6d4026895a5d543b990108" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Insurance General Application 3</a>, the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em>, as modified by <a  title="5" href="/pra-rules/minimum-capital-requirement#457de76e62b14aeb9f3b33c94a31861b" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">5</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=12bd161dbd4e4a14a28cd7f342ec0b50">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ad2099f7c7734aa9b76685aedbe33ecf"
+	 data-version="b4ac82a1132443afb7402baf781dace4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply: [Note: there are currently no Part specific definitions]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/minimum-capital-requirement/31-12-2020#ad2099f7c7734aa9b76685aedbe33ecf">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ad2099f7c7734aa9b76685aedbe33ecf">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/1-application/31-12-2024?p=1" data-id="b4dccf06c5434b42865588e118a46c1f" data-effective-date="31-12-2024" data-download-title="Application_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/1-application/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement#b4dccf06c5434b42865588e118a46c1f&amp;subject=PRA Rulebook - Minimum Capital Requirement – Application">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b4dccf06c5434b42865588e118a46c1f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2abb51bbc7c5443ebf6410eaec0487e2"
+	 data-version="8bb054fc7c2d45698dc8bf41ad8fe6e8"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					General Provisions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="2cf88664ab2b426ea7f1bdec79aa28b0"
+	 data-version="68e3d9703a484eb6b51bf924b878fa9f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must hold <em><a  class="glossary-link" title="eligible own funds" href="#glossary-term-59a2e96da5d94193923a8cc805b0ccab" data-mce-linktype="2" data-glossary-id="52821">eligible own funds</a></em> covering the <em><a  class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em>.</p>
+			<p><strong>[Note: Art. 128 of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2cf88664ab2b426ea7f1bdec79aa28b0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/2-general-provisions/31-12-2024?p=1" data-id="2abb51bbc7c5443ebf6410eaec0487e2" data-effective-date="31-12-2024" data-download-title="General Provisions_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/2-general-provisions/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement#2abb51bbc7c5443ebf6410eaec0487e2&amp;subject=PRA Rulebook - Minimum Capital Requirement – General Provisions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2abb51bbc7c5443ebf6410eaec0487e2">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						General Provisions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="dbc7c2ea8205487aab57b9ee703c87f7"
+	 data-version="7d86a50e28bf4c11828c1f78abe8d3d4"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Calculation of the Minimum Capital Requirement
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e8933595184a460d87a6d9085449defd"
+	 data-version="7f8541dec56748ddafaf7dd6f31751a7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/minimum-capital-requirement/01-01-2016#e8933595184a460d87a6d9085449defd">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e8933595184a460d87a6d9085449defd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="21342afbb6f543059ec2a03489c9b3d1"
+	 data-version="954b05dbbeb3444ba322d55f4a6a96c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <a href="#glossary-term-b99076afb2584e458a5d9b1719918166">MCR</a>&nbsp;must be equal to the following:</p>
+<p>\[\mathrm{MCR=max(MCR_{combined},\ AMCR)}\]</p>
+<p>where:</p>
+<ol class="new-bullet">
+    <li>(1) MCR<sub>combined</sub> denotes the combined minimum capital requirement referred to in <a href="/pra-rules/minimum-capital-requirement#17ca7ea0a5944e638354fc1b6b6ae81f" data-rb-content-link="Rule">3.1B</a>; and</li>
+    <li>(2)  AMCR denotes the absolute floor referred to in <a href="/pra-rules/minimum-capital-requirement#965c1f3c028f41a3a7128379f39abac9" data-rb-content-link="Rule">3.2</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=21342afbb6f543059ec2a03489c9b3d1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="17ca7ea0a5944e638354fc1b6b6ae81f"
+	 data-version="777f789308bb4a1899e7e0aae40d42bc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The combined minimum capital requirement must be equal to the following:</p>
+<p>\[\mathrm{MCR_{combined}\ =\ min(max(MCR_{linear},\ 0.25\ \cdot \ SCR),\ 0.45\ \cdot \ SCR)}\]</p>
+<p>where:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;MCR<sub>linear</sub> denotes the linear minimum capital requirement, calculated in accordance with <a href="/pra-rules/minimum-capital-requirement#4098b14d755742deb1457676b47e4f14" data-rb-content-link="Chapter">3A</a>&nbsp;to <a href="/pra-rules/minimum-capital-requirement#38f0a95f0ca74a108e6394f7685d25e9" data-rb-content-link="Chapter">3C</a>; and</li>
+    <li>(2)&nbsp;SCR denotes the <a href="#glossary-term-543356ff94c3463ba142ee22e92fa355">SCR</a>&nbsp;calculated in accordance with <a href="#glossary-term-be3052a93bbb4c4ea4e46caf42256dc1">SCR Rules</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=17ca7ea0a5944e638354fc1b6b6ae81f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1B
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="965c1f3c028f41a3a7128379f39abac9"
+	 data-version="9f50b35501e5479baef821b6dcd9ebd0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em> must have an absolute floor of:</p>
+<ol class="new-bullet">
+    <li>(1) &pound;2,400,000 for <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em>, including <em><a class="glossary-link" title="captive insurers" href="#glossary-term-434e94ea8cbe4b62b8d1cf38df848dd8" data-mce-linktype="2" data-glossary-id="52669">captive insurers</a></em>, which have <em><a class="glossary-link" title="Part 4A permission" href="#glossary-term-70e2231bf99f44feb753d11bedbebec5" data-mce-linktype="2" data-glossary-id="52149">Part 4A permission</a></em> to <em><a class="glossary-link" title="effect contracts of insurance" href="#glossary-term-7773bc3941f24234abcff5dd681f0ae4" data-mce-linktype="2" data-glossary-id="52201">effect contracts of insurance</a></em> or <a class="glossary-link" title="carry out contracts of insurance" href="#glossary-term-c893b6e227264428b0abca2e14abfa3f" data-mce-linktype="2" data-glossary-id="52197">carry out contracts of insurance</a> that are <em><a class="glossary-link" title="contracts of general insurance" href="#glossary-term-fc941fbd74754b5488d09b988f924af6" data-mce-linktype="2" data-glossary-id="52198">contracts of general insurance</a></em>, except in the case where all or some of the <a class="glossary-link" title="general insurance business classes" href="#glossary-term-9102b1a1c10d44c6a8e08ba51c2394c7" data-mce-linktype="2" data-glossary-id="52806">general insurance business classes</a> 10 to 15 are covered, in which case it must be no less than &pound;3,500,000;</li>
+    <li>(2) &pound;3,500,000 for <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em>, including <em><a class="glossary-link" title="captive insurers" href="#glossary-term-434e94ea8cbe4b62b8d1cf38df848dd8" data-mce-linktype="2" data-glossary-id="52669">captive insurers</a></em>, which have <em><a class="glossary-link" title="Part 4A permission" href="#glossary-term-70e2231bf99f44feb753d11bedbebec5" data-mce-linktype="2" data-glossary-id="52149">Part 4A permission</a></em> to <em><a class="glossary-link" title="effect contracts of insurance" href="#glossary-term-7773bc3941f24234abcff5dd681f0ae4" data-mce-linktype="2" data-glossary-id="52201">effect contracts of insurance</a></em> or <em><a class="glossary-link" title="carry out contracts of insurance" href="#glossary-term-c893b6e227264428b0abca2e14abfa3f" data-mce-linktype="2" data-glossary-id="52197">carry out contracts of insurance</a></em> that are <em><a class="glossary-link" title="contracts of long term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long term insurance</a></em>;</li>
+    <li>(3) &pound;3,500,000 for <em><a class="glossary-link" title="pure reinsurer" href="#glossary-term-c79e612c9a2b4b1e9e5dd3c09dd65e18" data-mce-linktype="2" data-glossary-id="52879">pure reinsurer</a>s</em>, except in the case of <em><a class="glossary-link" title="captive reinsurers" href="#glossary-term-474096b450d644cba6b05653cf371c12" data-mce-linktype="2" data-glossary-id="52670">captive reinsurers</a></em> that are <em><a class="glossary-link" title="pure reinsurers" href="#glossary-term-c79e612c9a2b4b1e9e5dd3c09dd65e18" data-mce-linktype="2" data-glossary-id="52879">pure reinsurers</a></em>, in which case the <em><a class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em> must be no less than &pound;1,200,000;</li>
+    <li>(4) Unless (5) applies, the sum of the amounts set out in (1) and (2) for <a href="#glossary-term-8b6e83f73346493da09a9eccf763d620">composite firms</a>&nbsp;other than <em><a class="glossary-link" title="pure reinsurers" href="#glossary-term-c79e612c9a2b4b1e9e5dd3c09dd65e18" data-mce-linktype="2" data-glossary-id="52879">pure reinsurers</a></em>; or</li>
+    <li>(5)&nbsp;For <a href="#glossary-term-8b6e83f73346493da09a9eccf763d620">composite firms</a>, other than <a href="#glossary-term-c79e612c9a2b4b1e9e5dd3c09dd65e18">pure reinsurers</a>, whose <a href="#glossary-term-70e2231bf99f44feb753d11bedbebec5">Part 4A permission</a>&nbsp;in relation to<a href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea"> general insurance business</a> is limited to <a href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea">general insurance business</a>&nbsp;<a href="#glossary-term-9102b1a1c10d44c6a8e08ba51c2394c7">class</a>&nbsp;1 (accident) or <a href="#glossary-term-9102b1a1c10d44c6a8e08ba51c2394c7">class</a>&nbsp;2 (sickness) and where the gross written premiums for either:
+    <ol>
+        <li>(a) <span> </span><a href="#glossary-term-d9d6328c37cb40f4bde73147bc06e6ea">general insurance business</a>; or</li>
+        <li>(b) <span> </span><a href="#glossary-term-0e74283109224a46aa86e62bfc7829bc">long-term insurance business</a>,</li>
+        <li>do not exceed 10% of total gross written premiums of the firm as a whole, the amount set out in (2).</li>
+    </ol>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/minimum-capital-requirement/01-01-2016#965c1f3c028f41a3a7128379f39abac9">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 31/12/2024
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=965c1f3c028f41a3a7128379f39abac9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f85fa767a5c1471ca9f840ca14ec5adb"
+	 data-version="2a9175326eaf4606aa1fbe70695a0852"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Without prejudice to the requirements on the absolute floor in <a  title="3.2" href="/pra-rules/minimum-capital-requirement#965c1f3c028f41a3a7128379f39abac9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.2</a>, the <em><a  class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em> must neither fall below 25% nor exceed 45% of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> <a  class="glossary-link" title="SCR" href="#glossary-term-543356ff94c3463ba142ee22e92fa355" data-mce-linktype="2" data-glossary-id="52892">SCR</a></em>, calculated in accordance with <em><a  class="glossary-link" title="SCR Rules" href="#glossary-term-be3052a93bbb4c4ea4e46caf42256dc1" data-mce-linktype="2" data-glossary-id="52893">SCR Rules</a></em>, and including any <em><a  class="glossary-link" title="capital add-on" href="#glossary-term-37561882557d46cba0969cd252315717" data-mce-linktype="2" data-glossary-id="52801">capital add-on</a></em> which has been imposed.</p>
+			<p><strong>[Note: Art. 129(3) of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a>]</em></strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f85fa767a5c1471ca9f840ca14ec5adb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/3-calculation-of-the-minimum-capital-requirement/31-12-2024?p=1" data-id="dbc7c2ea8205487aab57b9ee703c87f7" data-effective-date="31-12-2024" data-download-title="Calculation of the Minimum Capital Requirement_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/3-calculation-of-the-minimum-capital-requirement/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement#dbc7c2ea8205487aab57b9ee703c87f7&amp;subject=PRA Rulebook - Minimum Capital Requirement – Calculation of the Minimum Capital Requirement">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=dbc7c2ea8205487aab57b9ee703c87f7">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Calculation of the Minimum Capital Requirement
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="4098b14d755742deb1457676b47e4f14"
+	 data-version="c7fe7246e15946c2bab78a8f5fa998c5"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3A
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Calculation of the Linear Minimum Capital Requirement
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="1150acfd559a45118c26d652ec6141a1"
+	 data-version="c303fa0a7a314ad1b225a4eec650006f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3A.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The linear minimum capital requirement referred to in <a href="/pra-rules/minimum-capital-requirement#17ca7ea0a5944e638354fc1b6b6ae81f" data-rb-content-link="Rule">3.1B</a>&nbsp;must be equal to the following:</p>
+<p>\[\mathrm{MCR_{linear}\ =\ MCR_{(linear,gi)}\ +\ MCR_{(linear,l)}}\]</p>
+<p>where:</p>
+<ol class="new-bullet">
+    <li>(1) MCR<sub>(linear,gi)</sub> denotes the linear formula component for <a href="#glossary-term-79a20084ff8e4d8bbf8c6ed5df1d06ca">general insurance and reinsurance obligations</a>; and</li>
+    <li>(2) MCR<sub>(linear,l)</sub> denotes the linear formula component for <a href="#glossary-term-da15ed4db5894066a2f1b5e4653b4353">long-term insurance and reinsurance obligations</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1150acfd559a45118c26d652ec6141a1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3A.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/3a-calculation-of-the-linear-minimum-capital-requirement/31-12-2024?p=1" data-id="4098b14d755742deb1457676b47e4f14" data-effective-date="31-12-2024" data-download-title="Calculation of the Linear Minimum Capital Requirement_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/3a-calculation-of-the-linear-minimum-capital-requirement/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement#4098b14d755742deb1457676b47e4f14&amp;subject=PRA Rulebook - Minimum Capital Requirement – Calculation of the Linear Minimum Capital Requirement">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=4098b14d755742deb1457676b47e4f14">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Calculation of the Linear Minimum Capital Requirement
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="ff620ac3500f46a7b99366f57e0ddbc1"
+	 data-version="20f8aa653b2b4755a26f60a7d11a52fc"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3B
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Linear Formula Component for General Insurance and Reinsurance Obligations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="855bb950ae824d12b302891793f59579"
+	 data-version="7fc5d27a36f94e06a26db875f9aac96f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3B.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The linear formula component for <a href="#glossary-term-79a20084ff8e4d8bbf8c6ed5df1d06ca">general insurance and reinsurance obligations</a>&nbsp;referred to in <a href="/pra-rules/minimum-capital-requirement#1150acfd559a45118c26d652ec6141a1" data-rb-content-link="Rule">3A.1</a>&nbsp;must be equal to the following:</p>
+<p>\[\mathrm{MCR_{linear,gi}}=\sum_{s}\mathrm{(\alpha_{s}\cdot TP_{(gi,s)})+(\beta_{s}\cdot P_{s})}\]</p>
+<p>where:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;the sum covers all segments set out in 6.1;</li>
+    <li>(2)&nbsp;TP<sub>(gi,s)</sub> denotes the <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;without a <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;for <a href="#glossary-term-79a20084ff8e4d8bbf8c6ed5df1d06ca">general insurance and reinsurance obligations</a>&nbsp;in the segment <sub>s</sub> after deduction of the amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>, with a floor equal to zero;</li>
+    <li>(3)  P<sub>s</sub> denotes the premiums written for <a href="#glossary-term-79a20084ff8e4d8bbf8c6ed5df1d06ca">general insurance and reinsurance obligations</a>&nbsp;in the segment <sub>s</sub> during the last 12 <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>, after deduction of <a href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd">premiums</a>&nbsp;for <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>, with a floor equal to zero; and</li>
+    <li>(4)  the factors &alpha;<sub>s</sub> and &beta;<sub>s</sub> are set out in <a href="/pra-rules/minimum-capital-requirement#6c9cd61b035c450aa36f95067a2c6bca" data-rb-content-link="Rule">6.1</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=855bb950ae824d12b302891793f59579">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3B.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5471e24ae06a448387f15461039e291a"
+	 data-version="5830739441734f4c82ec655f5e5439a6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3B.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>&nbsp;referred to in <a href="/pra-rules/minimum-capital-requirement#855bb950ae824d12b302891793f59579" data-rb-content-link="Rule">3B.1</a>(2) must not include any of the following amounts:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;or <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>&nbsp;that cannot be taken into account in accordance with <a href="/pra-rules/technical-provisions-further-requirements#00354399677c45e28707c7ebb454e88e" data-rb-content-link="Rule">Technical Provisions &ndash; Further Requirements 23.3</a>&nbsp;and <a href="/pra-rules/technical-provisions-further-requirements#96b729b1951c413aaa57f4c5f87ff829" data-rb-content-link="Rule">23.5</a>; and</li>
+    <li>(2)  amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;or <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>, that do not comply with <a href="/pra-rules/solvency-capital-requirement---standard-formula#74b69e05078a475a8890378bb47d7b20" data-rb-content-link="SubChapter">Solvency Capital Requirement &ndash; Standard Formula 3G2</a>, <a href="/pra-rules/solvency-capital-requirement---standard-formula#c4e811b89df546fabb32b160719a7e8a" data-rb-content-link="SubChapter">3G3</a>, <a href="/pra-rules/solvency-capital-requirement---standard-formula#822382cadd2e4d519a1bdbfaf9b1dc4d" data-rb-content-link="SubChapter">3G5</a>&nbsp;and <a href="/pra-rules/solvency-capital-requirement---standard-formula#29c171aff3dd43c2881367a85d365ab7" data-rb-content-link="SubChapter">3G7</a> or with <a href="/pra-rules/solvency-capital-requirement---internal-models#00db638455f7400ca9fa2498ea219830" data-rb-content-link="Rule">Solvency Capital Requirement &ndash; Internal Models 11.10</a>&nbsp;to <a href="/pra-rules/solvency-capital-requirement---internal-models#34ea2166e0ee4db2ad8acecd3701954a" data-rb-content-link="Rule">11.12</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5471e24ae06a448387f15461039e291a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3B.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3879674006504081b4ab7d433a5549d2"
+	 data-version="466163c3512e4081aeb8e3ab0069fafd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3B.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the calculation of <a href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd">premiums</a>&nbsp;written after deduction of <a href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd">premiums</a>&nbsp;for <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;referred to in 3B.1(3), the following <a href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd">premiums</a>&nbsp;for <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;must not be deducted:</p>
+<ol class="new-bullet">
+    <li>(1) <a href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd">premiums</a>&nbsp;in relation to non-insurance events or settled insurance claims that are not accounted for in the cashflows referred to in <a href="/pra-rules/technical-provisions-further-requirements#00354399677c45e28707c7ebb454e88e" data-rb-content-link="Rule">Technical Provisions &ndash; Further Requirements 23.3</a>; and</li>
+    <li>(2) <a href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd">premiums</a>&nbsp;for <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;that do not comply with <a href="/pra-rules/solvency-capital-requirement---standard-formula#74b69e05078a475a8890378bb47d7b20" data-rb-content-link="SubChapter">Solvency Capital Requirement &ndash; Standard Formula 3G2</a>, <a href="/pra-rules/solvency-capital-requirement---standard-formula#c4e811b89df546fabb32b160719a7e8a" data-rb-content-link="SubChapter">3G3</a>, <a href="/pra-rules/solvency-capital-requirement---standard-formula#822382cadd2e4d519a1bdbfaf9b1dc4d" data-rb-content-link="SubChapter">3G5</a>&nbsp;and <a href="/pra-rules/solvency-capital-requirement---standard-formula#29c171aff3dd43c2881367a85d365ab7" data-rb-content-link="SubChapter">3G7</a>, or with <a href="/pra-rules/solvency-capital-requirement---internal-models#00db638455f7400ca9fa2498ea219830" data-rb-content-link="Rule">Solvency Capital Requirement &ndash; Internal Models 11.10</a>&nbsp;to <a href="/pra-rules/solvency-capital-requirement---internal-models#34ea2166e0ee4db2ad8acecd3701954a" data-rb-content-link="Rule">11.12</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3879674006504081b4ab7d433a5549d2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3B.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/3b-linear-formula-component-for-general-insurance-and-reinsurance-obligations/31-12-2024?p=1" data-id="ff620ac3500f46a7b99366f57e0ddbc1" data-effective-date="31-12-2024" data-download-title="Linear Formula Component for General Insurance and Reinsurance Obligations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/3b-linear-formula-component-for-general-insurance-and-reinsurance-obligations/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement#ff620ac3500f46a7b99366f57e0ddbc1&amp;subject=PRA Rulebook - Minimum Capital Requirement – Linear Formula Component for General Insurance and Reinsurance Obligations">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=ff620ac3500f46a7b99366f57e0ddbc1">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Linear Formula Component for General Insurance and Reinsurance Obligations
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="38f0a95f0ca74a108e6394f7685d25e9"
+	 data-version="e8d4b080661a430aa4a3b9133aa7d731"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3C
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Linear Formula Component for Long-term Insurance and Reinsurance Obligations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="decb85e240ac4140a40b1748c31791ed"
+	 data-version="a00ed8491a274d9088a5a86b2142ef7f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3C.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The linear formula component for <a href="#glossary-term-da15ed4db5894066a2f1b5e4653b4353">long-term insurance and reinsurance obligations</a>&nbsp;referred to in <a href="/pra-rules/minimum-capital-requirement#1150acfd559a45118c26d652ec6141a1" data-rb-content-link="Rule">3A.1</a>&nbsp;must be equal to the following:</p>
+<p>\[\mathrm{MCR_{linear,l}\ =\ 0.037\ \cdot \ TP_{(l,1)}\ &ndash; 0.052 \cdot&nbsp;TP_{(l,2)} + 0.007 \cdot&nbsp;TP_{(l,3)}  + 0.021 \cdot&nbsp;TP_{(l,4)} + 0.0007 \cdot&nbsp;CAR}\]</p>
+<p>where:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;TP<sub>(l,1)</sub> denotes the <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;without a <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;in relation to guaranteed benefits provided for <a href="#glossary-term-3210d463470a43d88c3558a6d81e9481">long-term insurance obligations</a>&nbsp;with profit participation, after deduction of the amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>, with a floor equal to zero, and <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;without a <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;for <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a>&nbsp;obligations where the underlying <a href="#glossary-term-3210d463470a43d88c3558a6d81e9481">long-term insurance obligations</a>&nbsp;include profit participation, after deduction of the amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>, with a floor equal to zero;</li>
+    <li>(2)  TP<sub>(l,2)</sub> denotes the <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;without a <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;in relation to <a href="#glossary-term-483731f35c77416094d899eadbf469b2">future discretionary benefits</a>&nbsp;for <a href="#glossary-term-3210d463470a43d88c3558a6d81e9481">long-term insurance obligations</a>&nbsp;with profit participation, after deduction of the amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>, with a floor equal to zero;</li>
+    <li>(3)  TP<sub>(l,3)</sub> denotes the <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;without a <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;for <a href="#glossary-term-a7940d0fa82f4fc49857d1e2e21a5b6c">linked long-term liabilities</a>, after deduction of the amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>, with a floor equal to zero;</li>
+    <li>(4)  TP<sub>(l,4)</sub> denotes the <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;without a <a href="#glossary-term-20f81d78a5af475996352dde96195c42">risk margin</a>&nbsp;for <a href="#glossary-term-da15ed4db5894066a2f1b5e4653b4353">long-term insurance and reinsurance obligations</a>&nbsp;other than those mentioned in (1) to (3), after deduction of the&nbsp;amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>, with a floor equal to zero; and</li>
+    <li>(5)  CAR denotes the total capital at risk, being the sum, in relation to each <a href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8">contract of insurance</a>&nbsp;that gives rise to <a href="#glossary-term-da15ed4db5894066a2f1b5e4653b4353">long-term insurance and reinsurance obligations</a>, of the capital at risk of the contracts, where the capital at risk of a contract means the higher of zero and the difference between the following two amounts:</li>
+    <li>(a) the sum of all of the following:
+    <ol>
+        <li>(i) the amount that the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;would currently pay in the event of the death or disability of the <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">persons</a>&nbsp;insured under the <a href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8">contract of insurance</a>&nbsp;after deduction of the amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>; and</li>
+        <li>(ii) the expected present value of amounts not covered in (i) that the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;would pay in the future in the event of the immediate death or disability of the <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">persons</a>&nbsp;insured under the <a href="#glossary-term-68a7c1a033ce4419a08061c9c700ebc8">contract of insurance</a>&nbsp;after deduction of the amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>; and</li>
+    </ol>
+    </li>
+    <li>(b) the best estimate of the corresponding obligations after deduction of the amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=decb85e240ac4140a40b1748c31791ed">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3C.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0e3c00cd116f498fb6bf1437baa7d040"
+	 data-version="c6de0fd6d47147439b68685766c33fd7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3C.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;and <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>&nbsp;referred to in <a href="/pra-rules/minimum-capital-requirement#decb85e240ac4140a40b1748c31791ed" data-rb-content-link="Rule">3C.1</a>(1) to (4), must not include any of the following:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;or <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>&nbsp;that cannot be taken into account in accordance with <a href="/pra-rules/technical-provisions-further-requirements#00354399677c45e28707c7ebb454e88e" data-rb-content-link="Rule">Technical Provisions &ndash; Further Requirements 23.3</a>&nbsp;and <a href="/pra-rules/technical-provisions-further-requirements#96b729b1951c413aaa57f4c5f87ff829" data-rb-content-link="Rule">23.5</a>; and</li>
+    <li>(2) amounts recoverable from <a href="#glossary-term-5394d0b3fa654fbfb26bd8aca36c934e">reinsurance contracts</a>&nbsp;or <a href="#glossary-term-ed96e981f51542ed9dda7b0e48472f1b">special purpose vehicles</a>&nbsp;that do not comply with <a href="/pra-rules/solvency-capital-requirement---standard-formula#74b69e05078a475a8890378bb47d7b20" data-rb-content-link="SubChapter">Solvency Capital Requirement &ndash; Standard Formula 3G2</a>, <a href="/pra-rules/solvency-capital-requirement---standard-formula#c4e811b89df546fabb32b160719a7e8a" data-rb-content-link="SubChapter">3G3</a>, <a href="/pra-rules/solvency-capital-requirement---standard-formula#822382cadd2e4d519a1bdbfaf9b1dc4d" data-rb-content-link="SubChapter">3G5</a>, <a href="/pra-rules/solvency-capital-requirement---standard-formula#7cbea4aabf164ac4a46c949e77b0a4cf" data-rb-content-link="SubChapter">3G6</a>,&nbsp;<a href="/pra-rules/solvency-capital-requirement---standard-formula#29c171aff3dd43c2881367a85d365ab7" data-rb-content-link="SubChapter">3G7</a>, <a href="/pra-rules/solvency-capital-requirement---standard-formula#e31932a279df4af1bb9b3107e21f87d4" data-rb-content-link="SubChapter">3G8</a>&nbsp;and <a href="/pra-rules/solvency-capital-requirement---standard-formula#03e875c8581c4871ba1360647f2c01b2" data-rb-content-link="SubChapter">3G9</a>&nbsp;or with <a href="/pra-rules/solvency-capital-requirement---internal-models#00db638455f7400ca9fa2498ea219830" data-rb-content-link="Rule">Solvency Capital Requirement &ndash; Internal Models 11.10</a>&nbsp;to <a href="/pra-rules/solvency-capital-requirement---internal-models#34ea2166e0ee4db2ad8acecd3701954a" data-rb-content-link="Rule">11.12</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0e3c00cd116f498fb6bf1437baa7d040">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3C.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/3c-linear-formula-component-for-long-term-insurance-and-reinsurance-obligations/31-12-2024?p=1" data-id="38f0a95f0ca74a108e6394f7685d25e9" data-effective-date="31-12-2024" data-download-title="Linear Formula Component for Long-term Insurance and Reinsurance Obligations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/3c-linear-formula-component-for-long-term-insurance-and-reinsurance-obligations/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement#38f0a95f0ca74a108e6394f7685d25e9&amp;subject=PRA Rulebook - Minimum Capital Requirement – Linear Formula Component for Long-term Insurance and Reinsurance Obligations">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=38f0a95f0ca74a108e6394f7685d25e9">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Linear Formula Component for Long-term Insurance and Reinsurance Obligations
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="acd8141399b44b72b45cafc25941edf1"
+	 data-version="425fbe81c0374b728b799066ab2f23f1"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Frequency and Reporting in Relation to the Minimum Capital Requirement
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="939d7f0e452c4f4f9ab7b18e115e9220"
+	 data-version="6fb0625084b843d9806944c48e19a307"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must calculate the <em><a  class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em> at least quarterly and report the results of that calculation to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> in accordance with the requirements laid down in <a  title="Reporting 2.1" href="/pra-rules/reporting#35c185cc25f44e2c8ebd1b6357d91e60" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Reporting 2.1</a> to <a  title="2.5" href="/pra-rules/reporting#1f0539ab8c374d4d9bedf3af19db6f28" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a>.</p>
+			<p><strong>[Note: Art. 129(4) of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2021
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/minimum-capital-requirement/01-01-2016#939d7f0e452c4f4f9ab7b18e115e9220">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 31/12/2021
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=939d7f0e452c4f4f9ab7b18e115e9220">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8e25b88233e64485a9515de74b36215b"
+	 data-version="37e24212460b470bb29efc3aa1a086d4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where either of the limits referred to in <a  title="3.3" href="/pra-rules/minimum-capital-requirement#f85fa767a5c1471ca9f840ca14ec5adb" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.3</a> determines a <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em><a  class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em> the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must provide the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> information allowing a proper understanding of the reasons therefor.</p>
+			<p><strong>[Note: Art. 129(4) of the <em><a  class="glossary-link" title="Solvency II Directive" href="#glossary-term-10d0ef095eee4f6f9d806226309d0c22" data-mce-linktype="2" data-glossary-id="52899">Solvency II Directive</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8e25b88233e64485a9515de74b36215b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/4-frequency-and-reporting-in-relation-to-the-minimum-capital-requirement/31-12-2024?p=1" data-id="acd8141399b44b72b45cafc25941edf1" data-effective-date="31-12-2024" data-download-title="Frequency and Reporting in Relation to the Minimum Capital Requirement_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/4-frequency-and-reporting-in-relation-to-the-minimum-capital-requirement/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement#acd8141399b44b72b45cafc25941edf1&amp;subject=PRA Rulebook - Minimum Capital Requirement – Frequency and Reporting in Relation to the Minimum Capital Requirement">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=acd8141399b44b72b45cafc25941edf1">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Frequency and Reporting in Relation to the Minimum Capital Requirement
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="457de76e62b14aeb9f3b33c94a31861b"
+	 data-version="6137308fa8d64cc7980f1f227bb0a8a7"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Lloyd’s
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="98577afd67c64e7e90ef4cfa61186b9f"
+	 data-version="c82138902d764fc6a420ef1059499d90"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=98577afd67c64e7e90ef4cfa61186b9f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="79cc0aac41294077a7432bc6ad943e83"
+	 data-version="7a233dac50b44e6e8e0dbdff28a2018a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In calculating the <em><a  class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em> for Lloyd&rsquo;s, in the manner required by <a  title="3" href="/pra-rules/minimum-capital-requirement#dbc7c2ea8205487aab57b9ee703c87f7" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">3</a>, the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em> must ensure that the <em><a  class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em> is calibrated so as to include all quantifiable risks to which:</p>
+<ol class="new-bullet">
+<li>(1) <em><a class="glossary-link" title="members" href="#glossary-term-8a9f72118cdf4c0c9bcadfbd4de72bf7" data-mce-linktype="2" data-glossary-id="52205">members</a></em> are exposed as a consequence of those <em><a class="glossary-link" title="members" href="#glossary-term-8a9f72118cdf4c0c9bcadfbd4de72bf7" data-mce-linktype="2" data-glossary-id="52205">members</a></em> carrying on <em><a class="glossary-link" title="insurance business" href="#glossary-term-9c9ea400b5194286b440e752add53c8a" data-mce-linktype="2" data-glossary-id="52220">insurance business</a></em> at Lloyd&rsquo;s; and</li>
+<li>(2) the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em> is exposed, including risks to the <em><a  class="glossary-link" title="central assets" href="#glossary-term-32bfda143fc74aefa145f8d1d88a3a72" data-mce-linktype="2" data-glossary-id="52802">central assets</a></em> and <em><a  class="glossary-link" title="central liabilities" href="#glossary-term-69afbcbb779848d8a1928480cda40154" data-mce-linktype="2" data-glossary-id="52804">central liabilities</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=79cc0aac41294077a7432bc6ad943e83">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7330794eaf504ad1bba1fa0e7f554669"
+	 data-version="0d591316936a49bcb8bd1bcb567415f5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em> must determine, at least quarterly, the ratio of the Lloyd&rsquo;s <em><a  class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em> to the Lloyd&rsquo;s <em><a  class="glossary-link" title="SCR" href="#glossary-term-543356ff94c3463ba142ee22e92fa355" data-mce-linktype="2" data-glossary-id="52892">SCR</a></em> and notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of the result at the same time it reports the quarterly <em><a  class="glossary-link" title="MCR" href="#glossary-term-b99076afb2584e458a5d9b1719918166" data-mce-linktype="2" data-glossary-id="52852">MCR</a></em> calculation required by <a  title="4.1" href="/pra-rules/minimum-capital-requirement#939d7f0e452c4f4f9ab7b18e115e9220" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7330794eaf504ad1bba1fa0e7f554669">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fc48777106724944939f59c828489cd6"
+	 data-version="8be26a43bd60485aa9630c45497265c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em> must calculate a reporting point for each <em><a  class="glossary-link" title="underwriting member" href="#glossary-term-4c26512d0564408389ba48e515f58689" data-mce-linktype="2" data-glossary-id="52932">underwriting member</a></em>, in accordance with <a  title="5.5" href="/pra-rules/minimum-capital-requirement#a9dcd70b666a439f85e20a2bb8b62c6c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.5</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fc48777106724944939f59c828489cd6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a9dcd70b666a439f85e20a2bb8b62c6c"
+	 data-version="db4d4e2125c84491b62f00ec1b5ef5d7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The reporting point for each <em><a  class="glossary-link" title="underwriting member" href="#glossary-term-4c26512d0564408389ba48e515f58689" data-mce-linktype="2" data-glossary-id="52932">underwriting member</a></em> must be calculated using the ratio referred to in <a  title="5.3" href="/pra-rules/minimum-capital-requirement#7330794eaf504ad1bba1fa0e7f554669" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.3</a>, expressed as a percentage of the <em><a class="glossary-link" title="member&rsquo;s" href="#glossary-term-8a9f72118cdf4c0c9bcadfbd4de72bf7" data-mce-linktype="2" data-glossary-id="52205">member&rsquo;s</a></em> notional <em><a  class="glossary-link" title="SCR" href="#glossary-term-543356ff94c3463ba142ee22e92fa355" data-mce-linktype="2" data-glossary-id="52892">SCR</a></em> referred to in <a  title="Solvency Capital Requirement &ndash; General Provisions 8.4" href="/pra-rules/solvency-capital-requirement---general-provisions#2f1e79743fe34de7b5437afa5ae3dd88" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Solvency Capital Requirement &ndash; General Provisions 8.4</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a9dcd70b666a439f85e20a2bb8b62c6c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3595954f26cb496c97dea7aaa642bf43"
+	 data-version="fc019a59e3494fba84a98a0a20beb17e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em> must notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> if <em><a class="glossary-link" title="own funds" href="#glossary-term-5010ab0acc4c4c2eae62ef113963e586" data-mce-linktype="2" data-glossary-id="52391">own funds</a></em> attributable to a <em><a class="glossary-link" title="member" href="#glossary-term-8a9f72118cdf4c0c9bcadfbd4de72bf7" data-mce-linktype="2" data-glossary-id="52205">member</a></em> fall below the reporting point determined in accordance with <a  title="5.5" href="/pra-rules/minimum-capital-requirement#a9dcd70b666a439f85e20a2bb8b62c6c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.5</a> as soon as it is observed by the <em><a class="glossary-link" title="Society" href="#glossary-term-c757d61ac22a4f43b4565c1a14c53dfd" data-mce-linktype="2" data-glossary-id="52231">Society</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3595954f26cb496c97dea7aaa642bf43">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/5-lloyds/31-12-2024?p=1" data-id="457de76e62b14aeb9f3b33c94a31861b" data-effective-date="31-12-2024" data-download-title="Lloyd’s_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/5-lloyds/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement#457de76e62b14aeb9f3b33c94a31861b&amp;subject=PRA Rulebook - Minimum Capital Requirement – Lloyd’s">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=457de76e62b14aeb9f3b33c94a31861b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Lloyd’s
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="67b28461e5b14667b3537e0a3e2a0aba"
+	 data-version="c95acb835d4049c78cb37c89afa06364"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Minimum Capital Requirement Risk Factors for General Insurance and Health Insurance and Reinsurance Obligations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6c9cd61b035c450aa36f95067a2c6bca"
+	 data-version="3e56a3ff8c154c87bb8bc8b2aea425c8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<table class="content-table">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="" style="width: 40%;"><strong>Segment</strong></td>
+            <td><strong><a href="#glossary-term-8f53b7a55fbb4c70a42cde9746689605">Lines of business</a> that the segment consists of</strong></td>
+            <td><strong>Factor for <a href="#glossary-term-adecc870187743e29d1f98bbdd3d4e83">technical provisions</a>&nbsp;for segment <em>s</em> (&alpha;<sub>s</sub>)</strong></td>
+            <td><strong>Factor for <a href="#glossary-term-f0b9f9e4c75147d3bf8e9161da7654dd">premiums</a>&nbsp;written for segment <em>s</em> (&beta;<sub>s</sub>)</strong>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>1&nbsp;</td>
+            <td class="" style="width: 40%;">Medical expense insurance<br>
+            </td>
+            <td>1 and 13<br>
+            </td>
+            <td>4.7%&nbsp;</td>
+            <td>4.7%</td>
+        </tr>
+        <tr>
+            <td>2&nbsp;</td>
+            <td class="" style="width: 40%;">Income protection insurance<br>
+            </td>
+            <td>2 and 14<br>
+            </td>
+            <td>13.1%</td>
+            <td>8.5%</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td class="" style="width: 40%;">Workers&rsquo; compensation insurance&nbsp;</td>
+            <td>3 and 15<br>
+            </td>
+            <td>10.7%</td>
+            <td>7.5%</td>
+        </tr>
+        <tr>
+            <td>4&nbsp;</td>
+            <td class="" style="width: 40%;">Motor vehicle liability insurance and proportional <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83">reinsurance</a><br>
+            </td>
+            <td>4 and 16<br>
+            </td>
+            <td>8.5%</td>
+            <td>9.4%</td>
+        </tr>
+        <tr>
+            <td>5&nbsp;</td>
+            <td class="" style="width: 40%;">Other motor insurance and proportional <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>5 and 17<br>
+            </td>
+            <td>7.5%</td>
+            <td>7.5%</td>
+        </tr>
+        <tr>
+            <td>6&nbsp;</td>
+            <td class="" style="width: 40%;">Marine, aviation and transport insurance and proportional <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>6 and 18</td>
+            <td>10.3%</td>
+            <td>14%</td>
+        </tr>
+        <tr>
+            <td>7&nbsp;</td>
+            <td class="" style="width: 40%;">Fire and other damage to property insurance and proportional <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>7 and 19</td>
+            <td>9.4%</td>
+            <td>7.5%</td>
+        </tr>
+        <tr>
+            <td>8&nbsp;</td>
+            <td class="" style="width: 40%;">General liability insurance and proportional <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>8 and 20</td>
+            <td>10.3%</td>
+            <td>13.1%</td>
+        </tr>
+        <tr>
+            <td>9&nbsp;</td>
+            <td class="" style="width: 40%;">Credit and suretyship insurance and proportional <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>9 and 21</td>
+            <td>17.7%</td>
+            <td>11.3%</td>
+        </tr>
+        <tr>
+            <td>10&nbsp;</td>
+            <td class="" style="width: 40%;">Legal expenses insurance and proportional <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>10 and 22</td>
+            <td>11.3%</td>
+            <td>6.6%</td>
+        </tr>
+        <tr>
+            <td>11&nbsp;</td>
+            <td class="" style="width: 40%;">Assistance and its proportional <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>11 and 23</td>
+            <td>18.6%</td>
+            <td>8.5%</td>
+        </tr>
+        <tr>
+            <td>12&nbsp;</td>
+            <td class="" style="width: 40%;">Miscellaneous financial loss insurance and proportional <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>12 and 24</td>
+            <td>18.6%</td>
+            <td>12.2%</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td class="" style="width: 40%;">Non-proportional casualty <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>26</td>
+            <td>18.6%</td>
+            <td>15.9%</td>
+        </tr>
+        <tr>
+            <td>14&nbsp;</td>
+            <td class="" style="width: 40%;">Non-proportional marine, aviation and transport <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>27</td>
+            <td>18.6%</td>
+            <td>15.9%</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td class="" style="width: 40%;">Non-proportional property <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>28</td>
+            <td>18.6%</td>
+            <td>15.9%</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td class="" style="width: 40%;">Non-proportional health <a href="#glossary-term-bb3b7757a97d4c79828490247ac16d83" style="color: rgb(18, 39, 63); background-color: rgb(255, 255, 255);">reinsurance</a><br>
+            </td>
+            <td>25</td>
+            <td>18.6%</td>
+            <td>15.9%</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6c9cd61b035c450aa36f95067a2c6bca">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/minimum-capital-requirement/6-minimum-capital-requirement-risk-factors-for-general-insurance-etc/31-12-2024?p=1" data-id="67b28461e5b14667b3537e0a3e2a0aba" data-effective-date="31-12-2024" data-download-title="Minimum Capital Requirement Risk Factors for General Insurance and Health Insurance and Reinsurance Obligations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/minimum-capital-requirement/6-minimum-capital-requirement-risk-factors-for-general-insurance-etc/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/minimum-capital-requirement#67b28461e5b14667b3537e0a3e2a0aba&amp;subject=PRA Rulebook - Minimum Capital Requirement – Minimum Capital Requirement Risk Factors for General Insurance and Health Insurance and Reinsurance Obligations">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=67b28461e5b14667b3537e0a3e2a0aba">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Minimum Capital Requirement Risk Factors for General Insurance and Health Insurance and Reinsurance Obligations
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

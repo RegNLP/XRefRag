@@ -1,0 +1,3429 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/senior-management-functions" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/senior-management-functions" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{3BC8A236-9BFD-4AEA-8196-16C5E6499381} -->
+<title>Senior Management Functions | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Senior Management Functions">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Senior Management Functions">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrgb3q-f-c9a8f457a-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":29,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1957fa41","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":1130,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025655","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==a1WA3xNQQB1ZrrYLLnR/FGrODzNebNebozjPWG7hEFMmW5HLVhjxCWgBv/KgA2fvAjGmSfkW0xGSF2PM10AhB9SigjPCLN/Ga3l25FhIDRjiRNKMFP67H86fJg1oOsENva0kKOEhkOy8cXpBhSKkK6eiBsKYqZIMu3YbVlOlDXu9Mwzvy8qC8ip0T/qiO7U1B/a4o9qk/lpO18Y5qsu68I0CAz3cctxJUSa7jUBNbCK/QBhjX4HwgwqS9OS10ks7Uw6RhP6/NxOkeb/KOSiec//aAbqrjFtEEXDHm/qVwgvi/hpyAwv8cyW4JBgnZoH9gFawCG2vsqbZL364AdQEMWnMLBl4v50R5q0UjCM9YNzEm6IDGN06MSgp7q+vSgK5UFU7J6T4NMCGfBestnSmGrV/X0YlPbKXTiaHadgG7Gg=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Senior Management Functions				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Senior Management Functions
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/senior-management-functions/07-03-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/03/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/senior-management-functions/12-11-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						12/11/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/senior-management-functions/10-12-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						10/12/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/senior-management-functions/01-01-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2019
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/senior-management-functions/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-e09674da-c79d-4f1c-9187-a95faab6402f">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-e09674da-c79d-4f1c-9187-a95faab6402f"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Senior Management Functions
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Senior Management Functions)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-crr-firms">
+					Non-CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=0983a26f95024026a0aca8b24510cdd2">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Senior Management Functions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss15-13---groups/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS15/13 – Groups
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss16-13---large-exposures/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS16/13 – Large Exposures
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss28-15---strengthening-individual-accountability-in-banking/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS28/15 – Strengthening individual accountability in banking
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss05-16---corporate-governance-board-responsibilities/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS5/16 – Corporate governance: Board responsibilities
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss08-16---ring-fenced-bodies-rfbs/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS8/16 – Ring-fenced bodies (RFBs)
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss10-18---securitisation-general-requirements-and-capital-framework/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS10/18 – Securitisation: General requirements and capital framework
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss03-21---non-systemic-uk-banks-the-pras-approach-to-new-and-growing-banks/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS3/21 – Non-systemic UK banks: The Prudential Regulation Authority’s approach to new and growing banks
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/statements-of-policy/sop---the-pras-methodologies-for-setting-pillar-2-capital/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SoP5/15 – The PRA’s methodologies for setting Pillar 2 capital
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-banking-and-insurance" class="list-links__link" target="_blank">
+										PS3/15 - Strengthening individual accountability in banking and insurance - responses to CP14/14 and CP26/14
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-banking-responses" class="list-links__link" target="_blank">
+										PS16/15 - &quot;Strengthening individual accountability in banking: responses to CP14/14, CP28/14 and CP7/15&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-accountability-in-banking-uk-branches-of-foreign-banks" class="list-links__link" target="_blank">
+										PS20/15 - Strengthening individual accountability in banking: UK branches of non?EEA banks
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/pra-rulebook-administration-instrument-no-2-2015" class="list-links__link" target="_blank">
+										 - PRA Rulebook: Administration Instrument (No 2) 2015
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/strengthening-accountability-in-banking-and-insurance-implementation-of-sm-cr-and-simr" class="list-links__link" target="_blank">
+										PS5/16 - Strengthening accountability in banking and insurance: Implementation of SM&amp;CR and SIMR; and PRA requirements on regulatory references
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-implementation-of-ring-fencing-prudential-requirements-intragroup-arrangements" class="list-links__link" target="_blank">
+										PS20/16 - &quot;The implementation of ring-fencing: prudential requirements, intragroup arrangements and &amp; use of Financial Market Infrastructures&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/strengthening-accountability-in-banking-and-insurance-amendments-and-optimisations" class="list-links__link" target="_blank">
+										PS12/17 - Strengthening individual accountability in banking and insurance: amendments and optimisations
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-individual-accountability-in-insurance-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS15/18 - Strengthening individual accountability in insurance: Extension of the Senior Managers and Certification Regime to insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-accountability-implementing-the-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS26/18 - Strengthening accountability: Implementing the extension of the SM&amp;CR to insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="http://www.legislation.gov.uk/" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Legislation.gov.uk
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="http://eur-lex.europa.eu/en/index.htm" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Eur-Lex
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/senior-management-functions/31-12-2020_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/senior-management-functions/31-12-2020?p=1" data-id="0983a26f95024026a0aca8b24510cdd2" data-effective-date="31-12-2020" data-download-title="Senior Management Functions_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/senior-management-functions/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/senior-management-functions&amp;subject=PRA Rulebook - Senior Management Functions">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="41feea67558a442c9fb1440c9c2221b7"
+	 data-version="5f4a4fb229f340748b477e7fafa450b9"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="37a563774c2e4186923594171cd068cf"
+	 data-version="c3ec8917545b4e378e4ca90c9c0976db"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to every <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that is:</p>
+<ol class="new-bullet">
+    <li>(1) a <em><a class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em>;</li>
+    <li>(2) a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em>; or</li>
+    <li>(3) a <em><a class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> in relation to:</li>
+    <ol>
+        <li>(a) the activities of its establishment in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>; or</li>
+        <li>(b) if it does not have an establishment in the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>, its activities in the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>.</li>
+    </ol>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#37a563774c2e4186923594171cd068cf">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=37a563774c2e4186923594171cd068cf">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8bbbbce5d7bc49c3b382d015a242c0f3"
+	 data-version="bba4951b5d3346afa0b2433730dd5bf5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a class="glossary-link" title="Chief Executive function" href="#glossary-term-143794d869b742a69a641b222e6f51ec" data-mce-linktype="2" data-glossary-id="52578">Chief Executive function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="3.2" href="/pra-rules/senior-management-functions#65d17de9565e490cb5d7d1e910d2b628" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.2</a>.</p>
+<p><em><a class="glossary-link" title="Chief Finance function" href="#glossary-term-7532efd0b769440b9fd1d954f94ad2fa" data-mce-linktype="2" data-glossary-id="52579">Chief Finance function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="3.3" href="/pra-rules/senior-management-functions#0de600d503dc49f7bba8fff5e6625610" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.3</a>.</p>
+<p><em><a  class="glossary-link" title="Chief Operations function" href="#glossary-term-7afd0520a5184ac68ce8b65b12d16ce2" data-mce-linktype="2" data-glossary-id="78126">Chief Operations function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="3.8" href="/pra-rules/senior-management-functions#8b766ee565b2434f8762529bfcb80ce4" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.8</a>.</p>
+<p><em><a  class="glossary-link" title="critical function" href="#glossary-term-beed0e4cb0c7454fb6a0056b58e4d8f1" data-mce-linktype="2" data-glossary-id="78127">critical function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in section 3(1) and (2) of the Banking Act 2009.</p>
+<p><em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em></p>
+<p style="padding-left: 30px;">means a function which would, except for SUP10C.9.8R of the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-32be3c2dd21146a7805f3079824eae67" data-mce-linktype="2" data-glossary-id="52827">FCA Handbook</a></em>, be an <em><a  class="glossary-link" title="FCA governing function" href="#glossary-term-8b793f418ec348bdb08c1c617fab75b5" data-mce-linktype="2" data-glossary-id="52584">FCA governing function</a></em>.</p>
+<p><em><a class="glossary-link" title="FCA approval" href="#glossary-term-56351ab17ea74f98a9c5f8f21ca8d205" data-mce-linktype="2" data-glossary-id="52583">FCA approval</a></em></p>
+<p style="padding-left: 30px;">means at any time an approval granted to and in effect for a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> by the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> under section 59 of <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Approval for particular arrangements) for the performance of a <em><a class="glossary-link" title="controlled function" href="#glossary-term-77ed05e95e9144549fdcd84ae397fcab" data-mce-linktype="2" data-glossary-id="52215">controlled function</a></em> specified by the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em>.</p>
+<p><em><a class="glossary-link" title="Group Entity Senior Manager function" href="#glossary-term-e1bbe281fbca44dc9901d95f4dc5e28f" data-mce-linktype="2" data-glossary-id="52586">Group Entity Senior Manager function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="5.2" href="/pra-rules/senior-management-functions#8fd37e1b3ae84302ae469a4609a852a2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.2</a>.</p>
+<p><em><a class="glossary-link" title="Head of Key Business Area function" href="#glossary-term-12256d63117f4c839c1c54f86523fc85" data-mce-linktype="2" data-glossary-id="52587">Head of Key Business Area function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="3.6" href="/pra-rules/senior-management-functions#af6a9fbc36eb4998bdb34058a9a4e3e9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6</a>.</p>
+<p><em><a  class="glossary-link" title="Head of Overseas Branch function" href="#glossary-term-27e778d9c9304d50b83b0297b54520e0" data-mce-linktype="2" data-glossary-id="77806">Head of Overseas Branch function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="Senior Management Functions 7.2" href="/pra-rules/senior-management-functions#b73e06372dbe461fac9548d58bc4ef3a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Senior Management Functions 7.2</a>.</p>
+<p><em><a class="glossary-link" title="Senior Independent Director function" href="#glossary-term-2fcb60f23f984327ba5415293e0f89c8" data-mce-linktype="2" data-glossary-id="52588">Senior Independent Director function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="4.6" href="/pra-rules/senior-management-functions#0d224c338f5f450f815baef45c4f0076" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.6</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/10-12-2018#8bbbbce5d7bc49c3b382d015a242c0f3">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 01/01/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8bbbbce5d7bc49c3b382d015a242c0f3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2e5904a2017c49d581a48e8344c712cb"
+	 data-version="7a678ee37a464ccfb24f11a2f6f80b95"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Part does not apply to a function performed by:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> acting as an insolvency practitioner within the meaning of section 388 of the Insolvency Act 1986; or</li>
+<li>(2) a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> acting as a nominee in relation to a voluntary arrangement under Parts I (Company Voluntary Arrangements) and VIII (Individual Voluntary Arrangements) of the Insolvency Act 1986; or</li>
+<li>(3) a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> acting as an insolvency practitioner within the meaning of Article 3 of the Insolvency (Northern Ireland) Order 1989; or</li>
+<li>(4) a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> acting as a nominee in relation to a voluntary arrangement under Parts II (Company Voluntary Arrangements) and VIII (Individual Voluntary arrangements) of the Insolvency (Northern Ireland) Order 1989.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2e5904a2017c49d581a48e8344c712cb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/senior-management-functions/1-application-and-definitions/31-12-2020?p=1" data-id="41feea67558a442c9fb1440c9c2221b7" data-effective-date="31-12-2020" data-download-title="Application and Definitions_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/senior-management-functions/1-application-and-definitions/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/senior-management-functions#41feea67558a442c9fb1440c9c2221b7&amp;subject=PRA Rulebook - Senior Management Functions – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=41feea67558a442c9fb1440c9c2221b7">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="ddefd2794dd0467dba90bcc2cf5898f1"
+	 data-version="e8de792219c64b328556eed573614463"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					General
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="24a17fdedb974ad996a408b844ecc9fb"
+	 data-version="882f1348a22844d8989271d34ea716a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Each of the functions in <a  title="3" href="/pra-rules/senior-management-functions#52d1ead2fb4645cca74dd81b01ad0c72" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">3</a> to <a  title="7" href="/pra-rules/senior-management-functions#31d087d1be8446dda16f12593abb4c0e" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">7</a> is a <em><a class="glossary-link" title="controlled function" href="#glossary-term-77ed05e95e9144549fdcd84ae397fcab" data-mce-linktype="2" data-glossary-id="52215">controlled function</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=24a17fdedb974ad996a408b844ecc9fb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="491874fe17444711b0b6d9c478a55261"
+	 data-version="6a27d3b4528b45ed937d913315f7de4d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (other than a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a> </em>or a <em><a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>) must ensure that one or more <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> performs each of the following <em><a class="glossary-link" title="PRA senior management functions" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management functions</a></em> on its behalf:</li>
+<ol>
+<li>(a) the <em><a class="glossary-link" title="Chief Executive function" href="#glossary-term-143794d869b742a69a641b222e6f51ec" data-mce-linktype="2" data-glossary-id="52578">Chief Executive function</a></em>;</li>
+<li>(b) the <em><a class="glossary-link" title="Chief Finance function" href="#glossary-term-7532efd0b769440b9fd1d954f94ad2fa" data-mce-linktype="2" data-glossary-id="52579">Chief Finance function</a></em>; and</li>
+<li>(c) the <em><a class="glossary-link" title="Chairman function" href="#glossary-term-359d67bee1154420aba8215cc26d5f98" data-mce-linktype="2" data-glossary-id="52574">Chair of the Governing Body function</a></em>.</li>
+</ol>
+<li>(2) If a vacancy arises in respect of one or more of the <em><a class="glossary-link" title="PRA senior management functions" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management functions</a></em> set out in (1), a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that it appoints a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> to fill that vacancy as soon as practicable.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#491874fe17444711b0b6d9c478a55261">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=491874fe17444711b0b6d9c478a55261">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="341993027e134deca39941fc85cb3e7f"
+	 data-version="3db730bb19cc495eab6258f1a6daaa97"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>To the extent that,</p>
+<ol class="new-bullet">
+<li>(1) a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> appoints a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> to perform a function which, but for this rule, would be a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>;</li>
+<li>(2) the appointment is solely to provide cover for a <em><a class="glossary-link" title="PRA approved person" href="#glossary-term-9a4eb6e7bc0f455793dd9d3697399120" data-mce-linktype="2" data-glossary-id="52567">PRA approved person</a></em> whose absence is:</li>
+<ol>
+<li>(a) temporary; or</li>
+<li>(b) reasonably unforeseen; and</li>
+</ol>
+<li>(3) the appointment is for less than 12 weeks in a consecutive 12-month period,</li>
+</ol>
+<p>the description of that <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> does not relate to those activities of that <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=341993027e134deca39941fc85cb3e7f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fe12262a300e43eea7447b4c03120048"
+	 data-version="3b5f26b135af455e8a004350c2e57468"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) If a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> has been approved to perform a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> in relation to a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and also performs <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em>, performance of the <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> will include the performance of those <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em>, provided the following conditions are met:</li>
+<ol>
+<li>(a) the <em><a class="glossary-link" title="PRA&rsquo;s" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA&rsquo;s</a></em> approval to perform a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> has been granted and continues in force;</li>
+<li>(b) at the time of approval being granted by the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>, that <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> was not subject to an <em><a class="glossary-link" title="FCA approval" href="#glossary-term-56351ab17ea74f98a9c5f8f21ca8d205" data-mce-linktype="2" data-glossary-id="52583">FCA approval</a></em> to perform the particular <em><a class="glossary-link" title="FCA governing function" href="#glossary-term-8b793f418ec348bdb08c1c617fab75b5" data-mce-linktype="2" data-glossary-id="52584">FCA governing function</a></em>;</li>
+<li>(c) the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> made the notification required by SUP10C.9.8 R (4) of the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-32be3c2dd21146a7805f3079824eae67" data-mce-linktype="2" data-glossary-id="52827">FCA Handbook</a></em>; and</li>
+<li>(d) that <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> performs and is continuing to perform the <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em>.</li>
+</ol>
+<li>(2) If a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> has been approved to perform a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> in relation to a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> which includes performance of <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em> in the circumstances set out in (1), and that <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em>:</li>
+<ol>
+<li>(a) ceases to perform the <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>;</li>
+<li>(b) within three months of ceasing performance, is approved to perform a new <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; and</li>
+<li>(c) continues to perform the <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em>,</li>
+</ol></ol>
+<p style="padding-left: 30px;">performance of the new <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> will include the performance of those <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em>, provided the conditions in (1) (a)-(d) are met.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fe12262a300e43eea7447b4c03120048">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2deb9cc022fc45c08898d31488afcb45"
+	 data-version="2a5d95ed0d594ac7a10c0d2d2029e9b9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a <em><a class="glossary-link" title="PRA approved person" href="#glossary-term-9a4eb6e7bc0f455793dd9d3697399120" data-mce-linktype="2" data-glossary-id="52567">PRA approved person</a></em> who has been performing a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> which includes performance of <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em> in the circumstances set out in <a  title="2.4" href="/pra-rules/senior-management-functions#fe12262a300e43eea7447b4c03120048" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a>, ceases to perform a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> but continues to perform the <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em>, <a  title="2.4" href="/pra-rules/senior-management-functions#fe12262a300e43eea7447b4c03120048" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a> will continue to apply in respect of the performance of the <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em> until the earlier of:</p>
+<ol class="new-bullet">
+<li>(1) approval by the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> in respect of the performance by that person of those <em><a  class="glossary-link" title="FCA activities" href="#glossary-term-2ea81afbf5284018b3b0582d136f9e07" data-mce-linktype="2" data-glossary-id="66848">FCA activities</a></em> as an <em><a class="glossary-link" title="FCA governing function" href="#glossary-term-8b793f418ec348bdb08c1c617fab75b5" data-mce-linktype="2" data-glossary-id="52584">FCA governing function</a></em> in relation to the firm; or</li>
+<li>(2) three <em class="rule-style-2">months</em> from the time that the <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> ceased to perform that <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2deb9cc022fc45c08898d31488afcb45">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="16a6bc70f8634dcbaafb7595fefdc645"
+	 data-version="ed76be46b7e645daa03a4f3a1773579c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a <em><a class="glossary-link" title="PRA approved person" href="#glossary-term-9a4eb6e7bc0f455793dd9d3697399120" data-mce-linktype="2" data-glossary-id="52567">PRA approved person</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) (other than in the circumstances set out in <a  title="2.4" href="/pra-rules/senior-management-functions#fe12262a300e43eea7447b4c03120048" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a> or <a  title="2.5" href="/pra-rules/senior-management-functions#2deb9cc022fc45c08898d31488afcb45" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a>), performs one or more <em><a class="glossary-link" title="FCA responsibilities" href="#glossary-term-fb450e7e6ee74ff7a1b3793f91103e71" data-mce-linktype="2" data-glossary-id="52585">FCA responsibilities</a></em>;</li>
+<li>(2) ceases to perform any <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; and</li>
+<li>(3) that <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> does not have an <em><a class="glossary-link" title="FCA approval" href="#glossary-term-56351ab17ea74f98a9c5f8f21ca8d205" data-mce-linktype="2" data-glossary-id="52583">FCA approval</a></em> to perform an <em><a class="glossary-link" title="FCA controlled function" href="#glossary-term-4d084a65f6d6425f8b0dbef37e18160e" data-mce-linktype="2" data-glossary-id="52565">FCA controlled function</a></em> in relation to that firm</li>
+</ol>
+<p>the functions in (1) will continue to be part of the <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> which the <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> most recently performed for that <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>) until the earlier of:</p>
+<ol class="new-bullet">
+<li>(1) approval by the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> in respect of the performance by that person of an <em><a class="glossary-link" title="FCA controlled function" href="#glossary-term-4d084a65f6d6425f8b0dbef37e18160e" data-mce-linktype="2" data-glossary-id="52565">FCA controlled function</a></em> in relation to the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>; or</li>
+<li>(2) three <em class="rule-style-2">months</em> from the time that the <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> ceased to perform that <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=16a6bc70f8634dcbaafb7595fefdc645">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8ddde5df44104d2f9897ea8cef3ef75f"
+	 data-version="fb626220e7c54b999e3b367efcf46b13"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take all reasonable steps to ensure that before a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em>:</li>
+<ol>
+<li>(a) begins to perform a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; or</li>
+<li>(b) begins to perform new or revised responsibilities in performance of a <em><em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em></em></li>
+</ol>
+<li>      that <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> is provided with all of the information and materials that the <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> may reasonably expect in order to perform that <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> or those new or revised responsibilities effectively and in accordance with the <em><a class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em>.</li>
+<li>(2) A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must have a policy about how it complies with (1) including the systems and controls it uses and must maintain adequate records of the steps taken to comply with (1).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8ddde5df44104d2f9897ea8cef3ef75f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/senior-management-functions/2-general/31-12-2020?p=1" data-id="ddefd2794dd0467dba90bcc2cf5898f1" data-effective-date="31-12-2020" data-download-title="General_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/senior-management-functions/2-general/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/senior-management-functions#ddefd2794dd0467dba90bcc2cf5898f1&amp;subject=PRA Rulebook - Senior Management Functions – General">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=ddefd2794dd0467dba90bcc2cf5898f1">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						General
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="52d1ead2fb4645cca74dd81b01ad0c72"
+	 data-version="d3b6dd7022bf44d59d6f618db78025b2"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Executive
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="1916de8941034f71bc6c5b3529f916c9"
+	 data-version="768a5e320cfb4280b348bb023ab20edd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter does not apply to a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1916de8941034f71bc6c5b3529f916c9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="65d17de9565e490cb5d7d1e910d2b628"
+	 data-version="426884255ef2494c80bb293d0bce094a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Chief Executive function" href="#glossary-term-143794d869b742a69a641b222e6f51ec" data-mce-linktype="2" data-glossary-id="52578">Chief Executive function</a></em> (SMF1) is the function of having responsibility, under the immediate authority of the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em>, alone or jointly with others, for carrying out the management of the conduct of the whole of the business (or relevant activities) of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a> </em>(other than a<em> <a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=65d17de9565e490cb5d7d1e910d2b628">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0de600d503dc49f7bba8fff5e6625610"
+	 data-version="ae6e14f5077f488ca848b378e778f1cc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Chief Finance function" href="#glossary-term-7532efd0b769440b9fd1d954f94ad2fa" data-mce-linktype="2" data-glossary-id="52579">Chief Finance function</a></em> (SMF2) is the function of having responsibility for management of the financial resources of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and reporting directly to the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in relation to its financial affairs.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0de600d503dc49f7bba8fff5e6625610">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="68d58fad805049798751ed26ce3485bb"
+	 data-version="4da2e69c6c854a498cd91dca7a2d0ce0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Chief Risk function" href="#glossary-term-056097e2ee514a56a5754c42d82910d4" data-mce-linktype="2" data-glossary-id="52581">Chief Risk function</a></em> (SMF4) is the function of having responsibility for overall management of the risk controls of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, including the setting and managing of its risk exposures, and reporting directly to the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in relation to its risk management arrangements.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=68d58fad805049798751ed26ce3485bb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="920476959d22473c97f83c93d4dbf5fb"
+	 data-version="d905b21f8b304886919b5955de59d78e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Head of Internal Audit function" href="#glossary-term-48add308e5284760a9c6d4d58f49f196" data-mce-linktype="2" data-glossary-id="52580">Head of Internal Audit function</a></em> (SMF5) is the function of having responsibility for management of the internal audit function of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and for reporting directly to the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> on the internal audit function.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=920476959d22473c97f83c93d4dbf5fb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="af6a9fbc36eb4998bdb34058a9a4e3e9"
+	 data-version="cd6d26e1099940998b32e9418f1e6f28"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Head of Key Business Area function" href="#glossary-term-12256d63117f4c839c1c54f86523fc85" data-mce-linktype="2" data-glossary-id="52587">Head of Key Business Area function</a></em> (SMF6) is the function of having responsibility for management of a business area or division of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (other than a<em> <a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>), where:</p>
+<p style="padding-left: 30px;">[deleted.]</p>
+<ol class="new-bullet">
+<li>(1A) either:</li>
+<ol>
+<li>(a) both of the quantitative criteria set out in <a  title="3.6A" href="/pra-rules/senior-management-functions#da402f0a93664b41b04e26bc9bdbbe85" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6A</a> are satisfied in respect of the relevant business area or division of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>; or</li>
+<li>(b) one of the quantitative criteria set out in <a  title="3.6A" href="/pra-rules/senior-management-functions#da402f0a93664b41b04e26bc9bdbbe85" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6A</a> is satisfied in respect of the relevant business area or division of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and the relevant business area or division of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> performs a <em><a  class="glossary-link" title="critical function" href="#glossary-term-beed0e4cb0c7454fb6a0056b58e4d8f1" data-mce-linktype="2" data-glossary-id="78127">critical function</a></em>; and</li>
+</ol>
+<li>(2) the <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> performing that function does not report to a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> performing the <em><a class="glossary-link" title="Head of Key Business Area function" href="#glossary-term-12256d63117f4c839c1c54f86523fc85" data-mce-linktype="2" data-glossary-id="52587">Head of Key Business Area function</a></em> in respect of that same business area or division of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					12/11/2017
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#af6a9fbc36eb4998bdb34058a9a4e3e9">
+			Past
+			<span class="visually-hidden">
+				version of 3.6 before 12/11/2017
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=af6a9fbc36eb4998bdb34058a9a4e3e9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="da402f0a93664b41b04e26bc9bdbbe85"
+	 data-version="db0da0915a3c47f39d78110c20b0e1cc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The quantitative criteria referred to in <a  title="3.6" href="/pra-rules/senior-management-functions#af6a9fbc36eb4998bdb34058a9a4e3e9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6</a> are that the relevant business area or division of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) has gross total assets equal to or in excess of &pound;10 billion; or</li>
+<li>(2) accounts for more than 20% of the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> gross revenue.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					12/11/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=da402f0a93664b41b04e26bc9bdbbe85">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.6A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="38e580053585479faa0f94e073d47191"
+	 data-version="b9ebed729868414eaa847ba7a3bf09a4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="3.6" href="/pra-rules/senior-management-functions#af6a9fbc36eb4998bdb34058a9a4e3e9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6</a>, the gross total assets of the business area or division of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and the percentage of the gross revenue of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or <em><a class="glossary-link" title="group" href="#glossary-term-5c72c3f6685d4db4ab2ccb4dcc72aca9" data-mce-linktype="2" data-glossary-id="52570">group</a></em> shall be determined on the basis of either:</p>
+<ol class="new-bullet">
+<li>(1) the assets and revenues for the business area or division, and the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or <em><a class="glossary-link" title="group" href="#glossary-term-5c72c3f6685d4db4ab2ccb4dcc72aca9" data-mce-linktype="2" data-glossary-id="52570">group</a></em>, as the case may be, for the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> financial year immediately preceding that in which the <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> is allocated with the specified responsibilities; or</li>
+<li>(2) if the threshold amount is not met for that period, on the basis of the annual average amount calculated across a rolling period of five years (calculated by reference to the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> annual accounting date). Where the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or the business area or division has been in existence for less than five years, the calculation will be made on the basis of the annual average amount for the period during which the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or that business line or division has existed (calculated by reference to the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> annual accounting date).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=38e580053585479faa0f94e073d47191">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8b766ee565b2434f8762529bfcb80ce4"
+	 data-version="e4fd43031c7547bb86285a9ce5a73d9f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="Chief Operations function" href="#glossary-term-7afd0520a5184ac68ce8b65b12d16ce2" data-mce-linktype="2" data-glossary-id="78126">Chief Operations function</a></em> (SMF24) is the function of having responsibility for the internal operations and technology of a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					12/11/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8b766ee565b2434f8762529bfcb80ce4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/senior-management-functions/3-executive/31-12-2020?p=1" data-id="52d1ead2fb4645cca74dd81b01ad0c72" data-effective-date="31-12-2020" data-download-title="Executive_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/senior-management-functions/3-executive/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/senior-management-functions#52d1ead2fb4645cca74dd81b01ad0c72&amp;subject=PRA Rulebook - Senior Management Functions – Executive">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=52d1ead2fb4645cca74dd81b01ad0c72">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Executive
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="50b88ce9da2c409a9221d5402273ee15"
+	 data-version="5e3e470c2d604fac9d334356bbdf133b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Oversight
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="0313fc4427d54c66bfd756fd0b5fa068"
+	 data-version="a4318c4f39d54688ab78877e9392ef4b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter does not apply to a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em> or a<em> <a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0313fc4427d54c66bfd756fd0b5fa068">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a6ab02453d7e4b6dabd4c8e4798f6c89"
+	 data-version="f9201eddea3343a489add3338be03155"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Chairman function" href="#glossary-term-359d67bee1154420aba8215cc26d5f98" data-mce-linktype="2" data-glossary-id="52574">Chair of the Governing Body function</a></em> (SMF9) is the function of having responsibility for chairing, and overseeing the performance of the role of, the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#a6ab02453d7e4b6dabd4c8e4798f6c89">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a6ab02453d7e4b6dabd4c8e4798f6c89">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6a2799a1464b4ffea15e25288572e8e8"
+	 data-version="e987d1749bfc4d26b77e15f4c5d1db08"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Chairman of Risk Committee function" href="#glossary-term-a37df064a073443e8147913a2e4a7e81" data-mce-linktype="2" data-glossary-id="52577">Chair of Risk Committee function</a></em> (SMF10) is the function of having responsibility for chairing, and overseeing the performance of any committee responsible for the oversight of the risk management systems, policies and procedures of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> specified in <a  title="Risk Control 2" href="/pra-rules/risk-control#57ce8d99970b42fab6215fe44c09d4f1" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Risk Control 2</a>, including where applicable to the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, a committee established in accordance with <a  title="Risk Control 3.1" href="/pra-rules/risk-control#b24d3a9c1d8e4d5cbcd85aa4f84584cb" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Risk Control 3.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#6a2799a1464b4ffea15e25288572e8e8">
+			Past
+			<span class="visually-hidden">
+				version of 4.3 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6a2799a1464b4ffea15e25288572e8e8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="24d5f2f620a44b2aa9a5f3ee6b97f900"
+	 data-version="03cb1f1c3dc748708a32fed4f2bb6c6e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Chairman of Audit Committee function" href="#glossary-term-5fb4dc22a43b4c469b762f896cb9f9fb" data-mce-linktype="2" data-glossary-id="52575">Chair of Audit Committee function</a></em> (SMF11) is the function of having responsibility for chairing, and overseeing the performance of any committee responsible for the oversight of the internal audit system of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> specified in <a  title="Compliance and Internal Audit 2" href="/pra-rules/compliance-and-internal-audit#236411ead98f4f208fee7cc8f10e376b" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Compliance and Internal Audit 2</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#24d5f2f620a44b2aa9a5f3ee6b97f900">
+			Past
+			<span class="visually-hidden">
+				version of 4.4 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=24d5f2f620a44b2aa9a5f3ee6b97f900">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="da902dc3bf8a49148144e631ad8c1596"
+	 data-version="f877d6e776b344e190ebe2d716ed6a9f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Chairman of Remuneration Committee function" href="#glossary-term-f64d72310a064f23823b0eed9dd8cbae" data-mce-linktype="2" data-glossary-id="52576">Chair of Remuneration Committee function</a></em> (SMF12) is the function of having responsibility for chairing, and overseeing the performance of any committee responsible for the oversight of the design and the implementation of the remuneration policies of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, including where applicable to the firm, a committee established in accordance with <a  title="Remuneration 7.4" href="/pra-rules/remuneration#caa8fd77d6bd4b82a35ab9b03aaedb42" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Remuneration 7.4</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#da902dc3bf8a49148144e631ad8c1596">
+			Past
+			<span class="visually-hidden">
+				version of 4.5 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=da902dc3bf8a49148144e631ad8c1596">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0d224c338f5f450f815baef45c4f0076"
+	 data-version="8d15dce19ae9417bb2ca7ab8f2a9b2c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Senior Independent Director function" href="#glossary-term-2fcb60f23f984327ba5415293e0f89c8" data-mce-linktype="2" data-glossary-id="52588">Senior Independent Director function</a></em> (SMF14) is the function of performing the role of a senior independent <em><a class="glossary-link" title="director" href="#glossary-term-003127b8ca1d48fcb0612a82af1e31c7" data-mce-linktype="2" data-glossary-id="52144">director</a></em>, and having particular responsibility for leading the assessment of the performance of the <em><a  class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> performing the <em><a class="glossary-link" title="Chairman function" href="#glossary-term-359d67bee1154420aba8215cc26d5f98" data-mce-linktype="2" data-glossary-id="52574">Chair of the Governing Body function</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#0d224c338f5f450f815baef45c4f0076">
+			Past
+			<span class="visually-hidden">
+				version of 4.6 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0d224c338f5f450f815baef45c4f0076">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/senior-management-functions/4-oversight/31-12-2020?p=1" data-id="50b88ce9da2c409a9221d5402273ee15" data-effective-date="31-12-2020" data-download-title="Oversight_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/senior-management-functions/4-oversight/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/senior-management-functions#50b88ce9da2c409a9221d5402273ee15&amp;subject=PRA Rulebook - Senior Management Functions – Oversight">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=50b88ce9da2c409a9221d5402273ee15">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Oversight
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="1873f88f1e2044c0a1db8baf1d08a550"
+	 data-version="8111081553854d49ba17a23917550c8f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Group Entities
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d5e35417a2ce4b05918cc559e5e2d0de"
+	 data-version="dfe7ae0a430a4cfdbe3a14c52f1688eb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter does not apply to a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d5e35417a2ce4b05918cc559e5e2d0de">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8fd37e1b3ae84302ae469a4609a852a2"
+	 data-version="78aa8ef3da134530865e50aa4f51014a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Group Entity Senior Manager function" href="#glossary-term-e1bbe281fbca44dc9901d95f4dc5e28f" data-mce-linktype="2" data-glossary-id="52586">Group Entity Senior Manager function</a></em> (SMF7) is the function of having a significant influence on the management or conduct of one or more aspects of the affairs of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in relation to its <em><a  class="glossary-link" title="regulated activit" href="#glossary-term-ec201e9c9fc244e6bd8249a742f4b8fc" data-mce-linktype="2" data-glossary-id="52721">regulated activities</a></em> (other than in the course of the performance of another <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>) and which is performed by a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> employed by, or an officer of:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a  class="glossary-link" title="parent undertaking" href="#glossary-term-cc80733831ac4e40bbb6771064eca0f3" data-mce-linktype="2" data-glossary-id="52868">parent undertaking</a></em> or <em class="rule-style-2">holding company</em> of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>; or</li>
+<li>(2) another <em><a class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a></em> which is a member of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em><a class="glossary-link" title="group" href="#glossary-term-5c72c3f6685d4db4ab2ccb4dcc72aca9" data-mce-linktype="2" data-glossary-id="52570"> group</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8fd37e1b3ae84302ae469a4609a852a2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/senior-management-functions/5-group-entities/31-12-2020?p=1" data-id="1873f88f1e2044c0a1db8baf1d08a550" data-effective-date="31-12-2020" data-download-title="Group Entities_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/senior-management-functions/5-group-entities/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/senior-management-functions#1873f88f1e2044c0a1db8baf1d08a550&amp;subject=PRA Rulebook - Senior Management Functions – Group Entities">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1873f88f1e2044c0a1db8baf1d08a550">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Group Entities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="8e70fed780dc4a95901ea6318ff8bc88"
+	 data-version="ca667a1b4a1e4c1786bd82fec5501e9c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Credit Unions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="61b9e376c20a4188b4db914c2621cbed"
+	 data-version="135ddddce0354990b936217419630ca0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies only to a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=61b9e376c20a4188b4db914c2621cbed">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="074fd93b72fa4fa48e71b0a0faeba4ce"
+	 data-version="69c72490f2cb4a22a306a76ea63282ea"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Credit Union Senior Manager function" href="#glossary-term-327909e7c9084b4a800240a95e9de86a" data-mce-linktype="2" data-glossary-id="52582">Credit Union Senior Manager function</a></em> (SMF8) is the function of having responsibility for the conduct of, and/or chairing the committee of management of a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=074fd93b72fa4fa48e71b0a0faeba4ce">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9e7ea87126444dc2a59f4def7fc470b1"
+	 data-version="3d2fd8b831c949d991aa83cbfc2df0e3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em> must ensure that at least one <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> performs the <em><a class="glossary-link" title="Credit Union Senior Manager function" href="#glossary-term-327909e7c9084b4a800240a95e9de86a" data-mce-linktype="2" data-glossary-id="52582">Credit Union Senior Manager function</a></em> on its behalf.</li>
+<li>(2) If a vacancy arises in respect of the <em><a class="glossary-link" title="Credit Union Senior Manager function" href="#glossary-term-327909e7c9084b4a800240a95e9de86a" data-mce-linktype="2" data-glossary-id="52582">Credit Union Senior Manager function</a></em>, a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em> must ensure that it appoints a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> to fill that vacancy as soon as practicable.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9e7ea87126444dc2a59f4def7fc470b1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/senior-management-functions/6-credit-unions/31-12-2020?p=1" data-id="8e70fed780dc4a95901ea6318ff8bc88" data-effective-date="31-12-2020" data-download-title="Credit Unions_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/senior-management-functions/6-credit-unions/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/senior-management-functions#8e70fed780dc4a95901ea6318ff8bc88&amp;subject=PRA Rulebook - Senior Management Functions – Credit Unions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=8e70fed780dc4a95901ea6318ff8bc88">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Credit Unions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="31d087d1be8446dda16f12593abb4c0e"
+	 data-version="90cd66b507234b538a9af630ca27b64a"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					UK Branch of Overseas Firm
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b9ffcdc3f18043a2a9b32c755be82210"
+	 data-version="d8718a65dd6645e4903330c848237a38"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies only to a <em><a class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> in relation to:</p>
+<ol class="new-bullet">
+    <li>(1) the activities of its establishment in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>; or</li>
+    <li>(2) if it does not have an establishment in the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>, its activities in the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#b9ffcdc3f18043a2a9b32c755be82210">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b9ffcdc3f18043a2a9b32c755be82210">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="55c1f72845c0439bb2436366389f01da"
+	 data-version="6e6c36742119439689745b5406917ffd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+    <li>(1) <a title="7.2" href="/pra-rules/senior-management-functions#b73e06372dbe461fac9548d58bc4ef3a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.2</a> and <a title="7.3" href="/pra-rules/senior-management-functions#254dbc52cfa54b7a9418c6e9ed88f424" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.3</a>(1) do not apply to a <em><a class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> that is a <em><a class="glossary-link" title="SRO firm" href="#glossary-term-03d04f1c85064316998189ee87fa1eb0" data-mce-linktype="2" data-glossary-id="98243">SRO firm</a></em>.</li>
+    <li>(2) <a title="7.4" href="/pra-rules/senior-management-functions#77943ddaab2548b2bf0d14dfda4b91f1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.4</a> and <a title="7.5" href="/pra-rules/senior-management-functions#d7daf72512e544ec8f9f6d9367c98eb1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.5</a> apply only to a <em><a class="glossary-link" title="SRO firm" href="#glossary-term-03d04f1c85064316998189ee87fa1eb0" data-mce-linktype="2" data-glossary-id="98243">SRO firm</a></em>.</li>
+</ol>
+<p> </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=55c1f72845c0439bb2436366389f01da">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b73e06372dbe461fac9548d58bc4ef3a"
+	 data-version="632e14b655a34edd8c5bdb0e50ad9b37"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="Head of Overseas Branch Function" href="#glossary-term-27e778d9c9304d50b83b0297b54520e0" data-mce-linktype="2" data-glossary-id="77806">Head of Overseas Branch Function</a></em> (SMF 19) is the function of having responsibility alone or jointly with others, for:</p>
+<ol class="new-bullet">
+    <li>(1) the conduct of all activities of the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> establishment of a <em><a class="glossary-link" title="third country firm" href="#glossary-term-60bfedb1b06645aeaf51d70560dbaa58" data-mce-linktype="2" data-glossary-id="52382">third country firm</a></em> which are subject to the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> <em><a class="glossary-link" title="UK regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em>; or</li>
+    <li>(2) where the <em><a class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> does not have an establishment in the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>, the conduct of all activities which are subject to the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em><span style="text-indent: -14.3px;"> </span><em style="text-indent: -14.3px;"><a class="glossary-link" title="UK regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#b73e06372dbe461fac9548d58bc4ef3a">
+			Past
+			<span class="visually-hidden">
+				version of 7.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b73e06372dbe461fac9548d58bc4ef3a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="254dbc52cfa54b7a9418c6e9ed88f424"
+	 data-version="16983d96b90c4bc4a169b66f34f2ffa7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> must ensure that at least one <em><a  class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> performs the <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="Head of Overseas Branch Function" href="#glossary-term-27e778d9c9304d50b83b0297b54520e0" data-mce-linktype="2" data-glossary-id="77806">Head of Overseas Branch Function</a></em> on its behalf.</li>
+<li>(2) If a vacancy arises in respect of the <em style="line-height: normal; text-indent: 0px;"><a  class="glossary-link" title="Head of Overseas Branch Function" href="#glossary-term-27e778d9c9304d50b83b0297b54520e0" data-mce-linktype="2" data-glossary-id="77806">Head of Overseas Branch Function</a></em>, a <em><a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> must ensure that it appoints a <em><a  class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> to fill that vacancy as soon as practicable.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=254dbc52cfa54b7a9418c6e9ed88f424">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="77943ddaab2548b2bf0d14dfda4b91f1"
+	 data-version="9cf76d0db3104fbcbf686427c8f51bd1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="SRO firm" href="#glossary-term-03d04f1c85064316998189ee87fa1eb0" data-mce-linktype="2" data-glossary-id="98243">SRO firm</a></em> must ensure that at least one <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> performs the <em><a class="glossary-link" title="Head of Overseas Branch function" href="#glossary-term-27e778d9c9304d50b83b0297b54520e0" data-mce-linktype="2" data-glossary-id="77806">Head of Overseas Branch function</a></em> on its behalf.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=77943ddaab2548b2bf0d14dfda4b91f1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d7daf72512e544ec8f9f6d9367c98eb1"
+	 data-version="c4f1ec17dc40442ab36b6423a8e94541"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a title="7.4" href="/pra-rules/senior-management-functions#77943ddaab2548b2bf0d14dfda4b91f1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.4</a>, the <em><a class="glossary-link" title="Head of Overseas Branch Function" href="#glossary-term-27e778d9c9304d50b83b0297b54520e0" data-mce-linktype="2" data-glossary-id="77806">Head of Overseas Branch Function</a></em> (SMF 19) is the function of having responsibility to oversee the orderly run-off of the <em><a class="glossary-link" title="firm’s" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm&rsquo;s</a> <a class="glossary-link" title="regulated activities" href="#glossary-term-aa04e0522d234dabb44ae6041cd9954b" data-mce-linktype="2" data-glossary-id="77616">regulated activities</a></em> in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d7daf72512e544ec8f9f6d9367c98eb1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/senior-management-functions/7-uk-branch-of-overseas-firm/31-12-2020?p=1" data-id="31d087d1be8446dda16f12593abb4c0e" data-effective-date="31-12-2020" data-download-title="UK Branch of Overseas Firm_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/senior-management-functions/7-uk-branch-of-overseas-firm/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/senior-management-functions#31d087d1be8446dda16f12593abb4c0e&amp;subject=PRA Rulebook - Senior Management Functions – UK Branch of Overseas Firm">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=31d087d1be8446dda16f12593abb4c0e">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						UK Branch of Overseas Firm
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="6f04cbd1a1a7466b8e4b6198c2d722a8"
+	 data-version="aef27607880f4019b52b2e5b6b4f2513"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Combination of Senior Management Functions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="7da8509ec64c416e81fb4814bfd9991c"
+	 data-version="753fd9548657442bbc68983b777ce1df"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Except as otherwise provided in this Chapter, a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> may perform more than one <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> on behalf of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7da8509ec64c416e81fb4814bfd9991c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f593bba6b52f49cdac9767252379c856"
+	 data-version="dfdb68fe7efc458aa06d2395f3b45914"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that a <em><a class="glossary-link" title="person" href="#glossary-term-81bc35355ad249dab22ef4f0391713db" data-mce-linktype="2" data-glossary-id="52571">person</a></em> who performs the <em><a class="glossary-link" title="Chairman function" href="#glossary-term-359d67bee1154420aba8215cc26d5f98" data-mce-linktype="2" data-glossary-id="52574">Chair of the Governing Body function</a></em> on its behalf does not simultaneously perform the <em><a class="glossary-link" title="Chief Executive function" href="#glossary-term-143794d869b742a69a641b222e6f51ec" data-mce-linktype="2" data-glossary-id="52578">Chief Executive function</a></em> within the same <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+			<p><strong>[Note: Art. 88(1)(e) of <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/senior-management-functions/07-03-2016#f593bba6b52f49cdac9767252379c856">
+			Past
+			<span class="visually-hidden">
+				version of 8.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f593bba6b52f49cdac9767252379c856">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/senior-management-functions/8-combination-of-senior-management-functions/31-12-2020?p=1" data-id="6f04cbd1a1a7466b8e4b6198c2d722a8" data-effective-date="31-12-2020" data-download-title="Combination of Senior Management Functions_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/senior-management-functions/8-combination-of-senior-management-functions/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/senior-management-functions#6f04cbd1a1a7466b8e4b6198c2d722a8&amp;subject=PRA Rulebook - Senior Management Functions – Combination of Senior Management Functions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=6f04cbd1a1a7466b8e4b6198c2d722a8">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Combination of Senior Management Functions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,4386 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{1176BF19-EBD1-4ACC-99B1-831932974D6B} -->
+<title>General Organisational Requirements | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="General Organisational Requirements">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="General Organisational Requirements">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrgaia-f-fd24a87a5-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":56,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"714d823","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":58749,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025552","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==lSHDbi+LR65bkPtJT1i/l22AITBm1fqqa27ecyvJzdLZFdeO0I3/pwZ3PISUOoETnbbKH6AujPmCtuIjHw+Q4AKpvAbNTlvANOxWsByJ0mwY24bQNCbg6QnjGOlv00zXYbZ0+qDr+yiO6TygcR9eGn2lRO0wkIEo4nPf+sfLTNQfj0yl8M1joGT01qhWuJSYvEuVgAhiZJK77DiznnKNiUwRM6lwYCDIJE8QYArDVQWJoulqCCJbQtiLcM+GoPbHmSfIEVfNfJVWwBcOFm4wBDJqhxQQWTP5hgfEsRicazPgkxnx05AAWTuwfB/5lpGIqtcnohLsgnoPvEaq9R4jp1kNmF49RY8ah+DQjVPJuqAgGFgnOLheamcdRYylr12/E2eCbMAn1qZkYmCOF+YCc7ZvVwLB5BePt9Fd8V2kbPI=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+General Organisational Requirements				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					General Organisational Requirements
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/02-04-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						02/04/2015
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/01-10-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/10/2015
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/01-01-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/07-03-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/03/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/07-09-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/09/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/08-01-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						08/01/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/07-09-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/09/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/03-01-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						03/01/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/30-03-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						30/03/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/29-06-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						29/06/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/29-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						29/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/general-organisational-requirements/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/general-organisational-requirements/23-10-2025">
+						<span class="visually-hidden">View Rulebook as at</span>
+						23/10/2025
+					</a>
+				</div>
+				<div class="listing__item is-future ">
+					<a href="/pra-rules/general-organisational-requirements/01-01-2027">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2027
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-9e739ac3-504a-4614-9bb3-403d2b290dca">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-9e739ac3-504a-4614-9bb3-403d2b290dca"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				General Organisational Requirements
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (General Organisational Requirements)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=5b57ce31dc06483f8f34beb883983e8f">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						General Organisational Requirements
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss20-15---supervising-building-societies-treasury-and-lending-activities/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS20/15 – Supervising building societies’ treasury and lending activities [Deleted]
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss28-15---strengthening-individual-accountability-in-banking/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS28/15 – Strengthening individual accountability in banking
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss39-15-whistleblowing-in-deposit-takers-pra-designated-investment-firms-and-insurers/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS39/15 – Whistleblowing in deposit-takers, PRA-designated investment firms and insurers
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss03-19-enhancing-banks-and-insurers-approaches-to-managing-the-financial-risks-from-climate-change/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS3/19 – Enhancing banks’ and insurers’ approaches to managing the financial risks from climate change [Deleted]
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss04-19-resolution-assessment-and-public-disclosure-by-firms/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS4/19 – Resolution assessment and public disclosure by firms
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss03-21---non-systemic-uk-banks-the-pras-approach-to-new-and-growing-banks/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS3/21 – Non-systemic UK banks: The Prudential Regulation Authority’s approach to new and growing banks
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/the-pra-rulebook-part-2" class="list-links__link" target="_blank">
+										PS7/15 - The PRA Rulebook: Part 2
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/pra-rulebook-administration-instrument-no-2-2015" class="list-links__link" target="_blank">
+										 - PRA Rulebook: Administration Instrument (No 2) 2015
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/whistleblowing-in-deposit-takers-pra-designated-investment-firms-and-insurers" class="list-links__link" target="_blank">
+										PS24/15 - &quot;Whistleblowing in deposit-takers, PRA-designated investment firms and insurers&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-pra-rulebook-part-4" class="list-links__link" target="_blank">
+										PS28/15 - The PRA Rulebook: Part 4 and response to Chapter 1 of CP41/15
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/strengthening-accountability-in-banking-and-insurance-implementation-of-sm-cr-and-simr" class="list-links__link" target="_blank">
+										PS5/16 - Strengthening accountability in banking and insurance: Implementation of SM&amp;CR and SIMR; and PRA requirements on regulatory references
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/whistleblowing-in-uk-branches" class="list-links__link" target="_blank">
+										PS8/17 - Whistleblowing in non-EEA UK branches
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/implementation-of-mifid-2-part-2" class="list-links__link" target="_blank">
+										PS9/17 - Implementation of MiFID II: Part 2
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/responses-to-cp-18-17-chapters-7-and-8" class="list-links__link" target="_blank">
+										PS31/17 - Responses to CP18/17 Occasional Consultation Paper – Chapters 7 and 8 (December 2017)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/responses-to-cp-18-17-chapters-2-to-6-9-and-10" class="list-links__link" target="_blank">
+										PS6/18 - &quot;Responses to CP18/17 Occasional Consultation Paper – Chapters 2 to 6, 9 and 10&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/responses-to-cp-18-17-chapters-7-and-8" class="list-links__link" target="_blank">
+										PS31/17 - Responses to CP18/17 Occasional Consultation Paper – Chapters 7 and 8 (May 2018)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/capital-requirements-directive-v-further-implementation" class="list-links__link" target="_blank">
+										PS29/20 - Capital Requirements Directive V (CRD V)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2025/october/markets-in-financial-instruments-directive-organisational-regulation-policy-statement" class="list-links__link" target="_blank">
+										PS16/25 - Markets in Financial Instruments Directive Organisational Regulation (MiFID Org Reg)
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/eur/2017/565/contents" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Delegated Regulation (EU) 2017/565 supplementing MiFID II on organisational requirements and operating conditions for investment firms
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/general-organisational-requirements/23-10-2025_31-12-2026.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/general-organisational-requirements/23-10-2025?p=1" data-id="5b57ce31dc06483f8f34beb883983e8f" data-effective-date="23-10-2025" data-download-title="General Organisational Requirements_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/general-organisational-requirements/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements&amp;subject=PRA Rulebook - General Organisational Requirements">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="330521740dc94758abc44bb02270bf3c"
+	 data-version="8e38184b690349a5815377b430cecb1f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c840cadcfc0c4b7e9ab94b31d53119f7"
+	 data-version="e5fda287bc1f495492505f424402bd9a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to a <a class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a>:</p>
+<ol class="new-bullet">
+    <li>(1) with respect to the carrying on of the following from an establishment in the <a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a>:</li>
+    <ol>
+        <li>(a) <a class="glossary-link" title="regulated activities" href="#glossary-term-e30eb92d6d9549d3bb2789d8b70d05f2" data-mce-linktype="2" data-glossary-id="53259">regulated activities</a>;</li>
+        <li>(b) activities that constitute <a class="glossary-link" title="dealing in investments as principal" href="#glossary-term-8dab0aab133549dc894705b82cc122f1" data-mce-linktype="2" data-glossary-id="52084">dealing in investments as principal</a>, disregarding the exclusion in article 15 of <a class="glossary-link" title="Regulated Activities Order" href="#glossary-term-343c281a2e2346ad82e8aafc7367cc75" data-mce-linktype="2" data-glossary-id="52150">Regulated Activities Order</a>;</li>
+        <li>(c) <a class="glossary-link" title="ancillary activities" href="#missingcontent_glossary_52380" data-mce-linktype="2" data-glossary-id="52380">ancillary activities</a>;</li>
+        <li>(d) in relation to <a class="glossary-link" title="MiFID business" href="#glossary-term-39ff74fff42048cb928c0e4d52169726" data-mce-linktype="2" data-glossary-id="53214">MiFID business</a>, <a class="glossary-link" title="ancillary services" href="#glossary-term-f11e2e2a78204b8bb3ef3c91156003e8" data-mce-linktype="2" data-glossary-id="53196">ancillary services</a>; and</li>
+        <li>(e) <a class="glossary-link" title="unregulated activities" href="#glossary-term-49ac931e2ae04b6086de60af1bf8da65" data-mce-linktype="2" data-glossary-id="52123">unregulated activities</a> in a <a class="glossary-link" title="prudential context" href="#glossary-term-bae18c0beaa9482cbf0a6a4bd5aa13a8" data-mce-linktype="2" data-glossary-id="53225">prudential context</a>; </li>
+    </ol>
+    <li>(2) [deleted.]</li>
+    <li>(3) in a <a class="glossary-link" title="prudential context" href="#glossary-term-bae18c0beaa9482cbf0a6a4bd5aa13a8" data-mce-linktype="2" data-glossary-id="53225">prudential context</a> with respect to activities wherever they are carried on; and</li>
+    <li>(4) taking into account any activity of other members of a <a class="glossary-link" title="group" href="#glossary-term-5247105ee57e4cfb93d617c1807adbff" data-mce-linktype="2" data-glossary-id="53256">group</a> of which the <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a> is a member.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/31-12-2020#c840cadcfc0c4b7e9ab94b31d53119f7">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c840cadcfc0c4b7e9ab94b31d53119f7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1c520565ed1f42a5925241b07121506c"
+	 data-version="ff5659fd533c416b8ad8cda922deae98"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a title="2.1" href="/pra-rules/general-organisational-requirements#acd012a2162b4c639e9d3460afd5c057" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> to <a title="2.8" href="/pra-rules/general-organisational-requirements#a308ebb02fef45e2b21b9c4e6a6786ea" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.8</a> do not apply to a <em><a class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> with respect to the carrying on of <em><a class="glossary-link" title="benchmarking activities" href="#glossary-term-d570ee527301409fabd283fd2cc0e3f9" data-mce-linktype="2" data-glossary-id="88214">benchmarking activities</a></em> except to the extent that before <em><a class="glossary-link" title="IP completion day" href="#glossary-term-7050e4e6e7be49a6923c0547b96de0fd" data-mce-linktype="2" data-glossary-id="108323">IP completion day</a></em>, they were made for the purpose of transposing an EU instrument...</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/29-06-2018#1c520565ed1f42a5925241b07121506c">
+			Past
+			<span class="visually-hidden">
+				version of 1.1A before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1c520565ed1f42a5925241b07121506c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a0e9bf864b444e4fa713458923badb12"
+	 data-version="24fa5af7cd0f4171b4abc1a1c939c5bf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:&nbsp;</p>
+<p><a class="glossary-link" title="protected disclosure" href="#glossary-term-40b16df006844e10b269e8a953fa99b4" data-mce-linktype="2" data-glossary-id="67169">protected disclosure</a></p>
+<p style="padding-left: 30px;">means a qualifying disclosure as defined in section 43B of the Employment Rights Act 1996 made by a <a class="glossary-link" title="worker" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">worker</a> in accordance with sections 43C to 43H of the Employment Rights Act 1996.</p>
+<p><a class="glossary-link" title="reportable concern" href="#glossary-term-544660c1bcee4acf8bfe819099fce78e" data-mce-linktype="2" data-glossary-id="67170">reportable concern</a></p>
+<p style="padding-left: 30px;">means a concern held by any <a class="glossary-link" title="person" href="#glossary-term-c2661088b5054292b725ca189cb8093a" data-mce-linktype="2" data-glossary-id="53257">person</a> in relation to the activities of a <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>, including:</p>
+<p style="padding-left: 30px;">(a) any matter that, if disclosed, would be the subject-matter of a <a class="glossary-link" title="protected disclosure" href="#glossary-term-40b16df006844e10b269e8a953fa99b4" data-mce-linktype="2" data-glossary-id="67169">protected disclosure</a>, including a breach of any <a class="glossary-link" title="rule" href="#glossary-term-d18c16891f754879a45f85322214ebe6" data-mce-linktype="2" data-glossary-id="77178">rule</a>;</p>
+<p style="padding-left: 30px;">(b) a failure to comply with the <a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> policy and procedures; and</p>
+<p style="padding-left: 30px;">(c) behaviour that has or is likely to have an adverse effect on the <a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> reputation or financial well-being. </p>
+<p><a class="glossary-link" title="worker" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">worker</a></p>
+<p style="padding-left: 30px;">has the meaning as defined by section 230(3) of the Employment Rights Act 1996 and as extended under section 43K of the Employment Rights Act 1996.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#a0e9bf864b444e4fa713458923badb12">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a0e9bf864b444e4fa713458923badb12">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="315d05fb131c4ef7be93a17ef7447ac5"
+	 data-version="1cdf01fa2bf842d79810f8f0d0dfab68"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, a reference to a provision of the Employment Rights Act 1996 includes a reference to the corresponding provision of the Employment Rights (Northern Ireland) Order 1996.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/09/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=315d05fb131c4ef7be93a17ef7447ac5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/general-organisational-requirements/1-application-and-definitions/23-10-2025?p=1" data-id="330521740dc94758abc44bb02270bf3c" data-effective-date="23-10-2025" data-download-title="Application and Definitions_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/general-organisational-requirements/1-application-and-definitions/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements#330521740dc94758abc44bb02270bf3c&amp;subject=PRA Rulebook - General Organisational Requirements – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=330521740dc94758abc44bb02270bf3c">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2889a255aec94762b5b5b3b0dbbf1f1d"
+	 data-version="e4e7fc04fb6b4ee198c094718c0adf1d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					General Requirements
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="acd012a2162b4c639e9d3460afd5c057"
+	 data-version="9cfd769fef9a45ec9cc7c1738db4f704"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a> must establish, implement and maintain robust governance arrangements and decision-making procedures, which include:</p>
+<ol class="new-bullet">
+    <li>(1)&nbsp;a clear and documented organisational structure with well defined, transparent and consistent lines of responsibility;</li>
+    <li>(2) a clear and documented decision-making procedure which specifies reporting lines and allocates <a href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d">functions</a>&nbsp;and responsibilities;</li>
+    <li>(3) effective processes to identify, manage, monitor and report the risks it is or to which it might be exposed; and</li>
+    <li>(4) adequate internal control mechanisms designed to secure compliance with decisions and procedures at all levels of the <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>, including:
+    <ol>
+        <li>(a)  sound administrative and accounting procedures;</li>
+        <li>(b) effective control and safeguard arrangements for information processing systems;</li>
+        <li>(c)  effective internal reporting and communication of information at all relevant levels of the <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>; and</li>
+        <li>(d) adequate and orderly records of its business and internal organisation.</li>
+    </ol>
+    </li>
+</ol>
+			<p><strong>[Note: Art. 74(1) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>, Art. 16(5) second paragraph of <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#acd012a2162b4c639e9d3460afd5c057">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=acd012a2162b4c639e9d3460afd5c057">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c7a20a4524944271b799bfde9c8e8e7b"
+	 data-version="c0b594593d4440f2850c0771a9d32798"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must comply with the following organisational requirements:</p>
+<ol class="new-bullet">
+    <li>(1) ensure that <a href="#glossary-term-ddbabf0bf2bf4e3aa813ff7a7bc75b2e">relevant persons</a>&nbsp;are aware of the procedures referred to in <a href="/pra-rules/general-organisational-requirements#acd012a2162b4c639e9d3460afd5c057" data-rb-content-link="Rule">2.1</a>&nbsp;which must be followed for the proper discharge of their responsibilities;</li>
+    <li>(2) employ personnel with the skills, knowledge and expertise necessary for the discharge of the responsibilities allocated to them; and</li>
+    <li>(3) ensure that the performance of multiple <a href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d">functions</a>&nbsp;by its <a href="#glossary-term-ddbabf0bf2bf4e3aa813ff7a7bc75b2e">relevant persons</a>&nbsp;does not, and is not likely to, prevent those <a href="#glossary-term-8908b89166da420a9af9860d5df57ab9">persons</a>&nbsp;from discharging any particular <a href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d">function</a>&nbsp;soundly, honestly, and professionally.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c7a20a4524944271b799bfde9c8e8e7b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="013258e1708c48be88fb202dac907a56"
+	 data-version="d509f16be4724a3eae53623eec9b1cb6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The arrangements, processes and mechanisms referred to in <a title="2.1" href="/pra-rules/general-organisational-requirements#acd012a2162b4c639e9d3460afd5c057" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a>&nbsp;and <a href="/pra-rules/general-organisational-requirements#c7a20a4524944271b799bfde9c8e8e7b" data-rb-content-link="Rule">2.1A</a>&nbsp;must be comprehensive and proportionate to the nature, scale and complexity of the risks inherent in the <a class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a>&nbsp;business model and of the nature and range of the&nbsp;<a class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> activities undertaken in the course of its business and must take into account the specific technical criteria described in <a title="2.6" href="/pra-rules/general-organisational-requirements#2302ede3de494cc28e99489c861934dd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a>, <a title="Skills, Knowledge and Expertise 3.2" href="/pra-rules/skills-knowledge-and-expertise#fbe2acf516a04774936d98532d81b4ed" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Skills, Knowledge and Expertise 3.2</a>, <a title="Risk Control" href="/pra-rules/risk-control" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Risk Control</a> and <a title="Remuneration" href="/pra-rules/remuneration" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Remuneration</a>.</p>
+			<p><strong>[Note: Art. 74(2) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#013258e1708c48be88fb202dac907a56">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=013258e1708c48be88fb202dac907a56">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8e06c61024f5411cb1ef42ee33c5b939"
+	 data-version="c0b8b37fa425438ea995f9b497866504"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#8e06c61024f5411cb1ef42ee33c5b939">
+			Past
+			<span class="visually-hidden">
+				version of 2.2A before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8e06c61024f5411cb1ef42ee33c5b939">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a6b55a89e9a14ba8bfc458d223ac29a0"
+	 data-version="b55741ca0daa4a45a5c8e5c4b6bbdcfa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#a6b55a89e9a14ba8bfc458d223ac29a0">
+			Past
+			<span class="visually-hidden">
+				version of 2.2B before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a6b55a89e9a14ba8bfc458d223ac29a0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2B
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5994334f9d494f7bb006519d2e754445"
+	 data-version="3bdc3ec97c544fddac82c7829295fcc9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#5994334f9d494f7bb006519d2e754445">
+			Past
+			<span class="visually-hidden">
+				version of 2.3 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5994334f9d494f7bb006519d2e754445">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e637e0cf318249ef8916d206ad3499d0"
+	 data-version="2209c82216ab404b83bac820d26df044"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a> must establish, implement and maintain systems and procedures that are adequate to safeguard the security, integrity and confidentiality of information, taking into account the nature of the information in question. Without prejudice to the ability of the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;to require access to communications in accordance with applicable law, a <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a> must have sound security mechanisms in place to guarantee the security and authentication of the means of transfer of information, minimise the risk of data corruption and unauthorised access and to prevent information leakage maintaining the confidentiality of the data at all times.</p>
+			<p><strong>[Note: Art. 16(5) of the <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#e637e0cf318249ef8916d206ad3499d0">
+			Past
+			<span class="visually-hidden">
+				version of 2.4 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e637e0cf318249ef8916d206ad3499d0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a79eb42138b3457d8ca2def7157b93c2"
+	 data-version="b47e727202cc442fa9086ee3b31a9adf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take reasonable steps to ensure continuity and regularity in the performance of its <em><a class="glossary-link" title="regulated activities" href="#glossary-term-e30eb92d6d9549d3bb2789d8b70d05f2" data-mce-linktype="2" data-glossary-id="53259">regulated activities</a></em>. To this end the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must employ appropriate and proportionate systems, resources and procedures.</p>
+			<p><strong>[Note: Art. 16(4) of <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#a79eb42138b3457d8ca2def7157b93c2">
+			Past
+			<span class="visually-hidden">
+				version of 2.5 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a79eb42138b3457d8ca2def7157b93c2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2302ede3de494cc28e99489c861934dd"
+	 data-version="74b02e80e09b49979cb372d828ca6802"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a> must establish, implement and maintain contingency and business continuity plans to ensure the <a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> ability to operate on an ongoing basis and limit losses in the event of severe business disruption.</p>
+			<p><strong>[Note: Art. 85(2) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#2302ede3de494cc28e99489c861934dd">
+			Past
+			<span class="visually-hidden">
+				version of 2.6 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2302ede3de494cc28e99489c861934dd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="257f7d2c5166421faedfe552f502c439"
+	 data-version="d1538b3eb58641298d6e65ea8d546ee1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must establish, implement and maintain an adequate business continuity policy aimed at ensuring, in the case of an interruption to its systems and procedures, the preservation of essential data and <a href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d">functions</a>, and the maintenance of <a href="#glossary-term-e075475639fc4a03b61e5182a0eb0fa8">relevant services and activities</a>, or, where that is not possible, the timely recovery of such data and <a href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d">functions</a>&nbsp;and the timely resumption of such services and activities.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=257f7d2c5166421faedfe552f502c439">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.6A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e53e9629cbb0418e890b6a03d520926d"
+	 data-version="9dcea27a09dd454bbfd8312f0314f99d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#e53e9629cbb0418e890b6a03d520926d">
+			Past
+			<span class="visually-hidden">
+				version of 2.7 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e53e9629cbb0418e890b6a03d520926d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3ff447bd0ace428080ef7c0ae11351b4"
+	 data-version="77261a7d650e456c96e0466851279bd9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must establish, implement and maintain accounting policies and procedures and ensure that, upon the request of the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>, it is able to deliver in a timely manner to the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;financial reports which reflect a true and fair view of its financial position and which comply with all applicable accounting standards and rules.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3ff447bd0ace428080ef7c0ae11351b4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.7A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a308ebb02fef45e2b21b9c4e6a6786ea"
+	 data-version="d1743994c27741d5960a59588bebd5a2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must monitor and, on a regular basis, evaluate the adequacy and effectiveness of its systems, internal control mechanisms and arrangements established in accordance with this <a  title="Chapter" href="/pra-rules/general-organisational-requirements#2889a255aec94762b5b5b3b0dbbf1f1d" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Chapter</a> and take appropriate measures to address any deficiencies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#a308ebb02fef45e2b21b9c4e6a6786ea">
+			Past
+			<span class="visually-hidden">
+				version of 2.8 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a308ebb02fef45e2b21b9c4e6a6786ea">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="48b0175774514028b0c8bb7588fb7a45"
+	 data-version="45983b922595451aa05ac9a015a00b32"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted.]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/09/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#48b0175774514028b0c8bb7588fb7a45">
+			Past
+			<span class="visually-hidden">
+				version of 2.9 before 07/09/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=48b0175774514028b0c8bb7588fb7a45">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/general-organisational-requirements/2-general-requirements/23-10-2025?p=1" data-id="2889a255aec94762b5b5b3b0dbbf1f1d" data-effective-date="23-10-2025" data-download-title="General Requirements_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/general-organisational-requirements/2-general-requirements/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements#2889a255aec94762b5b5b3b0dbbf1f1d&amp;subject=PRA Rulebook - General Organisational Requirements – General Requirements">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2889a255aec94762b5b5b3b0dbbf1f1d">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						General Requirements
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="4d015e15fdee43fab0bb853ab14de99f"
+	 data-version="508fdb908411447aa266c8f4466b6458"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2A
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Whistleblowing
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="bc25e8387c3947769544c533b03c326e"
+	 data-version="00e18bd7d90a457da50b4abdced10081"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2A.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) <a  title="2A.2" href="/pra-rules/general-organisational-requirements#0afb859db25141f3a33516091cbb8138" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2A.2</a> applies to every <em><a  class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em>.</li>
+<li>(2) <a  title="2A.3" href="/pra-rules/general-organisational-requirements#fdec6c393ecd42ab8400cdbb2441bb6a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2A.3</a> &ndash; <a  title="2A.6" href="/pra-rules/general-organisational-requirements#343c661ab9e44f7bb14862d0a11c80a0" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2A.6</a> apply to any <em><a  class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em> that has average total gross assets exceeding &pound;250 million, determined on the basis of the annual average amount of gross assets calculated across a rolling period of five years or, if it has been in existence for less than five years, across the period during which it has existed (in each case, calculated with reference to the <em><a  class="glossary-link" title="CRR firm&rsquo;s" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm&rsquo;s</a></em> annual accounting reference date).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/09/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bc25e8387c3947769544c533b03c326e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2A.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0afb859db25141f3a33516091cbb8138"
+	 data-version="ba64a050755641d1a8ea28a483c8c552"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2A.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must establish, implement and maintain appropriate and effective arrangements for the disclosure of <em><a  class="glossary-link" title="reportable concerns" href="#glossary-term-544660c1bcee4acf8bfe819099fce78e" data-mce-linktype="2" data-glossary-id="67170">reportable concerns</a></em> by a <em><a  class="glossary-link" title="person" href="#glossary-term-c2661088b5054292b725ca189cb8093a" data-mce-linktype="2" data-glossary-id="53257">person</a></em>, including a <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> <a  class="glossary-link" title="employee" href="#glossary-term-e08f83ef44794a06bd2429270dc7b807" data-mce-linktype="2" data-glossary-id="52174">employee</a></em>, internally through a specific, independent and autonomous channel.</li>
+<li>(2) The channel in (1) may be provided through arrangements with third parties, including social partners, subject to any applicable requirement under the <a  title="Outsourcing" href="/pra-rules/outsourcing" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Outsourcing</a> Part.</li>
+</ol>
+			<p><strong>[Note: Art. 71(3) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a> </em>and </strong><strong>Art. 73(2) of <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em></strong><strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/07-09-2016#0afb859db25141f3a33516091cbb8138">
+			Past
+			<span class="visually-hidden">
+				version of 2A.2 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0afb859db25141f3a33516091cbb8138">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2A.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fdec6c393ecd42ab8400cdbb2441bb6a"
+	 data-version="60db777face643119701df4b838a48d0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2A.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must inform all <em><a  class="glossary-link" title="workers" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">workers</a></em> of the channel in <a  title="2A.2" href="/pra-rules/general-organisational-requirements#0afb859db25141f3a33516091cbb8138" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2A.2</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/09/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fdec6c393ecd42ab8400cdbb2441bb6a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2A.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7919fad522d441dd9e25d5d21a70fb4c"
+	 data-version="18bb5b0a946041a3833b700339fb7bc9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2A.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must inform all <em><a  class="glossary-link" title="workers" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">workers</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) that they may disclose directly to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> or to <em><a  class="glossary-link" title="the FCA" href="#glossary-term-2b50ae58c7f04af5be9fbdaa49ee16df" data-mce-linktype="2" data-glossary-id="77176">the FCA</a></em> anything that would be the subject-matter of a <em><a  class="glossary-link" title="protected disclosure" href="#glossary-term-40b16df006844e10b269e8a953fa99b4" data-mce-linktype="2" data-glossary-id="67169">protected disclosure</a></em>;</li>
+<li>(2) of what would constitute a <em><a  class="glossary-link" title="protected disclosure" href="#glossary-term-40b16df006844e10b269e8a953fa99b4" data-mce-linktype="2" data-glossary-id="67169">protected disclosure</a></em>;</li>
+<li>(3) that the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> or <em><a  class="glossary-link" title="the FCA" href="#glossary-term-2b50ae58c7f04af5be9fbdaa49ee16df" data-mce-linktype="2" data-glossary-id="77176">the FCA</a></em> are prescribed persons under section 43F of the Employments Rights Act 1996 and the effect of making a <em><a  class="glossary-link" title="protected disclosure" href="#glossary-term-40b16df006844e10b269e8a953fa99b4" data-mce-linktype="2" data-glossary-id="67169">protected disclosure</a></em> to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> or to <em><a  class="glossary-link" title="the FCA" href="#glossary-term-2b50ae58c7f04af5be9fbdaa49ee16df" data-mce-linktype="2" data-glossary-id="77176">the FCA</a></em>; and</li>
+<li>(4) of the means available to make a <em><a  class="glossary-link" title="protected disclosure" href="#glossary-term-40b16df006844e10b269e8a953fa99b4" data-mce-linktype="2" data-glossary-id="67169">protected disclosure</a></em> to the <a  class="glossary-link" title="PRA " href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA </a>or <em><a  class="glossary-link" title="the FCA" href="#glossary-term-2b50ae58c7f04af5be9fbdaa49ee16df" data-mce-linktype="2" data-glossary-id="77176">the FCA</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/09/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7919fad522d441dd9e25d5d21a70fb4c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2A.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="333371706a424ef3972cbfc4deb06a3e"
+	 data-version="3960592cc6874c4ea4faf89bd4007b1e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2A.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that nothing in its arrangements prevents or discourages any <em><a  class="glossary-link" title="worker" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">worker</a></em> from making any disclosure to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> or <em><a  class="glossary-link" title="the FCA" href="#glossary-term-2b50ae58c7f04af5be9fbdaa49ee16df" data-mce-linktype="2" data-glossary-id="77176">the FCA</a></em> before making the disclosure through the channel referred to in <a  title="2A.2" href="/pra-rules/general-organisational-requirements#0afb859db25141f3a33516091cbb8138" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2A.2</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/09/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=333371706a424ef3972cbfc4deb06a3e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2A.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="343c661ab9e44f7bb14862d0a11c80a0"
+	 data-version="985acae95461431dbaa4bdb5bf7ec0b3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2A.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that nothing in any employment contract or settlement agreement, including any other related or ancillary documentation, between the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and a <em><a  class="glossary-link" title="worker" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">worker</a></em> relating to the <em><a  class="glossary-link" title="worker&rsquo;s" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">worker&rsquo;s</a></em> employment with the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, entered into after the date on which these <em><a  class="glossary-link" title="rules" href="#glossary-term-d18c16891f754879a45f85322214ebe6" data-mce-linktype="2" data-glossary-id="77178">rules</a></em> come into effect, prevents or discourages the <em><a  class="glossary-link" title="worker" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">worker</a></em> from:</p>
+<ol class="new-bullet">
+<li>(a) making a <em><a  class="glossary-link" title="protected disclosure" href="#glossary-term-40b16df006844e10b269e8a953fa99b4" data-mce-linktype="2" data-glossary-id="67169">protected disclosure</a></em>, including to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>; and</li>
+<li>(b) making a further <em><a  class="glossary-link" title="protected disclosure" href="#glossary-term-40b16df006844e10b269e8a953fa99b4" data-mce-linktype="2" data-glossary-id="67169">protected disclosure</a></em> connected to a <em><a  class="glossary-link" title="protected disclosure" href="#glossary-term-40b16df006844e10b269e8a953fa99b4" data-mce-linktype="2" data-glossary-id="67169">protected disclosure</a></em> already made under (a).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/09/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=343c661ab9e44f7bb14862d0a11c80a0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2A.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e71b4fd39c14402395afdd923d6e4a15"
+	 data-version="4a8a00f4992c4d35a62987eac6630a25"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2A.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If </p>
+<ol class="new-bullet">
+<li>(1) the <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> is a <em><a  class="glossary-link" title="subsidiary" href="#glossary-term-62ea73bf0afc4e1498ca9727be7b912e" data-mce-linktype="2" data-glossary-id="78097">subsidiary</a></em> of a <em><a  class="glossary-link" title="third country firm" href="#glossary-term-60bfedb1b06645aeaf51d70560dbaa58" data-mce-linktype="2" data-glossary-id="52382">third country firm</a></em>; and</li>
+<li>(2) the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="third country firm" href="#glossary-term-60bfedb1b06645aeaf51d70560dbaa58" data-mce-linktype="2" data-glossary-id="52382">third country firm</a></em> also carries on <em><a  class="glossary-link" title="regulated activities" href="#glossary-term-e30eb92d6d9549d3bb2789d8b70d05f2" data-mce-linktype="2" data-glossary-id="53259">regulated activities</a></em> from an establishment in the <em style="text-indent: 0px;"><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>;</li>
+</ol>
+<p>the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em> must provide information to the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="third country firm" href="#glossary-term-60bfedb1b06645aeaf51d70560dbaa58" data-mce-linktype="2" data-glossary-id="52382">third country firm</a></em> in the <em><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> on the channel in <a  title="2A.2" href="/pra-rules/general-organisational-requirements#0afb859db25141f3a33516091cbb8138" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2A.2</a> and make the channel available to <em><a  class="glossary-link" title="workers" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">workers</a></em> in the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="third country firm" href="#glossary-term-60bfedb1b06645aeaf51d70560dbaa58" data-mce-linktype="2" data-glossary-id="52382">third country firm&rsquo;s</a></em> <em><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> establishment.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/09/2017
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e71b4fd39c14402395afdd923d6e4a15">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2A.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bf809617859c497ab3102dd487f89bf3"
+	 data-version="3d793b2cbece48e5b535b3100d785a1b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2A.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><span style="text-indent: -1.3em;">If</span></p>
+<ol class="new-bullet">
+<li>(1) the <em><a  class="glossary-link" title="third country firm" href="#glossary-term-60bfedb1b06645aeaf51d70560dbaa58" data-mce-linktype="2" data-glossary-id="52382">third country firm</a></em> is a <em><a  class="glossary-link" title="subsidiary" href="#glossary-term-62ea73bf0afc4e1498ca9727be7b912e" data-mce-linktype="2" data-glossary-id="78097">subsidiary</a></em> of a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> [P]; and</li>
+<li>(2) the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="third country firm" href="#glossary-term-60bfedb1b06645aeaf51d70560dbaa58" data-mce-linktype="2" data-glossary-id="52382">third country firm</a></em> also carries on <em><a  class="glossary-link" title="regulated activities" href="#glossary-term-e30eb92d6d9549d3bb2789d8b70d05f2" data-mce-linktype="2" data-glossary-id="53259">regulated activities</a></em> from an establishment in the <em><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em></li>
+</ol>
+<p><span style="text-indent: -1.3em;">the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> [P] must provide information to the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="third country firm" href="#glossary-term-60bfedb1b06645aeaf51d70560dbaa58" data-mce-linktype="2" data-glossary-id="52382">third country firm</a></em> in the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> on the channel in <a  title="2A.2" href="/pra-rules/general-organisational-requirements#0afb859db25141f3a33516091cbb8138" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2A.2</a> and make the channel available to <em><a  class="glossary-link" title="workers" href="#glossary-term-6632794d18434e599ae258e173146905" data-mce-linktype="2" data-glossary-id="67171">workers</a></em> in the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="third country firm" href="#glossary-term-60bfedb1b06645aeaf51d70560dbaa58" data-mce-linktype="2" data-glossary-id="52382">third country firm&rsquo;s</a></em> <em style="text-indent: -14.3px;"><a  class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> establishment.</span></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bf809617859c497ab3102dd487f89bf3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2A.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/general-organisational-requirements/2a-whistleblowing/23-10-2025?p=1" data-id="4d015e15fdee43fab0bb853ab14de99f" data-effective-date="23-10-2025" data-download-title="Whistleblowing_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/general-organisational-requirements/2a-whistleblowing/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements#4d015e15fdee43fab0bb853ab14de99f&amp;subject=PRA Rulebook - General Organisational Requirements – Whistleblowing">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=4d015e15fdee43fab0bb853ab14de99f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Whistleblowing
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="7abdc425735047af98d437e978c1cfe3"
+	 data-version="3eb26c8283c54e0fac4262d499230b11"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Persons Who Effectively Direct the Business
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6c8777e4d09a47a0818cc1f89fbc9751"
+	 data-version="a2523ed4e9904ff8ba2507c5192fef00"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="senior personnel" href="#glossary-term-1861df7964fd41d7a546cd5f24dad670" data-mce-linktype="2" data-glossary-id="53228">senior personnel</a></em> of a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must be of sufficiently good repute and sufficiently experienced as to ensure the sound and prudent management of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+			<p>[Note: Art. 9(4) of <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em>, Art. 91(1) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#6c8777e4d09a47a0818cc1f89fbc9751">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6c8777e4d09a47a0818cc1f89fbc9751">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e8887064f90e481180a7a42faa0c1e67"
+	 data-version="376a883c2fb647ee8682c78400c6cbc8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that its management is undertaken by at least two persons meeting the requirements laid down in <a  title="3.1" href="/pra-rules/general-organisational-requirements#6c8777e4d09a47a0818cc1f89fbc9751" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a>.</p>
+			<p><strong>[Note: Art. 9(6) first paragraph of <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em> and Art. 13(1) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#e8887064f90e481180a7a42faa0c1e67">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e8887064f90e481180a7a42faa0c1e67">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/general-organisational-requirements/3-persons-who-effectively-direct-the-business/23-10-2025?p=1" data-id="7abdc425735047af98d437e978c1cfe3" data-effective-date="23-10-2025" data-download-title="Persons Who Effectively Direct the Business_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/general-organisational-requirements/3-persons-who-effectively-direct-the-business/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements#7abdc425735047af98d437e978c1cfe3&amp;subject=PRA Rulebook - General Organisational Requirements – Persons Who Effectively Direct the Business">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=7abdc425735047af98d437e978c1cfe3">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Persons Who Effectively Direct the Business
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="335203ad26194579a3a1b8e83674a0a1"
+	 data-version="7ee9d0893c204d92a309449586d3c601"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Responsibility of Senior Personnel
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e5c52569849148beb2e8fa86bb6e1901"
+	 data-version="45b8caa62c5c455da58cbda1ad8ad1c3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#e5c52569849148beb2e8fa86bb6e1901">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e5c52569849148beb2e8fa86bb6e1901">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1b652954d5174c8b9301b250740a2820"
+	 data-version="628f9a35ffcf4903b7a65007ed5cfec1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#1b652954d5174c8b9301b250740a2820">
+			Past
+			<span class="visually-hidden">
+				version of 4.1A before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1b652954d5174c8b9301b250740a2820">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2cf6e585c4ba45fba112288f144b6003"
+	 data-version="0928ad1e684241d596323227bae0d985"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#2cf6e585c4ba45fba112288f144b6003">
+			Past
+			<span class="visually-hidden">
+				version of 4.1B before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2cf6e585c4ba45fba112288f144b6003">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1B
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4aa509948c624c37a9d1d7765d2ef1aa"
+	 data-version="657006cd0cb447f094629e2a9e8bb536"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#4aa509948c624c37a9d1d7765d2ef1aa">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4aa509948c624c37a9d1d7765d2ef1aa">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="29b93359d601490ab73610c09c4453b2"
+	 data-version="54b048c2bd7642cb9edf93b80a0366f0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must ensure that, when allocating <a href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d">functions</a>&nbsp;internally, <a href="#glossary-term-685d8be44e4445d4a16142fe92a32c80">senior management</a>&nbsp;and, where applicable, the <a href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c">governing body</a>&nbsp;are responsible for ensuring that the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;complies with its obligations under the <a href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac">regulatory system</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=29b93359d601490ab73610c09c4453b2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="efb93cc2da10405d9fdce9dfe293d0f2"
+	 data-version="0d62378f306f41b0a70e8304c95f1ed8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must ensure that <a href="#glossary-term-685d8be44e4445d4a16142fe92a32c80">senior management</a>&nbsp;and, where applicable, the <a href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c">governing body</a>&nbsp;assess and periodically review the effectiveness of the policies, arrangements and procedures put in place to comply with the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm's</a>&nbsp;obligations under the <a href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac">regulatory system</a>&nbsp;and take appropriate measures to address any deficiencies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=efb93cc2da10405d9fdce9dfe293d0f2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2292604d91124cb6bf99a51bdc493021"
+	 data-version="b8598e3d71d54f9cb56ee06b531f821f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In its allocation of significant <a href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d">functions</a>&nbsp;among senior managers, a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must clearly establish who is responsible for overseeing and maintaining the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm's</a>&nbsp;organisational requirements.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2292604d91124cb6bf99a51bdc493021">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c19c5ae932254155b4b8a9416b2eca0b"
+	 data-version="f9c1247678dc4b3090fd77081c027b28"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must keep its records of the allocation of significant <a href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d">functions</a>&nbsp;up-to-date.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c19c5ae932254155b4b8a9416b2eca0b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a4fdfc1e84794d3b9a2e7657aa974c96"
+	 data-version="72035b684ae3484eaf64f15cdd2b7ee4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must ensure that its <a href="#glossary-term-685d8be44e4445d4a16142fe92a32c80">senior management</a>&nbsp;receive on a frequent basis, and at least annually, written reports on the matters covered by the <a href="/pra-rules/compliance-and-internal-audit" data-rb-content-link="Part">Compliance and Internal Audit</a>&nbsp;and <a href="/pra-rules/risk-control" data-rb-content-link="Part">Risk Control Parts</a>. Such written reports must indicate whether the appropriate remedial measures have been taken in the event of any deficiencies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a4fdfc1e84794d3b9a2e7657aa974c96">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3175a5a7d6004704be8e1d416f12f803"
+	 data-version="c9eb5e7b1ee84aba8eea9e93cd18ccd9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must ensure that, for the purposes of <a href="/pra-rules/general-organisational-requirements#29b93359d601490ab73610c09c4453b2" data-rb-content-link="Rule">4.3</a>&nbsp;and <a href="/pra-rules/general-organisational-requirements#efb93cc2da10405d9fdce9dfe293d0f2" data-rb-content-link="Rule">4.4</a>, the <a href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c">governing body</a>&nbsp;receives written reports on the matters covered by the <a href="/pra-rules/compliance-and-internal-audit" data-rb-content-link="Part">Compliance, Internal Audit</a>&nbsp;and <a href="/pra-rules/risk-control" data-rb-content-link="Part">Risk Control Parts</a>&nbsp;on a regular basis.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3175a5a7d6004704be8e1d416f12f803">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/general-organisational-requirements/4-responsibility-of-senior-personnel/23-10-2025?p=1" data-id="335203ad26194579a3a1b8e83674a0a1" data-effective-date="23-10-2025" data-download-title="Responsibility of Senior Personnel_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/general-organisational-requirements/4-responsibility-of-senior-personnel/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements#335203ad26194579a3a1b8e83674a0a1&amp;subject=PRA Rulebook - General Organisational Requirements – Responsibility of Senior Personnel">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=335203ad26194579a3a1b8e83674a0a1">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Responsibility of Senior Personnel
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="1f64c53239374ba68995438fc372de93"
+	 data-version="1f1792fa6a65410c9323fb0629efe336"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Management Body
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4d3c09e958194bdf9523e0bde7771d51"
+	 data-version="cfbecf2340fc4c9ea662e5ee0a7bef6b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> defines, oversees and is accountable for the implementation of governance arrangements that ensure effective and prudent management of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, including the segregation of duties in the organisation and the prevention of conflicts of interest. The <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) has overall responsibility for the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>;</li>
+<li>(2) approves and oversees implementation of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> strategic objectives, risk strategy and internal governance;</li>
+<li>(3) ensures the integrity of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> accounting and financial reporting systems, including financial and operational controls and compliance with the <em><a class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em>;</li>
+<li>(4) oversees the process of disclosure and communications;</li>
+<li>(5) has responsibility for providing effective oversight of <em><a class="glossary-link" title="senior management" href="#glossary-term-685d8be44e4445d4a16142fe92a32c80" data-mce-linktype="2" data-glossary-id="52151">senior management</a></em>; and</li>
+<li>(6) monitors and periodically assesses:</li>
+<li></li>
+<ol>
+<li>(a) the adequacy and the implementation of the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> strategic objectives in the provision of its <em><a  class="glossary-link" title="regulated activities" href="#glossary-term-574dc30a563843269396685c65cee5d2" data-mce-linktype="2" data-glossary-id="63293">regulated activities</a></em>;</li>
+<li>(b) the effectiveness of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> governance arrangements and adequacy of the policies relating to the provision of services to <em><a  class="glossary-link" title="clients" href="#glossary-term-87cce91a93a2427e99055e3769c3fe44" data-mce-linktype="2" data-glossary-id="53200">clients</a></em>; and</li>
+<li>(c) takes appropriate steps to address any deficiencies.</li>
+</ol></ol>
+			<p><strong>[Note: Art. 88(1) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a> </em></strong><strong>and Art. 9(3) of<em> <a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em></strong><strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#4d3c09e958194bdf9523e0bde7771d51">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4d3c09e958194bdf9523e0bde7771d51">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ac33a64dbce04323939f040c7d6d92b9"
+	 data-version="f5a32e3b4a5f48b6ab4b4f621ac50003"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Without prejudice to <a  title="5.1" href="/pra-rules/general-organisational-requirements#4d3c09e958194bdf9523e0bde7771d51" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a>, those arrangements must ensure that the <em><a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> defines, approves and oversees:</p>
+<ol class="new-bullet">
+<li>(1) the organisation of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> for the provision of <em><a  class="glossary-link" title="regulated activities" href="#glossary-term-574dc30a563843269396685c65cee5d2" data-mce-linktype="2" data-glossary-id="63293">regulated activities</a></em>, including the skills, knowledge and expertise required by personnel, the resources, the procedures and the arrangements for the provision of services and activities, taking into account the nature, scale and complexity of its business and all the requirements the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has to comply with; and</li>
+<li>(2) a policy as to services, activities, products and operations offered or provided in accordance with the risk tolerance of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> and the characteristics and needs of the <em><a  class="glossary-link" title="clients" href="#glossary-term-87cce91a93a2427e99055e3769c3fe44" data-mce-linktype="2" data-glossary-id="53200">clients</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to whom they will be offered or provided, including carrying out appropriate stress testing, where appropriate; and</li>
+<li>(3) a <em><a  class="glossary-link" title="remuneration" href="#glossary-term-b3474122f19a47249e8aa14904b35b77" data-mce-linktype="2" data-glossary-id="66828">remuneration</a></em> policy of <em><a  class="glossary-link" title="persons" href="#glossary-term-c2661088b5054292b725ca189cb8093a" data-mce-linktype="2" data-glossary-id="53257">persons</a></em> involved in the provision of services to <em><a  class="glossary-link" title="clients" href="#glossary-term-87cce91a93a2427e99055e3769c3fe44" data-mce-linktype="2" data-glossary-id="53200">clients</a></em> aiming to encourage responsible business conduct, fair treatment of <em><a  class="glossary-link" title="clients" href="#glossary-term-87cce91a93a2427e99055e3769c3fe44" data-mce-linktype="2" data-glossary-id="53200">clients</a></em> as well as avoiding conflict of interest in the relationship with <em><a  class="glossary-link" title="clients" href="#glossary-term-87cce91a93a2427e99055e3769c3fe44" data-mce-linktype="2" data-glossary-id="53200">clients</a></em>.</li>
+</ol>
+			<p><strong>[Note: Art. 9(3) of <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em>] </strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ac33a64dbce04323939f040c7d6d92b9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="471b6b3f3c544bf0b2f551c57fb8aa4b"
+	 data-version="013f7147f5354311b1b75d4e689fcb51"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that the members of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) are of sufficiently good repute;</li>
+<li>(2) possess sufficient knowledge, skills and experience to perform their duties;</li>
+<li>(3) possess adequate collective knowledge, skills and experience to understand the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> activities, including the main risks;</li>
+<li>(4) reflect an adequately broad range of experiences;</li>
+<li>(5) commit sufficient time to perform their functions in the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>; and</li>
+<li>(6) act with honesty, integrity and independence of mind to effectively assess and challenge the decisions of <em><a class="glossary-link" title="senior management" href="#glossary-term-685d8be44e4445d4a16142fe92a32c80" data-mce-linktype="2" data-glossary-id="52151">senior management</a></em> where necessary and to effectively oversee and monitor management decision-making. Being a member of the management body of <em><a  class="glossary-link" title="affiliated companies" href="#glossary-term-b398198648594f08a2732feed4ca85f0" data-mce-linktype="2" data-glossary-id="52142">affiliated companies</a></em> does not in itself constitute an obstacle to acting with independence of mind.</li>
+</ol>
+			<p><strong>[Note: Art. 91(1)-(2) and (7)-(8) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a> </em>and </strong><strong>Art. 9(1) and (4) of <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em></strong><strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/03-01-2018#471b6b3f3c544bf0b2f551c57fb8aa4b">
+			Past
+			<span class="visually-hidden">
+				version of 5.2 before 29/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=471b6b3f3c544bf0b2f551c57fb8aa4b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="923fc58251884413b663d375365689d6"
+	 data-version="c251b143786141efba36bdec29a64c15"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must devote adequate human and financial resources to the induction and training of members of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>. </p>
+			<p><strong>[Note: Art. 91(9) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#923fc58251884413b663d375365689d6">
+			Past
+			<span class="visually-hidden">
+				version of 5.3 before 01/10/2015
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=923fc58251884413b663d375365689d6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c8a71cc332c74387a8a973faa74a0df4"
+	 data-version="70a71c6be68840e78d0ae85af6d03112"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that the members of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> do not hold more directorships than is appropriate taking into account individual circumstances and the nature, scale and complexity of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> activities.</p>
+			<p><strong>[Note: Art. 91(3) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a> </em></strong><strong>and Art. 9(1) of<em> <a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em></strong><strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#c8a71cc332c74387a8a973faa74a0df4">
+			Past
+			<span class="visually-hidden">
+				version of 5.4 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c8a71cc332c74387a8a973faa74a0df4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8c15c3d609624dc58f2cb2113373465a"
+	 data-version="dee23a43e8204fb09b52f63974f45882"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A<em> <a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that is significant must ensure that the members of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> do not hold more than one of the following combinations of directorship in any organisation at the same time:</li>
+<ol>
+<li>(a) one executive directorship with two non-executive directorships; and</li>
+<li>(b) four non-executive directorships.</li>
+</ol>
+<li>(2) Paragraph (1) does not apply to members of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> that represent the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>.</li>
+</ol>
+			<p><strong>[Note: Art. 91(3) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a> </em></strong><strong>and Art. 9(1) of<em> <a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em></strong><strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#8c15c3d609624dc58f2cb2113373465a">
+			Past
+			<span class="visually-hidden">
+				version of 5.5 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8c15c3d609624dc58f2cb2113373465a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f257b6373ff2453ba653091e2614244a"
+	 data-version="649e2ee8a19841268c93aa823af9899a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="5.4" href="/pra-rules/general-organisational-requirements#c8a71cc332c74387a8a973faa74a0df4" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.4</a> and <a  title="5.5" href="/pra-rules/general-organisational-requirements#8c15c3d609624dc58f2cb2113373465a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.5</a>:</p>
+<ol class="new-bullet">
+<li>(1) directorships in organisations which do not pursue predominantly commercial objectives shall not count; and</li>
+<li>(2) the following shall count as a single directorship: </li>
+<ol>
+<li>(a) executive or non-executive directorships held within the same <em><a class="glossary-link" title="group" href="#glossary-term-5247105ee57e4cfb93d617c1807adbff" data-mce-linktype="2" data-glossary-id="53256">group</a></em>; or </li>
+<li>(b) executive or non-executive directorships held within:</li>
+<ol>
+<li>(i) <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em> that are members of the same institutional protection scheme provided that the conditions set out in Article 113(7) of the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> are fulfilled; or</li>
+<li>(ii) <em><a class="glossary-link" title="undertakings" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertakings</a></em> (including non-financial entities) in which the <em><a class="glossary-link" title="firms" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> holds a <em><a class="glossary-link" title="qualifying holding" href="#glossary-term-e3a2f1ad655145d18534f4d504464904" data-mce-linktype="2" data-glossary-id="53258">qualifying holding</a></em>.</li>
+</ol></ol></ol>
+			<p><strong>[Note: Art. 91(4) and (5) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a> </em></strong><strong>and Art. 9(1) of<em> <a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em></strong><strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#f257b6373ff2453ba653091e2614244a">
+			Past
+			<span class="visually-hidden">
+				version of 5.6 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f257b6373ff2453ba653091e2614244a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4b87630630124029a7a36a92121918f2"
+	 data-version="83fa53d6db6f4d79966306c8583d3d42"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that the members of the <em><a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> have adequate access to information and documents that are needed to oversee and monitor management decision-making.</p>
+			<p><strong>[Note: Art. 9(3) of <em><a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/07-03-2016#4b87630630124029a7a36a92121918f2">
+			Past
+			<span class="visually-hidden">
+				version of 5.7 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4b87630630124029a7a36a92121918f2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="471146c319cd45d590ae0c3a73a1cdaa"
+	 data-version="117f76b0cc44429e8f56cfca1ac50b84"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that maintains a website must explain on the website how it complies with the requirements of this Chapter and <a  title="Senior Management Functions 8.2" href="/pra-rules/senior-management-functions#f593bba6b52f49cdac9767252379c856" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Senior Management Functions 8.2</a>.</p>
+			<p><strong>[Note: Art. 96 of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#471146c319cd45d590ae0c3a73a1cdaa">
+			Past
+			<span class="visually-hidden">
+				version of 5.8 before 07/03/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=471146c319cd45d590ae0c3a73a1cdaa">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/general-organisational-requirements/5-management-body/23-10-2025?p=1" data-id="1f64c53239374ba68995438fc372de93" data-effective-date="23-10-2025" data-download-title="Management Body_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/general-organisational-requirements/5-management-body/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements#1f64c53239374ba68995438fc372de93&amp;subject=PRA Rulebook - General Organisational Requirements – Management Body">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1f64c53239374ba68995438fc372de93">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Management Body
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="49a014074eba45b6b06221ad7ec280e2"
+	 data-version="ce592eec37ca4568bbb0a54088541a3f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Nomination Committee
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a794fd5c2972428d8fa27275bb0bcd46"
+	 data-version="c49ea34967854b358e0b5355c064140e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that is significant must:</p>
+<ol class="new-bullet">
+<li>(1) establish a nomination committee composed of members of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> who do not perform any executive function in the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>;</li>
+<li>(2) ensure that the nomination committee is able to use any forms of resources the nomination committee deems appropriate, including external advice; and</li>
+<li>(3) ensure that the nomination committee receives appropriate funding.</li>
+</ol>
+			<p><strong>[Note: Art. 88(2) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em> </strong><strong>and Art. 9(1) of<em> <a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em></strong><strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#a794fd5c2972428d8fa27275bb0bcd46">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a794fd5c2972428d8fa27275bb0bcd46">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="81e1800fb98f43b9a4a34e4efe80e544"
+	 data-version="23ce62fe6cec428dba06500eda556175"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that has a nomination committee must ensure that the nomination committee:</p>
+<ol class="new-bullet">
+<li>(1) engage a broad set of qualities and competences when recruiting members to the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> and for that purpose puts in place a policy promoting diversity on the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>;</li>
+<li>(2) identifies and recommends for approval, by the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> or by general meeting, candidates to fill <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> vacancies, having evaluated the balance of knowledge, skills, diversity and experience of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>;</li>
+<li>(3) prepares a description of the roles and capabilities for a particular appointment, and assesses the time commitment required;</li>
+<li>(4) decides on a target for the representation of the underrepresented gender in the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> and prepares a policy on how to increase the number of the underrepresented gender in the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> in order to meet that target;</li>
+<li>(5) periodically, and at least annually, assesses the structure, size, composition and performance of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> and makes recommendations to the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> with regard to any changes;</li>
+<li>(6) periodically, and at least annually, assesses the knowledge, skills and experience of individual members of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> and of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> collectively, and reports this to the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>;</li>
+<li>(7) periodically reviews the policy of the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> for selection and appointment of <em><a class="glossary-link" title="senior management" href="#glossary-term-685d8be44e4445d4a16142fe92a32c80" data-mce-linktype="2" data-glossary-id="52151">senior management</a></em> and makes recommendations to the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>; and</li>
+<li>(8) in performing its duties, and to the extent possible, on an ongoing basis, takes account of the need to ensure that the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body&rsquo;s</a></em> decision making is not dominated by any one individual or small group of individuals in a manner that is detrimental to the interest of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> as a whole.</li>
+</ol>
+			<p><strong>[Note: Art. 88(2) and Art. 91(10) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a> </em></strong><strong>and Art. 9(1) of<em> <a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em></strong><strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#81e1800fb98f43b9a4a34e4efe80e544">
+			Past
+			<span class="visually-hidden">
+				version of 6.2 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=81e1800fb98f43b9a4a34e4efe80e544">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="677469b047424503a2ba696d4f4c601a"
+	 data-version="15a8169930d1496389f5bac6aec49fde"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that does not have a nomination committee must engage a broad set of qualities and competences when recruiting members to the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>. For that purpose a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that does not have a nomination committee must put in place a policy promoting diversity on the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>.</p>
+			<p><strong>[Note: Art. 91(10) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a> </em></strong><strong>and Art. 9(1) of<em> <a  class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-mce-linktype="2" data-glossary-id="52269">MiFID II</a></em></strong><strong>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					03/01/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/02-04-2015#677469b047424503a2ba696d4f4c601a">
+			Past
+			<span class="visually-hidden">
+				version of 6.3 before 03/01/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=677469b047424503a2ba696d4f4c601a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fdd3b0f7066c4d28a6ba9375dcd4501f"
+	 data-version="8614de6180b347609e92e9c9f50d3a75"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that maintains a website must explain on the website how it complies with the requirements of this Chapter.</p>
+			<p><strong>[Note: Art. 96 of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					02/04/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fdd3b0f7066c4d28a6ba9375dcd4501f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/general-organisational-requirements/6-nomination-committee/23-10-2025?p=1" data-id="49a014074eba45b6b06221ad7ec280e2" data-effective-date="23-10-2025" data-download-title="Nomination Committee_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/general-organisational-requirements/6-nomination-committee/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements#49a014074eba45b6b06221ad7ec280e2&amp;subject=PRA Rulebook - General Organisational Requirements – Nomination Committee">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=49a014074eba45b6b06221ad7ec280e2">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Nomination Committee
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="3867001697e441dfbb63b3e91982c527"
+	 data-version="b9a3ce9cf8204b12b72f0fe0c869b789"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Group Arrangements
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6cadae9488724f65aa85a66e0a9ba17d"
+	 data-version="43f53ef92d744316811b6d526b860016"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where an <a class="glossary-link" title="article 109 undertaking" href="#glossary-term-704dbe42f18d4a8d8100de2f752e8bd7" data-mce-linktype="2" data-glossary-id="108326">Article 109 undertaking</a> is a member of a <a class="glossary-link" title="consolidation group" href="#glossary-term-3ab198df3a9a4fecbf13392b34234609" data-mce-linktype="2" data-glossary-id="66961">consolidation group</a> or a <a class="glossary-link" title="sub-consolidation group" href="#glossary-term-8b85be6afef840fbb5bb092d5e3ba3b8" data-mce-linktype="2" data-glossary-id="78066">sub-consolidation group</a>, the <a class="glossary-link" title="article 109 undertaking" href="#glossary-term-704dbe42f18d4a8d8100de2f752e8bd7" data-mce-linktype="2" data-glossary-id="108326">Article 109 undertaking</a> must ensure that the governance arrangements, risk management processes and internal control mechanisms at the level of the <a class="glossary-link" title="consolidation group" href="#glossary-term-3ab198df3a9a4fecbf13392b34234609" data-mce-linktype="2" data-glossary-id="66961">consolidation group</a> or <a class="glossary-link" title="sub-consolidation group" href="#glossary-term-8b85be6afef840fbb5bb092d5e3ba3b8" data-mce-linktype="2" data-glossary-id="78066">sub-consolidation group</a> of which it is a member comply with the obligations set out in <a title="2.1" href="/pra-rules/general-organisational-requirements#acd012a2162b4c639e9d3460afd5c057" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a>, <a href="/pra-rules/general-organisational-requirements#c7a20a4524944271b799bfde9c8e8e7b" data-rb-content-link="Rule">2.1A</a>, <a href="/pra-rules/general-organisational-requirements#013258e1708c48be88fb202dac907a56" data-rb-content-link="Rule">2.2</a>,&nbsp;<a title="2.6" href="/pra-rules/general-organisational-requirements#2302ede3de494cc28e99489c861934dd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a>, <a href="/pra-rules/general-organisational-requirements#257f7d2c5166421faedfe552f502c439" data-rb-content-link="Rule">2.6A</a>,&nbsp;<a title="Chapter 5" href="/pra-rules/general-organisational-requirements#1f64c53239374ba68995438fc372de93" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Chapter 5</a> and <a title="Chapter 6" href="/pra-rules/general-organisational-requirements#49a014074eba45b6b06221ad7ec280e2" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Chapter 6</a> of this Part and <a title="2.3" href="/pra-rules/related-party-transaction-risk#8c756c07bab244aeb9c4dff41f2b6110" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.3</a> to <a href="/pra-rules/related-party-transaction-risk#e5dcc0349d214b57a0987ab62ae11125" data-rb-content-link="Rule">2.5 in the Related Party Transaction Risk Part</a>&nbsp;on a <a class="glossary-link" title="consolidated basis" href="#glossary-term-dee57c59546b48e8a9a5112293fe79b8" data-mce-linktype="2" data-glossary-id="66960">consolidated basis</a> or a <a class="glossary-link" title="sub-consolidation basis" href="#glossary-term-258d366b40e64d2385ad3d800d1f9400" data-mce-linktype="2" data-glossary-id="78070">sub-consolidated basis</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					23/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/29-12-2020#6cadae9488724f65aa85a66e0a9ba17d">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 23/10/2025
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6cadae9488724f65aa85a66e0a9ba17d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bf7902510c134174ac16fd56ef50b030"
+	 data-version="be17eb32d68b4b99bead733ff74ded29"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If this Part applies to an <em><a  class="glossary-link" title="article 109 undertaking" href="#glossary-term-704dbe42f18d4a8d8100de2f752e8bd7" data-mce-linktype="2" data-glossary-id="108326">Article 109 undertaking</a></em> on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-dee57c59546b48e8a9a5112293fe79b8" data-mce-linktype="2" data-glossary-id="66960">consolidated basis</a></em> or on a <em><a  class="glossary-link" title="sub-consolidated basis" href="#glossary-term-258d366b40e64d2385ad3d800d1f9400" data-mce-linktype="2" data-glossary-id="78070">sub-consolidated basis</a></em>, the <em><a  class="glossary-link" title="article 109 undertaking" href="#glossary-term-704dbe42f18d4a8d8100de2f752e8bd7" data-mce-linktype="2" data-glossary-id="108326">Article 109 undertaking</a></em> must carry out consolidation to the same extent and in the same manner as it is required to comply with the obligations laid down in Parts Two to Eight of the <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-dee57c59546b48e8a9a5112293fe79b8" data-mce-linktype="2" data-glossary-id="66960">consolidated basis</a></em> or <em><a  class="glossary-link" title="sub-consolidated basis" href="#glossary-term-258d366b40e64d2385ad3d800d1f9400" data-mce-linktype="2" data-glossary-id="78070">sub-consolidated basis</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/general-organisational-requirements/30-03-2018#bf7902510c134174ac16fd56ef50b030">
+			Past
+			<span class="visually-hidden">
+				version of 7.1A before 29/12/2020
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/general-organisational-requirements/01-01-2027#bf7902510c134174ac16fd56ef50b030">
+			Future
+			<span class="visually-hidden">
+				version of 7.1A after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bf7902510c134174ac16fd56ef50b030">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="80baeb35206445cd9fc7bb2c1c7e61f3"
+	 data-version="59a8824ce21448f9bcb60316ec167e62"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Compliance with the obligations referred to in <a  title="7.1" href="/pra-rules/general-organisational-requirements#6cadae9488724f65aa85a66e0a9ba17d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.1</a> must enable the <em><a  class="glossary-link" title="consolidation group" href="#glossary-term-3ab198df3a9a4fecbf13392b34234609" data-mce-linktype="2" data-glossary-id="66961">consolidation group</a></em> to have arrangements, processes and mechanisms that are consistent and well integrated and that any data relevant to the purpose of supervision can be produced. </p>
+			<p><strong>[Note: Art 109(2) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/general-organisational-requirements/01-01-2027#80baeb35206445cd9fc7bb2c1c7e61f3">
+			Future
+			<span class="visually-hidden">
+				version of 7.2 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=80baeb35206445cd9fc7bb2c1c7e61f3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="23-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/general-organisational-requirements/7-group-arrangements/23-10-2025?p=1" data-id="3867001697e441dfbb63b3e91982c527" data-effective-date="23-10-2025" data-download-title="Group Arrangements_23-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/general-organisational-requirements/7-group-arrangements/23-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/general-organisational-requirements#3867001697e441dfbb63b3e91982c527&amp;subject=PRA Rulebook - General Organisational Requirements – Group Arrangements">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=3867001697e441dfbb63b3e91982c527">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Group Arrangements
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,3579 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/recovery-plans" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/recovery-plans" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{2D5429D0-C0E0-4281-AED4-7D47406C7BB7} -->
+<title>Recovery Plans | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Recovery Plans">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Recovery Plans">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoj7q-f-336caad46-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":40,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2562efb8","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51213,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370239","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==RedyqmqByjzZnsqdEUBhxl8sydbwdcUXVLYJCxNDpvOxOMuIjZdAVr8nalW/R/F1CSXk+xHjSeH/5yfFGnpV0BPrJLVcF7l2uMhrBykz0wGXAosOVYIJKLvSZnTI04URBum7uecAeXUrQIVVKTrgitwy5xXJRJrr830ztkz3ao/0BwaU7+AmUqofzxEluYAFCPY1DfFM5UH7h0vi9aAFV089YqqufTjR0E+F7TNa0qMNrgCdsVOMiRyyihSetC/gPf6oAvsKgIu00beicX196ixa8DaQ3bApcNMPZgAeKx3+Jl9eC9UtvtgiGhofV8cyriUY12p9vQGQnAUWw8S15FuszKsL1T5S9u3/jLzV4TgmFZYc+KPl5WddC5ysJ/CnsH2gQBqb4BXBYpQpyvf/85ZZ5CRXpIw/dIbk2Y9EEaA=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Recovery Plans				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Recovery Plans
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/recovery-plans/19-01-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						19/01/2015
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/recovery-plans/01-07-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/07/2015
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/recovery-plans/01-01-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2019
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/recovery-plans/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/recovery-plans/01-10-2025">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/10/2025
+					</a>
+				</div>
+				<div class="listing__item is-future ">
+					<a href="/pra-rules/recovery-plans/01-01-2027">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2027
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-482460aa-50d4-40c8-8f1b-4b2df222ca16">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-482460aa-50d4-40c8-8f1b-4b2df222ca16"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Recovery Plans
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Recovery Plans)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-authorised-persons">
+					Non-authorised persons
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=6389f2c302714f3a8fe3e602bdcc387e">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Recovery Plans
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss09-17---recovery-planning/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS9/17 – Recovery Planning
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss03-21---non-systemic-uk-banks-the-pras-approach-to-new-and-growing-banks/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS3/21 – Non-systemic UK banks: The Prudential Regulation Authority’s approach to new and growing banks
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss01-22-trading-activity-wind-down/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS1/22 – Trading activity wind-down
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss02-24---solvent-exit-planning-for-non-systemic-banks-and-building-societies/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS2/24 – Solvent exit planning for non-systemic banks and building societies
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/implementing-the-bank-recovery-and-resolution-directive" class="list-links__link" target="_blank">
+										PS1/15 - Implementing the Bank Recovery and Resolution Directive
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/strengthening-the-alignment-of-risk-and-reward-new-remuneration-rules" class="list-links__link" target="_blank">
+										PS12/15 - Strengthening the alignment of risk and reward: new remuneration rules
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/ensuring-operational-continuity-in-resolution" class="list-links__link" target="_blank">
+										PS21/16 - Ensuring operational continuity in resolution
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/march/solvent-exit-planning-for-non-systemic-banks-and-building-societies-policy-statement?utm_source=Bank+of+England+updates&amp;utm_campaign=86506505dd-EMAIL_CAMPAIGN_2024_03_12_10_17&amp;utm_medium=email&amp;utm_term=0_-86506505dd-%5BLIST_EMAIL_ID%5D" class="list-links__link" target="_blank">
+										PS5/24 - Solvent exit planning for non-systemic banks and building societies
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/uksi/2014/3348/contents" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										The Bank Recovery and Resolution (No. 2) Order 2014
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/-/media/boe/files/paper/2020/december/Recommendations%20on%20the%20coverage%20of%20entities%20in%20a%20group%20recovery%20plan.pdf" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Recommendations on the coverage of entities in a group recovery plan (EBA/REC/2017/02)
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/-/media/boe/files/paper/2020/december/Guidelines%20on%20recovery%20plans%20indicators.pdf" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Guidelines on the minimum list of qualitative and quantitative recovery plan  indicators
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/-/media/boe/files/paper/2020/december/Guidelines%20on%20the%20range%20of%20scenarios%20to%20be%20used%20in%20recovery%20plans.pdf" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Guidelines on the range of scenarios to be used in recovery plans (EBA/GL/2014/06)
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/-/media/boe/files/paper/2019/ps519-section-b-app3-brrd-april-2019.pdf" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										EU EXIT INSTRUMENT: THE TECHNICAL STANDARDS (BANK RECOVERY AND  RESOLUTION DIRECTIVE) (EU EXIT) (No.2) INSTRUMENT 2019
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.legislation.gov.uk/eur/2016/1075/contents" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Commission Delegated Regulation (EU) 2016/1075
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/recovery-plans/01-10-2025_31-12-2026.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/recovery-plans/01-10-2025?p=1" data-id="6389f2c302714f3a8fe3e602bdcc387e" data-effective-date="01-10-2025" data-download-title="Recovery Plans_01-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/recovery-plans/01-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/recovery-plans&amp;subject=PRA Rulebook - Recovery Plans">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="b95c4d4049934c30b1583c7cdf3f87ef"
+	 data-version="8a0fded2c3504f5e973b97335001b2b2"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="535f73575d4346a78ab6e09899086982"
+	 data-version="7610c34bb93b4ad1a359d6f4b211c47a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=535f73575d4346a78ab6e09899086982">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5344d1a30bc5407fbfe6de904bd122b8"
+	 data-version="c0459d598efa43f1b3c365dfc0e9dd0b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><a class="glossary-link" title="Article 1(1)(b) entity" href="#glossary-term-1cb78f4405464f02ae0dad0035c7e90f" data-glossary-id="52272" data-mce-linktype="2">Article 1(1)(b) entity</a></p>
+<p style="padding-left: 30px;">means a <a class="glossary-link" title="financial institution" href="#glossary-term-128d2be918da4a1389ccbd0593374a49" data-glossary-id="52478" data-mce-linktype="2">financial institution</a> that is established in the <a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a> when the <a class="glossary-link" title="financial institution" href="#glossary-term-128d2be918da4a1389ccbd0593374a49" data-glossary-id="52478" data-mce-linktype="2">financial institution</a> is a <a class="glossary-link" title="subsidiary" href="#glossary-term-377c1858208c4539b3dccfbb582ea380" data-glossary-id="52491" data-mce-linktype="2">subsidiary</a> of a <a class="glossary-link" title="credit institution" href="#glossary-term-e2b606bf33474ecc99511b2096a6c145" data-glossary-id="52156" data-mce-linktype="2">credit institution</a> or <a class="glossary-link" title="investment firm" href="#glossary-term-fa969614f89e49e284058924828ac5a2" data-glossary-id="52483" data-mce-linktype="2">investment firm</a>, or of an <a class="glossary-link" title="Article 1(1)(c) entity" href="#glossary-term-678d67e03a464d7cbf273203c2e1b22e" data-glossary-id="52273" data-mce-linktype="2">Article 1(1)(c) entity</a> or an <a class="glossary-link" title="Article 1(1)(d) entity" href="#glossary-term-f7eb92eaadc54c4fa7548ea2678ec187" data-glossary-id="52274" data-mce-linktype="2">Article 1(1)(d) entity</a>, and is covered by the supervision of the <a class="glossary-link" title="parent undertaking" href="#glossary-term-9640857af4694d3c93fb67ebffa478a1" data-glossary-id="52290" data-mce-linktype="2">parent undertaking</a> on a <a class="glossary-link" title="consolidated basis" href="#glossary-term-6a1c3b91125843d5bcc63d08e22fbdc2" data-glossary-id="52545" data-mce-linktype="2">consolidated basis</a> in accordance with Articles 6 to 17 of <a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-glossary-id="52111" data-mce-linktype="2">CRR</a>.</p>
+<p><a class="glossary-link" title="Article 1(1)(c) entity" href="#glossary-term-678d67e03a464d7cbf273203c2e1b22e" data-glossary-id="52273" data-mce-linktype="2">Article 1(1)(c) entity</a></p>
+<p style="padding-left: 30px;">means a <a class="glossary-link" title="financial holding company" href="#glossary-term-336d80154c6648b2b282b96f7589411b" data-glossary-id="52475" data-mce-linktype="2">financial holding company</a>, <a class="glossary-link" title="mixed financial holding company" href="#glossary-term-0a2573674ac04667bca4317b9aa3130e" data-glossary-id="52546" data-mce-linktype="2">mixed financial holding company</a> or <a class="glossary-link" title="mixed activity holding company" href="#glossary-term-ac0e71a8b0544ed195f8f1023b1f9c85" data-glossary-id="52485" data-mce-linktype="2">mixed activity holding company</a> that is established in the <a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a>.</p>
+<p><a class="glossary-link" title="Article 1(1)(d) entity" href="#glossary-term-f7eb92eaadc54c4fa7548ea2678ec187" data-glossary-id="52274" data-mce-linktype="2">Article 1(1)(d) entity</a></p>
+<p style="padding-left: 30px;">means a <a class="glossary-link" title="UK parent financial holding company" href="#glossary-term-ea5105190d814b62aeb0dcec3e5c43eb" data-mce-linktype="2" data-glossary-id="98247">UK parent financial holding company</a> or a <a class="glossary-link" title="UK parent mixed financial holding company" href="#glossary-term-70b67a63fa2d47948b71f78a5fe97dbf" data-mce-linktype="2" data-glossary-id="98249">UK parent mixed financial holding company</a>.</p>
+<p><a class="glossary-link" title="competent authority" href="#glossary-term-b9b7e694379b46ae97404461a35b2411" data-glossary-id="52294" data-mce-linktype="2">competent authority</a></p>
+<p style="padding-left: 30px;">means: </p>
+<ol class="new-bullet" style="padding-left: 30px;">
+    <ol>
+        <li>(1) the <a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a>, in respect of <a class="glossary-link" title="PRA-authorised persons" href="#glossary-term-0e88dab3646e4b6e9b11402f6c0fe631" data-mce-linktype="2" data-glossary-id="77811">PRA-authorised persons</a>;</li>
+        <li>(2) the <a class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a>, in respect of any other <a class="glossary-link" title="person" href="#glossary-term-106ff6df0f744b2ea406763c3ea5cc70" data-mce-linktype="2" data-glossary-id="52490">person</a>.</li>
+    </ol>
+</ol>
+<p><a class="glossary-link" title="conditions for early intervention" href="#glossary-term-1a66c622a7a043118b84e4cf7d471893" data-glossary-id="52277" data-mce-linktype="2">conditions for early intervention</a></p>
+<p style="padding-left: 30px;">means where an <a class="glossary-link" title="institutions" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-glossary-id="52481" data-mce-linktype="2">institution</a> infringes or is likely in the near future to infringe the requirements of the <a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-glossary-id="52111" data-mce-linktype="2">CRR</a>, any of Articles 3 to 7, 14 to 17 and 24, 25 and 26 of <a class="glossary-link" title="MiFIR" href="#glossary-term-71964e826c6c4ba8b150bf2239fb66d2" data-glossary-id="52270" data-mce-linktype="2">MiFIR</a> or requirements implementing <a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-glossary-id="52109" data-mce-linktype="2">CRD</a> or <a class="glossary-link" title="MiFID II" href="#glossary-term-2c1184b3b89045aabf99052ea83f16f4" data-glossary-id="52269" data-mce-linktype="2">MiFID II</a>.</p>
+<p><a class="glossary-link" title="EEA consolidating supervisor" href="#glossary-term-0113cd33e0034aa0991bcfc5c236d2c2" data-glossary-id="52278" data-mce-linktype="2">consolidating supervisor</a></p>
+<p style="padding-left: 30px;">means a <a class="glossary-link" title="competent authority" href="#glossary-term-b9b7e694379b46ae97404461a35b2411" data-glossary-id="52294" data-mce-linktype="2">competent authority</a> responsible for the exercise of supervision on a <a class="glossary-link" title="consolidated basis" href="#glossary-term-6a1c3b91125843d5bcc63d08e22fbdc2" data-glossary-id="52545" data-mce-linktype="2">consolidated basis</a> of:</p>
+<ol>
+    <ol class="new-bullet">
+        <li>(1) a <a class="glossary-link" title="UK parent institution" href="#glossary-term-2ae8d2c0a1464049a1d8f664c025d84f" data-mce-linktype="2" data-glossary-id="98248">UK parent institution</a>; or</li>
+        <li>(2) <a class="glossary-link" title="institutions" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-glossary-id="52481" data-mce-linktype="2">institutions</a> controlled by a <a class="glossary-link" title="UK parent financial holding company" href="#glossary-term-ea5105190d814b62aeb0dcec3e5c43eb" data-mce-linktype="2" data-glossary-id="98247">UK parent financial holding company</a> or a <a class="glossary-link" title="UK parent mixed financial holding company" href="#glossary-term-70b67a63fa2d47948b71f78a5fe97dbf" data-mce-linktype="2" data-glossary-id="98249">UK parent mixed financial holding company</a>.</li>
+    </ol>
+</ol>
+<p><a class="glossary-link" title="extraordinary public financial support" href="#glossary-term-92e0748a168f48f29e67b4538c67a38f" data-glossary-id="52283" data-mce-linktype="2">extraordinary public financial support</a></p>
+<p style="padding-left: 30px;">means, support of a kind described in section 3(1) of the Banking Act 2009 that is provided in order to preserve or restore the viability, liquidity or solvency of an <a class="glossary-link" title="institutions" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-glossary-id="52481" data-mce-linktype="2">institution</a> or <a class="glossary-link" title="Article 1(1)(b) entity" href="#glossary-term-1cb78f4405464f02ae0dad0035c7e90f" data-glossary-id="52272" data-mce-linktype="2">Article 1(1)(b) entity</a>, <a class="glossary-link" title="Article 1(1)(c) entity" href="#glossary-term-678d67e03a464d7cbf273203c2e1b22e" data-glossary-id="52273" data-mce-linktype="2">Article 1(1)(c) entity</a>, <a class="glossary-link" title="Article 1(1)(d) entity " href="#glossary-term-f7eb92eaadc54c4fa7548ea2678ec187" data-glossary-id="52274" data-mce-linktype="2">Article 1(1)(d) entity</a> or of a group of which such an <a class="glossary-link" title="institutions" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-glossary-id="52481" data-mce-linktype="2">institution</a> or entity forms part.</p>
+<p><a class="glossary-link" title="management body" href="#glossary-term-2f799ed4ea25422c8e76a3f7fe8ea99c" data-glossary-id="52285" data-mce-linktype="2">management body</a></p>
+<p style="padding-left: 30px;">means a <a class="glossary-link" title="BRRD undertaking’s" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-glossary-id="52268" data-mce-linktype="2">BRRD undertaking&rsquo;s</a> body or bodies, which are appointed in accordance with national law, which are empowered to set the <a class="glossary-link" title="BRRD undertaking’s" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-glossary-id="52268" data-mce-linktype="2">BRRD undertaking&rsquo;s</a> strategy, objectives and overall direction, and which oversee and monitor management decision-making, and include the <a class="glossary-link" title="persons" href="#glossary-term-08c2a4c6b87b4e51a4292e13ba411052" data-glossary-id="52181" data-mce-linktype="2">persons</a> who effectively direct the business of the <a class="glossary-link" title="BRRD undertaking’s" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-glossary-id="52268" data-mce-linktype="2">BRRD undertaking</a>.</p>
+<p><a class="glossary-link" title="own funds requirement" href="#glossary-term-2bcdaf761e8847abac3196daa26b3360" data-glossary-id="52286" data-mce-linktype="2">own funds requirement</a></p>
+<p style="padding-left: 30px;">means the requirements laid down in Articles 92 to 98 of the <a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-glossary-id="52111" data-mce-linktype="2">CRR</a>.</p>
+<p><a class="glossary-link" title="parent undertaking" href="#glossary-term-9640857af4694d3c93fb67ebffa478a1" data-glossary-id="52290" data-mce-linktype="2">parent undertaking</a></p>
+<p style="padding-left: 30px;">has the meaning given in Article 4(1)(15) of the <a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-glossary-id="52111" data-mce-linktype="2">CRR</a>.</p>
+<p><a href="#glossary-term-af71adcfa1434c498cb7ff9f57d41bc1">solvent exit</a></p>
+<p style="padding-left: 30px;">means the process through which a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;ceases to carry on its <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;<a href="#glossary-term-aa04e0522d234dabb44ae6041cd9954b">regulated <span> </span>activities</a>&nbsp;while remaining solvent.</p>
+<p><a href="#glossary-term-dcccb08348ce4f0081f5c7fd93782210">solvent exit analysis</a></p>
+<p style="padding-left: 30px;">means a document setting out a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;preparations for <a href="#glossary-term-af71adcfa1434c498cb7ff9f57d41bc1">solvent exit</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2025
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/31-12-2020#5344d1a30bc5407fbfe6de904bd122b8">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 01/10/2025
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/recovery-plans/01-01-2027#5344d1a30bc5407fbfe6de904bd122b8">
+			Future
+			<span class="visually-hidden">
+				version of 1.2 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5344d1a30bc5407fbfe6de904bd122b8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ac92d3d644534873815bfaa43ab36933"
+	 data-version="34d7aa00f43740ddb29e3e9a5a717a25"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise defined, any italicised expression used in this Part and in the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> has the same meaning as in the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ac92d3d644534873815bfaa43ab36933">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/recovery-plans/1-application-and-definitions/01-10-2025?p=1" data-id="b95c4d4049934c30b1583c7cdf3f87ef" data-effective-date="01-10-2025" data-download-title="Application and Definitions_01-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/recovery-plans/1-application-and-definitions/01-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/recovery-plans#b95c4d4049934c30b1583c7cdf3f87ef&amp;subject=PRA Rulebook - Recovery Plans – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b95c4d4049934c30b1583c7cdf3f87ef">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="2286ad27faa0491a8121e4609c9952c5"
+	 data-version="103404c0afa54b4c8e8bb3b82af9b637"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Recovery Plans
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="82b40511a0854705b6bd9cf0f67dc5be"
+	 data-version="1cbbcb4130244a6fb8d7d7302e7649c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that is not part of a <em><a class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em> subject to consolidated supervision by a <em><a class="glossary-link" title="consolidating supervisor" href="#glossary-term-0113cd33e0034aa0991bcfc5c236d2c2" data-mce-linktype="2" data-glossary-id="52278">consolidating supervisor</a>.</em></p>
+			<p><strong>[Note: Art. 5(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#82b40511a0854705b6bd9cf0f67dc5be">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=82b40511a0854705b6bd9cf0f67dc5be">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="425ac20b6be544e69a6f76b6cfea8ef2"
+	 data-version="65365f3b1b644535ba234c56beec8a3a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must draw up and maintain a <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> providing for measures to be taken by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to restore its financial position following a significant deterioration of its financial situation.</p>
+			<p><strong>[Note: Art. 5(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=425ac20b6be544e69a6f76b6cfea8ef2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="25572d3d58704f04aabd09c1715c0198"
+	 data-version="969d7d57680244bcba7653fe250c822d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must submit its<em> <a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>.</p>
+			<p><strong>[Note: Art. 6(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=25572d3d58704f04aabd09c1715c0198">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ebfbdaa8bb1e4d30aded5143fa61c05f"
+	 data-version="1540621eb57f4436a1077638af1db732"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must provide its <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> by online submission through:</p>
+<ol class="new-bullet">
+<li>(1) email; or</li>
+<li>(2) the appropriate systems made available to <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firms</a></em>. </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ebfbdaa8bb1e4d30aded5143fa61c05f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c5badb67a6064cfcbad7d3ac74dc6487"
+	 data-version="c7e09c5fc75a4456b66f648a6d4fe8c8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> must not assume any access to or receipt of <em><a class="glossary-link" title="extraordinary public financial suppor" href="#glossary-term-92e0748a168f48f29e67b4538c67a38f" data-mce-linktype="2" data-glossary-id="52283">extraordinary public financial support</a></em>.</p>
+			<p><strong>[Note: Art. 5(3) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c5badb67a6064cfcbad7d3ac74dc6487">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e7d86890d2984f03b8829d5a1cb898b4"
+	 data-version="d9eec4b491cd4360b8ba5aecb6d535a2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> must include, where applicable, an analysis of how and when the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> may apply, in the conditions addressed by the plan, for the use of central bank facilities and must identify those assets which would be expected to qualify as collateral.</p>
+			<p><strong>[Note: Art. 5(4) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e7d86890d2984f03b8829d5a1cb898b4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="cddccebb497d45bab9d8190cf590748a"
+	 data-version="141fcc588f96432d82f919ee3a0cd2f5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> must include the information set out in Section A of the Annex to the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>.<strong> </strong></p>
+			<p><strong>[Note: Art. 5(5) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=cddccebb497d45bab9d8190cf590748a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="932ac27a341d4215bc6c96cfb74d0e0e"
+	 data-version="46a7291fc7b34de5af21c6398d2b1c5f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> must include possible measures which could be taken by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> where the <em><a class="glossary-link" title="conditions for early intervention" href="#glossary-term-1a66c622a7a043118b84e4cf7d471893" data-mce-linktype="2" data-glossary-id="52277">conditions for early intervention</a></em> are met.</p>
+			<p><strong>[Note: Art. 5(5) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=932ac27a341d4215bc6c96cfb74d0e0e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1e5fc5921a2c493fb9a9ec632c54576e"
+	 data-version="7342b250043443739a9941ce1d04b6b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> must include appropriate conditions and procedures to ensure the timely implementation of recovery actions as well as a wide range of recovery options.</p>
+			<p><strong>[Note: Art. 5(6) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>] </strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1e5fc5921a2c493fb9a9ec632c54576e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="47d3b40a32204ef5863ac6be64bb8582"
+	 data-version="6913b07a84504f9c9a4442f236c08740"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> must contemplate a range of scenarios of severe macroeconomic and financial stress relevant to  the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> specific conditions including system-wide events and stress specific to individual legal persons and to <em><a  class="glossary-link" title="groups" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">groups</a></em>.</p>
+			<p><strong>[Note: Art. 5(6) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=47d3b40a32204ef5863ac6be64bb8582">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.10
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4ddea347a829402b88c44bba82373883"
+	 data-version="6f8d00355faa419cad7ad40ba1786cbe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must demonstrate to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> that the <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> meets the requirements set out in this Chapter and the following criteria:</p>
+<ol class="new-bullet">
+<li>(1) the implementation of the arrangements proposed in the <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> is reasonably likely to maintain or restore the viability and financial position of the <em><a class="glossary-link" title="institution" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-mce-linktype="2" data-glossary-id="52481">institution</a></em> or of the <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em>, taking into account the preparatory measures that the <em><a class="glossary-link" title="institution" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-mce-linktype="2" data-glossary-id="52481">institution</a></em> has taken or has planned to take;</li>
+<li>(2) the <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> and specific options within the <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> are reasonably likely to be implemented quickly and effectively in situations of financial stress and avoiding to the maximum extent possible any significant adverse effect on the financial system, including in scenarios which would lead other <em><a class="glossary-link" title="institution" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-mce-linktype="2" data-glossary-id="52481">institutions</a></em> to implement <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> within the same period.</li>
+</ol>
+			<p><strong>[Note: Art. 6(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4ddea347a829402b88c44bba82373883">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.11
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/recovery-plans/2-recovery-plans/01-10-2025?p=1" data-id="2286ad27faa0491a8121e4609c9952c5" data-effective-date="01-10-2025" data-download-title="Recovery Plans_01-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/recovery-plans/2-recovery-plans/01-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/recovery-plans#2286ad27faa0491a8121e4609c9952c5&amp;subject=PRA Rulebook - Recovery Plans – Recovery Plans">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2286ad27faa0491a8121e4609c9952c5">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Recovery Plans
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="ec3d0a5b74514675a6105de46caf077b"
+	 data-version="590d3a3b424d4c6da8990efb8ec58045"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Group Recovery Plans
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="43cb2279a949446a89738c1808c2d360"
+	 data-version="09203fcf1ea24ee1a09a69f538ee4055"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which is:</p>
+<ol class="new-bullet">
+    <li><span style="line-height: 1.6em; text-indent: -1.3em;">(1) </span><span style="line-height: 1.6em; text-indent: -1.3em;">a </span><a class="glossary-link" title="UK parent undertaking" href="#glossary-term-0e35db43d4c34a2280e82833465eefee" data-mce-linktype="2" data-glossary-id="98250">UK parent undertaking</a><span style="line-height: 1.6em; text-indent: -1.3em;"> unless </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a class="glossary-link" title="the FCA" href="#glossary-term-6aacdfa43eb64f15886e298a50bfb208" data-mce-linktype="2" data-glossary-id="52474">the FCA</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> is the </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a class="glossary-link" title="EEA consolidating supervisor" href="#glossary-term-0113cd33e0034aa0991bcfc5c236d2c2" data-mce-linktype="2" data-glossary-id="52278">consolidating supervisor</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> of its </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em><span style="line-height: 1.6em; text-indent: -1.3em;">;</span></li>
+    <li><span style="line-height: 1.6em; text-indent: -1.3em;">(</span><span style="line-height: 1.6em; text-indent: -1.3em;">2</span><span style="line-height: 1.6em; text-indent: -1.3em;">) [deleted.]</span></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#43cb2279a949446a89738c1808c2d360">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=43cb2279a949446a89738c1808c2d360">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f467828374fd4198a8348bcce65d7477"
+	 data-version="31d68390d7ce4297985d43f1dce77dd7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the <em><a class="glossary-link" title="EEA consolidating supervisor" href="#glossary-term-0113cd33e0034aa0991bcfc5c236d2c2" data-mce-linktype="2" data-glossary-id="52278">consolidating supervisor</a></em> is the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>, a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> must draw up a <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> and submit the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>.</p>
+			<p><strong>[Note: Art. 7(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#f467828374fd4198a8348bcce65d7477">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f467828374fd4198a8348bcce65d7477">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="844cf88fbf7c4945b8d3f9529ac60c3d"
+	 data-version="2a91a1e77c504400b917a6b97c32e5e3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must consist of a recovery plan for the <em><a class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em> headed by the <em><a class="glossary-link" title="UK parent undertaking" href="#glossary-term-0e35db43d4c34a2280e82833465eefee" data-mce-linktype="2" data-glossary-id="98250">UK parent undertaking</a></em> as a whole.</p>
+			<p><strong>[Note: Art. 7(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#844cf88fbf7c4945b8d3f9529ac60c3d">
+			Past
+			<span class="visually-hidden">
+				version of 3.3 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=844cf88fbf7c4945b8d3f9529ac60c3d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1247d2f0fc8f4aeba1e0d03dbf70a349"
+	 data-version="9e83a5d4ecad421b93dd3321cc9afc64"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which is required by <a  title="3.2" href="/pra-rules/recovery-plans" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">3.2</a> to submit the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> must provide its <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> by online submission through:</p>
+<ol class="new-bullet">
+<li>(1) email; or</li>
+<li>(2) the appropriate systems made available to <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertakings</a></em>. </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1247d2f0fc8f4aeba1e0d03dbf70a349">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0c563f607ce845cb9b6846e7b0bfeb1a"
+	 data-version="043d2451c634492ba3b98689f047b450"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must identify measures that may be required to be implemented at the level of the <em><a class="glossary-link" title="UK parent undertaking" href="#glossary-term-0e35db43d4c34a2280e82833465eefee" data-mce-linktype="2" data-glossary-id="98250">UK parent undertaking</a></em> and each individual <em><a class="glossary-link" title="subsidiary" href="#glossary-term-377c1858208c4539b3dccfbb582ea380" data-mce-linktype="2" data-glossary-id="52491">subsidiary</a></em>.</p>
+			<p><strong>[Note: Art. 7(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#0c563f607ce845cb9b6846e7b0bfeb1a">
+			Past
+			<span class="visually-hidden">
+				version of 3.5 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0c563f607ce845cb9b6846e7b0bfeb1a">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2b7886f63ba44e93a888e969d9a623e5"
+	 data-version="56ed38b7f73d42a7bfbe982901232c40"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must aim to achieve the stabilisation of the <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em> as a whole, or any <em><a class="glossary-link" title="institution" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-mce-linktype="2" data-glossary-id="52481">institution</a></em> of the <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em>, when it is in a situation of stress so as to address or remove the causes of the distress and restore the financial position of the <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em> or the <em><a class="glossary-link" title="institution" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-mce-linktype="2" data-glossary-id="52481">institution</a></em> in question, at the same time taking into account the financial position of other <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em> entities.</p>
+			<p><strong>[Note: Art. 7(4) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2b7886f63ba44e93a888e969d9a623e5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="680720c3a8404094b210dea95aa8cf7f"
+	 data-version="c13b1dd33b0c47679612ec4fcb989cd3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must include arrangements to ensure the coordination and consistency of measures to be taken at the level of the <em><a class="glossary-link" title="UK parent undertaking" href="#glossary-term-0e35db43d4c34a2280e82833465eefee" data-mce-linktype="2" data-glossary-id="98250">UK parent undertaking</a></em>, at the level of an <em><a class="glossary-link" title="Article 1(1)(c) entity" href="#glossary-term-678d67e03a464d7cbf273203c2e1b22e" data-mce-linktype="2" data-glossary-id="52273">Article 1(1)(c) entity</a></em> or <em><a class="glossary-link" title="Article 1(1)(d) entity" href="#glossary-term-f7eb92eaadc54c4fa7548ea2678ec187" data-mce-linktype="2" data-glossary-id="52274">Article 1(1)(d) entity</a></em>, as well as measures to be taken at the level of a<em> <a class="glossary-link" title="subsidiary" href="#glossary-term-377c1858208c4539b3dccfbb582ea380" data-mce-linktype="2" data-glossary-id="52491">subsidiary</a></em>.</p>
+			<p><strong>[Note: Art. 7(4) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#680720c3a8404094b210dea95aa8cf7f">
+			Past
+			<span class="visually-hidden">
+				version of 3.7 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=680720c3a8404094b210dea95aa8cf7f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="490c836eca7b47818e11ca532d4f64a2"
+	 data-version="b89e2bdcf30040729487e2df0b1e2f2a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must include the elements specified in <a title="2.6" href="/pra-rules/recovery-plans#e7d86890d2984f03b8829d5a1cb898b4" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a> &ndash; <a title="2.9" href="/pra-rules/recovery-plans#1e5fc5921a2c493fb9a9ec632c54576e" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.9</a>. The <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must include, where applicable, arrangements for intra-group financial support adopted pursuant to an agreement for intra-group financial support that has been concluded in accordance with The Bank Recovery and Resolution (No 2) Order 2014 (2014/3348) or <a title="Group Financial Support 2" href="/pra-rules/group-financial-support#7ec9e3ab58744705ae21d68db5a0a4ea" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Group Financial Support 2</a> &ndash; <a title="8" href="/pra-rules/group-financial-support#b8f7656057b6433fa804ea7a8bbab889" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">8</a>.</p>
+			<p><strong>[Note: Art. 7(5) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#490c836eca7b47818e11ca532d4f64a2">
+			Past
+			<span class="visually-hidden">
+				version of 3.8 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=490c836eca7b47818e11ca532d4f64a2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="fff6da9af7874d4eaeeed77d2d88a6d2"
+	 data-version="20ef8116b32840dbb649e2e801f7edd3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must include a range of recovery options setting out actions to address a range of scenarios of severe macroeconomic and financial stress relevant to the <em><a  class="glossary-link" title="group&rsquo;s" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group&rsquo;s</a></em> specific conditions including system-wide events and stress specific to individual legal persons and to <em><a  class="glossary-link" title="groups" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">groups</a></em>.</p>
+			<p><strong>[Note: Art. 7(6) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fff6da9af7874d4eaeeed77d2d88a6d2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.9
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9388ae7ab4cd4a828b32cbd2e89b44f0"
+	 data-version="70e6616b2252439fa9587ff857c5cb3e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For each scenario, the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must identify whether there are obstacles to the implementation of recovery measures within the <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em>, including at the level of individual entities covered by the plan, and whether there are substantial practical or legal impediments to the prompt transfer of <em><a class="glossary-link" title="own funds" href="#glossary-term-3ccaae87e49e4ac7833b6d0b48023af2" data-mce-linktype="2" data-glossary-id="52489">own funds</a></em> or the repayment of liabilities or assets within the <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a>.</em></p>
+			<p><strong>[Note: Art. 7(6) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9388ae7ab4cd4a828b32cbd2e89b44f0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.10
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="71ce9bd864084684aecf8c66dbc72260"
+	 data-version="710a9a7ccb814e99b083c1e3f90e0a85"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> that is a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must demonstrate to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> that the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> meets the requirements set out in this Chapter and the following criteria:</p>
+<ol class="new-bullet">
+<li>(1) the implementation of the arrangements proposed in the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> is reasonably likely to maintain or restore the viability and financial position of the <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em> or of an individual <em><a class="glossary-link" title="subsidiary" href="#glossary-term-377c1858208c4539b3dccfbb582ea380" data-mce-linktype="2" data-glossary-id="52491">subsidiary</a></em> in the <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em>, taking into account the preparatory measures that the individual <em><a class="glossary-link" title="subsidiary" href="#glossary-term-377c1858208c4539b3dccfbb582ea380" data-mce-linktype="2" data-glossary-id="52491">subsidiary</a></em> has taken or has planned to take; and</li>
+<li>(2) the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> and specific options within the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> are reasonably likely to be implemented quickly and effectively in situations of financial stress and avoiding to the maximum extent possible any significant adverse effect on the financial system, including in scenarios which would lead other <em><a class="glossary-link" title="institutions" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-mce-linktype="2" data-glossary-id="52481">institutions</a></em> to implement <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plans</a></em> within the same period.</li>
+</ol>
+			<p><strong>[Note: Art. 6(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=71ce9bd864084684aecf8c66dbc72260">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.11
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5de9bd7fa2fb40bbbfc887d48c8d1f40"
+	 data-version="ada4a2b9fa1c49329adec6b308f67ddd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> that is a <em><a class="glossary-link" title="qualifying parent undertaking" href="#glossary-term-b8f820f395974f769443baf63dcebcfb" data-mce-linktype="2" data-glossary-id="52271">qualifying parent undertaking</a></em> must make arrangements to ensure it is demonstrated to the <em><a class="glossary-link" title="EEA consolidating supervisor" href="#glossary-term-0113cd33e0034aa0991bcfc5c236d2c2" data-mce-linktype="2" data-glossary-id="52278">consolidating supervisor</a></em> that the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> meets the requirements set out in this Chapter and the following criteria:</p>
+<ol class="new-bullet">
+    <li>(1) the implementation of the arrangements proposed in the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> is reasonably likely to maintain or restore the viability and financial position of the <em><a class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em> or of an individual <em><a class="glossary-link" title="subsidiary" href="#glossary-term-377c1858208c4539b3dccfbb582ea380" data-mce-linktype="2" data-glossary-id="52491">subsidiary</a></em> in the <em><a class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em>, taking into account the preparatory measures that the individual <em><a class="glossary-link" title="subsidiary" href="#glossary-term-377c1858208c4539b3dccfbb582ea380" data-mce-linktype="2" data-glossary-id="52491">subsidiary</a></em> has taken or has planned to take; and</li>
+    <li>(2) the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> and specific options within the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> are reasonably likely to be implemented quickly and effectively in situations of financial stress and avoiding to the maximum extent possible any significant adverse effect on the financial system, including in scenarios which would lead other <em><a class="glossary-link" title="institutions" href="#glossary-term-363b1c38e161405aaae8f28e1d43c390" data-mce-linktype="2" data-glossary-id="52481">institutions</a></em> to implement <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plans</a></em> within the same period.</li>
+</ol>
+			<p><strong>[Note: Art. 6(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#5de9bd7fa2fb40bbbfc887d48c8d1f40">
+			Past
+			<span class="visually-hidden">
+				version of 3.12 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5de9bd7fa2fb40bbbfc887d48c8d1f40">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.12
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/recovery-plans/3-group-recovery-plans/01-10-2025?p=1" data-id="ec3d0a5b74514675a6105de46caf077b" data-effective-date="01-10-2025" data-download-title="Group Recovery Plans_01-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/recovery-plans/3-group-recovery-plans/01-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/recovery-plans#ec3d0a5b74514675a6105de46caf077b&amp;subject=PRA Rulebook - Recovery Plans – Group Recovery Plans">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=ec3d0a5b74514675a6105de46caf077b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Group Recovery Plans
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="f906bde807ca4c8b82d4cf4d7633810f"
+	 data-version="72f9b1e6cc9d49c3921c5cc59fa6c096"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Review of Recovery Plan and Group Recovery Plan
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4aa8dd3f4439484a865d16fb53642cec"
+	 data-version="ad658c46192749a087b5aee75b049e06"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which is required to draw up a <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> or<em> <a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> under <a  title="2" href="/pra-rules/recovery-plans#2286ad27faa0491a8121e4609c9952c5" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">2</a> or <a  title="3" href="/pra-rules/recovery-plans#ec3d0a5b74514675a6105de46caf077b" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">3</a>. </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4aa8dd3f4439484a865d16fb53642cec">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="cb1fad3a6d784638998e4b018d32267c"
+	 data-version="6fe37b16116944c08999ac224b5bb03d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> that is a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must:</p>
+<ol class="new-bullet">
+<li>(1) review its <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> or <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> at least once a year; and</li>
+<li>(2) keep its<em><span style="font-style: normal;"> </span><span style="font-style: normal;"><em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> or </span><em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> </em>up to date, which includes ensuring that it is updated to reflect any change to the legal or organisational structure of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em>, its business or its financial situation, which could have a material effect on, or necessitates a change to, the <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> or <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em>.</li>
+</ol>
+			<p><strong>[Note: Art. 5(2) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=cb1fad3a6d784638998e4b018d32267c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0a3d270533e3428fb2f460a0367987b5"
+	 data-version="0616d7c3cac4471eb9d74f98ae9d5b92"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> that is a <em><a class="glossary-link" title="qualifying parent undertaking" href="#glossary-term-b8f820f395974f769443baf63dcebcfb" data-mce-linktype="2" data-glossary-id="52271">qualifying parent undertaking</a></em> must make arrangements to ensure that:</p>
+<ol class="new-bullet">
+<li>(1) its <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> is reviewed at least once a year; and<br /><br /></li>
+<li>(2) its <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> is kept up to date, which includes ensuring that it is updated to reflect any change to the legal or organisational structure of the <em><a  class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em>, its business or its financial situation, which could have a material effect on, or necessitates a change to, the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em>.</li>
+</ol>
+			<p><strong>[Note: Art. 5(2) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0a3d270533e3428fb2f460a0367987b5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1566dd5129134200a7c53792eb5bc932"
+	 data-version="96621ab0bde4465ba0c75e3f0d3585ba"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of any material changes made to its <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> promptly and, in any event, within one month of making any such change. </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1566dd5129134200a7c53792eb5bc932">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="de18cf2fe04542f39d12aa25524ae68e"
+	 data-version="b73f428ba49a43149509472dce1d8076"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title=" BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which is required by <a  title="3.2" href="/pra-rules/recovery-plans#f467828374fd4198a8348bcce65d7477" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.2</a> to submit a <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> must notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of any material changes made to its <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> promptly and, in any event, within one month of making any such change. </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=de18cf2fe04542f39d12aa25524ae68e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/recovery-plans/4-review-of-recovery-plan-and-group-recovery-plan/01-10-2025?p=1" data-id="f906bde807ca4c8b82d4cf4d7633810f" data-effective-date="01-10-2025" data-download-title="Review of Recovery Plan and Group Recovery Plan_01-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/recovery-plans/4-review-of-recovery-plan-and-group-recovery-plan/01-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/recovery-plans#f906bde807ca4c8b82d4cf4d7633810f&amp;subject=PRA Rulebook - Recovery Plans – Review of Recovery Plan and Group Recovery Plan">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=f906bde807ca4c8b82d4cf4d7633810f">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Review of Recovery Plan and Group Recovery Plan
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="551871d8b1594faebf378b1cb68e5d86"
+	 data-version="7d6cbce177f34230a700a41531e56d58"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Governance Arrangements
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="03d20962647149ecb6cbe97115a53081"
+	 data-version="cc938d0c43a746e69d6e9ab6429a860e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which is required to draw up a <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> or a <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> under <a  title="2" href="/pra-rules/recovery-plans#2286ad27faa0491a8121e4609c9952c5" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">2</a> or <a  title="3" href="/pra-rules/recovery-plans#ec3d0a5b74514675a6105de46caf077b" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">3</a>. </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=03d20962647149ecb6cbe97115a53081">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5e00f7857f664d629d4d915ebfff11d7"
+	 data-version="f4bc0beec7f54d5aac264d4edaf6eab6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> which is required to draw up a <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> must, taking into account the nature, scale and complexity of its business, establish and maintain appropriate internal processes regarding the governance of its <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> and must:</p>
+<ol class="new-bullet">
+<li>(1) ensure that its <em><a class="glossary-link" title="management body" href="#glossary-term-2f799ed4ea25422c8e76a3f7fe8ea99c" data-mce-linktype="2" data-glossary-id="52285">management body</a></em> oversees, assesses and approves the <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> before the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> submits the <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>;</li>
+<li>(2) ensure that its audit committee periodically reviews the <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em>; and</li>
+<li>(3) nominate an executive <em><a class="glossary-link" title="director" href="#glossary-term-003127b8ca1d48fcb0612a82af1e31c7" data-mce-linktype="2" data-glossary-id="52144">director</a></em> who is a member of the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em><a class="glossary-link" title="management body" href="#glossary-term-2f799ed4ea25422c8e76a3f7fe8ea99c" data-mce-linktype="2" data-glossary-id="52285">management body</a></em> to have responsibility for the<em> </em><em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> and for overseeing the internal processes regarding its governance.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5e00f7857f664d629d4d915ebfff11d7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1f37a79a8f314f368b713b1ff06d7550"
+	 data-version="32b2b25c970846d8a5ab5a511e9132f6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which is required to draw up a <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must, taking into account the nature, scale and complexity of its business and the business of other members of its <em><a class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em>, establish and maintain appropriate internal processes regarding the governance of the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> and must:</p>
+<ol class="new-bullet">
+    <li>(1) ensure that its <em><a class="glossary-link" title="management body" href="#glossary-term-2f799ed4ea25422c8e76a3f7fe8ea99c" data-mce-linktype="2" data-glossary-id="52285">management body</a></em> oversees, assesses and approves the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> before the <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> submits the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> to the <em><a class="glossary-link" title="EEA consolidating supervisor" href="#glossary-term-0113cd33e0034aa0991bcfc5c236d2c2" data-mce-linktype="2" data-glossary-id="52278">consolidating supervisor</a></em>;</li>
+    <li>(2) ensure that its audit committee periodically reviews the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em>; and</li>
+    <li>(3) nominate an executive <em><a class="glossary-link" title="director" href="#glossary-term-003127b8ca1d48fcb0612a82af1e31c7" data-mce-linktype="2" data-glossary-id="52144">director</a></em> who is a member of the <em><a class="glossary-link" title="BRRD undertaking’s" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking&rsquo;s</a> </em><em><a class="glossary-link" title="management body" href="#glossary-term-2f799ed4ea25422c8e76a3f7fe8ea99c" data-mce-linktype="2" data-glossary-id="52285">management body</a></em> to have responsibility for the <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> and for overseeing the internal processes regarding its governance.</li>
+</ol>
+			<p><strong>[Note: Art. 5(9) and 7(7) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#1f37a79a8f314f368b713b1ff06d7550">
+			Past
+			<span class="visually-hidden">
+				version of 5.3 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1f37a79a8f314f368b713b1ff06d7550">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/recovery-plans/5-governance-arrangements/01-10-2025?p=1" data-id="551871d8b1594faebf378b1cb68e5d86" data-effective-date="01-10-2025" data-download-title="Governance Arrangements_01-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/recovery-plans/5-governance-arrangements/01-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/recovery-plans#551871d8b1594faebf378b1cb68e5d86&amp;subject=PRA Rulebook - Recovery Plans – Governance Arrangements">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=551871d8b1594faebf378b1cb68e5d86">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Governance Arrangements
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="01ff5dd1de4641769c81dc06fc754fa9"
+	 data-version="48465115a3aa4b84b077c9e5102b2090"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Recovery Plan and Group Recovery Plan Indicators
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="26e8a359961f4dc3a1114fb6a3533b6b"
+	 data-version="19523272a3024cdca4d2b4962842f5f4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to a <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which is required to draw up a <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> or <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> under <a  title="2" href="/pra-rules/recovery-plans#2286ad27faa0491a8121e4609c9952c5" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">2</a> or <a  title="3" href="/pra-rules/recovery-plans#ec3d0a5b74514675a6105de46caf077b" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">3</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=26e8a359961f4dc3a1114fb6a3533b6b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="aa9484db5ed24b3a87cdb0b9e358d268"
+	 data-version="d0ad9cc5a4264cc38b3f160d7cb71912"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> and a <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> must include a framework of indicators established by the <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> which identifies the points at which appropriate actions referred to in the <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> or <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> may be taken.</p>
+			<p><strong>[Note: Art. 9(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=aa9484db5ed24b3a87cdb0b9e358d268">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3cf9ff94ff9b4028ac049bbfadf27546"
+	 data-version="ac3276a130bc410cab8a2d97e4b85d2a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The indicators may be of a qualitative or quantitative nature relating to the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> or the <em><a  class="glossary-link" title="group&rsquo;s" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group&rsquo;s</a></em> financial position and must be capable of being monitored easily.</p>
+			<p><strong>[Note: Art. 9(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3cf9ff94ff9b4028ac049bbfadf27546">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c8677c828eb744c1b8a3d3045d2e9deb"
+	 data-version="b153dfd7f4bc4afaae78d6162ae53b00"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> must have in place appropriate arrangements for the regular monitoring of the indicators.</p>
+			<p><strong>[Note: Art. 9(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c8677c828eb744c1b8a3d3045d2e9deb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e7a39114ad604ad0a721849c17a8daf0"
+	 data-version="a87b0120dab04b938e6b38c99decb064"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must notify the<em> <a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> without delay if it decides to take action under its <em><a class="glossary-link" title="recovery plan" href="#glossary-term-b9387e8de72e4844ae03d3290b5d10a9" data-mce-linktype="2" data-glossary-id="52291">recovery plan</a></em> or <em><a class="glossary-link" title="group recovery plan" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> or if it decides to refrain from taking action.</p>
+			<p><strong>[Note: Art. 9(1) of the <em><a class="glossary-link" title="BRRD" href="#glossary-term-5d7b845663df4973a16c4dd18de6776b" data-mce-linktype="2" data-glossary-id="52267">BRRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					19/01/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e7a39114ad604ad0a721849c17a8daf0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="333edfb951694ee0b1042e3f2eca8cfe"
+	 data-version="e3a65a8d5e71480fa08d3ed5bf43dced"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="BRRD undertaking" href="#glossary-term-17ed0923999748feb7ac09610c0b2848" data-mce-linktype="2" data-glossary-id="52268">BRRD undertaking</a></em> that is a <em><a class="glossary-link" title="qualifying parent undertaking" href="#glossary-term-b8f820f395974f769443baf63dcebcfb" data-mce-linktype="2" data-glossary-id="52271">qualifying parent undertaking</a></em> must:</p>
+<ol class="new-bullet">
+    <li>(1) notify the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> without delay if it (or any member of its <em><a class="glossary-link" title="group" href="#glossary-term-e770e320858d4652a50825e5aa46572d" data-mce-linktype="2" data-glossary-id="52479">group</a></em>) decides to take action under the <em><a class="glossary-link" title="group recovery pla" href="#glossary-term-5a1cb80ad546434198f26fd016061c35" data-mce-linktype="2" data-glossary-id="52284">group recovery plan</a></em> or to refrain from taking action and the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> is the <em><a class="glossary-link" title="EEA consolidating superviso" href="#glossary-term-0113cd33e0034aa0991bcfc5c236d2c2" data-mce-linktype="2" data-glossary-id="52278">consolidating supervisor</a></em>;</li>
+    <li>(2) [deleted.]</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/recovery-plans/19-01-2015#333edfb951694ee0b1042e3f2eca8cfe">
+			Past
+			<span class="visually-hidden">
+				version of 6.6 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=333edfb951694ee0b1042e3f2eca8cfe">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/recovery-plans/6-recovery-plan-and-group-recovery-plan-indicators/01-10-2025?p=1" data-id="01ff5dd1de4641769c81dc06fc754fa9" data-effective-date="01-10-2025" data-download-title="Recovery Plan and Group Recovery Plan Indicators_01-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/recovery-plans/6-recovery-plan-and-group-recovery-plan-indicators/01-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/recovery-plans#01ff5dd1de4641769c81dc06fc754fa9&amp;subject=PRA Rulebook - Recovery Plans – Recovery Plan and Group Recovery Plan Indicators">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=01ff5dd1de4641769c81dc06fc754fa9">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Recovery Plan and Group Recovery Plan Indicators
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="7fc2d06c143a48bb90982d717a83bd07"
+	 data-version="62f5b368d527443ea4abe3bc5a74f3ac"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Preparations for Solvent Exit – Non-systemic Banks and Building Societies
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4c86e8ebccf24022b84046322587d67f"
+	 data-version="e7be1672c89b43c5b89462cc33279d9e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies to every <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a> that is a <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>&nbsp;or <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a> but is not:</p>
+<ol class="new-bullet">
+    <li>(1) itself, or part of a group that is, a <a href="#glossary-term-f4a0aebb01284c8e869519ca54ef0ad0">G-SII</a>,&nbsp;<a href="#glossary-term-6e266787cdf249f18986246aa68a9108">a non-UK G-SII</a>&nbsp;or an <a href="#glossary-term-22ed48b56d5846ee8eb11e8c546210bb">O-SII</a>; or</li>
+    <li>(2) a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;to which the <a href="/pra-rules/operational-continuity" data-rb-content-link="Part">Operational Continuity Part</a>&nbsp;applies.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4c86e8ebccf24022b84046322587d67f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="afb11d395ec54248b2d4288304cdf6b0"
+	 data-version="666691830c6a4b868fef0a50d74aad77"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a> must prepare for <a href="#glossary-term-af71adcfa1434c498cb7ff9f57d41bc1">solvent exit</a> so that, if the need arises, it can effect a <a href="#glossary-term-af71adcfa1434c498cb7ff9f57d41bc1">solvent exit</a> in an orderly manner.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=afb11d395ec54248b2d4288304cdf6b0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f9f95a463e55430d8c5996dc75e37b31"
+	 data-version="75e14eff5e134c5c876c4b811f091e9a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a> must produce a <a href="#glossary-term-dcccb08348ce4f0081f5c7fd93782210">solvent exit analysis</a> and update it whenever a material change has taken place that may affect its preparations for a <a href="#glossary-term-af71adcfa1434c498cb7ff9f57d41bc1">solvent exit</a>, and at least once every three years.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f9f95a463e55430d8c5996dc75e37b31">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="bb6487aa564d498c95e66153ab8bf253"
+	 data-version="ee54432b798b4f6a81799633b5543c9c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a> must be able to provide to the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a> on request the current version of its <a href="#glossary-term-dcccb08348ce4f0081f5c7fd93782210">solvent exit analysis</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2025
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=bb6487aa564d498c95e66153ab8bf253">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-10-2025">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/recovery-plans/7-preparations-for-solvent-exit---non-systemic-banks-and-building-societies/01-10-2025?p=1" data-id="7fc2d06c143a48bb90982d717a83bd07" data-effective-date="01-10-2025" data-download-title="Preparations for Solvent Exit – Non-systemic Banks and Building Societies_01-10-2025" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/recovery-plans/7-preparations-for-solvent-exit---non-systemic-banks-and-building-societies/01-10-2025?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/recovery-plans#7fc2d06c143a48bb90982d717a83bd07&amp;subject=PRA Rulebook - Recovery Plans – Preparations for Solvent Exit – Non-systemic Banks and Building Societies">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=7fc2d06c143a48bb90982d717a83bd07">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Preparations for Solvent Exit – Non-systemic Banks and Building Societies
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

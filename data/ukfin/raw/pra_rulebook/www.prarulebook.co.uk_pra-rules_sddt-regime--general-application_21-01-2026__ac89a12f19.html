@@ -1,0 +1,2329 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/sddt-regime--general-application" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/sddt-regime--general-application" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{A5A4CA5E-BBED-44C1-A937-BF64779D4997} -->
+<title>SDDT Regime – General Application | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SDDT Regime – General Application">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SDDT Regime – General Application">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwokja-f-b05adb445-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":177,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"25631c97","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51250,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370258","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==kdKb46ZJq4F+hF16ILlfixGr+oQgjWXwznIMQF6ZSV8GBq2U81UABIlkl/PbleZxJf7RCNjpyJ4xRZ741YARMSShQfgE3cWw4zibP2G+PbNKipICsPnLyfZk2+lcemE/QoXIE+VFncsqfde7jqZM50SgZ7aB3Hu04FqFvw5tkx8Twze7kL4c/RZqOx/1Yn0WJNUSp7me18gHqB5rhJmYm8NNkTAprkToTY/XxWIASmcdJdjPgzMvY759fGcR6ZLJfOajVnvQ5M28hrJ0NenFI6RSbOzRbMMu2ESwlsnJoxDwpQJHRjcuB2Y2tMig6ucw08UjzyksYPie+2KdalxHepcVM2LAUCia1t94Tia9YLnSa4eVhA7W+hB3C1OmRb0p382kr1X7uSUn4kI0AtlMomI2pIhLdGP66aB46bmCozA=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SDDT Regime – General Application				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SDDT Regime – General Application
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/sddt-regime--general-application/01-01-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2024
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/sddt-regime--general-application/29-11-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						29/11/2024
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/sddt-regime--general-application/20-01-2026">
+						<span class="visually-hidden">View Rulebook as at</span>
+						20/01/2026
+					</a>
+				</div>
+				<div class="listing__item is-future ">
+					<a href="/pra-rules/sddt-regime--general-application/01-01-2027">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2027
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-24388127-7829-427e-8db8-ed1e2d70855a">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-24388127-7829-427e-8db8-ed1e2d70855a"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SDDT Regime – General Application
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SDDT Regime – General Application)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=77a7de9f335a4e899211dcc4a39abe0a">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						SDDT Regime – General Application
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss03-21---non-systemic-uk-banks-the-pras-approach-to-new-and-growing-banks/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS3/21 – Non-systemic UK banks: The Prudential Regulation Authority’s approach to new and growing banks
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/statements-of-policy/sop---operating-the-small-domestic-deposit-taker-sddt-regime/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SoP2/23 – Operating the Small Domestic Deposit Taker (SDDT) regime
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2023/december/strong-and-simple-framework-policy-statement" class="list-links__link" target="_blank">
+										PS15/23 - The Strong and Simple Framework: Scope Criteria, Liquidity and Disclosure Requirements
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/strong-and-simple-framework-definition-of-an-icr-firm-policy-statement" class="list-links__link" target="_blank">
+										PS19/24 - Strong and Simple Framework: The definition of an Interim Capital Regime (ICR) firm
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/the-strong-and-simple-framework-final-policy-statement" class="list-links__link" target="_blank">
+										PS4/26 - The Strong and Simple Framework: The simplified capital regime for Small Domestic Deposit Takers (SDDTs) (final)
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/waivers-and-modifications-of-rules/modification-by-consent-for-a-uk-bank-or-building-society-to-become-a-sddt.docx" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										SDDT (modification by consent)
+										</a>
+									</li>
+									<li class="list-links__item">
+										<a href="https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/waivers-and-modifications-of-rules/moditifcation-by-consent-for-a-crr-consolidated-entity-to-become-an-sdd-consolidated-entity.docx" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										SDDT consolidation entity (modification by consent)
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/sddt-regime--general-application/20-01-2026_31-12-2026.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/sddt-regime--general-application/20-01-2026?p=1" data-id="77a7de9f335a4e899211dcc4a39abe0a" data-effective-date="20-01-2026" data-download-title="SDDT Regime – General Application_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/sddt-regime--general-application/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/sddt-regime--general-application&amp;subject=PRA Rulebook - SDDT Regime – General Application">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="35dbcfa116ec4e1aa0c9537d617ac829"
+	 data-version="ec05a8e328fa4bfc822f86ba85a5c070"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="57c41e57bf8c4487bb033727a947e04d"
+	 data-version="f040d12f7166454aa5ed8eae78d3b99c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to:</p>
+<ol class="new-bullet">
+    <li>(1) a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;that is a <a href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231">CRR firm</a>; and</li>
+    <li>(2) a <a href="#glossary-term-9abc7072e33941cca650790aec3d4ad6">CRR consolidation entity</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=57c41e57bf8c4487bb033727a947e04d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="85d1a9287c904aadb8b9f6b2b9cd2b90"
+	 data-version="c7613110947c49b2802bda9b22053640"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><a href="#glossary-term-a779eef0e2534435bcd286f0b92baeab">MLAR</a></p>
+<p style="margin-left: 40px;">means the Mortgage Lenders and Administrators Return at SUP 16 Annex 19A R of the <a href="#glossary-term-32be3c2dd21146a7805f3079824eae67">FCA Handbook</a>.</p>
+<p style=""><a href="#glossary-term-dcbba317263d4be5a80601df3067f6b6">parent undertaking</a></p>
+<p style="margin-left: 40px;">has the meaning given in section 1162 of (together with Schedule 7 to) the Companies Act 2006.</p>
+<p style=""><a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a></p>
+<p style="margin-left: 40px;">means the exposures referred to in template C 09.04&nbsp;of <a href="/pra-rules/reporting-crr#64a32b97f1564f2781346eec96c4e3c4" data-rb-content-link="SubChapter">Annex 1 to the Reporting (CRR) Part</a>&nbsp;and in the instructions for completion of that template in point 3.4.3 of Part II of <a href="/pra-rules/reporting-crr#57bf7fdee76d48fbb0fcc634a629a53a" data-rb-content-link="SubChapter">Annex II to the Reporting (CRR) Part</a>.</p>
+<p style=""><a href="#glossary-term-39bbae39cc194c92aca44618f6aec919">SDDT consolidation criteria</a></p>
+<p style="margin-left: 40px;">has the meaning given in <a href="/pra-rules/sddt-regime--general-application#59c3fbfa7908476ab41d45b828c9d9e6" data-rb-content-link="Rule">2.2.</a></p>
+<p style=""><a href="#glossary-term-1ed15371b1f3419ca52d495ae3a314f2">SDDT criteria</a></p>
+<p style="margin-left: 40px;">has the meaning given in <a href="/pra-rules/sddt-regime--general-application#b6abeac4f68a4bbebc69f6b1032cbf0b" data-rb-content-link="Rule">2.1.</a></p>
+<p style=""><a href="#glossary-term-423e62f17bb24a4fb1b9c823d0742893">total assets</a></p>
+<p style="margin-left: 40px;">means:</p>
+<ol class="new-bullet" style="margin-left: 40px;">
+    <li>(1) for a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;that is required to submit <a href="#glossary-term-dd68c52821e641efabd92ffd5573053c">data item</a>&nbsp;template F 01.01&nbsp;of <a href="/pra-rules/reporting-crr#523769d0803149faaa2459acb7bffcc7" data-rb-content-link="SubChapter">Annex III Part 1 of Reporting (CRR) Part</a>, the sum of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;assets as required to be recorded at row 380 of that <a href="#glossary-term-dd68c52821e641efabd92ffd5573053c">data item</a>; or</li>
+    <li>(2) for a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;that is required to submit <a href="#glossary-term-dd68c52821e641efabd92ffd5573053c">data item</a>&nbsp;template F 01.01&nbsp;of <a href="/pra-rules/reporting-crr#fb4b247471414efcad8e55aea5736394" data-rb-content-link="SubChapter">Annex IV Part 1 of Reporting (CRR) Part</a>, the sum of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;assets as required to be recorded at row 380 of that <a href="#glossary-term-dd68c52821e641efabd92ffd5573053c">data item</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/sddt-regime--general-application/01-01-2027#85d1a9287c904aadb8b9f6b2b9cd2b90">
+			Future
+			<span class="visually-hidden">
+				version of 1.2 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=85d1a9287c904aadb8b9f6b2b9cd2b90">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/sddt-regime--general-application/1--application-and-definitions/20-01-2026?p=1" data-id="35dbcfa116ec4e1aa0c9537d617ac829" data-effective-date="20-01-2026" data-download-title="Application and Definitions_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/sddt-regime--general-application/1--application-and-definitions/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/sddt-regime--general-application#35dbcfa116ec4e1aa0c9537d617ac829&amp;subject=PRA Rulebook - SDDT Regime – General Application – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=35dbcfa116ec4e1aa0c9537d617ac829">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="71265958a88c488fbae0d2e319c6c2db"
+	 data-version="a1d5164660314e439a9136ddc067ad3c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Small Domestic Deposit Takers Criteria
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b6abeac4f68a4bbebc69f6b1032cbf0b"
+	 data-version="a4019232cce54916b7ee1de52ae3b9a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <a href="#glossary-term-1ed15371b1f3419ca52d495ae3a314f2">SDDT criteria</a>, in respect of a <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>&nbsp;or <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>, are the following criteria.</p>
+<ol class="new-bullet">
+    <li>(1) Either:
+    <ol>
+        <li>(a) the recent average of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;<a href="#glossary-term-423e62f17bb24a4fb1b9c823d0742893">total assets</a>, calculated in accordance with <a href="/pra-rules/sddt-regime--general-application#6fef645eca664497ae1bcb998cce904e" data-rb-content-link="Rule">2.3</a>, does not exceed &pound;20 billion, or</li>
+        <li>(b) if the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;has not yet been required to report its <a href="#glossary-term-423e62f17bb24a4fb1b9c823d0742893">total assets</a>, the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;reasonably forecasts that its <a href="#glossary-term-423e62f17bb24a4fb1b9c823d0742893">total assets</a>&nbsp;will not exceed &pound;20 billion on the first occasion on which it will be required to report them.</li>
+    </ol>
+    </li>
+    <li>(2) At least 75% of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;total <a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a>&nbsp;are located in the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>, and either:
+    <ol>
+        <li>(a) the recent average of the ratio of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;<a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a>&nbsp;that are located in the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>&nbsp;to the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;total <a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a>, calculated in accordance with <a href="/pra-rules/sddt-regime--general-application#460a2ad108ee4829ac0a734932bbf070" data-rb-content-link="Rule">2.4</a>, is at least 85%, or</li>
+        <li>(b) if the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;has not yet been required to report the geographical location of its <a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a>, the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;reasonably forecasts that, on the first occasion on which it will be required to do so, at least 85% of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;total <a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a>&nbsp;will be located in the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>.</li>
+    </ol>
+    </li>
+    <li>(3) Subject to <a href="/pra-rules/sddt-regime--general-application#594b7456fe364edaa75862dfed6ea3d9" data-rb-content-link="Rule">2.7</a>, the size of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;on- and off- balance-sheet trading book business was less than or equal to both &pound;44 million and 5% of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;total assets, on the basis of the assessment set out in <a href="/pra-rules/trading-book-crr#67f3b7eb0dc740df9dfbe64bf44e17bb" data-rb-content-link="Rule">Article 94(3) of Chapter 3 of Trading Book (CRR) Part</a>:
+    <ol>
+        <li>(a) on the last day of at least one of the preceding three <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>, and</li>
+        <li>(b) on the last day of at least six of the preceding twelve <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>.</li>
+    </ol>
+    </li>
+    <li>(4) The <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;overall net foreign-exchange position, calculated using the method set out in Article 352 of <a href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3">CRR</a>, does not exceed 3.5% of its own funds and, subject to <a href="/pra-rules/sddt-regime--general-application#594b7456fe364edaa75862dfed6ea3d9" data-rb-content-link="Rule">2.7</a>, did not on average exceed 2% of its own funds:
+    <ol>
+        <li>(a) in one or more of the preceding three <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>, and</li>
+        <li>(b) in six or more of the preceding twelve <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>,</li>
+        <li>as determined in accordance with <a href="/pra-rules/sddt-regime--general-application#95a6e37bd99544619e8384e055f5cf21" data-rb-content-link="Rule">2.8</a>.</li>
+    </ol>
+    </li>
+    <li>(5) The <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;does not hold positions in commodities or commodity derivatives.</li>
+    <li>(6) The <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;does not apply the Internal Ratings Based Approach to calculate its risk-weighted exposure amounts for credit risk.</li>
+    <li>(7) The <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;does not provide clearing, transaction settlement, custody or correspondent banking services to a <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>, a <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>, or a <a href="#glossary-term-9caf88a763544e7cbc74cb01bca708aa">non-UK credit institution</a>, including by acting as an intermediary for a <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>, a <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>, or a <a href="#glossary-term-9caf88a763544e7cbc74cb01bca708aa">non-UK credit institution</a>&nbsp;to access the facilities or services of:
+    <ol>
+        <li>(a) a <a href="#glossary-term-62d687cf85324e079f46e0f5b9c47d0f">payment system</a>, <a href="#glossary-term-6ed5a569debc4b4ab990d2ac49801032">CSD</a>, <a href="#glossary-term-b715eedcf4094c60869e95402e87f614">third-country CSD</a>, <a href="#glossary-term-9f739d2a000340c2b08fe14e6893b8ec">SSS</a>&nbsp;or <a href="#glossary-term-eabdbe43d5f84ef58294c2d6d6643ac3">central counterparty</a>&nbsp;in which the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;is a direct or indirect participant or member, or</li>
+        <li>(b) an exchange, other trading facility, clearing house or any other financial market utility or infrastructure, either directly or indirectly,</li>
+        <li>except that the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;may provide clearing, transaction settlement, custody or correspondent banking services in sterling to a <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>, <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>&nbsp;or <a href="#glossary-term-9caf88a763544e7cbc74cb01bca708aa">non-UK credit institution</a>&nbsp;that is a member of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;<a href="#glossary-term-83388ba8ca5d44bb9a0c50997a070faa">immediate group</a>.</li>
+    </ol>
+    </li>
+    <li>(8) The <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;is not an <a href="#glossary-term-adf8a0c94e144c4facadad8661264f9f">operator</a>&nbsp;of a <a href="#glossary-term-62d687cf85324e079f46e0f5b9c47d0f">payment system</a>.</li>
+    <li>(9) Any <a href="#glossary-term-dcbba317263d4be5a80601df3067f6b6">parent undertaking</a>&nbsp;of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;is a <a href="#glossary-term-a1797426e4c849949f45ae80b20e7920">UK undertaking</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b6abeac4f68a4bbebc69f6b1032cbf0b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="59c3fbfa7908476ab41d45b828c9d9e6"
+	 data-version="1b19af44c3ce40b2b55be090b62d8e41"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <a href="#glossary-term-39bbae39cc194c92aca44618f6aec919">SDDT consolidation criteria</a>, in relation to members of a <a href="#glossary-term-3ab198df3a9a4fecbf13392b34234609">consolidation group</a>, are the following criteria.</p>
+<ol class="new-bullet">
+    <li>(1) Criteria (1) to (6) of the <a href="#glossary-term-1ed15371b1f3419ca52d495ae3a314f2">SDDT criteria</a>&nbsp;are satisfied:
+    <ol>
+        <li>(a) in respect of the <a href="#glossary-term-9abc7072e33941cca650790aec3d4ad6">CRR consolidation entity</a>&nbsp;on a <a href="#glossary-term-dee57c59546b48e8a9a5112293fe79b8">consolidated basis</a>, and</li>
+        <li>(b) subject to <a href="/pra-rules/sddt-regime--general-application#594b7456fe364edaa75862dfed6ea3d9" data-rb-content-link="Rule">2.7</a>, in respect of each <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>&nbsp;and <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>&nbsp;in the <a href="#glossary-term-3ab198df3a9a4fecbf13392b34234609">consolidation group</a>,</li>
+        <li>and for this purpose references in those criteria to the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;are to be read accordingly.</li>
+    </ol>
+    </li>
+    <li>(2) Criteria (7) and (8) of the <a href="#glossary-term-1ed15371b1f3419ca52d495ae3a314f2">SDDT criteria</a>&nbsp;are satisfied in respect of each <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>&nbsp;and <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>&nbsp;in the <a href="#glossary-term-3ab198df3a9a4fecbf13392b34234609">consolidation group</a>, and for this purpose references in those criteria to the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;are to be read accordingly.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=59c3fbfa7908476ab41d45b828c9d9e6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6fef645eca664497ae1bcb998cce904e"
+	 data-version="27e2e0f6c92a41d495554924cb905380"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><span style="line-height: 115%;"></span>The recent average of a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;<a href="#glossary-term-423e62f17bb24a4fb1b9c823d0742893">total assets</a>&nbsp;referred to in <a href="/pra-rules/sddt-regime--general-application#b6abeac4f68a4bbebc69f6b1032cbf0b" data-rb-content-link="Rule">2.1(1)(a)</a>&nbsp;is to be calculated as follows.</p>
+<ol class="new-bullet">
+    <li>(1) Identify the occasions (due dates) in the preceding 36 <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>&nbsp;by which the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;was required to report its <a href="#glossary-term-423e62f17bb24a4fb1b9c823d0742893">total assets</a>.</li>
+    <li>(2) Calculate the arithmetic mean of the <a href="#glossary-term-423e62f17bb24a4fb1b9c823d0742893">total assets</a>&nbsp;that the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;was required to report on those occasions.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6fef645eca664497ae1bcb998cce904e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="460a2ad108ee4829ac0a734932bbf070"
+	 data-version="fc1e19beb7004cd0980310cefd70d2d2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The recent average of the ratio referred to in <a href="/pra-rules/sddt-regime--general-application#b6abeac4f68a4bbebc69f6b1032cbf0b" data-rb-content-link="Rule">2.1(2)(a)</a>&nbsp;is to be calculated as follows.</p>
+<ol class="new-bullet">
+    <li>(1) Identify the occasions (remittance dates) in the preceding 36 <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>&nbsp;by which the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;was required to report the geographical location of its <a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a>&nbsp;using template C 09.04&nbsp;of <a href="/pra-rules/reporting-crr#64a32b97f1564f2781346eec96c4e3c4" data-rb-content-link="SubChapter">Annex I of Reporting (CRR) Part</a>.</li>
+    <li>(2) For each of those occasions, using the information that the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;was required to report subject to any adjustment in accordance with <a href="/pra-rules/sddt-regime--general-application#ec1010a4d68842f582eb1c66dc49a2c5" data-rb-content-link="Rule">2.6</a>, calculate the ratio of the amount of <a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a>&nbsp;located in the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>&nbsp;to the total amount of <a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a> across all jurisdictions.</li>
+    <li>(3) Calculate the arithmetic mean of those ratios (expressed as a percentage).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/sddt-regime--general-application/01-01-2027#460a2ad108ee4829ac0a734932bbf070">
+			Future
+			<span class="visually-hidden">
+				version of 2.4 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=460a2ad108ee4829ac0a734932bbf070">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="56c59c90db6d4e87aa20456ad0c83b09"
+	 data-version="7a2da696bf36481bae749d485be6d41a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of <a href="/pra-rules/sddt-regime--general-application#b6abeac4f68a4bbebc69f6b1032cbf0b" data-rb-content-link="Rule">2.1(2)</a>&nbsp;and <a href="/pra-rules/sddt-regime--general-application#460a2ad108ee4829ac0a734932bbf070" data-rb-content-link="Rule">2.4(2)</a>, whether a <a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposure</a>&nbsp;is located in the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>&nbsp;is to be determined in accordance with the instructions in point 3.4.3 of Part II of <a href="/pra-rules/reporting-crr#57bf7fdee76d48fbb0fcc634a629a53a" data-rb-content-link="SubChapter">Annex II of Reporting (CRR) Part</a>&nbsp;for completing template C 09.04&nbsp;of <a href="/pra-rules/reporting-crr#64a32b97f1564f2781346eec96c4e3c4" data-rb-content-link="SubChapter">Annex I</a>&nbsp;of that Part, subject to any adjustment in accordance with <a href="/pra-rules/sddt-regime--general-application#ec1010a4d68842f582eb1c66dc49a2c5" data-rb-content-link="Rule">2.6</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/sddt-regime--general-application/01-01-2027#56c59c90db6d4e87aa20456ad0c83b09">
+			Future
+			<span class="visually-hidden">
+				version of 2.5 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=56c59c90db6d4e87aa20456ad0c83b09">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ec1010a4d68842f582eb1c66dc49a2c5"
+	 data-version="1bb3a26655184de89371b0f4b3080bed"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;may treat <a href="#glossary-term-f9d9702294034e708da9823919e1788e">relevant credit exposures</a>&nbsp;as located in the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>&nbsp;if they would qualify as &lsquo;residential loans to individuals&rsquo; for the purpose of the <a href="#glossary-term-a779eef0e2534435bcd286f0b92baeab">MLAR</a>&nbsp;(whether or not they would otherwise be treated as located in the <a href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e">UK</a>).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ec1010a4d68842f582eb1c66dc49a2c5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="594b7456fe364edaa75862dfed6ea3d9"
+	 data-version="92264ad4f236484caa9119793896ca3c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The criteria in <a href="/pra-rules/sddt-regime--general-application#b6abeac4f68a4bbebc69f6b1032cbf0b" data-rb-content-link="Rule">2.1(3)(a)</a>&nbsp;and <a href="/pra-rules/sddt-regime--general-application#b6abeac4f68a4bbebc69f6b1032cbf0b" data-rb-content-link="Rule">2.1(4)(a)</a>&nbsp;do not apply in respect of a <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>&nbsp;or <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>&nbsp;that was not a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;on the last day of the preceding <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">month</a>&nbsp;and the criteria in <a href="/pra-rules/sddt-regime--general-application#b6abeac4f68a4bbebc69f6b1032cbf0b" data-rb-content-link="Rule">2.1(3)(b)</a>&nbsp;and <a href="/pra-rules/sddt-regime--general-application#b6abeac4f68a4bbebc69f6b1032cbf0b" data-rb-content-link="Rule">2.1(4)(b)</a>&nbsp;do not apply in respect of a <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>&nbsp;or <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>&nbsp;that was not a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;on the last day of each of the preceding six <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">months</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=594b7456fe364edaa75862dfed6ea3d9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="95a6e37bd99544619e8384e055f5cf21"
+	 data-version="8928c1d722664df293d052162b7d4efc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of <a href="/pra-rules/sddt-regime--general-application#b6abeac4f68a4bbebc69f6b1032cbf0b" data-rb-content-link="Rule">2.1(4)</a>, a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;overall net foreign-exchange position does not on average exceed 2% of its own funds in a given <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">month</a>&nbsp;if the arithmetic mean of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;daily overall net foreign-exchange positions over the course of the <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">month</a>&nbsp;is less than or equal to 2% of the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm&rsquo;s</a>&nbsp;own funds on the last day of the <a href="#glossary-term-662f153264be46f89f47dbb1b8b7911f">month</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=95a6e37bd99544619e8384e055f5cf21">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/sddt-regime--general-application/2-small-domestic-deposit-takers-criteria/20-01-2026?p=1" data-id="71265958a88c488fbae0d2e319c6c2db" data-effective-date="20-01-2026" data-download-title="Small Domestic Deposit Takers Criteria_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/sddt-regime--general-application/2-small-domestic-deposit-takers-criteria/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/sddt-regime--general-application#71265958a88c488fbae0d2e319c6c2db&amp;subject=PRA Rulebook - SDDT Regime – General Application – Small Domestic Deposit Takers Criteria">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=71265958a88c488fbae0d2e319c6c2db">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Small Domestic Deposit Takers Criteria
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="4aed9c51f2e747079c39364114fcf64c"
+	 data-version="b9c49a365aec49a7acc31cd397f2d027"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Small Domestic Deposit Takers
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e850d3d8cdcd49779706d77dda8b9523"
+	 data-version="05afbba4ad2947cfb29437af0a50a0b8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An <a href="#glossary-term-9e8faa6f07994b50bc4d2f1ed95c49d3">SDDT</a>&nbsp;means a <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>&nbsp;or <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>&nbsp;to which the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;has given a <a href="#glossary-term-92d7150d923e4f3ba42fcfd18d6e1893">waiver</a>&nbsp;modifying the effect of this rule such that the <a href="#glossary-term-feb0d0c4474b4857a9dcbc2d71e93da4">UK bank</a>&nbsp;or <a href="#glossary-term-acd841e55a0b4ca085d76098925f7448">building society</a>&nbsp;is an <a href="#glossary-term-9e8faa6f07994b50bc4d2f1ed95c49d3">SDDT</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e850d3d8cdcd49779706d77dda8b9523">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4dee6363916544a1b64ee9908111a9e9"
+	 data-version="d4b96d7ef0f746f395bf2f98a5bdce69"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An <a href="#glossary-term-7f2d66f1acfd4153b17ad6fe104ae372">SDDT consolidation entity</a>&nbsp;means a <a href="#glossary-term-9abc7072e33941cca650790aec3d4ad6">CRR consolidation entity</a>&nbsp;to which the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;has given a <a href="#glossary-term-92d7150d923e4f3ba42fcfd18d6e1893">waiver</a>&nbsp;modifying the effect of this rule such that the <a href="#glossary-term-9abc7072e33941cca650790aec3d4ad6">CRR consolidation entity</a>&nbsp;is an <a href="#glossary-term-7f2d66f1acfd4153b17ad6fe104ae372">SDDT consolidation entity</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4dee6363916544a1b64ee9908111a9e9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5ab93c46da964e94aef90f0d97ab46c7"
+	 data-version="abaeea2687a442c7ab27af1e8ad33778"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;consents to a <a href="#glossary-term-92d7150d923e4f3ba42fcfd18d6e1893">waiver</a>&nbsp;modifying <a href="/pra-rules/sddt-regime--general-application#e850d3d8cdcd49779706d77dda8b9523" data-rb-content-link="Rule">3.1</a>&nbsp;such that the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;becomes an <a href="#glossary-term-9e8faa6f07994b50bc4d2f1ed95c49d3">SDDT</a>, the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;must certify to the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;that, as of the day of giving the consent, the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>&nbsp;meets the <a href="#glossary-term-1ed15371b1f3419ca52d495ae3a314f2">SDDT criteria</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5ab93c46da964e94aef90f0d97ab46c7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6bef9be4f55f40c3b8b13c656b50ab06"
+	 data-version="8d0b94388a3c4526b6fca663c6450b21"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If an <a href="#glossary-term-9e8faa6f07994b50bc4d2f1ed95c49d3">SDDT</a> ceases to meet the <a href="#glossary-term-1ed15371b1f3419ca52d495ae3a314f2">SDDT criteria</a>, it must notify the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a> within the period of 14 days beginning with the day on which the <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a> ceases to meet the <a href="#glossary-term-1ed15371b1f3419ca52d495ae3a314f2">SDDT criteria</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6bef9be4f55f40c3b8b13c656b50ab06">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="704b9c0479fb42adbab2b99abdf630cf"
+	 data-version="3a11a2f037a64ad8ba5e0c2cfeddfedc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a <a href="#glossary-term-9abc7072e33941cca650790aec3d4ad6">CRR consolidation entity</a> consents to a <a href="#glossary-term-92d7150d923e4f3ba42fcfd18d6e1893">waiver</a>&nbsp;modifying <a href="/pra-rules/sddt-regime--general-application#4dee6363916544a1b64ee9908111a9e9" data-rb-content-link="Rule">3.2</a> such that the <a href="#glossary-term-9abc7072e33941cca650790aec3d4ad6">CRR consolidation entity</a> becomes an <a href="#glossary-term-7f2d66f1acfd4153b17ad6fe104ae372">SDDT consolidation entity</a>, the <a href="#glossary-term-9abc7072e33941cca650790aec3d4ad6">CRR consolidation entity</a> must certify to the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a> that, as of the day of giving the consent, the <a href="#glossary-term-39bbae39cc194c92aca44618f6aec919">SDDT consolidation criteria</a>&nbsp;are satisfied.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=704b9c0479fb42adbab2b99abdf630cf">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1e43bee91665436fa291bc9c32cac28f"
+	 data-version="213de05ab5f94f849536031aec60e238"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the <a href="#glossary-term-39bbae39cc194c92aca44618f6aec919">SDDT consolidation criteria</a>&nbsp;cease to be satisfied, the <a href="#glossary-term-7f2d66f1acfd4153b17ad6fe104ae372">SDDT consolidation entity</a>&nbsp;must notify the <a href="#glossary-term-494fbb81077e408f84519b8c66998fef">PRA</a>&nbsp;within the period of 14 days beginning with the day on which the <a href="#glossary-term-39bbae39cc194c92aca44618f6aec919">SDDT consolidation criteria</a>&nbsp;cease to be satisfied.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2024
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1e43bee91665436fa291bc9c32cac28f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/sddt-regime--general-application/3-small-domestic-deposit-takers/20-01-2026?p=1" data-id="4aed9c51f2e747079c39364114fcf64c" data-effective-date="20-01-2026" data-download-title="Small Domestic Deposit Takers_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/sddt-regime--general-application/3-small-domestic-deposit-takers/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/sddt-regime--general-application#4aed9c51f2e747079c39364114fcf64c&amp;subject=PRA Rulebook - SDDT Regime – General Application – Small Domestic Deposit Takers">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=4aed9c51f2e747079c39364114fcf64c">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Small Domestic Deposit Takers
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="40411898762845b4819629fa3009ba45"
+	 data-version="a15254b30ff4416dbbcb4985fcceb360"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Interim Capital Regime[Deleted]
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="1ee00447160c4b2d9620292a031b2c44"
+	 data-version="9bfddedb7d274a1d9714e94a11449da5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					20/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/sddt-regime--general-application/29-11-2024#1ee00447160c4b2d9620292a031b2c44">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 20/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1ee00447160c4b2d9620292a031b2c44">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="cefce26ab87f4ca987fef5d4b506bc72"
+	 data-version="4b50b5da4adb4e3a85c4064930b3716d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					20/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/sddt-regime--general-application/29-11-2024#cefce26ab87f4ca987fef5d4b506bc72">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 20/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=cefce26ab87f4ca987fef5d4b506bc72">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="10b8065b66ae4290973beeb1ea2b90cb"
+	 data-version="05edaf9d773d467bbb3189132f405973"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+<p><a href="#glossary-term-1ed15371b1f3419ca52d495ae3a314f2"> </a></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					20/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/sddt-regime--general-application/29-11-2024#10b8065b66ae4290973beeb1ea2b90cb">
+			Past
+			<span class="visually-hidden">
+				version of 4.3 before 20/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=10b8065b66ae4290973beeb1ea2b90cb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7cf5892f2dfa4336b8f90334f6e89f8e"
+	 data-version="9cd85529eae94f91ba5d9a73d5acff2f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					20/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/sddt-regime--general-application/29-11-2024#7cf5892f2dfa4336b8f90334f6e89f8e">
+			Past
+			<span class="visually-hidden">
+				version of 4.4 before 20/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7cf5892f2dfa4336b8f90334f6e89f8e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="64ec375c6591474488486c2236a582dc"
+	 data-version="bc8a94ec7ee346f797e2d09b8dc26f8d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					20/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/sddt-regime--general-application/29-11-2024#64ec375c6591474488486c2236a582dc">
+			Past
+			<span class="visually-hidden">
+				version of 4.5 before 20/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=64ec375c6591474488486c2236a582dc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a0a7b7740e8a4e088f50acccec1ea4ba"
+	 data-version="fdb57f5d5634468c94d068f621f3091e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					20/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/sddt-regime--general-application/29-11-2024#a0a7b7740e8a4e088f50acccec1ea4ba">
+			Past
+			<span class="visually-hidden">
+				version of 4.6 before 20/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a0a7b7740e8a4e088f50acccec1ea4ba">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/sddt-regime--general-application/4-interim-capital-regime/20-01-2026?p=1" data-id="40411898762845b4819629fa3009ba45" data-effective-date="20-01-2026" data-download-title="Interim Capital Regime[Deleted]_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/sddt-regime--general-application/4-interim-capital-regime/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/sddt-regime--general-application#40411898762845b4819629fa3009ba45&amp;subject=PRA Rulebook - SDDT Regime – General Application – Interim Capital Regime[Deleted]">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=40411898762845b4819629fa3009ba45">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Interim Capital Regime[Deleted]
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

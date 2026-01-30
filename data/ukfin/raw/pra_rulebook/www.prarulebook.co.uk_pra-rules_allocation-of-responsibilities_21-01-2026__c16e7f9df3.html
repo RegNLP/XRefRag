@@ -1,0 +1,2963 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{178ED4B5-7D75-4AC0-A320-3BCFE9553FA3} -->
+<title>Allocation of Responsibilities | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Allocation of Responsibilities">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Allocation of Responsibilities">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoiba-f-34ec6a3df-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":34,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"8092df6","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":29919,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370114","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==tEqwmzplgmVs3HbkTLMxKLDUEm6bHc/1kv8LrItWuNjL/lmnQEYjr6W+EsETOBTE5NTF5XBjcEZkfCDAC9S5YMTMby5jaRy7oVw1LCFhCvYOIUTMFeCbGm2pECug0XhcK83sJDGVeGt1HF+A6ARhubuk28SL7xC4AZ22v2VGc9wIgrpxPJCqak/Lj5WQEqEShfvZWILxcdOe2IVk54Ced8c/0kw7+XwqOTmr4bEFGE24C4lm0PSFaNWASOHGyNNG7YJft0/qqIfYE84fESogtoJZQz37EutWli2OHRjenLqbBNvAJ4UpmS99w+HAV52XzaKekGaA7ZVFmEVTVu0w2C4V8Gd9xaqr9anmMqf0GxX0l2xJr2Sv6R3jEl3nmW1/K5OPiV8zosAi/q6T95JQ/U9zumo1rZTxLskmGYmvlr8=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Allocation of Responsibilities				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Allocation of Responsibilities
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/allocation-of-responsibilities/07-03-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/03/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/allocation-of-responsibilities/29-09-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						29/09/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/allocation-of-responsibilities/12-11-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						12/11/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/allocation-of-responsibilities/10-12-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						10/12/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/allocation-of-responsibilities/01-01-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2019
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/allocation-of-responsibilities/09-12-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						09/12/2019
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/allocation-of-responsibilities/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-64c5562b-7602-410e-bc3e-3700661a5cec">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-64c5562b-7602-410e-bc3e-3700661a5cec"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Allocation of Responsibilities
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Allocation of Responsibilities)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-crr-firms">
+					Non-CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=9c2d0f30b4634063b14fa9783b0d415e">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Allocation of Responsibilities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss15-13---groups/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS15/13 – Groups
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss08-16---ring-fenced-bodies-rfbs/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS8/16 – Ring-fenced bodies (RFBs)
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss03-19-enhancing-banks-and-insurers-approaches-to-managing-the-financial-risks-from-climate-change/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS3/19 – Enhancing banks’ and insurers’ approaches to managing the financial risks from climate change [Deleted]
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss04-19-resolution-assessment-and-public-disclosure-by-firms/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS4/19 – Resolution assessment and public disclosure by firms
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss02-21-outsourcing-and-third-party-risk-management/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS2/21 – Outsourcing and third party risk management
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss03-21---non-systemic-uk-banks-the-pras-approach-to-new-and-growing-banks/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS3/21 – Non-systemic UK banks: The Prudential Regulation Authority’s approach to new and growing banks
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-banking-and-insurance" class="list-links__link" target="_blank">
+										PS3/15 - Strengthening individual accountability in banking and insurance - responses to CP14/14 and CP26/14
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-individual-accountability-in-banking-responses" class="list-links__link" target="_blank">
+										PS16/15 - &quot;Strengthening individual accountability in banking: responses to CP14/14, CP28/14 and CP7/15&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-accountability-in-banking-uk-branches-of-foreign-banks" class="list-links__link" target="_blank">
+										PS20/15 - Strengthening individual accountability in banking: UK branches of non?EEA banks
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/pra-rulebook-administration-instrument-no-2-2015" class="list-links__link" target="_blank">
+										 - PRA Rulebook: Administration Instrument (No 2) 2015
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/the-implementation-of-ring-fencing-prudential-requirements-intragroup-arrangements" class="list-links__link" target="_blank">
+										PS20/16 - &quot;The implementation of ring-fencing: prudential requirements, intragroup arrangements and &amp; use of Financial Market Infrastructures&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/strengthening-accountability-in-banking-and-insurance-regulatory-references" class="list-links__link" target="_blank">
+										PS27/16 - Strengthening accountability in banking and insurance: PRA requirements on regulatory references (part II)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/strengthening-accountability-in-banking-and-insurance-amendments-and-optimisations" class="list-links__link" target="_blank">
+										PS12/17 - Strengthening individual accountability in banking and insurance: amendments and optimisations
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-individual-accountability-in-insurance-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS15/18 - Strengthening individual accountability in insurance: Extension of the Senior Managers and Certification Regime to insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-accountability-implementing-the-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS26/18 - Strengthening accountability: Implementing the extension of the SM&amp;CR to insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/paper/2019/the-boes-amendments-to-financial-services-legislation-under-the-eu-withdrawal-act-2018" class="list-links__link" target="_blank">
+										PS5/19 - The Bank of England’s amendments to financial services legislation under the European Union (Withdrawal) Act 2018
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2019/strengthening-individual-accountability-resolution-assessments-and-reporting-amendments" class="list-links__link" target="_blank">
+										PS20/19 - Strengthening individual accountability: Resolution assessments and reporting amendments
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/allocation-of-responsibilities/31-12-2020_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/allocation-of-responsibilities/31-12-2020?p=1" data-id="9c2d0f30b4634063b14fa9783b0d415e" data-effective-date="31-12-2020" data-download-title="Allocation of Responsibilities_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/allocation-of-responsibilities/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities&amp;subject=PRA Rulebook - Allocation of Responsibilities">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="a79d1bf2b7e34619b5e95a200a46daeb"
+	 data-version="e48fed6554684e6481966792e8051ecb"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="003fa6488aea4dbaaf310909fae0d2b3"
+	 data-version="243faf9390924fe89d1355e41738eb8e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to every <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> that is:</p>
+<ol class="new-bullet">
+    <li>(1) a <em><a class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em>;</li>
+    <li>(2) a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em>; or</li>
+    <li>(3) a <em><a class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> in relation to:</li>
+    <ol>
+        <li>(a) the activities of its establishment in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>; or</li>
+        <li>(b) if it does not have an establishment in the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>, activities in the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>.</li>
+    </ol>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#003fa6488aea4dbaaf310909fae0d2b3">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=003fa6488aea4dbaaf310909fae0d2b3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4f13ef762ac745f69abf08ebaadc782f"
+	 data-version="bd41741b647748338c5c9222e6aa937d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Part does not apply to a <em><a class="glossary-link" title="SRO firm" href="#glossary-term-03d04f1c85064316998189ee87fa1eb0" data-mce-linktype="2" data-glossary-id="98243">SRO firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4f13ef762ac745f69abf08ebaadc782f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="06a67ce1e77147348b76dfd26827fcac"
+	 data-version="1254791b51b14840a0672e8dcad83351"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a class="glossary-link" title="compliance oversight function" href="#glossary-term-6bf0c1cb06f843f9ad13c0720dc3813f" data-mce-linktype="2" data-glossary-id="52593">compliance oversight function</a></em></p>
+<p style="padding-left: 30px;">means an <a class="glossary-link" title="FCA controlled function" href="#glossary-term-4d084a65f6d6425f8b0dbef37e18160e" data-mce-linktype="2" data-glossary-id="52565">FCA controlled function</a> specified in SUP 10C.6.1R of the <em><a class="glossary-link" title="FCA Handbook" href="#glossary-term-32be3c2dd21146a7805f3079824eae67" data-mce-linktype="2" data-glossary-id="52827">FCA Handbook</a></em>.</p>
+<p><em><a class="glossary-link" title="Credit Union Senior Manager function" href="#glossary-term-a30b4396aa9d4f669ba0e3d5fa2b3096" data-mce-linktype="2" data-glossary-id="52594">Credit Union Senior Manager function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a title="Senior Management Functions 6.2" href="/pra-rules/senior-management-functions#074fd93b72fa4fa48e71b0a0faeba4ce" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Senior Management Functions 6.2</a>.</p>
+<p><em><a class="glossary-link" title="FCA approved person" href="#glossary-term-ce90e6687f674076b7b020535bf61fa7" data-mce-linktype="2" data-glossary-id="52595">FCA approved person</a></em></p>
+<p style="padding-left: 30px;">means a <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> approved to perform an <em><a class="glossary-link" title="FCA controlled function" href="#glossary-term-4d084a65f6d6425f8b0dbef37e18160e" data-mce-linktype="2" data-glossary-id="52565">FCA controlled function</a></em> by the <em><a class="glossary-link" title="FCA" href="#glossary-term-373a3f75deb64d3e8cd4770c2244366f" data-mce-linktype="2" data-glossary-id="52635">FCA</a></em> under section 59 of <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em>.</p>
+<p><em><a class="glossary-link" title="FCA Chairman of nomination committee function" href="#glossary-term-e3d75e0703324cc694de340918b78d2b" data-mce-linktype="2" data-glossary-id="52598">FCA Chair of nomination committee function</a></em></p>
+<p style="padding-left: 30px;">means an <em><a class="glossary-link" title="FCA controlled function" href="#glossary-term-4d084a65f6d6425f8b0dbef37e18160e" data-mce-linktype="2" data-glossary-id="52565">FCA controlled function</a></em> specified in SUP 10C.5A.3R of the <em><a class="glossary-link" title="FCA Handbook" href="#glossary-term-32be3c2dd21146a7805f3079824eae67" data-mce-linktype="2" data-glossary-id="52827">FCA Handbook</a></em>.</p>
+<p><em><a class="glossary-link" title="FCA designated senior management function" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599">FCA designated senior management function</a></em></p>
+<p style="padding-left: 30px;">means an <em><a class="glossary-link" title="FCA controlled function" href="#glossary-term-4d084a65f6d6425f8b0dbef37e18160e" data-mce-linktype="2" data-glossary-id="52565">FCA controlled function</a></em> specified in SUP 10C.4.3R of the <em><a class="glossary-link" title="FCA Handbook" href="#glossary-term-32be3c2dd21146a7805f3079824eae67" data-mce-linktype="2" data-glossary-id="52827">FCA Handbook</a></em>.</p>
+<p><em><a class="glossary-link" title="FCA other local responsibility senior management function" href="#glossary-term-26f021ac0ab24032bf0b23d1a4bd295f" data-mce-linktype="2" data-glossary-id="67098">FCA other local responsibility senior management function</a></em></p>
+<p style="padding-left: 30px;">means the <em><a class="glossary-link" title="controlled function" href="#glossary-term-77ed05e95e9144549fdcd84ae397fcab" data-mce-linktype="2" data-glossary-id="52215">controlled function</a></em> specified in SUP 10C.8.1R of the <em><a class="glossary-link" title="FCA Handbook" href="#glossary-term-32be3c2dd21146a7805f3079824eae67" data-mce-linktype="2" data-glossary-id="52827">FCA Handbook</a></em>.</p>
+<p><em><a class="glossary-link" title="FCA significant responsibility senior management function" href="#glossary-term-21bd0f34f4994d23be73dcfa54492eb5" data-mce-linktype="2" data-glossary-id="52600">FCA other overall responsibility senior management function</a></em></p>
+<p style="padding-left: 30px;">means the <em><a class="glossary-link" title="FCA controlled function" href="#glossary-term-4d084a65f6d6425f8b0dbef37e18160e" data-mce-linktype="2" data-glossary-id="52565">FCA controlled function</a></em> specified in SUP10C.7.1R of the <em><a class="glossary-link" title="FCA Handbook" href="#glossary-term-32be3c2dd21146a7805f3079824eae67" data-mce-linktype="2" data-glossary-id="52827">FCA Handbook</a></em>.</p>
+<p><em><a class="glossary-link" title="Group Entity Senior Manager function" href="#glossary-term-d7b9c594dbc74cde981b50c0a62b9111" data-mce-linktype="2" data-glossary-id="52603">Group Entity Senior Manager function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a title="Senior Management Functions 5.2" href="/pra-rules/senior-management-functions#8fd37e1b3ae84302ae469a4609a852a2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Senior Management Functions 5.2</a>.</p>
+<p><em><a class="glossary-link" title="management responsibilities map" href="#glossary-term-3b70b536cf32444a93f057bb1449d11e" data-mce-linktype="2" data-glossary-id="52604">management responsibilities map</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a title="7" href="/pra-rules/allocation-of-responsibilities#9f11c90e79ac4572860bd4480152c44b" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">7</a>.</p>
+<p><em><a class="glossary-link" title="oversight PRA senior management function" href="#glossary-term-f916bbf5495640669572c2227553963c" data-mce-linktype="2" data-glossary-id="52605">oversight PRA senior management function</a></em></p>
+<p style="padding-left: 30px;">means a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> set out in <a title="Senior Management Functions 4" href="/pra-rules/senior-management-functions#50b88ce9da2c409a9221d5402273ee15" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Senior Management Functions 4</a>.</p>
+<p><em><a class="glossary-link" title="prescribed responsibility" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibility</a></em></p>
+<p style="padding-left: 30px;">means one of the responsibilities in <a title="4.1" href="/pra-rules/allocation-of-responsibilities#c33f5ea2f2494a40877edb9034aaab54" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a> and <a title="4.2" href="/pra-rules/allocation-of-responsibilities#266d16364ab844e4b971888dce281977" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.2</a>.</p>
+<p><em><a class="glossary-link" title="proprietary trading" href="#glossary-term-410c468147c641b3a5c068a200232491" data-mce-linktype="2" data-glossary-id="52607">proprietary trading</a></em></p>
+<p style="padding-left: 30px;">means</p>
+<ol class="new-bullet">
+    <ol>
+        <li>(a) the <em><a class="glossary-link" title="regulated activity" href="#glossary-term-ec201e9c9fc244e6bd8249a742f4b8fc" data-mce-linktype="2" data-glossary-id="52721">regulated activity</a></em> of <em><a class="glossary-link" title="dealing in investments as principal" href="#glossary-term-8dab0aab133549dc894705b82cc122f1" data-mce-linktype="2" data-glossary-id="52084">dealing in investments as principal</a></em> as specified in Article 14 of the <em><a class="glossary-link" title="Regulated Activities Order" href="#glossary-term-343c281a2e2346ad82e8aafc7367cc75" data-mce-linktype="2" data-glossary-id="52150">Regulated Activities Order</a></em> (Dealing in investments as principal), disregarding the exclusion in Article 15 of the <em><a class="glossary-link" title="Regulated Activities Order" href="#glossary-term-343c281a2e2346ad82e8aafc7367cc75" data-mce-linktype="2" data-glossary-id="52150">Regulated Activities Order</a></em> (Absence of holding out etc.); and</li>
+        <li>(b) <em><a class="glossary-link" title="ancillary activities" href="#glossary-term-e7d97386146e47a0a4dbe7e825cd34e9" data-mce-linktype="2" data-glossary-id="52083">ancillary activities</a></em> and (in relation to <em><a class="glossary-link" title="MiFID business" href="#glossary-term-39ff74fff42048cb928c0e4d52169726" data-mce-linktype="2" data-glossary-id="53214">MiFID business</a></em>) <em><a class="glossary-link" title="ancillary services" href="#glossary-term-01e06d669ba14de590b50c313d074d73" data-mce-linktype="2" data-glossary-id="52589">ancillary services</a></em> carried out in relation to the <em><a class="glossary-link" title="regulated activity" href="#glossary-term-ec201e9c9fc244e6bd8249a742f4b8fc" data-mce-linktype="2" data-glossary-id="52721">regulated activity</a></em>.</li>
+    </ol>
+</ol>
+<p><em><a class="glossary-link" title="recovery plan" href="#glossary-term-452cec3911374cde87722b5958f15a1e" data-mce-linktype="2" data-glossary-id="52608">recovery plan</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a title="Recovery Plans 1.2" href="/pra-rules/recovery-plans#5344d1a30bc5407fbfe6de904bd122b8" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Recovery Plans 1.2</a>.</p>
+<p><em><a class="glossary-link" title="resolution pack" href="#glossary-term-f05819f7636145e99fe392ca404f87c2" data-mce-linktype="2" data-glossary-id="52609">resolution pack</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a title="Resolution Pack 1.2" href="/pra-rules/resolution-pack#9e2f276ca1734fcd93aaf19bb0748fbf" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Resolution Pack 1.2</a>.</p>
+<p><em><a class="glossary-link" title="ring-fencing requirement" href="#glossary-term-d9b07c3daa3043f7aab249baabab9754" data-mce-linktype="2" data-glossary-id="52610">ring-fencing obligation</a></em></p>
+<p style="padding-left: 30px;">means any obligation, prohibition or other requirement imposed on a <em class="rule-style-2">ring-fenced body</em> by or under <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em>, by virtue of it being a <em class="rule-style-2">ring-fenced body</em>, including any <em class="rule-style-2">statutory instrument</em> made under <em><a class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> and any <em><a class="glossary-link" title="ring-fencing rule" href="#glossary-term-d7c45717cc444481a42396083cae1ecd" data-mce-linktype="2" data-glossary-id="66913">ring-fencing rule</a></em>, but not including any rule made by the <em><a class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em>.</p>
+<p><em><a class="glossary-link" title="ring-fenced body prescribed responsibility" href="#glossary-term-5bbaea85fd9f4d86b3b933657b4e1aca" data-mce-linktype="2" data-glossary-id="52611">ring-fenced body prescribed responsibility</a></em></p>
+<p style="padding-left: 30px;">means the responsibility in <a title="4.2(4)" href="/pra-rules/allocation-of-responsibilities#266d16364ab844e4b971888dce281977" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.2(4)</a>.</p>
+<p><em><a class="glossary-link" title="senior management regime" href="#glossary-term-e430a364ec5144348d194f67ff61ac3d" data-mce-linktype="2" data-glossary-id="52612">senior management regime</a></em></p>
+<p style="padding-left: 30px;">means the requirements of the <em><a class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em> which apply to <em class="rule-style-2">relevant authorised persons</em> insofar as they relate to <em><a class="glossary-link" title="approved persons" href="#glossary-term-76c186553d63434ab742fe4474e848d5" data-mce-linktype="2" data-glossary-id="52211">approved persons</a></em> performing <em><a class="glossary-link" title="PRA senior management functions" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management functions</a></em> and <em><a class="glossary-link" title="FCA designated senior management functions" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599">FCA designated senior management functions</a></em>, including those set out in <a title="Senior Management Functions" href="/pra-rules/senior-management-functions" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Senior Management Functions</a>, and <a title="Allocation of Responsibilities" href="/pra-rules/allocation-of-responsibilities" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Allocation of Responsibilities</a> and <a title="Fitness and Propriety" href="/pra-rules/fitness-and-propriety" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Fitness and Propriety</a>.</p>
+<p><em><a class="glossary-link" title="small CRR firm" href="#glossary-term-5639eeeb07444d58a218b7fba8869486" data-mce-linktype="2" data-glossary-id="52613">small CRR firm</a></em></p>
+<p style="padding-left: 30px;">means a <em><a class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em> which has gross total assets of &pound;250 million or less, determined on the basis of the annual average amount calculated across a rolling period of five years (calculated by reference to the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> annual accounting date). Where the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has been in existence for less than five years, the calculation will be made on the basis of the annual average amount for the period during which the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has been in existence (calculated by reference to the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> annual accounting date).</p>
+<p><em><a class="glossary-link" title="small firm prescribed responsibility" href="#glossary-term-49cd3e1fed9c4a188b1db0ccc796134c" data-mce-linktype="2" data-glossary-id="52614">small firm prescribed responsibility</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a title="5.2" href="/pra-rules/allocation-of-responsibilities#c746d28f12384168992a2d19cc930f31" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.2</a>.</p>
+<p><em><a class="glossary-link" title="statement of responsibilities" href="#glossary-term-fb97f0c518a44b898a3ef96a17e61aeb" data-mce-linktype="2" data-glossary-id="52615">statement of responsibilities</a></em></p>
+<p style="padding-left: 30px;">means a statement of the affairs of a <em class="rule-style-2">relevant authorised person</em> or a <em><a class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> for which it is intended that a <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> who performs (or is subject to an application to perform) a <em><a class="glossary-link" title="PRA senior management functions" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> is (or will be) responsible.</p>
+<p><em><a class="glossary-link" title="UK branch prescribed responsibility" href="#glossary-term-82c1190681aa46e7b090ba148c506818" data-mce-linktype="2" data-glossary-id="67099">third country CRR firm prescribed responsibility</a></em></p>
+<p style="padding-left: 30px;">means one of the responsibilities in <a title="6.2" href="/pra-rules/allocation-of-responsibilities#8f14a399b76547e89d61eff5cfbe3c02" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.2</a> or <a title="6.3" href="/pra-rules/allocation-of-responsibilities#7973fe76b1f04d32818226a6c6e43291" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.3</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/01-01-2019#06a67ce1e77147348b76dfd26827fcac">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=06a67ce1e77147348b76dfd26827fcac">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="cc3a6b35e2e24bab95b7448abd113df6"
+	 data-version="8679989b55124713a5d0fe29a99387bb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Part does not apply to a function performed by:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a  class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> acting as an insolvency practitioner within the meaning of section 388 of the Insolvency Act 1986; or</li>
+<li>(2) a <em><a  class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> acting as a nominee in relation to a voluntary arrangement under Parts I (Company Voluntary Arrangements) and VIII (Individual Voluntary Arrangements) of the Insolvency Act 1986; or</li>
+<li>(3) a <em><a  class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> acting as an insolvency practitioner within the meaning of Article 3 of the Insolvency (Northern Ireland) Order 1989; or</li>
+<li>(4) a <em><a  class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> acting as a nominee in relation to a voluntary arrangement under Parts II (Company Voluntary Arrangements) and VIII (Individual Voluntary arrangements) of the Insolvency (Northern Ireland) Order 1989.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=cc3a6b35e2e24bab95b7448abd113df6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/allocation-of-responsibilities/1-application-and-definitions/31-12-2020?p=1" data-id="a79d1bf2b7e34619b5e95a200a46daeb" data-effective-date="31-12-2020" data-download-title="Application and Definitions_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/allocation-of-responsibilities/1-application-and-definitions/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities#a79d1bf2b7e34619b5e95a200a46daeb&amp;subject=PRA Rulebook - Allocation of Responsibilities – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=a79d1bf2b7e34619b5e95a200a46daeb">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="09265034db5a47e695f7618e82fb53f9"
+	 data-version="04a18531dc3545058c9cbf86a64851b8"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Statement of Responsibilities
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="07ea43062d0541c4a68411c81f29c60b"
+	 data-version="f7bb1624072a48d69f5fcf9976fe232c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that any application it makes for the approval of a <em><a  class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> to perform a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> is accompanied by a <em><a class="glossary-link" title="statement of responsibilities" href="#glossary-term-fb97f0c518a44b898a3ef96a17e61aeb" data-mce-linktype="2" data-glossary-id="52615">statement of responsibilities</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=07ea43062d0541c4a68411c81f29c60b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="db61d0d4c58b426fa82fac10cffc245d"
+	 data-version="8c4fd3ab216541809e11e1d464759745"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that the <em><a class="glossary-link" title="statement of responsibilities" href="#glossary-term-fb97f0c518a44b898a3ef96a17e61aeb" data-mce-linktype="2" data-glossary-id="52615">statement of responsibilities</a></em> accompanying an application for approval to perform a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> in relation to it includes any <em><a class="glossary-link" title="prescribed responsibilities" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibilities</a></em>, <em><a class="glossary-link" title="small firm prescribed responsibilities" href="#glossary-term-49cd3e1fed9c4a188b1db0ccc796134c" data-mce-linktype="2" data-glossary-id="52614">small firm prescribed responsibilities</a></em>, <em><a class="glossary-link" title="UK branch prescribed responsibilities" href="#glossary-term-82c1190681aa46e7b090ba148c506818" data-mce-linktype="2" data-glossary-id="67099">third country CRR firm prescribed responsibilities</a></em>, <em><a class="glossary-link" title="FCA responsibilities" href="#glossary-term-221bdebd892f43b8a114d61d4cfb581c" data-mce-linktype="2" data-glossary-id="52602">FCA responsibilities</a></em> and other responsibilities allocated to, and which are to form part of the responsibilities of, that <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#db61d0d4c58b426fa82fac10cffc245d">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=db61d0d4c58b426fa82fac10cffc245d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a92d0bcd6278408f9f31f449d925e375"
+	 data-version="5792437af046403086f3403959c4c4c3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that any responsibilities allocated to, and that form part of the responsibilities of, a <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> who performs a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> in relation to it are consistent with the scope of that <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> and of any <em><a class="glossary-link" title="prescribed responsibilities" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibilities</a></em>, <em><a class="glossary-link" title="small firm prescribed responsibilities" href="#glossary-term-49cd3e1fed9c4a188b1db0ccc796134c" data-mce-linktype="2" data-glossary-id="52614">small firm prescribed responsibilities</a></em>, <em><a class="glossary-link" title="UK branch prescribed responsibilities" href="#glossary-term-82c1190681aa46e7b090ba148c506818" data-mce-linktype="2" data-glossary-id="67099">third country CRR firm prescribed responsibilities</a></em>, <em><a class="glossary-link" title="FCA responsibilities" href="#glossary-term-221bdebd892f43b8a114d61d4cfb581c" data-mce-linktype="2" data-glossary-id="52602">FCA responsibilities</a></em> and other responsibilities allocated to that <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#a92d0bcd6278408f9f31f449d925e375">
+			Past
+			<span class="visually-hidden">
+				version of 2.3 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a92d0bcd6278408f9f31f449d925e375">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="db5f9b8435ba4d1dba0ab6154b4d5703"
+	 data-version="da6d731ff9f24b45b150092ef3817e93"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must have, at all times, a complete set of current and up to date <em><a  class="glossary-link" title="statements of responsibilities" href="#glossary-term-fb97f0c518a44b898a3ef96a17e61aeb" data-mce-linktype="2" data-glossary-id="52615">statements of responsibilities</a></em> for all <em><a  class="glossary-link" title="persons" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em> approved to perform a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> on its behalf.</li>
+<li>(2) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must prepare a <em><a  class="glossary-link" title="statements of responsibilities" href="#glossary-term-fb97f0c518a44b898a3ef96a17e61aeb" data-mce-linktype="2" data-glossary-id="52615">statement of responsibilities</a></em> for each <em><a  class="glossary-link" title="PRA approved person" href="#glossary-term-9a4eb6e7bc0f455793dd9d3697399120" data-mce-linktype="2" data-glossary-id="52567">PRA approved person</a></em> as a single document covering every <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> and <em><a  class="glossary-link" title="FCA designated senior management function" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599">FCA designated senior management function</a></em> for which</li>
+<ol>
+<li>(a) the <em><a  class="glossary-link" title="PRA approved person" href="#glossary-term-9a4eb6e7bc0f455793dd9d3697399120" data-mce-linktype="2" data-glossary-id="52567">PRA approved person</a></em> has approval from the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> or the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em>, as the case may be, to perform; or</li>
+<li>(b) an application for approval is being made.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=db5f9b8435ba4d1dba0ab6154b4d5703">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/allocation-of-responsibilities/2-statement-of-responsibilities/31-12-2020?p=1" data-id="09265034db5a47e695f7618e82fb53f9" data-effective-date="31-12-2020" data-download-title="Statement of Responsibilities_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/allocation-of-responsibilities/2-statement-of-responsibilities/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities#09265034db5a47e695f7618e82fb53f9&amp;subject=PRA Rulebook - Allocation of Responsibilities – Statement of Responsibilities">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=09265034db5a47e695f7618e82fb53f9">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Statement of Responsibilities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="b0549bb72eba4ee39ec417092fc48836"
+	 data-version="b0e2f6740a94456eb6ea48f306dd305d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Allocation of Responsibilities
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4988e97338544830957a228cac166eeb"
+	 data-version="f1e89472798142deab5883f551b70675"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (other than a <em><a class="glossary-link" title="small CRR firm" href="#glossary-term-5639eeeb07444d58a218b7fba8869486" data-mce-linktype="2" data-glossary-id="52613">small CRR firm</a></em>, a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em> or a <em><a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>) must allocate each of the <em><a class="glossary-link" title="prescribed responsibilities" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibilities</a></em> set out in <a  title="4.1" href="/pra-rules/allocation-of-responsibilities#c33f5ea2f2494a40877edb9034aaab54" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a> (other than <a  title="4.1" href="/pra-rules/allocation-of-responsibilities#c33f5ea2f2494a40877edb9034aaab54" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>(13) to (19)) to one or more <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em> who perform:</li>
+<ol>
+<li>(a) a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; or</li>
+<li>(b) subject to <a  title="3.5(1)" href="/pra-rules/allocation-of-responsibilities#f126c421496f4c398ac384ffcfd4a383" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6</a>(1), an <em><a class="glossary-link" title="FCA designated senior management function" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599">FCA designated senior management function</a></em></li>
+<li>on behalf of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</li>
+</ol>
+<li>(2) If the circumstances set out in a <em><a class="glossary-link" title="prescribed responsibility" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibility</a></em> in <a  title="4.2" href="/pra-rules/allocation-of-responsibilities#266d16364ab844e4b971888dce281977" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.2</a> (1), (2), or (3) apply to a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (other than a <em><a class="glossary-link" title="small CRR firm" href="#glossary-term-5639eeeb07444d58a218b7fba8869486" data-mce-linktype="2" data-glossary-id="52613">small CRR firm</a></em>, a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em> or a <em><a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>), the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must allocate the <em><a class="glossary-link" title="prescribed responsibility" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibility</a></em> to one or more <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em> who perform:</li>
+<ol>
+<li>(a) a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; or</li>
+<li>(b) subject to <a  title="3.5(1)" href="/pra-rules/allocation-of-responsibilities#f126c421496f4c398ac384ffcfd4a383" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6</a>(1), an <em><a class="glossary-link" title="FCA designated senior management function" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599">FCA designated senior management functions</a></em></li>
+<li>on behalf of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4988e97338544830957a228cac166eeb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4d45fdb4ff89444f8f99e5db9f3e76c9"
+	 data-version="718d308323d0412da821ac8674512190"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (other than a <em><a  class="glossary-link" title="small CRR firm" href="#glossary-term-5639eeeb07444d58a218b7fba8869486" data-mce-linktype="2" data-glossary-id="52613">small CRR firm</a></em>, a <em><a  class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a> </em>or a <em><a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>) must allocate each of the <em><a  class="glossary-link" title="prescribed responsibilities" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibilities</a></em> in <a  title="4.1" href="/pra-rules/allocation-of-responsibilities#c33f5ea2f2494a40877edb9034aaab54" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>(13) to (19) to one or more persons who perform:</li>
+<ol>
+<li>(a) an <em><a  class="glossary-link" title="oversight PRA senior management function" href="#glossary-term-f916bbf5495640669572c2227553963c" data-mce-linktype="2" data-glossary-id="52605">oversight PRA senior management function</a></em>; or</li>
+<li>(b) the <em><a  class="glossary-link" title="FCA Chairman of nomination committee function" href="#glossary-term-e3d75e0703324cc694de340918b78d2b" data-mce-linktype="2" data-glossary-id="52598">FCA Chair of nomination committee function</a></em></li>
+</ol>
+<li>      on behalf of the <em style="text-indent: -1.3em;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="text-indent: -1.3em;">.</span></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#4d45fdb4ff89444f8f99e5db9f3e76c9">
+			Past
+			<span class="visually-hidden">
+				version of 3.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4d45fdb4ff89444f8f99e5db9f3e76c9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3b4248b59f1140cf9631a4f141079f18"
+	 data-version="a33e0d229217462bb08a4dad077dc5ac"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a class="glossary-link" title="small CRR firm" href="#glossary-term-5639eeeb07444d58a218b7fba8869486" data-mce-linktype="2" data-glossary-id="52613">small CRR firm</a></em> must allocate each of the <em><a class="glossary-link" title="small firm prescribed responsibilities" href="#glossary-term-49cd3e1fed9c4a188b1db0ccc796134c" data-mce-linktype="2" data-glossary-id="52614">small firm prescribed responsibilities</a></em> to one or more <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em> who perform:</li>
+<ol>
+<li>(a) a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; or</li>
+<li>(b) subject to <a  title="3.6" href="/pra-rules/allocation-of-responsibilities#f126c421496f4c398ac384ffcfd4a383" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6</a>(2), an <em><a class="glossary-link" title="FCA designated senior management function" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599">FCA designated senior management function</a></em></li>
+<li>on behalf of the <em><a class="glossary-link" title="small CRR firm" href="#glossary-term-5639eeeb07444d58a218b7fba8869486" data-mce-linktype="2" data-glossary-id="52613">small CRR firm</a></em>.</li>
+</ol>
+<li>(2) A <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em> must allocate each of the <em><a class="glossary-link" title="small firm prescribed responsibilities" href="#glossary-term-49cd3e1fed9c4a188b1db0ccc796134c" data-mce-linktype="2" data-glossary-id="52614">small firm prescribed responsibilities</a></em> to one or more <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em> who perform:</li>
+<ol>
+<li>(a) the <em><a class="glossary-link" title="Credit Union Senior Manager function" href="#glossary-term-a30b4396aa9d4f669ba0e3d5fa2b3096" data-mce-linktype="2" data-glossary-id="52594">Credit Union Senior Manager function</a></em>; or</li>
+<li>(b) subject to <a  style="text-indent: -14.3px;" title="3.6" href="/pra-rules/allocation-of-responsibilities#f126c421496f4c398ac384ffcfd4a383" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6</a>(2), an <em><a class="glossary-link" title="FCA designated senior management function" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599">FCA designated senior management function</a></em></li>
+<li>on behalf of the <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em>.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3b4248b59f1140cf9631a4f141079f18">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6a03e746cc44417f970702b63f51ae79"
+	 data-version="e224185d6fdc4a9faab6db78db9b0e66"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> which is a <em class="rule-style-2">ring-fenced body</em> must ensure that the <em><a class="glossary-link" title="ring-fenced body prescribed responsibility" href="#glossary-term-5bbaea85fd9f4d86b3b933657b4e1aca" data-mce-linktype="2" data-glossary-id="52611">ring-fenced body prescribed responsibility</a></em> is allocated to each <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> who:</p>
+<ol class="new-bullet">
+<li>(1) performs a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> or, subject to <a  style="text-indent: -14.3px;" title="3.6" href="/pra-rules/allocation-of-responsibilities#f126c421496f4c398ac384ffcfd4a383" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6</a>(1), an <em><a class="glossary-link" title="FCA designated senior management function" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599">FCA designated senior management function</a></em>; and</li>
+<li>(2) is responsible for managing any area of the <em class="rule-style-2">ring-fenced body&rsquo;s</em> business that is subject to a <em><a class="glossary-link" title="ring-fencing requirement" href="#glossary-term-d9b07c3daa3043f7aab249baabab9754" data-mce-linktype="2" data-glossary-id="52610">ring-fencing obligation</a></em></li>
+</ol>
+<p>on behalf of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6a03e746cc44417f970702b63f51ae79">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="058c31e4d64c48968c06b48a4b022714"
+	 data-version="eb091b626aff412490465fb6025be909"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> must allocate each of the <em><a class="glossary-link" title="UK branch prescribed responsibilities" href="#glossary-term-82c1190681aa46e7b090ba148c506818" data-mce-linktype="2" data-glossary-id="67099">third country CRR firm prescribed responsibilities</a></em> to one or more <em><a class="glossary-link" title="persons" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em> who perform:</p>
+<ol class="new-bullet">
+    <li>(1) a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; or</li>
+    <li>(2) subject to <a title="3.6" href="/pra-rules/allocation-of-responsibilities#f126c421496f4c398ac384ffcfd4a383" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.6</a>(3), an <em><a class="glossary-link" title="FCA designated senior management function" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599">FCA designated senior management function</a></em></li>
+</ol>
+<p>on behalf of the <em><a class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#058c31e4d64c48968c06b48a4b022714">
+			Past
+			<span class="visually-hidden">
+				version of 3.5 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=058c31e4d64c48968c06b48a4b022714">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f126c421496f4c398ac384ffcfd4a383"
+	 data-version="c82371d7b90b48778de3e6bcec2bf038"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not allocate a <em><a class="glossary-link" title="prescribed responsibility" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibility</a></em> to a <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> who performs an <em><a class="glossary-link" title="FCA significant responsibility senior management function" href="#glossary-term-21bd0f34f4994d23be73dcfa54492eb5" data-mce-linktype="2" data-glossary-id="52600">FCA other overall responsibility senior management function</a></em>.</li>
+<li>(2) A <em><a  class="glossary-link" title="small CRR firm" href="#glossary-term-5639eeeb07444d58a218b7fba8869486" data-mce-linktype="2" data-glossary-id="52613">small CRR firm</a></em> or a <em><a  class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em> must not allocate a <em><a  class="glossary-link" title="small firm prescribed responsibility" href="#glossary-term-49cd3e1fed9c4a188b1db0ccc796134c" data-mce-linktype="2" data-glossary-id="52614">small firm prescribed responsibility</a></em> to a <em><a  class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> who performs an <em><a  class="glossary-link" title="FCA significant responsibility senior management function" href="#glossary-term-21bd0f34f4994d23be73dcfa54492eb5" data-mce-linktype="2" data-glossary-id="52600">FCA other overall responsibility senior management function</a></em>.</li>
+<li>(3) A <em><a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> must not allocate a <em><a class="glossary-link" title="prescribed responsibility" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibility</a></em> to a <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> who performs an <em><a  class="glossary-link" title="FCA other local responsibility senior management function" href="#glossary-term-26f021ac0ab24032bf0b23d1a4bd295f" data-mce-linktype="2" data-glossary-id="67098">FCA other local responsibility senior management function</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f126c421496f4c398ac384ffcfd4a383">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/allocation-of-responsibilities/3-allocation-of-responsibilities/31-12-2020?p=1" data-id="b0549bb72eba4ee39ec417092fc48836" data-effective-date="31-12-2020" data-download-title="Allocation of Responsibilities_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/allocation-of-responsibilities/3-allocation-of-responsibilities/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities#b0549bb72eba4ee39ec417092fc48836&amp;subject=PRA Rulebook - Allocation of Responsibilities – Allocation of Responsibilities">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b0549bb72eba4ee39ec417092fc48836">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Allocation of Responsibilities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="8f08a7c3444648ccb24b11d5ef6490c8"
+	 data-version="07876bc3d2514e5e8a01b9941779b6a2"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Prescribed Responsibilities
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c33f5ea2f2494a40877edb9034aaab54"
+	 data-version="c18f6443b53a481f8a04c328a9883579"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Each of the responsibilities set out in this rule is a <em><a class="glossary-link" title="prescribed responsibility" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibility</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) responsibility for the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> performance of its obligations under the <em><a class="glossary-link" title="senior management regime" href="#glossary-term-e430a364ec5144348d194f67ff61ac3d" data-mce-linktype="2" data-glossary-id="52612">senior management regime</a> </em>(PR A);</li>
+<li>(2) responsibility for the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> performance of its obligations under the <em><a  class="glossary-link" title="certification regime" href="#glossary-term-42569c8247d643deab9fbaebdd58c306" data-mce-linktype="2" data-glossary-id="88232">certification regime</a></em> <span style="text-indent: -14.3px;">(PR B)</span>;</li>
+<li>(3) responsibility for compliance with the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> obligations in relation to its <em><a class="glossary-link" title="management responsibilities map" href="#glossary-term-3b70b536cf32444a93f057bb1449d11e" data-mce-linktype="2" data-glossary-id="52604">management responsibilities map</a></em><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR C)</span>;</li>
+<li>(4) responsibility for the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> performance of its obligations under <a  title="Fitness and Propriety" href="/pra-rules/fitness-and-propriety" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Fitness and Propriety</a> in respect of <em><a  class="glossary-link" title="notified non-executive directors" href="#glossary-term-9522e473f6f547b9ab49496e386da2c2" data-mce-linktype="2" data-glossary-id="66847">notified non-executive directors</a></em><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR U)</span>;</li>
+<li>(5) responsibility for monitoring effective implementation of policies and procedures for the induction, training and professional development of <em><a class="glossary-link" title="senior management" href="#glossary-term-685d8be44e4445d4a16142fe92a32c80" data-mce-linktype="2" data-glossary-id="52151">senior management</a></em>, other than members of the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR G)</span>;</li>
+<li>(6) responsibility for overseeing the adoption of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> culture in the day-to-day management of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR H)</span>;</li>
+<li>(7) responsibility for managing the allocation and maintenance of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a>  </em>capital, funding and liquidity<em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR O)</span>;</li>
+<li>(8) responsibility for the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> treasury management functions<em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR P)</span>;</li>
+<li>(9) responsibility for the production and integrity of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> financial information and its regulatory reporting under the <em><a class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR Q)</span>;</li>
+<li>(10) responsibility for developing and maintaining the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> </em><em><a class="glossary-link" title="recovery plan" href="#glossary-term-452cec3911374cde87722b5958f15a1e" data-mce-linktype="2" data-glossary-id="52608">recovery plan</a>, </em><em><a class="glossary-link" title="resolution pack" href="#glossary-term-f05819f7636145e99fe392ca404f87c2" data-mce-linktype="2" data-glossary-id="52609">resolution pack</a></em> and, where relevant, resolution assessment, and for overseeing the internal processes regarding their governance<em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR R)</span>;</li>
+<li>(11) responsibility for managing the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> internal stress-tests and ensuring the accuracy and timeliness of information provided to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> and other regulatory bodies for the purposes of stress- testing<em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR S)</span>;</li>
+<li>(12) responsibility for the development and maintenance of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a>  </em>business model by the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR T)</span>;</li>
+<li>(13) responsibility for leading the development and monitoring effective implementation of policies and procedures for the induction, training and professional development of all members of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> </em><em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR F)</span>;</li>
+<li>(14) responsibility for leading the development of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> culture by the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> as a whole<em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR I)</span>;</li>
+<li>(15) responsibility for safeguarding the independence of, and overseeing the performance of, the internal audit function, including the performance of a <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> approved to perform the <em><a class="glossary-link" title="Head of Internal Audit function" href="#glossary-term-48add308e5284760a9c6d4d58f49f196" data-mce-linktype="2" data-glossary-id="52580">Head of Internal Audit function</a></em> on behalf of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, in accordance with <a  title="Compliance and Internal Audit 3" href="/pra-rules/compliance-and-internal-audit#3df1035aa0c641e6be1d416146a78412" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Compliance and Internal Audit 3</a><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR J)</span>;</li>
+<li>(16) responsibility for safeguarding the independence of, and overseeing the performance of, the compliance function, including the performance of a <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> approved by the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> to perform the <em><a class="glossary-link" title="compliance oversight function" href="#glossary-term-6bf0c1cb06f843f9ad13c0720dc3813f" data-mce-linktype="2" data-glossary-id="52593">compliance oversight function</a></em> on behalf of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, in accordance with <a  title="Compliance and Internal Audit 2" href="/pra-rules/compliance-and-internal-audit#236411ead98f4f208fee7cc8f10e376b" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Compliance and Internal Audit 2</a><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR K)</span>;</li>
+<li>(17) responsibility for safeguarding the independence of, and overseeing of the performance of, the risk function , including the performance of a <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> approved to perform the <em><a class="glossary-link" title="Chief Risk function" href="#glossary-term-8c92011c81344d2493cd35bbe2a56429" data-mce-linktype="2" data-glossary-id="52592">Chief Risk function</a></em> on behalf of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, in accordance with <a  title="Risk Control 3.4" href="/pra-rules/risk-control#b88ea8c6be2d4c4d9f041c793cfd4ebd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Risk Control 3.4</a> and <a  title="3.5" href="/pra-rules/risk-control#20eefe6e30da47a19df54acde40a1fb6" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.5</a><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR L)</span>;</li>
+<li>(18) responsibility for overseeing the development of, and implementation of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> remuneration policies and practices in accordance with <a  title="Remuneration" href="/pra-rules/remuneration" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Remuneration</a><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR M)</span>;</li>
+<li>(19) responsibility for the independence, autonomy and effectiveness of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> policies and procedures on whistleblowing, including the procedures for protection of staff who raise concerns from detrimental treatment<em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR N)</span>;</li>
+<li>(20) responsibility for the allocation of all <em><a  class="glossary-link" title="prescribed responsibilities" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibilities</a></em> in accordance with <a  title="3.1" href="/pra-rules/allocation-of-responsibilities#4988e97338544830957a228cac166eeb" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR E)</span>;</li>
+<li>(21) responsibility for the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> performance of its obligations under <a  title="Outsourcing" href="/pra-rules/outsourcing" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Outsourcing</a><em style="text-indent: -14.3px;"> </em><span style="text-indent: -14.3px;">(PR X)</span>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					09/12/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/10-12-2018#c33f5ea2f2494a40877edb9034aaab54">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 09/12/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c33f5ea2f2494a40877edb9034aaab54">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="266d16364ab844e4b971888dce281977"
+	 data-version="5301a30f565d4991a28087dd09aefd4f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Each of the responsibilities set out in this rule is a <em><a class="glossary-link" title="prescribed responsibility" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibility</a></em> in the circumstances specified:</p>
+<ol class="new-bullet">
+<li>(1) if the <em style="text-indent: -14.3px;"><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> carries out <em><a class="glossary-link" title="proprietary trading" href="#glossary-term-410c468147c641b3a5c068a200232491" data-mce-linktype="2" data-glossary-id="52607">proprietary trading</a></em>, responsibility for the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> <a class="glossary-link" title="proprietary trading" href="#glossary-term-410c468147c641b3a5c068a200232491" data-mce-linktype="2" data-glossary-id="52607">proprietary trading</a></em> activities (PR V);</li>
+<li>(2) if the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> does not have a <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> who performs the <em><a class="glossary-link" title="Chief Risk function" href="#glossary-term-8c92011c81344d2493cd35bbe2a56429" data-mce-linktype="2" data-glossary-id="52592">Chief Risk function</a></em>, responsibility for the compliance of the <em style="text-indent: -14.3px;"><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> risk management systems, policies and procedures with the requirements of <a  title="Risk Control 2.1" href="/pra-rules/risk-control#4425478734144195b397b2c1ec74cce0" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Risk Control 2.1</a> to <a  title="2.4" href="/pra-rules/risk-control#d70271aa36c7463eab591713b6a0076d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a> (PR W);</li>
+<li>(3) if the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> outsources its internal audit function, responsibility for taking reasonable steps to ensure that every <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> involved in the performance of that function is independent from the <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em> who perform external audit, including:</li>
+<ol>
+<li>(a) supervision and management of the work of outsourced internal auditors; and</li>
+<li>(b) management of potential conflicts of interest between the provision of external audit and internal audit services (PR J1);</li>
+</ol>
+<li>(4) if the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> is a <em class="rule-style-2">ring-fenced body</em>, responsibility for ensuring that those aspects of the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> affairs for which a <em style="text-indent: -14.3px;"><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em> is responsible for managing are in compliance with the <em><a class="glossary-link" title="ring-fencing requirements" href="#glossary-term-d9b07c3daa3043f7aab249baabab9754" data-mce-linktype="2" data-glossary-id="52610">ring-fencing obligations</a></em> (PR Y).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#266d16364ab844e4b971888dce281977">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=266d16364ab844e4b971888dce281977">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/allocation-of-responsibilities/4-prescribed-responsibilities/31-12-2020?p=1" data-id="8f08a7c3444648ccb24b11d5ef6490c8" data-effective-date="31-12-2020" data-download-title="Prescribed Responsibilities_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/allocation-of-responsibilities/4-prescribed-responsibilities/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities#8f08a7c3444648ccb24b11d5ef6490c8&amp;subject=PRA Rulebook - Allocation of Responsibilities – Prescribed Responsibilities">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=8f08a7c3444648ccb24b11d5ef6490c8">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Prescribed Responsibilities
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="a6f5136cdc724eb7aa0e204f2f67d60c"
+	 data-version="eb2745e1daae42ed8a5964d4f66abfd9"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Prescribed Responsibilities: Small Firms
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fd8acb7183f74834a363fb814b8c6a53"
+	 data-version="420f1e9353fe41609b46561e48bdde17"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Chapter applies only to</p>
+<ol class="new-bullet">
+<li>(1) a small <em><a class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em>; and</li>
+<li>(2) a <em><a class="glossary-link" title="credit union" href="#glossary-term-b44a7177579342ff87047c3ce2d561b6" data-mce-linktype="2" data-glossary-id="52110">credit union</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fd8acb7183f74834a363fb814b8c6a53">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c746d28f12384168992a2d19cc930f31"
+	 data-version="1123e46d3b464b22bcf785bb45066977"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Each of the responsibilities listed in this rule is a <em><a class="glossary-link" title="small firm prescribed responsibility" href="#glossary-term-49cd3e1fed9c4a188b1db0ccc796134c" data-mce-linktype="2" data-glossary-id="52614">small firm prescribed responsibility</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) each of the <em><a class="glossary-link" title="prescribed responsibilities" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibilities</a></em> in <a  title="4.1" href="/pra-rules/allocation-of-responsibilities#c33f5ea2f2494a40877edb9034aaab54" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.1</a>(1) &ndash; (3);</li>
+<li>(2) responsibility for allocation of all <em><a class="glossary-link" title="small firm prescribed responsibilities" href="#glossary-term-49cd3e1fed9c4a188b1db0ccc796134c" data-mce-linktype="2" data-glossary-id="52614">small firm prescribed responsibilities</a></em> in accordance with <a  title="3.3" href="/pra-rules/allocation-of-responsibilities#3b4248b59f1140cf9631a4f141079f18" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.3</a>(1) or (2), as the case may be (PR E);</li>
+<li>(3) responsibility for implementing and managing the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> risk management policies and procedures<span style="text-indent: -14.3px;"> (PR AA)</span>;</li>
+<li>(4) responsibility for managing the systems and controls of the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="text-indent: -14.3px;"> (PR BB)</span>;</li>
+<li>(5) responsibility for managing the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> financial resources<span style="text-indent: -14.3px;"> (PR CC)</span>;</li>
+<li>(6) responsibility for ensuring the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> is informed of its legal and regulatory obligations<span style="text-indent: -14.3px;"> (PR DD)</span>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#c746d28f12384168992a2d19cc930f31">
+			Past
+			<span class="visually-hidden">
+				version of 5.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c746d28f12384168992a2d19cc930f31">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/allocation-of-responsibilities/5-prescribed-responsibilities-small-firms/31-12-2020?p=1" data-id="a6f5136cdc724eb7aa0e204f2f67d60c" data-effective-date="31-12-2020" data-download-title="Prescribed Responsibilities: Small Firms_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/allocation-of-responsibilities/5-prescribed-responsibilities-small-firms/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities#a6f5136cdc724eb7aa0e204f2f67d60c&amp;subject=PRA Rulebook - Allocation of Responsibilities – Prescribed Responsibilities: Small Firms">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=a6f5136cdc724eb7aa0e204f2f67d60c">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Prescribed Responsibilities: Small Firms
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="50e9240b0c544dd2a0b760b62a55171e"
+	 data-version="434275d11ba6491d81d995d0bc0e7448"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Prescribed Responsibilities: Third Country CRR Firms
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="da0737dd6fa9458fa1d06e55bbf75bcc"
+	 data-version="9b1211804cac4b128b47ef90758ed14a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This chapter applies only to a <em><a class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em> in relation to:</p>
+<ol class="new-bullet">
+    <li>(1) the activities of its establishment in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>; or</li>
+    <li>(2) if it does not have an establishment in the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>, its activities in the <em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#da0737dd6fa9458fa1d06e55bbf75bcc">
+			Past
+			<span class="visually-hidden">
+				version of 6.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=da0737dd6fa9458fa1d06e55bbf75bcc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="58790113109149018f2381fec11f140c"
+	 data-version="63fb018940554951934646f6ea556b2c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Subject to <a title="6.3" href="/pra-rules/allocation-of-responsibilities#7973fe76b1f04d32818226a6c6e43291" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.3</a>, each of the responsibilities set out in this rule is a <em><a class="glossary-link" title="UK branch prescribed responsibility" href="#glossary-term-82c1190681aa46e7b090ba148c506818" data-mce-linktype="2" data-glossary-id="67099">third country CRR firm prescribed responsibility</a></em>:</p>
+<ol class="new-bullet">
+    <li>(1) responsibility for the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> performance of its obligations under the <em><a class="glossary-link" title="senior management regime" href="#glossary-term-e430a364ec5144348d194f67ff61ac3d" data-mce-linktype="2" data-glossary-id="52612">senior management regime</a></em>, including implementation and oversight (PR A);</li>
+    <li>(2) responsibility for the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> performance of its obligations under the <em><a class="glossary-link" title="certification regime" href="#glossary-term-42569c8247d643deab9fbaebdd58c306" data-mce-linktype="2" data-glossary-id="88232">certification regime</a></em> <span style="text-indent: -14.3px;">(PR B)</span>;</li>
+    <li>(3) responsibility for compliance with the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> obligations in relation to its <em><a class="glossary-link" title="management responsibilities map" href="#glossary-term-3b70b536cf32444a93f057bb1449d11e" data-mce-linktype="2" data-glossary-id="52604">management responsibilities map</a></em><span style="text-indent: -14.3px;"> (PR C)</span>;</li>
+    <li>(4) responsibility for management of the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> risk management processes in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em><span style="text-indent: -14.3px;"> (PR AA)</span>;</li>
+    <li>(5) responsibility for the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> compliance with the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a> </em><em><a class="glossary-link" title="UK regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a> </em>applicable to the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="text-indent: -14.3px;"> (PR FF)</span>;</li>
+    <li>(6) responsibility for the escalation of correspondence from the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>, <em><a class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a> </em>and other regulators in respect of the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to the <em><a class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> and/or the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> of the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, or, where appropriate, of the <em><a class="glossary-link" title="parent undertaking" href="#glossary-term-cc80733831ac4e40bbb6771064eca0f3" data-mce-linktype="2" data-glossary-id="52868">parent undertaking</a></em> or <em><a class="glossary-link" title="holding company" href="#glossary-term-ba946d21f0954f00af367c31973626f3" data-mce-linktype="2" data-glossary-id="67139">holding company</a></em> of the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> </em><em><a class="glossary-link" title="group" href="#glossary-term-9cc7c2cc215f40feb49701c36c955c59" data-mce-linktype="2" data-glossary-id="52596">group</a></em><span style="text-indent: -14.3px;"> (PR EE)</span>;</li>
+    <li>(7) responsibility for management of the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> systems and controls in the <span style="text-indent: -14.3px;"><em style="text-indent: -14.3px;"><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em> (PR BB)</span>;</li>
+    <li>(8) responsibility for the allocation of all <em><a class="glossary-link" title="UK branch prescribed responsibility" href="#glossary-term-82c1190681aa46e7b090ba148c506818" data-mce-linktype="2" data-glossary-id="67099">third country CRR firm prescribed responsibilities</a></em> in accordance with <a title="3.5" href="/pra-rules/allocation-of-responsibilities#058c31e4d64c48968c06b48a4b022714" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.5</a><span style="text-indent: -14.3px;"> (PR E)</span>;</li>
+    <li>(9) responsibility for management of the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> liquidity or, where a liquidity waiver is in place, the submission of information to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> on the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a> </em>liquidity position<span style="text-indent: -14.3px;"> (PR HH)</span>;</li>
+    <li>(10) responsibility for the production and integrity of the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> financial information and its regulatory reporting in respect of its <em><a class="glossary-link" title="regulated activities" href="#glossary-term-24caed66a6824fc18abef5f2a4c455a2" data-mce-linktype="2" data-glossary-id="53237">regulated activities</a></em><span style="text-indent: -14.3px;"> (PR Q)</span>;</li>
+    <li>(11) i<span style="text-indent: -14.3px;">f the </span><em style="text-indent: -14.3px;"><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="text-indent: -14.3px;"> has an establishment in the </span><em><a class="glossary-link" style="text-indent: -14.3px;" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em><span style="text-indent: -14.3px;">, </span>responsibility for the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> performance of its obligations under <a title="Internal Governance of Third Country Branches 7" href="/pra-rules/internal-governance-of-third-country-branches#5b8537a37d1845ba8ed506fb407111ca" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Internal Governance of Third Country Branches 7</a><span style="text-indent: -14.3px;"> (PR X1)</span>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/10-12-2018#58790113109149018f2381fec11f140c">
+			Past
+			<span class="visually-hidden">
+				version of 6.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=58790113109149018f2381fec11f140c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7973fe76b1f04d32818226a6c6e43291"
+	 data-version="efaf0b4b74c6401194d7a7169a41fa89"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In relation to a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> who is treated, by virtue of the EEA Passport Rights (Amendment, etc and Transitional Provisions) (EU Exit) Regulations 2018, as having a <em><a class="glossary-link" title="Part 4A permission" href="#glossary-term-70e2231bf99f44feb753d11bedbebec5" data-mce-linktype="2" data-glossary-id="52149">Part 4A permission</a></em> to carry on a <em><a class="glossary-link" title="regulated activity" href="#glossary-term-aa04e0522d234dabb44ae6041cd9954b" data-mce-linktype="2" data-glossary-id="77616">regulated activity</a></em>:</p>
+<ol class="new-bullet">
+    <li>(1) the <em><a class="glossary-link" title="third country CRR firm prescribed responsibilities" href="#glossary-term-cc532cd797874c2b8ad1ede1ccd5d3db" data-mce-linktype="2" data-glossary-id="98283">third country CRR firm prescribed responsibilities</a></em> in <a title="6.2" href="/pra-rules/allocation-of-responsibilities#58790113109149018f2381fec11f140c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.2</a> do not apply; and  </li>
+    <li>(2) each of the responsibilities set out in this rule is a <em style="text-indent: -14.3px;"><a class="glossary-link" title="third country CRR firm prescribed responsibilities" href="#glossary-term-cc532cd797874c2b8ad1ede1ccd5d3db" data-mce-linktype="2" data-glossary-id="98283">third country CRR firm prescribed responsibility</a></em>:</li>
+    <ol>
+        <li>(a) responsibility for the <em style="text-indent: 0px;"><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> compliance with the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a> <a class="glossary-link" title="UK regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em> applicable to the <em style="text-indent: 0px;"><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (PR FF); and</li>
+        <li>(b) where the <em style="text-indent: 0px;"><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has applied for a <em style="text-indent: 0px;"><a class="glossary-link" title="Part 4A permission" href="#glossary-term-70e2231bf99f44feb753d11bedbebec5" data-mce-linktype="2" data-glossary-id="52149">Part 4A permission</a></em> to carry on a <em style="text-indent: 0px;"><a class="glossary-link" title="regulated activity" href="#glossary-term-aa04e0522d234dabb44ae6041cd9954b" data-mce-linktype="2" data-glossary-id="77616">regulated activity</a></em>, until such time as the application has been determined or withdrawn, the responsibility for managing the process of obtaining such permission (including, without limitation, the completion and submission of the <em style="text-indent: 0px;"><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> application and providing the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> with such co-operation and with all accurate and up to date information that it may reasonably require in order to determine whether the requirements for authorisation have been met).</li>
+    </ol>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7973fe76b1f04d32818226a6c6e43291">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/allocation-of-responsibilities/6-prescribed-responsibilities-third-country-crr-firms/31-12-2020?p=1" data-id="50e9240b0c544dd2a0b760b62a55171e" data-effective-date="31-12-2020" data-download-title="Prescribed Responsibilities: Third Country CRR Firms_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/allocation-of-responsibilities/6-prescribed-responsibilities-third-country-crr-firms/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities#50e9240b0c544dd2a0b760b62a55171e&amp;subject=PRA Rulebook - Allocation of Responsibilities – Prescribed Responsibilities: Third Country CRR Firms">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=50e9240b0c544dd2a0b760b62a55171e">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Prescribed Responsibilities: Third Country CRR Firms
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="9f11c90e79ac4572860bd4480152c44b"
+	 data-version="bf88f31cbc5d4e81a01b398b206f03cd"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Records
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c1d368f8a0684c179f04ed28f7f2afb7"
+	 data-version="d78e9c9d214341efa5372d99c9aeb6ca"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must at all times have a comprehensive and up-to-date single document (a <em><a class="glossary-link" title="management responsibilities map" href="#glossary-term-3b70b536cf32444a93f057bb1449d11e" data-mce-linktype="2" data-glossary-id="52604">management responsibilities map</a></em>) that describes the <em><a class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> management and governance arrangements including:</p>
+<ol class="new-bullet">
+<li>(1) details of the reporting lines and the lines of responsibility; and</li>
+<li>(2) reasonable details about the <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em> who are part of these arrangements;</li>
+<li>(3) the responsibilities of those <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c1d368f8a0684c179f04ed28f7f2afb7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8f14a399b76547e89d61eff5cfbe3c02"
+	 data-version="b01b918f9ede4c7eb18a62e5bb8b169f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="management responsibilities map" href="#glossary-term-3b70b536cf32444a93f057bb1449d11e" data-mce-linktype="2" data-glossary-id="52604">management responsibilities map</a></em> must in particular include:</p>
+<ol class="new-bullet">
+    <li>(1) the names of all the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em><a class="glossary-link" title="approved persons" href="#glossary-term-76c186553d63434ab742fe4474e848d5" data-mce-linktype="2" data-glossary-id="52211">approved persons</a></em> (including <em><a class="glossary-link" title="FCA approved persons" href="#glossary-term-ce90e6687f674076b7b020535bf61fa7" data-mce-linktype="2" data-glossary-id="52595">FCA approved persons</a></em>), <em><a class="glossary-link" title="notified non-executive directors" href="#glossary-term-9522e473f6f547b9ab49496e386da2c2" data-mce-linktype="2" data-glossary-id="66847">notified non-executive directors</a></em>, <em><a class="glossary-link" title="credit union non-executive directors" href="#glossary-term-0f775339da7645ab94ceee8078fc3362" data-mce-linktype="2" data-glossary-id="66846">credit union non-executive directors</a></em> and <em><a class="glossary-link" title="senior management" href="#glossary-term-685d8be44e4445d4a16142fe92a32c80" data-mce-linktype="2" data-glossary-id="52151">senior management</a></em> and the responsibilities held by each, including all <em><a class="glossary-link" title="FCA responsibilities" href="#glossary-term-221bdebd892f43b8a114d61d4cfb581c" data-mce-linktype="2" data-glossary-id="52602">FCA responsibilities</a></em>;</li>
+    <li>(2) if any <em><a class="glossary-link" title="PRA senior management functions" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management functions</a></em> or<em><a class="glossary-link" title=" FCA designated senior management functions" href="#glossary-term-8c0e67fc14334c42be5ff1a7901175e5" data-mce-linktype="2" data-glossary-id="52599"> FCA designated senior management functions</a></em> are performed by more than one <em><a class="glossary-link" title="persons" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em>, or any <em><a class="glossary-link" title="prescribed responsibilities" href="#glossary-term-1ae4693388084c47903207ee49416262" data-mce-linktype="2" data-glossary-id="52606">prescribed responsibilities</a></em>, <em><a class="glossary-link" title="small firm prescribed responsibilities" href="#glossary-term-49cd3e1fed9c4a188b1db0ccc796134c" data-mce-linktype="2" data-glossary-id="52614">small firm prescribed responsibilities</a> </em>or <em><a class="glossary-link" title="UK branch prescribed responsibilities" href="#glossary-term-82c1190681aa46e7b090ba148c506818" data-mce-linktype="2" data-glossary-id="67099">third country CRR firm prescribed responsibilities</a></em>, as the case may be, are allocated to more than one <em><a class="glossary-link" title="persons" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">person</a></em>, details of how the performance or discharge of the responsibilities is to be carried out by those <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em>;</li>
+    <li>(3) matters reserved to the <em><a class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> (including the terms of reference of its committees) including, in the case of a <em><a class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>, the equivalent body (or its committees) responsible for the management of the <em><a class="glossary-link" title="third country CRR firm’s" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm&rsquo;s</a></em> business and activities in the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>;</li>
+    <li>(4) where the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> is a member of a <em><a class="glossary-link" title="group" href="#glossary-term-9cc7c2cc215f40feb49701c36c955c59" data-mce-linktype="2" data-glossary-id="52596">group</a></em>;</li>
+    <ol>
+        <li>(a) how the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> management and governance arrangements fit together with those of its <em><a class="glossary-link" title="group" href="#glossary-term-9cc7c2cc215f40feb49701c36c955c59" data-mce-linktype="2" data-glossary-id="52596">group</a></em> and the extent to which the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> management and governance arrangements are provided by or shared with other members of its <em><a class="glossary-link" title="group" href="#glossary-term-9cc7c2cc215f40feb49701c36c955c59" data-mce-linktype="2" data-glossary-id="52596">group</a></em>; and</li>
+        <li>(b) details of the reporting lines and the lines of responsibility (if any) to <em><a class="glossary-link" title="person" href="#glossary-term-0b21244ee3f149e4b23603532800ff30" data-mce-linktype="2" data-glossary-id="52597">persons</a></em> who are <em><a class="glossary-link" title="employees" href="#glossary-term-e08f83ef44794a06bd2429270dc7b807" data-mce-linktype="2" data-glossary-id="52174">employees</a></em> or officers of other <em><a class="glossary-link" title="group" href="#glossary-term-9cc7c2cc215f40feb49701c36c955c59" data-mce-linktype="2" data-glossary-id="52596">group</a></em> members or to committees or other bodies of the <em><a class="glossary-link" title="group" href="#glossary-term-9cc7c2cc215f40feb49701c36c955c59" data-mce-linktype="2" data-glossary-id="52596">group</a></em> or of other <em><a class="glossary-link" title="group" href="#glossary-term-9cc7c2cc215f40feb49701c36c955c59" data-mce-linktype="2" data-glossary-id="52596">group</a></em> members; and</li>
+    </ol>
+    <li>(5) details of how the matters set out in (1) to (4) fit into the <em><a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> management and governance arrangements as a whole.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#8f14a399b76547e89d61eff5cfbe3c02">
+			Past
+			<span class="visually-hidden">
+				version of 7.2 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8f14a399b76547e89d61eff5cfbe3c02">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c2d839abcbdb4089a21f2d0ea389cffd"
+	 data-version="a4a549d0f64e4e17bdb15b33e69036b7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the content of a <em><a class="glossary-link" title="statement of responsibilities" href="#glossary-term-fb97f0c518a44b898a3ef96a17e61aeb" data-mce-linktype="2" data-glossary-id="52615">statement of responsibilities</a></em> is modified or revised, a <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must send a copy of that revised <em><a class="glossary-link" title="statement of responsibilities" href="#glossary-term-fb97f0c518a44b898a3ef96a17e61aeb" data-mce-linktype="2" data-glossary-id="52615">statement of responsibilities</a></em> to the <em><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> as soon as possible.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c2d839abcbdb4089a21f2d0ea389cffd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1945df9386704eeaa36c7ba95aa27750"
+	 data-version="0a6de28b07b4473c8fb2ece3302c072c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must retain a copy of each version of:</p>
+<ol class="new-bullet">
+<li>(1) its <em><a class="glossary-link" title="management responsibilities map" href="#glossary-term-3b70b536cf32444a93f057bb1449d11e" data-mce-linktype="2" data-glossary-id="52604">management responsibilities map</a></em>; and</li>
+<li>(2) the <em><a class="glossary-link" title="statement of responsibilities" href="#glossary-term-fb97f0c518a44b898a3ef96a17e61aeb" data-mce-linktype="2" data-glossary-id="52615">statement of responsibilities</a></em> for each person who performs or has performed a <em><a class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> for the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em></li>
+</ol>
+<p>for a period of ten years from the date on which the <em><a class="glossary-link" title="management responsibilities map" href="#glossary-term-3b70b536cf32444a93f057bb1449d11e" data-mce-linktype="2" data-glossary-id="52604">management responsibilities map</a></em> or the <em><a class="glossary-link" title="statement of responsibilities" href="#glossary-term-fb97f0c518a44b898a3ef96a17e61aeb" data-mce-linktype="2" data-glossary-id="52615">statement of responsibilities</a></em>, as the case may be, is superseded by a more up-to-date version.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1945df9386704eeaa36c7ba95aa27750">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/allocation-of-responsibilities/7-records/31-12-2020?p=1" data-id="9f11c90e79ac4572860bd4480152c44b" data-effective-date="31-12-2020" data-download-title="Records_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/allocation-of-responsibilities/7-records/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities#9f11c90e79ac4572860bd4480152c44b&amp;subject=PRA Rulebook - Allocation of Responsibilities – Records">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=9f11c90e79ac4572860bd4480152c44b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Records
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="d03b4312972a4c97b1d698f14090fef3"
+	 data-version="12bfebbd77234fa390ec4a3788366288"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Chair of the Governing Body’s Office
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="70f1701b0fa64a1f9356a4d7ffdbac58"
+	 data-version="75e8ed0023df4c1f8d5551a05db109e3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> (other than a <em><a  class="glossary-link" title="third country CRR firm" href="#glossary-term-6223a754ecda4ccbb521f93965c95ec1" data-mce-linktype="2" data-glossary-id="66829">third country CRR firm</a></em>) must ensure that the office of the <em><a class="glossary-link" title="Chairman function" href="#glossary-term-cb0636449b2246faa7cdabe643aef09d" data-mce-linktype="2" data-glossary-id="52591">Chair of the Governing Body function</a></em> has resources that are adequate as to both quality and quantity to enable it to fulfil its role within the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/allocation-of-responsibilities/07-03-2016#70f1701b0fa64a1f9356a4d7ffdbac58">
+			Past
+			<span class="visually-hidden">
+				version of 8.1 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=70f1701b0fa64a1f9356a4d7ffdbac58">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2020">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/allocation-of-responsibilities/8-chair-of-the-governing-bodys-office/31-12-2020?p=1" data-id="d03b4312972a4c97b1d698f14090fef3" data-effective-date="31-12-2020" data-download-title="Chair of the Governing Body’s Office_31-12-2020" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/allocation-of-responsibilities/8-chair-of-the-governing-bodys-office/31-12-2020?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/allocation-of-responsibilities#d03b4312972a4c97b1d698f14090fef3&amp;subject=PRA Rulebook - Allocation of Responsibilities – Chair of the Governing Body’s Office">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=d03b4312972a4c97b1d698f14090fef3">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Chair of the Governing Body’s Office
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

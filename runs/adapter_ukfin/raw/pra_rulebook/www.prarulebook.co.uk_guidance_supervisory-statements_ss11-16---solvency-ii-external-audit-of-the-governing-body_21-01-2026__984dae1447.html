@@ -1,0 +1,2769 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{3FF17A91-3A74-465D-95F9-09E8EB96C790} -->
+<title>SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrf66q-f-c20644c9f-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":26,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"714169f","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":1113,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025469","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==EfC8GdLpQQdyR80LWLjLTO9FPG8OYiOIYOPem2HDmtBppe4f1H0bn3nyPP0uvvrLI9Z+KSFAvQo/nhyGpoHFFsJqZwtb4M8t75kJMVhpfDjH2SA7WK1faX5YTrldxY7bubd1mbgCis17/+ZIGZIEnaAsJqcTb3Gdh9FV3PDp9dadjAiYWwFlfOhiZXIWrgIohieAhx5riuwMk+kS9AJHZ6TJbDNbrHPCpn+OZfdWeQynsExHhwIUgkIIqa123OqkYSS0ZmWX5zl7hckdyRFTm6YRSTeAGUzHs39zwUY820Rn6eLOASI+C9XMMBcwsqTvuPaCFF6AIaR9zgwDl4coFqGWk9k76fen0g6CVrAH2XxoMkA9jI5g0Zyj8qwxzZuNNP2RDNtAafDclAH4ZMi8iDtK9jXnbMUYKf+tp3DTaaA=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/solvency2-external-audit-of-the-public-disclosure-requirement-ss" rel="noopener noreferrer" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3">Previous versions of this Supervisory Statement (SS) pre 30/06/2024 can be found here.</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/30-06-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						30/06/2024
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/31-12-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-5274a2d2-0451-45fe-99f6-df861c90214b">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-5274a2d2-0451-45fe-99f6-df861c90214b"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/external-audit/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									External Audit
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/reporting/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Reporting
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/june/review-of-solvency-ii-reform-of-the-matching-adjustment-policy-statement" class="list-links__link" target="_blank">
+										PS10/24 - Review of Solvency II: Reform of the Matching Adjustment
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/november/review-of-solvency-ii-restatement-of-assimilated-law-policy-statement" class="list-links__link" target="_blank">
+										PS15/24 - Review of Solvency II: Restatement of assimilated law
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/31-12-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/31-12-2024?p=1" data-id="dd8b638f1bcb4dd6b5f95f0453b03629" data-effective-date="31-12-2024" data-download-title="SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body&amp;subject=PRA Rulebook - SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="91ce232735d84124949b80b2da6910ac"
+	 data-version="77c5e46cfcbe4ec7a46781b6cedb8ea0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fb0bd88f73204e378386a5329a772fb4"
+	 data-version="43607984e07447e7a8d702295100b8eb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Prudential Regulation Authority (PRA) supervisory statement is relevant to firms in scope of Solvency II, including the Society of Lloyd's (collectively 'insurers' or &lsquo;firms&rsquo; throughout the SS), and the auditors of those firms.<sup><a href="#footnote-1">1</a></sup> It reminds the governing body of its responsibilities in respect of the ongoing appropriateness of the information disclosed, and that it must approve the Solvency and Financial Condition Report (SFCR). It also sets out the level of assurance expected with respect to the external audit requirement on the SFCR and the audit guidance that the PRA expects auditors to follow in auditing a firm&rsquo;s SFCR. It should be read alongside the <a href="/pra-rules/external-audit" data-rb-content-link="Part">External Auditors Part</a>&nbsp;of the PRA Rulebook. The parts of this supervisory statement that relate to the external audit of the SFCR are not applicable to 'small insurers for external audit purposes' and 'small groups for external audit purposes', as set out in <a href="/pra-rules/external-audit#e628e9430f0144da80e75c99f3fc57d6" data-rb-content-link="Rule">External Audit 1.1</a>.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						Unless otherwise stated, any references to EU or EU derived legislation in this SS refer to the version of that legislation which forms part of the body of law that was retained in the UK.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c4104cc90e194e98926b9ed2a766a2f2"
+	 data-version="d4447e08a73b4d78bdf6d83b59e5f025"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>By clearly and consistently explaining its expectations of insurers and audit firms in relation to the particular areas addressed, the PRA seeks to advance its statutory objectives of ensuring the safety and soundness of the firms it regulates, and contributing to securing an appropriate degree of protection for policyholders.<sup><a href="#footnote-2">2</a></sup> The PRA is legally required, so far as is reasonably possible, to facilitate effective competition in the markets for services provided by PRA authorised persons in carrying on regulated activities. The PRA has considered matters to which it is required to have regard, and it considers that this supervisory statement is compatible with the Regulatory Principles and relevant provisions of the Legislative and Regulatory Reform Act 2006. This supervisory statement is not expected to have any direct or indirect discriminatory impact under existing UK law.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						In this specific case which relates to the PRA’s statutory objectives, the term ‘firms’ refers to all regulated firms, not only those in scope of Solvency II.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/1-introduction/31-12-2024?p=1" data-id="91ce232735d84124949b80b2da6910ac" data-effective-date="31-12-2024" data-download-title="Introduction_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/1-introduction/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body#91ce232735d84124949b80b2da6910ac&amp;subject=PRA Rulebook - SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="2c59d73bf5824b17bc71ae2149b45f61"
+	 data-version="d0b2ac547b6f4b269bcbf4a797a56a76"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Governing body’s responsibility for the SFCR
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c181ec3bb5cb4585b1de47d893dfac5d"
+	 data-version="d67ec4be94fc4715a21cb389947a9ec5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <a href="/pra-rules/reporting" data-rb-content-link="Part">Reporting Part</a>&nbsp;of the PRA Rulebook requires that an insurer must have in place a written policy ensuring the ongoing appropriateness of any information disclosed and that the insurer must ensure that its SFCR is subject to approval by its governing body.<sup><a href="#footnote-3">3</a></sup> Therefore the PRA expects the governing body to take responsibility for ensuring that the SFCR has been properly prepared in all material respects in accordance with the PRA rules and Solvency II Regulations.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						Reporting Part, Rule 6.1(2) Reporting Part, Rule 6.2(1).
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7bdd5bc10b254be5a68c0206c1369ee5"
+	 data-version="05d4a252fd5e49df8777a47842023b50"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As well as having a written policy in place to ensure the ongoing appropriateness of any information disclosed, the PRA expects that the governing body should be satisfied that:</p>
+<ol class="new-bullet">
+    <li>(a) throughout the financial year in question, the insurer has complied in all material respects with the requirements of the PRA rules and Solvency II Regulations as applicable to the insurer; and</li>
+    <li>(b) it is reasonable to believe that, at the date of the publication of the SFCR, the insurer has continued so to comply, and will continue so to comply in future.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="934f2aa932834ea7a83c97e250d1cc78"
+	 data-version="bc6e73d5b6ad4d6b9699cf685dc10619"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects the governing body to acknowledge and evidence in writing its responsibility for the SFCR and make this available to potential readers of the SFCR by signing the SFCR and attaching the written acknowledgment to the SFCR.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/2-governing-bodys-responsibility-for-the-sfcr/31-12-2024?p=1" data-id="2c59d73bf5824b17bc71ae2149b45f61" data-effective-date="31-12-2024" data-download-title="Governing body’s responsibility for the SFCR_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/2-governing-bodys-responsibility-for-the-sfcr/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body#2c59d73bf5824b17bc71ae2149b45f61&amp;subject=PRA Rulebook - SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement – Governing body’s responsibility for the SFCR">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="42ba196a573d47368030310ffb1a1dd8"
+	 data-version="3e256c1f84d64d5285a13bcd7200e2b0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Level of assurance and scope
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a8b2d186a9674f1ba8a8812fbd9b426d"
+	 data-version="ad2a7edba5974240b85dab280cae5504"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>External audit of the SFCR refers to an independent auditor gathering sufficient appropriate evidence to provide an overall reasonable assurance opinion that the public disclosure in scope complies in all material respects with PRA rules and Solvency II Regulations. Reasonable assurance is a high level of assurance described in relevant auditing standards.<sup><a href="#footnote-4">4</a></sup> It is achieved when the auditor has obtained sufficient appropriate audit evidence to reduce audit risk (that is the risk that the auditor expresses an inappropriate opinion when the SFCR is materially misstated) to an acceptably low level. <a href="/pra-rules/external-audit#4c88f0b110c34681b637333737978f85" data-rb-content-link="Rule">External Audit 2.2</a>&nbsp;describes the relevant elements of the public disclosure in scope in the &lsquo;Valuation for solvency purposes&rsquo; and &lsquo;Capital management&rsquo; sections of the SFCR subject to the two exemptions. First, the Solvency Capital Requirement (SCR) and information that derives from it, is exempt if calculated using an approved full or partial internal model (<a href="/pra-rules/external-audit#4c88f0b110c34681b637333737978f85" data-rb-content-link="Rule">External Audit 2.2(3)</a> and <a href="/pra-rules/external-audit#4c88f0b110c34681b637333737978f85" data-rb-content-link="Rule">2.2(4)</a>). Secondly, where Solvency II requires information in the SFCR to be produced using sectoral rules (<a href="/pra-rules/external-audit#fdc9c1f2c6664672ace98c537c55e8ca" data-rb-content-link="Rule">External Audit 4.2</a> explained in paragraph <a href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body#3f34774dff924864b52b5f705b90432f" data-rb-content-link="Paragraph">3.3</a>&nbsp;below).</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						International Standard on Auditing (UK) 200, paragraph 5, <a href="http://www.frc.org.uk/library/standards-codes-policy/audit-assurance-and-ethics/auditing-standards/isa-uk-200">www.frc.org.uk/library/standards-codes-policy/audit-assurance-and-ethics/auditing-standards/isa-uk-200</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="63256f1a4bb94d179e9022fb7b9927e7"
+	 data-version="560554ed2f0b40ad942a9ec71d39241a"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Information in the group SFCR</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="0905baa5d0cb4feab171a645df59e3e8"
+	 data-version="551c7c96d39c49cfa937d7f44de0cbf6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>PRA rules apply whenever a SFCR is disclosed, whether at the solo or, where relevant, at the group and sub group level. Information in relation to undertakings included in the SFCR (including undertakings established in the UK and those established in a third country) will therefore be within scope for external audit (except where the information in the group SFCR has been compiled in accordance with sectoral rules).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f56fbde336514468bbf7056820aa16d0"
+	 data-version="d6610d676d474e2ba1cb3aefa360a129"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Information in the group SFCR compiled in accordance with sectoral rules</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="3f34774dff924864b52b5f705b90432f"
+	 data-version="e33509a7b2444945b5bc8ac895b79933"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where information for the group SFCR is compiled in accordance with sectoral rules (as required under Solvency II), the group auditor should undertake an assessment of whether that information has been properly extracted in accordance with the relevant sectoral rules, from information provided to the insurer by other undertakings of the insurance group and from the insurer&rsquo;s own records. An external audit of sectoral information is not required.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="846cb3a9b6d74d7da3c0260d58752be5"
+	 data-version="55aed6646a344c70b102c5d57f8ef7b9"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Approvals, waivers and supervisory determinations</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="542a0ab2db344b07ade142103f10ef98"
+	 data-version="8c76b15e7f3a4559af4100a338aca539"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The auditor is not expected to express an opinion on the validity of an approval, waiver or other supervisory determination. Instead approvals, waivers and supervisory determinations&nbsp;provided by the competent authority should be considered as part of the framework against which the audit opinion is being given. For the purposes of transitional measures on technical provisions, Pillar 1 and 2 assets, liabilities and capital calculated in accordance with the previous regime, should be treated as part of the framework against which the audit opinion is being given.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="bf4ff27cb1a14061bbe5bb12cc238c98"
+	 data-version="74b918f84991421daf92e16314c01eca"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Other information in the SFCR public disclosure</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="694ff31234954d48b163df1804306ae6"
+	 data-version="209d3aa0ac3d4036a74090a41103e1b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/external-audit#1e4ddc8e324d4dc9a7eb0d8d5e7ae92f" data-rb-content-link="Rule">External Audit 4.1(3)</a> requires that the auditor read and consider all information disclosed by the firm in its SFCR that is not subject to the reasonable assurance opinion as a relevant element of the SFCR (other information) to identify material inconsistencies with the relevant elements of the SFCR and any knowledge obtained during the course of the audit of the SFCR engagement, and (where applicable) audit of the financial statements. When complying with this rule, the PRA expects the auditor to follow &lsquo;International Standard on Auditing (UK) 720 (Revised November 2019) The Auditors Responsibilities Relating to Other Information&rsquo;.<sup><a href="#footnote-5">5</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						International Standard on Auditing (UK) 720 (Revised November 2019) The Auditors Responsibilities Relating to Other Information, <a href="http://www.frc.org.uk/library/standards-codes-policy/audit-assurance-and-ethics/auditing-standards/isa-uk-720">www.frc.org.uk/library/standards-codes-policy/audit-assurance-and-ethics/auditing-standards/isa-uk-720</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/3-level-of-assurance-and-scope/31-12-2024?p=1" data-id="42ba196a573d47368030310ffb1a1dd8" data-effective-date="31-12-2024" data-download-title="Level of assurance and scope_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/3-level-of-assurance-and-scope/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body#42ba196a573d47368030310ffb1a1dd8&amp;subject=PRA Rulebook - SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement – Level of assurance and scope">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="b1d6a97dd4be48998cc3493e55dc7435"
+	 data-version="2dac6f56a30b4e7f90ad2d1077c76ef0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Audit guidance
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3479dd81598043fbadf06e0648fbc9c8"
+	 data-version="62de0c7a177b4afb88887a63a74b87a7"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>General</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="4f972db01b9b4393b7c9a0d83cfa4ba7"
+	 data-version="72f43559529d41e3bb18b63c80a5c653"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA notes that standards and guidance for auditors are issued by the Financial Reporting Council (FRC) which apply to non-statutory audit engagements of the type required by the PRA&rsquo;s rules. The PRA would normally expect auditors to comply with relevant standards in such engagements. The PRA therefore regards compliance with International Standards on Auditing (UK) (ISAs (UK)) as the primary means by which auditors will be able to demonstrate that they have complied with the <a href="/pra-rules/external-audit" data-rb-content-link="Part">External Audit Part</a>&nbsp;of the PRA Rulebook.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f9d40a7d4e864ee392b5ee86038d2550"
+	 data-version="dd963133bf234fa983cd182711873c00"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Auditing standards and guidance will be updated by the FRC from time to time. The PRA may update this supervisory statement accordingly as appropriate.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7887d209fd294201bcda503887e23291"
+	 data-version="b124a2f6b7e94ab0acbe75aefa1ef2c0"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Audit of the Matching Adjustment (MA)</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="f14efadfe2c34959ac4a38778df17e5e"
+	 data-version="069b9dfc7657403e9086ef87a5191400"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The scale of the matching adjustment (ie the extent to which the MA impacts on technical provisions) is within scope of audit where the PRA&rsquo;s external audit rules apply.<sup><a href="#footnote-6">6</a></sup> This reflects the fact that the impact of the MA falls within the &lsquo;relevant elements&rsquo; that external auditors of the SFCR are required to form a view on.<sup><a href="#footnote-7">7</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						The external audit requirement for ‘relevant Solvency and Financial Condition Reports’ are set out in the External Audit Part of the PRA Rulebook.
+					</span>
+				</li>
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						For example, the quantification of the impact of a change to zero of the MA on that undertaking’s financial position is specified as a relevant element of the SFCR (External Audit 2.2(1) and Rules 3.4(1)(a) and (b) in the Reporting Part of the PRA Rulebook. In addition, the MA has a direct effect on Life Technical Provisions which are within scope of the External Audit rule.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/30-06-2024#f14efadfe2c34959ac4a38778df17e5e">
+			Past
+			<span class="visually-hidden">
+				version of 4.2A before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="b7bb700d299e4960ba204b36fb53c894"
+	 data-version="cca128b15d6f4c968e89096b9d4134eb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2B
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>However, the interaction of the SFCR external audit rules and those relating to firms&rsquo; use of the matching adjustment (MA) may be complex. This reflects the nature of the MA, the role of the PRA in supervising its use, and the interaction of these with audit requirements.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ed70dca5b3d04f10ba250532be69c4c0"
+	 data-version="a15eed0195b7417fa84470a54346734f"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Framework for considering the MA requirements in the context of the External Audit&nbsp;Rules</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="d650960272ae4c72bd2bca6e7ca898d4"
+	 data-version="aedd61d3f5a644a8a9077546b085833f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2C
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the context of the <a href="/pra-rules/external-audit" data-rb-content-link="Part">External Audit Part</a>, the main requirements relating to the MA can usefully be separated between the related but distinct:</p>
+<ul>
+    <li>conditions of eligibility (as specified by regulation 4 of The Insurance and Reinsurance Undertakings (Prudential Requirements) Regulations 2023 (the entire regulations referred to henceforth as the &lsquo;IRPR regulations&rsquo;) and <a href="/pra-rules/matching-adjustment#de98d1d8c3f549e2a0fd0d7e7bab43d7" data-rb-content-link="Chapter">Chapter 2 of the Matching Adjustment Part</a>&nbsp;of the PRA Rulebook);</li>
+    <li>the calculation of the MA (specified by regulations 5 and 6 of the IRPR regulations, Chapters <a href="/pra-rules/matching-adjustment#369e55b881834f728d574faf164ce46d" data-rb-content-link="Chapter">4</a>, <a href="/pra-rules/matching-adjustment#fa88c265ee11426e82ada5ff0116e992" data-rb-content-link="Chapter">6</a>&nbsp;and <a href="/pra-rules/matching-adjustment#17cc1def700549b790babfefa7e23421" data-rb-content-link="Chapter">8 of the Matching Adjustment Part</a>&nbsp;as well as supporting technical information published by the PRA); and</li>
+    <li>the way that the MA is applied (specified by <a href="/pra-rules/matching-adjustment#63fbc69d3e24430a927feb831c3d87b5" data-rb-content-link="Rule">Matching Adjustment 2.1</a>, <a href="/pra-rules/matching-adjustment#36377d1decf845b791f1d87f32087086" data-rb-content-link="Rule">3.2</a>&nbsp;and Chapter <a href="/pra-rules/matching-adjustment#99b826d74db44f12b530c725159a77ba" data-rb-content-link="Chapter">13 of the Matching Adjustment Part</a>).<sup><a href="#footnote-8">8</a></sup></li>
+</ul>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						Technical information for Solvency II firms is published from time to time on the PRA’s website and is available at: <a href="http://www.bankofengland.co.uk/prudential-regulation/key-initiatives/solvency-ii/technical-information">www.bankofengland.co.uk/prudential-regulation/key-initiatives/solvency-ii/technical-information</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="58119313ba374211b584a5b3de0604b6"
+	 data-version="af0f91186e9a460987ed036d6d54a095"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2D
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA takes into account the firm&rsquo;s description of its process to calculate the MA during the MA application process. It does not approve the firm&rsquo;s calculation methodology as part of that process. The PRA supervises firms&rsquo; use of the MA and the scale of MA benefit claimed on an ongoing basis, in a way that is consistent with the PRA&rsquo;s published approach to insurance supervision. As part of supervisory work, the PRA may decide to review a firm&rsquo;s MA calculation in order to ensure that this is done to an appropriate standard and complies with relevant requirements. The PRA may apply closer scrutiny and, where appropriate, would consider use of its relevant supervisory powers under s55M FSMA where it has concerns about the compliance of a firm&rsquo;s MA calculation with the legislative requirements (eg regulations 5 and 6 of the IRPR regulations and Chapters <a href="/pra-rules/matching-adjustment#369e55b881834f728d574faf164ce46d" data-rb-content-link="Chapter">4</a>, <a href="/pra-rules/matching-adjustment#fa88c265ee11426e82ada5ff0116e992" data-rb-content-link="Chapter">6</a>&nbsp;and <a href="/pra-rules/matching-adjustment#17cc1def700549b790babfefa7e23421" data-rb-content-link="Chapter">8 of the Matching Adjustment Part</a>).<sup><a href="#footnote-9">9</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						Section 55M of the Financial Services and Markets Act 2000: (Imposition of requirements by the PRA).
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f9ddff9157664cbd9322849729783ff2"
+	 data-version="cc00332f6353497cba8c3f7d9ecbc076"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Auditor assessment of the MA</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="53c8b0e6b3414ef4ab108c5d5a9d7129"
+	 data-version="ad6cc83bda0e4b7193fd54f23d9599da"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2E
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In forming the opinion required by Rules <a href="/pra-rules/external-audit#3bf2f7342c654f1690a6daa816cf2c3e" data-rb-content-link="Rule">2.1</a>&nbsp;and <a href="/pra-rules/external-audit#1e4ddc8e324d4dc9a7eb0d8d5e7ae92f" data-rb-content-link="Rule">4.1 of the External Audit Part</a>&nbsp;of the PRA Rulebook, auditors are not required to assess whether a firm meets the eligibility conditions for use of the MA. As noted in paragraph <a href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body#542a0ab2db344b07ade142103f10ef98" data-rb-content-link="Paragraph">3.4</a>, auditors are not expected to express an opinion on the validity of an approval, waiver or other supervisory determination.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d8c6a69db38346b29f4a63844937623f"
+	 data-version="83b15838378241c8a1d64f3f81163553"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2F
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>However, to provide the audit opinion required in relation to the SFCR, to the extent it is material to their opinion, auditors are expected to consider the scale of the MA claimed by the firm. This reflects the fact that the impact of the MA on technical provisions falls within the relevant elements that are within the required scope of audit as set out by Rule <a href="/pra-rules/external-audit#4c88f0b110c34681b637333737978f85" data-rb-content-link="Rule">2.2 in the External Audit Part</a>&nbsp;of the PRA Rulebook. The MA calculation depends in part on the application of the MA calculation requirements (set out including in regulations 5 and 6 of the IRPR regulations and Chapters <a href="/pra-rules/matching-adjustment#369e55b881834f728d574faf164ce46d" data-rb-content-link="Chapter">4</a>, <a href="/pra-rules/matching-adjustment#fa88c265ee11426e82ada5ff0116e992" data-rb-content-link="Chapter">6</a>&nbsp;and <a href="/pra-rules/matching-adjustment#17cc1def700549b790babfefa7e23421" data-rb-content-link="Chapter">8 of the Matching Adjustment Part</a>). However, the scale of the MA could also be affected if the assets and liabilities used to calculate the MA were not within scope of an MA permission.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4f9c1c8fe78547b4ae30c02d4aa8511c"
+	 data-version="684ae5e226334287adae6e5a7d9126ba"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2FA
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Any additions made to the fundamental spread to ensure that it covers all risks retained, other than those arising from the uncertainty regarding the timing and amount of cash flows from assets with highly predictable cash flows, remain at the discretion of firms,&nbsp;and hence the PRA does not expect these to be covered by an external audit. The PRA also considers that neither the attestation report nor the underlying evidence are within the scope of an external audit, as the attestation is directed to the PRA.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a42a70a9e32844dbad85fef72784eb7b"
+	 data-version="2b3940d7cf044fc7b1f842d69821bc92"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2G
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA is not prescriptive about the audit work necessary to support the auditor's opinion on the SFCR, or the approach that it should take in forming its view. The PRA notes that the audit approach taken is likely to vary based on circumstances, materiality, risk and other factors.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="339c6ec156b3468db479ff8f44859e37"
+	 data-version="fd10df39b39745f8a60f36aefe417193"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>PRA review of the MA</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="bf7221d1cd424ddeaf10e1c53aca0b35"
+	 data-version="39bcd799fa45459e8ee7f137cc9bd827"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2H
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The MA calculation does not form part of the eligibility conditions under which the PRA would be obliged (if the conditions were met) to grant permission in accordance with regulation 4(2) of the IRPR regulations. As the calculation methodology is not part of the eligibility conditions, the PRA&rsquo;s permission does not cover the firm&rsquo;s calculation of the MA.<sup><a href="#footnote-10">10</a></sup> Therefore, auditors should not treat these factors as being part of the framework that they audit against. Instead, auditors are expected to form their own view on the calculation of the MA, as part of their work to give an opinion as to whether the relevant elements of the SFCR are prepared in all material respects in accordance with the IRPR regulations and PRA rules on which it is based.<sup><a href="#footnote-11">11</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						This includes the calculation methodologies, processes, and judgements that are used to determine the scale of the MA. Examples of methodologies, processes, and judgements relevant for calculating the MA include the approach used by a firm to estimate internal credit ratings and the mapping of these ratings to credit quality steps. Other relevant methodologies may include the firm's approach to aggregating data as well as other judgements and processes used to calculate the matching adjustment in line with Solvency II requirements
+					</span>
+				</li>
+				<li id="footnote-11" class="rb-footnote">
+					<span class="fn-col-1">
+						11.
+					</span>
+					<span class="fn-col-2">
+						For example, the PRA would expect that auditors form their own view about whether assets and liabilities are in scope of the MA permission that is provided. If assets or liabilities were included in the MA calculation that are not within the scope of the permission then the MA benefit would be miscalculated.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b58d802c53004796a75ab24176323327"
+	 data-version="8a99da84e9a84994b48eea23da639f1e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2I
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the PRA has carried out work to review the MA calculation (including the methodologies, processes, or judgements that contribute to the MA), an auditor of the SFCR would still be expected to incorporate its own views on this calculation into its audit opinion. Similarly, the PRA does not expect auditors to assume that an absence of PRA challenge (eg in relation to the MA calculated) overrides a need for auditors to form their own views in the SFCR audit opinion.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f2f7a671eb2f40118c6802b243dc863b"
+	 data-version="74ae1381f93841009aaab5d66dfda57b"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Expectations for auditor communication</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="81bf8f9899844e39a9d0309b63d5be53"
+	 data-version="98dca46d80da4a2bbb73d97adb0c649e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2J
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If through the course of their work, an auditor becomes aware that the firm may not be compliant with MA requirements (whether or not those requirements are within the scope of the auditor&rsquo;s opinion on the relevant elements of the SFCR), then the PRA would expect the auditor to inform the firm in the first instance.<sup><a href="#footnote-12">12</a></sup> Auditors may also choose to remind the firm&nbsp;of the requirement in <a href="/pra-rules/matching-adjustment#04fb43c7af4f4dd6b22a78b2a1ab9e40" data-rb-content-link="Rule">Matching Adjustment 13.4</a>&nbsp;to inform the PRA if it is not able to comply with the conditions specified and to take the necessary measures to restore compliance as soon as possible.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-12" class="rb-footnote">
+					<span class="fn-col-1">
+						12.
+					</span>
+					<span class="fn-col-2">
+						For the purposes of paragraph 4.2J, MA requirements refers to the eligibility conditions set out in regulation 4 of the IRPR regulations and Chapter 2 of the Matching Adjustment Part as well as the requirements stated in regulations 5 and 6 of the IRPR regulations and Chapters 3 to 8 and 13 of the Matching Adjustment Part. The term MA requirements for this purpose does not include PRA SSs or expectations introduced through correspondence between the firm and its supervisory team. However, these other aspects may be covered by the existing expectation (Legacy SS7/13) that ‘The overriding consideration should be to disclose information that in the judgement of the lead audit partner would assist the PRA in carrying out its functions’.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="de1576cfa81e4e2dbf67ce0e42bd046d"
+	 data-version="53aea7ebff1d4d4db257962e5d065ea4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2K
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a firm materially changes its approach to calculating the MA, then the PRA would usually expect this to be discussed by the firm with the supervisory team.<sup><a href="#footnote-13">13</a></sup> However, consistent with Legacy SS7/13, if the auditor is aware that the PRA has not been informed of such a change then the auditor would be expected to pass this information on to the PRA.<sup><a href="#footnote-14">14</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-13" class="rb-footnote">
+					<span class="fn-col-1">
+						13.
+					</span>
+					<span class="fn-col-2">
+						At a minimum this would include changes that would be expected to have a material impact on the calculation of the MA at the time of change or in the future. In the context of the SFCR, Article 3A of Chapter 3A in the Reporting Part of the PRA Rulebook states that information shall be considered as material if its omission or misstatement could influence the decision-making or the judgement of the users of that document, including the supervisory authorities.
+					</span>
+				</li>
+				<li id="footnote-14" class="rb-footnote">
+					<span class="fn-col-1">
+						14.
+					</span>
+					<span class="fn-col-2">
+						PRA Legacy Supervisory Statement 7/13: ‘The relationship between the external auditor and the supervisor: a code of practice’, April 2013: <a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2013/the-relationship-between-the-external-auditor-and-the-supervisor-a-code-of-practice-ss">www.bankofengland.co.uk/prudential-regulation/publication/2013/the-relationship-between-the-external-auditor-and-the-supervisor-a-code-of-practice-ss</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/30-06-2024#de1576cfa81e4e2dbf67ce0e42bd046d">
+			Past
+			<span class="visually-hidden">
+				version of 4.2K before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5d9d5f766f9241cebfcd541a0d934338"
+	 data-version="0a658e901c2f4ea5a1a9284534f7379e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2L
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The expectations for auditor communication in paragraphs <a href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body#81bf8f9899844e39a9d0309b63d5be53" data-rb-content-link="Paragraph">4.2J</a>&nbsp;and <a href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body#de1576cfa81e4e2dbf67ce0e42bd046d" data-rb-content-link="Paragraph">4.2K</a>&nbsp;above relate to information that auditors become aware of in the course of their work and are not intended to require additional audit procedures. These expectations are subject to other communication requirements that may be relevant, including the auditor&rsquo;s statutory duty to report and do not override or alter existing expectations or communications requirements. These paragraphs should therefore be read in conjunction with existing communication requirements and the expectations set out in Legacy SS7/13.<sup><a href="#footnote-15">15</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-15" class="rb-footnote">
+					<span class="fn-col-1">
+						15.
+					</span>
+					<span class="fn-col-2">
+						Existing communication requirements include the statutory duty to report stated in the Financial Services and Markets Act 2000 (Communications by Auditors) Regulations 2001. Communication requirements are also specified as part of auditing standards such as International Standard of Auditing (ISA) (UK) 250 Section B – Revised November 2019 – paras 12-15.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="dd0376f69b054d92b7f67231f0895c87"
+	 data-version="6964b697d1ef49749ce98577787d3bff"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Use of actuaries</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="0cc9683103254a6ba0243964ab05a5cc"
+	 data-version="2adeec9fb98f44aa8e00167b5f523f22"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>ISAs (UK) specify that the auditor shall determine whether, to obtain sufficient appropriate audit evidence, he or she should use the work of an auditor&rsquo;s expert, and should evaluate the expert&rsquo;s competence, capabilities and objectivity. As a minimum, for firms that write life insurance business, the PRA expects that auditors, in undertaking the external audit, will obtain and pay due regard to the work of a suitably qualified actuary who is independent of the firm.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/06/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/4-audit-guidance/31-12-2024?p=1" data-id="b1d6a97dd4be48998cc3493e55dc7435" data-effective-date="31-12-2024" data-download-title="Audit guidance_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/4-audit-guidance/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body#b1d6a97dd4be48998cc3493e55dc7435&amp;subject=PRA Rulebook - SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement – Audit guidance">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="e21d29890aa341e7a827813b70e890fb"
+	 data-version="db5f396aa371447398bf1a7130e310f0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix: Solvency II public disclosure – narrative sections and templates and associated PRA expectations
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="7ef9311d682c4068be4f75442c1bc14a"
+	 data-version="0e83691910f246e880351c788940b8cc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The table below lists the elements of the SFCR and highlights which are considered to be part of the &lsquo;relevant elements of the SFCR&rsquo; and which should be treated as &lsquo;other information&rsquo; in accordance with ISA (UK) 720 (Revised June 2016).</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <td><strong>PRA Rulebook reference</strong></td>
+            <td><strong>Subject matter</strong></td>
+            <td><strong>Assurance</strong></td>
+        </tr>
+        <tr>
+            <td class="light-dark-row"><a href="/pra-rules/reporting#9e1772125cd649efa6a275509d70bb3a" data-rb-content-link="Rule">Reporting 3.3A</a></td>
+            <td class="light-dark-row">Business and performance</td>
+            <td class="light-dark-row">Other information</td>
+        </tr>
+        <tr>
+            <td class="light-dark-row"><a href="/pra-rules/reporting#c8f13909107d40638e36ff1a9ec1bde3" data-rb-content-link="Rule">Reporting 3.3B</a></td>
+            <td class="light-dark-row">System of governance</td>
+            <td class="light-dark-row">Other information<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-dark-row"><a href="/pra-rules/reporting#ded46d59efb545a897e6f5ac5f704ead" data-rb-content-link="Rule">Reporting 3.3C</a></td>
+            <td class="light-dark-row">Risk profile</td>
+            <td class="light-dark-row">Other information<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row"><a href="/pra-rules/reporting#b288f95c1a5c4439bb65eb38c626ccb0" data-rb-content-link="Rule">Reporting 3.4A</a></td>
+            <td class="light-row">Valuation for solvency purposes<br>
+            </td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row"><a href="/pra-rules/reporting#3b4a17cd24c040dfa3b551464dc0bb74" data-rb-content-link="Rule">Reporting 3.5A</a>-<a href="/pra-rules/reporting#058ee1bceff1477599908648fcfd847c" data-rb-content-link="Rule">B</a>, <a href="/pra-rules/reporting#4320a41222b444faa409e52c22be4d17" data-rb-content-link="Rule">3.6B</a>, <a href="/pra-rules/reporting#4b3613cd2915427eae6609ecc537ecc5" data-rb-content-link="Rule">3.7A</a>-<a href="/pra-rules/reporting#8728f8f2b1984b318122f0c78d95bdfe" data-rb-content-link="Rule">C</a></td>
+            <td class="light-row">Capital management</td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row"><a href="/pra-rules/reporting#0ffb8a0bdd9a4e989ed1ab8a9cf1a044" data-rb-content-link="Rule">Reporting 3A.7A(1)</a></td>
+            <td class="light-row">Group solvency and financial condition report<br>
+            </td>
+            <td class="light-row">Relevant element*<br>
+            valuation and capital management sections<br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><strong>Templates</strong></td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.02.01.02<br>
+            </td>
+            <td class="light-row">Balance Sheet<br>
+            </td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-dark-row">IR.05.03.02<br>
+            </td>
+            <td class="light-dark-row">Revenue Account (Life)<br>
+            </td>
+            <td class="light-dark-row">Other information<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-dark-row">IR.05.04.02<br>
+            </td>
+            <td class="light-dark-row">Income and expenditure by line of business (Non-life)<br>
+            </td>
+            <td class="light-dark-row">Other information<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-dark-row">IR.05.02.01<br>
+            </td>
+            <td class="light-dark-row">Premiums, claims and expenses by country<br>
+            </td>
+            <td class="light-dark-row">Other information<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.12.01.02<br>
+            </td>
+            <td class="light-row">Life and Health SLT Technical Provisions<br>
+            </td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.17.01.02<br>
+            </td>
+            <td class="light-row">Non-Life Technical Provisions<br>
+            </td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-dark-row">IR.19.01.21<br>
+            </td>
+            <td class="light-dark-row">Non-life insurance claims<br>
+            </td>
+            <td class="light-dark-row">Other information<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.22.01.21<br>
+            </td>
+            <td class="light-row">Impact of long term guarantees and transitional measures<br>
+            </td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.22.01.22<br>
+            </td>
+            <td class="light-row">Impact of long term guarantees and transitional measures<br>
+            </td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.23.01.01<br>
+            </td>
+            <td class="light-row">Own funds</td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.23.01.04<br>
+            </td>
+            <td class="light-row">Own funds</td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.25.04.21<br>
+            </td>
+            <td class="light-row">Solvency Capital Requirement - for all undertakings<br>
+            </td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.25.04.22<br>
+            </td>
+            <td class="light-row">Solvency Capital Requirement &ndash; for groups - all undertakings<br>
+            </td>
+            <td class="light-row">Relevant element*<br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.28.01.01<br>
+            </td>
+            <td class="light-row">Minimum Capital Requirement - Only life or only non-life insurance or reinsurance activity<br>
+            </td>
+            <td class="light-row"><span style="background-color: rgb(231, 233, 236);">Relevant element*</span><br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.28.02.01<br>
+            </td>
+            <td class="light-row">Minimum Capital Requirement - Both life and non-life insurance activity<br>
+            </td>
+            <td class="light-row"><span style="background-color: rgb(231, 233, 236);">Relevant element*</span><br>
+            </td>
+        </tr>
+        <tr>
+            <td class="light-row">IR.32.01.22<br>
+            </td>
+            <td class="light-row">Undertakings in the scope of the group<br>
+            </td>
+            <td class="light-row"><span style="background-color: rgb(231, 233, 236);">Relevant element</span><br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">* SCR calculated using an internal model is out of scope<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2024
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/30-06-2024#7ef9311d682c4068be4f75442c1bc14a">
+			Past
+			<span class="visually-hidden">
+				version of Appendix: Solvency II public disclosure – narrative sections and templates and associated PRA expectations before 31/12/2024
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="31-12-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/appendix---solvency-ii-public-disclosure/31-12-2024?p=1" data-id="e21d29890aa341e7a827813b70e890fb" data-effective-date="31-12-2024" data-download-title="Appendix: Solvency II public disclosure – narrative sections and templates and associated PRA expectations_31-12-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body/appendix---solvency-ii-public-disclosure/31-12-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss11-16---solvency-ii-external-audit-of-the-governing-body#e21d29890aa341e7a827813b70e890fb&amp;subject=PRA Rulebook - SS11/16 – Solvency II: External audit of, and responsibilities of the governing body in relation to, the public disclosure requirement – Appendix: Solvency II public disclosure – narrative sections and templates and associated PRA expectations">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

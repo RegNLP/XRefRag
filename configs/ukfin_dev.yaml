@@ -1,0 +1,73 @@
+run_id: ukfin_dev
+
+paths:
+  raw_dir: data/ukfin/raw
+  registry_dir: runs/adapter_ukfin/registry
+  processed_dir: data/ukfin/processed
+  input_dir: data/ukfin/processed
+  work_dir: runs/generate_ukfin/work
+  output_dir: runs/generate_ukfin/out
+  curate_output_dir: runs/curate_ukfin/out
+
+adapter:
+  corpus: ukfin
+  sources: [pra_rulebook]
+  passage_level: paragraph
+  max_docs: 0
+  subset_docs: null
+  subset_strategy: sorted_first_n
+  seed: 42
+  stages: [download, corpus, crossref, clean, stats]
+  passage_unit_policy: canonical
+  manifest_path: null
+  clean_top_k: 0
+  pra:
+    base_url: "https://www.prarulebook.co.uk/"
+    allowlist_urls_path: "data/ukfin/allowlists/pra_urls.txt"
+    discovery_index_paths: ["/pra-rules", "/guidance"]
+    user_agent: "Mozilla/5.0 (compatible; XRefRag/1.0)"
+    sleep_seconds: 0.3
+
+generation:
+  methods: [dpel, schema]
+  personas: [basic, professional]
+  max_edges: 0
+  qas_per_edge: 1
+  llm_backend: azure
+  temperature: 0.0
+
+judge:
+  enabled: true
+  llm_backend: azure
+  num_judge_passes: 1
+  temperature: 0.0
+  rate_limit_delay: 0.1
+  score_threshold: 7.0
+  borderline_band: [6.5, 7.5]
+  adaptive_repeats: 2
+
+curation:
+  ir_agreement:
+    top_k: 20
+    keep_threshold: 4
+    judge_threshold: 3
+    drop_threshold: 2
+    retrievers: [bm25, ft_e5, rrf_bm25_e5, ce_rerank_union200]
+    ir_method: majority_voting
+    rrf_k: 60
+    agreement_threshold: 0.8
+  judge:
+    enabled: true
+    llm_backend: azure
+    num_judge_passes: 1
+    temperature: 0.0
+    rate_limit_delay: 0.1
+
+evaluation:
+  ks: [10, 20]
+  citation_diagnostics: true
+
+reporting:
+  intrinsic: true
+  human_audit_sample: 80
+  render_html: true

@@ -1,0 +1,2252 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{1464D395-6BB4-4D5F-B8E2-BF7554AF1653} -->
+<title>SS36/15 – Solvency II: life insurance product reporting codes | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS36/15 – Solvency II: life insurance product reporting codes">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS36/15 – Solvency II: life insurance product reporting codes">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwoh2q-f-a49181531-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":108,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2561b9e8","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51239,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370101","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==8Bk2mlW2x5ymmGGCzW1SldmRc+CO4Frhe/7dzahLpTTeDMbXMEFNkj4Pqlvv2SrBpFkmdVeD1rMr2NBy49jSkAufodOkP9BbOsUqK2g6jlrDuAHNTgC2YBfrLOnEfeOjoQ0dzAQ+HcprZ8XLRXfi+zwrfEsg/wc9XTZoxm4w/4YihEovDh/I1kwkKcDYtmD0XqSqf7EyNN1tnyeDECJRUV9CEr7lf6hUd8xFODkzsGGhT5tm4wQ5f5JBItJk0DTjRvLWd3PufAi4pGAXNw/mOv8vYeOM3+kDwRSXbmXa299BFtITTweq0SrKeBgwASgOzXxem5yCbQLq1Cp3mgq8kRsNCFWxd+yyAYOo34IrdlR0Szez6ZZdkn3qSofCIyf8RToR9+AXDpvrBBI/LL8wJVRvfw8V9RQO4I6vBX9YmCA=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS36/15 – Solvency II: life insurance product reporting codes				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS36/15 – Solvency II: life insurance product reporting codes
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/solvency2-life-insurance-product-reporting-codes-ss" rel="noopener noreferrer" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3">The Supervisory Statement (SS) shown on this page is effective from 30/03/2018. Past versions of this SS can be found here.</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/30-03-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						30/03/2018
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-061b3542-758c-44ea-ba4a-109215b81ff3">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-061b3542-758c-44ea-ba4a-109215b81ff3"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS36/15 – Solvency II: life insurance product reporting codes
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS36/15 – Solvency II: life insurance product reporting codes)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/reporting/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Reporting
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/responses-to-cp-18-17-chapters-2-to-6-9-and-10" class="list-links__link" target="_blank">
+										PS6/18 - &quot;Responses to CP18/17 Occasional Consultation Paper – Chapters 2 to 6, 9 and 10&quot;
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/30-03-2018_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="30-03-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/30-03-2018?p=1" data-id="57a7c965e1e34e9ea8f8f5545b0fc999" data-effective-date="30-03-2018" data-download-title="SS36/15 – Solvency II: life insurance product reporting codes_30-03-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/30-03-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes&amp;subject=PRA Rulebook - SS36/15 – Solvency II: life insurance product reporting codes">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="2a9dfd8e396f48ca8e45b2adb7f176f4"
+	 data-version="a096666b244645cab0f8e8d2eb002c6f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="178f502d2ea149f6a6523c35cfc31137"
+	 data-version="787516d2e82245a9962db6eb6773d793"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement is addressed to all UK insurance firms within the scope of Solvency II, and to the Society of Lloyd&rsquo;s, that carry out life insurance business or have annuities stemming from non-life insurance business. Amendments to this statement since its publication in August 2015 are set out in the Annex.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a53c5cffd44c4a868760c3b8431d8279"
+	 data-version="4ec354233dac412690c73121179368cc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The Solvency II supervisory reporting Implementing Technical Standards expects firms to use a defined list of product codes where attributed by the supervisory authority in the instructions to the template S.14.01.01 Life Obligations Analysis (S.14.01).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="30-03-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/1---introduction/30-03-2018?p=1" data-id="2a9dfd8e396f48ca8e45b2adb7f176f4" data-effective-date="30-03-2018" data-download-title="Introduction_30-03-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/1---introduction/30-03-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes#2a9dfd8e396f48ca8e45b2adb7f176f4&amp;subject=PRA Rulebook - SS36/15 – Solvency II: life insurance product reporting codes – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="2629d0ebae65419f9b5b323e95973db6"
+	 data-version="a98e2d6c86714ed3b6bffbdec1b8e533"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Codes for firms that carry out life insurance business or have annuities stemming from non-life insurance business
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="58be4a0431684916912cc7cc40dfa643"
+	 data-version="a32772c8403c49ce9ea9228eec54baff"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement sets out how the Prudential Regulation Authority (PRA) expects firms to submit information in annual reporting QRT S.14.01 using life product reporting codes. The <a href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes#7f527e4a0a9a428ca5f43db941cf9443" data-rb-content-link="Chapter">Appendix</a>&nbsp;lists the codes which the PRA expects firms to use.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f78f7bd80a9e4c308bf98f324d512307"
+	 data-version="b8992acaae55440b9fdb06012254a43e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In these product codes the third digit of the code is used to distinguish varieties of the same product. This separates conventional and unitised with-profit, unit-linked and index-linked as well as retaining data for industrial branch business.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2f8aa4cc574f45d39f824be9a5c15134"
+	 data-version="4d7d080abab241f8840d3b22411b8bb4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Miscellaneous codes have only been assigned for protection business where there are minor products that do not fit into the named codes. A firm may use code <a href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes#973f155c9ae840a0a4f45df9469053f6" data-rb-content-link="Paragraph">624</a>&nbsp;(miscellaneous protection non-profit) for any non-profit protection business if the amount of that business is not material. For the other main categories the product codes are intended to be sufficiently generic to cover all the products within that main category.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="30-03-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/2---codes-for-firms/30-03-2018?p=1" data-id="2629d0ebae65419f9b5b323e95973db6" data-effective-date="30-03-2018" data-download-title="Codes for firms that carry out life insurance business or have annuities stemming from non-life insurance business_30-03-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/2---codes-for-firms/30-03-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes#2629d0ebae65419f9b5b323e95973db6&amp;subject=PRA Rulebook - SS36/15 – Solvency II: life insurance product reporting codes – Codes for firms that carry out life insurance business or have annuities stemming from non-life insurance business">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="e2d205e17f3c4528b92d32738487035e"
+	 data-version="362ee0b0f61146598bd9f32e8840f9c9"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					The PRA’s expectations relating to instructions for templates S.14.01
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8001067b29a04a1690a8100677251e57"
+	 data-version="e0fdbc3bb34041ce849bdedfa3e4f1e9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>To achieve consistency of reporting between firms the PRA sets out in this section how it expects firms to interpret the instructions to the template S.14.01.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="124cf757f03a4f019523818f526a587e"
+	 data-version="d08be70e6fa647ffa205fa41054b8239"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where firms show the number of contracts in C0040 and C0050 the PRA expects firms to count multiple policies issued as part of the same premium, identifiable increments and rider benefits as being a single contract. Where firms report unbundled products across multiple rows and using different Product ID codes the Implementing Technical Standards (ITS) instructions for C0040 and C0050 are directly applicable.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f5cafdf86bc8451283cf7af9510ffdff"
+	 data-version="ac2050b4fa674003b0c962b537ebc48b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e744ec05068f49e7a2a59d695eb2fd31"
+	 data-version="c85bdc212af946d1b8b530feac04904e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For products which are reported with a &lsquo;collective&rsquo; classification in C0100 the number of contracts to be reported in C0040 and C0050 is the number of members of the scheme where this is known to the firm.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2887af7ce015431fb8a82734de6630b0"
+	 data-version="d8c4f5e0c37143fb838d5774c1d40e08"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a product has been written in both single life and joint life form the product classification in C0100 is &lsquo;5 &ndash; other&rsquo;.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="858541ee0eb14ff2a44d01d96e157dc3"
+	 data-version="210e05ee954c4c3e944610fe7c98096e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where at least one version of a product is available to new policyholders it should be shown in C0130 as &lsquo;1&rsquo;. C0130 is &lsquo;2&rsquo; for run-off which includes products only available as new business due to options. The PRA does not expect firms to report at a lower level of&nbsp;granularity than the product codes. This will avoid the need for firms to seek historic information on product brand names.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="446b10b9ac0a41858cff0a5f35ceff12"
+	 data-version="ed2aedf2e0cc424095af9fdf3d024f75"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where premiums cease for a regular premium product the contract C0140 should continue to be reported as &lsquo;1 &ndash; Regular premiums&rsquo;. Where a product allows a flexible combination of regular and single premiums C0140 should be reported as &lsquo;4 - Other&rsquo;.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b0161c1a2198436ba83923a87c85eedc"
+	 data-version="8d002a8c50bb4bc1a7c84af68f0c0eb0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the first three characters of the homogeneous risk group in C0170 and C0230 will be one of the three digit codes in the <a href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes#7f527e4a0a9a428ca5f43db941cf9443" data-rb-content-link="Chapter">Appendix</a>. The PRA expects that the fourth character of the homogeneous risk group will be D for direct business or R for reinsurance accepted. Homogeneous risk groups should only cover a single product code as indicated by the first three characters in C0170 and C0230.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="65e13c77500b43318e1443e83b994a4a"
+	 data-version="89993859789b474ea081046b6bb3466b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should use an approximation to apportion between product codes where parts of the technical provisions are calculated for a combination of products (eg with-profits guarantee costs) or if there is uncertainty as to which product code applies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6b746cf213b046a6a523c2c72a0f1ee1"
+	 data-version="83ca7e9ae8484f4e9a9859eba203bffe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA does not expect that the guidance in this SS on the reporting of homogeneous risk groups would impact the calculation of the Transitional Measures on Technical Provisions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="30-03-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/3---the-pras-expectations/30-03-2018?p=1" data-id="e2d205e17f3c4528b92d32738487035e" data-effective-date="30-03-2018" data-download-title="The PRA’s expectations relating to instructions for templates S.14.01_30-03-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/3---the-pras-expectations/30-03-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes#e2d205e17f3c4528b92d32738487035e&amp;subject=PRA Rulebook - SS36/15 – Solvency II: life insurance product reporting codes – The PRA’s expectations relating to instructions for templates S.14.01">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="7f527e4a0a9a428ca5f43db941cf9443"
+	 data-version="270259474afc48a0aa76429007dca893"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8e2419453c624dcdad2c2c8d218ef155"
+	 data-version="ae382861efad4dd8b6531ab8629c582f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>List of life insurance product reporting codes</h4>
+<p>This appendix sets out how the PRA expects firms to derive the data item &lsquo;product ID code&rsquo; C0010 in template S.14.01 as a 3 character string.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="973f155c9ae840a0a4f45df9469053f6"
+	 data-version="b4d8b3ac181f40289fa9142d8671eb96"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<table class="content-table" style="width: 691.833px; height: 295.833px;">
+    <tbody>
+        <tr>
+            <td><strong>PRA Solvency II product codes</strong></td>
+            <td><strong>Description</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Savings and investments</strong></td>
+            <td><br>
+            </td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td><span style="background-color: rgb(255, 255, 255);">Whole of life OB CWP</span></td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Whole of life OB UWP</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Whole of life OB UL<br>
+            </td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>Whole of life OB NP<br>
+            </td>
+        </tr>
+        <tr>
+            <td>105&nbsp;</td>
+            <td>Whole of life IB CWP</td>
+        </tr>
+        <tr>
+            <td>106&nbsp;<br>
+            </td>
+            <td>Whole of life IB NP</td>
+        </tr>
+        <tr>
+            <td>111&nbsp;<br>
+            </td>
+            <td>Single premium bond UWP</td>
+        </tr>
+        <tr>
+            <td>112&nbsp;<br>
+            </td>
+            <td>Single premium bond UL</td>
+        </tr>
+        <tr>
+            <td>113&nbsp;<br>
+            </td>
+            <td>Single premium bond IL&nbsp;</td>
+        </tr>
+        <tr>
+            <td>114&nbsp;<br>
+            </td>
+            <td>Single premium bond NP</td>
+        </tr>
+        <tr>
+            <td>120&nbsp;<br>
+            </td>
+            <td>Endowment OB CWP</td>
+        </tr>
+        <tr>
+            <td>121&nbsp;<br>
+            </td>
+            <td>Endowment OB UWP</td>
+        </tr>
+        <tr>
+            <td>122&nbsp;<br>
+            </td>
+            <td>Endowment OB UL</td>
+        </tr>
+        <tr>
+            <td>124&nbsp;<br>
+            </td>
+            <td>Endowment OB NP</td>
+        </tr>
+        <tr>
+            <td>125&nbsp;<br>
+            </td>
+            <td>Endowment IB CWP</td>
+        </tr>
+        <tr>
+            <td>126&nbsp;<br>
+            </td>
+            <td>Endowment IB NP</td>
+        </tr>
+        <tr>
+            <td>131&nbsp;<br>
+            </td>
+            <td>Investment only reinsurance UWP</td>
+        </tr>
+        <tr>
+            <td>132&nbsp;<br>
+            </td>
+            <td>Investment only reinsurance UL</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>Individual pensions</strong><br>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>Individual defined contribution pensions CWP</td>
+        </tr>
+        <tr>
+            <td>201&nbsp;<br>
+            </td>
+            <td>Individual defined contribution pensions UWP</td>
+        </tr>
+        <tr>
+            <td>202&nbsp;<br>
+            </td>
+            <td>Individual defined contribution pensions UL&nbsp;</td>
+        </tr>
+        <tr>
+            <td>204&nbsp;<br>
+            </td>
+            <td>Individual defined contribution pensions NP</td>
+        </tr>
+        <tr>
+            <td>210&nbsp;<br>
+            </td>
+            <td>Workplace defined contribution pensions CWP</td>
+        </tr>
+        <tr>
+            <td>211&nbsp;<br>
+            </td>
+            <td>Workplace defined contribution pensions UWP</td>
+        </tr>
+        <tr>
+            <td>212&nbsp;<br>
+            </td>
+            <td>Workplace defined contribution pensions UL</td>
+        </tr>
+        <tr>
+            <td>214&nbsp;<br>
+            </td>
+            <td>Workplace defined contribution pensions NP</td>
+        </tr>
+        <tr>
+            <td>221&nbsp;<br>
+            </td>
+            <td>Income drawdown UWP</td>
+        </tr>
+        <tr>
+            <td>222&nbsp;<br>
+            </td>
+            <td>Income drawdown UL</td>
+        </tr>
+        <tr>
+            <td>224&nbsp;<br>
+            </td>
+            <td>Income drawdown NP</td>
+        </tr>
+        <tr>
+            <td>231&nbsp;<br>
+            </td>
+            <td>Individual pensions investment only reinsurance UWP</td>
+        </tr>
+        <tr>
+            <td>232<br>
+            </td>
+            <td>Individual pensions investment only reinsurance UL</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>Corporate pensions</strong><br>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>300&nbsp;<br>
+            </td>
+            <td>Corporate defined benefit pensions CWP</td>
+        </tr>
+        <tr>
+            <td>301&nbsp;<br>
+            </td>
+            <td>Corporate defined benefit pensions UWP</td>
+        </tr>
+        <tr>
+            <td>302&nbsp;<br>
+            </td>
+            <td>Corporate defined benefit pensions UL</td>
+        </tr>
+        <tr>
+            <td>304&nbsp;<br>
+            </td>
+            <td>Corporate defined benefit pensions NP</td>
+        </tr>
+        <tr>
+            <td>310&nbsp;<br>
+            </td>
+            <td>Corporate defined contribution pensions WP</td>
+        </tr>
+        <tr>
+            <td>311&nbsp;<br>
+            </td>
+            <td>Corporate defined contribution pensions UWP</td>
+        </tr>
+        <tr>
+            <td>312&nbsp;<br>
+            </td>
+            <td>Corporate defined contribution pensions UL</td>
+        </tr>
+        <tr>
+            <td>314&nbsp;<br>
+            </td>
+            <td>Corporate defined contribution pensions NP</td>
+        </tr>
+        <tr>
+            <td>321&nbsp;<br>
+            </td>
+            <td>Corporate pensions investment only reinsurance UWP</td>
+        </tr>
+        <tr>
+            <td>322&nbsp;<br>
+            </td>
+            <td>Corporate pensions investment only reinsurance UL&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>Protection</strong><br>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>404<br>
+            </td>
+            <td>Level term regular premium</td>
+        </tr>
+        <tr>
+            <td>414&nbsp;<br>
+            </td>
+            <td>Level term single premium</td>
+        </tr>
+        <tr>
+            <td>424&nbsp;<br>
+            </td>
+            <td>Decreasing term regular premium&nbsp;</td>
+        </tr>
+        <tr>
+            <td>434&nbsp;<br>
+            </td>
+            <td>Decreasing term single premium</td>
+        </tr>
+        <tr>
+            <td>444&nbsp;<br>
+            </td>
+            <td>Accelerated critical illness (guaranteed premiums)</td>
+        </tr>
+        <tr>
+            <td>454&nbsp;<br>
+            </td>
+            <td>Accelerated critical illness (reviewable premiums)</td>
+        </tr>
+        <tr>
+            <td>464&nbsp;<br>
+            </td>
+            <td>Stand-alone critical illness (guaranteed premiums)</td>
+        </tr>
+        <tr>
+            <td>474&nbsp;<br>
+            </td>
+            <td>Stand-alone critical illness (reviewable premiums)</td>
+        </tr>
+        <tr>
+            <td>480&nbsp;<br>
+            </td>
+            <td>Income protection CWP</td>
+        </tr>
+        <tr>
+            <td>481&nbsp;<br>
+            </td>
+            <td>Income protection Holloway accounts UWP</td>
+        </tr>
+        <tr>
+            <td>494&nbsp;<br>
+            </td>
+            <td>Income protection (guaranteed premiums)</td>
+        </tr>
+        <tr>
+            <td>504<br>
+            </td>
+            <td>Income protection (reviewable premiums)</td>
+        </tr>
+        <tr>
+            <td>514&nbsp;<br>
+            </td>
+            <td>Income protection single premium</td>
+        </tr>
+        <tr>
+            <td>524&nbsp;<br>
+            </td>
+            <td>Income protection claims in payment</td>
+        </tr>
+        <tr>
+            <td>534&nbsp;<br>
+            </td>
+            <td>Group life</td>
+        </tr>
+        <tr>
+            <td>544&nbsp;<br>
+            </td>
+            <td>Group death in service dependants' annuities</td>
+        </tr>
+        <tr>
+            <td>554&nbsp;<br>
+            </td>
+            <td>Collective life</td>
+        </tr>
+        <tr>
+            <td>564&nbsp;<br>
+            </td>
+            <td>Group income protection</td>
+        </tr>
+        <tr>
+            <td>574&nbsp;<br>
+            </td>
+            <td>Group income protection claims in payment</td>
+        </tr>
+        <tr>
+            <td>584&nbsp;<br>
+            </td>
+            <td>Group critical illness</td>
+        </tr>
+        <tr>
+            <td>594&nbsp;<br>
+            </td>
+            <td>Risk premium mortality reinsurance</td>
+        </tr>
+        <tr>
+            <td>604&nbsp;<br>
+            </td>
+            <td>Risk premium critical illness reinsurance&nbsp;</td>
+        </tr>
+        <tr>
+            <td>614&nbsp;<br>
+            </td>
+            <td>Risk premium income protection reinsurance</td>
+        </tr>
+        <tr>
+            <td>620&nbsp;<br>
+            </td>
+            <td>Miscellaneous protection CWP&nbsp;</td>
+        </tr>
+        <tr>
+            <td>621&nbsp;<br>
+            </td>
+            <td>Miscellaneous protection UWP</td>
+        </tr>
+        <tr>
+            <td>622&nbsp;<br>
+            </td>
+            <td>Miscellaneous protection UL</td>
+        </tr>
+        <tr>
+            <td>624&nbsp;<br>
+            </td>
+            <td>Miscellaneous protection NP</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><strong>Annuities</strong></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>700&nbsp;<br>
+            </td>
+            <td>Purchased life annuity WP</td>
+        </tr>
+        <tr>
+            <td>704<br>
+            </td>
+            <td>Purchased life annuity NP</td>
+        </tr>
+        <tr>
+            <td>710&nbsp;<br>
+            </td>
+            <td>Individual deferred annuity WP</td>
+        </tr>
+        <tr>
+            <td>714&nbsp;<br>
+            </td>
+            <td>Individual deferred annuity NP</td>
+        </tr>
+        <tr>
+            <td>720&nbsp;<br>
+            </td>
+            <td>Individual pension annuity WP</td>
+        </tr>
+        <tr>
+            <td>722&nbsp;<br>
+            </td>
+            <td>Individual pension annuity UL</td>
+        </tr>
+        <tr>
+            <td>724&nbsp;<br>
+            </td>
+            <td>Individual pension annuity NP</td>
+        </tr>
+        <tr>
+            <td>734&nbsp;<br>
+            </td>
+            <td>Individual enhanced pension annuity NP</td>
+        </tr>
+        <tr>
+            <td>740&nbsp;<br>
+            </td>
+            <td>Bulk purchase deferred annuity WP</td>
+        </tr>
+        <tr>
+            <td>744&nbsp;<br>
+            </td>
+            <td>Bulk purchase deferred annuity NP</td>
+        </tr>
+        <tr>
+            <td>754&nbsp;<br>
+            </td>
+            <td>Bulk purchase pension annuity NP</td>
+        </tr>
+        <tr>
+            <td>764&nbsp;<br>
+            </td>
+            <td>Purchased temporary annuity NP</td>
+        </tr>
+        <tr>
+            <td>774&nbsp;<br>
+            </td>
+            <td>Pension temporary annuity NP&nbsp;</td>
+        </tr>
+        <tr>
+            <td>784&nbsp;<br>
+            </td>
+            <td>Annuity stemming from non-life</td>
+        </tr>
+        <tr>
+            <td>794&nbsp;&nbsp;<br>
+            </td>
+            <td>Longevity swap accepted</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="58e837ce395d44dabb7d73c887b71f41"
+	 data-version="1a68dc054130419cb767b699abefb6df"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Notes on product categories</strong> </p>
+<p><strong>Whole life and endowment</strong> &ndash; regular premium business only &ndash; includes policies made &lsquo;paid-up&rsquo; &ndash; excludes single premium bonds which are technically whole of life. </p>
+<p><strong>Single premium bond</strong> &ndash; includes &lsquo;investment bond&rsquo; and &lsquo;with-profits bond&rsquo;. </p>
+<p><strong>Individual defined contribution pensions</strong> &ndash; pensions savings before retirement, excludes deferred annuity buyouts, but contract may be written as deferred annuity with-profits, endowment with-profits, UWP or UL. Individual means there is no employer involvement. </p>
+<p><strong>Workplace defined contribution pensions</strong> &ndash; covers &lsquo;group pensions&rsquo; where the group is the employer and the insurer has a separate record for each employee covered, which may include employer contributions. The firm calculates liabilities at member level. </p>
+<p><strong>Corporate pensions</strong> &ndash; covers trust based pension arrangements where the insurer does not hold separate records for individual employees. The insurer normally just provides investment services, and the records of benefits are maintained by the trustees or another party. The firm calculates liabilities at scheme level. </p>
+<p><strong>Miscellaneous protection</strong> &ndash; these categories are for types of protection which do not fit within the named protection categories, e.g. long term care. </p>
+<p><strong>Bulk purchase annuity</strong> &ndash; this is for annuity liabilities arising from occupational pension schemes including where members hold individual policies after winding up of the scheme.</p>
+<p> All reinsurance refers to reinsurance accepted. Reinsurance ceded is not reported in S.14.01.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="faaefe2cc60844bb8bccfa53eb4d0ae5"
+	 data-version="57ac032f7ca14cd48072728e1b07c970"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><strong>Abbreviations</strong></p>
+<table class="content-table" style="width: 739.333px; height: 192.5px;">
+    <tbody>
+        <tr>
+            <td><strong>OB</strong></td>
+            <td><strong>Ordinary branch</strong>: in the past this term was required to distinguish OB and IB policies.</td>
+        </tr>
+        <tr>
+            <td><strong>IB</strong></td>
+            <td><strong>Industrial branch</strong>: business sold in the past where premiums were collected door to door. The policies are now either paid up or premiums are collected by direct debit.</td>
+        </tr>
+        <tr>
+            <td><strong>WP</strong></td>
+            <td><strong>With-profits</strong>:&nbsp;a contract of long-term insurance which provides benefits through eligibility to participate in discretionary distributions based on profits arising from the firm's business or from a particular part of the firm&rsquo;s business</td>
+        </tr>
+        <tr>
+            <td><strong>CWP&nbsp;&nbsp;</strong></td>
+            <td><strong>Conventional with-profits</strong>: the traditional style of with-profits, where the policy specifies the regular premium payable and the initial guaranteed benefit, to which reversionary (annual bonuses) are added.</td>
+        </tr>
+        <tr>
+            <td><strong>UWP&nbsp;&nbsp;</strong></td>
+            <td><strong>Unitised with-profits (includes accumulating with-profits)</strong>: the newer style of with-profits, where each premium is invested in units or to an account at the face value of the amount invested. This amount grows with &lsquo;bonus&rsquo; and any further premiums.<br>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>UL&nbsp; &nbsp;&nbsp;</strong></td>
+            <td><strong>Unit-linked</strong>: the same as the legal term &lsquo;property linked&rsquo; in the PRA annual returns.</td>
+        </tr>
+        <tr>
+            <td><strong>IL</strong></td>
+            <td><strong>Index-linked</strong>: includes policies linked to a stock market index or the value of specific securities. It excludes RPI / CPI linked policies.</td>
+        </tr>
+        <tr>
+            <td><strong>NP</strong></td>
+            <td><strong>Non-profit</strong>: all policies covered by the &lsquo;Other&rsquo; Solvency II line of business and including life health business.</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="30-03-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/appendix/30-03-2018?p=1" data-id="7f527e4a0a9a428ca5f43db941cf9443" data-effective-date="30-03-2018" data-download-title="Appendix_30-03-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes/appendix/30-03-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss36-15---solvency-ii-life-insurance-product-reporting-codes#7f527e4a0a9a428ca5f43db941cf9443&amp;subject=PRA Rulebook - SS36/15 – Solvency II: life insurance product reporting codes – Appendix">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

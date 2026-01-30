@@ -1,0 +1,2729 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{EE5CF6DB-7D6A-463A-AA1B-0DA393962441} -->
+<title>Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwojla-f-adc48746c-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":43,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"25629365","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":45754,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370198","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==fWqIREv3BVYMMFt3gEo3nyACeYuSN04lOnRG7udQh6FLYGsUMYA35GvKY+uCBEK2/z233nlbeuQ1UDxjJWJywtay9wbMrbRrYuQRL0ZUr9pa+tGydp07t/r2DGP70J8xBm5NnGVN7lbhbZgaIYFJUdat7smVbzYyT9hYp14MGh+RxfCG3fs0zkjxe0Z2ZFAxI2UZMI93hw8RnAUfj0DAZm3dUNj564rHoOtMURiZJQgM34QDmvS5bs3iVHCwxuK1ZL+Bc5g5pMiBTI+BS+E2KQtZIzMalAFY+SGoWIhWOXtiqLFFGyS2KGU2abUKlUoXyf0PCy4XLY0AldiiSzullpwjTARwWw11b1LGWDfa7/hQTfgZdYnhDznSlH+jbGdWeZJQJR4aB65kAvHQd5HlswVWN6E+avROysIqeAIypgs=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						07/03/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/12-10-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						12/10/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/12-09-2017">
+						<span class="visually-hidden">View Rulebook as at</span>
+						12/09/2017
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/23-02-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						23/02/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/22-05-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						22/05/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/01-10-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/10/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/10-12-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						10/12/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/09-12-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						09/12/2019
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/25-10-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						25/10/2020
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/02-06-2021">
+						<span class="visually-hidden">View Rulebook as at</span>
+						02/06/2021
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/11-05-2023">
+						<span class="visually-hidden">View Rulebook as at</span>
+						11/05/2023
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/21-12-2023">
+						<span class="visually-hidden">View Rulebook as at</span>
+						21/12/2023
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-91c43633-7b97-4b84-af59-4a7d511d8a84">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-91c43633-7b97-4b84-af59-4a7d511d8a84"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=418be0a50b814a0b9720ee583a54f7b7">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss35-15---strengthening-individual-accountability-in-insurance/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS35/15 – Strengthening individual accountability in insurance
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/prudential-regime-and-implementation-of-the-senior-insurance-managers-regime-for-non-solvency-2" class="list-links__link" target="_blank">
+										PS26/15 - &quot;The prudential regime, and implementation of the Senior Insurance Managers Regime, for non-Solvency II firms&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/amendments-to-various-forms" class="list-links__link" target="_blank">
+										PS30/15 - Amendments to Various Forms
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/strengthening-accountability-in-banking-and-insurance-implementation-of-sm-cr-and-simr" class="list-links__link" target="_blank">
+										PS5/16 - Strengthening accountability in banking and insurance: Implementation of SM&amp;CR and SIMR; and PRA requirements on regulatory references
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/pra-rulebook-administration-instrument-no-1-2016" class="list-links__link" target="_blank">
+										 - PRA Rulebook: Administration Instrument (No. 1) 2016
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/strengthening-accountability-in-banking-and-insurance-amendments-and-optimisations" class="list-links__link" target="_blank">
+										PS12/17 - Strengthening individual accountability in banking and insurance: amendments and optimisations
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/responses-to-cp-18-17-chapters-7-and-8" class="list-links__link" target="_blank">
+										PS31/17 - Responses to CP18/17 Occasional Consultation Paper – Chapters 7 and 8 (December 2017)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2017/responses-to-cp-18-17-chapters-7-and-8" class="list-links__link" target="_blank">
+										PS31/17 - Responses to CP18/17 Occasional Consultation Paper – Chapters 7 and 8 (May 2018)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-individual-accountability-in-insurance-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS15/18 - Strengthening individual accountability in insurance: Extension of the Senior Managers and Certification Regime to insurers
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-accountability-implementing-smcr-insurers-part-2" class="list-links__link" target="_blank">
+										PS27/18 - Strengthening accountability: Implementing the extension of the SM&amp;CR to insurers (Part 2)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2019/strengthening-individual-accountability-resolution-assessments-and-reporting-amendments" class="list-links__link" target="_blank">
+										PS20/19 - Strengthening individual accountability: Resolution assessments and reporting amendments
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/occasional-consultation-paper-march-2020" class="list-links__link" target="_blank">
+										PS20/20 - Responses to Chapters 2 to 7 of CP3/20 &#39;Occasional Consultation Paper&#39;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/smf-long-term-absences" class="list-links__link" target="_blank">
+										PS11/21 - &quot;Strengthening accountability: Temporary, long-term absences&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2023/may/moving-senior-managers-regime-forms" class="list-links__link" target="_blank">
+										PS4/23 - Moving Senior Managers Regime forms from the PRA Rulebook
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2023/december/responses-to-proposed-minor-amendments-2023" class="list-links__link" target="_blank">
+										PS19/23 - Responses to proposed minor amendments in CP8/23, Chapter 11 of CP12/23 and CP22/23
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/21-12-2023_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="21-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/21-12-2023?p=1" data-id="418be0a50b814a0b9720ee583a54f7b7" data-effective-date="21-12-2023" data-download-title="Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications_21-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/21-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="98ccd73d57554500b8b7147dd5132ae7"
+	 data-version="590db67d649245cb90cbf2251b1cb127"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d48c863b47514c3a87ca892ec4dcd639"
+	 data-version="2f9954f520c14b6c87700462e3d02a32"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a  class="glossary-link" title="large non-directive insurer" href="#glossary-term-a80e0f791d3f4f619db330e241fc8769" data-mce-linktype="2" data-glossary-id="77326">large non-directive insurer</a></em>; and</li>
+<li>(2) a <em><a  class="glossary-link" title="Swiss General Insurer" href="#glossary-term-7ecb61ce28ed4c4e947c300a772aa937" data-mce-linktype="2" data-glossary-id="52910">Swiss general insurer</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d48c863b47514c3a87ca892ec4dcd639">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="eae50ccf2b44499eaeb2ae9ebfbb9d54"
+	 data-version="7f1094b3d93840be8df206757550c532"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a  class="glossary-link" title="commencement date" href="#glossary-term-d8c3d10704b348c4b3d283601eb89693" data-mce-linktype="2" data-glossary-id="77226">commencement date</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in <a  title="Large Non-Solvency II Firms &ndash; Senior Insurance Managers Regime &ndash; Transitional Provisions" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-transitional-provisions" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Large Non-Solvency II Firms &ndash; Senior Managers Regime &ndash; Transitional Provisions</a>.</p>
+<p><em><a  class="glossary-link" title="current approved person approval" href="#glossary-term-08252b1f8f124a0b9cc5ce8dffbdab28" data-mce-linktype="2" data-glossary-id="77227">current approved person approval</a></em></p>
+<p style="padding-left: 30px;">means</p>
+<ol class="new-bullet"><ol>
+<li>(1) an approval granted to a <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> under section 59 of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Approval for particular arrangements):</li>
+<ol>
+<li>(a) by the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> for the performance of a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; or</li>
+<li>(b) by the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> for the performance of an <em><a  class="glossary-link" title="FCA-designated senior management function" href="#glossary-term-712ab7167b4f454abb764516c5124c80" data-mce-linktype="2" data-glossary-id="77803">FCA-designated senior management function</a></em> or a <em><a  class="glossary-link" title="significant influence function" href="#glossary-term-744ec719d80642b9ac92a7bb234d809c" data-mce-linktype="2" data-glossary-id="77231">significant influence function</a></em>;</li>
+</ol>
+<li>(2) a deemed approval given by:</li>
+<ol>
+<li>(a) the<em> <a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> following the submission of a <em><a  class="glossary-link" title="grandfathering notification" href="#glossary-term-1a0ba8d3bffb43e2addce330b9c2921b" data-mce-linktype="2" data-glossary-id="77228">conversion notification</a></em>; or</li>
+<li>(b) the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> under any equivalent process contained in rules in the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>; or</li>
+</ol>
+<li>(3) for the purposes of <a  title="2.5" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#099d53776dcf4cd7be6a0621fc9074ab" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a>(2) and <a  title="2.6" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#99e91651f8434e40947a9c1214b24ab9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a>(1), an approval granted to that <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> under section 59 of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> by either the<em> <a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> or the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> to perform a <em><a  class="glossary-link" title="controlled function" href="#glossary-term-77ed05e95e9144549fdcd84ae397fcab" data-mce-linktype="2" data-glossary-id="52215">controlled function</a></em> prior to the <em><a  class="glossary-link" title="commencement date" href="#glossary-term-d8c3d10704b348c4b3d283601eb89693" data-mce-linktype="2" data-glossary-id="77226">commencement date</a></em> but which ceased</li>
+<ol>
+<li>(a) on or before the <em><a  class="glossary-link" title="commencement date" href="#glossary-term-d8c3d10704b348c4b3d283601eb89693" data-mce-linktype="2" data-glossary-id="77226">commencement date</a></em>; and</li>
+<li>(b) during the six-<em><a  class="glossary-link" title="month" href="#glossary-term-662f153264be46f89f47dbb1b8b7911f" data-mce-linktype="2" data-glossary-id="77446">month</a></em> period specified in <a  title="2.5" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#099d53776dcf4cd7be6a0621fc9074ab" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a>(2) and <a  title="2.6" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#99e91651f8434e40947a9c1214b24ab9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a>(1), as the case may be.</li>
+</ol></ol></ol>
+<p><em><a  class="glossary-link" title="regulatory body" href="#glossary-term-56d9e63b2394433c8ba99ad1983a1233" data-mce-linktype="2" data-glossary-id="77229">regulatory body</a></em></p>
+<p style="padding-left: 30px;">means any authority, body or <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> having, or who has had, responsibility for the supervision or regulation of any <em><a  class="glossary-link" title="regulated activities" href="#glossary-term-24caed66a6824fc18abef5f2a4c455a2" data-mce-linktype="2" data-glossary-id="53237">regulated activities</a></em> or other financial services, whether within the <em><a  class="glossary-link" title="United Kingdom" href="#glossary-term-e7e8282fcb5845be90310e2bc45fc55b" data-mce-linktype="2" data-glossary-id="52722">United Kingdom</a></em> or overseas.</p>
+<p><em><a  class="glossary-link" title="significant influence function" href="#glossary-term-744ec719d80642b9ac92a7bb234d809c" data-mce-linktype="2" data-glossary-id="77231">significant influence function</a></em></p>
+<p style="padding-left: 30px;">has the meaning given in the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#eae50ccf2b44499eaeb2ae9ebfbb9d54">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=eae50ccf2b44499eaeb2ae9ebfbb9d54">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="21-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/1-application-and-definitions/21-12-2023?p=1" data-id="98ccd73d57554500b8b7147dd5132ae7" data-effective-date="21-12-2023" data-download-title="Application and Definitions_21-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/1-application-and-definitions/21-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#98ccd73d57554500b8b7147dd5132ae7&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=98ccd73d57554500b8b7147dd5132ae7">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="1d58b067711e45be88b99bc1b73f74c2"
+	 data-version="ddcbc077599f4b46943ae66882910e4b"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application to Perform a Senior Management Function
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5779b51681b04f409d2dab7ca10aeb37"
+	 data-version="b6a2a9f1f8de42349420d44ea0dfdbfb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must make a <em><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> in accordance with <a  title="2.2" href="/pra-rules/non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#691c4341fa6144f1ad832831eaf8b3cd" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a>, before the activities requiring approval commence.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#5779b51681b04f409d2dab7ca10aeb37">
+			Past
+			<span class="visually-hidden">
+				version of 2.1 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5779b51681b04f409d2dab7ca10aeb37">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="9f71e02dc76c41b4a1c60f35ae6d638c"
+	 data-version="ac1d559d69b841639ea830219f2a7f2b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must use Form A (long form) for a <em><a  class="glossary-link" title="PRA senior insurance management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> unless:</p>
+<ol class="new-bullet">
+<li>(1) the<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must use Form E under <a  title="2.3" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#1d6d03cc73d0418d945efb1f8cb7a8ea" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.3</a>; or</li>
+<li>(2) the<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must use Form A (shortened form) under <a  title="2.6" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#99e91651f8434e40947a9c1214b24ab9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.6</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#9f71e02dc76c41b4a1c60f35ae6d638c">
+			Past
+			<span class="visually-hidden">
+				version of 2.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9f71e02dc76c41b4a1c60f35ae6d638c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1d6d03cc73d0418d945efb1f8cb7a8ea"
+	 data-version="0d5481a429aa491385c3e3d12f333122"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that, subject to <a  title="2.4" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#6e38460dcaf8474281ce3f25086ea1ee" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a> and <a  title="2.5" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#099d53776dcf4cd7be6a0621fc9074ab" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.5</a>, a<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must use Form E for a <em><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> if it is being made in respect of a <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> who has a <em><a  class="glossary-link" title="current approved person approval" href="#glossary-term-08252b1f8f124a0b9cc5ce8dffbdab28" data-mce-linktype="2" data-glossary-id="77227">current approved person approval</a></em> and is either:</p>
+<ol class="new-bullet">
+<li>(1) ceasing to perform a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> and taking up a new <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> for the same <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or another member of its <em><a  class="glossary-link" title="group" href="#glossary-term-decf8b2825cb4d17a48ca357b7c70d9b" data-mce-linktype="2" data-glossary-id="52719">group</a></em>; or</li>
+<li>(2) ceasing to perform an <em><a  class="glossary-link" title="FCA-designated senior management function" href="#glossary-term-712ab7167b4f454abb764516c5124c80" data-mce-linktype="2" data-glossary-id="77803">FCA-designated senior management function</a></em> or a <em><a  class="glossary-link" title="significant influence function" href="#glossary-term-744ec719d80642b9ac92a7bb234d809c" data-mce-linktype="2" data-glossary-id="77231">significant influence function</a></em> and taking up a <span style="text-indent: -14.3px;"><em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> for</span> the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or another member of its <em><a  class="glossary-link" title="group" href="#glossary-term-decf8b2825cb4d17a48ca357b7c70d9b" data-mce-linktype="2" data-glossary-id="52719">group</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#1d6d03cc73d0418d945efb1f8cb7a8ea">
+			Past
+			<span class="visually-hidden">
+				version of 2.3 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1d6d03cc73d0418d945efb1f8cb7a8ea">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6e38460dcaf8474281ce3f25086ea1ee"
+	 data-version="1edd209628444e84bc406d09497a63d1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not use Form E for a <em><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> if:</p>
+<ol class="new-bullet">
+<li>(A1) a notification has been or should be made to the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> or <em style="text-indent: -14.3px;"><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> under any of the following:<ol>
+<li>(a) section 63(2A) of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Duty to notify regulator of grounds for withdrawal of approval); </li>
+<li>(b) section 64C of <em style="text-indent: -14.3px;"><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Requirement for authorised person to notify regulator of disciplinary action);</li>
+</ol></li>
+<li>(1) a notification has been made or should be made to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> under any of the rules in <a  title="Notifications 11" href="/pra-rules/notifications#24ae7653b5b24fe292939e4406080222" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Notifications 11</a> or to the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> under any equivalent provisions of the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>;</li>
+<li>(2) any of the circumstances in <a  title="4.2" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#2454ff0538f340d9a240af8393d62701" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">4.2</a>(2)(a) to (d) apply in relation to:</li>
+<ol>
+<li>(a) any <em><a  class="glossary-link" title="controlled function" href="#glossary-term-77ed05e95e9144549fdcd84ae397fcab" data-mce-linktype="2" data-glossary-id="52215">controlled function</a></em> that that <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> is ceasing to perform; or</li>
+<li>(b) any <em><a  class="glossary-link" title="controlled function" href="#glossary-term-77ed05e95e9144549fdcd84ae397fcab" data-mce-linktype="2" data-glossary-id="52215">controlled function</a></em> that that <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> is continuing to perform in relation to that <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or a<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in the same <em><a  class="glossary-link" title="group" href="#glossary-term-decf8b2825cb4d17a48ca357b7c70d9b" data-mce-linktype="2" data-glossary-id="52719">group</a></em>.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#6e38460dcaf8474281ce3f25086ea1ee">
+			Past
+			<span class="visually-hidden">
+				version of 2.4 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6e38460dcaf8474281ce3f25086ea1ee">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="099d53776dcf4cd7be6a0621fc9074ab"
+	 data-version="662204cb44df497db7d0d4edd5179e8a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that a<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not use Form E if the <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> to whom the <em><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> relates:</p>
+<ol class="new-bullet">
+<li>(1) has never before been approved:</li>
+<ol>
+<li>(a) by the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> to perform a <em><a  class="glossary-link" title="controlled function" href="#glossary-term-77ed05e95e9144549fdcd84ae397fcab" data-mce-linktype="2" data-glossary-id="52215">controlled function</a></em>; or</li>
+<li>(b) by the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> to perform an <em><a  class="glossary-link" title="FCA-designated senior management function" href="#glossary-term-712ab7167b4f454abb764516c5124c80" data-mce-linktype="2" data-glossary-id="77803">FCA-designated senior management function</a></em> or a <em><a  class="glossary-link" title="significant influence function" href="#glossary-term-744ec719d80642b9ac92a7bb234d809c" data-mce-linktype="2" data-glossary-id="77231">significant influence function</a></em></li>
+</ol>
+<li>      for any<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>;</li>
+<li>      or</li>
+<li><span style="line-height: 1.6em; text-indent: -1.3em;">(2) has not been the subject of a </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="current approved person approval" href="#glossary-term-08252b1f8f124a0b9cc5ce8dffbdab28" data-mce-linktype="2" data-glossary-id="77227">current approved person approval</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> in relation to any </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> for more than six </span><em style="line-height: 1.6em; text-indent: -1.3em;"><a  class="glossary-link" title="months" href="#glossary-term-662f153264be46f89f47dbb1b8b7911f" data-mce-linktype="2" data-glossary-id="77446">months</a></em><span style="line-height: 1.6em; text-indent: -1.3em;"> prior to the date of application.</span></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#099d53776dcf4cd7be6a0621fc9074ab">
+			Past
+			<span class="visually-hidden">
+				version of 2.5 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=099d53776dcf4cd7be6a0621fc9074ab">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="99e91651f8434e40947a9c1214b24ab9"
+	 data-version="4772aa2b12a24ad3af651bc35164e30a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that a<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must use Form A (shortened form) for a <em><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> if:</li>
+<ol>
+<li>(a) the <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> to whom the application relates:</li>
+<ol>
+<li>(i) has at the time of application a<em><a  class="glossary-link" title=" current approved person approval" href="#glossary-term-08252b1f8f124a0b9cc5ce8dffbdab28" data-mce-linktype="2" data-glossary-id="77227"> current approved person approval</a></em>; or</li>
+<li>(ii) has had a <em><a  class="glossary-link" title="current approved person approval" href="#glossary-term-08252b1f8f124a0b9cc5ce8dffbdab28" data-mce-linktype="2" data-glossary-id="77227">current approved person approval</a></em> within the previous six <em><a  class="glossary-link" title="months" href="#glossary-term-662f153264be46f89f47dbb1b8b7911f" data-mce-linktype="2" data-glossary-id="77446">months</a></em>; and</li>
+</ol>
+<li>(b) there have been no matters arising in relation to the fitness and propriety of the <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> to whom the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> relates which mean that the information provided to the <em><a  class="glossary-link" title="FCA" href="#glossary-term-a6adfc5faca24b3186f3f7bee3c6db22" data-mce-linktype="2" data-glossary-id="52718">FCA</a></em> or <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> regarding fitness and propriety in connection with a <em><a  class="glossary-link" title="current approved person approval" href="#glossary-term-08252b1f8f124a0b9cc5ce8dffbdab28" data-mce-linktype="2" data-glossary-id="77227">current approved person approval</a></em> may have changed since the application for the <em><a  class="glossary-link" title="current approved person approval" href="#glossary-term-08252b1f8f124a0b9cc5ce8dffbdab28" data-mce-linktype="2" data-glossary-id="77227">current approved person approval</a></em> was made.</li>
+</ol>
+<li>(2) <span style="text-indent: -14.3px;">The </span><em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em><span style="text-indent: -14.3px;"> directs that a</span> <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not use Form A (shortened form) if the circumstances set out in <a  title="2.3" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#1d6d03cc73d0418d945efb1f8cb7a8ea" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.3</a> apply.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					11/05/2023
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/10-12-2018#99e91651f8434e40947a9c1214b24ab9">
+			Past
+			<span class="visually-hidden">
+				version of 2.6 before 11/05/2023
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=99e91651f8434e40947a9c1214b24ab9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0bef49cbbde94406a3d369c73a0e01d9"
+	 data-version="8ff1ba9344ac4dfe8ef2f007fbc68bab"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that the form submitted for a <em><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> must be accompanied by a <em><a  class="glossary-link" title="scope of responsibilities form" href="#glossary-term-e21895a3f3e1416d9e3320384bf06765" data-mce-linktype="2" data-glossary-id="77230">statement of responsibilities form</a></em> or, where a <em><a  class="glossary-link" title="scope of responsibilities form" href="#glossary-term-e21895a3f3e1416d9e3320384bf06765" data-mce-linktype="2" data-glossary-id="77230">statement of responsibilities form</a></em> has already been provided under <a  title="Large Non-Solvency II Firms &ndash; Key Function Holder &ndash; Notifications 2.2" href="/pra-rules/large-non-solvency-ii-firms-key-function-holder-notifications#ea2815329bb546148d7f9bf81c0d5b84" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Large Non-Solvency II Firms &ndash; Key Function Holder &ndash; Notifications 2.2</a>, an updated version of it.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#0bef49cbbde94406a3d369c73a0e01d9">
+			Past
+			<span class="visually-hidden">
+				version of 2.7 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0bef49cbbde94406a3d369c73a0e01d9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="21-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/2-application-to-perform-a-senior-management-function/21-12-2023?p=1" data-id="1d58b067711e45be88b99bc1b73f74c2" data-effective-date="21-12-2023" data-download-title="Application to Perform a Senior Management Function_21-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/2-application-to-perform-a-senior-management-function/21-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#1d58b067711e45be88b99bc1b73f74c2&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications – Application to Perform a Senior Management Function">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1d58b067711e45be88b99bc1b73f74c2">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application to Perform a Senior Management Function
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="b3a748dcd5024c91822591f5f06b9c31"
+	 data-version="922819c867c947718eebe49701cc9602"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Withdrawal of a PRA Senior Management Approval Application
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a45e520d8b8343a8abe30b535e1cf921"
+	 data-version="e058e88c4cda4e29a092bfa2369fab99"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> withdrawing an outstanding <em><a  class="glossary-link" title="PRA senior management approval application" href="#glossary-term-037eda30748c4d3e96c59fd0d7048dc4" data-mce-linktype="2" data-glossary-id="88189">PRA senior management approval application</a></em> must do so using Form B.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#a45e520d8b8343a8abe30b535e1cf921">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a45e520d8b8343a8abe30b535e1cf921">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="21-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/3-withdrawal-of-a-pra-senior-management-approval-application/21-12-2023?p=1" data-id="b3a748dcd5024c91822591f5f06b9c31" data-effective-date="21-12-2023" data-download-title="Withdrawal of a PRA Senior Management Approval Application_21-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/3-withdrawal-of-a-pra-senior-management-approval-application/21-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#b3a748dcd5024c91822591f5f06b9c31&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications – Withdrawal of a PRA Senior Management Approval Application">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b3a748dcd5024c91822591f5f06b9c31">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Withdrawal of a PRA Senior Management Approval Application
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="b3764a2765c545379f82f48a7b424443"
+	 data-version="464b266d98c04602ab55a65a1cfaccb7"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Ceasing to Perform a PRA Senior Management Function
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c259d291c2bd441e8252edf5aef73ad5"
+	 data-version="890fa93480bc445ca8160d6f467319fd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> no later than seven <em><a  class="glossary-link" title="business days" href="#glossary-term-0ac6fe17ff7f43e08f14112960b50c73" data-mce-linktype="2" data-glossary-id="52213">business days</a></em> after a <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> permanently ceases to perform a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>, using:</p>
+<ol class="new-bullet">
+<li>(1) Form E pursuant to the direction in <a  title="2.3" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#1d6d03cc73d0418d945efb1f8cb7a8ea" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.3</a> if a <em><a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> <span style="text-indent: 0px;">permanently </span>ceases to perform a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> and the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> is also making an application for the same<em> <a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> to perform a new <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em>; and</li>
+<li>(2) in all other cases, Form C.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					11/05/2023
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/02-06-2021#c259d291c2bd441e8252edf5aef73ad5">
+			Past
+			<span class="visually-hidden">
+				version of 4.1 before 11/05/2023
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c259d291c2bd441e8252edf5aef73ad5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2454ff0538f340d9a240af8393d62701"
+	 data-version="1285888d866047d888d2ff3e644b20dd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> as soon as practicable after it becomes aware, or has information which reasonably suggests, that it will submit a qualified Form C in respect of a <em><a  class="glossary-link" title="PRA senior management function holder" href="#glossary-term-2b9aecb9b62a4dd2a8f832c2afa33eb3" data-mce-linktype="2" data-glossary-id="88190">PRA senior management function holder</a></em>.</li>
+<li>(2) Form C is qualified if the information it contains:</li>
+<ol>
+<li>(a) relates to the fact that the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has dismissed or suspended the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function holder" href="#glossary-term-2b9aecb9b62a4dd2a8f832c2afa33eb3" data-mce-linktype="2" data-glossary-id="88190">PRA senior management function holder</a></em> from its employment;</li>
+<li>(b) relates to the resignation by the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function holder" href="#glossary-term-2b9aecb9b62a4dd2a8f832c2afa33eb3" data-mce-linktype="2" data-glossary-id="88190">PRA senior management function holder</a></em> while under investigation by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> or any other <em><a  class="glossary-link" title="regulatory body" href="#glossary-term-56d9e63b2394433c8ba99ad1983a1233" data-mce-linktype="2" data-glossary-id="77229">regulatory body</a></em>;</li>
+<li>(c) includes a notification under any of the provisions set out in <a  title="2.4" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#6e38460dcaf8474281ce3f25086ea1ee" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.4</a>(A1) or (1); or</li>
+<li>(d) otherwise reasonably suggests that it may affect the <em><a  class="glossary-link" title="PRA&rsquo;s" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA&rsquo;s</a></em> assessment of the <em><a  class="glossary-link" title="PRA senior management function holder&rsquo;s" href="#glossary-term-2b9aecb9b62a4dd2a8f832c2afa33eb3" data-mce-linktype="2" data-glossary-id="88190">PRA senior management function holder&rsquo;s</a></em> fitness and propriety.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#2454ff0538f340d9a240af8393d62701">
+			Past
+			<span class="visually-hidden">
+				version of 4.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2454ff0538f340d9a240af8393d62701">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="21-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/4-ceasing-to-perform-a-pra-senior-management-function/21-12-2023?p=1" data-id="b3764a2765c545379f82f48a7b424443" data-effective-date="21-12-2023" data-download-title="Ceasing to Perform a PRA Senior Management Function_21-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/4-ceasing-to-perform-a-pra-senior-management-function/21-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#b3764a2765c545379f82f48a7b424443&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications – Ceasing to Perform a PRA Senior Management Function">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=b3764a2765c545379f82f48a7b424443">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Ceasing to Perform a PRA Senior Management Function
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="d6b5c46938cf40739ac150162514a6af"
+	 data-version="c846c972867346b4983afda4ffdef7ac"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4A
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application to Vary a Conditional Approval
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fde706d803874684a883d86ad87796f2"
+	 data-version="c5a26fc3edbe47d9b0b288cad0ba0c1d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4A.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> making an application to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> under section 63ZA of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (for the variation of a conditional approval) must do so by submitting</p>
+<ol class="new-bullet">
+<li>(1) Form I; and</li>
+<li>(2) a <em><a  class="glossary-link" title="statement of responsibilities form" href="#glossary-term-a443b1ba213043b3ab25c2990563514b" data-mce-linktype="2" data-glossary-id="67168">statement of responsibilities form</a></em> for the <em><a  class="glossary-link" title="PRA approved person" href="#glossary-term-9a4eb6e7bc0f455793dd9d3697399120" data-mce-linktype="2" data-glossary-id="52567">PRA approved person</a></em> concerned.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fde706d803874684a883d86ad87796f2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4A.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="28e0b7d77cdb46aa81d9ba2aec9ae890"
+	 data-version="4358f402ac474ca6817c435807770489"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4A.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><span style="text-indent: -14.3px;">The </span><em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em><span style="text-indent: -14.3px;"> directs that a </span><em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> withdrawing an application made under section 63ZA of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Variation of senior manager&rsquo;s approval at request of relevant authorised person) must do so using Form B. </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					11/05/2023
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/10-12-2018#28e0b7d77cdb46aa81d9ba2aec9ae890">
+			Past
+			<span class="visually-hidden">
+				version of 4A.2 before 11/05/2023
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=28e0b7d77cdb46aa81d9ba2aec9ae890">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4A.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="21-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/4a-application-to-vary-a-conditional-approval/21-12-2023?p=1" data-id="d6b5c46938cf40739ac150162514a6af" data-effective-date="21-12-2023" data-download-title="Application to Vary a Conditional Approval_21-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/4a-application-to-vary-a-conditional-approval/21-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#d6b5c46938cf40739ac150162514a6af&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications – Application to Vary a Conditional Approval">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=d6b5c46938cf40739ac150162514a6af">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application to Vary a Conditional Approval
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="f7e36a8f31604fc0995ff2d7b90ee987"
+	 data-version="629a110efe224f6da427817e44f07687"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Change in Details Relating to PRA Senior Management Function Holders
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8e584744cb2c4cfea5087c46d3de4ba2"
+	 data-version="54ed3401e86747bb8ad8bd3a5e2f77c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a <em><a  class="glossary-link" title="PRA senior management function holder's" href="#glossary-term-2b9aecb9b62a4dd2a8f832c2afa33eb3" data-mce-linktype="2" data-glossary-id="88190">PRA senior management function holder's</a></em> title, name or national insurance number changes, the<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> for which the<em> <a  class="glossary-link" title="person" href="#glossary-term-bb5dee02540647f88ded5c69be5c567f" data-mce-linktype="2" data-glossary-id="53235">person</a></em> performs a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> must notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of that change within seven <em><a  class="glossary-link" title="business days" href="#glossary-term-0ac6fe17ff7f43e08f14112960b50c73" data-mce-linktype="2" data-glossary-id="52213">business days</a></em> of the<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> becoming aware of the matter, using Form D.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#8e584744cb2c4cfea5087c46d3de4ba2">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8e584744cb2c4cfea5087c46d3de4ba2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0d4d4e67d4764012871a670972e7a04f"
+	 data-version="f3cd63d69fbd400288a63433bf856ab6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a <em><a  class="glossary-link" title="PRA senior management function holder" href="#glossary-term-2b9aecb9b62a4dd2a8f832c2afa33eb3" data-mce-linktype="2" data-glossary-id="88190">PRA senior management function holder</a></em> has been temporarily absent for more than a 12 week period, the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> for which the <em><a  class="glossary-link" title="person" href="#glossary-term-8908b89166da420a9af9860d5df57ab9" data-mce-linktype="2" data-glossary-id="52720">person</a></em> performs a <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> must notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of:</p>
+<ol class="new-bullet">
+<li>(1) that absence within seven <em><a  class="glossary-link" title="business days" href="#glossary-term-0ac6fe17ff7f43e08f14112960b50c73" data-mce-linktype="2" data-glossary-id="52213">business days</a></em> of the end of the 12 week period; and </li>
+<li>(2) the <em><a  class="glossary-link" title="PRA senior management function holder&rsquo;s" href="#glossary-term-2b9aecb9b62a4dd2a8f832c2afa33eb3" data-mce-linktype="2" data-glossary-id="88190">PRA senior management function holder&rsquo;s</a></em> return from absence within seven <em style="text-indent: -14.3px;"><a  class="glossary-link" title="business days" href="#glossary-term-0ac6fe17ff7f43e08f14112960b50c73" data-mce-linktype="2" data-glossary-id="52213">business days</a></em> of the date of their return,</li>
+</ol>
+<p>in each case, using Form D.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					02/06/2021
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0d4d4e67d4764012871a670972e7a04f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="67c75f9b1a4f4e08bc4bce550f9e86b3"
+	 data-version="46f25a2b4e8343cc8bcc5d81e7c2308d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If, in relation to a<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> which has submitted an application on either Form A (long or shortened form) or Form E, as required by <a  title="2.2" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#9f71e02dc76c41b4a1c60f35ae6d638c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a>, any of the details relating to <em><a  class="glossary-link" title="PRA senior management functions" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management functions</a></em> are to change, the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> using Form D as soon as reasonably practicable after the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> becomes aware of the proposed change.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/07-03-2016#67c75f9b1a4f4e08bc4bce550f9e86b3">
+			Past
+			<span class="visually-hidden">
+				version of 5.2 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=67c75f9b1a4f4e08bc4bce550f9e86b3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0ac09570c3b24e62a63a73cba42b0e8f"
+	 data-version="085943bbdf2f44e0b7dd4084b90969aa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><span style="text-indent: -14.3px;">The </span><em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em><span style="text-indent: -14.3px;"> directs that i</span>f a <em><a  class="glossary-link" title="PRA senior management function holde" href="#glossary-term-2b9aecb9b62a4dd2a8f832c2afa33eb3" data-mce-linktype="2" data-glossary-id="88190">PRA senior management function holder</a></em> ceases to perform a <em><a  class="glossary-link" title="PRA senior management functions" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> for a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> but continues to perform one or more <em><a  class="glossary-link" title="PRA senior management functions" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management functions</a></em> for the same <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must submit a revised <em><a  class="glossary-link" title="statement of responsibilities form" href="#glossary-term-a443b1ba213043b3ab25c2990563514b" data-mce-linktype="2" data-glossary-id="67168">statement of responsibilities form</a></em> for the remaining <em><a  class="glossary-link" title="PRA senior management functions" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function(s)</a></em>, along with Form J.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					11/05/2023
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/10-12-2018#0ac09570c3b24e62a63a73cba42b0e8f">
+			Past
+			<span class="visually-hidden">
+				version of 5.3 before 11/05/2023
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0ac09570c3b24e62a63a73cba42b0e8f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="21-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/5-change-in-details-relating-to-pra-senior-management-function-holders/21-12-2023?p=1" data-id="f7e36a8f31604fc0995ff2d7b90ee987" data-effective-date="21-12-2023" data-download-title="Change in Details Relating to PRA Senior Management Function Holders_21-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/5-change-in-details-relating-to-pra-senior-management-function-holders/21-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#f7e36a8f31604fc0995ff2d7b90ee987&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications – Change in Details Relating to PRA Senior Management Function Holders">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=f7e36a8f31604fc0995ff2d7b90ee987">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Change in Details Relating to PRA Senior Management Function Holders
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="a90227027839452ca453cc78e2398a93"
+	 data-version="dfda42c722ce4962afbf37698b4c897c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Procedure for Making Applications and Notifications
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b3db5a16adf34bed83f0543cc8ae6c51"
+	 data-version="ca2dec667d9d46408490b116ef3f3c9c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that, save as required by <a  title="6.2" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#3f949d9d612d486cacc4c9d09afa50e9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">6.2</a>, a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must make any applications, notifications or submissions required by this Part by submitting the form specified using the <em><a  class="glossary-link" title="ONA system" href="#glossary-term-0432343f2aa34ff099752e8fb7688e22" data-mce-linktype="2" data-glossary-id="52226">ONA system</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=b3db5a16adf34bed83f0543cc8ae6c51">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3f949d9d612d486cacc4c9d09afa50e9"
+	 data-version="f380d0add5b34689a122f08f78ba57a0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If, under any direction or rule in this Part:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> is required to make an application, notification or submission online; and</li>
+<li>(2) the information technology systems used by the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> fail and online submission is unavailable for 24 hours or more,</li>
+</ol>
+<p>until such time as facilities for online submission are restored, a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must submit the specified form in the way set out in <a  title="Notifications 7" href="/pra-rules/notifications#8e186d20f3cf4d218117e0780f104f7c" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Notifications 7</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					07/03/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3f949d9d612d486cacc4c9d09afa50e9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0926dd3cebd24e598dfbf251e7fc0bfb"
+	 data-version="0b975df77f914f90b219f6fd3460e140"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) The <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> directs that, if a firm is required to submit a revised <em><a  class="glossary-link" title="statement of responsibilities" href="#glossary-term-e06164c5b9a048f48a9e1b12a5761413" data-mce-linktype="2" data-glossary-id="88192">statement of responsibilities</a></em> under section 62A of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em>, it must do so by submitting Form J with the revised <em><a  class="glossary-link" title="statement of responsibilities form" href="#glossary-term-a443b1ba213043b3ab25c2990563514b" data-mce-linktype="2" data-glossary-id="67168">statement of responsibilities form</a></em>.  </li>
+<li>(2) <span style="text-indent: -14.3px;">The </span><em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em><span style="text-indent: -14.3px;"> directs that a</span> <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a> </em>must not use Form J where the revisions are to be made as part of arrangements involving an application:</li>
+<ol>
+<li>(a) for approval for the <a  class="glossary-link" title="person" href="#glossary-term-8908b89166da420a9af9860d5df57ab9" data-mce-linktype="2" data-glossary-id="52720"><em>person</em></a> performing the <em><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> concerned to perform another <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> or <em><a  class="glossary-link" title="relevant senior management function" href="#glossary-term-776c0b7f70d94bd7842daf2e1ca39a2c" data-mce-linktype="2" data-glossary-id="67050">relevant senior management function</a></em> for the same <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>; or </li>
+<li>(b) to vary under section 63ZA of <em style="text-indent: -14.3px;"><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> an approval for the <a  class="glossary-link" style="text-indent: -14.3px;" title="person" href="#glossary-term-8908b89166da420a9af9860d5df57ab9" data-mce-linktype="2" data-glossary-id="52720"><em>person</em></a> performing the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> concerned to perform another <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA senior management function" href="#glossary-term-1a0e61be7ef34efba8c7c001ca8c26d3" data-mce-linktype="2" data-glossary-id="52568">PRA senior management function</a></em> or <em style="text-indent: -14.3px;"><a  class="glossary-link" title="relevant senior management function" href="#glossary-term-776c0b7f70d94bd7842daf2e1ca39a2c" data-mce-linktype="2" data-glossary-id="67050">relevant senior management function</a></em> for the same <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>. </li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					11/05/2023
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/10-12-2018#0926dd3cebd24e598dfbf251e7fc0bfb">
+			Past
+			<span class="visually-hidden">
+				version of 6.3 before 11/05/2023
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0926dd3cebd24e598dfbf251e7fc0bfb">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="21-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/6-procedure-for-making-applications-and-notifications/21-12-2023?p=1" data-id="a90227027839452ca453cc78e2398a93" data-effective-date="21-12-2023" data-download-title="Procedure for Making Applications and Notifications_21-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/6-procedure-for-making-applications-and-notifications/21-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#a90227027839452ca453cc78e2398a93&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications – Procedure for Making Applications and Notifications">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=a90227027839452ca453cc78e2398a93">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Procedure for Making Applications and Notifications
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="0f8f55b78b5247978e39ce3d1944eb7b"
+	 data-version="95f1620d31324cac9faaf74d21ff08d8"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Forms
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="08c1f5c537374510bf1bfea1ddddafd1"
+	 data-version="4461748584014ea394be16ff15947103"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+    <li>(1) Form A (long form) is available on the <em style="text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA's</a></em><span style="text-indent: 0px;"> website. </span></li>
+    <li>(2) Form A (shortened form) <span style="text-indent: -14.3px;">is available on t</span><span style="text-indent: -14.3px;">he </span><em style="text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA's</a></em><span style="text-indent: 0px;"> website.</span></li>
+    <li>(3) Form B <span style="text-indent: -14.3px;">is available on t</span><span style="text-indent: -14.3px;">he </span><em style="text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA's</a></em><span style="text-indent: 0px;"> website.</span></li>
+    <li>(4) Form C may be found <a rel="noopener noreferrer" class="external-link" title="Form C" href="https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/senior-managers-and-senior-insurance-managers-regimes-approvals/form-c-dec-2023.pdf" target="_blank" data-mce-linktype="4" data-mce-externalform="true" data-mce-description="Notice of ceasing to perform controlled functions (including senior management functions).">here</a>.</li>
+    <li>(5) Form D may be found <a rel="noopener noreferrer" class="external-link" title="Form D" href="https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/senior-managers-and-senior-insurance-managers-regimes-approvals/form-d-dec-2023.pdf" target="_blank" data-mce-linktype="4" data-mce-externalform="true" data-mce-description="Changes to personal information/application details and conduct breaches/disciplinary action related to conduct.">here</a>.</li>
+    <li>(6) Form E <span style="text-indent: -14.3px;">is available on t</span><span style="text-indent: -14.3px;">he </span><em style="text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA's</a></em><span style="text-indent: 0px;"> website.</span></li>
+    <li><span style="text-indent: 0px;">(6A) Form I</span> <span style="text-indent: -14.3px;">is available on t</span><span style="text-indent: -14.3px;">he </span><em style="text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA's</a></em><span style="text-indent: 0px;"> website.</span></li>
+    <li><span style="text-indent: 0px;">(6B) Form J</span> <span style="text-indent: -14.3px;">is available on t</span><span style="text-indent: -14.3px;">he </span><em style="text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA's</a></em><span style="text-indent: 0px;"> website.</span></li>
+    <li>(7) The <em><a class="glossary-link" title="statement of responsibilities form" href="#glossary-term-a443b1ba213043b3ab25c2990563514b" data-mce-linktype="2" data-glossary-id="67168">statement of responsibilities form</a></em> <span style="text-indent: -14.3px;">is available on t</span><span style="text-indent: -14.3px;">he </span><em style="text-indent: -14.3px;"><a class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA's</a></em><span style="text-indent: 0px;"> website.</span></li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					21/12/2023
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/11-05-2023#08c1f5c537374510bf1bfea1ddddafd1">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 21/12/2023
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=08c1f5c537374510bf1bfea1ddddafd1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="21-12-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/7-forms/21-12-2023?p=1" data-id="0f8f55b78b5247978e39ce3d1944eb7b" data-effective-date="21-12-2023" data-download-title="Forms_21-12-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications/7-forms/21-12-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/large-non-solvency-ii-firms-senior-managers-regime-applications-and-notifications#0f8f55b78b5247978e39ce3d1944eb7b&amp;subject=PRA Rulebook - Large Non-Solvency II Firms – Senior Managers Regime – Applications and Notifications – Forms">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=0f8f55b78b5247978e39ce3d1944eb7b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Forms
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

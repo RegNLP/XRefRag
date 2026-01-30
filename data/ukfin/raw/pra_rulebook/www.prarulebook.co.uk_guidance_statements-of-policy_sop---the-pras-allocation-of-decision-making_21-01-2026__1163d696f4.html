@@ -1,0 +1,5675 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{93C44917-27ED-4EC5-AD63-E75874497174} -->
+<title>SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwof3q-f-90929313a-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":37,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"807e475","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":45752,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769369975","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==ineB7JSHi3/+fe/oh8BxXx8BAMIpphMX9wIEwP+RNKouZrFeO0shybzY+wbvtP7ou1yQbzUGaQSzoQBtS1K3F9klsdme1PlbpLmeLbqiEglp4i5XMOAisWHRDzwdg8qOntiSGSGTqn9axh9ETQzD/ia1RmGzMowRo13kyUXnARzbZvHalAgE15cYHY1YiuEdf5MaX7xX0Eee98nu40CxOyTGsqINQKB5ESifmN7HaByQ1YPFntEIomU2V24tf+RFPhouBAV+fC6gKGlPTkcw54tj6oBS0v8E+mHWefrjpJyP1E9LYUmgT8zgxArA4W2vcsS2rZNGunW3E2g6MmuWUtP29TJnqoA8iN1Ilu0S9VQGi6X1GqvJF6SIfK3Ime63Xi+DSRiB1czATPEwLkc8VaXaUuOoLztzobkYf1ANJBU=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/30-01-2024">
+						<span class="visually-hidden">View Rulebook as at</span>
+						30/01/2024
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-01c661b2-c272-4c0a-a793-cc319d78bd1c">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-01c661b2-c272-4c0a-a793-cc319d78bd1c"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-crr-firms">
+					Non-CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-authorised-persons">
+					Non-authorised persons
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2024/january/the-bank-of-england-approach-to-enforcement-policy-statement" class="list-links__link" target="_blank">
+										PS1/24 - The Bank of England&#39;s approach to enforcement
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/30-01-2024_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="30-01-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/30-01-2024?p=1" data-id="a404e52031464242bf72c3156d0a059c" data-effective-date="30-01-2024" data-download-title="SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions_30-01-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/30-01-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making&amp;subject=PRA Rulebook - SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="3ac757daad9747778638d033d665bfb1"
+	 data-version="99fd740ca2b645c2ac07de927a07ba11"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="cad1f5840339478490d2e4d7f81017dd"
+	 data-version="dd8dd6d00b8e4aa7b71ea3f6c8dd3ac8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The Bank of England (&lsquo;Bank&rsquo;) uses regulatory, supervisory, and enforcement powers to pursue its mission of financial stability, and related to that, to advance the Prudential Regulation Authority&rsquo;s (PRA) statutory objectives. Through regulation, the PRA develops standards and policies that set out what it requires and expects of firms. Through supervision, the PRA monitors and assesses whether firms are meeting its requirements and expectations. Where they do not, the PRA can take action &ndash; supervisory or enforcement &ndash; to reduce the risks that might arise. The PRA&rsquo;s approach to regulation and supervision is forward-looking, judgement-based, and focused on the issues and firms that pose the greatest risk to the stability of the UK financial system and (in the case of insurers) to policyholders. The PRA&rsquo;s approach to enforcement supports and supplements its regulatory and supervisory tools by ensuring that the PRA has credible mechanisms for holding its regulated firms to account where they do not meet the PRA&rsquo;s requirements and expectations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b178f6280cdc4fbf859e22aae3be69d9"
+	 data-version="aa7514723dc642dabd9d90c96a762ca6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA regularly takes different types of decisions in order to advance its objectives. These range from decisions on policymaking to firm-specific decisions. This PRA statement of policy sets out:</p>
+<ol class="new-bullet">
+    <li>(a) the PRA&rsquo;s allocation of decision-making regarding statutory notices (Warning Notices, Decision Notices, Final Notices, and Supervisory Notices);</li>
+    <li>(b) the PRA&rsquo;s approach to decision-making on statutory notices in relation to supervisory decisions under the Financial Services and Markets Act 2000 (&lsquo;the Act&rsquo;); and</li>
+    <li>(c) the PRA&rsquo;s approach to publication of supervisory cases.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="dd1206d11d20487dadf8ac1a79ac1ac7"
+	 data-version="574d81f77b26429fb27a053718a1c4e0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Separate statements of policy are published in relation to enforcement cases.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="30-01-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/1-introduction/30-01-2024?p=1" data-id="3ac757daad9747778638d033d665bfb1" data-effective-date="30-01-2024" data-download-title="Introduction_30-01-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/1-introduction/30-01-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making#3ac757daad9747778638d033d665bfb1&amp;subject=PRA Rulebook - SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="3f63bf22b8384977b7ed3a818f0599d1"
+	 data-version="5cfcebc3fcba4698be1cb02d4a856027"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Statement of the PRA&#39;s policy on statutory notices and the allocation of decision making under the Act
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="2ddeed04d77f406eaaf2bef675034114"
+	 data-version="2d698bae2a854c40adc5fce1966f8d2e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement of policy is issued by the Prudential Regulation Authority (PRA) in accordance with the requirements of section 395 of the Act that requires the PRA to issue a statement of its procedure in relation to the issuance of statutory notice decisions. Statutory notice decisions are those which give rise to an obligation to issue a Supervisory, Warning, or Decision Notice under sections 395(1)(a) and 395(1)(b) of the Act. This statement of policy covers the committee allocation for these types of decisions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="424088f9a95645f0a3f628162fc4e945"
+	 data-version="efac0c47129f4769a3665cb837464845"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In addition, the Bank has published separate statements of policy and procedures for the issuing of statutory notices in cases where the outcome of an enforcement investigation is accepted by the subject (ordinarily achieved through settlement), and for cases where settlement is not considered appropriate or is not achieved (&lsquo;contested cases&rsquo;), which are dealt with by the Bank&rsquo;s Enforcement Decision Making Committee (&lsquo;EDMC&rsquo;).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="738beba845cd453aace8fafe7989635e"
+	 data-version="8832902377da4256add599eeb97c09f7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In discharging its general functions, the PRA must, so far as is reasonably possible, act in a way which advances its statutory objectives.<sup><a href="#footnote-1">1</a></sup> The PRA is also required to have regard to certain regulatory principles.<sup><a href="#footnote-2">2</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						As set out in sections 2B and 2C of the Act.
+					</span>
+				</li>
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						As set out in sections 2G and 3B of the Act.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="03c05f142e684d3ab29a5b661824d047"
+	 data-version="3012f34879af461f84760fe815623ff3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In settling this statement of policy, the PRA recognises the desirability of:</p>
+<ol class="new-bullet">
+    <li>(a)&nbsp;upholding and encouraging high standards of behaviour that are consistent with persons who are subject to the PRA&rsquo;s regulatory requirements and standards, meeting and continuing to meet those requirements and standards; and</li>
+    <li>(b) demonstrating the benefits of such behaviour.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4ccd88a0f5df4296ab20bf2e5146f4d3"
+	 data-version="8a2af6954ba949379a711fd01fdec793"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will ensure that the decision-making procedure is designed to secure, among other things, that statutory notice decisions are taken by two or more persons who include a person not directly involved in establishing the evidence on which that decision is based as stated in section 395(2) of the Act.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d3bbcdeda3a646e398dd18a9d1659723"
+	 data-version="8a8e1c0916ae473082188989973bbdb9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The Act allows for the procedure to permit a decision which gives rise to an obligation to give a statutory notice to be taken other than as mentioned above if the person taking the decision is of a level of seniority laid down by the procedure and the PRA considers that, in the particular case, it is necessary in order to advance any of its objectives.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c77f1169e1094b5a9ecf73d9e3deeb7c"
+	 data-version="e1567732128b42a0b302d889153531a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In urgent statutory notice cases, a decision can be taken by two decision makers including one who has not been directly involved in establishing the evidence on which that decision is based.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="482f4498d8e34c7f935852eec58665d6"
+	 data-version="0a7c34db64734476a595454d9d1fc136"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Introduction to statutory notices</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8d0f3437528442afa2f13fb756517808"
+	 data-version="1ca3325fac0741e880c3668f76e590cf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the PRA proposes to exercise certain statutory powers, it must give written notice to the person in relation to whom the power is exercised.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6220f5f8a4ef4f2e81c2e54b6b04fdb4"
+	 data-version="d07ce5d273274c11adff686a64677efd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Notices are divided into the following categories:</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <th>Notice</th>
+            <th>Description</th>
+            <td class="light-row"><strong>Act Reference</strong></td>
+        </tr>
+        <tr>
+            <td>Warning Notice</td>
+            <td>States the action which the PRA proposes to take giving reasons for the proposed action and giving the opportunity for representations.</td>
+            <td>Section 387</td>
+        </tr>
+        <tr>
+            <td>Decision Notice</td>
+            <td>
+            <p>States the reasons for the action that the PRA has decided to take. The PRA may also give a further Decision Notice which relates to a different action in respect of the same matter if the recipient consents.</p>
+            <p>The notice also gives an indication of any right to have the matter referred to the Tribunal<sup><a href="#footnote-3">3</a></sup> and the procedure for such a reference.</p>
+            </td>
+            <td>Section 388</td>
+        </tr>
+        <tr>
+            <td>Notice of Discontinuance</td>
+            <td>Identifies the proceedings set out in a Warning or Decision Notice and which are not being taken or being discontinued.&nbsp;</td>
+            <td>Section 389</td>
+        </tr>
+        <tr>
+            <td>Final Notice</td>
+            <td>Sets out the terms of the action that the PRA is taking.<br>
+            </td>
+            <td>Section 390</td>
+        </tr>
+        <tr>
+            <td>Supervisory Notice</td>
+            <td>Details action that the PRA has taken or proposes to take.<br>
+            </td>
+            <td>Section 395(13)</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						‘Tribunal’ means the Upper Tribunal (Tax and Chancery Chamber) or any successor body.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="251641bad9304a34b3b2bb177b753c5a"
+	 data-version="1ccacbe52a2d41b9b40aaeba9c3075ca"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The requirement in section 395 of the Act to publish a procedure for the giving of notices does not extend to the giving of a notice of discontinuance or Final Notice.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8c8d444d3ae84397a78437f6d45cca22"
+	 data-version="71bd6af60e6a4e7fac3185f892481961"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Decision making</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="a989ff0275444a3ea83b235a936678fe"
+	 data-version="4d9ff669c5f14e839696c5617399b065"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Decision Making Committees</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="824de7b5375e4038953a6fe3408f382c"
+	 data-version="ec8a05cfa788469fbd8a5c6dd4fd8a53"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Decisions as to whether to give a statutory notice will be taken by an appropriate decision making committee (DMC). The PRA will ensure that the level of seniority of the decision maker is appropriate to the importance, complexity, and urgency of the decision.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7a233d20d0364e2f98203b8fdf019af0"
+	 data-version="1f354c8f82d64a4f82625e7dee10c707"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>There will be five DMCs responsible for the issue of statutory notices:</p>
+<ol class="new-bullet">
+    <li>(a)&nbsp;the Prudential Regulation Committee (the PRC) (or a sub-committee), excluding the Financial Conduct Authority (FCA) Chief Executive Officer;</li>
+    <li>(b) the Supervision, Risk and Policy Committee (SRPC) (or a sub-committee);</li>
+    <li>(c) the Supervision Assessment Panel (SAP);</li>
+    <li>(d) the Panels of Heads of Divisions and Managers (HMP); and</li>
+    <li>(e) the Enforcement Decision Making Committee (EDMC).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4477e13b40dd428397631ddd9e84473b"
+	 data-version="449e9616a51d446a82ce30201b897cee"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The DMCs will also take decisions associated with a statutory notice including decisions to:</p>
+<ol class="new-bullet">
+    <li>(a)&nbsp;set or extend time for making representations;</li>
+    <li>(b) give copies of the statutory notice to any third party setting out that party&rsquo;s rights and time limits to make representations;</li>
+    <li>(c) grant access to PRA material relevant to the statutory notice under section 394 of the Act; and</li>
+    <li>(d) publish the notice.<sup><a href="#footnote-4">4</a></sup></li>
+</ol>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						For further information on publication notices, see the statement of the PRA’s approach to publication of regulatory action in relation to supervisory decisions.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6877a2ee11344b0082201110b5a3c862"
+	 data-version="516c541ca7c542c79bc9e19dbed5c472"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In all cases, the DMCs will make decisions by having regard to the relevant facts, the law, and the PRA&rsquo;s priorities and policies.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="892662c1e7b24652b7ff5eed91007ae9"
+	 data-version="4774f883b9c648d29ee18c1d2a2d55da"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will make appropriate records of those decisions, including records of meetings and the representations (if any) of the recipient(s) of the notice and materials considered by the decision makers.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="72f17ed5a1274536953a265ece3d353d"
+	 data-version="89b8e87598544825976e1e7185411fd3"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Decision-making framework</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="dd0bdbae8a804fb6b74057b365fe3a9e"
+	 data-version="cea65e7c44f94045bf599a451e595d93"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Choice of committee and categorisation of decisions</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="cef7e969aaa2466e8f7d277139d05077"
+	 data-version="3dd829d5ab9e40f9b45f52b79db82db0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA divides all firms it supervises into four categories of impact.<a href="#footnote-5"><sup>5</sup></a></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						The PRA’s assessment of ‘impact’ reflects a firm’s potential to affect adversely the stability of the UK  financial system by failing, coming under operational or financial stress, or because of the way in which it  carries out its business. For further information, see the PRA’s approach to banking supervision and the  PRA’s approach to insurance supervision.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="bd043999c97b4061ad18acda6cce9b52"
+	 data-version="ae30937e76e34bc383aec9cfb44047e4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Statutory notice decisions will be divided into one of four categories. PRA staff will determine into which category each proposed decision falls.</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <td>Type A</td>
+            <td>Decisions which: (i) the PRA expects to have a significant impact on a firm's ability to carry out its business effectively; or (ii) the PRA considers could have a significant impact on its objectives.</td>
+        </tr>
+        <tr>
+            <td><span style="background-color: rgb(255, 255, 255);">Type B</span></td>
+            <td>Decisions which: (i) the PRA expects to have a moderate impact on a firm's ability to carry out its business effectively; (ii) the PRA considers could have a moderate impact on its objectives; or (iii) may set a sensitive precedent but which would otherwise have fallen under Type C.<br>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="background-color: rgb(255, 255, 255);">Type C</span></td>
+            <td>Decisions which: (i) the PRA expects to have a low impact on a firm's ability to carry out its business effectively; (ii) the PRA considers could have a low impact on its objectives; or (iii) relate to which a precedent has already been set.</td>
+        </tr>
+        <tr>
+            <td><span style="background-color: rgb(255, 255, 255);">Type EDMC</span></td>
+            <td>Decisions which are statutory notice decisions in contested enforcement cases.<sup><a href="#footnote-6">6</a></sup> All Type EDMC decisions will be made by the EDMC, regardless of impact. The list of decisions in the Act that are Type EDMC decisions and the procedures that will apply are set out in the document &lsquo;Procedures &ndash; The Enforcement Decision Making Committee&rsquo;.<sup><a href="#footnote-7">7</a></sup></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						By ‘contested’, the PRA means a case where: (i) the parties have been engaged in settlement proceedings  but cannot agree on the terms and conditions of the settlement agreement; or (ii) the PRA does not consider  it appropriate to invite settlement due to the circumstances of the particular case; or (iii) the subject does not  wish to engage in settlement discussions with the PRA.
+					</span>
+				</li>
+				<li id="footnote-7" class="rb-footnote">
+					<span class="fn-col-1">
+						7.
+					</span>
+					<span class="fn-col-2">
+						<a href="http://www.bankofengland.co.uk/prudential-regulation/publication/2024/january/procedures-the-enforcement-decision-making-committee">http://www.bankofengland.co.uk/prudential-regulation/publication/2024/january/procedures-the-enforcement-decision-making-committee</a>, as amended and supplemented from time to time.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="24171d8a975d43d1a1ee0c181a71eb3d"
+	 data-version="a065a05f4c4349929d906df2ec207b91"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						18
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For supervisory matters, the choice of which DMC will take a decision will be determined by the category of the firm in conjunction with the anticipated impact of the decision on a firm&rsquo;s ability to carry out its business effectively and/or the impact on the PRA&rsquo;s objectives. In summary, the more significant the firm and the greater the decision&rsquo;s impact, the more senior the composition of the DMC. (See Annex A at the end of this policy).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="dc4f8230f98c4d9ba46f3188ba15b554"
+	 data-version="e1ac3539f4eb46f2bf0268246c636881"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Warning Notices and first Supervisory Notices related to&nbsp;supervisory decisions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="563495deccdc42a7bc5211260cac0f66"
+	 data-version="d6cfabe39e56485e86340cc129826b5d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>General</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="bb6702c20c954a4ca196c4b8b42f443d"
+	 data-version="85f55e83a26b40ee950762fb105b48e1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						19
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If PRA staff consider that action requiring a Warning or first Supervisory Notice is appropriate, they will recommend to the relevant DMC that the notice be given.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="75a034a4627a4ecb9268fb0d93f7ac30"
+	 data-version="e4fdea9f2bf0493892beca019463a4b6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						20
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the case of a Supervisory Notice, the PRA staff will recommend whether the action should take effect immediately, on a specified date, or when the matter is no longer open to review.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4718766955264470a40ed67f4275f384"
+	 data-version="61ab51bebe2a4cf7b18c101ae020a554"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						21
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In relation to a Supervisory Notice which does not take effect immediately, a matter is open to review<sup><a href="#footnote-8">8</a></sup> when:</p>
+<ol class="new-bullet">
+    <li>(a) the period during which a person may refer a matter to the Tribunal is still running; or</li>
+    <li>(b) the matter has been referred to the Tribunal but has not been dealt with; or</li>
+    <li>(c) the matter has been referred to the Tribunal and dealt with but the period during which an appeal may be brought against the Tribunal&rsquo;s decision is still running; or</li>
+    <li>(d) such an appeal has been brought but has not been determined.</li>
+</ol>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-8" class="rb-footnote">
+					<span class="fn-col-1">
+						8.
+					</span>
+					<span class="fn-col-2">
+						As set out in section 391(8) of the Act.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8e3a0c3551d64cd89d3c8f1459a4d52b"
+	 data-version="4fc8c089815640c0829b257343b12ef6"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Approach of the DMC</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="9cc699cc62ad418d897ccb6c786f98d6"
+	 data-version="018d9172bb2f4e9b8903920d2919c632"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						22
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The DMC will:</p>
+<ol class="new-bullet">
+    <li>(a) consider whether the material on which the recommendation is based is adequate to support it; the decision maker may seek additional information about or clarification of the recommendation;</li>
+    <li>(b) if the Act requires the PRA to consult the FCA, take into consideration the FCA&rsquo;s views on the issue;</li>
+    <li>(c) satisfy itself that the action recommended is appropriate in all the circumstances; and</li>
+    <li>(d) decide whether to give the notice and settle the terms of any notice including whether and in what form to publish the notice.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="542fd8eb7f91486a9f9449c391c19a09"
+	 data-version="01b2ad472adb4d20bdd62bc5dc3ac73e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						23
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the PRA decides to issue a Warning or first Supervisory Notice, the PRA will ensure that the notice meets the requirements set out in the Act.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8f29eec19b0e4bffaa86c0f84217cdf3"
+	 data-version="bede684c3cea43c7ad7e84a071e46b41"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						24
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the PRA decides to take no further action and the PRA had previously informed the person concerned that it intended to recommend action, the PRA will communicate this promptly to the person concerned.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8f835c0d575d492faecc5873620fb95a"
+	 data-version="4ffb3a8c910941248572d1d84ea7b94c"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Decision Notices and second Supervisory Notices related to supervisory decisions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8c5514eb85b44aafb5f6a8b29db179c2"
+	 data-version="16c8959020c94e40beb802ddb79e46ef"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Approach of the DMC</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="92d694319eb143eb883d9393008b0c2f"
+	 data-version="2f362d7d69284a0281d4c31112c45854"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						25
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a DMC is asked to decide whether to give a Decision Notice or a second Supervisory Notice it will:</p>
+<ol class="new-bullet">
+    <li>(a) review the material before it;</li>
+    <li>(b) consider any representations made (whether written, oral or both) and any comments by PRA staff in respect of those representations;</li>
+    <li>(c) if the Act requires the PRA to consult the FCA, take into consideration the FCA&rsquo;s views on the issue;</li>
+    <li>(d) decide whether to give the notice and settle the terms of any notice including whether, and in what form, to publish the notice.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="afec3352ae4e40e2ba26904ad99ff352"
+	 data-version="cec5437a8cdd486ba62ad3abc7661daa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						26
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Save where the DMC decides otherwise, the same committee<sup><a href="#footnote-9">9</a></sup> that issued the Warning Notice or first Supervisory Notice will determine whether to issue a Decision Notice or a second Supervisory Notice and will decide questions concerning publication.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-9" class="rb-footnote">
+					<span class="fn-col-1">
+						9.
+					</span>
+					<span class="fn-col-2">
+						In this statement, ‘the same committee’ means a DMC of the same level, which may or may not include the  same individuals as the prior DMC.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2b7f07c02f384ad39fc36d759bc5adbc"
+	 data-version="1ea7c7e2f91f4ad492f650515d986dfd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						27
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the PRA decides to issue a Decision Notice, it will ensure that the notice meets the requirements set out in the Act.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0be1bc6bd3cf4012a26a50ed2895a6c4"
+	 data-version="1016c57cef8040be9c84c5da60889ed6"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Default procedures related to supervisory decisions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="ce913939c7194343b6be7c0c4be2ba5d"
+	 data-version="f81fb0bded5e43f2a6f6b6abba0fc6cc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						28
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the PRA receives no response or representations within the period specified in the Warning Notice, the decision maker may regard the allegations or matters in that notice as undisputed and issue a Decision Notice accordingly.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c519a78e94df4e459235da129b37a5a5"
+	 data-version="b6f752e7015c4855b01e1346bb213b41"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						29
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A person who has not previously made any response or representations to the PRA may nevertheless refer the PRA&rsquo;s decision to the Tribunal.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ae5b2abccbd74ecf83c03c6b74fe8c50"
+	 data-version="5579f15366ac4cefa0a270fdd503aa98"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						30
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the PRA receives no response or representations within the period specified in the first Supervisory Notice, the PRA will not automatically give a second Supervisory Notice. The outcome of the default procedure depends on whether the relevant action takes effect immediately or at a future point in time. If the action:</p>
+<ol class="new-bullet">
+    <li>(a) took effect immediately or on a specified date which has already passed, it continues to have effect subject to any decision on a referral to the Tribunal;</li>
+    <li>(b) was to take effect at a specified date which is still in the future, it takes effect on that date subject to any decision on referral to the Tribunal; or</li>
+    <li>(c) was to take effect when the matter was no longer open for review, it takes effect when the period to make representations or refer the matter to the Tribunal expires, unless the matter has been referred to the Tribunal.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="769833bf9f534c18844eca0d1e4476ca"
+	 data-version="d6e4807a81cc44f28ed1daf24fc83671"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						31
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In exceptional circumstances, a person who has received a Decision Notice or against whom action detailed in the Warning Notice has taken effect may show on reasonable grounds that the person to whom the notice relates did not receive the Warning Notice or that they had reasonable grounds for not responding within the specified period. In these circumstances, if the DMC considers it appropriate, with the consent of the person to whom the notice relates, it may decide to revoke the Decision Notice and the matter may be considered afresh or it may decide to give a further Decision Notice or Supervisory Notice.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7e294fb1f12d45688fb237a7d5b25b87"
+	 data-version="1f9d95b73b1748fb9405f2e6b4b45b5a"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Further Decision Notice related to supervisory decisions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="2af2ef8461d5416292acbef54bf7aff8"
+	 data-version="d8740d1a43ad462d8d5fe70aaf9401f9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						32
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Following the giving of a Decision Notice but before the PRA takes action to which the&nbsp;Decision Notice relates, the PRA may give the person concerned a further Decision Notice relating to a different action concerning the same matter.<sup><a href="#footnote-10">10</a></sup> The PRA may only do this if the person receiving the further Decision Notice gives their consent.<sup><a href="#footnote-11">11</a></sup> In these circumstances the following procedure will apply:</p>
+<ol class="new-bullet">
+    <li>(a) PRA staff will recommend to the appropriate DMC that a further Decision Notice be given;<sup><a href="#footnote-12">12</a></sup></li>
+    <li>(b) the DMC will consider whether the action proposed in the further Decision Notice is appropriate in the circumstances;</li>
+    <li>(c) if the DMC decides that the proposed action is inappropriate, it will decide not to give the further Decision Notice. In this case, the original Decision Notice will stand and the person&rsquo;s rights in relation to that notice will be unaffected. If the person&rsquo;s consent has&nbsp;already been obtained, the PRA will notify the person of the decision not to give the further Decision Notice;</li>
+    <li>(d) if the DMC decides that the action proposed is appropriate then subject to the person&rsquo;s consent being (or having been) obtained, the PRA will issue a further Decision Notice; and</li>
+    <li>(e) a person who had the right to refer the matter to the Tribunal under the original Decision Notice will have that right under the further Decision Notice. The time period in which the reference to the Tribunal may be made will begin from the date on which the further Decision Notice is given.</li>
+</ol>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-10" class="rb-footnote">
+					<span class="fn-col-1">
+						10.
+					</span>
+					<span class="fn-col-2">
+						As set out in section 388(3) of the Act.
+					</span>
+				</li>
+				<li id="footnote-11" class="rb-footnote">
+					<span class="fn-col-1">
+						11.
+					</span>
+					<span class="fn-col-2">
+						As set out in section 388(4) of the Act.
+					</span>
+				</li>
+				<li id="footnote-12" class="rb-footnote">
+					<span class="fn-col-1">
+						12.
+					</span>
+					<span class="fn-col-2">
+						Either before or after obtaining the person’s consent.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0b3787802803440c932be9a6fff80d6b"
+	 data-version="89b84de087ec4f1c859292a809e83159"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Third party rights and access to PRA material related to&nbsp;supervisory decisions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="54123ff1602b40ada2b7cf5b1a5f0a6a"
+	 data-version="a9be5441dd3b4fd2baa4e2210e87ecc4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						33
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In certain Warning and Decision Notices,<sup><a href="#footnote-13">13</a></sup> there are additional procedural rights relating to third parties<sup><a href="#footnote-14">14</a></sup> and to disclosure of PRA material.<sup><a href="#footnote-15">15</a></sup>&nbsp; These are generally cases in which the Warning Notice or Decision Notice is given on the PRA&rsquo;s own initiative rather than in response to an application or notification made to the PRA.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-13" class="rb-footnote">
+					<span class="fn-col-1">
+						13.
+					</span>
+					<span class="fn-col-2">
+						As set out in section 392 of the Act.
+					</span>
+				</li>
+				<li id="footnote-14" class="rb-footnote">
+					<span class="fn-col-1">
+						14.
+					</span>
+					<span class="fn-col-2">
+						As set out in section 393 of the Act.
+					</span>
+				</li>
+				<li id="footnote-15" class="rb-footnote">
+					<span class="fn-col-1">
+						15.
+					</span>
+					<span class="fn-col-2">
+						As set out in section 394 of the Act.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="83697c50291b4f6cbfc96c522d994c0f"
+	 data-version="8fa6ba8bf70b4c0d8effd477bb8d3623"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>The nature and procedure of the DMCs related to supervisory decisions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="0ee0398bb8de49d0b4e870eb2935a520"
+	 data-version="73edf1f6122a4da7bb5bcf4e9c1ac8d5"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Composition of DMCs</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="957f9a2210ab4995b5fae5a42c5e3ad7"
+	 data-version="fb458a52c9a14c82ac3e06d681d3ae17"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						34
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>All DMC members are PRA employees other than the non-executive members of the PRC. A DMC will usually be composed of at least three members who will include a chair, although the size may vary depending on the nature of the particular matter under consideration.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3c1cc47380424ee48000d4dbae3d3b44"
+	 data-version="ebc4f65d196c430bbe18940a1c89454a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						35
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The members of a DMC will usually meet in person or on video conferencing software but may, in appropriate cases, discuss cases in writing or by telephone or by email or other electronic means.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d50f1c340c1749f8ac22e391f4651558"
+	 data-version="f4031b3ce0b3430e96708e422fb39362"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						36
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A DMC will have a secretariat.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a9830e125ac04d7fb1389cd1a68e47ac"
+	 data-version="58dc7d36defa4c2c9a0d408ad1701b02"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>General procedures</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="cfe98225588b4a908a4e53409a65e860"
+	 data-version="b46a957c433e4b16819e62561cabc84a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						37
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The chair of a DMC will determine the manner in which a decision will be taken, ensuring that it is dealt with fairly and expeditiously.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="bc77a33ef80443138339a08dcb143b72"
+	 data-version="b01df1ea3ae546869f0d4213e754309f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						38
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Decisions made by DMCs often give rise to the need for decisions to be made on a timely basis, either to ensure the PRA complies with any relevant time period in which it must reach a decision in respect of an application by a firm or person, or to avoid prolonged periods of uncertainty for firms and supervisors in respect of proposed supervisory action. DMCs will take account of the need for timely decisions when determining the manner in which a decision will be taken and will expect recipients of notices to engage in the process accordingly.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0caa926039034212ab50122501dd2526"
+	 data-version="90f58ef437694912b81caa93927ca491"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						39
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A DMC will aim to reach a consensus on the decisions they are asked to consider. Each voting member of a DMC is entitled to vote on the matter under consideration. In the event that a consensus cannot be reached by a DMC, a decision will be taken based on a majority vote and the chair of the DMC will have the casting vote in a tie.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4f867c2826b1451bb134e3112cde5eba"
+	 data-version="2aa0be0817104c6aa93fd755af43301e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						40
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In a situation where a DMC member has to recuse themselves from a DMC due to a conflict of interest, the chair will determine whether a new member should be appointed or whether to continue deciding the matter with the remaining DMC members. This determination will be based on, among other issues, the complexity of the case and the stage the case has reached.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="04f7fb27bc3c4cd29795ef9e44317c03"
+	 data-version="0bdcac70c798473b9c5b38d282e31516"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						41
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a DMC considers it relevant to its consideration, it may ask PRA staff to obtain or provide any or all of the following:</p>
+<ol class="new-bullet">
+    <li>(a) additional information about the matter (which may require the PRA staff to undertake further investigations); or</li>
+    <li>(b) further explanation of any aspect of the PRA staff recommendation or accompanying papers; or</li>
+    <li>(c) information about the PRA priorities and policies; or</li>
+    <li>(d) legal advice<sup><a href="#footnote-16">16</a></sup>.</li>
+</ol>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-16" class="rb-footnote">
+					<span class="fn-col-1">
+						16.
+					</span>
+					<span class="fn-col-2">
+						A legal adviser who has advised PRA staff making the recommendation to the DMC may also advise the DMC directly.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="058416753985486aa8455f24ded9364f"
+	 data-version="dd762916046b417187210a51120c24db"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						42
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A DMC cannot require individuals to attend before it, provide documents or give evidence. It will make decisions based on all the relevant information available to it.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5c23a3ed3523461e80e11fe596a13d40"
+	 data-version="cadef2a57f4e47be998c3f2b92e84c17"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						43
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For enquiries relating to a statutory notice, the recipient should engage with the secretariat of the DMC. Recipients are encouraged to engage early and fully with the process. The recipient should engage with its supervisory contacts in the usual way in relation to matters not relating to the notice.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a8e4fc2292094500900d5b5d0688e147"
+	 data-version="46ef26246c5242c2ab09a78445f20b32"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Procedure for Warning Notices and first Supervisory Notices</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8a872e0193174cac9e0654e1b583b3b1"
+	 data-version="89d83e86b2264f36b61ff75f131bdddc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						44
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If PRA staff consider that action is appropriate, they will make a recommendation to the appropriate DMC that a Warning Notice or Supervisory Notice should be given.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5d1002823b3042719074b94f939fc641"
+	 data-version="54167869321c4cb890d951b9379cfbf0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						45
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			As set out above, the appropriate DMC will be selected to decide the case.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4cdf759ebde748caaeca0951cb220a44"
+	 data-version="43531cc8b4bc44feb972cd81b2ec6543"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						46
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As set out above, the DMC will consider whether it is right in all the circumstances to give the statutory notice.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6dbdd44f7eec4b6aaf67d59f7180a856"
+	 data-version="256db354a4c1449ebfb3d715e6724500"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						47
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the matter requires the PRA to consult the FCA, the PRA will take the FCA&rsquo;s views on the issue into consideration.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="28ef79236e694fcb80448ce9b8f9a5c0"
+	 data-version="82224f61f04f4200a05ea73f614306ea"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						48
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the DMC decides that the PRA should give a Warning Notice or first Supervisory Notice, the DMC will:</p>
+<ol class="new-bullet">
+    <li>(a) settle the wording of the notice;</li>
+    <li>(b) make any relevant statutory notice associated decisions; and</li>
+    <li>(c) consider whether it is desirable to publish the notice as provided in the PRA&rsquo;s approach to publication of regulatory action.<sup><a href="#footnote-17">17</a></sup></li>
+</ol>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-17" class="rb-footnote">
+					<span class="fn-col-1">
+						17.
+					</span>
+					<span class="fn-col-2">
+						For further information on the publication process, see the statement of the PRA’s approach to publication of regulatory action in relation to supervisory decisions.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="da6994c043ff4bfc8274aba19694f0f7"
+	 data-version="8c33be87db2f4acca2b51e7b003c2c23"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						49
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will make appropriate arrangements for:</p>
+<ol class="new-bullet">
+    <li>(a) the notice to be given;</li>
+    <li>(b) disclosure of the FCA&rsquo;s views on the matter or its reasons if it proposes to refuse consent or to give conditional consent where the Act requires it; and</li>
+    <li>(d) disclosure of material agreed by the DMC in accordance with section 394 of the Act.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f3a007772192489581fc740cffd7225f"
+	 data-version="7392491754aa47539803cea45497bf8c"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Procedure for representations</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="d8ec3e7d93ae483aab0f36c93e0a3fd8"
+	 data-version="e2fadd25fd5642d0b0cd518b5a6956ad"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						50
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A Warning Notice will specify that the time for making representations will be no less than 14 days. For a first Supervisory Notice, the DMC will agree an appropriate time for making representations. This will normally be no less than 14 days but there may be circumstances where the PRA considers a shorter period is appropriate or justified. The first Supervisory Notice will specify this time.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="66a6ec0151f5401cb3c6d7fc0ae7095a"
+	 data-version="f26f21686fba46c79b753aed92aa3b90"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						51
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will also, when giving the Warning or first Supervisory Notice, specify a time within which the recipient is required to indicate whether they wish to make oral representations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="68ba028f0526410c8850a1112c5f9990"
+	 data-version="57027005709d4b0a936c0aebdce5076e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						52
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The recipient of the Warning Notice or first Supervisory Notice may request an extension of time allowed for making representations. Such a request should normally be made within 14 days of the notice being given, or if in respect of a first Supervisory Notice where the period for making representations is less than 14 days, before such period expires.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0f5930f9692142a89307b0ac8e10ceff"
+	 data-version="656ad7323e2146bc873303122471b148"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						53
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a request is made for an extension of time for making representations, the chair of the allocated DMC will decide whether it is fair in all the circumstances to allow an extension, and if so, how much additional time is to be allowed for making representations. In reaching their decision, they may take account of any recommendation by PRA staff responsible for the matter.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="acbd8beb243f419ea074e9be04fbb03c"
+	 data-version="2c2366555630407694fe14908df6b4c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						54
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will notify the relevant party and the PRA staff responsible for the matter of the decision in writing.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="36a17e887a8a44af8edd71efee397858"
+	 data-version="e1b1471a56834936ba29ef62726d3168"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						55
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the recipient of the Warning or first Decision Notice indicates that they wish to make oral representations, the PRA will seek to arrange a date suitable to the recipient of the notice and the DMC that will hear the representations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="235d662246cc40429765ada3b7f52bc3"
+	 data-version="ead817f460294373bee55a7673b9e284"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						56
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The chair of the relevant meeting will ensure that the meeting is conducted so as to enable:</p>
+<ol class="new-bullet">
+    <li>(a) the recipient of the Warning or first Supervisory Notice, or any third party who has the right to do so, to make representations;</li>
+    <li>(b) the relevant DMC members to raise with those present any points or questions about the matter; and</li>
+    <li>(c) the recipient to respond to points made by the DMC.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8f147398decd42c6b8a56764ef989ffb"
+	 data-version="752368dc4e484e74887393a84d2a34a1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						57
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The chair may ask the recipient of the notice to limit their representations or response in length or to particular issues.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="96a972f23e05430bacbc3d9b43953a63"
+	 data-version="abbc3653ccb346deb9b3a9d120cd0f2f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						58
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The recipient of the Warning Notice or Supervisory Notice may choose to be legally represented at the meeting, but this is not a requirement.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1188c8f5d47c46fbb6cf45d99df879a5"
+	 data-version="53ff8f080fe0482fafc49feb79e96109"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						59
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In appropriate cases, the chair of the DMC hearing the oral representations may require the recipient of the Warning or first Supervisory Notice to provide additional information in writing after the meeting. If they do so, they will specify the time within which that information is to be provided.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="fe658f9a6120405098f20b04ff8172b3"
+	 data-version="4ad690eae4e849e29305d0946d569e24"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						60
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>During the hearing the DMC may ask either the recipient of the notice or the PRA staff responsible for the matter to comment on issues raised if it feels it is necessary to help its understanding of the case.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="eb5ca99c58784c99b3b4cf068384355d"
+	 data-version="713c3816c37d408ca03136d4189da398"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						61
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The relevant PRA staff will attend the oral hearing for the recipient of the notice but will not respond to any representations at the meeting unless asked to do so by the DMC.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a8fff0983c174c2184f2fe114bc5741f"
+	 data-version="23cd4ec4f99240358890b8fa9cacbbec"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						62
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The relevant PRA staff may provide the DMC with a written response to the oral representations no later than seven days after the hearing.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="eea5fd3d40424f8d88680c2fb67901e5"
+	 data-version="b923b17d0fa944de8c387ddb383f3389"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						63
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Generally, the relevant PRA staff will continue to update the DMC in relation to supervisory matters, in particular where these are relevant to the DMC&rsquo;s decision. The DMC will decide whether such information materially affects or changes the substance of the issues raised in the notice. Where this is the case, the DMC will consider in light of the circumstances of the matter as a whole whether the recipient of the notice should be given the opportunity to respond to such information.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b2e3fbb94fce44b798645f2afed23215"
+	 data-version="79b644b7ceae4e1ea42e03d7ae214b19"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						64
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Subject to that, while a matter is still ongoing, the DMC will not save in exceptional circumstances, after the PRA has given a Warning or first Supervisory Notice, meet with the PRA staff responsible for the case to discuss the substance of the case without other relevant parties being present or otherwise having the opportunity to respond.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5a3f2596326c45c5a42e3ef0aa1b33f1"
+	 data-version="58b03fe515124697b75f9cf727980a86"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						65
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If such exceptional circumstances arise, the DMC will disclose the occurrence and a summary of such meetings with the recipient of the notice and permit them the opportunity to respond.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b15faa0081e04356aed604d7514a2288"
+	 data-version="384148793a92465c8f6c798e92914f44"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						66
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the decision being considered is one that requires FCA consent, the PRA, in consultation with the FCA, will decide whether it is more appropriate for the FCA rather than the PRA to hear the representations and will advise the recipient of the notice accordingly.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="52e36cf3838d4841a31c7936783df9a4"
+	 data-version="b5e22882ca9e4c798c5d019722d01abf"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Procedure for Decision Notices and second Supervisory Notices</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="fccf08f6969446288ebe4f98c2d591eb"
+	 data-version="d3c468359eb346f6ad299dd133f9086d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						67
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If no representations are made in response to the Warning Notice or first Supervisory Notice, the PRA will regard as undisputed the allegations or matters set out in the notice and the default procedure set out above will apply.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="98f9c0e7133f4e49ac7b833f8a3a1e14"
+	 data-version="05b53974d68343e1abf007d64b9a506b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						68
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>However, if the representations are made, the relevant DMC will consider as set out above, whether or not to give the Decision Notice or a second Supervisory Notice.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9d8923d658044518b6a5141cd31a247a"
+	 data-version="5c7d3c405e30441abdb460a07bcb2a85"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						69
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the relevant DMC decides that the PRA will give a Decision Notice or a second Supervisory Notice it will:</p>
+<ol class="new-bullet">
+    <li>(a) include in the notice a brief summary of how it has dealt with the key representations made;</li>
+    <li>(b) make any relevant statutory notice associated decisions, including whether the PRA is required to give a copy of the notice to any third party; and</li>
+    <li>(c) consider whether it is desirable to publish the notice as provided in the PRA&rsquo;s approach to publication of regulatory action.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1707bdbbae074b7d988152b7bba92564"
+	 data-version="202631c496be4bea9f25a2156cb2d2cd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						70
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will make the appropriate arrangements for the distribution of the notice to all the relevant parties.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7d740f0b37924d139ff89555b5086ccb"
+	 data-version="9ab47539613e4000ab7a2c7f1ec9932a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						71
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If the relevant DMC decides that the PRA should not give a Decision Notice or a second Supervisory Notice, it will notify the relevant parties (including the PRA staff) of the decision in writing.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="59fa7ed987cc470cb7097b19b389ebe2"
+	 data-version="461452150d0e4395893502133575d39f"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Discontinuance of PRA actions related to supervisory decisions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="15147aacbe8c4664940c3b1650d22aa2"
+	 data-version="39fb6204ccca409dbd2c8d22b11768ae"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						72
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA staff responsible for recommending action to the relevant DMC will continue to assess the appropriateness of the proposed action in light of any new information or representations they receive, and any material change in the facts or circumstances relating to a particular matter. It may be; therefore, that they decide to give a notice of discontinuance to a person to whom a Warning Notice or a Decision Notice has been given. The decision to give a notice of discontinuance does not require the agreement of the relevant DMC, but the PRA staff will inform the relevant DMC of the discontinuance of the proceedings.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="85271f42dd5b435ab93c6c1711c02d87"
+	 data-version="c1cb72aa14c743eb8a043e371c8e0eb4"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Urgent statutory notice cases related to supervisory decisions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="2f960db16b744e188942d3bb45240e43"
+	 data-version="387fa5b39dac44c88ce548991cb484c7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						73
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In a situation where the PRA considers that, in a particular case, in order to advance any of its objectives, it is necessary to take a decision before a recommendation can be made to the appropriate DMC, a decision can be made by two individuals of at least the same grade as the individuals who would have comprised the appropriate DMC. In that case, the decision will only be taken if the two decision makers are unanimous.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3bb9e38ec54346759992b5297b61ef9f"
+	 data-version="d43529490b3b4c3eba731cbe1ac703ee"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						74
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>At least one of the two individuals will not have been directly involved in establishing the evidence on which that decision is based and where practicable the PRA will seek to ensure that both individuals will not have been so involved.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d23a91ee876d4e12922b813319827a56"
+	 data-version="8f24a8ffa59b434b9854cd12db2d5acf"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Annex A</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="5f0d3231452c42869b49fda70f68ad93"
+	 data-version="5044f59a30764dfcb3e76259016670f6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>Decision-making framework (for non-EDMC statutory notice decisions)</h5>
+<p><img src="-/media/d8af852a5220459dbaa4e012777c3d4d.ashx" alt="PRA's decision-making framework diagram"></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="30-01-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/2-statement-of-the-pras-policy/30-01-2024?p=1" data-id="3f63bf22b8384977b7ed3a818f0599d1" data-effective-date="30-01-2024" data-download-title="Statement of the PRA&#39;s policy on statutory notices and the allocation of decision making under the Act_30-01-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/2-statement-of-the-pras-policy/30-01-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making#3f63bf22b8384977b7ed3a818f0599d1&amp;subject=PRA Rulebook - SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions – Statement of the PRA&#39;s policy on statutory notices and the allocation of decision making under the Act">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="229f2d6c2de141a2b5c7988e4ca202c3"
+	 data-version="f70f583685b74e21997b966d289706c4"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Statement of the PRA’s approach to publication of regulatory action in relation to supervisory decisions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ed912347a0554c9aa6787586055e3404"
+	 data-version="addfb7fdb2354085bd4d30214f39fde2"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Introduction</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="a8dbbf2cb99a404a83ef73808818ac9b"
+	 data-version="224dda01df554e4986fb30ef1544b0cc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement of procedure and policy is issued by the Prudential Regulation Authority (PRA). It deals with the question of publication of statutory notice decisions by the PRA in relation to supervisory decisions.<sup><a href="#footnote-18">18</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-18" class="rb-footnote">
+					<span class="fn-col-1">
+						18.
+					</span>
+					<span class="fn-col-2">
+						Unless inconsistent with the subject or context, references in this statement of policy and procedure to ‘the Act’ are to the Financial Services and Markets Act 2000 (as amended).
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="096dfe3cf53b498fa9395e03eaa66903"
+	 data-version="10304c86f7944f8aa2a4d27aed61f41b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In discharging its general functions, the PRA must, so far as is reasonably possible, act in a way which advances its statutory objectives.<sup><a href="#footnote-19">19</a></sup> The PRA is also required to have regard to certain regulatory principles,<sup><a href="#footnote-20">20</a></sup> including the desirability in appropriate cases of the PRA publishing information relating to persons on whom requirements are imposed under the Act, as a means of contributing to the advancement of its objectives and the principle that the PRA should exercise its functions as transparently as possible.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-19" class="rb-footnote">
+					<span class="fn-col-1">
+						19.
+					</span>
+					<span class="fn-col-2">
+						As set out in sections 2B and 2C of the Act. 20 As set out in sections 2H and 3B of the Act.
+					</span>
+				</li>
+				<li id="footnote-20" class="rb-footnote">
+					<span class="fn-col-1">
+						20.
+					</span>
+					<span class="fn-col-2">
+						As set out in sections 2H and 3B of the Act.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="82b257f7f2184549bccbdba1c41eaaf0"
+	 data-version="3f7a8114452f4c169326321ad96d70c5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Having regard to those overarching statutory requirements, the PRA recognises the potential scope for, benefits of and public interest in an appropriate degree of transparency concerning regulatory action in relation to supervisory decisions which it takes, in terms of:</p>
+<ol class="new-bullet">
+    <li>(a)&nbsp;reinforcing publicly the PRA&rsquo;s statutory objectives and its policies;</li>
+    <li>(b) informing the financial services industry of behaviour on the part of firms or individuals which it considers to be unacceptable;</li>
+    <li>(c) deterring future and/or more widespread breaches of its regulatory requirements; and</li>
+    <li>(d) informing society as a whole of the action it is taking and the reasons for it.</li>
+</ol>
+<div></div>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4a825045d8a548b0b6abec5e25781c98"
+	 data-version="3b4025e32a854a41a809f13c20db242a"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Publication of regulatory action in relation to supervisory decisions &ndash; Warning Notices</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="7be7b73b7c264b8d97c23078363d2856"
+	 data-version="0480a5457f334211ac7f27f6e1006de1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The general position under section 391 of the Act is that neither the PRA nor the person to whom a Warning Notice is given or copied may publish the notice, or any details&nbsp;concerning it. However, in relation to certain categories of Warning Notice,<sup><a href="#footnote-21">21</a></sup> section 391 of the Act does permit the PRA, after consulting the persons to whom a relevant Warning Notice is given or copied, to publish such information as it considers appropriate about the matter to which the notice relates.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-21" class="rb-footnote">
+					<span class="fn-col-1">
+						21.
+					</span>
+					<span class="fn-col-2">
+						The categories of warning notice to which the power applies are set out in section 391(1ZB) of the Act.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4dc18ec3ddec48388a82852395f8c504"
+	 data-version="c3d1933f24704894b1ed27e2fd53c0d5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will consider a number of factors in determining whether it is appropriate to exercise its discretion in favour of publication, including the extent to which publication would in its view be likely to:</p>
+<ol class="new-bullet">
+    <li>(a)&nbsp;advance its statutory objectives;</li>
+    <li>(b) where applicable, enhance financial stability;</li>
+    <li>(c) provide a signal to firms as to the types of behaviour it considers to be unacceptable; and</li>
+    <li>(d) prevent more widespread breaches of its regulatory requirements.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7cd468109bea40d4959c78872e838aa4"
+	 data-version="5db66d2a5df04b15830577b44b7c8f62"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In accordance with section 391 of the Act, the PRA will not publish information if, in its opinion, publication would be:</p>
+<ol class="new-bullet">
+    <li>(a)&nbsp;unfair to the persons concerned;</li>
+    <li>(b) prejudicial to the safety and soundness of PRA-authorised persons; or</li>
+    <li>(c) prejudicial to securing the appropriate degree of protection for policyholders.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9be762b10f6c45d79aabe0a157694887"
+	 data-version="45e1c07410b048e887be4f38e5bcbf4d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Publication at the conclusion of regulatory action in relation to supervisory decisions &ndash; Supervisory, Decision and Final Notices</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="617a1d0669914ef7b97b3f205ba1cc4c"
+	 data-version="466c476eea9649ce9731fca6db4f59ae"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Section 391 of the Act also requires the PRA to publish &ndash; in such manner as it considers appropriate &ndash; information about the matters to which a Supervisory Notice,<sup><a href="#footnote-22">22</a></sup> a Decision Notice, and a Final Notice relate.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-22" class="rb-footnote">
+					<span class="fn-col-1">
+						22.
+					</span>
+					<span class="fn-col-2">
+						As defined in section 395(13) of the Act.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e1fcd31a09744d798441cd3a5196bd5f"
+	 data-version="78ca28ec9e7145ecb47e10b16aaa8c57"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>However, section 391 of the Act provides that the PRA may not publish such information if, in its opinion, publication would be:</p>
+<ol class="new-bullet">
+    <li>(a) unfair to the persons concerned;</li>
+    <li>(b) prejudicial to the safety and soundness of PRA-authorised persons; or</li>
+    <li>(c) prejudicial to securing the appropriate degree of protection for policyholders.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="619121848d11474f8deda78c57ec204e"
+	 data-version="6f6dcef55c984497a5a47739b3c7d7fb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will consider the circumstances of each case, but, subject to <a href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making#617a1d0669914ef7b97b3f205ba1cc4c" data-rb-content-link="Paragraph">paragraph 7</a>&nbsp;above, will ordinarily publish action in relation to supervisory decisions when this has led to the issue of a Decision Notice, as well as where it has led to the issue of a Final Notice.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e5f65b88760d4437b8c518a5812654c3"
+	 data-version="051ae7713c244ed68860bd26e69a45f3"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Making representations on issues of publication</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="b575bb42ab3648c0a9a7ccdae6ba0f0e"
+	 data-version="2380248042e14279973a1ada6b6ab27d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the PRA proposes to publish details of a Warning, Decision, Final, or Supervisory Notice, it will consider any representations made to it (whether as a result of a formal requirement to consult under the Act, or otherwise) by the subject of the notice and any person to whom the notice is copied.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9f453a9303a14a0790ec8c7487bd9c06"
+	 data-version="bc0fc8dbdb5b424f8d886b4c98ed2807"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Such representations should normally be made in writing,<sup><a href="#footnote-23">23</a></sup> and should contain detailed information &ndash; with reference to the test in section 391 of the Act &ndash; as to why it would not be appropriate for the PRA to publish details of the relevant notice.
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-23" class="rb-footnote">
+					<span class="fn-col-1">
+						23.
+					</span>
+					<span class="fn-col-2">
+						If a person wishing to make representations to the PRA on any of the matters set out in this section is  unable to provide representations in writing, for example due to that person having a disability, the PRA may allow representations to be made in person or by some other suitable means.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="07e3ff28dfc04937ae9c9bdbd66328a5"
+	 data-version="fe7a2a746de94fbebdd49685280c3156"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA will not normally decide against publication solely because it is claimed that:</p>
+<ol class="new-bullet">
+    <li>(a) publication could have negative impact on a person&rsquo;s reputation; or</li>
+    <li>(b) a person will apply (or is likely to apply) for some or all of the matter to be dealt with in private when they refer it to the Tribunal.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ad9345464f3f4491a62d917b44c68768"
+	 data-version="67b8dd245175469c87f2aa5aa1aa5ffa"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Who will take decisions on publication?</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="de0cc73fa02c477abf3a768dc94dca91"
+	 data-version="12071572bf044a79b2a2cae2cc779f17"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In relation to information concerning a Warning Notice published pursuant to the PRA&rsquo;s power under section 391 of the Act, section 395(2) provides that the PRA&rsquo;s decision making policies must be designed to ensure that the decision to publish that a Warning Notice has been issued is taken in accordance with a procedure which is, as far as possible, the same as that applicable to a decision which gives rise to an obligation to give a Warning Notice.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="dbf17178f6bf42b48d27ef6dd0e8ca3e"
+	 data-version="51260cac0b74471ebdf196e5dbf43e46"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The Statement of the PRA's policy on statutory notices and the allocation of decision making under the Act provides that the decision to publish that a Warning Notice has been issued will be taken by the same committee as took the decision to issue the Warning Notice itself.<sup><a href="#footnote-24">24</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-24" class="rb-footnote">
+					<span class="fn-col-1">
+						24.
+					</span>
+					<span class="fn-col-2">
+						Part 2 of this Statement of Policy.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="1fac795e4cfe45978dfb27b74991fe38"
+	 data-version="1f97b0ae36a0484c9a2a7d260fa45410"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In relation to Decision Notices, Final Notices, and Supervisory Notices, any decision concerning publication will normally be taken by the same committee as took the decision to issue the notice itself.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="fa19a6ad0dd34cc7828988a877bfc52d"
+	 data-version="987cd9a57d074bc6a3e26664e254afc2"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>What form will publication take?</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8ef7d88c0e3c4434b7b41f3fc9bef71f"
+	 data-version="d42b8658ac93462bb522506d319176fd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In relation to information concerning a Warning Notice published pursuant to the PRA&rsquo;s power under section 391 of the Act, the information placed in the public domain will normally include:</p>
+<ol class="new-bullet">
+    <li>(a)&nbsp;sufficient details as to the identity of the firm concerned for it to be clear to whom the matter relates. This will include, but may not be limited to, the name of the firm or a firm reference number;</li>
+    <li>(b) a brief summary of the facts which the PRA is relying on as giving rise to the decision to take regulatory action against the firm concerned; and</li>
+    <li>(c) a statement making clear that the issue of a Warning Notice is not a final decision,<sup><a href="#footnote-25">25</a></sup>&nbsp;and that if, following representations, the PRA decides to issue a Decision Notice, the subject of the notice has the option to refer the matter to the Tribunal to have the matter considered afresh.</li>
+</ol>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-25" class="rb-footnote">
+					<span class="fn-col-1">
+						25.
+					</span>
+					<span class="fn-col-2">
+						A warning notice is akin to a ‘minded to’ decision.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="544a3d2151044197a7396dc2d42435f7"
+	 data-version="cefe44fa0e3e4b309dbfa5b64616b1c2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In relation to Decision Notices, Final Notices, and Supervisory Notices, publication will generally include placing the relevant notice on the PRA&rsquo;s website. The notice may be accompanied by a press release.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6a0cdbcfca1f45b2b597efd0638eafac"
+	 data-version="aa987edcf880428d8f8029ccb04e69aa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						18
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In relation to Final Notices and Supervisory Notices, the PRA will also consider what matters it should notify to the FCA for inclusion on the FCA&rsquo;s public register.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="49ca59224c8e40fe86871febdc2c7916"
+	 data-version="81c2bd68765d4e669bb2c202ca9ab2d0"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Reviewing whether continuing publication remains appropriate</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="83cbbd322ed2413e83a5f78720c804ab"
+	 data-version="24be3bf9a8ea4981bcb30acb5a48301d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						19
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where it has published details of a Warning, Decision, Final, or Supervisory Notice, the PRA will, on request, review those notices and any related press releases that are published on its website to determine whether &ndash; at the time of the request &ndash; continued publication is appropriate, or whether they should be removed or amended.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ee6b979feaae4e54b1e4895c0bd57cc2"
+	 data-version="46ba34e3650141da8a39e1c99e031b22"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						20
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In determining whether continued publication remains appropriate, the PRA will, in particular, take into account:</p>
+<ol class="new-bullet">
+    <li>(a) whether it has continuing concerns in respect of the person and any risk they might pose to its statutory objectives;</li>
+    <li>(b) the seriousness of the person&rsquo;s misconduct;</li>
+    <li>(c) the nature of the action taken by it;</li>
+    <li>(d) whether the person is a firm or an individual;</li>
+    <li>(e) the extent to which the publication continues adequately to set out its position and/or expectations regarding behaviour in a particular area;</li>
+    <li>(f) public interest in the case (both at the time of publication and subsequently);</li>
+    <li>(g) whether continued publication is necessary for the purposes of deterrence and/or advancing its statutory objectives;</li>
+    <li>(h) how much time has passed since publication; and</li>
+    <li>(i) any representations made by the person on the continuing impact on them of the publication.<br>
+    <div></div>
+    </li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/01/2024
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="30-01-2024">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/3-statement-of-the-pras-approach-to-publication/30-01-2024?p=1" data-id="229f2d6c2de141a2b5c7988e4ca202c3" data-effective-date="30-01-2024" data-download-title="Statement of the PRA’s approach to publication of regulatory action in relation to supervisory decisions_30-01-2024" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making/3-statement-of-the-pras-approach-to-publication/30-01-2024?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---the-pras-allocation-of-decision-making#229f2d6c2de141a2b5c7988e4ca202c3&amp;subject=PRA Rulebook - SoP1/24 – The Prudential Regulation Authority’s allocation of decision making and approach to supervisory decisions – Statement of the PRA’s approach to publication of regulatory action in relation to supervisory decisions">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

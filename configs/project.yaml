@@ -1,0 +1,201 @@
+# =============================================================================
+# XRefRAG Base Configuration
+# =============================================================================
+# This file defines default values for all XRefRAG pipeline stages.
+# Individual config files can override these by importing with YAML anchors
+# or by redefining specific fields.
+#
+# Usage:
+#   1. Copy this file or create a new config
+#   2. Set corpus-specific values (corpus, run_id, paths)
+#   3. Override only what you need to change
+#
+# Supported corpora: adgm, ukfin
+# Pipeline stages: adapter → generate → curate
+# =============================================================================
+
+# Global run identifier (override per config)
+run_id: base_template
+
+# =============================================================================
+# PATHS
+# =============================================================================
+# Standard directory structure for all pipeline stages.
+# Adjust these per corpus and stage to avoid path collisions.
+paths:
+  # Adapter inputs (raw HTML, CSV, etc.)
+  raw_dir: data/<corpus>/raw
+
+  # Adapter registry outputs (fetch logs, discovery metadata)
+  registry_dir: runs/adapter_<corpus>/registry
+
+  # Adapter processed outputs (canonical passages + crossrefs)
+  processed_dir: runs/adapter_<corpus>/processed
+
+  # Generator inputs (should point to adapter processed_dir)
+  input_dir: runs/adapter_<corpus>/processed
+
+  # Working directory for intermediate artifacts
+  work_dir: runs/<stage>_<corpus>/work
+
+  # Primary output directory
+  output_dir: runs/<stage>_<corpus>/out
+
+  # Curation-specific output (defaults to output_dir if not set)
+  curate_output_dir: runs/curate_<corpus>/out
+
+# =============================================================================
+# ADAPTER (Stage 1: Document Processing)
+# =============================================================================
+adapter:
+  # Corpus type: adgm | ukfin
+  corpus: ukfin
+
+  # Document source list (corpus-specific)
+  sources: [pra_rulebook]
+
+  # Passage extraction level
+  passage_level: paragraph
+
+  # Optional: limit corpus size (0 = all, >0 = first N docs)
+  max_docs: 0
+
+  # Subset strategy for testing
+  subset_docs: null
+  subset_strategy: sorted_first_n
+  seed: 42
+
+  # Pipeline stages to run
+  stages: [download, corpus, crossref, clean, stats]
+
+  # Legacy field (kept for compatibility)
+  passage_unit_policy: canonical
+  manifest_path: null
+
+  # Cross-reference cleaning: 0 = keep all, >0 = keep top K by score
+  clean_top_k: 0
+
+  # UKFIN-specific (PRA Rulebook)
+  pra:
+    base_url: "https://www.prarulebook.co.uk/"
+    allowlist_urls_path: "data/ukfin/allowlists/pra_urls.txt"
+    discovery_index_paths: ["/pra-rules", "/guidance"]
+    user_agent: "Mozilla/5.0 (compatible; XRefRag/1.0)"
+    sleep_seconds: 0.3
+
+  # ADGM-specific (if needed, currently file-based)
+  # No additional config required for ADGM
+
+# =============================================================================
+# GENERATION (Stage 2: Q&A Generation)
+# =============================================================================
+generation:
+  # Generation methods to use
+  methods: [dpel, schema]
+
+  # Question personas (style variation)
+  personas: [basic, professional]
+
+  # Pair limits (0 = all)
+  max_edges: 0
+
+  # Questions per pair
+  qas_per_edge: 1
+
+  # LLM backend: azure | openai | none
+  llm_backend: azure
+
+  # Temperature for generation
+  temperature: 0.0
+
+  # Optional presets for quick testing
+  # preset: smoke | dev | paper | full
+  # smoke: 5 pairs, dev: 50 pairs, paper: 500 pairs, full: 1000 pairs
+
+  # Pair limits for presets
+  pair_limits:
+    smoke: 5
+    dev: 50
+    paper: 500
+    full: 1000
+
+# =============================================================================
+# JUDGE (Q&A Validation - Citation Dependency)
+# =============================================================================
+judge:
+  # Enable LLM-based validation
+  enabled: true
+
+  # Backend: azure | openai | none
+  llm_backend: azure
+
+  # Multi-pass evaluation (1-3 recommended; 5+ expensive)
+  num_judge_passes: 1
+
+  # Temperature (0.0 = deterministic, 0.1-0.2 = slight variance for consensus)
+  temperature: 0.0
+
+  # Rate limiting between passes (seconds)
+  rate_limit_delay: 0.1
+
+  # Model/deployment auto-loaded from environment variables:
+  #   AZURE_OPENAI_API_KEY
+  #   AZURE_OPENAI_ENDPOINT
+  #   AZURE_OPENAI_API_VERSION
+  #   AZURE_OPENAI_DEPLOYMENT_GPT52 (or similar)
+
+  # Legacy fields (kept for compatibility)
+  score_threshold: 7.0
+  borderline_band: [6.5, 7.5]
+  adaptive_repeats: 2
+
+# =============================================================================
+# CURATION (Stage 3: IR Agreement + Judge)
+# =============================================================================
+curation:
+  # IR ensemble agreement policy
+  ir_agreement:
+    # Top-K retrieval depth
+    top_k: 20
+
+    # Voting thresholds (pair-level, both must hold)
+    keep_threshold: 4 # Both src & tgt must have ≥4 votes to KEEP
+    judge_threshold: 3 # Either src or tgt has exactly 3 votes → JUDGE
+    drop_threshold: 2 # Either src or tgt has ≤2 votes → DROP
+
+    # IR retrievers (must match available runs)
+    retrievers: [bm25, ft_e5, rrf_bm25_e5, ce_rerank_union200]
+
+    # IR method (majority_voting is default)
+    ir_method: majority_voting
+
+    # RRF parameter
+    rrf_k: 60
+
+    # Legacy field (kept for compatibility)
+    agreement_threshold: 0.8
+
+  # Judge settings for borderline items
+  judge:
+    enabled: true
+    llm_backend: azure
+    num_judge_passes: 1
+    temperature: 0.0
+    rate_limit_delay: 0.1
+# =============================================================================
+# ANSWER VALIDATION (Optional Stage 4)
+# =============================================================================
+# Answer validation runs after curation judge.
+# Can be controlled via CLI flag: --skip-answer
+# No additional config required; uses same judge settings.
+
+# =============================================================================
+# NOTES
+# =============================================================================
+# 1. Override paths per corpus/stage to avoid collisions
+# 2. Adapter stage uses: raw_dir, registry_dir, processed_dir
+# 3. Generator stage uses: input_dir (← adapter processed_dir), work_dir, output_dir
+# 4. Curation stage uses: input_dir (← generator output_dir), output_dir, curate_output_dir
+# 5. Judge requires environment variables for Azure/OpenAI credentials
+# 6. IR retrievers must match TREC run files in output_dir
+# 7. Strict citation-dependency is enforced automatically in judge code

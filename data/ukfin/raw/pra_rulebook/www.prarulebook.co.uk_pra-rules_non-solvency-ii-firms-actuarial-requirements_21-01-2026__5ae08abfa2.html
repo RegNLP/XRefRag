@@ -1,0 +1,2592 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{DC26CF39-36AB-4435-90FB-96D65C66B5BD} -->
+<title>Non-Solvency II Firms – Actuarial Requirements | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Non-Solvency II Firms – Actuarial Requirements">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Non-Solvency II Firms – Actuarial Requirements">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwojuq-f-67544e87e-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":37,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2562bed9","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51204,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370217","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==1vIJU1vGBZleCO4ma/F6IrQDvdR7ltVOR+kGx71nfXqBRa/mYzZWP/aGtomFGGYJ59PwKHIwJ/0ngJp+N73ekAYHNxBk6jFGCuERaa9bmvGXdYlGgwYyRw8mPe4kF5q0wAe0nPlPipDd4HNZG3FGW5cFp6LR/CucATPktCdfnyqIqS/BCrrL40ORM561E3IBIA5MD31673XnOYgHAnGW/uINOvGYEWyautKSYxJzppbCcAulmZnepodQsdohTUZpKZQ5nV6aUKsmYSGtFGeI7TIFAIfZjPgloj8UiJw3X/z/7Icu+HQxB2AaoD2N4wFvcwQLjTpDhztnumehLiP+u1VXda2cRhMf49dP47B/zsvfyF8+Mkr85WNW+jJcD396pspHFNXI2Am7Mw6r8nwO0+4ymj7OZ7P6vHf5cnw36Fk=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Non-Solvency II Firms – Actuarial Requirements				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Non-Solvency II Firms – Actuarial Requirements
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/01-01-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/01-07-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/07/2016
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/10-12-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						10/12/2018
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-d06a1a1f-d45c-4c63-98ec-6aab62cda37b">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-d06a1a1f-d45c-4c63-98ec-6aab62cda37b"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Non-Solvency II Firms – Actuarial Requirements
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-07-2024#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Non-Solvency II Firms – Actuarial Requirements)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/non-authorised-persons">
+					Non-authorised persons
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=b617280a73e940d2bb977b4035bd57be">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Non-Solvency II Firms – Actuarial Requirements
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/prudential-regime-and-implementation-of-the-senior-insurance-managers-regime-for-non-solvency-2" class="list-links__link" target="_blank">
+										PS26/15 - &quot;The prudential regime, and implementation of the Senior Insurance Managers Regime, for non-Solvency II firms&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/reporting-requirements-for-non-solvency-2-insurance-firms" class="list-links__link" target="_blank">
+										PS19/16 - Reporting requirements for non-Solvency II insurance firms
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/strengthening-accountability-implementing-the-extension-of-the-smcr-to-insurers" class="list-links__link" target="_blank">
+										PS26/18 - Strengthening accountability: Implementing the extension of the SM&amp;CR to insurers
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+						<div class="accordion-head">
+							<h3>
+								<button class="accordion-button">
+									Other Links<span class="accordion-toggle"></span>
+								</button>
+							</h3>
+						</div>
+						<div class="accordion-content">
+							<ul class="list-links">
+									<li class="list-links__item">
+										<a href="http://www.bankofengland.co.uk/pra/Pages/supervision/smallinsurers/nondirective.aspx" rel="noopener noreferrer" class="list-links__link" target="_blank">
+										Non-Directive Firms
+										</a>
+									</li>
+							</ul>
+						</div>
+					</li>
+	</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/non-solvency-ii-firms-actuarial-requirements/10-12-2018_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/10-12-2018?p=1" data-id="b617280a73e940d2bb977b4035bd57be" data-effective-date="10-12-2018" data-download-title="Non-Solvency II Firms – Actuarial Requirements_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements&amp;subject=PRA Rulebook - Non-Solvency II Firms – Actuarial Requirements">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="2e1a2521f836440983cddf9c63b14c51"
+	 data-version="86f3cb356734435e92d06eda0b62d1a1"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="93cdeb70e35e4754906ba394d1433656"
+	 data-version="43f443c3fc4e40d2ab0d8a64aed01b1e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise stated, this Part applies to a <em><a  class="glossary-link" title="non-directive insurer" href="#glossary-term-11da8de4e3ea416bb8732a6f2fe0eb07" data-mce-linktype="2" data-glossary-id="77344">non-directive insurer</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=93cdeb70e35e4754906ba394d1433656">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1d1ba9db80ab4e6badad7eeff961cf56"
+	 data-version="3a8ebb3277634bfa9f8e06bca18c81fe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a  title="Chapters 2" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#91af145fdcd04ae390f145afecfc7d11" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Chapters 2</a> to <a  title="6" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#24dae1b8176548f18d8a94de93f00665" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">6</a> only apply to a <em><a  class="glossary-link" title="long-term insurer" href="#glossary-term-4117945f686e4f7ab8ca0c3e84a1a69f" data-mce-linktype="2" data-glossary-id="52847">long-term insurer</a></em> which is not a <em><a  class="glossary-link" title="non-directive friendly society" href="#glossary-term-e2dba345e3f746b5838bd8b4f03bb781" data-mce-linktype="2" data-glossary-id="53219">non-directive friendly society</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/01-01-2016#1d1ba9db80ab4e6badad7eeff961cf56">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 01/07/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1d1ba9db80ab4e6badad7eeff961cf56">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e6f30ee1c48c4f848f6a15c2f1a9dcc6"
+	 data-version="9908ace766254162945ee9b5af3f6bc0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a  title="Chapter 7" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#a94171f581b14083a4c307e3f3e20ffc" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">Chapter 7</a> only applies to a <em><a  class="glossary-link" title="non-directive friendly society" href="#glossary-term-e2dba345e3f746b5838bd8b4f03bb781" data-mce-linktype="2" data-glossary-id="53219">non-directive friendly society</a></em> other than:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a  class="glossary-link" title="partnership pension society" href="#glossary-term-b9a9f70435814fd3b85441665767ba3a" data-mce-linktype="2" data-glossary-id="77969">partnership pension society</a></em>; and</li>
+<li>(2) a <em><a  class="glossary-link" title="flat rate benefits business friendly society" href="#glossary-term-be8094f3398042e183d5725fbf054205" data-mce-linktype="2" data-glossary-id="77305">flat rate benefits business friendly society</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/01-01-2016#e6f30ee1c48c4f848f6a15c2f1a9dcc6">
+			Past
+			<span class="visually-hidden">
+				version of 1.3 before 01/07/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e6f30ee1c48c4f848f6a15c2f1a9dcc6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1dad00618d784da5a979b37d8d0cd38e"
+	 data-version="339427299fa04b71adb69c6a80871c6e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Part applies to an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> appointed under <a  title="2" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#91af145fdcd04ae390f145afecfc7d11" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">2</a> or <a  title="7" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#a94171f581b14083a4c307e3f3e20ffc" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">7</a> or appointed under or as a result of a statutory provision other than in <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1dad00618d784da5a979b37d8d0cd38e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="68b156870a3b4f04843c7e8a35139e07"
+	 data-version="6e23ebafccae483ba8b8b0d5d6c102ac"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a  class="glossary-link" title="actuarial function" href="#glossary-term-984635e2bbe84e389d4ba48196b47fbb" data-mce-linktype="2" data-glossary-id="77577">actuarial function</a></em></p>
+<p style="padding-left: 30px;">means the function of acting in the capacity of an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> appointed by a firm under <a  title="2.1(1)" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1(1)</a> to perform the duties set out in <a  title="5" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#0767e399c0654488aa7cc6bb7f03b103" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">5</a>.</p>
+<p><em><a  class="glossary-link" title="appropriate actuary" href="#glossary-term-2647c65a3aac4ad5b2edeaf12adf382b" data-mce-linktype="2" data-glossary-id="77578">appropriate actuary</a></em></p>
+<p style="padding-left: 30px;">means an <em class="rule-style-2">actuary</em> appointed under <a  title="7.1" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#ae89c13827ea4ec498518b346995dc3c" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">7.1</a></p>
+<p><em><a  class="glossary-link" title="Chief Executive function" href="#glossary-term-cb46fcef9a1241f79089949bd4f368d3" data-mce-linktype="2" data-glossary-id="77579">Chief Executive function</a></em></p>
+<p style="padding-left: 30px;">for a <em><a  class="glossary-link" title="large non-directive insurer" href="#glossary-term-a80e0f791d3f4f619db330e241fc8769" data-mce-linktype="2" data-glossary-id="77326">large non-directive insurer</a></em> has the meaning given in <a  title="Large Non-Solvency II Firms &ndash; Senior Management Functions 3.1" href="/pra-rules/large-non-solvency-ii-firms-senior-management-functions#66509d0e08884744b2c30d38b6bfd375" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Large Non-Solvency II Firms &ndash; Senior Management Functions 3.1</a>.</p>
+<p><em><a  class="glossary-link" title="With-Profits Actuary function" href="#glossary-term-a6c33da40eb94d61a2d41062ee4d1551" data-mce-linktype="2" data-glossary-id="77580">With-Profits Actuary function</a></em></p>
+<p style="padding-left: 30px;">for a <em><a  class="glossary-link" title="large non-directive insurer" href="#glossary-term-a80e0f791d3f4f619db330e241fc8769" data-mce-linktype="2" data-glossary-id="77326">large non-directive insurer</a></em> has the meaning given in <a  title="Large Non-Solvency II Firms - Senior Management Functions 8.2" href="/pra-rules/large-non-solvency-ii-firms-senior-management-functions#1076258ec2ff4139946336cea54396e9" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Large Non-Solvency II Firms - Senior Management Functions 8.2</a> and for a <em><a  class="glossary-link" title="small non-directive insurer" href="#glossary-term-eb68d2dd8250400d81d6977d3bfaac41" data-mce-linktype="2" data-glossary-id="67108">small non-directive insurer</a></em> has the meaning given in <a  title="Non-solvency II Firms &ndash; Senior Management Functions 5.1" href="/pra-rules/non-solvency-ii-firms---senior-management-functions#3a74f03ff1c3490a8684d1d955669f6a" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Non-solvency II Firms &ndash; Senior Management Functions 5.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					10/12/2018
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/01-01-2016#68b156870a3b4f04843c7e8a35139e07">
+			Past
+			<span class="visually-hidden">
+				version of 1.5 before 10/12/2018
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=68b156870a3b4f04843c7e8a35139e07">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/1-application-and-definitions/10-12-2018?p=1" data-id="2e1a2521f836440983cddf9c63b14c51" data-effective-date="10-12-2018" data-download-title="Application and Definitions_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/1-application-and-definitions/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements#2e1a2521f836440983cddf9c63b14c51&amp;subject=PRA Rulebook - Non-Solvency II Firms – Actuarial Requirements – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=2e1a2521f836440983cddf9c63b14c51">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="91af145fdcd04ae390f145afecfc7d11"
+	 data-version="7ba5108234914c18bef788fd35d814ff"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appointment of Actuaries
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="79a7972215d24441be95997f29eaba4f"
+	 data-version="ee868872970c43048be66b5e7062514e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must appoint one or more <em><a  class="glossary-link" title="actuaries" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuaries</a></em> to perform and be responsible for:</p>
+<p>(1) the <em><a  class="glossary-link" title="actuarial function" href="#glossary-term-984635e2bbe84e389d4ba48196b47fbb" data-mce-linktype="2" data-glossary-id="77577">actuarial function</a></em> in respect of all classes of its <em><a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em>; and</p>
+<p>(2) the <em><a  class="glossary-link" title="With-Profits Actuary function" href="#glossary-term-a6c33da40eb94d61a2d41062ee4d1551" data-mce-linktype="2" data-glossary-id="77580">With-Profits Actuary function</a></em> in respect of all classes of its <em><a  class="glossary-link" title="with-profits insurance business" href="#glossary-term-6ca034d9209a46549402da0824d65f8c" data-mce-linktype="2" data-glossary-id="52937">with-profits insurance business</a></em> (if any).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=79a7972215d24441be95997f29eaba4f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="57d7ddfbae5b419ba79307e20b776d06"
+	 data-version="562d00556eb14d2980f288729992530d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must:</p>
+<ol class="new-bullet">
+<li>(1) when it becomes aware that a vacancy of an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> required under <a  title="2.1" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> will arise or has arisen:</li>
+<ol>
+<li>(a) notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>; and</li>
+<li>(b) give reasons for the vacancy,</li>
+</ol>
+<li>without delay, using the form referred to in <a  style="line-height: 17.6px; text-indent: -14.3px;" title="Notifications 10.3" href="/pra-rules/notifications#0c99cf7108854403848ac89a1eb5218f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Notifications 10.3</a>;</li>
+<li>(2) appoint an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> to fill any vacancy of an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> required under <a  title="2.1" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a>;</li>
+<li>(3) ensure that the replacement <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> can take up the vacant post at the time the vacancy arises or as soon as reasonably practicable after that; and</li>
+<li>(4) when a new <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> is appointed:</li>
+<ol>
+<li>(a) notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of that appointment; and</li>
+<li>(b) advise the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> of the name and business address of the <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> appointed and the date from which the appointment has effect,</li>
+</ol>
+<li>using the form referred to in <a  title="Notifications 10.3" href="/pra-rules/notifications#0c99cf7108854403848ac89a1eb5218f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Notifications 10.3</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=57d7ddfbae5b419ba79307e20b776d06">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a4384baddade488ca3baa2a7eb081a6f"
+	 data-version="7b21b307462a4ae0a79026abb74610d4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> fails to appoint an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> under <a  title="2.1" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> within 28 days of a vacancy arising the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> may appoint an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> to perform either of the functions in <a  title="2.1(1)" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1(1)</a> or <a  title="(2)" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">(2)</a> for that <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> on the following terms:</p>
+<ol class="new-bullet">
+<li>(1) the <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> to be remunerated by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> on the basis agreed between the actuary and <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or, in the absence of agreement, on a reasonable basis; and</li>
+<li>(2) the <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> to perform the function required under <a  title="2.1" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> until he resigns or the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> appoints another <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a4384baddade488ca3baa2a7eb081a6f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7a7cf1026231426393dd395e661b8a39"
+	 data-version="7ec6799f446c4a3391f87892f9e56aee"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must comply with and is bound by the terms on which an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> has been appointed by the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7a7cf1026231426393dd395e661b8a39">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6098c8bcd6414214867d300796ef8649"
+	 data-version="572982d6b07a4ee6af843b8bc73c52d5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> appoints an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> to perform either of the functions in <a  title="2.1(1)" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1(1)</a> or <a  title="(2)" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">(2)</a> for a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, the requirements under <a  title="2.1" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a> to make appointments under that rule still apply to that <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6098c8bcd6414214867d300796ef8649">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/2-appointment-of-actuaries/10-12-2018?p=1" data-id="91af145fdcd04ae390f145afecfc7d11" data-effective-date="10-12-2018" data-download-title="Appointment of Actuaries_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/2-appointment-of-actuaries/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements#91af145fdcd04ae390f145afecfc7d11&amp;subject=PRA Rulebook - Non-Solvency II Firms – Actuarial Requirements – Appointment of Actuaries">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=91af145fdcd04ae390f145afecfc7d11">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Appointment of Actuaries
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="704e9aa6d2ac4dd297af9b09ae667c57"
+	 data-version="aa3ded53ca3d41f8b3be0501ff1be627"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Actuaries’ Qualifications
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8697b71eaea14fb894688294f7b7bd2b"
+	 data-version="2d84fceef9ad434ea2e4aa30e0a0b2f8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Before a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> appoints an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> under <a  title="2.1" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#79a7972215d24441be95997f29eaba4f" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a>, it must take reasonable steps to ensure that the <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> has the required skill and experience to perform his functions under the <em><a  class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em> commensurate with the nature, scale and complexity of the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> business and the requirements and standards under the <em><a  class="glossary-link" title="regulatory system" href="#glossary-term-8b88ef3d27fa45aeba6c11a8df1a92ac" data-mce-linktype="2" data-glossary-id="52098">regulatory system</a></em> to which it is subject.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8697b71eaea14fb894688294f7b7bd2b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="697a5dc3e5f94df18cd28b894f57e2b5"
+	 data-version="b5edb83d8593443c97fb291f12f14764"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not appoint as <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> a <em><a  class="glossary-link" title="person" href="#glossary-term-eb70cbf7eaaa4c4a836476331bd90564" data-mce-linktype="2" data-glossary-id="77486">person</a></em> who is disqualified under Part XXII of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> from acting as an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> either for that <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or for a relevant class of <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=697a5dc3e5f94df18cd28b894f57e2b5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="512ff7527f304fdc8b228cc81b2923b1"
+	 data-version="a3918adc5afb471b8fcc877ed17df888"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take reasonable steps to ensure that an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em>, which it is planning to appoint or has appointed, provides information to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> about the <em><a  class="glossary-link" title="actuary&rsquo;s" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary&rsquo;s</a></em> qualifications, skills, experience and any other relevant matters in accordance with the reasonable requests of the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em>.<br /><br /></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=512ff7527f304fdc8b228cc81b2923b1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/3-actuaries-qualifications/10-12-2018?p=1" data-id="704e9aa6d2ac4dd297af9b09ae667c57" data-effective-date="10-12-2018" data-download-title="Actuaries’ Qualifications_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/3-actuaries-qualifications/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements#704e9aa6d2ac4dd297af9b09ae667c57&amp;subject=PRA Rulebook - Non-Solvency II Firms – Actuarial Requirements – Actuaries’ Qualifications">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=704e9aa6d2ac4dd297af9b09ae667c57">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Actuaries’ Qualifications
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="52547f87e0f44a06aa8bf0438833b23b"
+	 data-version="1eccd2e7086a4ef48a5592dde5ee156d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Conflicts of Interest
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="d26ac18cbd154937ae4d470de9d58e1f"
+	 data-version="6ba74bdf36614640a6a1efeca9b923ac"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take reasonable steps to ensure that an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> that it appoints:</p>
+<ol class="new-bullet">
+<li>(1) does not perform the <em><a  class="glossary-link" title="Chief Executive function" href="#glossary-term-cb46fcef9a1241f79089949bd4f368d3" data-mce-linktype="2" data-glossary-id="77579">Chief Executive function</a></em>;<br /><br /></li>
+<li>(2) does not, if he is to perform the <em><a  class="glossary-link" title="With-Profits Actuary function" href="#glossary-term-a6c33da40eb94d61a2d41062ee4d1551" data-mce-linktype="2" data-glossary-id="77580">With-Profits Actuary function</a></em>, become a member of the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em>; and<br /><br /></li>
+<li>(3) does not perform any other function on behalf of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> which could give rise to a significant conflict of interest.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d26ac18cbd154937ae4d470de9d58e1f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/4-conflicts-of-interest/10-12-2018?p=1" data-id="52547f87e0f44a06aa8bf0438833b23b" data-effective-date="10-12-2018" data-download-title="Conflicts of Interest_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/4-conflicts-of-interest/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements#52547f87e0f44a06aa8bf0438833b23b&amp;subject=PRA Rulebook - Non-Solvency II Firms – Actuarial Requirements – Conflicts of Interest">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=52547f87e0f44a06aa8bf0438833b23b">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Conflicts of Interest
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="0767e399c0654488aa7cc6bb7f03b103"
+	 data-version="d1f75fa74d4e4158ba278f9090d48783"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					The Actuarial Function
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a7cc45a32ead4bfaa3847339c8956f6f"
+	 data-version="299d51e33d104000ae70ae3a4bbe339d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> appointed to perform the <em><a  class="glossary-link" title="actuarial function" href="#glossary-term-984635e2bbe84e389d4ba48196b47fbb" data-mce-linktype="2" data-glossary-id="77577">actuarial function</a></em> must, in respect of those classes of the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="long-term insurance business" href="#glossary-term-0e74283109224a46aa86e62bfc7829bc" data-mce-linktype="2" data-glossary-id="52203">long-term insurance business</a></em> which are covered by his appointment:</p>
+<ol class="new-bullet">
+<li>(1) advise the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> management, at the level of seniority that is reasonably appropriate, on the risks the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> runs in so far as they may have a material impact on the<em> <a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> ability to meet <em><a  class="glossary-link" title="liabilities to policyholders" href="#glossary-term-bf6bdf69f66e47fca194dd25026cc2b2" data-mce-linktype="2" data-glossary-id="77327">liabilities to policyholders</a></em> in respect of <em><a  class="glossary-link" title="contracts of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long-term insurance</a></em> as they fall due and on the capital needed to support the business, including regulatory capital requirements;</li>
+<li>(2) monitor those risks and inform the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> management, at the level of seniority that is reasonably appropriate, if he has any material concerns or good reason to believe that the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>:</li>
+<ol>
+<li>(a) is not meeting <em><a  class="glossary-link" title="liabilities to policyholders" href="#glossary-term-bf6bdf69f66e47fca194dd25026cc2b2" data-mce-linktype="2" data-glossary-id="77327">liabilities to policyholders</a></em> under <em><a  class="glossary-link" title="contracts of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long-term insurance</a></em> as they fall due, or may not be doing so, or might not have done so, or might, in reasonably foreseeable circumstances, not do so;</li>
+<li>(b) is, or may be, effecting new <em><a  class="glossary-link" title="contracts of long-term insurance" href="#glossary-term-c0a227f630af4597ac4ca0c135f13d6d" data-mce-linktype="2" data-glossary-id="52199">contracts of long-term insurance</a></em> on terms under which the resulting income earned is insufficient, under reasonable actuarial methods and assumptions, and taking into account the other financial resources that are available for the purpose, to enable the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to meet its <em><a  class="glossary-link" title="liabilities to policyholders" href="#glossary-term-bf6bdf69f66e47fca194dd25026cc2b2" data-mce-linktype="2" data-glossary-id="77327">liabilities to policyholders</a></em> as they fall due (including amounts required to enable the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> to fulfil its regulatory duty to treat its customers fairly under any relevant provision in the <em><a  class="glossary-link" title="FCA Handbook" href="#glossary-term-9d5dca66726043199c5ed84516de8c41" data-mce-linktype="2" data-glossary-id="53205">FCA Handbook</a></em>);</li>
+<li>(c) does not, or may not, have sufficient financial resources to meet <em><a  class="glossary-link" title="liabilities to policyholders" href="#glossary-term-bf6bdf69f66e47fca194dd25026cc2b2" data-mce-linktype="2" data-glossary-id="77327">liabilities to policyholders</a></em> as they fall due (including reasonable bonus expectations) and the capital needed to support the business, including regulatory capital requirements or, if the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> currently has sufficient resources, might, in reasonably foreseeable circumstances, not continue to have them;</li>
+</ol>
+<li>(3) advise the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> on the methods and assumptions to be used for the investigation required by <a  title="Insurance Company &ndash; Reporting 5.8" href="/pra-rules/insurance-company---reporting#aaa1057e18c64b90b86f697c3e1f8f86" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Insurance Company &ndash; Reporting 5.8</a> and <a  title="5.9" href="/pra-rules/insurance-company---reporting#e00efec084334c5f96ce8096b060a8d4" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.9</a>;</li>
+<li>(4) perform those investigations and calculations in (3), in accordance with the methods and assumptions determined by the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em>;</li>
+<li>(5) report to the<em> <a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> <em><a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> on the results of the investigations and calculations in (3);</li>
+<li>(6) in the case of a <em><a  class="glossary-link" title="friendly society" href="#glossary-term-22c42de932314999a51c8775be62fa34" data-mce-linktype="2" data-glossary-id="77484">friendly society</a></em>, perform the functions of the appropriate actuary under section 87 (Actuary's report as to margin of solvency) of the Friendly Societies Act 1992; and</li>
+<li>(7) if applicable, be responsible for the actuarial <em><a  class="glossary-link" title="function" href="#glossary-term-f14f3b59def149e69b98d2b4a7fd4a4d" data-mce-linktype="2" data-glossary-id="52829">function</a></em> required by <a  title="Governance 10.2" href="/pra-rules/non-solvency-ii-firms-governance#c71130f48d544cedbb15686fcbb58e21" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Governance 10.2</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/01-01-2016#a7cc45a32ead4bfaa3847339c8956f6f">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 01/07/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a7cc45a32ead4bfaa3847339c8956f6f">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/5-the-actuarial-function/10-12-2018?p=1" data-id="0767e399c0654488aa7cc6bb7f03b103" data-effective-date="10-12-2018" data-download-title="The Actuarial Function_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/5-the-actuarial-function/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements#0767e399c0654488aa7cc6bb7f03b103&amp;subject=PRA Rulebook - Non-Solvency II Firms – Actuarial Requirements – The Actuarial Function">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=0767e399c0654488aa7cc6bb7f03b103">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						The Actuarial Function
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="24dae1b8176548f18d8a94de93f00665"
+	 data-version="11a7309d03ad4e6da5099cff269e19da"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					With-Profits Actuary Function
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6a74326ca92c4870a99f4d7b397a9244"
+	 data-version="452b21ee114a407d9235e259926003ec"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> appointed to perform the <em><a  class="glossary-link" title="With-Profits Actuary function" href="#glossary-term-a6c33da40eb94d61a2d41062ee4d1551" data-mce-linktype="2" data-glossary-id="77580">With-Profits Actuary function</a></em> must:</p>
+<ol class="new-bullet">
+<li>(1) advise the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> management, at the level of seniority that is reasonably appropriate, on key aspects of the discretion to be exercised affecting those classes of the <em><a  class="glossary-link" title="with-profits insurance business" href="#glossary-term-6ca034d9209a46549402da0824d65f8c" data-mce-linktype="2" data-glossary-id="52937">with-profits insurance business</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in respect of which he has been appointed;</li>
+<li>(2) at least once a year, report to the<em> <a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="governing body" href="#glossary-term-e52a4e0237e045fbb5ed639e9178ef9c" data-mce-linktype="2" data-glossary-id="52145">governing body</a></em> on key aspects (including those aspects of the<em> <a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> application of its <em><a  class="glossary-link" title="PPFM" href="#glossary-term-3e0f4195268a488ea41d1fa3f485d4f5" data-mce-linktype="2" data-glossary-id="52875">PPFM</a></em> on which the advice described in (1) has been given) of the discretion exercised in respect of the period covered by his report affecting those classes of <em><a  class="glossary-link" title="with-profits insurance business" href="#glossary-term-6ca034d9209a46549402da0824d65f8c" data-mce-linktype="2" data-glossary-id="52937">with-profits insurance business</a></em> of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>;</li>
+<li>(3) request from the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> such information and explanations as he reasonably considers necessary to enable him properly to perform the duties in (1) and (2);</li>
+<li>(4) advise the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> as to the data and systems that he reasonably considers necessary to be kept and maintained to provide the duties in (3); and</li>
+<li>(5) in the case of a <em><a  class="glossary-link" title="friendly society" href="#glossary-term-22c42de932314999a51c8775be62fa34" data-mce-linktype="2" data-glossary-id="77484">friendly society</a>,</em> perform the function of appropriate actuary under section 12 (Reinsurance) of the Friendly Societies Act 1992 or section 23A (Reinsurance) of the Friendly Societies Act 1974 as applicable, in respect of those classes of its <em><a  class="glossary-link" title="with-profits insurance business" href="#glossary-term-6ca034d9209a46549402da0824d65f8c" data-mce-linktype="2" data-glossary-id="52937">with-profits insurance business</a></em> covered by his appointment.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6a74326ca92c4870a99f4d7b397a9244">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/6-with-profits-actuary-function/10-12-2018?p=1" data-id="24dae1b8176548f18d8a94de93f00665" data-effective-date="10-12-2018" data-download-title="With-Profits Actuary Function_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/6-with-profits-actuary-function/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements#24dae1b8176548f18d8a94de93f00665&amp;subject=PRA Rulebook - Non-Solvency II Firms – Actuarial Requirements – With-Profits Actuary Function">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=24dae1b8176548f18d8a94de93f00665">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						With-Profits Actuary Function
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="a94171f581b14083a4c307e3f3e20ffc"
+	 data-version="d5a7516f76414714bea9e707c884e67c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appropriate Actuary
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ae89c13827ea4ec498518b346995dc3c"
+	 data-version="3c41df7af7cf46a898962c24b7fa2e35"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must:</p>
+<ol class="new-bullet">
+<li>(1) appoint an <em style="line-height: 17.6px; text-indent: -14.3px;"><a  class="glossary-link" title="appropriate actuary" href="#glossary-term-2647c65a3aac4ad5b2edeaf12adf382b" data-mce-linktype="2" data-glossary-id="77578">appropriate actuary</a></em> to carry out the triennial investigation and prepare the return required by <a  title="Friendly Society &ndash; Reporting 2.1" href="/pra-rules/friendly-society---reporting#3d570f126d4b45d9aff270c6e639f20d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Friendly Society &ndash; Reporting 2.1</a> and <a  title="2.2" href="/pra-rules/friendly-society---reporting#b1c8728393994e7f9c9f76b390cff1d5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a> and provide the certificate or statement required by <a  title="Friendly Society &ndash; Reporting 2.3" href="/pra-rules/friendly-society---reporting#a4eddb15acc9479d9ac50f0fa5cfb6da" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Friendly Society &ndash; Reporting 2.3</a>; and</li>
+<li>(2) appoint a replacement for that <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> if he ceases to hold office before he has carried out the duty described in (1).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/01-01-2016#ae89c13827ea4ec498518b346995dc3c">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 01/07/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ae89c13827ea4ec498518b346995dc3c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="86a25957407a4fe08aeaa761f6e86f5b"
+	 data-version="ad6f05a291ce475fb094b25705443e7c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must not appoint as <em><a  class="glossary-link" title="appropriate actuary" href="#glossary-term-2647c65a3aac4ad5b2edeaf12adf382b" data-mce-linktype="2" data-glossary-id="77578">appropriate actuary</a></em> a <em><a  class="glossary-link" title="person" href="#glossary-term-eb70cbf7eaaa4c4a836476331bd90564" data-mce-linktype="2" data-glossary-id="77486">person</a></em> who is disqualified under Part XXII of <em><a  class="glossary-link" title="FSMA" href="#glossary-term-d7aa340192de4d37b63a54ba1489ac08" data-mce-linktype="2" data-glossary-id="52115">FSMA</a></em> (Auditors and Actuaries) from acting as an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> either for that <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or for a relevant class of <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>.</em></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=86a25957407a4fe08aeaa761f6e86f5b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/7-appropriate-actuary/10-12-2018?p=1" data-id="a94171f581b14083a4c307e3f3e20ffc" data-effective-date="10-12-2018" data-download-title="Appropriate Actuary_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/7-appropriate-actuary/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements#a94171f581b14083a4c307e3f3e20ffc&amp;subject=PRA Rulebook - Non-Solvency II Firms – Actuarial Requirements – Appropriate Actuary">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=a94171f581b14083a4c307e3f3e20ffc">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Appropriate Actuary
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="87bbbfcfb8ac405cb371d2033bd5c1e2"
+	 data-version="2242c3a11cb14cde993fadc0a4f79718"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Duties of Actuaries
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="dacfe7e60f3142a5b09b846843d7c094"
+	 data-version="c3f813499a7d4d389ee2ab545f173747"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> appointed under this Part must be objective in performing his duties.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=dacfe7e60f3142a5b09b846843d7c094">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="395d0d296fae4c74b743486e50345fd7"
+	 data-version="0fb103a338fd44d38b9befa676ae2936"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> appointed under this Part must take reasonable steps to satisfy himself that he is free from bias, or from any conflict of interest from which bias may reasonably be inferred. He must take appropriate action where this is not the case.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=395d0d296fae4c74b743486e50345fd7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c1da225a18e54124ac731db4d23d5243"
+	 data-version="a652c3cd0d2b489081aa36e839e2e33a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When carrying out his duties, an <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> appointed under this Part must pay due regard to generally accepted actuarial practice.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c1da225a18e54124ac731db4d23d5243">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c348f5ff7c124834afe33fdc2a160fdc"
+	 data-version="819fb8bb1e0a4f3293e7f311f031dc4b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An <em><a  class="glossary-link" title="appropriate actuary" href="#glossary-term-2647c65a3aac4ad5b2edeaf12adf382b" data-mce-linktype="2" data-glossary-id="77578">appropriate actuary</a></em> must carry out the triennial investigation and prepare the return required by <a  title="Friendly Society &ndash; Reporting 2.1" href="/pra-rules/friendly-society---reporting#3d570f126d4b45d9aff270c6e639f20d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Friendly Society &ndash; Reporting 2.1</a> and <a  title="2.2" href="/pra-rules/friendly-society---reporting#b1c8728393994e7f9c9f76b390cff1d5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a> and provide the certificate or statement required by <a  title="Friendly Society &ndash; Reporting 2.3" href="/pra-rules/friendly-society---reporting#a4eddb15acc9479d9ac50f0fa5cfb6da" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">Friendly Society &ndash; Reporting 2.3</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2016
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/01-01-2016#c348f5ff7c124834afe33fdc2a160fdc">
+			Past
+			<span class="visually-hidden">
+				version of 8.4 before 01/07/2016
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c348f5ff7c124834afe33fdc2a160fdc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="3b26aa6230964393bc0f46802dc330c1"
+	 data-version="45464f43774c4605b117ca5858e31c10"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> must notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> without delay if the <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em>:</p>
+<p>(1) is removed from office by a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>;</p>
+<p>(2) is formally notified of such removal from office;</p>
+<p>(3) resigns before the term of office expires;</p>
+<p>(4) is not re-appointed by a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>; or</p>
+<p>(5) is disqualified from being the <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> of:</p>
+<p style="padding-left: 30px;">(a) any <em><a  class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a></em> or particular class of <em><a  class="glossary-link" title="undertaking" href="#glossary-term-9353963883f54b46bb81b04d61757fe7" data-mce-linktype="2" data-glossary-id="52152">undertaking</a>;</em> or</p>
+<p style="padding-left: 30px;">(b) any <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> or particular class of <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a>.</em></p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3b26aa6230964393bc0f46802dc330c1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="8dd3da9905fc49d8bd13ea7004396580"
+	 data-version="a5bfd344a0f44c18a2a87fbbecf288a1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the circumstances set out in <a  title="8.5" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements#3b26aa6230964393bc0f46802dc330c1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">8.5</a>, the <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> must notify the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> without delay:</p>
+<ol class="new-bullet">
+<li>(1) of any matter connected with the removal or ceasing of the office of <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> that the <em><a  class="glossary-link" title="actuary" href="#glossary-term-afdcef75d5994429a6c98c5c5004e039" data-mce-linktype="2" data-glossary-id="52196">actuary</a></em> thinks ought to be drawn to the <em><a  class="glossary-link" title="PRA's" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA's</a></em> attention; or</li>
+<li>(2) that there is no such matter.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8dd3da9905fc49d8bd13ea7004396580">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="10-12-2018">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/8-duties-of-actuaries/10-12-2018?p=1" data-id="87bbbfcfb8ac405cb371d2033bd5c1e2" data-effective-date="10-12-2018" data-download-title="Duties of Actuaries_10-12-2018" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/non-solvency-ii-firms-actuarial-requirements/8-duties-of-actuaries/10-12-2018?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/non-solvency-ii-firms-actuarial-requirements#87bbbfcfb8ac405cb371d2033bd5c1e2&amp;subject=PRA Rulebook - Non-Solvency II Firms – Actuarial Requirements – Duties of Actuaries">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=87bbbfcfb8ac405cb371d2033bd5c1e2">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Duties of Actuaries
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

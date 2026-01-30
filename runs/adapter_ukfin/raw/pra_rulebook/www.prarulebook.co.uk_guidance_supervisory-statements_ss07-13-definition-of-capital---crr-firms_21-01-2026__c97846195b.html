@@ -1,0 +1,3535 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{5060D8D1-56D0-4F99-86C9-127F5C548844} -->
+<title>SS7/13 – Definition of Capital (CRR Firms) | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS7/13 – Definition of Capital (CRR Firms)">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS7/13 – Definition of Capital (CRR Firms)">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrf6ua-f-f56e2fc35-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":24,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1956123d","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":1126,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025448","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==KTof90K/iUr8DfOz9oBoDIJ8nsp1LeF+BGfqZLjQeZJT4blS6SdB/PZP8uX9ViX51tTwN1CLlB4SdwSRVuo9eKi5qEb56oxc2k2jIL19LeUW40AXTEu4vlEYkkSXMk4JS3jCazKQmwUI627S4Mf0ypzLUgWgrfskw8uGWh0iWR1i5u61V8/6+FUXC93Yulv7sDOfXuLoCLfzIt6yAlYwkquodvvB59PTR4/i53WID53vsG5nMwMZAI1Ko2AFI+gb5QjuwdeuKGZehkinCbt3E0bzfr1ihrmwYRZaESk72CKGr70ZwnWPRFS3Tpc3+y9ioDjdnq24ZUeNM0etW0MQI+OaIU+yKNcfB9PVVovK1lNeVxGJJHmUqX7QTfbAEqAPAg4ffB+jquhcJ0JYk0gUGfQI/LxI7vOUyxo2kMRZ6Qg=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS7/13 – Definition of Capital (CRR Firms)				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS7/13 – Definition of Capital (CRR Firms)
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2013/crdiv-and-capital-ss" rel="noopener noreferrer" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3">The Supervisory Statement (SS) shown on this page is effective from 01/01/2023. Past versions of this SS can be found here.</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2023
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2026">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2026
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-9ad1c895-6588-4d4a-a085-8c0aea6e2cec">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-9ad1c895-6588-4d4a-a085-8c0aea6e2cec"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS7/13 – Definition of Capital (CRR Firms)
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS7/13 – Definition of Capital (CRR Firms))">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/definition-of-capital/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Definition of Capital
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/own-funds-and-eligible-liabilities-crr/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Own Funds (CRR)
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2022/february/definition-of-capital-updates" class="list-links__link" target="_blank">
+										PS8/22 - Definition of capital: Updates to PRA Rules and supervisory expectations
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2025/july/restatement-of-crr-and-sii-requirements-in-pra-rulebook-policy-statement" class="list-links__link" target="_blank">
+										PS12/25 - Restatement of CRR and Solvency II requirements in PRA Rulebook – 2026 implementation
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2026_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2026?p=1" data-id="c86aece148624cf98dc6bb15111cc4cd" data-effective-date="01-01-2026" data-download-title="SS7/13 – Definition of Capital (CRR Firms)_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms)">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="89abf0af8a964747a86309b858732870"
+	 data-version="87a24cc4beb145cf90c0226600135b24"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="747b837e4b064c079bc707bdf5c8cda6"
+	 data-version="d83bf30475e642c4976c4bcb8985f4bc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement is relevant to CRR Firms.<sup><a href="#footnote-1">1</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						These firms include banks, building societies and PRA UK designated investment firms. For avoidance of doubt, these expectations apply at both the individual and UK consolidated level.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#747b837e4b064c079bc707bdf5c8cda6">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5f153911d479476cbd4a1d13699afb46"
+	 data-version="7b85648c2012490f9afc7d5033abd5b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It sets out the Prudential Regulation Authority&rsquo;s (PRA&rsquo;s) expectations on the quality of regulatory capital resources that firms are required to hold under the CRR. This statement complements the requirements set out in the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>&nbsp;of the PRA Rulebook, in the <a href="/pra-rules/definition-of-capital" data-rb-content-link="Part">Definition of Capital Part</a>&nbsp;of the PRA Rulebook and the high-level expectations on capital as outlined in &lsquo;The PRA&rsquo;s approach to banking supervision&rsquo;.<sup><a href="#footnote-2">2</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						Available at 'the PRA's approach to supervision of the banking and insurance sectors', <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/pras-approach-to-supervision-of-the-banking-and-insurance-sectors">https://www.bankofengland.co.uk/prudential-regulation/publication/pras-approach-to-supervision-of-the-banking-and-insurance-sectors</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#5f153911d479476cbd4a1d13699afb46">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/1-introduction/01-01-2026?p=1" data-id="89abf0af8a964747a86309b858732870" data-effective-date="01-01-2026" data-download-title="Introduction_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/1-introduction/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#89abf0af8a964747a86309b858732870&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="fbd0a9cfff88484ba05d312d52da2fed"
+	 data-version="4c54d6158f0749448785bd37ef0c2be0"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Quality and composition of capital
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="39d760ad96f94c709781727493e68a41"
+	 data-version="ac5b38d2aa9546eab9a4d8c473a2e898"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As set out in &lsquo;The PRA&rsquo;s approach to banking supervision&rsquo;, the PRA expects the most significant part of a firm&rsquo;s capital to be ordinary shares and reserves. These are the highest-quality form of capital, as they allow firms to absorb losses unambiguously on a going concern basis.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="dc7b8c5a56774d73b11a82c3dda4616b"
+	 data-version="cc66b3e9c5ec406d9bc2b91ebe52a494"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When assessing firms, the PRA will be mindful of the fact that quality of capital is not purely about whether a firm meets each sub-tier of the capital rules. For example, even if two firms have identical Common Equity Tier 1 (CET1) positions, the PRA may view the quality of their capital differently due to the nature of the items underlying their CET1 position.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8977896cfc4443f088e4fa549ecae4d5"
+	 data-version="338aac79586b489e8466e753029c8071"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As set out in &lsquo;The PRA&rsquo;s approach to banking supervision&rsquo;, the PRA also expects firms to comply with the clearly stated internationally agreed criteria around the definition of capital, in spirit as well as to the letter, when structuring capital instruments. Own Funds (CRR) (Article 79a) requires that institutions have regard to the substantial features of instruments and consider all arrangements related to the instruments to determine that the combined economic effects of such arrangements are compliant with the objective of the relevant provisions. Additionally, the PRA expects firms to consider any such arrangement that the firm is aware of, including the use of side agreements,<sup><a href="#footnote-3">3</a></sup> regardless of whether the firm is a party to such an arrangement.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						The Glossary Part of the PRA Rulebook, <a href="https://www.prarulebook.co.uk/rulebook/Glossary/FullDefinition/108318">https://www.prarulebook.co.uk/rulebook/Glossary/FullDefinition/108318</a>, states that a side agreement ‘means any document containing an agreement or other arrangement, including a proposed agreement or other arrangement, related to the capital instrument (whether or not explicitly referred to in the instrument) which could affect the assessment of compliance of the instrument with Part Two of CRR’.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#8977896cfc4443f088e4fa549ecae4d5">
+			Past
+			<span class="visually-hidden">
+				version of 2.3 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a97349e2c8f543a5a45d04b5fa1fd05e"
+	 data-version="b7e62aefa984401e91ef50c08a543d3b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>With that purpose in mind, the PRA&rsquo;s preference is for firms to adopt simple, plain vanilla CET1 share structures consisting of only one class of share that is fully subordinated to all other capital and debt, that has full voting rights and equal rights across all shares with respect to dividends and rights in liquidation. </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#a97349e2c8f543a5a45d04b5fa1fd05e">
+			Past
+			<span class="visually-hidden">
+				version of 2.4 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c1263c35e05b4ac4a921a1b3324efbab"
+	 data-version="f28a6d3123c04551a77830114c4441d9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			The PRA expects firms to refrain from features that may be ineffective (or less effective) in absorbing losses. For the avoidance of doubt, this expectation also applies to Additional Tier 1 (AT1) and Tier 2 capital instruments. For example, the PRA would expect firms to refrain from complex CET1 share structures, including transactions involving several legs or side agreements, where the same prudential objective can be achieved more simply. Complex features and structures complicate the prudential assessment and may also undermine instruments&rsquo; loss-absorbing properties and compliance with the relevant provisions of the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f819ae66ae2c4e15925d3bb370abad66"
+	 data-version="8a63a7fb4820417a94c30ed553d1c463"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Complexity can arise, for instance, when CET1 shareholders have different rights and entitlements, including preferential realisation provisions or other features that guarantee a distribution to CET1 shareholders. Multiple classes of shares, whereby some are classed as CET1 instruments and others are not, could result in the entirety of the CET1 instruments becoming ineligible as regulatory capital. Some instruments may include preferential realisation provisions which grant priority or higher amounts to certain shareholders when allocating the proceeds from share sales, or other preferential terms such as anti-dilution clauses. These arrangements may represent barriers to recapitalisation, especially in a stressed environment, as they could deter new investors from investing in the firm unless they receive&nbsp;similar preferential or superior rights as other shareholders. This results in uncertainty regarding the ability of the firm to raise capital quickly when needed, which in turn undermines the firm&rsquo;s primary recovery option of recapitalisation. The PRA notes the prudential risks arising from such features and expects firms to avoid them.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="01ef4faecc774c5087a73f67e55fec23"
+	 data-version="e6acea2332a44157a9d923d688b7d545"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects the relevant Senior Management Function (SMF) to take responsibility for ensuring the quality of the capital structure overall. This includes being accountable for the quality of notifications to the PRA under <a href="/pra-rules/definition-of-capital#13e2da203bc44c73bdaf37c3df4cf7d5" data-rb-content-link="Chapter">Definition of Capital Part Rule 7A</a>&nbsp;to <a href="/pra-rules/definition-of-capital#85d6ebbe18d046efa77ca38010f87305" data-rb-content-link="Chapter">7D</a>, acknowledging that the act of signing and submitting any notification form may be delegated. In a relatively rare case where it may be necessary for a firm to include complex feature(s) in its CET1 instruments, the PRA expects the relevant SMF to inform the firm&rsquo;s board in advance of the issuance, evidencing why the instrument cannot be issued without the proposed complex feature(s) and that, notwithstanding the proposed complexity, they consider the instrument compliant with the objective of the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>. For the purpose of this paragraph and paragraph <a href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#0ee3cce2a95041e2b090f83b6cfea77f" data-rb-content-link="Paragraph">2.6</a>, the relevant SMF means the individual with:</p>
+<ol class="new-bullet">
+    <li>(a) responsibility for managing the allocation and maintenance of the firm&rsquo;s capital, funding and liquidity (<a href="/pra-rules/allocation-of-responsibilities#c33f5ea2f2494a40877edb9034aaab54" data-rb-content-link="Rule">Allocation of Responsibilities 4.1(7)</a> &ndash; PR O); or</li>
+    <li>(b) responsibility for managing the firm&rsquo;s financial resources (<a href="/pra-rules/allocation-of-responsibilities#c746d28f12384168992a2d19cc930f31" data-rb-content-link="Rule">Allocation of Responsibilities 5.2(5)</a> &ndash; PR CC) (small firms only).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#01ef4faecc774c5087a73f67e55fec23">
+			Past
+			<span class="visually-hidden">
+				version of 2.7 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0ee3cce2a95041e2b090f83b6cfea77f"
+	 data-version="34427d7526b845f898be2cb3b051305e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects the SMF&rsquo;s proposal, in turn, to be subject to appropriate board-level review and discussion and the board should consider and suggest ways to minimise any proposed complexity. In cases where the board does adopt the SMF&rsquo;s proposal and complex features are included in CET1 instruments, notwithstanding the PRA&rsquo;s preference for simplicity (paragraph <a href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#a97349e2c8f543a5a45d04b5fa1fd05e" data-rb-content-link="Paragraph">2.4</a>), the PRA expects the board to discuss whether the continued inclusion of the complex features within the share structure is necessary, at least annually as part of its Internal Capital Adequacy Assessment Process (ICAAP).<sup><a href="#footnote-4">4</a></sup> The PRA also expects firms to try to simplify the structure where possible.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						SS31/15 ‘The Internal Capital Adequacy Assessment Process (ICAAP) and the Supervisory Review and Evaluation Process (SREP)’, January 2020: <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2013/the-internal-capital-adequacy-assessment-process-and-supervisory-review-ss">https://www.bankofengland.co.uk/prudential-regulation/publication/2013/the-internal-capital-adequacy-assessment-process-and-supervisory-review-ss</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#0ee3cce2a95041e2b090f83b6cfea77f">
+			Past
+			<span class="visually-hidden">
+				version of 2.8 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/2-quality-and-composition-of-capital/01-01-2026?p=1" data-id="fbd0a9cfff88484ba05d312d52da2fed" data-effective-date="01-01-2026" data-download-title="Quality and composition of capital_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/2-quality-and-composition-of-capital/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#fbd0a9cfff88484ba05d312d52da2fed&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Quality and composition of capital">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="b871919493fd4e788d884a8cac8a116b"
+	 data-version="5810684768c34b5c869d8176b806491f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Additional Tier 1 instruments
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="31d36c77cad349b4b53adc9d7dfacc7a"
+	 data-version="89c38393e43d445faab8cb3baa977055"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Own Funds (CRR) Articles 52 and 54 require AT1 instruments to contain a trigger of at least 5.125% CET1, but allows firms to select a higher trigger. They also recognise that the terms of an AT1 instrument may provide for a write-down that is either temporary or permanent, and that the amount converted or written down may be limited to that necessary to restore the firm&rsquo;s CET1 ratio to 5.125% or may be greater.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#31d36c77cad349b4b53adc9d7dfacc7a">
+			Past
+			<span class="visually-hidden">
+				version of 3.1 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="97d6871d49664380a5dc070ee755670f"
+	 data-version="d91c42b47053417bb2c98579e766416e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Depending on the circumstances, an instrument with a trigger of 5.125% CET1 may not convert in time to prevent the failure of a firm. A temporary write-down may make it more difficult for the firm to re-establish its capital position following a stress. Also, conversion or write-down that only restores the firm&rsquo;s CET1 ratio to 5.125% may leave the firm close to a second trigger event.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b556951eca674b758bfc0c7736574128"
+	 data-version="3ac21e4a8cb94548b54e27f12a1ffa23"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/own-funds-and-eligible-liabilities-crr#6e37845224534930af06e76414fa1ef6" data-rb-content-link="SubChapter">Own Funds (CRR) Article 52</a> is indifferent to the equity or liability accounting classification of an AT1 instrument. Most of the AT1 instruments issued by UK firms are accounted for as equity, but in some cases, firms may prefer to issue liability-accounted AT1 instruments with certain features or other arrangements to manage certain market risks, such as currency risk, when issuing in currencies other than in the reporting currency. Some of these features or arrangements could undermine the subordination of payments or give rise to other prudential concerns.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#b556951eca674b758bfc0c7736574128">
+			Past
+			<span class="visually-hidden">
+				version of 3.2A before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="190765eab8e84f2ebb66720251c09140"
+	 data-version="7cc0cc1f50af4ad0b80c17d667e0bf0e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms will wish to consider these factors when deciding how to exercise the choices available to them under the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>. The PRA expects to discuss with firms their analysis on features of draft capital instruments that they submit for our review under the PRA pre-issuance notification rules (<a href="/pra-rules/definition-of-capital" data-rb-content-link="Part">Definition of Capital Part</a>&nbsp;Rule <a href="/pra-rules/definition-of-capital#796fe6dea812464793396c77b7462636" data-rb-content-link="Chapter">7B</a>). As noted in paragraph <a href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#c1263c35e05b4ac4a921a1b3324efbab" data-rb-content-link="Paragraph">2.5</a>, the PRA expects firms to refrain from including features in capital instruments that may affect their ability to absorb losses.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#190765eab8e84f2ebb66720251c09140">
+			Past
+			<span class="visually-hidden">
+				version of 3.3 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/3-additional-tier-1-instruments/01-01-2026?p=1" data-id="b871919493fd4e788d884a8cac8a116b" data-effective-date="01-01-2026" data-download-title="Additional Tier 1 instruments_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/3-additional-tier-1-instruments/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#b871919493fd4e788d884a8cac8a116b&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Additional Tier 1 instruments">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="f888f3e3984c4096b476a4042f850e2d"
+	 data-version="2ea63bec6b504b48bfeb22734a025811"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Preference
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="9f4a9780efff437baf1403c351ba07c1"
+	 data-version="a3ef4e34f72b4033ac6ed791a38d5755"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where possible, the PRA expects firms to meet their CET1 requirements entirely with voting common shares and associated reserves. The PRA strongly discourages firms from including non-voting shares in CET1, particularly if such shares have higher dividends than common shares. The main reason for the PRA&rsquo;s concern is that it is imperative that the composition of a firm&rsquo;s CET1 is as straightforward and transparent as possible. There should also be no doubt that a firm&rsquo;s CET1 only includes the highest quality capital. The inclusion of instruments other than voting common shares in CET1 could lead to concerns that such instruments may not have the same capital quality.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/4-preference/01-01-2026?p=1" data-id="f888f3e3984c4096b476a4042f850e2d" data-effective-date="01-01-2026" data-download-title="Preference_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/4-preference/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#f888f3e3984c4096b476a4042f850e2d&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Preference">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="a85bac4a7a4c47a99b2f8601ca98c73e"
+	 data-version="bb97694ed2264f8985e14f7be3dd9e7e"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Subordination, remedies, events of default and set-off
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="437cbd1525b54c9ca103d38912d0649a"
+	 data-version="c957e7c98f7446c58f2c7126085340f6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Under the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>, all regulatory capital must be capable of absorbing losses either on a going or gone concern basis. Therefore, all capital instruments as a minimum must be subordinated to all senior creditors, including depositors. In particular, building societies must ensure that any capital instruments issued by them are subordinated to non-deferred shares (per&nbsp;<a href="/pra-rules/definition-of-capital#82fe7b46e6a14f49b6cbd21cdab50ca3" data-rb-content-link="Rule">Definition of Capital Part Rule 10.2</a>).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#437cbd1525b54c9ca103d38912d0649a">
+			Past
+			<span class="visually-hidden">
+				version of 5.1 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f57da88f8e8949e2bb3dfa1119b3a284"
+	 data-version="9645e7d4e61a4a6f95a485001c47e003"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>It is also important that subordination is not made less effective by granting additional rights to holders of subordinated instruments, for example in respect of events of default, remedies and rights of set-off. The PRA expects events of default to be restricted to non-payment of any amount falling due under the terms of the instrument or on the winding-up of the firm. This ensures that the subordinated creditor cannot force early repayment while the issuer may still be technically solvent. This is important so as not to hinder the efforts of the authorities in the context of recovery actions in relation to the issuer.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ff4515d231b5416f8ce8e23925473635"
+	 data-version="b07409a765a245d2abfcd8138ce017d9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In the event that default occurs, the PRA expects remedies to be restricted, to the fullest extent permitted under the laws of the relevant jurisdictions, to petitioning for the winding-up of the firm or proving for the debt in liquidation or administration. Limiting remedies in this way prevents holders of subordinated instruments using other remedies to receive payment, potentially ahead of senior creditors. The expectations set out for restrictions on remedies are not intended to capture remedies for breaches of contract that do not relate to payment obligations, ie remedies that are not available for failure to pay any amount of principal, interest, expenses or in respect of any other payment obligation. Further, any damages or repayment obligation (arising, for example, because remedies could not be limited under applicable law) must be subordinated in accordance with the normal ranking of the instrument in insolvency.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3fa2eacc874f4560959d59cfcbba4b12"
+	 data-version="08cb243bb9484750b9162ad70b87d781"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Also, to the fullest extent permitted under the laws of the relevant jurisdictions, the PRA expects subordinated creditors to waive any rights to set off amounts they owe the issuer against subordinated amounts owed to them by the issuer. Waiving rights of set-off helps to maintain the creditor hierarchy so that subordinated creditors are not treated in the same way as senior creditors.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/5-subordination-remedies-events-of-default-and-set-off/01-01-2026?p=1" data-id="a85bac4a7a4c47a99b2f8601ca98c73e" data-effective-date="01-01-2026" data-download-title="Subordination, remedies, events of default and set-off_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/5-subordination-remedies-events-of-default-and-set-off/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#a85bac4a7a4c47a99b2f8601ca98c73e&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Subordination, remedies, events of default and set-off">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="86f48155882042daac679ee1846dc2e9"
+	 data-version="a6eae4a0845242f39e351891ed4341c1"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					[DELETED]
+				</h3>
+		</div>
+	</div>
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/6-deleted/01-01-2026?p=1" data-id="86f48155882042daac679ee1846dc2e9" data-effective-date="01-01-2026" data-download-title="[DELETED]_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/6-deleted/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#86f48155882042daac679ee1846dc2e9&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – [DELETED]">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="de4a3929db4a47108036d51fb4833e77"
+	 data-version="54fe6e5faa8f4d56b57d36e8a4ca234d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Significant insurance holdings
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="2af0dcf59b2f4765a131308fa67792bd"
+	 data-version="93d98a9b81dd4183a2b4148bb4879072"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As announced in the PRA statement on 29 June 2013 and reiterated in <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2013/strengthening-capital-standards-implementing-crd-4">PS7/13</a>, the PRA requires firms to deduct holdings of own funds instruments issued by an insurer in which the firm has a significant investment.<sup><a href="#footnote-5">5</a></sup></p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						Statement regarding the prudential treatment of banks’ significant investments in insurance companies for firms that are regulated by the PRA, <a href="https://www.bankofengland.co.uk/-/media/boe/files/news/2013/june/statement-regarding-the-prudential-treatment-of-banks-significant-investments.pdf">https://www.bankofengland.co.uk/-/media/boe/files/news/2013/june/statement-regarding-the-prudential-treatment-of-banks-significant-investments.pdf</a>
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#2af0dcf59b2f4765a131308fa67792bd">
+			Past
+			<span class="visually-hidden">
+				version of 7.1 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="94de028dbb5c4002b374b4abd56a518c"
+	 data-version="5c1348829c14452a80f9551d089cdc4f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of valuation, the PRA considers that the embedded value method is not appropriate for determining the value of firms&rsquo; significant insurance holdings. This is because the embedded value method could have the effect of inflating banks&rsquo; CET1 as it takes into account the present value of the expected future inflows from existing life assurance business.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/7-significant-insurance-holdings/01-01-2026?p=1" data-id="de4a3929db4a47108036d51fb4833e77" data-effective-date="01-01-2026" data-download-title="Significant insurance holdings_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/7-significant-insurance-holdings/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#de4a3929db4a47108036d51fb4833e77&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Significant insurance holdings">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="7fd28bed04b14c249b7e17d0175ea75b"
+	 data-version="47c2fa4ba40545e3bed96c3d1ffb3236"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Connected funding of a capital nature (CFCN)
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a2935c6eb2704a7a8c164a58f22c00e8"
+	 data-version="be1d84e67f7147dc9ea3e6f3dfa04e21"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/definition-of-capital#ab8455427d2a4a309ea66994efef51a1" data-rb-content-link="Chapter">Definition of Capital&nbsp;Part Chapter 4</a>&nbsp;states that firms must treat all CFCN as a holding of capital of the connected party and apply to it the treatment under the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>&nbsp;applicable to such a holding. The CFCN rule applies on an ongoing basis. Therefore, where a loan initially falls outside the definition of CFCN but later falls into it, the appropriate capital treatment should be applied immediately and the PRA should be notified. For example, if the initial lending to a connected party is subsequently downstreamed to another connected party, the relationship between the firm and the ultimate borrower may be such that, looking at the arrangements as a whole, the entity to which the firm lends is able to regard the loan as being capable of absorbing losses.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#a2935c6eb2704a7a8c164a58f22c00e8">
+			Past
+			<span class="visually-hidden">
+				version of 8.1 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="be07f634f7344bc3afcc1cf1a9fd2110"
+	 data-version="db9f1a7ea51d4e1da0f9bf6a4a50555a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms should take account of contractual, structural, reputational or other factors when determining whether a transaction is a CFCN.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6755cb7137c44ab99b10d266d4118168"
+	 data-version="4f4e1d673bbd463c82379b562f32522e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Lending to a connected party will not normally be considered CFCN where that party is acting as a vehicle to pass funding to an unconnected party and has no other creditors whose claims could be senior to those of the lender.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d42bb4b0e5d8445bb27f50303da2507c"
+	 data-version="a7dbdac4cf504aebb0a5ba0469e45420"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Additionally, for connected parties within the same consolidation group, it is likely that a loan is not CFCN if:</p>
+<ol class="new-bullet">
+    <li>(a) it is secured by collateral that is eligible for the purposes of credit risk mitigation under the standardised approach to credit risk; or</li>
+    <li>(b) it is repayable on demand (and is treated as such for accounting purposes by the borrower and lender) and the firm can demonstrate that there are no potential obstacles to exercising the right to repay, whether contractual or otherwise.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/8-connected-funding-of-a-capital-nature---cfcn/01-01-2026?p=1" data-id="7fd28bed04b14c249b7e17d0175ea75b" data-effective-date="01-01-2026" data-download-title="Connected funding of a capital nature (CFCN)_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/8-connected-funding-of-a-capital-nature---cfcn/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#7fd28bed04b14c249b7e17d0175ea75b&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Connected funding of a capital nature (CFCN)">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="c3574ae989db41e7909a1cea230e54ce"
+	 data-version="3c15cde371314038965babd8f7817a9c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Pre/post-issuance notification (PIN) requirements
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="0fe404eadb164a879e3e27ad5f899939"
+	 data-version="535bf35329e641d1b295906fefd2d3c1"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4 style="margin-left: 0cm;">PRA&rsquo;s expectations in relation to pre/post issuance notifications</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="8d6166f3e1ca4e9dacdc4acc48d59287"
+	 data-version="1807649eccec4fccadafacd539c13524"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Firms are generally required<span style="font-size: 13.3333px;"><sup><a href="#footnote-6">6</a></sup>&nbsp;</span>to notify the PRA at least one month before the intended date of issuance or amendment or variation to the terms of each CET1 or AT1 capital instrument, and immediately after issuing or amending or varying the terms of each Tier 2 capital instrument, that will count towards regulatory capital resources or own funds, either at solo, sub-consolidated or group consolidated level or any combination of these.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-6" class="rb-footnote">
+					<span class="fn-col-1">
+						6.
+					</span>
+					<span class="fn-col-2">
+						Rules 7A to 7D of Definition of Capital Part of the PRA Rulebook require pre-issuance notification for CET1 and AT1 issuances, and post-notification for Tier 2 issuances.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#8d6166f3e1ca4e9dacdc4acc48d59287">
+			Past
+			<span class="visually-hidden">
+				version of 9.1 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5e791f8682914f1f956244f3243282ac"
+	 data-version="b154dcc4a57b45f9b87a78bc73f698e4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA is likely to need more time to review a notified instrument with complex feature(s) (as set out in paragraphs <a href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#8977896cfc4443f088e4fa549ecae4d5" data-rb-content-link="Paragraph">2.3</a>&nbsp;to <a href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#01ef4faecc774c5087a73f67e55fec23" data-rb-content-link="Paragraph">2.5</a>&nbsp;above), or issuances with new features, for example, instruments marketed as &lsquo;Green&rsquo;, &lsquo;Social&rsquo;, or &lsquo;Environmental, Social, Governance (ESG)&rsquo;. The PRA expects the firm to engage with its usual supervisory contact as early as possible (for example, once the relevant terms and conditions including any side agreements are drafted) with a clear explanation of how the proposed features comply with the letter and objective of the PRA rules and supervisory expectations. Notwithstanding that Tier 2 instruments are subject to post-notification, where a firm is proposing to include new or complex features that could affect eligibility, the PRA expects to discuss these in advance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#5e791f8682914f1f956244f3243282ac">
+			Past
+			<span class="visually-hidden">
+				version of 9.2 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e5e4cbf1e690412e8e53b1fbc9b5a48d"
+	 data-version="e47cbbdf0f6c4e2eaec568ec90b3f58a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects the relevant SMF (as defined in paragraph <a href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#01ef4faecc774c5087a73f67e55fec23" data-rb-content-link="Paragraph">2.5</a>&nbsp;above) to ensure that the notified capital instrument complies with the letter and objective of the relevant PRA rules and supervisory expectations.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#e5e4cbf1e690412e8e53b1fbc9b5a48d">
+			Past
+			<span class="visually-hidden">
+				version of 9.3 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="627cef5eb327445ab1b58ec78c36d95e"
+	 data-version="5bce1ff8c8824c02a9f2178b40f77365"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In certain cases, as set out in&nbsp;<a href="/pra-rules/definition-of-capital#13e2da203bc44c73bdaf37c3df4cf7d5" data-rb-content-link="Chapter">Definition of Capital Part Rule 7A</a>&nbsp;&ndash; <a href="/pra-rules/definition-of-capital#85d6ebbe18d046efa77ca38010f87305" data-rb-content-link="Chapter">7D</a>, the PRA requires notified capital instruments to be accompanied by an independent legal opinion to confirm the instrument&rsquo;s eligibility as a capital instrument. The PRA expects the legal opinion to explain how the instrument complies with the respective eligibility criteria set out in the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr" data-rb-content-link="Part">Own Funds (CRR) Part</a>, including the <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#0ae8d13362724e919531830202700e93" data-rb-content-link="SubChapter">Article 79a</a>&nbsp;requirement that the combined economic effect of the substantial features of instruments and all arrangements related to the instruments are compliant with the objective of the eligibility requirements.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#627cef5eb327445ab1b58ec78c36d95e">
+			Past
+			<span class="visually-hidden">
+				version of 9.4 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ad1149746d384178b6324e790d278d86"
+	 data-version="712654f05d604a94a4cc075a2730b29c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA may ask firms to provide additional information, for example in case of an incomplete notification, unclear terms and conditions or changes to terms and conditions during the assessment period, which is likely to delay the PRA&rsquo;s assessment beyond the normal one month period. The PRA reserves the right to review any capital instrument at any time &ndash; particularly in light of international policy developments or lessons learnt from its own assessments.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="24c189dba9204b0c8e9289407d0f28f3"
+	 data-version="531611e79eab4741a012d7afeb6e1459"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Timing of notifications and definition of 'substantially the same'</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="f74dd85c82b4458d83f97a95053f96ab"
+	 data-version="a50278414fc64e4caab633046c8e6c0f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>CRR II allows a firm to count any subsequent issuance of a form of CET1 instrument for which it has already received the PRA&rsquo;s permission (pursuant to CRR Article 26(3) (as amended)) towards its CET1 capital provided the conditions set out in the second subparagraph of the amended Article 26(3) are met. These conditions are that:</p>
+<ol class="new-bullet">
+    <li>(a) the provisions governing those subsequent issuances are substantially the same as the provisions governing those issuances for which the firms have already received permission from the PRA; and</li>
+    <li>(b) firms have notified those subsequent issuances to the PRA sufficiently in advance of their classification as CET1 instruments.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3e56ec5c67d34239a8f31fc307318e4e"
+	 data-version="f5b8a793498b4098ba8f09bbb4165e75"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The required timing of a PIN submission depends on the characteristics of the notified instrument.&nbsp;The following table summarises the notification requirements set out in <a href="/pra-rules/definition-of-capital#13e2da203bc44c73bdaf37c3df4cf7d5" data-rb-content-link="Chapter">Definition of Capital Part Rule 7A</a>&nbsp;&ndash; <a href="/pra-rules/definition-of-capital#85d6ebbe18d046efa77ca38010f87305" data-rb-content-link="Chapter">7D</a>:</p>
+<p>Table 1: summary of PIN requirements</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <td><strong>Capital instruments</strong></td>
+            <td><strong>Comparison to terms previously reviewed by the PRA</strong></td>
+            <td><strong>Notification requirements</strong></td>
+        </tr>
+        <tr>
+            <td rowspan="3">CET1</td>
+            <td>Identical</td>
+            <td>&nbsp;No notification requirement</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Substantially the same</td>
+            <td>&nbsp;As soon as possible after issuance / amendment</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Not substantially the same</td>
+            <td>&nbsp;At least one month in advance</td>
+        </tr>
+        <tr>
+            <td rowspan="2">&nbsp;AT1</td>
+            <td>&nbsp;Substantially the same</td>
+            <td>&nbsp;As soon as possible after issuance / amendment</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Not substantially the same</td>
+            <td>&nbsp;At least one month in advance</td>
+        </tr>
+        <tr>
+            <td rowspan="2">&nbsp;Tier 2</td>
+            <td>&nbsp;Substantially the same</td>
+            <td rowspan="2">&nbsp;As soon as possible after issuance / amendment</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Not substantially the same</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="82e0f59e9de64def9057efb1a98d6693"
+	 data-version="697b510fdebc4f0899410972d37f0eaa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>CET1 issuances whose terms and conditions (including any side agreements) are identical to those of an issuance for which a firm has already received the PRA&rsquo;s permission would satisfy the conditions for being &lsquo;substantially the same&rsquo; as the previous issuance. For subsequent issuances of CET1 instruments on such identical terms, firms may notify the PRA no later than the intended date of the subsequent issuance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5cc9489760af49ac83fa2d527a114e69"
+	 data-version="5c74b38cc1944d71a22f44715124e357"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Firms should exercise reasonable judgment when determining whether an instrument is &lsquo;substantially&nbsp;the same&rsquo; as one previously reviewed by the PRA, and contact their supervisor in case of ambiguity.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b548a41eea8247d98c6efb3daf48dc44"
+	 data-version="a081a803ecf542328a90b75f223cbe73"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A CET1 instrument will normally not be considered substantially the same as one previously reviewed by the PRA if:</p>
+<ol class="new-bullet">
+    <li>(a) there is any change to provisions governing voting rights, subordination, or distributions; or any feature that might be considered a potential barrier to recapitalisation;</li>
+    <li>(b) there is material change to other provisions governing the instrument; or</li>
+    <li>(c) the transaction involves new side agreements or material amendments to an existing side agreement which were not considered in the PRA&rsquo;s previous assessment.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#b548a41eea8247d98c6efb3daf48dc44">
+			Past
+			<span class="visually-hidden">
+				version of 9.8 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0274c3abfb264fccbbffd95489b0d057"
+	 data-version="e73b1c05cbfe4959aba7b86e29d5cf97"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In any such cases, firms should notify the PRA at least one month in advance of the intended date of issuance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="aae0025eec04482688728b9f9058a4a3"
+	 data-version="f786830a20a349cfa949514590487a84"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.9
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers an AT1 instrument to be substantially the same as one previously reviewed by the PRA if its terms and conditions (including any side agreements) are identical to a previous AT1 instrument except for the issue date, the amount of issuance, the currency of issuance or the rate of interest payable by the issuer.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#aae0025eec04482688728b9f9058a4a3">
+			Past
+			<span class="visually-hidden">
+				version of 9.9 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2254f1d1d1c343a198d6314c690534c7"
+	 data-version="97439c8e745845f0900d17c7ac7993ba"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For subsequent issuances of AT1 instruments on such terms, firms may notify the PRA no later than the intended date of the subsequent issuance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3922267fe301484aa1e2d2c340117746"
+	 data-version="ba47d127bd884f7c9f7c1529ced01aca"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.10
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>An AT1 issuance will normally not be considered substantially the same as one previously reviewed by the PRA if:</p>
+<ol class="new-bullet">
+    <li>(a) there is any change to provisions governing subordination, conversion or write-down mechanism, call option, frequency or amount of distributions; or any feature that might be considered a barrier to recapitalisation or an incentive to redeem; or</li>
+    <li>(b) there is material change to any other provision governing the instrument.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#3922267fe301484aa1e2d2c340117746">
+			Past
+			<span class="visually-hidden">
+				version of 9.10 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+
+<div id="1c35c304fabc483f88c0058af1075ff5"
+	 data-version="0c2cae2d3bfe47029010d485f437694f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.11
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers a Tier 2 instrument to be substantially the same if its terms and conditions (including any side agreements) are identical to a previous Tier 2 instrument except for the issue date, the amount of issuance, the maturity, the currency of issuance or the rate of interest payable by the issuer.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#1c35c304fabc483f88c0058af1075ff5">
+			Past
+			<span class="visually-hidden">
+				version of 9.11 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="2832692bcf0845a980d619aad066a740"
+	 data-version="4bde970d9bc846eeaf41843fc56445a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.12
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A Tier 2 instrument will normally not be considered substantially the same as one previously reviewed by the PRA if:</p>
+<ol class="new-bullet">
+    <li>(a) there is any change to provisions governing subordination, conversion or write-down mechanism, call option, frequency or amount of distributions; or any feature that might be considered a barrier to recapitalisation or an incentive to redeem; or</li>
+    <li>(b) there is material change to any other provision governing the instrument.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#2832692bcf0845a980d619aad066a740">
+			Past
+			<span class="visually-hidden">
+				version of 9.12 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="47e6f811a55e4164bb2a2ece6bdf3fe0"
+	 data-version="046ff3fb3ebc4d749787e322380fe251"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.13
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			[Deleted.]
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5497580066fa45c58bd2aff0a84abf12"
+	 data-version="a5df44241940453dbdf7ee8e83c17e91"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.16
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#5497580066fa45c58bd2aff0a84abf12">
+			Past
+			<span class="visually-hidden">
+				version of 9.16 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d5889bda986f4c74bdca2a03ad78c56a"
+	 data-version="858d55e618714af9b1823c319fd194c6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.17
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/01-01-2023#d5889bda986f4c74bdca2a03ad78c56a">
+			Past
+			<span class="visually-hidden">
+				version of 9.17 before 01/01/2026
+			</span>
+		</a>
+	</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/9-pre-post-issuance-notification--pin--requirements/01-01-2026?p=1" data-id="c3574ae989db41e7909a1cea230e54ce" data-effective-date="01-01-2026" data-download-title="Pre/post-issuance notification (PIN) requirements_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/9-pre-post-issuance-notification--pin--requirements/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#c3574ae989db41e7909a1cea230e54ce&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Pre/post-issuance notification (PIN) requirements">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="e31922160bc14781aae86d711b57236e"
+	 data-version="df0651c0800942d8923b7fbfb16f6d19"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Permissions for reduction of own funds instruments and share premiums
+				</h3>
+		</div>
+	</div>
+
+
+
+
+
+<div id="e970caa9e6b14611a9aec880f5488d5d"
+	 data-version="6165299741694176bd8a34b42d30f883"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			In &lsquo;<a href="/guidance/statements-of-policy/sop---the-pras-approach-to-waivers-_-under-own-funds-crr" data-rb-content-link="Guidance">The PRA&rsquo;s approach to waivers and permissions under the Own Funds (CRR) Part</a>&rsquo; the PRA notes&nbsp;that it may decide to grant permission to call, redeem, repay or repurchase Additional Tier 1 or Tier 2&nbsp;instruments or related share premium accounts during the five years following their date of issuance&nbsp;where no other condition is satisfied but, in exceptional circumstances, it considers that this action would&nbsp;materially enhance the safety and soundness of the firm. This may be the case, for example, where a firm&nbsp;<br>
+proposes to reduce Tier 2 capital instruments while simultaneously issuing eligible liabilities instruments,&nbsp;such that the PRA considers that overall gone concern loss absorption capacity is materially improved.&nbsp;This example is not exhaustive and the PRA will assess applications on a case-by-case basis. However, the&nbsp;PRA expects that such permissions will be granted very rarely, in accordance with the principle that&nbsp;capital has an appropriate degree of permanence.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/10-permissions-for-reduction-of-own-funds-instruments-and-share-premiums/01-01-2026?p=1" data-id="e31922160bc14781aae86d711b57236e" data-effective-date="01-01-2026" data-download-title="Permissions for reduction of own funds instruments and share premiums_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/10-permissions-for-reduction-of-own-funds-instruments-and-share-premiums/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#e31922160bc14781aae86d711b57236e&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Permissions for reduction of own funds instruments and share premiums">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="2b0fabfee4d74357b4de5775cc81c3a0"
+	 data-version="473c9c4cde2a49908c016dbe728c98ab"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					11
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Timing of inclusion of interim profits in CET1
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="854c6a8ae44246d9a8766d605adf8a99"
+	 data-version="d1b9b4702e3b4e4784813bf3a6385d35"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			Where interim profits have been verified for a particular period pursuant to <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#3bcb14145036426fb1b97cbbc15701fb" data-rb-content-link="Rule">Own Funds (CRR) Article&nbsp;26(2)</a>, they may be included in capital reporting and disclosure for that period, notwithstanding that the&nbsp;verification will necessarily have been received thereafter.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f80bb2850d624280b589393556c6778c"
+	 data-version="3841e94bbb904c2ba0023e23dc8ff268"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			For example: capital adequacy reporting for the period ended 30 June is due on 11 August. A firm&nbsp;receives verification of its interim profits for the period ended 30 June between that date and 11 August.&nbsp;The firm may incorporate the interim profits in its 30 June reporting and disclosure.<br>
+<div></div>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/11-timing-of-inclusion-of-interim-profits-in-cet1/01-01-2026?p=1" data-id="2b0fabfee4d74357b4de5775cc81c3a0" data-effective-date="01-01-2026" data-download-title="Timing of inclusion of interim profits in CET1_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/11-timing-of-inclusion-of-interim-profits-in-cet1/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#2b0fabfee4d74357b4de5775cc81c3a0&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Timing of inclusion of interim profits in CET1">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="2404b357030848519a0229d08f939194"
+	 data-version="45254ece4fad4c9a9e2419fca5408fe3"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					12
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Calculation of minority interests
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="bdd84d9920b74e63804c8f79cca33fff"
+	 data-version="85ad86fdf60548d9af53ccbb88fd53fb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			The PRA expects that the sum of CET1 items of a subsidiary for the purposes of <a href="/pra-rules/own-funds-and-eligible-liabilities-crr#ecdb8648bab8470c8f6282737bc3c01c" data-rb-content-link="Rule">Own Funds (CRR) Article 81(1)</a>&nbsp;should refer to the amount before consolidation.
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2026
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/12-calculation-of-minority-interests/01-01-2026?p=1" data-id="2404b357030848519a0229d08f939194" data-effective-date="01-01-2026" data-download-title="Calculation of minority interests_01-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms/12-calculation-of-minority-interests/01-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss07-13-definition-of-capital---crr-firms#2404b357030848519a0229d08f939194&amp;subject=PRA Rulebook - SS7/13 – Definition of Capital (CRR Firms) – Calculation of minority interests">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

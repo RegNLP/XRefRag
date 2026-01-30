@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>XRefRAG Human Audit Annotator (CSV)</title>
+    <style>
+        :root {
+            --bg: #0b1020;
+            --card: #111735;
+            --muted: #8aa0ff;
+            --text: #e7ecff;
+            --accent: #7aa2ff;
+            --line: #1e2a5a;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: #0d1533;
+            position: sticky;
+            top: 0;
+            z-index: 3;
+            border-bottom: 1px solid var(--line);
+        }
+
+        header h1 {
+            font-size: 16px;
+            margin: 0;
+            letter-spacing: 0.3px;
+        }
+
+        header .spacer {
+            flex: 1;
+        }
+
+        .btn {
+            background: var(--card);
+            border: 1px solid #263371;
+            color: var(--text);
+            padding: 8px 12px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            border-color: #3a54a0;
+        }
+
+        /* 75/25 split */
+        .app {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            min-height: calc(100vh - 56px);
+        }
+
+        @media (max-width: 1100px) {
+            .app {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel {
+            padding: 16px;
+            border-right: 1px solid var(--line);
+            background: var(--card);
+        }
+
+        .panel .card {
+            background: #0f1531;
+            border: 1px solid #1b2554;
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 12px;
+        }
+
+        .panel h2 {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 0 0 8px;
+            letter-spacing: 0.4px;
+        }
+
+        .panel pre {
+            white-space: pre-wrap;
+            margin: 6px 0 0;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        }
+
+        .main {
+            padding: 16px;
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .toolbar .btn[disabled] {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .progress {
+            height: 8px;
+            background: #0f1531;
+            border: 1px solid #1b2554;
+            border-radius: 999px;
+            overflow: hidden;
+            margin-left: auto;
+            min-width: 240px;
+        }
+
+        .progress>div {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), #9ec9ff);
+            width: 0%;
+        }
+
+        .qa {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .block {
+            background: #0f1531;
+            border: 1px solid #1b2554;
+            border-radius: 14px;
+            padding: 14px;
+        }
+
+        .qgroup legend {
+            font-weight: 600;
+            color: #cdd7ff;
+            margin-bottom: 8px;
+        }
+
+        .opt {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 6px 0;
+        }
+
+        .opt input {
+            transform: scale(1.15);
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 64px;
+            resize: vertical;
+            background: #0e1430;
+            color: #e7ecff;
+            border: 1px solid #1b2554;
+            border-radius: 10px;
+            padding: 8px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .nav .primary {
+            background: var(--accent);
+            color: #08112b;
+            border: none;
+        }
+
+        .meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: #aab7ff;
+        }
+
+        .meta span {
+            background: #0e1430;
+            border: 1px solid #1b2554;
+            padding: 4px 8px;
+            border-radius: 999px;
+        }
+
+        .small {
+            font-size: 12px;
+            color: #aab7ff;
+        }
+
+        /* Modal */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 20, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .modal {
+            width: min(920px, calc(100vw - 32px));
+            max-height: calc(100vh - 80px);
+            background: #0f1531;
+            border: 1px solid #1b2554;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal header {
+            background: #0d1533;
+            border-bottom: 1px solid #1b2554;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: sticky;
+            top: 0;
+        }
+
+        .modal header h2 {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .modal .content {
+            padding: 14px;
+            overflow: auto;
+            max-height: calc(100vh - 140px);
+        }
+
+        .modal .content h3 {
+            margin: 16px 0 6px;
+            color: #cfe0ff;
+            font-size: 14px;
+        }
+
+        .modal .content p,
+        .modal .content li {
+            color: #e7ecff;
+        }
+
+        .modal footer {
+            padding: 12px 14px;
+            border-top: 1px solid #1b2554;
+            background: #0d1533;
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>XRefRAG Human Audit Annotator (CSV)</h1>
+        <div class="spacer"></div>
+        <button id="btnHelp" class="btn" title="Show detailed instructions">Instructions</button>
+        <button id="btnStart" class="btn" title="Upload your assignment CSV">Start assignment</button>
+        <button id="btnSave" class="btn" title="Save locally and download updated CSV">Save progress</button>
+        <button id="btnContinue" class="btn" title="Open your last saved assignment">Continue</button>
+        <input id="fileInput" type="file" accept=".csv,text/csv" style="display:none" />
+    </header>
+
+    <div class="app">
+        <aside class="panel" id="left">
+            <h2>Item</h2>
+            <div class="card">
+                <div class="meta" id="meta"></div>
+                <div class="small" id="counts"></div>
+            </div>
+
+            <div class="card"><strong>QUESTION</strong>
+                <pre id="q"></pre>
+            </div>
+            <div class="card"><strong>SOURCE PASSAGE (S)</strong>
+                <pre id="s"></pre>
+            </div>
+            <div class="card"><strong>TARGET PASSAGE (T)</strong>
+                <pre id="t"></pre>
+            </div>
+            <div class="card"><strong>GOLD / EXPECTED ANSWER</strong>
+                <pre id="a"></pre>
+            </div>
+        </aside>
+
+        <main class="main">
+            <div class="toolbar">
+                <button id="prev" class="btn" title="Previous item">⟵ Previous</button>
+                <button id="next" class="btn" title="Next item">Next ⟶</button>
+                <div class="progress">
+                    <div id="bar"></div>
+                </div>
+            </div>
+
+            <div class="qa">
+                <section class="block">
+                    <fieldset class="qgroup">
+                        <legend>1) Question quality</legend>
+                        <div class="small" style="margin-bottom:6px">Is the question valid and well-formed?</div>
+                        <label class="opt"><input type="radio" name="q_quality" value="yes"> Yes — clear and
+                            understandable</label>
+                        <label class="opt"><input type="radio" name="q_quality" value="not_realistic"> No —
+                            not_realistic</label>
+                        <label class="opt"><input type="radio" name="q_quality" value="unclear_or_ungrammatical"> No —
+                            unclear_or_ungrammatical</label>
+                        <label class="opt"><input type="radio" name="q_quality" value="nonsensical"> No —
+                            nonsensical</label>
+                    </fieldset>
+                </section>
+
+                <section class="block">
+                    <fieldset class="qgroup">
+                        <legend>2) Dual-use (dependency of the question)</legend>
+                        <div class="small" style="margin-bottom:6px">Which text is needed to answer the question?</div>
+                        <label class="opt"><input type="radio" name="dual_use" value="both"> Both rules are required
+                            together</label>
+                        <label class="opt"><input type="radio" name="dual_use" value="s_only"> Source (S) alone is
+                            sufficient</label>
+                        <label class="opt"><input type="radio" name="dual_use" value="t_only"> Target (T) alone is
+                            sufficient</label>
+                        <label class="opt"><input type="radio" name="dual_use" value="neither_unclear"> Neither /
+                            Unclear</label>
+                    </fieldset>
+                </section>
+
+                <section class="block">
+                    <fieldset class="qgroup">
+                        <legend>3) Answer grounding (faithfulness of the answer)</legend>
+                        <div class="small" style="margin-bottom:6px">Is the provided answer correct and complete (based
+                            only on S and T)?</div>
+                        <label class="opt"><input type="radio" name="ans_ground" value="yes"> Yes, sufficient — every
+                            claim is stated or clearly implied by S/T</label>
+                        <label class="opt"><input type="radio" name="ans_ground" value="no"> No — incorrect, incomplete,
+                            or unsupported</label>
+                    </fieldset>
+                </section>
+
+                <section class="block">
+                    <div class="small" style="margin-bottom:6px"><strong>Optional comment</strong> (1–2 short clauses)
+                    </div>
+                    <textarea id="comment"
+                        placeholder="Optional: e.g., 'T not necessary' / 'answer adds unsupported detail'"></textarea>
+                </section>
+
+                <div class="nav">
+                    <button id="prev2" class="btn" title="Previous item">⟵ Previous</button>
+                    <button id="next2" class="btn primary" title="Next item">Next ⟶</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Instructions Modal -->
+    <div id="helpBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal" aria-labelledby="helpTitle">
+            <header>
+                <h2 id="helpTitle">XRefRAG Human Audit — Instructions</h2>
+                <div class="spacer"></div>
+                <button id="helpCloseTop" class="btn">Close</button>
+            </header>
+            <div class="content">
+                <p><strong>Goal:</strong> Validate benchmark <em>instance validity</em> for citation-dependent QA. You
+                    are <strong>not</strong> evaluating legal correctness. You are checking (i) whether the question
+                    truly requires dual-use of S and T, and (ii) whether the provided answer is supported by S∪T.</p>
+                <p><strong>Rule:</strong> Base all judgments <strong>only</strong> on S and T. Do not use outside
+                    knowledge.</p>
+
+                <h3>1) Question quality</h3>
+                <ul>
+                    <li><strong>Yes</strong>: clear and understandable.</li>
+                    <li><strong>not_realistic</strong>: very unlikely a real user would ask this for these passages.
+                    </li>
+                    <li><strong>unclear_or_ungrammatical</strong>: confusing wording or broken grammar.</li>
+                    <li><strong>nonsensical</strong>: does not make sense even with S/T.</li>
+                </ul>
+
+                <h3>2) Dual-use</h3>
+                <ul>
+                    <li><strong>Both</strong>: you must combine S and T to answer fully.</li>
+                    <li><strong>S only</strong> or <strong>T only</strong>: one passage is sufficient by itself.</li>
+                    <li><strong>Neither/Unclear</strong>: missing information or dependency is ambiguous.</li>
+                </ul>
+
+                <h3>3) Answer grounding</h3>
+                <ul>
+                    <li><strong>Yes</strong>: every claim is stated or clearly implied by S/T.</li>
+                    <li><strong>No</strong>: incorrect, incomplete, or includes unsupported content.</li>
+                </ul>
+
+                <p class="small">Tip: Keep comments brief (1–2 clauses). Example: “S alone sufficient”, “answer adds
+                    unsupported deadline”, “question unclear”.</p>
+            </div>
+            <footer>
+                <button id="helpCloseBottom" class="btn">Close</button>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // ======== CSV helpers ========
+        function csvParse(text) {
+            const rows = [];
+            let i = 0, field = '', row = [], inQuotes = false;
+
+            function endField() { row.push(field); field = ''; }
+            function endRow() { rows.push(row); row = []; }
+
+            while (i < text.length) {
+                const c = text[i];
+                if (inQuotes) {
+                    if (c === '"') {
+                        if (text[i + 1] === '"') { field += '"'; i += 2; continue; }
+                        inQuotes = false; i++; continue;
+                    } else { field += c; i++; continue; }
+                } else {
+                    if (c === '"') { inQuotes = true; i++; continue; }
+                    if (c === ',') { endField(); i++; continue; }
+                    if (c === '\r') { i++; continue; }
+                    if (c === '\n') { endField(); endRow(); i++; continue; }
+                    field += c; i++;
+                }
+            }
+            endField(); endRow();
+            if (rows.length && rows[rows.length - 1].length === 1 && rows[rows.length - 1][0] === '') rows.pop();
+            return rows;
+        }
+
+        function csvStringify(rows) {
+            function esc(v) {
+                const s = String(v ?? '');
+                return (/[",\n]/.test(s)) ? '"' + s.replace(/"/g, '""') + '"' : s;
+            }
+            return rows.map(r => r.map(esc).join(',')).join('\n') + '\n';
+        }
+
+        // ======== App State ========
+        let table = [];
+        let header = [];
+        let col = {};
+        let idx = 0;
+        let currentFileKey = null;
+
+        const REQUIRED_COLS = ["qa_id", "question", "expected_answer", "source_text", "target_text"];
+
+        // Annotation columns (written back into CSV)
+        const ANN_COLS = [
+            "q_quality",     // yes/not_realistic/unclear_or_ungrammatical/nonsensical
+            "dual_use",      // both/s_only/t_only/neither_unclear
+            "ans_ground",    // yes/no
+            "comment"        // free text
+        ];
+
+        const els = {
+            fileInput: document.getElementById('fileInput'),
+            btnStart: document.getElementById('btnStart'),
+            btnSave: document.getElementById('btnSave'),
+            btnContinue: document.getElementById('btnContinue'),
+            btnHelp: document.getElementById('btnHelp'),
+            helpBackdrop: document.getElementById('helpBackdrop'),
+            helpCloseTop: document.getElementById('helpCloseTop'),
+            helpCloseBottom: document.getElementById('helpCloseBottom'),
+            prev: document.getElementById('prev'),
+            prev2: document.getElementById('prev2'),
+            next: document.getElementById('next'),
+            next2: document.getElementById('next2'),
+            q: document.getElementById('q'),
+            s: document.getElementById('s'),
+            t: document.getElementById('t'),
+            a: document.getElementById('a'),
+            meta: document.getElementById('meta'),
+            counts: document.getElementById('counts'),
+            bar: document.getElementById('bar'),
+            comment: document.getElementById('comment')
+        };
+
+        function localKeyCSV(fileKey) { return 'xrefrag_humaneval_csv_' + fileKey; }
+        function localKeyPos(fileKey) { return 'xrefrag_humaneval_pos_' + fileKey; }
+        const LATEST_KEY = 'xrefrag_humaneval_latest_fileKey';
+
+        // ======== Utilities ========
+        function mapHeader() {
+            header = table[0] || [];
+            col = {};
+            header.forEach((name, i) => { col[String(name).trim()] = i; });
+
+            // Ensure required columns exist
+            for (const req of REQUIRED_COLS) {
+                if (!(req in col)) {
+                    alert('Missing required column: ' + req);
+                    throw new Error('Missing required column: ' + req);
+                }
+            }
+
+            // Ensure annotation columns exist
+            let changed = false;
+            for (const name of ANN_COLS) {
+                if (!(name in col)) {
+                    header.push(name);
+                    col[name] = header.length - 1;
+                    changed = true;
+                }
+            }
+            if (changed) table[0] = header;
+        }
+
+        function get(rowIdx, name) {
+            const i = col[name];
+            if (i == null) return '';
+            const row = table[rowIdx];
+            if (!row) return '';
+            return String(row[i] ?? '');
+        }
+
+        function set(rowIdx, name, value) {
+            const i = col[name];
+            if (i == null) return;
+            const row = table[rowIdx];
+            while (row.length < header.length) row.push('');
+            row[i] = String(value ?? '');
+        }
+
+        function totalRows() { return Math.max(0, table.length - 1); }
+
+        function doneCount() {
+            let n = 0;
+            for (let r = 1; r < table.length; r++) {
+                // count as done if at least answer grounding is filled (fast proxy)
+                if (get(r, "ans_ground")) n++;
+            }
+            return n;
+        }
+
+        function savePosition() { localStorage.setItem(localKeyPos(currentFileKey), String(idx)); }
+
+        // ======== Rendering ========
+        function setRadio(name, value) {
+            document.querySelectorAll(`input[name="${name}"]`).forEach(r => { r.checked = (r.value === value); });
+        }
+        function getRadio(name) {
+            const r = document.querySelector(`input[name="${name}"]:checked`);
+            return r ? r.value : '';
+        }
+
+        function show(iData) {
+            if (table.length <= 1) {
+                els.q.textContent = els.s.textContent = els.t.textContent = els.a.textContent = '';
+                els.meta.innerHTML = '<span>No assignment loaded</span>';
+                els.counts.textContent = '';
+                els.bar.style.width = '0%';
+                els.prev.disabled = els.prev2.disabled = true;
+                els.next.disabled = els.next2.disabled = true;
+                return;
+            }
+
+            const N = totalRows();
+            idx = Math.max(1, Math.min(table.length - 1, iData));
+            savePosition();
+
+            els.q.textContent = get(idx, "question") || '(empty)';
+            els.s.textContent = get(idx, "source_text") || '(empty)';
+            els.t.textContent = get(idx, "target_text") || '(empty)';
+            els.a.textContent = get(idx, "expected_answer") || '(empty)';
+
+            const qa_id = get(idx, "qa_id");
+            const extras = [];
+            for (const k of ["method", "split", "persona", "reference_type", "source_passage_pid", "target_passage_pid"]) {
+                if (k in col) {
+                    const v = get(idx, k);
+                    if (v) extras.push(`<span>${k}: ${v}</span>`);
+                }
+            }
+            els.meta.innerHTML = `<span>qa_id: ${qa_id || '(missing)'}</span><span>item ${idx} / ${N}</span>` + (extras.length ? extras.join('') : '');
+
+            const done = doneCount();
+            els.counts.textContent = `${done} labeled / ${N} total`;
+            els.bar.style.width = ((done / Math.max(1, N)) * 100).toFixed(1) + '%';
+
+            setRadio('q_quality', get(idx, "q_quality"));
+            setRadio('dual_use', get(idx, "dual_use"));
+            setRadio('ans_ground', get(idx, "ans_ground"));
+            els.comment.value = get(idx, "comment");
+
+            els.prev.disabled = els.prev2.disabled = (idx === 1);
+            els.next.disabled = els.next2.disabled = (idx === table.length - 1);
+        }
+
+        function collectAndSave() {
+            if (table.length <= 1) return;
+            set(idx, "q_quality", getRadio('q_quality'));
+            set(idx, "dual_use", getRadio('dual_use'));
+            set(idx, "ans_ground", getRadio('ans_ground'));
+            set(idx, "comment", els.comment.value.trim());
+
+            const csvText = csvStringify(table);
+            localStorage.setItem(localKeyCSV(currentFileKey), csvText);
+            savePosition();
+        }
+
+        // ======== Load/Save ========
+        async function startAssignment() { document.getElementById('fileInput').click(); }
+
+        function saveProgress() {
+            if (table.length <= 1) { alert('No assignment loaded. Click "Start assignment" to upload a CSV.'); return; }
+            collectAndSave();
+            localStorage.setItem(LATEST_KEY, currentFileKey);
+
+            const blob = new Blob([csvStringify(table)], { type: 'text/csv' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            const base = (currentFileKey || 'annotations').replace(/[^a-zA-Z0-9_.-]+/g, '_');
+            a.download = base.replace(/\.csv$/i, '') + '_humaneval_updated.csv';
+            a.click();
+        }
+
+        function continueAssignment() {
+            const latest = localStorage.getItem(LATEST_KEY);
+            if (!latest) { alert('No saved assignment found on this device. Use "Start assignment" to upload a CSV.'); return; }
+            const csvText = localStorage.getItem(localKeyCSV(latest));
+            if (!csvText) { alert('Saved assignment metadata found but CSV content missing. Re-upload via "Start assignment".'); return; }
+
+            currentFileKey = latest;
+            table = csvParse(csvText);
+            if (!table.length) { alert('Saved CSV is empty or invalid.'); return; }
+
+            try { mapHeader(); } catch { return; }
+
+            const posRaw = localStorage.getItem(localKeyPos(currentFileKey));
+            const pos = posRaw != null ? parseInt(posRaw, 10) : NaN;
+            if (!Number.isNaN(pos) && pos >= 1 && pos < table.length) show(pos);
+            else {
+                // jump to first unlabeled item (by ans_ground)
+                let first = 1;
+                for (let r = 1; r < table.length; r++) { if (!get(r, "ans_ground")) { first = r; break; } }
+                show(first);
+            }
+        }
+
+        // ======== Events ========
+        document.getElementById('fileInput').addEventListener('change', async (e) => {
+            const f = e.target.files[0];
+            if (!f) return;
+
+            const text = await f.text();
+            const parsed = csvParse(text);
+            if (!parsed.length) { alert('CSV appears empty or invalid.'); return; }
+
+            currentFileKey = f.name.replace(/\W+/g, '_');
+            table = parsed;
+
+            try { mapHeader(); } catch { return; }
+
+            localStorage.setItem(localKeyCSV(currentFileKey), csvStringify(table));
+            localStorage.setItem(LATEST_KEY, currentFileKey);
+
+            let first = 1;
+            for (let r = 1; r < table.length; r++) { if (!get(r, "ans_ground")) { first = r; break; } }
+            show(first);
+        });
+
+        document.getElementById('btnStart').addEventListener('click', startAssignment);
+        document.getElementById('btnSave').addEventListener('click', saveProgress);
+        document.getElementById('btnContinue').addEventListener('click', continueAssignment);
+
+        document.getElementById('prev').addEventListener('click', () => { collectAndSave(); show(idx - 1); });
+        document.getElementById('prev2').addEventListener('click', () => { collectAndSave(); show(idx - 1); });
+        document.getElementById('next').addEventListener('click', () => { collectAndSave(); show(idx + 1); });
+        document.getElementById('next2').addEventListener('click', () => { collectAndSave(); show(idx + 1); });
+
+        // Live save
+        for (const n of ['q_quality', 'dual_use', 'ans_ground']) {
+            document.querySelectorAll(`input[name="${n}"]`).forEach(el => el.addEventListener('change', collectAndSave));
+        }
+        document.getElementById('comment').addEventListener('change', collectAndSave);
+        document.getElementById('comment').addEventListener('blur', collectAndSave);
+
+        // ======== Instructions Modal ========
+        function openHelp() { els.helpBackdrop.style.display = 'flex'; els.helpBackdrop.setAttribute('aria-hidden', 'false'); }
+        function closeHelp() { els.helpBackdrop.style.display = 'none'; els.helpBackdrop.setAttribute('aria-hidden', 'true'); }
+        document.getElementById('btnHelp').addEventListener('click', openHelp);
+        document.getElementById('helpCloseTop').addEventListener('click', closeHelp);
+        document.getElementById('helpCloseBottom').addEventListener('click', closeHelp);
+        els.helpBackdrop.addEventListener('click', (e) => { if (e.target === els.helpBackdrop) closeHelp(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeHelp(); });
+
+        (function init() { })();
+    </script>
+</body>
+
+</html>

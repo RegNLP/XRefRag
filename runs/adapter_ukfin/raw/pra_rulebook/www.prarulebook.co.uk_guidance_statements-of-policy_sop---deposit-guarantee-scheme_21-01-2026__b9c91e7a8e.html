@@ -1,0 +1,4425 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{580ADAB6-7AFE-425B-A5D8-DB179726A6EF} -->
+<title>SoP1/15 – Deposit Guarantee Scheme | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SoP1/15 – Deposit Guarantee Scheme">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SoP1/15 – Deposit Guarantee Scheme">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-32f46895-26df-4881-9143-daf9d210bd23","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kdr4x6linx5rw2lrf5nq-f-92b8a264f-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":30,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"195562f5","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"80.227.203.0","ak.cport":58726,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769025371","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==ig51DL7Ww+75WhV8tbZSEVISRP3y4vE0QLm7symDFZ0o9v9NGoFy4ZDCIhngXXCG4dWYm8OLhjDFiYUebWn4wZgAUN2g1cT+uMgYlz7RlRbzfbN+QDxL6b26gmFtWczvK7NLh9kPzkaj5G/0PQY9urjoDuuo/4IFF7QNrRmWuYgC9LQ03NEzSLa/fFiM+N//nbrDl5NILcbUtDtKiGbn+n02zoV7l3eSGpQLkwzDokmzmyuH6k/qtjEDbUnpcNMvrUuLRwthD/+duJMwaFPOc8cciZbV5ecYqEXp2S4Rn3GcALqL505RH+DD5m9zNHhYUNPNnOrTvNwDqGrn6DMd+qURLdTg4G7hLpuQMxNAv/gB+73Pxa94xtHsh32/fOrS4DlQh/p6gcFEtSLGUDIWPnbnhwXJ1RKIgMyNuHWfd2g=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SoP1/15 – Deposit Guarantee Scheme				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SoP1/15 – Deposit Guarantee Scheme
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="present">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2015/deposit-guarantee-scheme" rel="noopener noreferrer" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3">The Statement of Policy (SoP) shown on this page is effective from 01/07/2023. Past versions of this SoP can be found here.</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--present">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;present&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/01-07-2023">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/07/2023
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-2bbfbb7f-6a7d-4675-9897-1bb04d2de4d8">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-2bbfbb7f-6a7d-4675-9897-1bb04d2de4d8"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SoP1/15 – Deposit Guarantee Scheme
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SoP1/15 – Deposit Guarantee Scheme)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-crr-firms">
+					Non-CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-authorised-persons">
+					Non-authorised persons
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/depositor-protection/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Depositor Protection
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/fscs-management-expenses-levy-limit-and-base-costs/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									FSCS Management Expenses Levy Limit and Base Costs
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/management-expenses-in-respect-of-relevant-schemes/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Management Expenses in Respect of Relevant Schemes
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2023/june/depositor-protection" class="list-links__link" target="_blank">
+										PS7/23 - Depositor Protection
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/statements-of-policy/sop---deposit-guarantee-scheme/01-07-2023_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/01-07-2023?p=1" data-id="e7e551eac4ea440a8176f1c85b82c4c6" data-effective-date="01-07-2023" data-download-title="SoP1/15 – Deposit Guarantee Scheme_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme&amp;subject=PRA Rulebook - SoP1/15 – Deposit Guarantee Scheme">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="76fbdabd6c2344fdb5ac48636298ad92"
+	 data-version="7314ec17814e417dab4b839f8ad0f819"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="86c73900e7944dde8526d4f427b905e5"
+	 data-version="9112ce1c3fcf42b68b6e7be23aa349b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement of policy is addressed to the Financial Services Compensation Scheme (FSCS) in respect of its role as scheme manager of the Deposit Guarantee Scheme (DGS). This statement may also be of interest to firms and depositors.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="7d5a73ebf66a454089d2177c011552cf"
+	 data-version="6a79953ecd2849878adc23b0a4dd501b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The purpose of this statement is to set out the expectations of the Prudential Regulation Authority (PRA) on the FSCS with regards to: </p>
+<ol class="new-bullet">
+    <li>(a) the duties of the FSCS; </li>
+    <li>(b) the FSCS&rsquo;s role in assessing and paying compensation in respect of deposits; </li>
+    <li>(c) the FSCS&rsquo;s role in assessing and paying temporary high balance (THB) claims; and </li>
+    <li>(d) the FSCS&rsquo;s role in the funding of the Deposit Guarantee Scheme (DGS).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="89df0738e32643fd92e7d5bc83ff3e42"
+	 data-version="d999ac1affa6453083687f9c2ae37f47"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>By providing further information to the FSCS with regards to its duties and role in paying and funding compensation in respect of deposits, this statement should help to ensure an effective deposit guarantee scheme and thus contribute towards the safety and soundness of deposit-takers.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9f105d5f9b264a5083a491670c6efb22"
+	 data-version="7607423b26134d848c532b9d67a4f8fe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This statement of policy is intended to be read together with the rules specific to deposits as set out in the <a href="/pra-rules/depositor-protection" data-rb-content-link="Part">Depositor Protection Part</a>&nbsp;of the PRA Rulebook, which applies to the FSCS, and firms that are DGS members. The funding section is also intended to be read with the <a href="/pra-rules/fscs-management-expenses-levy-limit-and-base-costs" data-rb-content-link="Part">FSCS Management Expenses Levy Limit and Base Costs Part</a>&nbsp;and the <a href="/pra-rules/management-expenses-in-respect-of-relevant-schemes" data-rb-content-link="Part">Management Expenses in respect of Relevant Schemes Part</a>&nbsp;which also apply to PRA-authorised insurers and the Society of Lloyd&rsquo;s.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/1---introduction/01-07-2023?p=1" data-id="76fbdabd6c2344fdb5ac48636298ad92" data-effective-date="01-07-2023" data-download-title="Introduction_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/1---introduction/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme#76fbdabd6c2344fdb5ac48636298ad92&amp;subject=PRA Rulebook - SoP1/15 – Deposit Guarantee Scheme – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="a41180c57f5547dbaf45e9b8e66cc571"
+	 data-version="8c7aec7206144aa8ae50ec80dfb159bb"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Background
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="aec465caf4f248928e8ae2d8de502241"
+	 data-version="029269e0838149beb104fde1ad5bc3f8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The FSCS exercises the functions that are conferred on the scheme manager by Part XV of the Financial Services and Markets Act 2000 (FSMA).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ac15b5db407c423db651e92941d68b36"
+	 data-version="e689bfbd83fb4b0080f699b9e4d2953a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA is required, under section 213 of FSMA and the Financial Services and Markets Act 2000 (Financial Services Compensation Scheme) Order 2013,<sup><a href="#footnote-1">1</a></sup> to make rules establishing a scheme for compensating persons in cases where firms are unable or, likely to be unable, to satisfy claims for deposits.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						S.I. 2013/598.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0472560f1ac649c484e80eb8ecf718af"
+	 data-version="c1b491b25af140cfab484667d03d80f9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In addition to PRA rules, other aspects of the operation of the FSCS are dealt with through the powers of the FSCS under company law (such as the power to borrow, to take on premises, etc) and through rules made by the Financial Conduct Authority (FCA).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6773c122249044a1abf51840ee2a41ca"
+	 data-version="07ddf3379ca24e158fd8c40299a9aab1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In addition, FSMA confers certain powers upon the FSCS, such as a power under section 219 (Scheme Manager's powers to require information) to require persons to provide information.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/2---background/01-07-2023?p=1" data-id="a41180c57f5547dbaf45e9b8e66cc571" data-effective-date="01-07-2023" data-download-title="Background_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/2---background/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme#a41180c57f5547dbaf45e9b8e66cc571&amp;subject=PRA Rulebook - SoP1/15 – Deposit Guarantee Scheme – Background">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="f507e54f207542f28b564c6b79a7af84"
+	 data-version="b1ea42c77b41456ab5fb393506745ccb"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Duties of the FSCS
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="722beb0d54a74d05a5f3626b1ed2bacd"
+	 data-version="98bc7832b78545619f63004b47d6b512"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#cf7d5172f76d4834af676fb6de034de0" data-rb-content-link="Chapter">Chapter 24</a> sets out duties of the FSCS in respect of the DGS.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6db8dd376e4140c7a5c47554e291ba70"
+	 data-version="ef767d1398e344ff976cd10b9df2398a"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Co-operation with other Member States&rsquo; DGS</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="012fc5cc9b564187880e5f060eb5f3e8"
+	 data-version="5d802c78553241f5bc637fe8ce796d16"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Deleted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5556f2a0b3454309b508d2e8e2c8aaa0"
+	 data-version="19b41d35b2ed4f8c94f8372c2c0167bd"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Language of correspondence with depositors</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="fda71659e7174461bd3d02296933e8fd"
+	 data-version="d8383e4c2bd24023b3ed7b69ae127379"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#c8d44ed5004b4eddb48e16042b8927a9" data-rb-content-link="Rule">Depositor Protection 24.10</a> sets out the languages in which the FSCS may correspond with depositors. The FSCS may also communicate in Welsh where this is agreed with the depositor in addition to English.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/3---duties-of-the-fscs/01-07-2023?p=1" data-id="f507e54f207542f28b564c6b79a7af84" data-effective-date="01-07-2023" data-download-title="Duties of the FSCS_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/3---duties-of-the-fscs/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme#f507e54f207542f28b564c6b79a7af84&amp;subject=PRA Rulebook - SoP1/15 – Deposit Guarantee Scheme – Duties of the FSCS">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="fde1ff7bbc3b4aa98aa2947c57000b6a"
+	 data-version="45ed730824174550a381d6ba8493cea6"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Paying compensation
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fb09b75b605b4dd6b836ee61df0e11b8"
+	 data-version="c29e12403d914eae96ca55c6acc25164"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Pension schemes</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="7ab58f875b7a4300922528d2082c36a7"
+	 data-version="4c99cab19c404939b10b18fce0ada489"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#f16ad55fec784014925ac8f6a082dfe4" data-rb-content-link="Rule">Depositor Protection 6.4</a> clarifies that certain types of pension, including the occupational pension schemes of micro, small and medium-sized enterprises, where the schemes are money purchase schemes, are to be compensated on the basis that each member has a separate entitlement to compensation. The deposits of occupational pension schemes of large enterprises are not eligible deposits.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="39842e75efc3497396c3dacaf1920cbc"
+	 data-version="710b621ddeff4a5595f3ed112abb500c"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Landlord and Tenant Act deposit accounts</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="e31d2b65447641a48777b63c868db1e6"
+	 data-version="5176aa27e4a94d95918e27191f7c2fcd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where an account holds money for a trust fund that has been established under section 42 of the Landlord and Tenant Act 1987, the PRA considers that such accounts should be treated like other non-pension trusts with multiple beneficiaries in accordance with <a href="/pra-rules/depositor-protection#c50a1916156a44a5a70b68d5ccd3948e" data-rb-content-link="Rule">Depositor Protection 6.3&ndash;6.9</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d730d4e57923437bbd98727f03b5a4a9"
+	 data-version="42f075e5d3864ead9a594d32b1e8429c"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Paying compensation to a person other than the depositor</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="f1ab622b581441ecb86686efdf5aca64"
+	 data-version="07baada0d06049239c9a992228b3b2ba"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#aa818450343f4f0e954b0750ece449d2" data-rb-content-link="Chapter">Depositor Protection Chapter 6</a> (paying compensation) allows the FSCS to pay compensation to a person other than the depositor (or to a person other than the person who is absolutely entitled to the deposit) in certain circumstances. The PRA considers examples of the circumstances covered by these rules to be: </p>
+<ol class="new-bullet">
+    <li>(a) when personal representatives are entitled to receive compensation on behalf of the deceased; </li>
+    <li>(b) when trustees are entitled to receive compensation on behalf of beneficiaries (for further provisions relating trustees entitlement to compensation, see <a href="/pra-rules/depositor-protection#c50a1916156a44a5a70b68d5ccd3948e" data-rb-content-link="Rule">Depositor Protection 6.3&nbsp;to 6.6</a>); </li>
+    <li>(c) when the donee of an enduring power of attorney or a lasting power of attorney is entitled to receive compensation on behalf of the donor of the power; </li>
+    <li>(d) when the Court of Protection is entitled to receive compensation on behalf of a person incapable by reason of mental disorder of managing and administering their property and affairs; </li>
+    <li>(e) when a depositor dies before receiving compensation; and</li>
+    <li>(f) when e-money is &lsquo;safeguarded funds&rsquo; in a UK credit institution.&nbsp;</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="66dcb05359194835b8d2334a53bd177f"
+	 data-version="6942c5a55dad4d15962e232e94c6d6bd"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Paying compensation to agents</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="eabcf90cb0ac42898eebb742af0f3698"
+	 data-version="5fa9a5bb3477486595bb363d6de20bc4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a depositor is an agent for one or more principals, the PRA expects that, under <a href="/pra-rules/depositor-protection#ec25865b60154d14aacdd50548a74cb7" data-rb-content-link="Rule">Depositor Protection 6.2(5)(a)</a>, the FSCS must treat the principal or principals as being the party entitled to receive compensation, not the depositor.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="05652f4400ec4fcd9e39e90f28262421"
+	 data-version="ba445d4b95d642cd8ad7dc31a70afe95"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Obligation to pay compensation</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="fd0aa6a2dce945429f15e5aac3e3f110"
+	 data-version="beb862c74ab9414c8b3141032a80205f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The obligation to compensate arises when deposits with a DGS member are determined to be unavailable deposits. The PRA would make such a determination as soon as possible after being satisfied that either of the conditions under the &lsquo;unavailable deposit&rsquo; determination (as defined in <a href="/pra-rules/depositor-protection#ad4669f4b6714df7ae2847637182f9b1" data-rb-content-link="Chapter">Depositor Protection Chapter 1</a>) has been met.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="92349a18b5744809bf12ae6a93f64767"
+	 data-version="e67a0bd6153b40f8b40975658d0b90ec"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Subrogation and Recoveries</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="6aba80741fe842fdb85addf49e30c286"
+	 data-version="dca7a23a6a3e4455a980242d2af9a552"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						17.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>When the FSCS compensates a depositor, the subrogation rules in <a href="/pra-rules/depositor-protection#01b9cecb028d47fe92052c31674135c5" data-rb-content-link="Chapter">Chapter 28</a>&nbsp;are activated. These enable the FSCS to &lsquo;stand in the shoes&rsquo; of the depositor to bring a claim against the failed firm to recover the costs of compensation. The FSCS can elect to exercise this right in <a href="/pra-rules/depositor-protection#01b9cecb028d47fe92052c31674135c5" data-rb-content-link="Chapter">Chapter 28</a>&nbsp;in relation to some, or all, of the depositor&rsquo;s claim.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9b44e39b11d84f9982ece5f24d2e8561"
+	 data-version="d81c08be1b4c480498e0ac2b5dffb554"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						18.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#606c5006ca434409936dfc57d7bb893a" data-rb-content-link="Chapter">Depositor Protection Chapter 30</a> sets out how the FSCS must act in relation to recoveries made from a credit institution or third party in respect of eligible deposits.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e55d717c49a442b698345cc461248333"
+	 data-version="7f1e4b2368b64335bd3dd207707296c4"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Interim compensation payments</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="9abe600621a9459ead6eb51644e38437"
+	 data-version="24dbb9d8945b48669ab24ae87a8b9e72"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						19.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Regarding <a href="/pra-rules/depositor-protection#945fb00f5d0f46d080023ecc2590cd87" data-rb-content-link="Rule">Depositor Protection 9.6</a>, where reasonably practicable, the PRA expects the FSCS to inform depositors (that do not fall under any of the categories of depositors excluded from the seven working day repayment obligation under <a href="/pra-rules/depositor-protection#a1cfa7a33573477cb167c5d96e74b263" data-rb-content-link="Rule">Depositor Protection 9.4</a>): </p>
+<ol class="new-bullet">
+    <li>(a) if the FSCS considers they are unlikely to make compensation available within seven working days from the date on which deposits are determined to be unavailable;&nbsp;and</li>
+    <li>(b) that those depositors may request an interim compensation payment.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="d2ff29c12faf4b17ba3755a88230dfef"
+	 data-version="800d291ab6074517a0632add927fd917"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						20.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In such circumstances, when the FSCS is required to make a payment to cover the cost of living in accordance with <a href="/pra-rules/depositor-protection#945fb00f5d0f46d080023ecc2590cd87" data-rb-content-link="Rule">Depositor Protection 9.6(1)</a>, the PRA expects the FSCS to have regard to the following considerations when determining the appropriate amount to pay the depositor: </p>
+<ol class="new-bullet">
+    <li>(a) the amount of time before the FSCS is able to pay the depositor the full amount; </li>
+    <li>(b) the total aggregated deposits held by the depositor;&nbsp;and</li>
+    <li>(c) whether the aggregated deposits include deposits held in the depositor&rsquo;s primary current account (if known).</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="faaf6a0a4923408fa93b3b279820d9d0"
+	 data-version="1eeb8f56236747c8a68ace8f25dca6eb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						21.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In general the PRA expects that interim payments made in accordance with <a href="/pra-rules/depositor-protection#945fb00f5d0f46d080023ecc2590cd87" data-rb-content-link="Rule">Depositor Protection 9.6(1)(a)</a>&nbsp;should equal at least 75% of the covered amount up to a maximum of &pound;5,000.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="dd6b2090b566464e8ab201afbefe4b19"
+	 data-version="e23cba4363d945d3b7f984d39f5ff901"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						22.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In general the PRA expects that interim payments made in accordance with <a href="/pra-rules/depositor-protection#945fb00f5d0f46d080023ecc2590cd87" data-rb-content-link="Rule">Depositor Protection 9.6(1)(b)</a>&nbsp;should equal at least 75% of the balance or &pound;85,000, whichever is lower.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a8623f4123f241b1836889ac44af3dbe"
+	 data-version="08e19b9cc0b14ebfa2840714357f4817"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Timing for compensation</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="64d760031ae9410ba149e7a80603af88"
+	 data-version="57906659af574ab69c6d4829989431a0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						23.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#a1cfa7a33573477cb167c5d96e74b263" data-rb-content-link="Rule">Depositor Protection 9.4</a> sets out the circumstances in which the FSCS may defer payment of compensation beyond the time period set out in <a href="/pra-rules/depositor-protection#ce131521927c49f7beb8943a54d97631" data-rb-content-link="Rule">Depositor Protection 9.3</a>. The PRA expects that the FSCS should aim to pay out these deposits within three months where possible. The PRA recognises that circumstances where it may not be possible for FSCS to pay out within this timeframe may include: </p>
+<ol class="new-bullet">
+    <li>(a) where the deposit remains subject to legal dispute after three months; </li>
+    <li>(b) where the deposit remains subject to restrictive measures imposed by national governments or international bodies; and </li>
+    <li>(c) where there remains uncertainty as to whether a person is entitled to receive compensation, or as to the amount of compensation due, despite investigation by the FSCS.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="24d9fa0fae254d249e80ce7d4b4e72b9"
+	 data-version="a218ed2f6c3c47bca009eb5bedbe8850"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Calculation of the compensation sum</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="ec92b298a3a04e94b50d9e36a7a325eb"
+	 data-version="e26670dcb0874c8a8d04bf9a82dbb0f9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						24.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#77e83baabed54e9c974c4859c9fb2447" data-rb-content-link="Chapter">Depositor Protection Chapter 5</a> sets out how the FSCS should calculate a compensation sum. In calculating the depositor&rsquo;s overall compensation, the FSCS may rely, to the extent that it is relevant, on any determination by: </p>
+<ol class="new-bullet">
+    <li>(a) a court of competent jurisdiction; </li>
+    <li>(b) a trustee in bankruptcy; </li>
+    <li>(c) a liquidator; and </li>
+    <li>(d) any other recognised insolvency practitioner.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/4---paying-compensation/01-07-2023?p=1" data-id="fde1ff7bbc3b4aa98aa2947c57000b6a" data-effective-date="01-07-2023" data-download-title="Paying compensation_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/4---paying-compensation/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme#fde1ff7bbc3b4aa98aa2947c57000b6a&amp;subject=PRA Rulebook - SoP1/15 – Deposit Guarantee Scheme – Paying compensation">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="e608ff769277496cb6676f7e44bd5540"
+	 data-version="664a6ed3a5664be2b0e1c76ff4dc651f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Compensation for temporary high balances
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="38b7864cd4fb45e6bc4010c372495275"
+	 data-version="8efc93510ceb48d1b1a01375ed0958ac"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						25.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#6a44d4a57e4c422abfad2fed4a7728d8" data-rb-content-link="Chapter">Chapter 10</a> sets out the PRA rules applicable to the protection of certain deposits categorised as &lsquo;temporary high balances&rsquo; (THBs).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c9a7bd09d12f4450a3b7ffc4e5795b2e"
+	 data-version="6081d011db9a46d28a8bb826bef8daee"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Application</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="b99c2dcc06ba468d83075500fbabf4aa"
+	 data-version="478e0a3282b24618b3f0e2fa19fd249c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						26.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that the THB protection limit in <a href="/pra-rules/depositor-protection#7d85fb3048694f4eb83519a0d8ef8056" data-rb-content-link="Rule">Depositor Protection 4.3</a>&nbsp;applies to each depositor on a &lsquo;per event per authorised entity&rsquo; basis and is intended to apply to natural persons only (ie individuals) and not all eligible depositors (eg not companies). Where the depositor is a trust, the PRA considers that it is the underlying beneficiary that is required to be an individual. This includes a beneficiary who is absolutely entitled to the deposit (under a bare trust). Trustees of a trust where individual beneficiaries have less than an absolute beneficial interest may make a THB claim on behalf of the trust as a whole. This includes where the trust involves the exercise of discretion (under a discretionary trust). If an individual or a trustee has eligible deposits in excess of &pound;85,000 as a result of more than one of the life events set out in <a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2</a>, a claim may be made for compensation in respect of both of those events and the limit in <a href="/pra-rules/depositor-protection#7d85fb3048694f4eb83519a0d8ef8056" data-rb-content-link="Rule">Depositor Protection 4.3</a>&nbsp;would apply separately to each event. For example, if an individual had a deposit of &pound;750,000 from an inheritance and a deposit of &pound;750,000 from a house sale, then they would be able to claim up to &pound;750,000 in each case.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="23093a65e41e4477ab29d6e2812405d8"
+	 data-version="4fd57dd9e8a141c093c34b76e466210c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						27.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where an individual has spread a THB across more than one deposit-taker, then they would be able to make a separate claim for each deposit-taker that defaults. However, the depositor would still need to demonstrate a sufficient link between the amount in their&nbsp;account at the point of default and the THB event. The depositor should never be able to claim more than the value of the original amount from the event that gave rise to the THB.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="caacbd6667414d8ead3b2d2e4cc81e2f"
+	 data-version="b0be6fcc3f92498092d26df97e0d4ab2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						28.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Individual depositors in a joint account will each benefit from THB coverage separately, although they will only benefit from this if they are able to demonstrate that the THB arises from a relevant life event and provide verification. Each joint account holder will also only be able to claim for the proportion of the THB deposit to which they are entitled (in accordance with the terms of the account or equally, where the terms of the account do not specify the split). For example, where &pound;2 million (which is the proceeds of sale from the depositor&rsquo;s house) is deposited in a joint account which is owned equally by a couple, each will be entitled to claim up to &pound;1 million. If only &pound;1 million is deposited, each can claim up to &pound;500,000. For the avoidance of doubt, as noted above, each depositor can claim on a &lsquo;per event per authorised entity&rsquo; basis meaning that a couple is entitled to a claim of up to &pound;1 million each for the same life event (eg wedding or redundancy) per authorised entity.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9ee164cf8e52497ab268b4bd8c954477"
+	 data-version="a0ee6e90ff5f46cc98ac55c9666cf852"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						29.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Under <a href="/pra-rules/depositor-protection#b2be0013469c4849bbbf6a0141208f58" data-rb-content-link="Rule">Depositor Protection 10.7</a>, the protection for THBs runs for a period of six<sup><a href="#footnote-1"></a><a href="#footnote-2">2</a></sup> months from the later of the first date on which a THB is credited to a depositor&rsquo;s account and the first date on which the THB becomes legally transferable to the depositor, or in the case of a trust, the depositor or the beneficiary. The PRA considers that a deposit becomes legally transferable to a person at the point in time when that person becomes entitled to receive the money. This is likely to include the date of grant of probate, the date of completion of a residential property sale or the date on which a judgement is made awarding damages.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						Policy Statement PS19/20 ‘Financial Services Compensation Scheme – Temporary High Balances Coverage Extension’ August  2020, set out that the THB coverage period was increased from 6 months to 12 months up until, and including, 31 January  2021 and would revert back to 6 months on Monday 1 February 2021.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="abf6604ae3a9489480fc9ba516e97087"
+	 data-version="84317598faa545b2834cf984ea2db97d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>What types of THB deposits are protected?</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="eaae23c690d449ecbc5fd1fc26aee446"
+	 data-version="2fb364379c964a80986d4686bdd0f63a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						30.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2</a> sets out the list of categories of eligible deposits that may benefit from THB protection. We have set out further detail below on the PRA&rsquo;s expectations in relation to these categories: </p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6b3a058410e84816901840f95e524782"
+	 data-version="91971b74d3e04a8499bc41d79e2d7233"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>(1) Deposits relating to an individual&rsquo;s private residential property (<a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2(1)</a>)</h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="608968bc44a3426495eb96cad592633a"
+	 data-version="698cab0a69844bca883d8b4f475c37ed"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						31.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The protection under <a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2(1)</a>&nbsp;should enable a person to claim THB protection in relation to amounts deposited in their own account or in a solicitor&rsquo;s client account on their behalf.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="024f5ca462bb40389addc57b2b664f21"
+	 data-version="3be88da495624195ab6e91d7d1442deb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						32.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers references to &lsquo;private residential property&rsquo; in <a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2 (1)</a>&nbsp;to refer to a specific residential property (ie the property is identifiable) in which the individual resides, intends to reside or has resided as their main or only residence (as that term is understood in connection with capital tax gains purposes). The PRA does not consider that general savings for a property should fall under this category.&nbsp;</p>
+
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="651f0b9b54c74eb99e5da9b43e3e82fa"
+	 data-version="e2504412acf04543adb1724c27c49ccd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						33.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that land purchased with a view to constructing a dwelling would fall within this category. The claimant should provide evidence that the land has been purchased (or is about to be purchased) with a view to constructing the purchaser&rsquo;s only or main dwelling.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cc76a94c84b14b928b7bf1a912cb857b"
+	 data-version="7123fcb00a5f4928ab438464326f95c1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						34.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that proceeds from the sale of a property that the individual owned as a buy-to-let property, or that was the individual&rsquo;s investment property, should not benefit from THB protection. Similarly, the PRA considers that funds held by or on behalf of an&nbsp;individual in preparation for the purchase of second home, a holiday home, or any other investment property (which will not be the individual&rsquo;s only or main residence) should not be protected.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="c9cc69575e5f42beb5cd6e896f14eebc"
+	 data-version="6c05079457c341a9b75bbac7efec59fe"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						35.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the avoidance of doubt, the PRA does not consider that THB claims falling under this category should be restricted to the purchase price of the property. For example, the PRA expects that amounts falling under category <a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">10.2(1)(a)</a>&nbsp;could include deposits for anticipated stamp duty and associated fees.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e9e81b97c2484e438f78434c40987e90"
+	 data-version="3b3c1dc408244663afc7a4da2b2d8ac8"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>(2) Deposits that fall under <a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2(2)</a></h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="875d9565924641e49da6e2b4f2986350"
+	 data-version="88bfdcbff6a74284b6c15fd2b1d9e416"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						36.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that the following deposit types would benefit from THB protection: </p>
+<ol class="new-bullet">
+    <li>(a) sums paid in respect of benefits payable under an insurance policy. These may include proceeds of pure protection contracts as well as sums paid in respect of lump sums payable under an endowment or life insurance policy; </li>
+    <li>(b) a claim for compensation for personal (including criminal) injury. This may include personal injury compensation payments or damages for incapacity or invalidity (made in court (by HM Courts and Tribunal Services or by an equivalent non-UK court or out of court, or from a statutory body); </li>
+    <li>(c) state benefits paid in respect of a disability or incapacity. This may include backdated payment for care, disability living allowance, severe disablement allowance, vaccine damage payment; </li>
+    <li>(d) a claim for wrongful conviction. This may include compensation for wrongful conviction resulting from decisions made by HM Courts and Tribunal Services or by an equivalent non-UK court; </li>
+    <li>(e) sums paid in respect of a divorce or dissolution of a civil partnership. These may include divorce settlement lump sums (including out of court settlements) or lump-sum settlements resulting from civil partnership dissolution; </li>
+    <li>(f) sums paid in respect of sums payable on retirement. These may include lump sums payable under pension schemes; and </li>
+    <li>(g) sums deposited in preparation for the purchase of, or arising from the sale of house boats and other mobile homes which are or, if the purchase not yet happened, are intended to become, the depositor&rsquo;s only or main dwelling.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="437575fe256d4dec8ff19d57736e9b68"
+	 data-version="6dfe06d023f4433296119c0c8a209f48"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h5>(3) Deposits that fall under <a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2(3)</a></h5>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="296543ee0af343129a034d9d330c0693"
+	 data-version="bd9215304c49432e80bf2876bef2654a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						37.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA considers that sums paid to, or for the benefit of, an individual in respect of benefits payable on death may include death in service payments paid under occupational pension schemes or otherwise.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="094f66fb475b463cb630eb613c228395"
+	 data-version="9781495b182947dba034c2b7438cabc0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						38.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA also considers that ISAs passed on to a spouse at death would also fall under this category.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6089221c4083491a8fa4fa283b5625ab"
+	 data-version="d108e0cffe8d4a71b3fa1e9c2efbca1e"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>The FSCS&rsquo;s role in verifying THBs</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="1144a18a580f4491998cc53abca137e8"
+	 data-version="27a26484fe8a499d862e416071dfa00d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						39.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Following the default of a firm (ie where a determination has been made that deposits are unavailable), the PRA expects that the FSCS will review the SCV file and exclusions view file of the firm and write to depositors with aggregated deposits at the firm in excess of &pound;85,000 to inform them that they, or where the depositor is a trustee, the beneficiary, may be entitled to&nbsp;additional compensation if they hold any deposits that qualify as temporary high balances and can provide evidence verifying this.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5b7f0d41722e4d44a549413ed1bcae2c"
+	 data-version="dcf1948e6f844b508455f65014df97cb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						40.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects the FSCS to provide information to the depositor on what constitutes sufficiently robust evidence and refer the depositor to where they may find further information, including information on any prescribed format for the evidence, the address to which the evidence should be submitted, any relevant timeframes for submission and an overview of the process the FSCS will follow in assessing the evidence. The PRA expects that the FSCS may ask to review evidence including (but not limited to) the following: a property sale receipt or agreement; a court judgement; a will; a letter from an insurer regarding an insurance payout; a letter from a lawyer, conveyancer, mortgage provider, former employer or pension trustees; court orders; social security statements; probate/letters of administration; death/marriage certificate; land register records and HMRC records. This list is not exhaustive.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4ea0ead92b4d4d41a59f6b94d564c859"
+	 data-version="8e807e2737f9466ea5b529e626002e04"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						41.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Regarding claims made in respect of <a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2 (2)(g)</a>, the PRA expects that the FSCS should require suitable evidence that a marriage or civil partnership between two specified individuals has been arranged, for example, confirmation of the booking of the marriage or civil partnership ceremony.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="79824faeb2bf44d880a2421966cdb824"
+	 data-version="985747b9d4fb4dc1b5c6dbc33c51961d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						42.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects the FSCS to assess the validity of a THB claim in accordance with PRA rules and to determine if a sufficient link has been established between an eligible deposit and the relevant THB category on the basis of the nature of and quality of evidence provided by the depositor.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0e291ed20b1741f1bc313067499e9729"
+	 data-version="b3e1d8417e9540b29d93f09251c64287"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						43.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects the FSCS to determine (i) that the evidence provided by the depositor is sufficiently robust; and (ii) that the deposits fall under one of the THB categories.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6eb1c9587f27481092b939d09e55480b"
+	 data-version="c571f58fadda4c659e86118a3fca81c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						44.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA acknowledges that because depositors may have payments flowing in and out of their accounts, it may be difficult to establish what portion of their money has retained THB protection since the THB was paid in. The PRA considers that, once the THB has been credited to a depositor&rsquo;s account, the depositor will benefit from the extra THB protection for the coverage period to the value of the original THB credit, no matter what pattern of payment follows.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="9ff53d2f7a0e4aa6b85aebbae8cc22c6"
+	 data-version="bc0ea90649134c5a80552fe2bf1906c3"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						45.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If a THB is transferred to another DGS member, then the PRA considers that the THB cover would be retained (although the coverage period will not begin again, ie the depositor will not be able to receive consecutive periods of cover for the same THB). Where there are a number of payments flowing in and out of accounts, it may be difficult to establish whether a THB has been transferred and the PRA expects that the FSCS, in determining if a sufficient link has been established between an eligible deposit and a THB category, should have regard to a number of considerations including: </p>
+<ol class="new-bullet">
+    <li>(a) the written evidence provided by the depositor; </li>
+    <li>(b) the value of the amount or amounts transferred and whether they constitute a de minimis proportion of the original THB; </li>
+    <li>(c) the length of time that has elapsed between the life event specified and the date on which the relevant sum was credited to an individual depositor&rsquo;s account; and </li>
+    <li>(d) any other relevant factors.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2b5a496b7b3b468d968aefb05646c36c"
+	 data-version="bccdf02ed37c4ba58b8cda523ada4c4f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						46.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>By way of illustration, the examples below set out where the PRA expects that a depositor would be eligible for THB protection and where protection would not apply.</p>
+<p><strong>Examples</strong>: In the examples below it is assumed that an individual&rsquo;s &pound;100,000 inheritance has been credited to bank A. Where the deposit is held on trust for individual beneficiaries who are entitled to claim for a THB, references to the individual being able to claim compensation should be read as references to the beneficiary. </p>
+<ol class="new-bullet">
+    <li>(a) If the individual transfers &pound;50,000 to bank B, the PRA considers that the depositor should be able to claim up to &pound;50,000 from the FSCS for each amount (in addition to the standard &pound;85,000 compensation per bank) should both banks fail within six months from the date at which the &pound;100,000 was credited to bank A. </li>
+    <li>(b) If the individual withdraws &pound;100,000 from bank A, and A fails within six months of the date at which the original &pound;100,000 inheritance was credited to A, and the depositor still has aggregate deposits of &pound;100,000 remaining in the account, then the PRA expects that the depositor should be able to claim &pound;15,000 THB compensation. </li>
+    <li>(c) If the individual transfers &pound;50,000 to bank B, giving the depositor a balance with bank B in excess of &pound;85,000, and bank B fails one month after the amount was credited to B but thirteen months after the original amount was credited to A, then the PRA considers that THB protection should not apply. </li>
+    <li>(d) If the individual withdrew &pound;100,000 from bank A, but there was no corresponding transfer to bank B, should bank B fail and the depositor had an aggregate balance of &pound;185,000 at bank B (and there had been no payments in during the coverage period), the PRA considers that the depositor should not be able to claim &pound;100,000 THB protection from bank B.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="3f3dd15729754c068ec69974851db9bd"
+	 data-version="b79f93ce9b544c4dbfbeb72bab24c0ee"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Limits in compensation payable</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="3d3a26de36984b079f0102da5a264491"
+	 data-version="124522c0dd2840ca9d88e6e615fbc654"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						47.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#7d85fb3048694f4eb83519a0d8ef8056" data-rb-content-link="Rule">Depositor Protection 4.3</a> sets out that, for THB claims for sums paid in respect of personal injury or incapacity claims, there is no limit to the compensation payable for THBs. The PRA expects that deposits falling under this category would include sums paid in respect of: </p>
+<ol class="new-bullet">
+    <li>(a) claims for compensation for personal (including criminal) injury under <a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2(2)(b)</a>&nbsp;which may include personal injury compensation payments or damages for incapacity or invalidity (made in court (by HM Courts and Tribunal Services or by an equivalent non-UK court) or out of court, or from a statutory body); </li>
+    <li>(b) state benefits paid in respect of a disability or incapacity under <a href="/pra-rules/depositor-protection#5476aab7d40b4a51b5399d33f6ce0a2b" data-rb-content-link="Rule">Depositor Protection 10.2(2)(c)</a>&nbsp;which may include backdated payment for care, disability living allowance, severe disablement allowance and vaccine damage payment; and </li>
+    <li>(c) benefits payable under insurance contracts for personal injury or incapacity claims.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="4e1e8ea939374ad39f579c0559f11d9f"
+	 data-version="7c532eceb642405c92edcc0e292844bd"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						48.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the avoidance of doubt, the PRA considers that the THB limit may apply to a number of deposits for the same life event. For example, where a depositor has three deposits of &pound;5,000 as separate gifts for the same wedding, the depositor is entitled to claim up to an additional &pound;15,000 over and above their normal &pound;85,000 protection. Total claims for the same life event may not exceed &pound;1 million (unless for a personal injury or incapacity claim).</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="02ec78eafd804601b20cab440001b9bc"
+	 data-version="1b5accadc3104cb5ab84fd5fa790afc7"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Payment of compensation for THBs</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="5ac87f04af7d4d17af6079bb9d286973"
+	 data-version="c5e461d25df146bb9906207e49a1913a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						49.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#fc3c7ddd21d64e5fa0cd95cda0c327c6" data-rb-content-link="Rule">Depositor Protection 10.8</a> sets out the timeframe for the FSCS to pay compensation.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="74035ee0a0ce45d9904aae741b8a398c"
+	 data-version="36a45ec30f8b44ccaacdcfe13444a60e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						50.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In addition to the payment of compensation in respect of funds held on trust, the FSCS may also pay compensation in accordance with <a href="/pra-rules/depositor-protection#b3c09ef21963499ea333b2f0a11ebcb5" data-rb-content-link="Rule">Depositor Protection 10.6</a>&nbsp;in respect of a temporary high balance to a person who makes a claim on behalf of another person in certain circumstances. Examples of circumstances in which the FSCS may decide to pay compensation in respect of a THB to a person who makes a claim on behalf of another person include: </p>
+<ol class="new-bullet">
+    <li>(a) where a personal representative makes a claim on behalf of the deceased; </li>
+    <li>(b) deleted; </li>
+    <li>(c) deleted; </li>
+    <li>(d) where the donee of an enduring power of attorney or a lasting power of attorney makes a claim on behalf of the donor of the power; </li>
+    <li>(e) where the Court of Protection makes a claim on behalf of a person incapable by reason of mental disorder of managing and administering their property and affairs; and </li>
+    <li>(f) where an eligible claimant makes a claim for compensation but dies before their claim is determined.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/5---compensation-for-temporary-high-balances/01-07-2023?p=1" data-id="e608ff769277496cb6676f7e44bd5540" data-effective-date="01-07-2023" data-download-title="Compensation for temporary high balances_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/5---compensation-for-temporary-high-balances/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme#e608ff769277496cb6676f7e44bd5540&amp;subject=PRA Rulebook - SoP1/15 – Deposit Guarantee Scheme – Compensation for temporary high balances">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="3945d6d640304723bd675048bc2edad6"
+	 data-version="da09f0499e1c4b91abd4dea1a05f24c4"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5A
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Temporary Increase to the maximum compensation sums
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ccdedf127693415d884428fe249fa954"
+	 data-version="9e673f14da9a47f6b51fa1ffef2f051c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						50.ZA.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#2d0d7cdfb5644d949ec2cfdcab1ccfe2" data-rb-content-link="Rule">Depositor Protection 4.4</a> sets out that if a joint account holder dies and the share passes automatically to another depositor and they, or individuals under a trust, have a relevant beneficial entitlement, the FSCS protection limits of the surviving entitled individuals is increased by an amount calculated by dividing between them the limit applied to the deceased account holder at the date of death. This means that if the deceased account holder was subject to a THB at the date of their death, the survivors would, between them, benefit from that THB protection for a period of 6 months from the date of death. Where joint account holders are trustees, the general FSCS principles for trustees apply.&nbsp;</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="39c069e5c8b64782a105dbcfdde803c0"
+	 data-version="550e2b040a2d4dc2bca649c7b12e3327"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						50.ZB.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The temporary increases to maximum compensation sums that apply when a joint account holder dies apply for six months beginning with the date of death.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="16db08c557b543a6a003b214adfe56a2"
+	 data-version="ab8c113fbbd04c1d92bea1eeb6f022ed"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						50.ZC.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The examples below illustrate this temporary increase to the maximum compensation sums.</p>
+<p><strong>Examples:</strong> </p>
+<ol class="new-bullet">
+    <li>(a) There is a joint account holding &pound;170,000 with two individual account holders. There are no THBs, so each individual has the benefit of &pound;85,000 FSCS protection. One of the account holders dies, the surviving account holder has their FSCS protection limit temporarily increased by &pound;85,000 giving them &pound;170,000 of FSCS protection. </li>
+    <li>(b) There is a joint account holding &pound;2 million with two individual account holders. The deposit is a result of a THB event that is subject to a &pound;1 million limit for each individual. One of the account holders dies, the surviving account holder has their FSCS protection limit temporarily increased by &pound;1 million giving them &pound;2million of FSCS protection.&nbsp;</li>
+    <li>(c) There is a joint account holding &pound;500,000 with three account holders. All three are co-trustees and the funds in the account are held on a discretionary trust that has not vested. There are no THBs in the account, so the trustees (treating co-trustees as a single person) have &pound;85,000 FSCS protection. This remains so after one of the trustees dies, as the other trustees are still considered a unit for FSCS purposes. </li>
+    <li>(d) There is a joint account holding &pound;500,000 with three account holders, all three are co-trustees, however, one of the trustees also has an individual absolute beneficial entitlement. The trust has four other beneficiaries, who are not depositors, each with an absolute entitlement to part of the funds in the account. There are no THBs, so each individual with an absolute beneficial interest benefits from &pound;85,000 THB protection. The account holder who is a trustee also with an individual absolute beneficial interest dies and their FSCS protection limit is shared between the four beneficiaries with the result that the beneficiaries have their FSCS protection limit temporarily increased by &pound;21,250 giving them each &pound;106,250 FSCS protection. </li>
+    <li>(e) The situation is as in (d), except that a trustee and two of the beneficiaries have an absolute beneficial entitlement, and the trust is discretionary in relation to two other beneficiaries. The trustee who also has an absolute beneficial interest dies. Their &pound;85,000 protection limit is shared between the two beneficiaries with an absolute entitlement and the two co-trustees (treating co-trustees as a single person), by virtue of there also being individuals with unvested beneficial interests. Each share of the temporary increase is therefore &pound;28,333.33. This results in the two beneficiaries with an absolute beneficial entitlement and, on behalf of the discretionary trust, the co-trustees (treating them as a single person), each having &pound;113,333.33 FSCS protection.&nbsp;</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/5a---temporary-increase-to-the-maximum-compensation-sums/01-07-2023?p=1" data-id="3945d6d640304723bd675048bc2edad6" data-effective-date="01-07-2023" data-download-title="Temporary Increase to the maximum compensation sums_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/5a---temporary-increase-to-the-maximum-compensation-sums/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme#3945d6d640304723bd675048bc2edad6&amp;subject=PRA Rulebook - SoP1/15 – Deposit Guarantee Scheme – Temporary Increase to the maximum compensation sums">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="3612d1ae5510409ca9d6488839365b0b"
+	 data-version="08d732c9880d4febae5194d5973cc868"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Funding of the FSCS
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="b5be3180aa174a44b26fbdbd75eab075"
+	 data-version="92c0ea1e1e4e4b68bdd38a622f18c1f5"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Legislation around funding</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="ee041250e3b547a18f98d95eba4eb643"
+	 data-version="b5299b096950494fa25848d75f99c191"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						51.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Section 213(3)(b) of FSMA requires the PRA to make rules to enable the FSCS to impose levies on firms in order to meet its expenses under the deposit guarantee scheme. These expenses include in particular expenses incurred, or expected to be incurred, in paying compensation, borrowing or insuring risks.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="abdd6cbd347044ad854ea977b4a14280"
+	 data-version="6baf60d6b8b8476188c84cbad29ea9b1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						52.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Section 224F of FSMA enables the PRA to make rules to enable the FSCS to impose levies on PRA firms in order to meet its management expenses incurred if, under Part 15A of FSMA, it is required by HM Treasury to act in relation to relevant schemes.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="b22114a071ee41529a730753f4c25c66"
+	 data-version="97f15b6a13d14a63a4dc469b3a98cad5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						53.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Section 223 of FSMA prevents the FSCS from recovering, through a levy, any management expenses attributable to a particular period in excess of the limit set in the PRA and the FCA rules as applicable to that period.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="505527a1d0e04b54a1458a70ef0eab55"
+	 data-version="75401d61d2384a648711f31ea6677737"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>FSCS access to mandatory contributions</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="a9f95998f2664a6d994de8d8093feb3b"
+	 data-version="103d1908ac4a44d5bae52c75a59532f1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						54.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In accordance with the Deposit Guarantee Scheme Regulations, <a href="/pra-rules/depositor-protection#29388b3a6232481292168a5adcd016b1" data-rb-content-link="Rule">Depositor Protection 32.2</a>&nbsp;restricts the FSCS&rsquo;s ability to borrow an amount equal to the amount of such mandatory contributions in order to meet the liabilities of the deposit guarantee scheme. The FSCS may borrow such amounts to meet the liabilities of the DGS if the PRA determines that the FSCS is unable to raise levies from DGS members to meet those liabilities. In accordance with the Deposit Guarantee Scheme Regulations the PRA will make that determination on a case by case basis, at the time of each call on deposit guarantee scheme funds. In making this determination, the PRA expects to take into account a range of factors including the likely&nbsp;impact on financial stability of raising levies, as well as the amount of levies needed to be raised.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5bcb11950fde49a997969caf147498d7"
+	 data-version="64b8ad2bd7294ba1b0e5fb766ec2b3cf"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						55.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#3fa63aaad25c4e689ab8953e1fd099b7" data-rb-content-link="Rule">Depositor Protection 34.3(2)</a> also sets out that regular levies imposed under <a href="/pra-rules/depositor-protection#3fa63aaad25c4e689ab8953e1fd099b7" data-rb-content-link="Rule">Depositor Protection 34.3(1)</a>&nbsp;shall take due account of the phase of the business cycle and the impact that procyclical contributions may have when setting annual contributions. In order to meet this requirement, the PRA expects the FSCS to consult the PRA before setting the timing and size of levy amounts raised.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6c7ad4f0408646818c95eed3496e0423"
+	 data-version="4131866e08c7407bbb50e0e953e15c4d"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Levying timings</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="5eb0d40ebf7642ac857dbba596c3d74e"
+	 data-version="4521f8c4444b436f8dbe9c46e9626c40"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						56.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The FSCS may impose three types of levy on DGS members: a DGS management expenses levy (consisting of a DGS base costs levy and a specific costs levy); a DGS compensation costs levy; and a DGS management expenses in respect of relevant schemes levy. The FSCS has discretion as to the amount and timing of the levies imposed.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="cd5ee1d5c5744de5b361046c77a220ee"
+	 data-version="008ac8b2bc4145a5bc6a1922e870b4f2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						57.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Under <a href="/pra-rules/depositor-protection#8e0fc6d6aa8b452e9dcaa858af2f0ab2" data-rb-content-link="Rule">Depositor Protection 34.2</a>, the FSCS must levy DGS members at least once in each financial year (and in respect of DGS compensation costs, for expenditure expected in the period of twelve months following 1 July in that year). However, if the DGS compensation costs or DGS specific costs incurred, or expected to be incurred, exceed the amounts held, or reasonably expected to be held, to meet those costs, the FSCS may, at any time during the financial year, do one or more of the following: </p>
+<ol class="new-bullet">
+    <li>(a) impose an interim DGS compensation costs levy or DGS management expenses levy; or </li>
+    <li>(b) utilise other sources of funding such as commercial borrowing or other borrowing including from the National Loans Fund; or </li>
+    <li>(c) utilise money collected from DGS members as set out in, and subject to <a href="/pra-rules/depositor-protection#f1d454e8c91646ae94e1b85e18f1f5d4" data-rb-content-link="Chapter">Depositor Protection Chapter 33</a>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="bc7a27c1b5c9406baa01e835a6230877"
+	 data-version="e30dd51caac740cdb318a8294d7235b9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						58.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects that the FSCS should generally impose a levy rather than borrow or utilise funds as described in <a href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme#cd5ee1d5c5744de5b361046c77a220ee" data-rb-content-link="Paragraph">(c)</a>, unless the latter options appear to it to be preferable in the specific circumstances prevailing at the relevant time; for example, to address short-term liquidity issues, or in order to deal with a significant failure without having to wait for a levy to be imposed or collected.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e3074acc73034ac1abed51ed98aeb728"
+	 data-version="1eb2c0426805478884f10c67a38dfc63"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>DGS management expenses levy</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="983cca9f858c4519889815ba5a76cbef"
+	 data-version="3a1115ae915144a9b0e42440f1891988"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						59.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA&rsquo;s rules on the Management Expenses Levy and Management Expenses in respect of Relevant Schemes are set out in the <a href="/pra-rules/fscs-management-expenses-levy-limit-and-base-costs" data-rb-content-link="Part">Management Expenses Levy Limit and Base Costs</a>&nbsp;Rulebook Part and <a href="/pra-rules/management-expenses-in-respect-of-relevant-schemes" data-rb-content-link="Part">Management Expenses in respect of Relevant Schemes</a>&nbsp;Rulebook Part.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="48a3d7ae3ab04f01b3dc85436fc7897d"
+	 data-version="a5da2658c8004b00824adffe052c837a"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						60.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A DGS management expenses levy may consist of two elements. The first is a DGS base costs levy, for the base costs of running the FSCS in a financial year, ie DGS share of costs which are not attributable to any specific class. Included in this category are items such as the salary of the members of the board of the FSCS, the costs of the premises which the FSCS occupies, and its audit fees. The amount that each participant firm pays towards a DGS base costs levy is calculated by reference to the regulatory costs paid by the firm as a proportion of total regulatory costs of all participant firms. All DGS members are liable to contribute towards a DGS base costs levy.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="e3286d180657499eb380f5649fab4033"
+	 data-version="0460ffc544534967aa10b8d1c8ec50ae"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						61.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The second element of a management expenses levy is a DGS specific costs levy for the &lsquo;specific costs&rsquo; of running the deposit guarantee scheme in a financial year. These costs are&nbsp;attributable to class A, and include the salary costs of certain staff of the FSCS and claims handling and legal and other professional fees. Another example is IT costs attributable to a specific class such as SCV data systems. It also may include the cost of any insurance cover that the FSCS secures against the risk of the FSCS paying out compensation above a given level in class A (but below the levy limit for class A for the year). The specific costs are attributed to the class which is responsible for those costs. When the FSCS imposes a DGS specific costs levy, the levy is allocated to class A up to the relevant levy limits. The FSCS may include in a DGS specific costs levy the DGS specific costs that the FSCS expects to incur (including in respect of defaults not yet determined at the date of the levy) during the financial year of the deposit guarantee scheme. The amount that each DGS member pays towards the DGS specific costs levy is calculated by reference to the amount of business conducted by the firm in class A. There is a &lsquo;class A tariff base&rsquo; for this purpose, set out in <a href="/pra-rules/depositor-protection#f5d4d5f8ac754702be67be65c2c0a429" data-rb-content-link="Chapter">Depositor Protection Chapter 43</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="eea02df8ddd34b9b9546f1cf3631a5d3"
+	 data-version="6cad24f39deb4d6d9dfb3e890e01ad9e"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						62.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA and the FCA typically consult on the limit on the FSCS&rsquo;s management expenses attributable to the forthcoming financial year of the FSCS in January each year.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="762844c7133246558d31251b295fbec2"
+	 data-version="398cc5a310514b69b022968265d43720"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Fees refund</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="568698c6e77948d8b1f936e96909ed4d"
+	 data-version="81ca0918ff87421f9296162173609691"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						63.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#3702e04538cd4a88953898f2302b22d7" data-rb-content-link="Chapter">Depositor Protection Chapter 38</a> sets out when the FSCS may adjust the calculation of a DGS member&rsquo;s share of any levy. <a href="/pra-rules/depositor-protection#c6b04cacac9b4bf4b1fd1d61058435aa" data-rb-content-link="Rule">Depositor Protection 38.5</a>&nbsp;sets out that the FSCS may not adjust the calculation of a DGS member&rsquo;s levy under <a href="/pra-rules/depositor-protection#6d1063f79eff49089e105d13a65d77b8" data-rb-content-link="Rule">Depositor Protection 38.4</a>&nbsp;on the grounds that it would be inequitable for that firm to pay that share or part of it (or on the grounds that it would be inequitable for the FSCS to retain that share or part of it). The reason for this rule is that any such claim should be dealt with under <a href="/pra-rules/depositor-protection#497adf02bb9e4610b0ae861e8470c866" data-rb-content-link="Chapter">Depositor Protection Chapter 46</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="62ea07bf5f0e4dd3b1394e555e316c14"
+	 data-version="beb324439b36431f8de288a2be780527"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Recovery of Fees</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="56134d3e18284747ada9c980e1261512"
+	 data-version="e7381151bd214ab0b7d4e8498e8c6060"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						64.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Paragraphs 23(8) and 27 of Schedule 1ZA and paragraphs 31(7) and 35 of Schedule 1ZB of FSMA permit the PRA to recover fees, and section 213(6) permits the FSCS to recover shares of the FSCS levy payable, as a debt owed to the PRA and FSCS respectively, and the PRA and FSCS, as relevant, will consider taking action for recovery (including interest) through the civil courts.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="a3f5d36e8a27429f88b435fc10a50835"
+	 data-version="361f07125961412b827cad204edc529f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						65.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA may also take regulatory action in relation to the non-payment of a share of a DGS levy, after reference of the matter to the PRA by the FSCS. What action (if any) is taken by the PRA will be decided upon in the light of the particular circumstances of the case.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="87f394905c0448d798bb0d4ef00bb363"
+	 data-version="a9768d4c36bd403f8c9ec71b2ad621bd"
+	 class="row-block "
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Remission of Fees and levies</h4>
+
+		</div>
+	</div>
+
+</div>
+
+
+<div id="c225d64d56424d40974ce1dbc261e401"
+	 data-version="f34bb1b9002b4bb1b25ac0fed638adbc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						66.
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/pra-rules/depositor-protection#497adf02bb9e4610b0ae861e8470c866" data-rb-content-link="Chapter">Depositor Protection Chapter 46</a> sets out the circumstances in which the PRA or the FSCS may reduce or remit FSCS levies. A poor estimate or forecast by a DGS member, when providing information relevant to the class A tariff base, is unlikely, of itself, to fall within <a href="/pra-rules/depositor-protection#4bc75d950bde4468933b28014db97075" data-rb-content-link="Rule">Depositor Protection 46.1</a>. By contrast, a mistake of fact or law by a fee or levy payer may give rise to such a claim.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2023
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-07-2023">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/6---funding-of-the-fscs/01-07-2023?p=1" data-id="3612d1ae5510409ca9d6488839365b0b" data-effective-date="01-07-2023" data-download-title="Funding of the FSCS_01-07-2023" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/statements-of-policy/sop---deposit-guarantee-scheme/6---funding-of-the-fscs/01-07-2023?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/statements-of-policy/sop---deposit-guarantee-scheme#3612d1ae5510409ca9d6488839365b0b&amp;subject=PRA Rulebook - SoP1/15 – Deposit Guarantee Scheme – Funding of the FSCS">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

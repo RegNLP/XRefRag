@@ -1,0 +1,4436 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment" />
+
+
+
+<!-- metadata-{A8C689B5-345F-4D85-A672-87279C84E95C}-{9EE859E1-A557-4558-BE71-FA3D5DFC61C6} -->
+<title>Internal Liquidity Adequacy Assessment | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Internal Liquidity Adequacy Assessment">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Internal Liquidity Adequacy Assessment">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwojfa-f-b98e2f6eb-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":33,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"809da23","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":51208,"ak.gh":"104.109.251.22","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370186","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==3xtQmjPs59ruXTQH2HSctgHB1lQZBC9Fqi7nDXRWcR6P878OlmKzsVWV00M9jl6I1wD4S44ug+QntVulbvT1LaxjI/2VEY1T7fT6YV2zkagrNRstXyKCkXf4jXv1qRZEr88CWZrPj1GCx3IPZXtY4cJqnN9VmIaqJgk0jEKI2DL0Ts5sCN3XtW2b8TxVwuWA0/v2VbxhTFvus9FsLJM4WPe944XLkbD1yZKCsL1gFpB1STmMZGIVu3e7nfNvZYELDHf25ProHGQFAZf7mMcS8Wp/Na467ZPOud8tyDCi3AtvCg1K4gb6VcjmX6QCKr1cuTPv1a8+8L5Z+nJdcU+ComZk504B0+hD3nZ1YSTQ8q2mKzKyyRwDJbBmqDp5kQ9E5yEPFvtYN573YuCsZ2ulqMEYTSOcJ3TPOWnYAvr55KI=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/pra-rules" class="list-breadcrumbs__link">
+						PRA Rules
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+Internal Liquidity Adequacy Assessment				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					Internal Liquidity Adequacy Assessment
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/10/2015
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/14-12-2016">
+						<span class="visually-hidden">View Rulebook as at</span>
+						14/12/2016
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/30-03-2018">
+						<span class="visually-hidden">View Rulebook as at</span>
+						30/03/2018
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/11-01-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						11/01/2019
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/01-07-2019">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/07/2019
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/29-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						29/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/31-12-2020">
+						<span class="visually-hidden">View Rulebook as at</span>
+						31/12/2020
+					</a>
+				</div>
+				<div class="listing__item is-past ">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2022">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2022
+					</a>
+				</div>
+				<div class="listing__item is-past is-active">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/20-01-2026">
+						<span class="visually-hidden">View Rulebook as at</span>
+						20/01/2026
+					</a>
+				</div>
+				<div class="listing__item is-future ">
+					<a href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2027">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2027
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-5a5c3dae-502a-4f78-ad39-859a910020a1">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-5a5c3dae-502a-4f78-ad39-859a910020a1"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				Internal Liquidity Adequacy Assessment
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation/14-10-2025#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (Internal Liquidity Adequacy Assessment)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?part=ead3a39af87040b4a9037ce99da8ea91">
+Legal Instruments that change this Part					<span class="visually-hidden">
+						Internal Liquidity Adequacy Assessment
+					</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+			<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Guidance<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss24-15---the-pras-approach-to-supervising-liquidity-and-funding-risks/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS24/15 – The PRA’s approach to supervising liquidity and funding risks
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/guidance/supervisory-statements/ss03-21---non-systemic-uk-banks-the-pras-approach-to-new-and-growing-banks/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									SS3/21 – Non-systemic UK banks: The Prudential Regulation Authority’s approach to new and growing banks
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+							<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2014/crd-iv-liquidity" class="list-links__link" target="_blank">
+										PS11/15 - CRD IV: Liquidity
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/responses-to-cp-26-2016" class="list-links__link" target="_blank">
+										PS35/16 - Responses to CP26/16
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2016/pillar-2-liquidity" class="list-links__link" target="_blank">
+										PS2/18 - Pillar 2 liquidity
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/responses-to-cp-18-17-chapters-2-to-6-9-and-10" class="list-links__link" target="_blank">
+										PS6/18 - &quot;Responses to CP18/17 Occasional Consultation Paper – Chapters 2 to 6, 9 and 10&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2018/liquidity-reporting-fsa047-and-fsa048" class="list-links__link" target="_blank">
+										PS1/19 - &quot;Liquidity reporting: FSA047, FSA048, and PRA110&quot;
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/capital-requirements-directive-v-further-implementation" class="list-links__link" target="_blank">
+										PS29/20 - Capital Requirements Directive V (CRD V)
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS30/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2021/september/domestic-liquidity-sub-groups" class="list-links__link" target="_blank">
+										PS26/21 - Domestic Liquidity Sub-Groups
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2026/january/the-strong-and-simple-framework-final-policy-statement" class="list-links__link" target="_blank">
+										PS4/26 - The Strong and Simple Framework: The simplified capital regime for Small Domestic Deposit Takers (SDDTs) (final)
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/pra-rules/internal-liquidity-adequacy-assessment/20-01-2026_31-12-2026.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export part as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/20-01-2026?p=1" data-id="ead3a39af87040b4a9037ce99da8ea91" data-effective-date="20-01-2026" data-download-title="Internal Liquidity Adequacy Assessment_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="3b03ba1144924761a5252ac11b03dc9c"
+	 data-version="3fb6fc2c43cd4094ac23f657ff5282bd"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application and Definitions
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="e174b1d89fd64132b4e97af2384b0416"
+	 data-version="fac77078c376486fa44542637ebed422"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This Part applies to a <em><a  class="glossary-link" title="CRR firm" href="#glossary-term-c73af3cf1d2447f1ab892ff7d8f3a231" data-mce-linktype="2" data-glossary-id="52112">CRR firm</a></em> save that <a  title="14.2" href="/pra-rules/internal-liquidity-adequacy-assessment#7fdc6568cd404b44a589883f336f305e" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.2</a>, <a  title="14.2A" href="/pra-rules/internal-liquidity-adequacy-assessment#38f5ae0938e640c88b8b20eda4b51648" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.2A</a>, <a  title="14.3" href="/pra-rules/internal-liquidity-adequacy-assessment#96329aa8285c4d0ea6448ca4a3f80a1d" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.3</a>, <a  title="14.6" href="/pra-rules/internal-liquidity-adequacy-assessment#c20f24fac9b14a6d8648d783110a07b0" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.6</a>, <a  title="14.6A" href="/pra-rules/internal-liquidity-adequacy-assessment#ff3623695dcb419084dc55fb4b4655a7" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.6A</a>, <a  title="14.7" href="/pra-rules/internal-liquidity-adequacy-assessment#1e48c13cb6ad49c8aa5bc87f5736dcbe" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.7</a> and <a  title="14.8" href="/pra-rules/internal-liquidity-adequacy-assessment#f1888655c8f7416d88350373e32fae66" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.8</a> apply, as appropriate, to an <em><a  class="glossary-link" title="Article 109 undertaking" href="#glossary-term-704dbe42f18d4a8d8100de2f752e8bd7" data-mce-linktype="2" data-glossary-id="108326">Article 109 undertaking</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#e174b1d89fd64132b4e97af2384b0416">
+			Past
+			<span class="visually-hidden">
+				version of 1.1 before 29/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e174b1d89fd64132b4e97af2384b0416">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e179792e8eae4f9394c2073a6c636f29"
+	 data-version="8c57f49a74214799a8549adda73631f0"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In this Part, the following definitions shall apply:</p>
+<p><em><a  class="glossary-link" title="Delegated Regulation" href="#glossary-term-524a053ea58f4c54ab7364b04aefa183" data-mce-linktype="2" data-glossary-id="66794">Delegated Regulation</a></em></p>
+<p style="padding-left: 30px;">means Commission Delegated Regulation (EU) 2015/61 of 10 October 2014 to supplement Regulation (EU) No 575/2013 of the European Parliament and the Council with regard to liquidity coverage requirement for Credit Institutions.</p>
+<p><em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em></p>
+<p style="padding-left: 30px;">means the risk that a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> does not have stable sources of funding in the medium and long term to enable it to meet its financial obligations, such as payments or collateral calls, as they fall due, either at all or only at excessive cost.</p>
+<p><em><a  class="glossary-link" title="Internal Liquidity Adequacy Assessment Process (ILAAP)" href="#glossary-term-deffdff56401442b8f645b3de0f63da3" data-mce-linktype="2" data-glossary-id="66796">Internal Liquidity Adequacy Assessment Process (ILAAP)</a></em></p>
+<p style="padding-left: 30px;">means the process for the identification, measurement, management and monitoring of liquidity implemented by the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> in accordance with <a  title="3" href="/pra-rules/internal-liquidity-adequacy-assessment#c618dbd9e4504022a96c45d6a896f1af" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">3</a> &ndash; <a  title="13" href="/pra-rules/internal-liquidity-adequacy-assessment#736803a1aa00485dbc6b26ac8b6a1de6" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">13</a>.</p>
+<p><em><a  class="glossary-link" title="liquidity contingency plan" href="#glossary-term-0d77a790c8c44b8b98b94b0cc47af202" data-mce-linktype="2" data-glossary-id="66797">liquidity contingency plan</a></em></p>
+<p style="padding-left: 30px;">a plan for dealing with liquidity crises as required by <a  title="12.1" href="/pra-rules/internal-liquidity-adequacy-assessment#fbbc65f5e18a4bb19fb8ea82399ee671" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">12.1</a>.</p>
+<p><em><a  class="glossary-link" title="liquidity coverage ratio" href="#glossary-term-0caa47311a894a34a454200c24d25efb" data-mce-linktype="2" data-glossary-id="66798">liquidity coverage ratio</a></em></p>
+<p style="padding-left: 30px;">means the ratio calculated in accordance with Article 4(1) of the <em><a  class="glossary-link" title="Delegated Regulation" href="#glossary-term-524a053ea58f4c54ab7364b04aefa183" data-mce-linktype="2" data-glossary-id="66794">Delegated Regulation</a></em>.</p>
+<p><em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em></p>
+<p style="padding-left: 30px;">means the risk that a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, although solvent, does not have available sufficient financial resources to enable it to meet its obligations as they fall due.</p>
+<p><em><a  class="glossary-link" title="overall liquidity adequacy rule" href="#glossary-term-0ce58eeda0624c3382c0c80443a47beb" data-mce-linktype="2" data-glossary-id="66800">overall liquidity adequacy rule</a></em></p>
+<p style="padding-left: 30px;">means the rule in <a  title="2.1" href="/pra-rules/internal-liquidity-adequacy-assessment#2c05ffa334b24b479da2f395a515b720" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.1</a>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/07/2019
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/30-03-2018#e179792e8eae4f9394c2073a6c636f29">
+			Past
+			<span class="visually-hidden">
+				version of 1.2 before 01/07/2019
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e179792e8eae4f9394c2073a6c636f29">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e587b63463a24936b144252d80147ecd"
+	 data-version="13bae5555d704ef98838761819e69fae"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Unless otherwise defined, any italicised expression used in this Part and in the <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> has the same meaning as in the <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e587b63463a24936b144252d80147ecd">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						1.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/1-application-and-definitions/20-01-2026?p=1" data-id="3b03ba1144924761a5252ac11b03dc9c" data-effective-date="20-01-2026" data-download-title="Application and Definitions_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/1-application-and-definitions/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#3b03ba1144924761a5252ac11b03dc9c&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Application and Definitions">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=3b03ba1144924761a5252ac11b03dc9c">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application and Definitions
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="1555c1781c3c4578b44e195e06fc5d60"
+	 data-version="8ae442728c9345b7a99726f80b88af6f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Overall Liquidity Adequacy Rule
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="2c05ffa334b24b479da2f395a515b720"
+	 data-version="67ef08716b7a4e4591b2daa6fe569f31"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must at all times maintain liquidity resources which are adequate, both as to amount and quality, to ensure that there is no significant risk that its liabilities cannot be met as they fall due.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2c05ffa334b24b479da2f395a515b720">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5481ea76a2c540f29d8c74c96c0577f9"
+	 data-version="7329ed55a4b945f0a3d35ef8692ac4b2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of the<em> <a  class="glossary-link" title="overall liquidity adequacy rule" href="#glossary-term-0ce58eeda0624c3382c0c80443a47beb" data-mce-linktype="2" data-glossary-id="66800">overall liquidity adequacy rule</a></em>:</p>
+<ol class="new-bullet">
+<li>(1) a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> also must ensure that:</li>
+<ol>
+<li>(a) its liquidity resources contain an adequate buffer of high quality, unencumbered assets; and</li>
+<li>(b) it maintains a prudent funding profile; and</li>
+</ol>
+<li>(2) a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> may not include liquidity resources that may be made available through emergency liquidity assistance from a central bank.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5481ea76a2c540f29d8c74c96c0577f9">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						2.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/2-overall-liquidity-adequacy-rule/20-01-2026?p=1" data-id="1555c1781c3c4578b44e195e06fc5d60" data-effective-date="20-01-2026" data-download-title="Overall Liquidity Adequacy Rule_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/2-overall-liquidity-adequacy-rule/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#1555c1781c3c4578b44e195e06fc5d60&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Overall Liquidity Adequacy Rule">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=1555c1781c3c4578b44e195e06fc5d60">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Overall Liquidity Adequacy Rule
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="c618dbd9e4504022a96c45d6a896f1af"
+	 data-version="dd6bc0c85c314e48a7a882d4ea247e4c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Overall Strategies, Processes and Systems
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="af246c44b80640c7b59613812cf679d2"
+	 data-version="58723ff5f6a442ff80f130eb148fa1a1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>As part of the <em><a  class="glossary-link" title="overall liquidity adequacy rule" href="#glossary-term-0ce58eeda0624c3382c0c80443a47beb" data-mce-linktype="2" data-glossary-id="66800">overall liquidity adequacy rule</a></em>, a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must have in place robust strategies, policies, processes and systems that enable it to identify, measure, manage and monitor <em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> and <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em> over an appropriate set of time horizons, including intra-day, so as to ensure that it maintains adequate levels of liquidity buffers and an appropriate funding profile. These strategies, policies, processes and systems must be tailored to business lines, currencies, <em><a  class="glossary-link" title="branches" href="#glossary-term-c1eea9614dfa49bc9490d65422cff984" data-mce-linktype="2" data-glossary-id="53199">branches</a></em> and legal entities and must include adequate allocation mechanisms of liquidity costs, benefits and risks.</p>
+			<p><strong>[Note: Art. 86(1) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=af246c44b80640c7b59613812cf679d2">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="35986f9c959340e6bec9540dbaf453cc"
+	 data-version="4fb235d2bda64916a77704eaddcf6592"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The strategies, policies, processes and systems referred to in <a  title="3.1" href="/pra-rules/internal-liquidity-adequacy-assessment#af246c44b80640c7b59613812cf679d2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a> must be proportionate to the complexity, risk profile and scope of operation of the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, and the <em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> appetite and <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em> appetite set by the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em><em> <a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> in accordance with <a  title="4" href="/pra-rules/internal-liquidity-adequacy-assessment#064e94298d404a2291eabef9381c77f4" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">4</a>, and must reflect the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> importance in each country in which it carries on business.</p>
+			<p><strong>[Note: Art. 86(2) (part) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=35986f9c959340e6bec9540dbaf453cc">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="5206fce16cec41ffa7c156eaf3ff7e63"
+	 data-version="0e8050cb1851411ba8c4cfec5a2b4233"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must, taking into account the nature, scale and complexity of its activities, have <em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> profiles and <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em> profiles that are consistent with and not in excess of those necessary for a well-functioning and robust system.</p>
+			<p><strong>[Note: Art. 86(3) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5206fce16cec41ffa7c156eaf3ff7e63">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="4da7377c7ebd44979ca0c73b58693c22"
+	 data-version="ddef572e25584475a64be8b8192c4706"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must put in place risk management policies to define its approach to asset encumbrance, as well as procedures and controls that ensure that the risks associated with collateral management and asset encumbrance are adequately identified, monitored and managed.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4da7377c7ebd44979ca0c73b58693c22">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						3.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/3-overall-strategies-processes-and-systems/20-01-2026?p=1" data-id="c618dbd9e4504022a96c45d6a896f1af" data-effective-date="20-01-2026" data-download-title="Overall Strategies, Processes and Systems_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/3-overall-strategies-processes-and-systems/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#c618dbd9e4504022a96c45d6a896f1af&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Overall Strategies, Processes and Systems">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=c618dbd9e4504022a96c45d6a896f1af">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Overall Strategies, Processes and Systems
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="064e94298d404a2291eabef9381c77f4"
+	 data-version="8159ab10a2e141e8a40fbaf0a40affcd"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Liquidity Risk Appetite and Funding Risk Appetite
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="cc49e21fe3e4431cabb9fc4b9f0f6736"
+	 data-version="d7c17e3624b64d6fbfd88281cc742ae9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that:</p>
+<ol class="new-bullet">
+<li>(1) its <em><a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> establishes the <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> appetite and <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em> appetite and that this is appropriately documented;</li>
+<li>(2) its <em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> appetite and <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em> appetite are appropriate for its business strategy and reflect its financial condition and funding capacity; and</li>
+<li>(3) its <em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> appetite and <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em> appetite are communicated to all relevant business lines.</li>
+</ol>
+			<p><strong>[Note: Art. 86(2) (part) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=cc49e21fe3e4431cabb9fc4b9f0f6736">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						4.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/4-liquidity-risk-appetite-and-funding-risk-appetite/20-01-2026?p=1" data-id="064e94298d404a2291eabef9381c77f4" data-effective-date="20-01-2026" data-download-title="Liquidity Risk Appetite and Funding Risk Appetite_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/4-liquidity-risk-appetite-and-funding-risk-appetite/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#064e94298d404a2291eabef9381c77f4&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Liquidity Risk Appetite and Funding Risk Appetite">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=064e94298d404a2291eabef9381c77f4">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Liquidity Risk Appetite and Funding Risk Appetite
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="5e5d08baa4dc4a499dd0579625c06bd9"
+	 data-version="dba0b9e36ed5445cad8ba1856ee3dc35"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Intra-Day Management of Liquidity
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="c8c4aa3595394716a7a7155819091991"
+	 data-version="8c7acaf49f2f4959afe5e03c22b872a5"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must actively manage its intra-day liquidity positions and any related risks so that it is able to meet its payment and settlement obligations on a timely basis.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c8c4aa3595394716a7a7155819091991">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a360e9efd68a4038897fd3a3b5fc140e"
+	 data-version="c7a94ce094784935b48b59b3cc540c9d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purposes of <a  title="5.1" href="/pra-rules/internal-liquidity-adequacy-assessment#c8c4aa3595394716a7a7155819091991" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">5.1</a>, a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that its intra-day liquidity management arrangements enable it:</p>
+<ol class="new-bullet">
+<li>(1) to meet its payment and settlement obligations on a timely basis under both normal financial conditions and under the stresses required by <a  title="11.3" href="/pra-rules/internal-liquidity-adequacy-assessment#a40f64b30d2b4eca888eb0ce9b5529c1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.3</a>;</li>
+<li>(2) to identify and prioritise the most time-critical payment and settlement obligations; and</li>
+<li>(3) in relation to the markets in which it is active and the currencies in which it has significant positions, to measure, monitor and deal with intra-day <em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em>. A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must in particular be able to:</li>
+<ol>
+<li>(a) measure expected daily gross liquidity inflows and outflows, anticipate the intra-day timing of these flows where possible, and forecast the range of potential net funding shortfalls that might arise at different points during the day; and</li>
+<li>(b) manage the timing of its liquidity outflows such that priority is given to the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> most time-critical payment obligations.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a360e9efd68a4038897fd3a3b5fc140e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						5.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/5-intra-day-management-of-liquidity/20-01-2026?p=1" data-id="5e5d08baa4dc4a499dd0579625c06bd9" data-effective-date="20-01-2026" data-download-title="Intra-Day Management of Liquidity_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/5-intra-day-management-of-liquidity/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#5e5d08baa4dc4a499dd0579625c06bd9&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Intra-Day Management of Liquidity">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=5e5d08baa4dc4a499dd0579625c06bd9">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Intra-Day Management of Liquidity
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="293a9319c37241f88c7ea296434f72ef"
+	 data-version="d2543fb781bd459b8adb5506999cfba4"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Transfer Pricing System
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="8fb88cf28d7f40748580a9ca25f74d13"
+	 data-version="0f33b1dd81634954ba62d8b4ce1cee01"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must implement an adequate transfer pricing system to ensure that it accurately quantifies liquidity and funding costs, benefits and risk in relation to all significant business activities.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=8fb88cf28d7f40748580a9ca25f74d13">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						6.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/6-transfer-pricing-system/20-01-2026?p=1" data-id="293a9319c37241f88c7ea296434f72ef" data-effective-date="20-01-2026" data-download-title="Transfer Pricing System_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/6-transfer-pricing-system/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#293a9319c37241f88c7ea296434f72ef&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Transfer Pricing System">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=293a9319c37241f88c7ea296434f72ef">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Transfer Pricing System
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="7b8cd6ea35564fecaa74938c532f9141"
+	 data-version="d99234273d384ddca93b259bd96d3853"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					7
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Management of Collateral
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="dfb6e0c86f7d4b8ea50d127b49c74551"
+	 data-version="7ee61e100d564551ab35e1d40b9ba4b8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must actively manage collateral positions.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=dfb6e0c86f7d4b8ea50d127b49c74551">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="89bb865c96954c91b88892942d6f4da8"
+	 data-version="e6b93f16b4f74638b166fc8542aadf42"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						7.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must distinguish between pledged and unencumbered assets that are available at all times, in particular during emergency situations. A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must also take into account the legal entity in which assets reside, the country where assets are legally recorded either in a register or in an account as well as their eligibility and must monitor how assets can be mobilised in a timely manner.</p>
+			<p><strong>[Note: Art. 86(5) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=89bb865c96954c91b88892942d6f4da8">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						7.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/7-management-of-collateral/20-01-2026?p=1" data-id="7b8cd6ea35564fecaa74938c532f9141" data-effective-date="20-01-2026" data-download-title="Management of Collateral_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/7-management-of-collateral/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#7b8cd6ea35564fecaa74938c532f9141&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Management of Collateral">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=7b8cd6ea35564fecaa74938c532f9141">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Management of Collateral
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="673bd07802d542fa80df3249dba1ecf7"
+	 data-version="2bd3b4a89d024dfd8de96fd4d5f67889"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					8
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Managing Liquidity Across Legal Entities, Business Lines, Countries and Currencies
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="3f56cc16d24246f9b954b200a555e33d"
+	 data-version="c42480750d984875b0f027d2c463c278"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						8.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must actively manage its <em><a class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> exposures and related funding needs and take into account:</p>
+<ol class="new-bullet">
+    <li>(1) existing legal, regulatory and operational limitations to potential transfers of liquidity and unencumbered assets amongst entities, both within and outside the <em><a class="glossary-link" title="UK" href="#glossary-term-f7844a8cbb824a52a26c043e3f6b584e" data-mce-linktype="2" data-glossary-id="52122">UK</a></em>; and<br>
+    <strong>[Note: Art. 86(6) of the <em><a class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></li>
+    <li>(2) any other constraints on the transferability of liquidity and unencumbered assets across business lines, countries and currencies.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#3f56cc16d24246f9b954b200a555e33d">
+			Past
+			<span class="visually-hidden">
+				version of 8.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=3f56cc16d24246f9b954b200a555e33d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						8.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/8-managing-liquidity-across-legal-entities-business-lines-countries-and-currencies/20-01-2026?p=1" data-id="673bd07802d542fa80df3249dba1ecf7" data-effective-date="20-01-2026" data-download-title="Managing Liquidity Across Legal Entities, Business Lines, Countries and Currencies_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/8-managing-liquidity-across-legal-entities-business-lines-countries-and-currencies/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#673bd07802d542fa80df3249dba1ecf7&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Managing Liquidity Across Legal Entities, Business Lines, Countries and Currencies">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=673bd07802d542fa80df3249dba1ecf7">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Managing Liquidity Across Legal Entities, Business Lines, Countries and Currencies
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="20ac1e6d95174b778f373b5c32029eed"
+	 data-version="f29fb9fc319741748eaf85d81c130a6f"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					9
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Funding Diversification and Market Access
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="0083004361a741faa22b0d911fe0d1f6"
+	 data-version="fbd2677d368e49abaa3ccf0374395c97"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that it has access to funding which is adequately diversified, both as to source and tenor.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0083004361a741faa22b0d911fe0d1f6">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ffd9bdf372e44688bf23bae83958f928"
+	 data-version="fd88c5c52bec433485c6eab96f8eb65f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						9.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must develop methodologies for the identification, measurement, management and monitoring of funding positions. Those methodologies must include the current and projected material cash-flows in and arising from assets, liabilities, off-balance-sheet items, including contingent liabilities and the possible impact of reputational risk.</p>
+			<p><strong>[Note: Art. 86(4) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ffd9bdf372e44688bf23bae83958f928">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						9.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/9-funding-diversification-and-market-access/20-01-2026?p=1" data-id="20ac1e6d95174b778f373b5c32029eed" data-effective-date="20-01-2026" data-download-title="Funding Diversification and Market Access_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/9-funding-diversification-and-market-access/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#20ac1e6d95174b778f373b5c32029eed&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Funding Diversification and Market Access">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=20ac1e6d95174b778f373b5c32029eed">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Funding Diversification and Market Access
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="800ebcc051c549b0a0433c4e33e6b1cb"
+	 data-version="80e8c7b84f0543aabc5032eefbd38d6e"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					10
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Management of Asset Encumbrance
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="2332ee0c1d684b9a9bc556410ad532f5"
+	 data-version="080cce88e8dd45d3b77c8c2285ffe465"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must actively manage its asset encumbrance position.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=2332ee0c1d684b9a9bc556410ad532f5">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="67c304e38d8e4d118c015049c3131aa0"
+	 data-version="0e49086e3c144ecd8bca862fec2c6c85"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of <a  title="10.1" href="/pra-rules/internal-liquidity-adequacy-assessment#2332ee0c1d684b9a9bc556410ad532f5" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">10.1</a> a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that:</p>
+<ol class="new-bullet">
+<li>(1) its risk management policies take into account:</li>
+<ol>
+<li>(a) the<em> <a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> business model;</li>
+<li>(b) the countries in which it operates;</li>
+<li>(c) the specificities of the funding markets; and</li>
+<li>(d) the macroeconomic situation; and</li>
+</ol>
+<li>(2) its <em><a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> receives timely information on:</li>
+<ol>
+<li>(a) the current and expected level and types of asset encumbrance and related sources of encumbrance, such as secured funding or other transactions;</li>
+<li>(b) the amount, expected level and credit quality of unencumbered assets that are capable of being encumbered, specifying the volume of assets available for encumbrance; and</li>
+<li>(c) the expected amount, level and types of additional encumbrance that may result from stress scenarios.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=67c304e38d8e4d118c015049c3131aa0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="63a5f62a99cf48aa8ffcf1cec5f12759"
+	 data-version="007aead483164147ac37b21568b6a7c8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						10.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>For the purpose of this Chapter a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must treat an asset as encumbered if it is subject to any form of arrangement to secure, collateralise or credit enhance any transaction.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=63a5f62a99cf48aa8ffcf1cec5f12759">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						10.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/10-management-of-asset-encumbrance/20-01-2026?p=1" data-id="800ebcc051c549b0a0433c4e33e6b1cb" data-effective-date="20-01-2026" data-download-title="Management of Asset Encumbrance_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/10-management-of-asset-encumbrance/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#800ebcc051c549b0a0433c4e33e6b1cb&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Management of Asset Encumbrance">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=800ebcc051c549b0a0433c4e33e6b1cb">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Management of Asset Encumbrance
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="212bbffd0c1c48ad8babdd4fd4691079"
+	 data-version="d0a741fa32ee49fab9554502ef990d4d"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					11
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Stress Testing
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="5fdc991da8934d78923e851b3e6d65be"
+	 data-version="b304cc59781443f6a57e65bd9fdbd141"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must consider different <em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> mitigation tools, including a system of limits and liquidity buffers in order to be able to withstand a range of different stress events and an adequately diversified funding structure and access to funding sources. It must review those arrangements regularly.</p>
+			<p><strong>[Note: Art. 86(7) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=5fdc991da8934d78923e851b3e6d65be">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e7e73850bb3243fabd6eeb94d0c6178b"
+	 data-version="a07c89a331f246ca9814ebb09cf57212"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>&nbsp;must consider alternative scenarios on liquidity positions and on risk mitigants and must review the assumptions underlying decisions concerning the funding position at least once every two years in the case of an <a href="#glossary-term-9e8faa6f07994b50bc4d2f1ed95c49d3">SDDT</a>&nbsp;or <a href="#glossary-term-7f2d66f1acfd4153b17ad6fe104ae372">SDDT consolidation entity</a>&nbsp;and at least annually in the case of any other <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>. For these purposes, alternative scenarios must address, in particular, off-balance sheet items and other contingent liabilities, including those of <em><a class="glossary-link" title="securitisation special purpose entities" href="#glossary-term-b353845a83f446fa91f73f0ca4b301b3" data-mce-linktype="2" data-glossary-id="66808">securitisation special purpose entities</a></em>&nbsp;or other special purpose entities, as referred to in the <a href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3">CRR</a>&nbsp;in relation to which the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>&nbsp;acts as <em><a class="glossary-link" title="sponsor" href="#glossary-term-4039c61acb2f45ceb789317ffef71c85" data-mce-linktype="2" data-glossary-id="66841">sponsor</a></em>&nbsp;or provides material liquidity support.</p>
+			<p><strong>[Note: Art. 86(8) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					20/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#e7e73850bb3243fabd6eeb94d0c6178b">
+			Past
+			<span class="visually-hidden">
+				version of 11.2 before 20/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e7e73850bb3243fabd6eeb94d0c6178b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="a40f64b30d2b4eca888eb0ce9b5529c1"
+	 data-version="ee58b51e922f4b4e9a42b0c41e0be525"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <a  class="glossary-link" title="firm " href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm </a>must:</p>
+<ol class="new-bullet">
+<li>(1) conduct on a regular basis appropriate stress tests so as to:</li>
+<ol>
+<li>(a) identify sources of potential liquidity strain;</li>
+<li>(b) ensure that current liquidity exposures continue to conform to the <em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> and <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em> appetite established by that<em> <a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>; and</li>
+<li>(c) identify the effects on that <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> assumptions about pricing; and</li>
+</ol>
+<li>(2) analyse on a regular basis the separate and combined impact of possible future liquidity stresses on its:</li>
+<ol>
+<li>(a) cash flows;</li>
+<li>(b) liquidity position;</li>
+<li>(c) profitability; and</li>
+<li>(d) solvency.</li>
+</ol></ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=a40f64b30d2b4eca888eb0ce9b5529c1">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="6f8f62977a0a4e009ad0b2211cf4150d"
+	 data-version="887d829bfc7649bf9e181a1b44026e52"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must consider the potential impact of institution-specific, market-wide and combined alternative scenarios. Different time periods and varying degrees of stressed conditions must be considered.</p>
+			<p><strong>[Note: Art. 86(9) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6f8f62977a0a4e009ad0b2211cf4150d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="dbfca5b87e464c6c9aa35aa997527f34"
+	 data-version="451c3c9bb1fb4f9d90f18f2ed23f3903"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>In carrying out the liquidity stress tests required by <a  title="11.3" href="/pra-rules/internal-liquidity-adequacy-assessment#a40f64b30d2b4eca888eb0ce9b5529c1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.3</a>, a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must make appropriate assumptions around the major sources of risk, including the major sources of risk in each of the following categories where they are relevant to the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> given the nature and scale of its business:</p>
+<ol class="new-bullet">
+<li>(1) retail <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em>;</li>
+<li>(2) wholesale secured and unsecured <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em>;</li>
+<li>(3) risks arising from the correlation between funding markets and lack of diversification between funding types;</li>
+<li>(4) off-balance sheet <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em>;</li>
+<li>(5) risks arising from the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> funding tenors;</li>
+<li>(6) risks associated with a deterioration of a <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> credit rating;</li>
+<li>(7) cross currency <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em>;</li>
+<li>(8) risk that liquidity resources cannot be transferred across entities, sectors and countries;</li>
+<li><span style="font-style: normal;">(9) </span><em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risks</a></em> resulting from estimates of future balance sheet growth;</li>
+<li>(10) franchise risk;</li>
+<li>(11) marketable assets risk;</li>
+<li>(12) non-marketable assets risk;</li>
+<li>(13) internalisation risk; and</li>
+<li>(14) intra-day risk.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=dbfca5b87e464c6c9aa35aa997527f34">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c2b82201653145b7a6af5759f0caf466"
+	 data-version="af1ff66709444166833eb42eaa201232"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that its <em><a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> reviews regularly the stresses and scenarios tested to ensure that their nature and severity remain appropriate and relevant to the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c2b82201653145b7a6af5759f0caf466">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="80950c4635444bac8f9c845d9e38352d"
+	 data-version="9ffe627be1704c858e9347ebdcbf2fa2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that the results of its stress tests are:</p>
+<ol class="new-bullet">
+<li>(1) reviewed by its <em><a  class="glossary-link" title="senior management" href="#glossary-term-685d8be44e4445d4a16142fe92a32c80" data-mce-linktype="2" data-glossary-id="52151">senior management</a></em>;</li>
+<li>(2) reported to that <em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em>, specifically highlighting any vulnerabilities identified and proposing appropriate remedial action;</li>
+<li>(3) reflected in the processes, strategies and systems established in accordance with <a  title="3.1" href="/pra-rules/internal-liquidity-adequacy-assessment#af246c44b80640c7b59613812cf679d2" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">3.1</a>;</li>
+<li>(4) used to develop effective <em><a  class="glossary-link" title="liquidity contingency plans" href="#glossary-term-0d77a790c8c44b8b98b94b0cc47af202" data-mce-linktype="2" data-glossary-id="66797">liquidity contingency plans</a></em>;</li>
+<li>(5) integrated into that<em> </em><em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> business planning process and day-to-day risk management; and</li>
+<li>(6) taken into account when setting internal limits for the management of that <em><em><a  class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a></em> <a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> exposure.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=80950c4635444bac8f9c845d9e38352d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="e3db5a95c0034fab82f7f167dd2a82d3"
+	 data-version="5c25e3a3d8e94717b162621f7c1b2ee4"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						11.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must report the results of its liquidity stress tests to the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a></em> in a timely manner.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=e3db5a95c0034fab82f7f167dd2a82d3">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						11.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/11-stress-testing/20-01-2026?p=1" data-id="212bbffd0c1c48ad8babdd4fd4691079" data-effective-date="20-01-2026" data-download-title="Stress Testing_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/11-stress-testing/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#212bbffd0c1c48ad8babdd4fd4691079&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Stress Testing">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=212bbffd0c1c48ad8babdd4fd4691079">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Stress Testing
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="5775339a5d794f7082e07b405e04ed87"
+	 data-version="041f7c85ecce48cca5d32f373e31ab56"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					12
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Liquidity Contingency Plan
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fbbc65f5e18a4bb19fb8ea82399ee671"
+	 data-version="89b5631c668f41b0b2934962ea22da80"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must adjust its strategies, internal policies and limits on <em><a  class="glossary-link" title="liquidity risk" href="#glossary-term-6833fdd32a714731892a6a1f3aa35abc" data-mce-linktype="2" data-glossary-id="66799">liquidity risk</a></em> and <em><a  class="glossary-link" title="funding risk" href="#glossary-term-f93d3bf73f4348b08b2cc82a99dd99a9" data-mce-linktype="2" data-glossary-id="66795">funding risk</a></em> and develop an effective <em><a  class="glossary-link" title="liquidity contingency plan" href="#glossary-term-0d77a790c8c44b8b98b94b0cc47af202" data-mce-linktype="2" data-glossary-id="66797">liquidity contingency plan</a></em>, taking into account the outcome of the alternative scenarios referred to in <a  title="11.2" href="/pra-rules/internal-liquidity-adequacy-assessment#a40f64b30d2b4eca888eb0ce9b5529c1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.2</a>.</p>
+			<p><strong>[Note: Art. 86(10) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=fbbc65f5e18a4bb19fb8ea82399ee671">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="362ee81c25c34ddeb7e7d75006413c33"
+	 data-version="f59172f44cab422ebcdd8f9092d7804b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a  class="glossary-link" title="liquidity contingency plan" href="#glossary-term-0d77a790c8c44b8b98b94b0cc47af202" data-mce-linktype="2" data-glossary-id="66797">liquidity contingency plan</a></em> must include strategies to address the contingent encumbrance resulting from relevant stress events including downgrades in the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> credit rating, devaluation of pledged assets and increases in margin requirements.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=362ee81c25c34ddeb7e7d75006413c33">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="366f9593f9b54cdd94c442f390b88d92"
+	 data-version="17d7009054704bbeae6aec7df3c7cd43"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <em><a class="glossary-link" title="liquidity contingency plan" href="#glossary-term-0d77a790c8c44b8b98b94b0cc47af202" data-mce-linktype="2" data-glossary-id="66797">liquidity contingency plan</a></em> must also set out adequate strategies and proper implementation measures in order to address possible liquidity shortfalls. Those plans must be tested at least annually, updated on the basis of the outcome of the alternative scenarios set out in <a title="11.2" href="/pra-rules/internal-liquidity-adequacy-assessment#e7e73850bb3243fabd6eeb94d0c6178b" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.2</a>, and be reported to and approved by the <em><a class="glossary-link" title="firm's" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm's</a> <a class="glossary-link" title="senior management" href="#glossary-term-685d8be44e4445d4a16142fe92a32c80" data-mce-linktype="2" data-glossary-id="52151">senior management</a></em>, so that internal policies and processes can be adjusted accordingly.</p>
+			<p><strong>[Note: Art. 86(11) (part) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#366f9593f9b54cdd94c442f390b88d92">
+			Past
+			<span class="visually-hidden">
+				version of 12.3 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=366f9593f9b54cdd94c442f390b88d92">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="0e466c02ec484c7eae7f44cbb74df82e"
+	 data-version="9cd6fe4258fa4bbf82e18b1613d4ccc1"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						12.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must take the necessary operational steps in advance to ensure that <em><a class="glossary-link" title="liquidity contingency plans" href="#glossary-term-0d77a790c8c44b8b98b94b0cc47af202" data-mce-linktype="2" data-glossary-id="66797">liquidity contingency plans</a></em> can be implemented immediately, including holding collateral immediately available for central bank funding. This includes holding collateral where necessary in the currency of a <em><a class="glossary-link" title="third country" href="#glossary-term-987a7ddcc6fb42f697a0c266b97e616b" data-mce-linktype="2" data-glossary-id="52118">third country</a></em> to which the <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> has exposures, and where operationally necessary within the territory of the <em><a class="glossary-link" title="third country" href="#glossary-term-987a7ddcc6fb42f697a0c266b97e616b" data-mce-linktype="2" data-glossary-id="52118">third country</a></em> to whose currency it is exposed.</p>
+			<p><strong>[Note: Art. 86(11) (part) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#0e466c02ec484c7eae7f44cbb74df82e">
+			Past
+			<span class="visually-hidden">
+				version of 12.4 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=0e466c02ec484c7eae7f44cbb74df82e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						12.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/12-liquidity-contingency-plan/20-01-2026?p=1" data-id="5775339a5d794f7082e07b405e04ed87" data-effective-date="20-01-2026" data-download-title="Liquidity Contingency Plan_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/12-liquidity-contingency-plan/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#5775339a5d794f7082e07b405e04ed87&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Liquidity Contingency Plan">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=5775339a5d794f7082e07b405e04ed87">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Liquidity Contingency Plan
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="736803a1aa00485dbc6b26ac8b6a1de6"
+	 data-version="c09d58ba4b8d43148fe7ae5c58ab9f78"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					13
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Internal Liquidity Adequacy Assessment Process
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="cecc9506c785447fb98b17ed6420b01b"
+	 data-version="8de8eadfe59b4e798d52dad989911e49"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that:</p>
+<ol class="new-bullet">
+    <li>(1) it regularly, but at least once every two years in the case of an <a href="#glossary-term-9e8faa6f07994b50bc4d2f1ed95c49d3">SDDT</a>&nbsp;or <a href="#glossary-term-7f2d66f1acfd4153b17ad6fe104ae372">SDDT consolidation entity</a>&nbsp;and&nbsp;at least annually&nbsp;in the case of any other <a href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f">firm</a>, reviews its <em><a class="glossary-link" title="ILAAP" href="#glossary-term-deffdff56401442b8f645b3de0f63da3" data-mce-linktype="2" data-glossary-id="66796">ILAAP</a></em>;</li>
+    <li>(2) it regularly carries out an internal assessment of the adequacy of its liquidity and funding in accordance with its <em><a class="glossary-link" title="ILAAP" href="#glossary-term-deffdff56401442b8f645b3de0f63da3" data-mce-linktype="2" data-glossary-id="66796">ILAAP</a></em>;</li>
+    <li>(3) the assessment in (2) is proportionate to the nature, scale and complexity of its activities and includes an assessment of:</li>
+    <ol>
+        <li>(a) the adequacy of its liquidity and funding resources to cover the risks identified in accordance with this Part;</li>
+        <li>(b) the methodologies and assumptions applied for risk measurement and liquidity management;</li>
+        <li>(c) the results of the stress tests required by <a title="11.3" href="/pra-rules/internal-liquidity-adequacy-assessment#a40f64b30d2b4eca888eb0ce9b5529c1" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">11.3</a>; and</li>
+        <li>(d) the<em> <a class="glossary-link" title="firm’s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> compliance with this Part;</li>
+    </ol>
+    <li>(4) its <em><a class="glossary-link" title="ILAAP" href="#glossary-term-deffdff56401442b8f645b3de0f63da3" data-mce-linktype="2" data-glossary-id="66796">ILAAP</a></em> identifies those of the measures set out in its <em><a class="glossary-link" title="liquidity contingency plans" href="#glossary-term-0d77a790c8c44b8b98b94b0cc47af202" data-mce-linktype="2" data-glossary-id="66797">liquidity contingency plans</a></em> that it would implement.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					20/01/2026
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#cecc9506c785447fb98b17ed6420b01b">
+			Past
+			<span class="visually-hidden">
+				version of 13.1 before 20/01/2026
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=cecc9506c785447fb98b17ed6420b01b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="62707fc651ad414fac896998d9609c5c"
+	 data-version="93702b82c3694737bdedb0c9dc035af9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A<em> <a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must make a written record of its <em><a  class="glossary-link" title="ILAAP" href="#glossary-term-deffdff56401442b8f645b3de0f63da3" data-mce-linktype="2" data-glossary-id="66796">ILAAP</a></em> and the assessments required under this Part and maintain such record for at least three years.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=62707fc651ad414fac896998d9609c5c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="d30c9730daa0406ab2764cf7327d24f0"
+	 data-version="611ab41d471e4fa184451c5946d1edb6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						13.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must ensure that its <em><a  class="glossary-link" title="management body" href="#glossary-term-778c35c0a40b446696c6cadcbe9cd63d" data-mce-linktype="2" data-glossary-id="52147">management body</a></em> approves the <em><a  class="glossary-link" title="firm&rsquo;s" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> <em><a  class="glossary-link" title="ILAAP" href="#glossary-term-deffdff56401442b8f645b3de0f63da3" data-mce-linktype="2" data-glossary-id="66796">ILAAP</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=d30c9730daa0406ab2764cf7327d24f0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						13.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/13-internal-liquidity-adequacy-assessment-process/20-01-2026?p=1" data-id="736803a1aa00485dbc6b26ac8b6a1de6" data-effective-date="20-01-2026" data-download-title="Internal Liquidity Adequacy Assessment Process_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/13-internal-liquidity-adequacy-assessment-process/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#736803a1aa00485dbc6b26ac8b6a1de6&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Internal Liquidity Adequacy Assessment Process">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=736803a1aa00485dbc6b26ac8b6a1de6">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Internal Liquidity Adequacy Assessment Process
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="c9202f8e3a714711ac6b5f241b556e0c"
+	 data-version="f1d0be403b904e7dafa206b4d81a9f5c"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					14
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Application of this Part on an Individual or Domestic Liquidity Sub-Group Basis and a Consolidated Basis
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="4e0b0b7d842e4197ac6ba60ca145a19b"
+	 data-version="a740316775794ad999cbbc73b2ff1f9b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="1">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<ol class="new-bullet">
+<li>(1) This Part applies to a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> on an individual basis unless (2) applies.</li>
+<li>(2) A <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must comply with this Part at the level of its <em><a  class="glossary-link" title="domestic liquidity sub-group" href="#glossary-term-f12970a985eb4e079356ccb0daec79a0" data-mce-linktype="2" data-glossary-id="78060">domestic liquidity sub-group</a></em> where the <em><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a> </em>has granted the firm<em style="text-indent: -14.3px;"> </em>permission under <a  style="text-indent: 0px;" title="2.2" href="/pra-rules/liquidity-crr#dbd68685c815458ebf00417f54df2c30" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">2.2</a><span style="text-indent: 0px;"> of the </span><a  style="text-indent: 0px;" title="Liquidity (CRR) Part" href="/pra-rules/liquidity-crr" data-rb-content-link="Part" data-mce-linktype="1" data-mce-contenttype="4">Liquidity (CRR) Part</a> of the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="PRA" href="#glossary-term-494fbb81077e408f84519b8c66998fef" data-mce-linktype="2" data-glossary-id="52117">PRA</a> </em>Rulebook.</li>
+<li>    [Note: This rule corresponds to Article 8(5) of the <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a> </em>as it applied immediately before revocation by the <em><a  class="glossary-link" title="Treasury" href="#glossary-term-eb1ab06c495442698cab73591d2e19e8" data-mce-linktype="2" data-glossary-id="138463">Treasury</a></em>]</li>
+<li>(3) (1) and (2) apply to a <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> whether or not this Part applies to the <em style="text-indent: -14.3px;"><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> on a <em style="text-indent: 0px;"><a  class="glossary-link" title="consolidated basis" href="#glossary-term-374f83bc90d643939646f9dbc0de0cb5" data-mce-linktype="2" data-glossary-id="66801">consolidated basis</a></em>.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/14-12-2016#4e0b0b7d842e4197ac6ba60ca145a19b">
+			Past
+			<span class="visually-hidden">
+				version of 14.1 before 01/01/2022
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2027#4e0b0b7d842e4197ac6ba60ca145a19b">
+			Future
+			<span class="visually-hidden">
+				version of 14.1 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=4e0b0b7d842e4197ac6ba60ca145a19b">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1e54abb62e954ef5b117d26144d0a6fa"
+	 data-version="51ed3a57e0f142dca8c08d52d328df1f"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.1A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If this Part applies to a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> on an individual basis, the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> must comply with the rules in this Part to the same extent and in the same manner as it is required to comply with the <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm&rsquo;s</a></em> obligations laid down in Part Six of the <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					30/03/2018
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2027#1e54abb62e954ef5b117d26144d0a6fa">
+			Future
+			<span class="visually-hidden">
+				version of 14.1A after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1e54abb62e954ef5b117d26144d0a6fa">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.1A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="7fdc6568cd404b44a589883f336f305e"
+	 data-version="518a78173a7a4b59a44880ce9ab0c761"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a  class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em>, a <em><a  class="glossary-link" title="PRA approved parent holding company" href="#glossary-term-858f229932b04b84a3d2fd5906ae6997" data-mce-linktype="2" data-glossary-id="108327">PRA approved parent holding company</a></em>, a <em><a  class="glossary-link" title="PRA designated parent holding company" href="#glossary-term-b7b75136f19c4c538f3abdc134501d1e" data-mce-linktype="2" data-glossary-id="108328">PRA designated parent holding company</a></em>, a <em><a  class="glossary-link" title="PRA designated intermediate holding company" href="#glossary-term-beea0216ae16493da3e0f26d12b426f1" data-mce-linktype="2" data-glossary-id="108330">PRA designated intermediate holding company</a></em> or a <em><a  class="glossary-link" title="PRA designated institution" href="#glossary-term-27c5866fe7ea4c81a841cf8001945893" data-mce-linktype="2" data-glossary-id="108331">PRA designated institution</a></em> is a member of a <em><a  class="glossary-link" title="consolidation group" href="#glossary-term-243ed2d4bc9b4213a83edabcd2dabb45" data-mce-linktype="2" data-glossary-id="66793">consolidation group</a></em>, that <em><a  class="glossary-link" title="person" href="#glossary-term-8908b89166da420a9af9860d5df57ab9" data-mce-linktype="2" data-glossary-id="52720">person</a></em> must ensure that the arrangements, processes and mechanisms at the level of the <em><a  class="glossary-link" title="consolidation group" href="#glossary-term-243ed2d4bc9b4213a83edabcd2dabb45" data-mce-linktype="2" data-glossary-id="66793">consolidation group</a></em> of which it is a member comply with the obligations set out in <a  title="3" href="/pra-rules/internal-liquidity-adequacy-assessment#c618dbd9e4504022a96c45d6a896f1af" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">3</a> &ndash; <a  title="13" href="/pra-rules/internal-liquidity-adequacy-assessment#736803a1aa00485dbc6b26ac8b6a1de6" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">13</a> on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-374f83bc90d643939646f9dbc0de0cb5" data-mce-linktype="2" data-glossary-id="66801">consolidated basis</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#7fdc6568cd404b44a589883f336f305e">
+			Past
+			<span class="visually-hidden">
+				version of 14.2 before 29/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=7fdc6568cd404b44a589883f336f305e">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.2
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="38f5ae0938e640c88b8b20eda4b51648"
+	 data-version="968635250e114042ae02a49bf0dd1fd7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.2A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Where a <em><a  class="glossary-link" title="firm" href="#glossary-term-80a177da38e548b8b6785c53ce6c3851" data-mce-linktype="2" data-glossary-id="77615">firm</a></em>, a <em><a  class="glossary-link" title="PRA approved intermediate holding company" href="#glossary-term-cf59a6b20b8548e28c987bc7e9131551" data-mce-linktype="2" data-glossary-id="108329">PRA approved intermediate holding company</a></em>, a <em><a  class="glossary-link" title="PRA designated intermediate holding company" href="#glossary-term-beea0216ae16493da3e0f26d12b426f1" data-mce-linktype="2" data-glossary-id="108330">PRA designated intermediate holding company</a></em>, a <em><a  class="glossary-link" title="PRA designated parent holding company" href="#glossary-term-b7b75136f19c4c538f3abdc134501d1e" data-mce-linktype="2" data-glossary-id="108328">PRA designated parent holding company</a></em> or a <em><a  class="glossary-link" title="PRA designated institution" href="#glossary-term-27c5866fe7ea4c81a841cf8001945893" data-mce-linktype="2" data-glossary-id="108331">PRA designated institution</a></em> is a member of a <em><a  class="glossary-link" title="sub-consolidation group" href="#glossary-term-8b85be6afef840fbb5bb092d5e3ba3b8" data-mce-linktype="2" data-glossary-id="78066">sub-consolidation group</a></em>, that person must ensure that the arrangements, processes and mechanisms at the level of the <em><a  class="glossary-link" title="sub-consolidation group" href="#glossary-term-8b85be6afef840fbb5bb092d5e3ba3b8" data-mce-linktype="2" data-glossary-id="78066">sub-consolidation group</a></em> of which it is a member comply with the obligations set out in <a  title="3" href="/pra-rules/internal-liquidity-adequacy-assessment#c618dbd9e4504022a96c45d6a896f1af" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">3</a> &ndash; <a  title="13" href="/pra-rules/internal-liquidity-adequacy-assessment#736803a1aa00485dbc6b26ac8b6a1de6" data-rb-content-link="Chapter" data-mce-linktype="1" data-mce-contenttype="5">13</a> on a <em><a  class="glossary-link" title="sub-consolidated basis" href="#glossary-term-188e928997ca47f897c2ed3ede467e10" data-mce-linktype="2" data-glossary-id="52316">sub-consolidated basis</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2027#38f5ae0938e640c88b8b20eda4b51648">
+			Future
+			<span class="visually-hidden">
+				version of 14.2A after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=38f5ae0938e640c88b8b20eda4b51648">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.2A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="96329aa8285c4d0ea6448ca4a3f80a1d"
+	 data-version="89a0a9be84b842379b38ff2e6389c55c"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Compliance with <a  title="14.2" href="/pra-rules/internal-liquidity-adequacy-assessment#7fdc6568cd404b44a589883f336f305e" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.2</a> and <a  title="14.2A" href="/pra-rules/internal-liquidity-adequacy-assessment#38f5ae0938e640c88b8b20eda4b51648" data-rb-content-link="Rule" data-mce-linktype="1" data-mce-contenttype="7">14.2A</a> must enable the <em><a  class="glossary-link" title="consolidation group" href="#glossary-term-243ed2d4bc9b4213a83edabcd2dabb45" data-mce-linktype="2" data-glossary-id="66793">consolidation group</a></em> to have arrangements, processes and mechanisms that are consistent and well integrated and that any data relevant to the purpose of supervision can be produced.</p>
+			<p><strong>[Note: Art 109(2) (part) of the <em><a  class="glossary-link" title="CRD" href="#glossary-term-31e4b635ac0e45079e29954e3d518bec" data-mce-linktype="2" data-glossary-id="52109">CRD</a></em>]</strong></p>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#96329aa8285c4d0ea6448ca4a3f80a1d">
+			Past
+			<span class="visually-hidden">
+				version of 14.3 before 29/12/2020
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2027#96329aa8285c4d0ea6448ca4a3f80a1d">
+			Future
+			<span class="visually-hidden">
+				version of 14.3 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=96329aa8285c4d0ea6448ca4a3f80a1d">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.3
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="97b3052dca824275b04aca0d018b54d4"
+	 data-version="aa918bb6a91643f1b8a4769371fd9fa2"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="firm" href="#glossary-term-c8c2638afbfe4ec2a4d936a5d365917f" data-mce-linktype="2" data-glossary-id="52114">firm</a></em> which is a <em><a class="glossary-link" title="EEA parent institution" href="#glossary-term-4e4ec06087584533a1f5fef6f9f0da43" data-mce-linktype="2" data-glossary-id="66805">UK parent institution</a></em> must comply with this Part on the basis of its <em><a class="glossary-link" title="consolidated situation" href="#glossary-term-d3123448dcea4a56a4609ce4b716e097" data-mce-linktype="2" data-glossary-id="66802">consolidated situation</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#97b3052dca824275b04aca0d018b54d4">
+			Past
+			<span class="visually-hidden">
+				version of 14.4 before 31/12/2020
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2027#97b3052dca824275b04aca0d018b54d4">
+			Future
+			<span class="visually-hidden">
+				version of 14.4 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=97b3052dca824275b04aca0d018b54d4">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.4
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="36d9485534484861a35f0a9e0d9a9d3c"
+	 data-version="f97656a5145944e7b4e904636c5b2d43"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[blank]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					14/12/2016
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=36d9485534484861a35f0a9e0d9a9d3c">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.5
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="c20f24fac9b14a6d8648d783110a07b0"
+	 data-version="d42b98ee6bf94f6b8279307d952c648b"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="PRA designated institution" href="#glossary-term-27c5866fe7ea4c81a841cf8001945893" data-mce-linktype="2" data-glossary-id="108331">PRA designated institution</a> </em>controlled by a <em><a class="glossary-link" title="EEA parent financial holding company" href="#glossary-term-b3479f5b5d324279ba53874a2291b09d" data-mce-linktype="2" data-glossary-id="66806">UK parent financial holding company</a></em> or by a <em><a class="glossary-link" title="EEA parent mixed financial holding company" href="#glossary-term-a1560ff8febe42439b342a1cb5f19bc0" data-mce-linktype="2" data-glossary-id="66807">UK parent mixed financial holding company</a></em> must comply with this Part on the basis of the <em><a class="glossary-link" title="consolidated situation" href="#glossary-term-d3123448dcea4a56a4609ce4b716e097" data-mce-linktype="2" data-glossary-id="66802">consolidated situation</a></em> of that holding company..</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/29-12-2020#c20f24fac9b14a6d8648d783110a07b0">
+			Past
+			<span class="visually-hidden">
+				version of 14.6 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=c20f24fac9b14a6d8648d783110a07b0">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.6
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="ff3623695dcb419084dc55fb4b4655a7"
+	 data-version="d81996d506364a1e88c23ee757124690"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.6A
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>A <em><a class="glossary-link" title="PRA approved parent holding company" href="#glossary-term-858f229932b04b84a3d2fd5906ae6997" data-mce-linktype="2" data-glossary-id="108327">PRA approved parent holding company</a></em> or a <em><a class="glossary-link" title="PRA designated parent holding company" href="#glossary-term-b7b75136f19c4c538f3abdc134501d1e" data-mce-linktype="2" data-glossary-id="108328">PRA designated parent holding company</a></em> must comply with this Part on the basis of its <em><a class="glossary-link" title="consolidated situation" href="#glossary-term-d3123448dcea4a56a4609ce4b716e097" data-mce-linktype="2" data-glossary-id="66802">consolidated situation</a></em> and a <em><a class="glossary-link" title="PRA designated intermediate holding company" href="#glossary-term-beea0216ae16493da3e0f26d12b426f1" data-mce-linktype="2" data-glossary-id="108330">PRA designated intermediate holding company</a></em> responsible for compliance with the <em><a class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> on a <em><a class="glossary-link" title="consolidated basis" href="#glossary-term-374f83bc90d643939646f9dbc0de0cb5" data-mce-linktype="2" data-glossary-id="66801">consolidated basis</a></em> must comply with this Part on the basis of the <em><a class="glossary-link" title="consolidated situation" href="#glossary-term-d3123448dcea4a56a4609ce4b716e097" data-mce-linktype="2" data-glossary-id="66802">consolidated situation</a></em> of the <em><a class="glossary-link" title="UK parent financial holding company" href="#glossary-term-ea5105190d814b62aeb0dcec3e5c43eb" data-mce-linktype="2" data-glossary-id="98247">UK parent financial holding company</a></em> or <em><a class="glossary-link" title="UK parent mixed financial holding company" href="#glossary-term-70b67a63fa2d47948b71f78a5fe97dbf" data-mce-linktype="2" data-glossary-id="98249">UK parent mixed financial holding company</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/29-12-2020#ff3623695dcb419084dc55fb4b4655a7">
+			Past
+			<span class="visually-hidden">
+				version of 14.6A before 31/12/2020
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2027#ff3623695dcb419084dc55fb4b4655a7">
+			Future
+			<span class="visually-hidden">
+				version of 14.6A after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=ff3623695dcb419084dc55fb4b4655a7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.6A
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="1e48c13cb6ad49c8aa5bc87f5736dcbe"
+	 data-version="b02b659d4e794c0a85fb36b482153427"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.7
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/29-12-2020#1e48c13cb6ad49c8aa5bc87f5736dcbe">
+			Past
+			<span class="visually-hidden">
+				version of 14.7 before 31/12/2020
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2027#1e48c13cb6ad49c8aa5bc87f5736dcbe">
+			Future
+			<span class="visually-hidden">
+				version of 14.7 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=1e48c13cb6ad49c8aa5bc87f5736dcbe">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.7
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>
+
+
+<div id="f1888655c8f7416d88350373e32fae66"
+	 data-version="e5d74283d8a8479e8b4efb45ecbc7c4d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						14.8
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>If this Part applies to an <em><a  class="glossary-link" title="Article 109 undertaking" href="#glossary-term-704dbe42f18d4a8d8100de2f752e8bd7" data-mce-linktype="2" data-glossary-id="108326">Article 109 undertaking</a></em> on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-374f83bc90d643939646f9dbc0de0cb5" data-mce-linktype="2" data-glossary-id="66801">consolidated basis</a></em> or on a <em><a  class="glossary-link" title="sub-consolidated basis" href="#glossary-term-258d366b40e64d2385ad3d800d1f9400" data-mce-linktype="2" data-glossary-id="78070">sub-consolidated basis</a></em>, the <em><a  class="glossary-link" title="Article 109 undertaking" href="#glossary-term-704dbe42f18d4a8d8100de2f752e8bd7" data-mce-linktype="2" data-glossary-id="108326">Article 109 undertaking</a></em> must carry out consolidation to the same extent and in the same manner as it is required to comply with the obligations laid down in Part Six of the <em><a  class="glossary-link" title="CRR" href="#glossary-term-cbe45e8f942b45a4a7fe0d3550a6f2f3" data-mce-linktype="2" data-glossary-id="52111">CRR</a></em> on a <em><a  class="glossary-link" title="consolidated basis" href="#glossary-term-374f83bc90d643939646f9dbc0de0cb5" data-mce-linktype="2" data-glossary-id="66801">consolidated basis</a></em> or <em><a  class="glossary-link" title="sub-consolidated basis" href="#glossary-term-258d366b40e64d2385ad3d800d1f9400" data-mce-linktype="2" data-glossary-id="78070">sub-consolidated basis</a></em>.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					29/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/30-03-2018#f1888655c8f7416d88350373e32fae66">
+			Past
+			<span class="visually-hidden">
+				version of 14.8 before 29/12/2020
+			</span>
+		</a>
+	</li>
+	<li class="list-links__item list-future">
+		<a class="list-links__link icon-future" href="/pra-rules/internal-liquidity-adequacy-assessment/01-01-2027#f1888655c8f7416d88350373e32fae66">
+			Future
+			<span class="visually-hidden">
+				version of 14.8 after 01/01/2027
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=f1888655c8f7416d88350373e32fae66">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						14.8
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/14-application-of-this-part-on-an-individual-or-domestic-liquidity-sub-group-basis-and-a-consolidate/20-01-2026?p=1" data-id="c9202f8e3a714711ac6b5f241b556e0c" data-effective-date="20-01-2026" data-download-title="Application of this Part on an Individual or Domestic Liquidity Sub-Group Basis and a Consolidated Basis_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/14-application-of-this-part-on-an-individual-or-domestic-liquidity-sub-group-basis-and-a-consolidate/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#c9202f8e3a714711ac6b5f241b556e0c&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Application of this Part on an Individual or Domestic Liquidity Sub-Group Basis and a Consolidated Basis">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=c9202f8e3a714711ac6b5f241b556e0c">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Application of this Part on an Individual or Domestic Liquidity Sub-Group Basis and a Consolidated Basis
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="0925452819a44addb48e7143f33a0751"
+	 data-version="89d90662159544289f90bec48703f116"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					15
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction of the Liquidity Coverage Ratio
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="6b386dd05b3c4f5d983f360065eb4e39"
+	 data-version="10e77ae458354c24a9ed4496b71b06a7"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="0">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						15.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The applicable <em><a  class="glossary-link" title="liquidity coverage ratio" href="#glossary-term-0caa47311a894a34a454200c24d25efb" data-mce-linktype="2" data-glossary-id="66798">liquidity coverage ratio</a></em> for the purpose of Article 38(2) <em><a  class="glossary-link" title="Delegated Regulation" href="#glossary-term-524a053ea58f4c54ab7364b04aefa183" data-mce-linktype="2" data-glossary-id="66794">Delegated Regulation</a></em> shall be:</p>
+<ol class="new-bullet">
+<li>(1) 80% as from 1 October 2015;</li>
+<li>(2) 90% as from 1 January 2017; and</li>
+<li>(3) 100% as from 1 January 2018.</li>
+</ol>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/10/2015
+				</li>
+
+
+
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=6b386dd05b3c4f5d983f360065eb4e39">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						15.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/15-introduction-of-the-liquidity-coverage-ratio/20-01-2026?p=1" data-id="0925452819a44addb48e7143f33a0751" data-effective-date="20-01-2026" data-download-title="Introduction of the Liquidity Coverage Ratio_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/15-introduction-of-the-liquidity-coverage-ratio/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#0925452819a44addb48e7143f33a0751&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Introduction of the Liquidity Coverage Ratio">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=0925452819a44addb48e7143f33a0751">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Introduction of the Liquidity Coverage Ratio
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div>
+
+
+<div id="9f60925c128244d78c0140baca73b09c"
+	 data-version="12782b158d0641eebdb0215ff47ca9e8"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					16
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Transitional Provision (Deleted)
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="9f646e7fec4b4e0ab1a8a212475a82b7"
+	 data-version="f46235398f224ad19209669bbd417ae6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						16.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>[Deleted.]</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					31/12/2020
+				</li>
+
+
+
+	<li class="list-links__item">
+		<a class="list-links__link icon-previous" href="/pra-rules/internal-liquidity-adequacy-assessment/01-10-2015#9f646e7fec4b4e0ab1a8a212475a82b7">
+			Past
+			<span class="visually-hidden">
+				version of 16.1 before 31/12/2020
+			</span>
+		</a>
+	</li>
+
+
+
+			<li class="list-links__item last">
+				<a class="list-links__link" href="/legal-instruments?rule=9f646e7fec4b4e0ab1a8a212475a82b7">
+Legal Instruments that change this rule					<span class="visually-hidden">
+						16.1
+					</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="20-01-2026">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/pra-rules/internal-liquidity-adequacy-assessment/16-transitional-provision-deleted/20-01-2026?p=1" data-id="9f60925c128244d78c0140baca73b09c" data-effective-date="20-01-2026" data-download-title="Transitional Provision (Deleted)_20-01-2026" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/pra-rules/internal-liquidity-adequacy-assessment/16-transitional-provision-deleted/20-01-2026?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/pra-rules/internal-liquidity-adequacy-assessment#9f60925c128244d78c0140baca73b09c&amp;subject=PRA Rulebook - Internal Liquidity Adequacy Assessment – Transitional Provision (Deleted)">
+			Email
+		</a>
+	</li>
+</ul>
+
+
+
+		<ul class="list-links">
+			<li class="list-links__item ">
+				<a class="list-links__link" href="/legal-instruments?chapter=9f60925c128244d78c0140baca73b09c">
+Legal Instruments that change this Chapter					<span class="visually-hidden">
+						Transitional Provision (Deleted)
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

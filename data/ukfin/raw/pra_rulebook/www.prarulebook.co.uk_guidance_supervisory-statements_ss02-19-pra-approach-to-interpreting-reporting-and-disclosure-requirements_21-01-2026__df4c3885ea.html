@@ -1,0 +1,2410 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+	  class="no-js menu-closed">
+<!--<![endif]-->
+<head>
+	<!-- _81d2 -->
+
+
+	<link rel="preload" as="style" href="/styles/boe.vendor.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/BoE.min.css?ver=cd822" />
+<link rel="preload" as="style" href="/styles/pra.print.min.css?ver=cd822" />
+
+
+
+			<link rel="preload" as="script" href="/scripts/telemetry.js?ver=cd822" />
+			<link rel="preconnect" href="https://js.monitor.azure.com" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+			<!-- App Insights -->
+			<script type="text/javascript" src="/scripts/telemetry.js?ver=cd822"></script>
+			<script type="text/javascript">
+				!function (T, l, y) { var S = T.location, k = "script", D = "connectionString", C = "ingestionendpoint", I = "disableExceptionTracking", E = "ai.device.", b = "toLowerCase", w = "crossOrigin", N = "POST", e = "appInsightsSDK", t = y.name || "appInsights"; (y.name || T[e]) && (T[e] = t); var n = T[t] || function (d) { var g = !1, f = !1, m = { initialize: !0, queue: [], sv: "5", version: 2, config: d }; function v(e, t) { var n = {}, a = "Browser"; return n[E + "id"] = a[b](), n[E + "type"] = a, n["ai.operation.name"] = S && S.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (m.sv || m.version), { time: function () { var e = new Date; function t(e) { var t = "" + e; return 1 === t.length && (t = "0" + t), t } return e.getUTCFullYear() + "-" + t(1 + e.getUTCMonth()) + "-" + t(e.getUTCDate()) + "T" + t(e.getUTCHours()) + ":" + t(e.getUTCMinutes()) + ":" + t(e.getUTCSeconds()) + "." + ((e.getUTCMilliseconds() / 1e3).toFixed(3) + "").slice(2, 5) + "Z" }(), name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t, sampleRate: 100, tags: n, data: { baseData: { ver: 2 } } } } var h = d.url || y.src; if (h) { function a(e) { var t, n, a, i, r, o, s, c, u, p, l; g = !0, m.queue = [], f || (f = !0, t = h, s = function () { var e = {}, t = d.connectionString; if (t) for (var n = t.split(";"), a = 0; a < n.length; a++) { var i = n[a].split("="); 2 === i.length && (e[i[0][b]()] = i[1]) } if (!e[C]) { var r = e.endpointsuffix, o = r ? e.location : null; e[C] = "https://" + (o ? o + "." : "") + "dc." + (r || "services.visualstudio.com") } return e }(), c = s[D] || d[D] || "", u = s[C], p = u ? u + "/v2/track" : d.endpointUrl, (l = []).push((n = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", a = t, i = p, (o = (r = v(c, "Exception")).data).baseType = "ExceptionData", o.baseData.exceptions = [{ typeName: "SDKLoadFailed", message: n.replace(/\./g, "-"), hasFullStack: !1, stack: n + "\nSnippet failed to load [" + a + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (S && S.pathname || "_unknown_") + "\nEndpoint: " + i, parsedStack: [] }], r)), l.push(function (e, t, n, a) { var i = v(c, "Message"), r = i.data; r.baseType = "MessageData"; var o = r.baseData; return o.message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + n + ")").replace(/\"/g, "") + '"', o.properties = { endpoint: a }, i }(0, 0, t, p)), function (e, t) { if (JSON) { var n = T.fetch; if (n && !y.useXhr) n(t, { method: N, body: JSON.stringify(e), mode: "cors" }); else if (XMLHttpRequest) { var a = new XMLHttpRequest; a.open(N, t), a.setRequestHeader("Content-type", "application/json"), a.send(JSON.stringify(e)) } } }(l, p)) } function i(e, t) { f || setTimeout(function () { !t && m.core || a() }, 500) } var e = function () { var n = l.createElement(k); n.src = h; var e = y[w]; return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = i, n.onerror = a, n.onreadystatechange = function (e, t) { "loaded" !== n.readyState && "complete" !== n.readyState || i(0, t) }, n }(); y.ld < 0 ? l.getElementsByTagName("head")[0].appendChild(e) : setTimeout(function () { l.getElementsByTagName(k)[0].parentNode.appendChild(e) }, y.ld || 0) } try { m.cookie = l.cookie } catch (p) { } function t(e) { for (; e.length;)!function (t) { m[t] = function () { var e = arguments; g || m.queue.push(function () { m[t].apply(m, e) }) } }(e.pop()) } var n = "track", r = "TrackPage", o = "TrackEvent"; t([n + "Event", n + "PageView", n + "Exception", n + "Trace", n + "DependencyData", n + "Metric", n + "PageViewPerformance", "start" + r, "stop" + r, "start" + o, "stop" + o, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), m.SeverityLevel = { Verbose: 0, Information: 1, Warning: 2, Error: 3, Critical: 4 }; var s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {}; if (!0 !== d[I] && !0 !== s[I]) { var c = "onerror"; t(["_" + c]); var u = T[c]; T[c] = function (e, t, n, a, i) { var r = u && u(e, t, n, a, i); return !0 !== r && m["_" + c]({ message: e, url: t, lineNumber: n, columnNumber: a, error: i }), r }, d.autoExceptionInstrumented = !0 } return m }(y.cfg); function a() { y.onInit && y.onInit(n) } (T[t] = n).queue && 0 === n.queue.length ? (n.queue.push(a), n.trackPageView({})) : a() }(window, document, {
+					src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js",
+					crossOrigin: "anonymous",
+					onInit: function (sdk) {
+						sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.UnreportableThirdPartyExceptionFilter);
+							sdk.addTelemetryInitializer(AiTelemetry.TelemetryInitializers.SuccessfulDependencyFilter);
+					},
+					cfg: {
+							samplingPercentage: 50,
+						connectionString: "InstrumentationKey=d1665865-15c2-4cab-b3ec-57b3465a8e76;IngestionEndpoint=https://uksouth-0.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/",
+						cookieCfg: {
+							enabled: (AiTelemetry.TelemetryInitializers.GetConsentCookie("boeconsent").indexOf('analytics') >= 0)
+						}
+					}
+				});
+			</script>
+	<link rel="canonical" href="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements" />
+	<meta property="og:url" content="https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements" />
+
+
+
+<!-- metadata-{F69799CB-BA1E-4C80-B6DB-B3A2509BEB5E}-{4DD57FE3-A4D9-432F-A39A-A016240B49CD} -->
+<title>SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU | Prudential Regulation Authority Handbook &amp; Rulebook</title>
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-title" content="PRA Rulebook" />
+<meta name="format-detection" content="telephone=no" />
+	<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.prarulebook.co.uk/-/media/PRA/Images/Logo/PRA%20Logo">
+
+	<script>
+	var CheckCookies = {
+		getCookie: function (cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+	};
+	var SetAnalytics = {
+		setTagManager: function () {
+			var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+			if (hasConsentAnalytics === "analytics") {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({
+						'gtm.start':
+							new Date().getTime(), event: 'gtm.js'
+					}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+							'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MZ9W7X9F');
+			}
+		},
+	}
+	SetAnalytics.setTagManager();
+	</script>
+
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) {
+			el.classList.remove('no-js');
+		} else {
+			el.className = el.className.replace('no-js', '');
+		}
+	</script>
+
+
+	<link href="/styles/boe.vendor.min.css?ver=cd822" rel="stylesheet" media="screen" />
+<link href="/styles/BoE.min.css?ver=cd822" rel="stylesheet" media="screen,print" />
+<link href="/styles/pra.print.min.css?ver=cd822" rel="stylesheet" media="print" />
+
+
+
+
+		<!-- Tracking Disabled -->
+
+
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="180x180" href="/favicon-180x180.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?ver=cd822">
+	<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png?ver=cd822">
+	<link rel="icon" href="/favicon.ico?ver=cd822" sizes="any">
+	<link rel="icon" href="/favicon.svg?ver=cd822" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?ver=cd822">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-51724eef-a1f2-4fb4-9dfb-2b252029a3b3","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"Q5YKT-S48AQ-KXYU8-TW5T5-FK3W9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="l3epqllinx5rw2lwogma-f-bf62d452b-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1541313","ak.ai":parseInt("933216",10),"ak.ol":"0","ak.cr":36,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2560e08e","ak.r":32054,"ak.a2":e,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"94.200.248.0","ak.cport":29916,"ak.gh":"104.109.251.23","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1769370008","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==/FB2GkYWBOrvoDf9IGqedhyHBBqpu+2ui1G22ZdXtuWCG9glcxP6IDQ/QSZosbmWy+L02yq+PJ3AhNKCKSvcVyp6MSYGiW5w07u2mQxLAp7SAu60WmhJHssXvCb3RFbOqb1H6Fx5hF3pt3j0qxmxJzuPgX4ZIH3d5BPiiVnDExuxAA9m/iKW0kEN66MeIERg5mbTpLI6b1EcadDiL4nVGpLbmWzCzXGGWsiPoIVlJ4MBwg1aCbqBi6s0IuBTCsD8Ojq8hyPEpmviEGa5Humwr4+Uq0p5bV7k5W39gAD+bUzoaTJiHzaqv3IdW8bn2vySHfjufKIjepiesHlFR0FZnd1txvaxoHYIcNMai96Ik1w4xYYRFumwPp7Kzr6ZQXi+/q+k246oN2oZTLITTdVumnohoDtR173AeT4BKBZCLNE=","ak.pv":"47","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body >
+
+	<div class="wrap" itemscope="" itemtype="http://schema.org/WebPage">
+
+
+<div class="cookie-notice">
+	<div class="cookie-notice__panel">
+		<div class="cookie-content content-block">
+			<h2 class="cookie-title exclude-navigation">Our website uses cookies</h2>
+
+			Cookies are small files held on your device to customise your experience of this website
+
+			<table class="cookie-notice__table">
+				<tr>
+						<th>Necessary cookies</th>
+											<th>Analytics cookies</th>
+											<th>Accept cookies</th>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>Yes</td>
+					<td>
+						<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended cookies</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Yes</td>
+					<td>No</td>
+					<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Accept necessary cookies only</button></td>
+				</tr>
+			</table>
+
+					</div>
+	</div>
+</div>
+		<div class="nav-bypass">
+			<a href="#main-content" class="nav-bypass__link">Skip to main content</a>
+		</div>
+
+
+
+<header class="global-header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="col12">
+            <div class="header-brand" itemscope="" itemtype="http://schema.org/Organisation">
+
+
+	<a class="header-logo has-tagline"
+	   href="/"
+	   itemscope itemtype="http://schema.org/Brand">
+		<img src="/-/media/pra/images/logo/pra-logo.svg?h=61&amp;iar=0&amp;mh=61&amp;w=122&amp;hash=5F9B0EFB59C50AB459EA4CEC34CAEC04" alt="Bank of England Prudential Regulation Authority Rulebook homepage" width="122" height="61" />
+
+			<span>
+				Bank of England Prudential Regulation Authority
+			</span>
+	</a>
+
+            </div>
+
+            <div class="header-nav " id="menu">
+                <nav class="container-nav-primary" id="container-nav-primary" role="navigation" aria-label="Main navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement" data-nav-primary>
+                    <button class="nav-primary__button" aria-controls="main-menu" data-nav-toggle>
+                        <span class="icon-menu"><span class="visually-hidden">Main menu</span></span>
+                        <span class="icon-cross"><span class="visually-hidden">Close main menu</span></span>
+                    </button>
+                    <ul class="nav-primary" id="main-menu">
+
+
+
+<li class="nav-primary__list-item nav-primary__list-item--has-children" data-nav-has-children>
+    <span class="nav-primary__link">
+        Rulebook
+    </span>
+    <button class="nav-primary__dropdown-toggle">
+		<span class="visually-hidden">
+			Open Rulebook sub menu
+		</span>
+	</button>
+    <ul class="nav-primary__sublist">
+        <li class="nav-primary__sublist-item nav-primary__sublist-item--back">
+            <a href="#" class="nav-primary__sublist-link" data-nav-back>
+                Back <span class="visually-hidden">to main menu</span>
+            </a>
+        </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules" class="nav-primary__sublist-link">
+                        Rulebook
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/crr-firms" class="nav-primary__sublist-link">
+                        CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-crr-firms" class="nav-primary__sublist-link">
+                        Non-CRR Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/sii-firms" class="nav-primary__sublist-link">
+                        SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-sii-firms" class="nav-primary__sublist-link">
+                        Non-SII Firms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/non-authorised-persons" class="nav-primary__sublist-link">
+                        Non-authorised Persons
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/glossary" class="nav-primary__sublist-link">
+                        Glossary
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/pra-rules/forms" class="nav-primary__sublist-link">
+                        Forms
+                    </a>
+                            </li>
+            <li class="nav-primary__sublist-item" >
+                    <a href="/legal-instruments" class="nav-primary__sublist-link">
+                        Legal Instruments
+                    </a>
+                            </li>
+    </ul>
+</li>                                <li class="nav-primary__list-item" >
+
+            <a href="/guidance" class="nav-primary__link" >
+                <span>Guidance</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/whats-new" class="nav-primary__link" >
+                <span>What&#39;s New</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/contact-us" class="nav-primary__link" >
+                <span>Contact Us</span>
+            </a>
+		</li>
+        <li class="nav-primary__list-item" >
+
+            <a href="/help" class="nav-primary__link" >
+                <span>Help </span>
+            </a>
+		</li>
+
+
+
+                            <li class="nav-primary__list-item">
+
+
+
+<div class="search-widget general-search" data-id="search-input" data-type="searchPage" data-placeholder="Search the PRA Rulebook" data-empty="Search the PRA Rulebook" data-disable-typeahead="True">
+    <form action="/search" method="get" onsubmit="return CP.SEARCH.Submit('/search', 'SearchTerm', '');">
+        <div class="search-widget-fields">
+            <label for="search-input" class="label-hidden">Search</label>
+            <input id="search-input" class="search-widget-field" placeholder="Search the PRA Rulebook" type="text" autocomplete="on" aria-describedby="search-error">
+            <button class="search-widget-clear" aria-label="Clear the field" type="button"></button>
+            <button class="search-widget-btn" type="submit">Search</button>
+        </div>
+    </form>
+    <div role="alert" class="search-widget-error" id="search-error">
+        <p>Nothing searched for. Please enter a search term.</p>
+    </div>
+</div>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="main" id="main-content" role="main">
+
+<section class="page-banner">
+	<div class="page-banner__head">
+		<div class="container">
+			<div class="col9">
+
+
+
+<nav aria-label="Breadcrumb">
+		<ol class="list-breadcrumbs">
+				<li class="list-breadcrumbs__item">
+					<a href="/" class="list-breadcrumbs__link">
+						Home Page
+					</a>
+				</li>
+				<li class="list-breadcrumbs__item">
+					<a href="/guidance" class="list-breadcrumbs__link">
+						Guidance
+					</a>
+				</li>
+							<li class="list-breadcrumbs__item list-breadcrumbs__item--active" aria-current="page">
+SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU				</li>
+		</ol>
+</nav>				<h1 itemprop="name">
+					SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="page-content rulebook-content guidance-content"
+     data-rulebook-date="21-01-2026"
+     data-rulebook-timeline-message-state="past">
+	<section class="page-section">
+<div class="container">
+	<div class="col12">
+		<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2019/pra-approach-to-interpreting-reporting-and-disclosure-reqs-and-reg-trans-forms-ss" rel="noopener noreferrer" class="med-block-cta mb-0" target="_blank">
+		<div class="cta-content">
+			<h2 class="h3">The Supervisory Statement (SS) shown on this page is effective from 01/01/2022. Past versions of this SS can be found here.</h2>
+
+			<span class="cta-icon"></span>
+		</div>
+		</a>
+	</div>
+</div>
+			<div class="nav-sticky">
+				<div class="container">
+					<div class="col12">
+						<div class="mb-18">
+
+
+
+<h2 class="tt-panel tt-panel--past">
+	<span class="tt-panel__intro">
+
+
+
+<span id="timeline-message-container"
+      data-timeline-message="You are viewing the {0} in the"
+      data-timeline-message-notfound="You are viewing in the"
+      data-timeline-book="Rulebook"
+      data-timeline-state-past="past"
+      data-timeline-state-present="present"
+      data-timeline-state-future="future"
+      data-timeline-on="on">
+	You are viewing the Rulebook in the&nbsp;past&nbsp;on&nbsp;21/01/2026
+</span>
+	</span>
+		<button class="expander__toggle expander__toggle--show mb-0 js-refresh-slick"
+				data-expander-open="expander-rule-history-timeline" data-expander-mode="single"
+				data-expander-show="Show history"
+				data-expander-hide="Hide history"
+				aria-expanded="false" data-expander-mode-open="false">
+			Show history
+			<span class="visually-hidden">
+				for this Part
+			</span>
+		</button>
+</h2>
+	<div class="expander" id="expander-rule-history-timeline" data-expander-content="expander-rule-history-timeline" role="dialog" aria-hidden="true" aria-label="dialog">
+		<div class="listing time-travel-carousel">
+				<div class="listing__item is-past is-active">
+					<a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/01-01-2022">
+						<span class="visually-hidden">View Rulebook as at</span>
+						01/01/2022
+					</a>
+						<div class="arrow"></div>
+				</div>
+		</div>
+		<div class="time-travel-carousel__controls">
+			<button type="button" class="slick-prev slick-arrow">
+				Previous history date
+			</button>
+			<button type="button" class="slick-next slick-arrow">
+				Next history date
+			</button>
+		</div>
+	</div>
+
+						</div>
+					</div>
+					<div class="col3 m-full">
+						<div class="mb-0">
+
+<div class="date-field date-field--space">
+	<label for="datepicker-98a4dacd-1972-448d-ac40-1e5d999fb128">
+View Rulebook as at:	</label>
+	<input type="text" id="datepicker-98a4dacd-1972-448d-ac40-1e5d999fb128"
+		   placeholder="21/01/2026" data-date-override="21/01/2026"
+		   data-update-url="true" data-close-on-scroll="true" data-show-today="true">
+</div>
+						</div>
+					</div>
+					<div class="col9">
+
+
+
+<div>
+	<div class="application-provision-wrapper">
+		<h2 class="h5">Application Provision</h2>
+		<div class="div-row application-provision-container">
+			<div class="div-row__col-1" data-ap-number></div>
+			<div class="div-row__col-2">
+				<span data-ap-content></span>
+				<button id="application-provision-button"
+				        class="mb-18 expander__toggle expander__toggle--show"
+				        data-expanded="false"
+				        data-expanded-show="Show more"
+				        data-expanded-hide="Show less">
+					<span class="text">
+						Show more
+					</span>
+					<span class="visually-hidden">
+						about this application provision
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+				<nav class="nav-chapters-simple" role="navigation" aria-label="heading links">
+	<button class="nav-chapters-simple__button" data-chapter-trigger aria-controls="list-chapters" aria-expanded="false">
+		<span class="nav-chapters-simple__button-text container">
+			<span class="col11">
+				SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU
+			</span>
+		</span>
+	</button>
+	<div class="container">
+		<div class="col12">
+			<ul class="list-nav" id="list-chapters" aria-hidden="true">
+			</ul>
+		</div>
+	</div>
+	<div class="nav-chapters__line">
+		<span class="nav-chapters__line-indicator" id="progressBar"></span>
+	</div>
+</nav>
+				<div class="container">
+					<div class="col12">
+
+
+
+<div class="glossary-modal-container">
+
+<div id="pra-loading" class="loading" role="alert" aria-live="assertive" style="display: none">
+	<img src="/assets/img/loader-transparent.svg" role="progressbar" aria-busy="true" alt="">
+	<p class="loading-text">
+		Content loading
+	</p>
+</div>
+	<div class="glossary-modal-inner">
+		<div class="glossary-modal-update-panel" style="display: none;"
+			 tabindex="-1" role="dialog"
+			 aria-modal="true"
+			 data-glossary-endpoint="/api/sitecore/Glossary/GlossaryModal"
+			 data-no-version-text="This glossary term was not defined in the PRA Rulebook Glossary at {0}."
+			 data-no-version-link-text="Click here to refer to Interpretation 2 for further information."
+			 data-no-version-link-url="/pra-rules/interpretation#974bcefbff264b6aabb7ebc59ef459d1"
+			 data-applicable-part="This definition only applies to the {0} Part"
+			 data-applicable-part-sr="Applicable Part"
+			 data-is-externally-defined-text="This term is defined externally, please refer to:"
+			 data-legal-instruments="Legal Instruments that change this definition"
+			 data-legal-instruments-url="/legal-instruments?glossary={0}"
+			 data-central-glossary="View this definition in the Glossary"
+			 data-central-glossary-url="/glossary"
+			 data-crr-glossary="View this definition in the CRR Glossary"
+			 data-crr-glossary-url=""
+			 data-glossary-email-subject="PRA Rulebook - Glossary"
+			 data-glossary-crr-email-subject="PRA Rulebook - CRR Glossary"
+			 data-glossary-export-filename="rulebook_glossary_{0}"
+			 data-glossary-crr-export-filename="rulebook_crr_glossary_{0}"
+			 aria-labelledby="glossary-modal-title">
+			<h3 id="glossary-modal-title" class="h5">
+				Glossary
+			</h3>
+			<div class="glossary-modal-data-container">
+			</div>
+			<div class="page-utilities">
+				<h3 class="h5 page-utilities__title">Export as</h3>
+				<ul class="list-links page-utilities__list">
+					<li class="list-links__item">
+						<a class="list-links__link icon-pdf" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-download-title="" rel="nofollow">
+							PDF
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link icon-print" href="%s?Date=%s&amp;VersionId=%s&amp;p=1" data-url-format="%s?Date=%s&amp;VersionId=%s&amp;p=1" target="_blank" rel="nofollow">
+							Print
+						</a>
+					</li>
+					<li class="list-links__item">
+						<a class="list-links__link" data-glossary-modal-pattern="mailto:?body=%s&amp;subject=%t (SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU)">
+							Email
+						</a>
+					</li>
+				</ul>
+			</div>
+			<button class="modal__close pra-modal-close"
+					data-glossary-close="Close"
+					aria-label="Close Dialog">
+				Close
+			</button>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		<div class="container chapters">
+			<div class="col3 m-full">
+				<div class="side-bar">
+
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">Used in</h2>
+<ul class="list-links">
+			<li class="list-links__item">
+				<a href="/pra-rules/crr-firms">
+					CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-crr-firms">
+					Non-CRR Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-sii-firms">
+					Non-SII Firms
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/non-authorised-persons">
+					Non-authorised persons
+				</a>
+			</li>
+			<li class="list-links__item">
+				<a href="/pra-rules/sii-firms">
+					SII Firms
+				</a>
+			</li>
+</ul>
+</div>
+<div class="side-bar__item">
+
+</div>
+<div class="side-bar__item">
+
+
+
+<h2 class="h3">
+	Related links to this Part
+</h2>
+	<ul class="accordion ">
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Parts<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+								<a href="/pra-rules/change-in-control/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Change in Control
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/credit-unions/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Credit Unions
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/disclosure-crr/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Disclosure (CRR)
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/friendly-society---reporting/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Friendly Society - Reporting
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/insurance-special-purpose-vehicles/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Insurance Special Purpose Vehicles
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/notifications/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Notifications
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/regulatory-reporting/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Regulatory Reporting
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/reporting/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Reporting
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/reporting-crr/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Reporting (CRR)
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/reporting-pillar-2/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Reporting Pillar 2
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/senior-managers-regime---applications-and-notifications/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Senior Managers Regime - Applications and Notifications
+								</a>
+							</li>
+							<li class="list-links__item">
+								<a href="/pra-rules/third-country-branches/21-01-2026" class="list-links__link rb-related-link" target="_blank">
+									Third Country Branches
+								</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+					<li>
+				<div class="accordion-head">
+					<h3>
+						<button class="accordion-button">
+							Policy Statements<span class="accordion-toggle"></span>
+						</button>
+					</h3>
+				</div>
+				<div class="accordion-content">
+					<ul class="list-links">
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2020/uk-withdrawal-from-the-eu-changes-before-the-end-of-the-transition-period" class="list-links__link" target="_blank">
+										PS27/20 - The Bank of England’s amendments under the European Union (Withdrawal) Act 2018: Changes before the end of the transition period
+									</a>
+							</li>
+							<li class="list-links__item">
+									<a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2021/october/implementation-of-basel-standards" class="list-links__link" target="_blank">
+										PS22/21 - Implementation of Basel standards: Final rules
+									</a>
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+</div>
+				</div>
+			</div>
+			<div class="col9">
+				<div class="clear"></div>
+				<!-- Pre-Rendering Name: rulebook/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/01-01-2022_31-12-9999.html -->
+		<!--pre-->
+
+
+
+
+<div class="part-content">
+		<div class="page-utilities print-override">
+			<h4 class="h5 page-utilities__title">Export guidance as</h4>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2022">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/01-01-2022?p=1" data-id="d4ac0f8ff32546119717300e73951da7" data-effective-date="01-01-2022" data-download-title="SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU_01-01-2022" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/01-01-2022?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements&amp;subject=PRA Rulebook - SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU">
+			Email
+		</a>
+	</li>
+</ul>
+		</div>
+
+
+
+
+<div id="12ce53dda88b4d13bf1fc272c1c3eb7e"
+	 data-version="bb54513b4f2f4af49f0f5562d859da69"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					1
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Introduction
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="aa2e7345ac424dbb83ef5ba1f2d0d67e"
+	 data-version="3df892c34cae49d790cabd99a65b2432"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>This supervisory statement (SS) sets out the approach the Prudential Regulation Authority (PRA) expects firms to take when interpreting EU-based references found in reporting and disclosure requirements and regulatory transactions forms after the end of the transition period.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="6b12dbb48b934ed3a1199064eaf7ba4a"
+	 data-version="71c3e0130de5407dbc6cf1eb1ec0ed94"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The UK&rsquo;s membership of the EU came to an end on Friday 31 January 2020. The UK entered into a transition period lasting until 11pm on Thursday 31 December 2020, which is defined in UK law as &lsquo;IP completion day&rsquo;, during which EU law continued to apply to the UK.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="0c5b27d4a4e24dcaa35c699b01cbdd86"
+	 data-version="10a75d2843754fa28e138e0c111362a6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.3
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA has not made line-by-line changes to reporting or disclosure requirements, or regulatory transactions forms, as a result of the UK&rsquo;s withdrawal from the EU and the end of the transition period, as it would not have been proportionate to do so. Instead, the PRA expects firms to interpret EU references in those templates and instructions in accordance with this SS after the end of the transition period. In certain cases, the PRA has updated references to Technical Standards that are being revoked by HM Treasury, and were contained in the CRR reporting and disclosure requirements. The PRA has replaced these references with references to the relevant PRA CRR Rules.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="2d40e86dfc694aa78dd1378b990cb5a6"
+	 data-version="185139e4123a4bfaab8970fae86701d8"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.4
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Chapter&nbsp;<a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#1c27a52e87894aa49d6392cd361664a5" data-rb-content-link="Chapter">2</a> outlines a general approach on this issue, which is in line with the approach taken more widely when onshoring European requirements. Chapter&nbsp;<a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#5fff5cfc469a4e11bd8647eb4bdcc1c7" data-rb-content-link="Chapter">3</a>, <a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#c6b897dd2e6447e89b6b5590610444c0" data-rb-content-link="Chapter">4</a>&nbsp;and <a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#7e47d9be831145d096cbcf52db4ba0ab" data-rb-content-link="Chapter">5</a>&nbsp;detail an expected approach on certain more specific issues. In any instance where the approach set out in these Chapters conflicts with the approach set out in Chapter&nbsp;<a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#1c27a52e87894aa49d6392cd361664a5" data-rb-content-link="Chapter">2</a>, the approach set out in Chapters&nbsp;<a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#5fff5cfc469a4e11bd8647eb4bdcc1c7" data-rb-content-link="Chapter">3</a>, <a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#c6b897dd2e6447e89b6b5590610444c0" data-rb-content-link="Chapter">4</a>&nbsp;and <a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#7e47d9be831145d096cbcf52db4ba0ab" data-rb-content-link="Chapter">5</a>&nbsp;should take priority.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="68f43bdb149c4f3abd61480a470ed990"
+	 data-version="74b9abebcedf4fbfb6fc46d60151197d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.5
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>Chapter <a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#a4a22679ac0d4c38a17fedaa5b217367" data-rb-content-link="Chapter">6</a>&nbsp;sets out how the guidance included in this SS interacts with the general transitional relief.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="01d33bfe7280441cb852a3edcdda0f0d"
+	 data-version="50dd6908908e4160a1212959b1b97527"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						1.6
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#9921a55a4e624bc69e3c31d05ac61c71" data-rb-content-link="Chapter">Appendix 1</a> outlines which European Binding Technical Standards (BTS) and which parts of the PRA Rulebook are in scope of this guidance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2022">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/1-introduction/01-01-2022?p=1" data-id="12ce53dda88b4d13bf1fc272c1c3eb7e" data-effective-date="01-01-2022" data-download-title="Introduction_01-01-2022" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/1-introduction/01-01-2022?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#12ce53dda88b4d13bf1fc272c1c3eb7e&amp;subject=PRA Rulebook - SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU – Introduction">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="1c27a52e87894aa49d6392cd361664a5"
+	 data-version="fb69b97258d34cc4a73f9e68123e3d05"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					2
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					General approach
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="a2c624e836204ac0bd6bc20f0c3977d6"
+	 data-version="79e3125fc645417da0705f5b48b80013"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						2.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#8b32ae8d9e2340bfb0e9ffbf07ef60ed" data-rb-content-link="Paragraph">Table A</a> sets out the various different types of EU-based references, and a default approach to how these should be interpreted.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="8b32ae8d9e2340bfb0e9ffbf07ef60ed"
+	 data-version="644d862faa244993b9e653ec143a82e6"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Table A: General approach to interpretation of EU-based references</h4>
+<table class="content-table" style="width: 584px; height: 1994px;">
+    <thead>
+        <tr>
+            <th style="width: 200px;">Type of reference</th>
+            <th style="">Default interpretation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="" style="width: 200px;">Reference to EU regulation</td>
+            <td>This should be read as a reference to the onshored version of the regulation. References to CRR refer to onshored CRR or PRA rules.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Reference to EU directive</td>
+            <td>This should be read as a reference to the UK legislation; PRA or Financial Conduct Authority (FCA) rules; or the UK, PRA or FCA processes that give effect to the directive, as amended on IP completion day. In some cases firms may also find it helpful to refer to the text of the EU directive as it stands on IP completion day, to provide additional context.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Reference to EU technical standard</td>
+            <td>This should be read as a reference to the onshored version of the technical standard.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Stand-alone reference to the European Union or EU (ie not in relation to legislation); or the European Economic Area or EEA</td>
+            <td>This should be read as a reference to the UK, except where otherwise noted below.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Reference to Member State, Member States or home Member State</td>
+            <td>This should be read as a reference to the UK, except where otherwise noted below.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Reference to third country</td>
+            <td>This should be read as a reference to a non-UK country.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Reference to Euros</td>
+            <td>
+            <p>Where Euro is given as an example of a currency, and the same treatment is applied to other currencies (eg US dollars), no change in interpretation is required.</p>
+            <p>Any reference to a threshold set in Euros will continue to apply.</p>
+            <p>In any other case, further details can be found in Chapters <a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#5fff5cfc469a4e11bd8647eb4bdcc1c7" data-rb-content-link="Chapter">3</a>, <a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#c6b897dd2e6447e89b6b5590610444c0" data-rb-content-link="Chapter">4</a>&nbsp;and <a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#7e47d9be831145d096cbcf52db4ba0ab" data-rb-content-link="Chapter">5</a>&nbsp;of this SS of how this should be interpreted.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Reference to definition based on CRR or Solvency II requirements</td>
+            <td>In some cases, reporting definitions are written to mirror text in level one legislation (either in addition to, or instead of, including a direct reference to the legislation). Where this happens, institutions should also refer to the relevant onshored legislation or PRA rules to ensure they are interpreting the reporting requirements properly. Where this differs to the text in the technical standard, the definition in the relevant nationalised legislation or PRA rules should take priority.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Reference to accounting standards or to a specific accounting standard as endorsed by the EU (eg International Financial Reporting Standards (IFRS) 9)</td>
+            <td>This should be read as a reference to the implementation of the corresponding accounting standard(s) that is in place in the UK after IP completion day.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Reference to statistical definitions set out by European bodies outside of legislation (eg by the European Central Bank (ECB), Eurostat or European Commission), or to nonbinding materials such as guidelines or Q&amp;As produced by the European Banking Authority (EBA) or the European Insurance and Occupational Pensions Authority (EIOPA).</td>
+            <td>
+            <p>These should be read as a reference to the definitions or materials as they stand on IP completion day.</p>
+            <p>Example occurrences:<br>
+            References in CRR FINREP templates and instructions to statistical definitions set out in the ECB BSI regulation.<sup><a href="#footnote-1">1</a></sup><br>
+            References in CRR FINREP templates and instructions to the SME definition set out in the Commission Recommendation of 6 May 2003 concerning the definition of micro, small and medium-sized enterprises.<sup><a href="#footnote-2">2</a></sup><br>
+            References in CRR COREP instructions to the definition of ISO code 3166-1alpha-2 set out in Eurostat&rsquo;s &lsquo;Balance of Payments Vademecum&rsquo;.<sup><a href="#footnote-3">3</a></sup></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">References to lists or information produced by European bodies</td>
+            <td>
+            <p>This should be read as a reference to the equivalent list or information produced by a UK body after the end of the transition period.</p>
+            <p>Example occurrences:<br>
+            The CRR COREP instructions for C17.01 and C17.02 (Annexes I and II of PRA Rulebook, <a href="/pra-rules/reporting-crr" data-rb-content-link="Part">Reporting (CRR)</a>&nbsp;Part, Templates and Instructions) contain references to supervisory disclosures published on the EBA website, and the gross domestic product at market prices data published by Eurostat. These references should be read as a reference to the corresponding disclosure produced by the PRA,<sup><a href="#footnote-4">4</a></sup> and the corresponding data published by the Office for National Statistics.<br>
+            The instructions for Solvency II templates S06.02, S08.01, S30.02, S30.04, S31.01, S31.02 and S37.01 include a list of credit rating agencies as registered or certified by the European Securities and Markets Authority (ESMA). This should be read as a reference to the list of credit rating agencies as registered or certified within the UK.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="" style="width: 200px;">Reference to &lsquo;freedom to provide services&rsquo;</td>
+            <td>
+            <p>On the basis that UK firms will no longer write business under the Freedom to Provide Services in the EU after IP completion day:</p>
+            <ul>
+                <li>Any data relating to business performed through freedom to provide services will be a nil entry after IP completion day.
+                <ul>
+                    <li>Example occurrences: S04.01 and S04.02 Solvency II templates.</li>
+                </ul>
+                </li>
+                <li>Any references to the country where the freedom to provide services notification was made for the purposes of identifying the location where a contract is entered into should be disregarded.
+                <ul>
+                    <li>Example occurrences: S05.02, S12.02 and S17.02 Solvency II templates.</li>
+                </ul>
+                </li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-1" class="rb-footnote">
+					<span class="fn-col-1">
+						1.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://www.ecb.europa.eu/ecb/legal/pdf/02013r1071-20131127-en.pdf">https://www.ecb.europa.eu/ecb/legal/pdf/02013r1071-20131127-en.pdf</a>
+					</span>
+				</li>
+				<li id="footnote-2" class="rb-footnote">
+					<span class="fn-col-1">
+						2.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361</a>
+					</span>
+				</li>
+				<li id="footnote-3" class="rb-footnote">
+					<span class="fn-col-1">
+						3.
+					</span>
+					<span class="fn-col-2">
+						<a href="https://ec.europa.eu/eurostat/web/balance-of-payments/publications">https://ec.europa.eu/eurostat/web/balance-of-payments/publications</a>
+					</span>
+				</li>
+				<li id="footnote-4" class="rb-footnote">
+					<span class="fn-col-1">
+						4.
+					</span>
+					<span class="fn-col-2">
+						This can be found on the Regulatory reporting – banking sector page in the prudential regulation section of the Bank of England  website: <a href="http://www.bankofengland.co.uk/prudential-regulation/regulatory-reporting/regulatory-reporting-banking-sector">http://www.bankofengland.co.uk/prudential-regulation/regulatory-reporting/regulatory-reporting-banking-sector</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2022">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/2-general-approach/01-01-2022?p=1" data-id="1c27a52e87894aa49d6392cd361664a5" data-effective-date="01-01-2022" data-download-title="General approach_01-01-2022" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/2-general-approach/01-01-2022?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#1c27a52e87894aa49d6392cd361664a5&amp;subject=PRA Rulebook - SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU – General approach">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="5fff5cfc469a4e11bd8647eb4bdcc1c7"
+	 data-version="7cebf5daa0294c72a4fdaf4ed609339a"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					3
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Approach to specific cases: Reporting and disclosure requirements based on the CRR
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="0d1310ae8fc14c688527a17577ce031f"
+	 data-version="b8df21d350cd4378b318fb5f58b920fa"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						3.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#ba274495063546568903e32142282757" data-rb-content-link="Paragraph">Table B</a> considers specific cases where CRR reporting and disclosure requirements include EU-based references, and sets out an expected approach in each instance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="ba274495063546568903e32142282757"
+	 data-version="23872f0c66234345a37215489047f4dc"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Table B: Approach to interpretation of specific EU-based references in reporting and disclosure requirements based on CRR</h4>
+<table class="content-table" style="">
+    <thead>
+        <tr>
+            <th class="" style="width: 98px;">Reference</th>
+            <th class="" style="width: 98px;">Template<br>
+            title</th>
+            <th class="" style="width: 98px;">Legislative<br>
+            reference</th>
+            <th class="" style="width: 441px;">Interpretation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="" style="width: 98px;">Row and column<br>
+            labels referring to EU</td>
+            <td class="" style="width: 98px;">Leverage ratio<br>
+            disclosures</td>
+            <td class="" style="width: 98px;">ITS 2016/200,<br>
+            Annex I</td>
+            <td class="" style="width: 441px;">Firms have an option to either retain the reference to the EU or remove this from the row labels.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 98px;">Conservation buffer<br>
+            due to macro-<br>
+            prudential or<br>
+            systemic risk<br>
+            identified at the<br>
+            level of a Member State</td>
+            <td class="" style="width: 98px;">COREP C04.00,<br>
+            row 760, C06.02,<br>
+            column&nbsp;440</td>
+            <td class="" style="width: 98px;">PRA Rulebook,<br>
+            <a href="/pra-rules/reporting-crr" data-rb-content-link="Part">Reporting (CRR)</a>&nbsp;Part, Reporting<br>
+            Requirements,<br>
+            Annexes I and II</td>
+            <td class="" style="width: 441px;">The reference to &lsquo;&hellip;conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State&hellip;&rsquo; should be read as&nbsp;&lsquo;&hellip;conservation buffer due to enhanced prudential measures&hellip;&rsquo;</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 98px;">
+            <p>References to<br>
+            Capital<br>
+            Requirements&nbsp;<br>
+            Directive<br>
+            (2013/36/EU)<br>
+            (CRD) Article<br>
+            140(4) within<br>
+            counter-cyclical<br>
+            capital buffer<br>
+            disclosure<br>
+            requirements</p>
+            <div></div>
+            </td>
+            <td class="" style="width: 98px;">CCyB<br>
+            disclosures</td>
+            <td class="" style="width: 98px;">PRA Rulebook,<br>
+            <a href="/pra-rules/disclosure-crr" data-rb-content-link="Part">Disclosure (CRR)</a><br>
+            Part, Templates<br>
+            and Instructions,<br>
+            Annexes IX and X<br>
+            <div></div>
+            </td>
+            <td class="" style="width: 441px;">References in Part II of Annex II to exposures &lsquo;defined in accordance with Article 140(4)(a) of&nbsp;Directive 2013/36/EU&rsquo; shall be read as references to &lsquo;all exposure classes (other than those referred to in points (a) to (f) of CRR Article 112 ) that are subject to the own funds requirements for credit risk under Part Three, Title II of that Regulation&rsquo;.<br>
+            References in Part II of Annex II to exposures&nbsp;&lsquo;defined in accordance with Article 140(4)(b) of Directive 2013/36/EU&rsquo; shall be read, where the exposure is held in the trading book, as references to &lsquo;all exposure classes (other than those referred to in points (a) to (f) of CRR Article 112) that are subject to the own funds requirements for specific risk under Part Three, Title IV, Chapter 2 of that Regulation or incremental default and migration risk under Part Three, Title IV, Chapter 5 of that Regulation&rsquo;.<br>
+            References in Part II of Annex II to exposures&nbsp;&lsquo;defined in accordance with Article 140(4)(c) of Directive 2013/36/EU&rsquo; shall be read, where the exposure is a securitisation as references to &lsquo;all exposure classes (other than those referred to in points (a) to (f) of CRR Article 112) that are subject to the own funds requirements under&nbsp;Part Three, Title II, Chapter 5 of that Regulation&rsquo;. References to relevant credit exposures defined in accordance to Article 140(4) of Directive 2013/36/EU are to be read in line with the instructions above.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 98px;">EU references<br>
+            contained within<br>
+            the definitions of<br>
+            benchmarking <br>
+            portfolios and<br>
+            corresponding<br>
+            reporting<br>
+            instructions</td>
+            <td class="" style="width: 98px;">Benchmarking<br>
+            templates</td>
+            <td class="" style="width: 98px;">2016/2070, all&nbsp;annexes</td>
+            <td class="" style="width: 441px;">The definitions of the benchmarking portfolios&nbsp;should remain unchanged. For the avoidance of&nbsp;doubt, this means that any references to codes&nbsp;assigned by the EBA; to Euros; to Central&nbsp;European Time (CET); and to European OTC&nbsp;options should remain as they are.</td>
+        </tr>
+        <tr>
+            <td class="" style="width: 98px;">Reference to joint&nbsp;decisions<br>
+            <div></div>
+            </td>
+            <td class="" style="width: 98px;">Benchmarking template<br>
+            C105.01</td>
+            <td class="" style="width: 98px;">2016/2070,<br>
+            Annexes III and&nbsp;IV</td>
+            <td class="" style="width: 441px;">Firms should report whether a joint decision, made prior to the date of EU withdrawal, continues to apply in relation to the use of the IRB approach for exposures included in the benchmarking portfolios.</td>
+        </tr>
+    </tbody>
+</table>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2022">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/3-approach-to-specific-cases-crr/01-01-2022?p=1" data-id="5fff5cfc469a4e11bd8647eb4bdcc1c7" data-effective-date="01-01-2022" data-download-title="Approach to specific cases: Reporting and disclosure requirements based on the CRR_01-01-2022" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/3-approach-to-specific-cases-crr/01-01-2022?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#5fff5cfc469a4e11bd8647eb4bdcc1c7&amp;subject=PRA Rulebook - SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU – Approach to specific cases: Reporting and disclosure requirements based on the CRR">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="c6b897dd2e6447e89b6b5590610444c0"
+	 data-version="afba5dfbdab64a0db825055752fe6eae"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					4
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Approach to specific cases: Reporting and disclosure requirements based on Solvency II
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="fbefc1f63cc2451392175d7620c883eb"
+	 data-version="004818705520450d9e28e1da00cf9477"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						4.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#f9d381169af645d89ae05c8b44b28635" data-rb-content-link="Paragraph">Table C</a>&nbsp;considers specific cases where Solvency II reporting and disclosure requirements include EU-based references, and sets out an expected approach in each instance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="f9d381169af645d89ae05c8b44b28635"
+	 data-version="1676a2fcf15a4d5ca8909e16b2590f01"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Table C: Approach to interpretation of specific EU-based references in reporting and disclosure requirements based on Solvency II</h4>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <th>Reference</th>
+            <td class="light-row"><strong>Template<br>
+            title</strong></td>
+            <td class="light-row"><strong>Legislative<br>
+            reference</strong></td>
+            <th>Interpretation</th>
+        </tr>
+        <tr>
+            <td>Geographical splits with different treatment of EU/EEA countries<br>
+            </td>
+            <td>S04.01, S04.02,&nbsp;<br>
+            S12.02,&nbsp;<br>
+            S17.02</td>
+            <td>ITS 2015/2450, Annexes I and II<br>
+            </td>
+            <td>The current reporting requirements relating to geographical split continue to apply. References to the EEA should be read as a reference to the EEA plus the UK, and references to non-EEA should be read as a reference to all non-EEA countries excluding the UK.<br>
+            </td>
+        </tr>
+        <tr>
+            <td>References to repealed legislation<br>
+            </td>
+            <td>S22.04, S22.05<br>
+            </td>
+            <td>ITS 2015/2450, Annexes I and II&nbsp;</td>
+            <td>Some Solvency II reporting and disclosure templates contain references to repealed legislation (Directive 2002/83/EC and Directive 2005/68/EC). Firms should continue to refer to this repealed legislation as at the date of last application.<br>
+            </td>
+        </tr>
+        <tr>
+            <td>References to repealed CRD legislation</td>
+            <td>S23.01<br>
+            </td>
+            <td>ITS 2015/2450, Annexes I, II and III&nbsp;<br>
+            ITS 2015/2452, Annexes I, II and III</td>
+            <td>References to &lsquo;credit institutions authorised in accordance with Directive 2006/48/EC&rsquo; should be read as a reference to PRA-regulated credit institutions.</td>
+        </tr>
+        <tr>
+            <td>Method for allocating identifying code</td>
+            <td>Multiple templates<br>
+            </td>
+            <td>ITS 2015/2450, Annexes I, II and III</td>
+            <td>The instructions for assigning identifying codes distinguish between entities in the EEA and those outside the EEA. Firms should continue to use the same identifying codes as they have used previously.</td>
+        </tr>
+        <tr>
+            <td>Method for allocating code to be used for Issuer Country</td>
+            <td>S06.02, S06.03, S11.01<br>
+            </td>
+            <td>ITS 2015/2450, Annexes I, II and III<br>
+            </td>
+            <td>Firms should continue to use the code &lsquo;EU&rsquo; for European Union Institutions.<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2022">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/4-approach-to-specific-cases-solvency-ii/01-01-2022?p=1" data-id="c6b897dd2e6447e89b6b5590610444c0" data-effective-date="01-01-2022" data-download-title="Approach to specific cases: Reporting and disclosure requirements based on Solvency II_01-01-2022" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/4-approach-to-specific-cases-solvency-ii/01-01-2022?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#c6b897dd2e6447e89b6b5590610444c0&amp;subject=PRA Rulebook - SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU – Approach to specific cases: Reporting and disclosure requirements based on Solvency II">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="7e47d9be831145d096cbcf52db4ba0ab"
+	 data-version="1fbc32f4e98d432db3ed8db7463178bb"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					5
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Approach to specific cases: Reporting and disclosure requirements set out in PRA Rulebook requirements
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="ffac8b2f2a804283a0a68c9d8e628003"
+	 data-version="7260b4f595ad401896ae3c5f6d188367"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p><a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#5c9d1c86678d4408a469f62396191795" data-rb-content-link="Paragraph">Table D</a>&nbsp;considers specific cases where templates within the PRA Rulebook reporting and disclosure requirements include EU-based references, and sets out an expected approach in each instance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="39e8df41cef545719f39856f7971f810"
+	 data-version="847db915021e472ca62ec384965300eb"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						5.2
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The <a href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#9921a55a4e624bc69e3c31d05ac61c71" data-rb-content-link="Chapter">Appendix</a>&nbsp;lists the PRA parts and subsections in scope of this guidance.</p>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>
+
+
+<div id="5c9d1c86678d4408a469f62396191795"
+	 data-version="9601b49a1d60454996765253699f60c9"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<h4>Table D: Approach to interpretation of specific EU-based references in reporting and disclosure requirements set out in PRA rules</h4>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <th>Reference</th>
+            <td class="light-row"><strong>Template<br>
+            title&nbsp;</strong></td>
+            <td class="light-row"><strong>Rulebook<br>
+            reference</strong></td>
+            <th>Interpretation</th>
+        </tr>
+        <tr>
+            <td>Geographical splits with different treatment of EU/EEA countries<br>
+            </td>
+            <td>FSA016<br>
+            </td>
+            <td>CRR Firms;&nbsp;<br>
+            <a href="/pra-rules/regulatory-reporting" data-rb-content-link="Part">Regulatory&nbsp;<br>
+            Reporting</a>&nbsp;Part</td>
+            <td>The reporting requirements for this template remain unchanged. Row 2 should report investments relating to UK and EEA countries, and row 3 should report investments related to all countries except the UK and EEA countries.<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Row and column&nbsp;<br>
+            labels referring to EU</td>
+            <td>FSA083<br>
+            </td>
+            <td>CRR Firms; <a href="/pra-rules/reporting-leverage-ratio" data-rb-content-link="Part">Reporting&nbsp;<br>
+            Leverage Ratio</a>&nbsp;Part</td>
+            <td>No changes required to the current template; the references to &lsquo;EU&rsquo; in the row and column labels should remain unchanged.<br>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="line-height: 107%; color: rgb(38, 38, 38);">Reference to EEA branches</span></td>
+            <td>Branch Return<br>
+            </td>
+            <td>Non-CRR Firms; Incoming and&nbsp;Third Country&nbsp;<br>
+            Firms&nbsp;Part;&nbsp;Branch Return</td>
+            <td>The reporting requirement in row 9 of the Lending section remains unchanged.<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member&nbsp;State</td>
+            <td>PRA101, PRA102, PRA103</td>
+            <td>CRR Firms;&nbsp;<br>
+            <a href="/pra-rules/regulatory-reporting" data-rb-content-link="Part">Regulatory Reporting</a>&nbsp;Part;&nbsp;Capital +</td>
+            <td>The reference to &lsquo;&hellip;conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State&hellip;&rsquo;&nbsp; in the templates should be read as &lsquo;&hellip;conservation buffer due to enhanced prudential measures&hellip;&rsquo;<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Reference to the exchange rate used by the European&nbsp;<br>
+            Commission for financial&nbsp;<br>
+            programming and the budget for December of the reported year</td>
+            <td>Remuneration Benchmarking Information Report</td>
+            <td>CRR Firms; <a href="/pra-rules/remuneration" data-rb-content-link="Part">Remuneration</a>&nbsp;Part</td>
+            <td><span style="line-height: 107%; color: rgb(38, 38, 38);">The reference to &lsquo;&hellip;the exchange rate used by the European Commission for financial programming and the budget&hellip;&rsquo; should be read as &lsquo;&hellip;the exchange rate used on the Bank of England database&rsquo;</span><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member&nbsp;<br>
+            State (%)<br>
+            <div></div>
+            </td>
+            <td>Pillar 3 UK M1, row UK 8a<br>
+            </td>
+            <td>CRR Firms; <a href="/pra-rules/disclosure-crr" data-rb-content-link="Part">Disclosure (CRR)</a>&nbsp;Part; Annexes 1 and&nbsp;<br>
+            2</td>
+            <td>The reference to &lsquo;&hellip;conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State&hellip;&rsquo; should be read as&nbsp;<br>
+            &lsquo;&hellip;conservation buffer due to enhanced prudential measures&hellip;&rsquo;</td>
+        </tr>
+        <tr>
+            <td>Reference to the exchange rate used by the Commission for financial&nbsp;programming and the budget within remuneration disclosure requirements</td>
+            <td>Pillar 3 EU REM4</td>
+            <td>CRR Firms; <a href="/pra-rules/disclosure-crr" data-rb-content-link="Part">Disclosure (CRR)</a>&nbsp;Part; Annexes 33 and&nbsp;<br>
+            34</td>
+            <td>The reference to &lsquo;&hellip;the exchange rate used by the Commission for financial programming and the budget&hellip;&rsquo; should be read as &lsquo;&hellip;the exchange rate used on the Bank of England database&rsquo;</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2022">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/5-approach-to-specific-cases-pra-rulebook-requirements/01-01-2022?p=1" data-id="7e47d9be831145d096cbcf52db4ba0ab" data-effective-date="01-01-2022" data-download-title="Approach to specific cases: Reporting and disclosure requirements set out in PRA Rulebook requirements_01-01-2022" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/5-approach-to-specific-cases-pra-rulebook-requirements/01-01-2022?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#7e47d9be831145d096cbcf52db4ba0ab&amp;subject=PRA Rulebook - SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU – Approach to specific cases: Reporting and disclosure requirements set out in PRA Rulebook requirements">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="a4a22679ac0d4c38a17fedaa5b217367"
+	 data-version="420bb45cd1554238a4c56a9fdb951880"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+					6
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Interaction with wider transitional relief
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="bfb656358e3e4994921686d99449a893"
+	 data-version="df925c765f66457ca8bbff0f77266a55"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+						6.1
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA has set out in a direction and accompanying guidance<sup><a href="#footnote-5">5</a></sup> the approach it is taking to transitional relief. The reporting and disclosure expectations in scope of this supervisory statement should be interpreted in light of the direction and guidance.</p>
+
+
+	<div class="rb-footnotes text-small img-note">
+		<h4 class="visually-hidden" id="footnote-label">Footnotes</h4>
+		<ul class="list-no-style">
+				<li id="footnote-5" class="rb-footnote">
+					<span class="fn-col-1">
+						5.
+					</span>
+					<span class="fn-col-2">
+						The directions and accompanying guidance are available at: <a href="https://www.bankofengland.co.uk/eu-withdrawal/transitioning-to-post-exit-rules-and-standards">https://www.bankofengland.co.uk/eu-withdrawal/transitioning-to-post-exit-rules-and-standards</a>.
+					</span>
+				</li>
+		</ul>
+	</div>
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2022">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/6-interaction-with-wider-transitional-relief/01-01-2022?p=1" data-id="a4a22679ac0d4c38a17fedaa5b217367" data-effective-date="01-01-2022" data-download-title="Interaction with wider transitional relief_01-01-2022" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/6-interaction-with-wider-transitional-relief/01-01-2022?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#a4a22679ac0d4c38a17fedaa5b217367&amp;subject=PRA Rulebook - SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU – Interaction with wider transitional relief">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div>
+
+
+<div id="9921a55a4e624bc69e3c31d05ac61c71"
+	 data-version="c34200ca858f4060a4e66e3eed198782"
+	 class="chapter-section"
+	 tabindex="-1">
+	<div class="div-row">
+		<div class="div-row__col-1">
+			<p>
+				<span class="rule-number rule-number--mega chapter-number">
+
+				</span>
+			</p>
+		</div>
+		<div class="div-row__col-2">
+				<h3 class="header-sans chapter-heading">
+					Appendix: Scope
+				</h3>
+		</div>
+	</div>
+
+
+
+<div id="dca248c3c48943308ddf822d5ca721eb"
+	 data-version="ff79d6222ead42adad0a6ed66f32238d"
+	 class="row-block row-block--border"
+	 tabindex="-1">
+	<div class="div-row" data-application-provision="">
+			<div class="div-row__col-1">
+				<p>
+					<span class="rule-number">
+
+					</span>
+				</p>
+
+
+
+
+			</div>
+		<div class="div-row__col-2 ">
+			<p>The PRA expects firms to apply the approach set out in this SS to the Annexes of the following European Binding Technical Standards (as amended up until IP completion day):</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <th>Firms</th>
+            <td class="light-row"><strong>Title</strong></td>
+            <td class="light-row"><strong>Reference</strong></td>
+        </tr>
+        <tr>
+            <td>CRR Firms</td>
+            <td>Disclosure of the leverage ratio for institutions, according to Regulation (EU) No 575/2013 of the European Parliament and of the Council<br>
+            </td>
+            <td>ITS 2016/200<br>
+            </td>
+        </tr>
+        <tr>
+            <td>CRR Firms</td>
+            <td>Templates, definitions and IT-solutions to be used by institutions when reporting to the European Banking Authority and to competent authorities in accordance with Article 78(2) of Directive 2013/36/EU of the European Parliament and of the Council&nbsp;</td>
+            <td>ITS 2016/2070<br>
+            </td>
+        </tr>
+        <tr>
+            <td>SII Firms</td>
+            <td>Templates for the submission of information to the supervisory authorities according to Directive 2009/138/EC of the European Parliament and of the Council<br>
+            </td>
+            <td>ITS 2015/2450<br>
+            </td>
+        </tr>
+        <tr>
+            <td>SII Firms</td>
+            <td>Procedures, formats and templates of the solvency and financial condition report in accordance with Directive 2009/138/EC of the European Parliament and of the Council</td>
+            <td>ITS 2015/2452<br>
+            </td>
+        </tr>
+        <tr>
+            <td>SII SPVs</td>
+            <td>Procedures for supervisory approval to establish special purpose vehicles, for the cooperation and exchange of information between supervisory authorities regarding special purpose vehicles as well as to set out formats and templates for information to be reported by special purpose vehicles in accordance with Directive 2009/138/EC of the European Parliament and of the Council<br>
+            </td>
+            <td>ITS 2015/462<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>The PRA expects firms to apply the approach set out in this SS to templates contained within the following parts, and sub-sections, of the PRA Rulebook:</p>
+<table class="content-table">
+    <tbody>
+        <tr>
+            <th>Firms</th>
+            <td class="light-row"><strong>Rulebook part</strong></td>
+            <th>Sections</th>
+        </tr>
+        <tr>
+            <td>CRR Firms</td>
+            <td>Regulatory Reporting</td>
+            <td>All</td>
+        </tr>
+        <tr>
+            <td><span style="line-height: 107%; color: rgb(38, 38, 38);">CRR Firms</span><br>
+            </td>
+            <td>Reporting Leverage Ratio</td>
+            <td><span style="background-color: rgb(255, 255, 255);">All</span><br>
+            </td>
+        </tr>
+        <tr>
+            <td>CRR Firms&nbsp;</td>
+            <td>Reporting Pillar 2</td>
+            <td>All</td>
+        </tr>
+        <tr>
+            <td>Non-CRR Firms<br>
+            </td>
+            <td>Credit Unions</td>
+            <td>19 Regulatory Reporting for Credit Unions</td>
+        </tr>
+        <tr>
+            <td>Non-CRR Firms<br>
+            </td>
+            <td>Incoming Firms and Third Country Firms</td>
+            <td>3 Branch Return<br>
+            4 Form</td>
+        </tr>
+        <tr>
+            <td>Non-SII Firms<br>
+            </td>
+            <td>Friendly Society &ndash; Reporting<br>
+            </td>
+            <td>All</td>
+        </tr>
+        <tr>
+            <td>Non-SII Firms<br>
+            </td>
+            <td>Insurance Company &ndash; Reporting<br>
+            </td>
+            <td>All</td>
+        </tr>
+        <tr>
+            <td>SII Firms<br>
+            </td>
+            <td>Reporting</td>
+            <td><span style="background-color: rgb(255, 255, 255);">All</span><br>
+            </td>
+        </tr>
+        <tr>
+            <td>SII Firms<br>
+            </td>
+            <td>Third Country Branches</td>
+            <td>9 Reporting</td>
+        </tr>
+        <tr>
+            <td>Controllers</td>
+            <td>Change in Control</td>
+            <td>6 Forms</td>
+        </tr>
+        <tr>
+            <td>All firms</td>
+            <td>Senior Managers Regime &ndash; Applications and Notifications<br>
+            </td>
+            <td>8 Forms</td>
+        </tr>
+        <tr>
+            <td>ISPVs</td>
+            <td>Insurance Special Purpose Vehicles<br>
+            </td>
+            <td>6 Forms</td>
+        </tr>
+        <tr>
+            <td>All firms</td>
+            <td>Notifications</td>
+            <td>10 Forms</td>
+        </tr>
+        <tr>
+            <td>CRR Firms<br>
+            </td>
+            <td>CRR Firms; Remuneration Part<br>
+            </td>
+            <td>All</td>
+        </tr>
+        <tr>
+            <td>CRR Firms</td>
+            <td>Disclosure (CRR) Part<br>
+            </td>
+            <td>All</td>
+        </tr>
+        <tr>
+            <td>CRR Firms</td>
+            <td>Reporting (CRR) Part<br>
+            </td>
+            <td>All</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+		</div>
+	</div>
+
+		<div class="row-block__info">
+			<ul class="list-links">
+				<li class="list-links__item">
+					01/01/2022
+				</li>
+
+
+
+			</ul>
+		</div>
+</div>			<div class="page-utilities page-utilities--bg-grey">
+			<h3 class="h5 page-utilities__title">Export chapter as</h3>
+
+
+
+<ul class="list-links page-utilities__list"
+    data-cached-rulebook-date="01-01-2022">
+	<li class="list-links__item">
+		<a class="list-links__link icon-pdf" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/appendix-1/01-01-2022?p=1" data-id="9921a55a4e624bc69e3c31d05ac61c71" data-effective-date="01-01-2022" data-download-title="Appendix: Scope_01-01-2022" rel="nofollow">
+			PDF
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link icon-print" href="/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements/appendix-1/01-01-2022?p=1" target="_blank" rel="nofollow">
+			Print
+		</a>
+	</li>
+	<li class="list-links__item">
+		<a class="list-links__link" href="mailto:?body=https://www.prarulebook.co.uk/guidance/supervisory-statements/ss02-19-pra-approach-to-interpreting-reporting-and-disclosure-requirements#9921a55a4e624bc69e3c31d05ac61c71&amp;subject=PRA Rulebook - SS2/19 – PRA approach to interpreting reporting and disclosure requirements and regulatory transactions forms after the UK’s withdrawal from the EU – Appendix: Scope">
+			Email
+		</a>
+	</li>
+</ul>
+
+		</div>
+</div></div>
+			</div>
+		</div>
+	</section>
+</div>			<section class="page-section page-section--last">
+				<div class="container">
+					<div class="col12">
+						<p class="txtr">
+							<a class="scroll-to-top" href="#">Back to top</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="clear"></div>
+		<footer class="global-footer" itemscope="" itemtype="http://schema.org/WPFooter">
+
+<div class="container">
+	<div class="col3">
+		<div class="footer-social-bank">
+			<ul class="accordion" data-accordion-mobile>
+				<li>
+					<div class="accordion-head">
+						<h3 class="exclude-navigation">
+							<span class="display-lap-desk">Follow Bank of England</span>
+							<button class="accordion-button">
+								Follow Bank of England
+								<span class="accordion-toggle"></span>
+							</button>
+						</h3>
+					</div>
+					<div class="accordion-content">
+
+
+<div class="footer-social-bank">
+    <ul class="social-links">
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.linkedin.com/company-beta/162636/"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-linkedin"></span>
+                        <span class="si-text">Connect with us on LinkedIn</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://twitter.com/bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-twitter-bird"></span>
+                        <span class="si-text">Follow us on Twitter</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link cp-desktop"
+                        href="https://www.facebook.com/bankofengland.co.uk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-facebook"></span>
+                        <span class="si-text">Add us on Facebook</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.instagram.com/bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-instagram"></span>
+                        <span class="si-text">Follow us on Instagram</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.threads.com/@bankofengland"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-treads"></span>
+                        <span class="si-text">Find us on Threads</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://tiktok.com/@bankofengland"
+                        target="_blank"
+						>
+                            <span class="icon-tiktok"></span>
+                        <span class="si-text">That&#39;s Tiktok</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.youtube.com/user/bankofenglanduk"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-youtube-play"></span>
+                        <span class="si-text">Watch us on Youtube</span>
+                    </a>
+			</li>
+            <li class="social-item">
+                    <a class="social-link "
+                        href="https://www.flickr.com/photos/bankofengland/albums"
+                        target="_blank"
+						title="Opens in a new window">
+                            <span class="icon-flickr"></span>
+                        <span class="si-text">Find us on Flickr</span>
+                    </a>
+			</li>
+    </ul>
+</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="col3">
+
+<div class="footer-topics">
+    <ul class="accordion" data-accordion-mobile>
+        <li>
+            <div class="accordion-head">
+                <h3 class="exclude-navigation">
+                    <span class="display-lap-desk">Browse website</span>
+                    <button class="accordion-button">Browse website<span class="accordion-toggle"></span></button>
+                </h3>
+            </div>
+			<div class="accordion-content">
+				<ul class="footer-links">
+						<li class="footer-item">
+                                <a href="/whats-new" class="footer-link " >
+                                    What&#39;s New
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules" class="footer-link " >
+                                    Rulebook
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/legal-instruments" class="footer-link " >
+                                    Legal Instruments
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/help" class="footer-link " >
+                                    Help
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/guidance" class="footer-link " >
+                                    Guidance
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/glossary" class="footer-link " >
+                                    Glossary
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/pra-rules/forms" class="footer-link " >
+                                    Forms
+                                </a>
+						</li>
+						<li class="footer-item">
+                                <a href="/contact-us" class="footer-link " >
+                                    Contact Us
+                                </a>
+						</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+	<div class="col3">
+		<div class="footer-contact">
+
+<h3 class="exclude-navigation">Prudential Regulation Authority</h3>
+<ul class="footer-contact-info">
+    <li class="footer-address">20 Moorgate, London, EC2R 6DA</li>
+    <li class="footer-tel">Telephone: <a rel="noopener noreferrer" class="footer-tel-link" href="tel://00442034617000" target="_blank" title="Switchboard">+44 (0) 20 3461 7000</a></li>
+</ul>
+
+
+
+		</div>
+	</div>
+	<div class="col3">
+
+
+
+	<div class="container-seal">
+		<a class="icon-seal" href="https://www.bankofengland.co.uk/" target="_blank" ><img src="/-/media/pra/images/logo/pra-logo-footer.svg?h=50&amp;iar=0&amp;mh=50&amp;mw=240&amp;w=50&amp;hash=B9F4D612F9B05AC4EDDDE121BBD757C5" alt="Bank of England homepage" width="50" height="50" /></a>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer-copyright">
+	<div class="container">
+		<div class="col12">
+
+<ul class="list-inline">
+	    <li class="list-inline__item">
+			    <a href="/accessibility" class="list-inline__link" >
+Accessibility			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/cookies" class="list-inline__link" >
+Cookies			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/legal" class="list-inline__link" target="_blank">
+Legal			    </a>
+	    </li>
+	    <li class="list-inline__item">
+			    <a href="/privacy" class="list-inline__link" target="_blank">
+Privacy			    </a>
+	    </li>
+</ul>
+
+
+
+<p class="text-copyright">&#169;2026 Bank of England</p>
+		</div>
+	</div>
+</div>
+		</footer>
+	</div>
+
+	<script src="/scripts/boe.vendor.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/boe.min.js?ver=cd822" type="text/javascript"></script>
+<script src="/scripts/mathjax3.0.1es5-tex-chtml.js?mode=pnf" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>
